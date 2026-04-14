@@ -1,0 +1,2873 @@
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../logging'
+import { IGlobalVars } from '../global-vars';
+import { GlobalFunc } from '../global-func';
+import { dc_mc_FrontPanel01, adc_mc_FrontPanel01 } from '../modules/mc_FrontPanel01'
+import { dc_mc_Drawer01, adc_mc_Drawer01 } from '../modules/mc_Drawer01'
+import { dc_mc_Handle01, adc_mc_Handle01 } from '../modules/mc_Handle01'
+import { dc_mc_DrawerBox01, adc_mc_DrawerBox01 } from '../modules/mc_DrawerBox01'
+import { dc_mc_Hinge01, adc_mc_Hinge01 } from '../modules/mc_Hinge01'
+import { dc_mc_Leg01, adc_mc_Leg01 } from '../modules/mc_Leg01'
+import { dc_mr_Paneltop, adc_mr_Paneltop } from '../modules/mr_Paneltop'
+import { dc_mc_Panel01, adc_mc_Panel01 } from '../modules/mc_Panel01'
+import { dc_mf_Drawer, adc_mf_Drawer } from '../modules/mf_Drawer'
+import { dc_mc_PlinthArea01, adc_mc_PlinthArea01 } from '../modules/mc_PlinthArea01'
+import { dc_mr_StorageunitSingle, adc_mr_StorageunitSingle } from '../modules/mr_StorageunitSingle'
+import { dc_mc_FrontPanelGlass01, adc_mc_FrontPanelGlass01 } from '../modules/mc_FrontPanelGlass01'
+import { dc_mc_LightSystem01, adc_mc_LightSystem01 } from '../modules/mc_LightSystem01'
+import { dc_mc_HangerSystem01, adc_mc_HangerSystem01 } from '../modules/mc_HangerSystem01'
+import { dc_mf_Fliplift, adc_mf_Fliplift } from '../modules/mf_Fliplift'
+import { dc_mc_Fliplift01, adc_mc_Fliplift01 } from '../modules/mc_Fliplift01'
+import { dc_mf_Door, adc_mf_Door } from '../modules/mf_Door'
+import { dc_mc_Door01, adc_mc_Door01 } from '../modules/mc_Door01'
+import { dc_mr_CornerunitStraight, adc_mr_CornerunitStraight } from '../modules/mr_CornerunitStraight'
+import { dc_mc_ShelfadjGroup01, adc_mc_ShelfadjGroup01 } from '../modules/mc_ShelfadjGroup01'
+import { dc_mc_ShelfadjWood01, adc_mc_ShelfadjWood01 } from '../modules/mc_ShelfadjWood01'
+import { dc_mc_ShelfadjGlass01, adc_mc_ShelfadjGlass01 } from '../modules/mc_ShelfadjGlass01'
+import { dc_mc_ShelfadjDrill01, adc_mc_ShelfadjDrill01 } from '../modules/mc_ShelfadjDrill01'
+import { dc_mc_ThermoformedPanel01, adc_mc_ThermoformedPanel01 } from '../modules/mc_ThermoformedPanel01'
+import { dc_mc_MetalFrame01, adc_mc_MetalFrame01 } from '../modules/mc_MetalFrame01'
+import { dc_mc_Storageunit01, adc_mc_Storageunit01 } from '../modules/mc_Storageunit01'
+import { dc_mc_Handlestrip01, adc_mc_Handlestrip01 } from '../modules/mc_Handlestrip01'
+import { dc_mc_StorageunitSidepanel01, adc_mc_StorageunitSidepanel01 } from '../modules/mc_StorageunitSidepanel01'
+import { dc_mc_StorageunitShelfbtm01, adc_mc_StorageunitShelfbtm01 } from '../modules/mc_StorageunitShelfbtm01'
+import { dc_mc_StorageunitShelftop01, adc_mc_StorageunitShelftop01 } from '../modules/mc_StorageunitShelftop01'
+import { dc_mc_StorageunitBackwall01, adc_mc_StorageunitBackwall01 } from '../modules/mc_StorageunitBackwall01'
+import { dc_mc_StorageunitShelffixed01, adc_mc_StorageunitShelffixed01 } from '../modules/mc_StorageunitShelffixed01'
+import { dc_mc_CleatVert01, adc_mc_CleatVert01 } from '../modules/mc_CleatVert01'
+import { dc_mc_Panelblind01, adc_mc_Panelblind01 } from '../modules/mc_Panelblind01'
+import { dc_mc_CornerunitStraight01, adc_mc_CornerunitStraight01 } from '../modules/mc_CornerunitStraight01'
+import { dc_mc_ShelfadjFitting01, adc_mc_ShelfadjFitting01 } from '../modules/mc_ShelfadjFitting01'
+import { dc_mf_Oven, adc_mf_Oven } from '../modules/mf_Oven'
+import { dc_mc_Oven01, adc_mc_Oven01 } from '../modules/mc_Oven01'
+import { dc_mf_Fridge, adc_mf_Fridge } from '../modules/mf_Fridge'
+import { dc_mf_RackArea, adc_mf_RackArea } from '../modules/mf_RackArea'
+import { dc_mc_RackArea01, adc_mc_RackArea01 } from '../modules/mc_RackArea01'
+import { dc_mc_ShelffixedGroup01, adc_mc_ShelffixedGroup01 } from '../modules/mc_ShelffixedGroup01'
+import { dc_mc_VertDivider01, adc_mc_VertDivider01 } from '../modules/mc_VertDivider01'
+import { dc_mc_Duststrip01, adc_mc_Duststrip01 } from '../modules/mc_Duststrip01'
+import { dc_mr_Upright, adc_mr_Upright } from '../modules/mr_Upright'
+import { dc_mc_Upright01, adc_mc_Upright01 } from '../modules/mc_Upright01'
+import { dc_mr_Countertop, adc_mr_Countertop } from '../modules/mr_Countertop'
+import { dc_mc_Countertop01, adc_mc_Countertop01 } from '../modules/mc_Countertop01'
+import { dc_mr_Backsplash, adc_mr_Backsplash } from '../modules/mr_Backsplash'
+import { dc_mc_Backsplash, adc_mc_Backsplash } from '../modules/mc_Backsplash'
+import { dc_mr_Toekick, adc_mr_Toekick } from '../modules/mr_Toekick'
+import { dc_mc_Toekick, adc_mc_Toekick } from '../modules/mc_Toekick'
+import { dc_mc_Pushtoopen01, adc_mc_Pushtoopen01 } from '../modules/mc_Pushtoopen01'
+import { dc_mc_PanelWoodFrame01, adc_mc_PanelWoodFrame01 } from '../modules/mc_PanelWoodFrame01'
+import { dc_mc_HingeGroup01, adc_mc_HingeGroup01 } from '../modules/mc_HingeGroup01'
+import { dc_mc_FlipliftHardware01, adc_mc_FlipliftHardware01 } from '../modules/mc_FlipliftHardware01'
+import { dc_mr_Fingergrip, adc_mr_Fingergrip } from '../modules/mr_Fingergrip'
+import { dc_mf_Fixedfront, adc_mf_Fixedfront } from '../modules/mf_Fixedfront'
+import { dc_mc_Fixedfront01, adc_mc_Fixedfront01 } from '../modules/mc_Fixedfront01'
+import { dc_mc_StorageunitShelftop02, adc_mc_StorageunitShelftop02 } from '../modules/mc_StorageunitShelftop02'
+import { dc_mc_StorageunitShelftop03, adc_mc_StorageunitShelftop03 } from '../modules/mc_StorageunitShelftop03'
+import { dc_mc_StorageunitShelftop04, adc_mc_StorageunitShelftop04 } from '../modules/mc_StorageunitShelftop04'
+import { dc_mc_Fingergrip01, adc_mc_Fingergrip01 } from '../modules/mc_Fingergrip01'
+import { dc_mc_Fridge01, adc_mc_Fridge01 } from '../modules/mc_Fridge01'
+import { dc_mc_ApplianceGraphic, adc_mc_ApplianceGraphic } from '../modules/mc_ApplianceGraphic'
+import { dc_mr_Hood, adc_mr_Hood } from '../modules/mr_Hood'
+import { dc_mc_Paneltop01, adc_mc_Paneltop01 } from '../modules/mc_Paneltop01'
+import { dc_mf_Hob, adc_mf_Hob } from '../modules/mf_Hob'
+import { dc_mc_Hob01, adc_mc_Hob01 } from '../modules/mc_Hob01'
+import { dc_mc_Sink01, adc_mc_Sink01 } from '../modules/mc_Sink01'
+import { dc_mf_Sink, adc_mf_Sink } from '../modules/mf_Sink'
+import { dc_mr_Filler01, adc_mr_Filler01 } from '../modules/mr_Filler01'
+import { dc_mf_FillerFront, adc_mf_FillerFront } from '../modules/mf_FillerFront'
+import { dc_mc_FillerFront01, adc_mc_FillerFront01 } from '../modules/mc_FillerFront01'
+import { dc_mr_Appliance, adc_mr_Appliance } from '../modules/mr_Appliance'
+import { dc_mf_Dishwasher, adc_mf_Dishwasher } from '../modules/mf_Dishwasher'
+import { dc_mr_CornerFiller, adc_mr_CornerFiller } from '../modules/mr_CornerFiller'
+import { dc_mc_Cornerunit01, adc_mc_Cornerunit01 } from '../modules/mc_Cornerunit01'
+import { dc_mr_IslandBackwall, adc_mr_IslandBackwall } from '../modules/mr_IslandBackwall'
+import { dc_mr_Shelves, adc_mr_Shelves } from '../modules/mr_Shelves'
+import { dc_mc_Shelves01, adc_mc_Shelves01 } from '../modules/mc_Shelves01'
+import { dc_mc_Bracket01, adc_mc_Bracket01 } from '../modules/mc_Bracket01'
+import { dc_mf_CornerFillerFront, adc_mf_CornerFillerFront } from '../modules/mf_CornerFillerFront'
+import { dc_mc_CornerFillerFront01, adc_mc_CornerFillerFront01 } from '../modules/mc_CornerFillerFront01'
+import { dc_mf_Pullout, adc_mf_Pullout } from '../modules/mf_Pullout'
+import { dc_mc_Pullout01, adc_mc_Pullout01 } from '../modules/mc_Pullout01'
+import { dc_mc_PulloutHardware01, adc_mc_PulloutHardware01 } from '../modules/mc_PulloutHardware01'
+import { dc_mc_Dishwasher01, adc_mc_Dishwasher01 } from '../modules/mc_Dishwasher01'
+import { dc_me_ShelfadjMultiple01, adc_me_ShelfadjMultiple01 } from '../modules/me_ShelfadjMultiple01'
+import { dc_mr_PlinthAreaBaseboard, adc_mr_PlinthAreaBaseboard } from '../modules/mr_PlinthAreaBaseboard'
+import { dc_mc_Baseboard01, adc_mc_Baseboard01 } from '../modules/mc_Baseboard01'
+import { dc_mc_BaseunitFridge01, adc_mc_BaseunitFridge01 } from '../modules/mc_BaseunitFridge01'
+import { dc_mf_BaseunitFridge, adc_mf_BaseunitFridge } from '../modules/mf_BaseunitFridge'
+import { dc_me_LaundryMachine, adc_me_LaundryMachine } from '../modules/me_LaundryMachine'
+import { dc_mf_PantryPullout, adc_mf_PantryPullout } from '../modules/mf_PantryPullout'
+import { dc_mc_PantryPullout01, adc_mc_PantryPullout01 } from '../modules/mc_PantryPullout01'
+import { dc_mr_MirrorBoard, adc_mr_MirrorBoard } from '../modules/mr_MirrorBoard'
+import { dc_mr_CoatBoard, adc_mr_CoatBoard } from '../modules/mr_CoatBoard'
+import { dc_mf_BoardShelf, adc_mf_BoardShelf } from '../modules/mf_BoardShelf'
+import { dc_me_BoardHanger, adc_me_BoardHanger } from '../modules/me_BoardHanger'
+import { dc_mc_PantryPulloutHardware01, adc_mc_PantryPulloutHardware01 } from '../modules/mc_PantryPulloutHardware01'
+import { dc_mc_MirrorBoard, adc_mc_MirrorBoard } from '../modules/mc_MirrorBoard'
+import { dc_mc_Mirror, adc_mc_Mirror } from '../modules/mc_Mirror'
+import { dc_mc_BoardShelf, adc_mc_BoardShelf } from '../modules/mc_BoardShelf'
+import { dc_mc_CoatBoard, adc_mc_CoatBoard } from '../modules/mc_CoatBoard'
+import { dc_mc_BoardHanger, adc_mc_BoardHanger } from '../modules/mc_BoardHanger'
+import { dc_me_ClothingOrganizer01, adc_me_ClothingOrganizer01 } from '../modules/me_ClothingOrganizer01'
+import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01 } from '../modules/mc_ClothingOrganizerHardware01'
+import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
+import { dc_mc_SegmentFront01, adc_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
+import { dc_me_HoodInsert, adc_me_HoodInsert } from '../modules/me_HoodInsert'
+import { dc_mc_HoodInsert01, adc_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
+import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
+import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
+import { dc_mr_CeilingFiller, adc_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
+import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
+import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
+import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
+
+export interface cti_tab_PlinthAreaBaseboardSettings {
+  readonly in_TypeElement?: string;
+  readonly in_BaseboardCutLogic?: string;
+  readonly in_ModulePosition?: string;
+  readonly in_PlinthAreaDesign?: string;
+  readonly in_PositionLeftMatrix?: string;
+  readonly in_PositionRightMatrix?: string;
+  readonly in_PositionBackMatrix?: string;
+  readonly in_PositionFrontMatrix?: string;
+  readonly in_CarcaseWidthMin: number;
+  readonly in_CarcaseWidthMax: number;
+  readonly in_CarcaseDepthMin: number;
+  readonly in_CarcaseDepthMax: number;
+  readonly in_WeightMin: number;
+  readonly in_WeightMax: number;
+}
+
+export interface ctm_tab_PlinthAreaBaseboardSettings {
+}
+
+export interface cto_tab_PlinthAreaBaseboardSettings extends ctm_tab_PlinthAreaBaseboardSettings {
+  readonly _id: number;
+  readonly SettingsLogic?: string;
+  readonly MatrixPositionType: number;
+  readonly BasePoint: number;
+  readonly HardwareRotation: number;
+  PosXOffset(contourData: any): number;
+  PosYOffset(contourData: any): number;
+}
+
+export interface ICT_tab_PlinthAreaBaseboardSettings
+  extends cti_tab_PlinthAreaBaseboardSettings, cto_tab_PlinthAreaBaseboardSettings { }
+
+export class ct2_tab_PlinthAreaBaseboardSettings {
+
+  public findExactly(
+    in_TypeElement: string | undefined,
+    in_BaseboardCutLogic: string | undefined,
+    in_ModulePosition: string | undefined,
+    in_PlinthAreaDesign: string | undefined,
+    in_PositionLeftMatrix: string | undefined,
+    in_PositionRightMatrix: string | undefined,
+    in_PositionBackMatrix: string | undefined,
+    in_PositionFrontMatrix: string | undefined,
+    in_CarcaseWidthMin: number,
+    in_CarcaseWidthMax: number,
+    in_CarcaseDepthMin: number,
+    in_CarcaseDepthMax: number,
+    in_WeightMin: number,
+    in_WeightMax: number,
+  ): cto_tab_PlinthAreaBaseboardSettings | undefined {
+    const res = ct_tab_PlinthAreaBaseboardSettings.find((p) =>
+      p.in_TypeElement === in_TypeElement
+      && p.in_BaseboardCutLogic === in_BaseboardCutLogic
+      && p.in_ModulePosition === in_ModulePosition
+      && p.in_PlinthAreaDesign === in_PlinthAreaDesign
+      && p.in_PositionLeftMatrix === in_PositionLeftMatrix
+      && p.in_PositionRightMatrix === in_PositionRightMatrix
+      && p.in_PositionBackMatrix === in_PositionBackMatrix
+      && p.in_PositionFrontMatrix === in_PositionFrontMatrix
+      && p.in_CarcaseWidthMin === in_CarcaseWidthMin
+      && p.in_CarcaseWidthMax === in_CarcaseWidthMax
+      && p.in_CarcaseDepthMin === in_CarcaseDepthMin
+      && p.in_CarcaseDepthMax === in_CarcaseDepthMax
+      && p.in_WeightMin === in_WeightMin
+      && p.in_WeightMax === in_WeightMax
+    );
+    return res;
+  }
+
+  public find(
+    predicate: (value: cti_tab_PlinthAreaBaseboardSettings) => boolean
+  ): cto_tab_PlinthAreaBaseboardSettings | undefined {
+    for (let index = 0; index < ct_tab_PlinthAreaBaseboardSettings.length; index++) {
+      const element = ct_tab_PlinthAreaBaseboardSettings[index];
+      if (predicate(element)) return element;
+    }
+    return undefined;
+  }
+}
+
+export var ct_tab_PlinthAreaBaseboardSettings: ICT_tab_PlinthAreaBaseboardSettings[] = [
+  {
+    _id: 185,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 11,
+    BasePoint: 1,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 186,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 187,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 188,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 21,
+    BasePoint: 4,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 189,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 190,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 191,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 11,
+    BasePoint: 2,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 0;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 192,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 0;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 193,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 0;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 194,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 21,
+    BasePoint: 5,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 0;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 195,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 13,
+    BasePoint: 3,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 196,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 197,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 198,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 23,
+    BasePoint: 6,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 199,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 200,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 201,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 11,
+    BasePoint: 1,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 202,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCR",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 11,
+    BasePoint: 1,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 203,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 204,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 205,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCR",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 206,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCR",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 207,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 21,
+    BasePoint: 4,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 208,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCR",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 21,
+    BasePoint: 4,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 209,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 13,
+    BasePoint: 3,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 210,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCR",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 13,
+    BasePoint: 3,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 211,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 212,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 213,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCR",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 214,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCR",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 215,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 23,
+    BasePoint: 6,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 216,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCR",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 23,
+    BasePoint: 6,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 217,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 218,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "SingleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 219,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 11,
+    BasePoint: 1,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 220,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 221,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 222,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 21,
+    BasePoint: 4,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 223,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 13,
+    BasePoint: 3,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 224,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCR",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 13,
+    BasePoint: 3,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 225,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 226,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 227,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCR",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 228,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCR",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 229,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 23,
+    BasePoint: 6,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 230,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCR",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 23,
+    BasePoint: 6,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 231,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 232,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSectionAfterCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 233,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 11,
+    BasePoint: 1,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 234,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCR",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 11,
+    BasePoint: 1,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 235,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 236,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 237,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCR",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 238,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCR",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 239,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 21,
+    BasePoint: 4,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 240,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCR",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 21,
+    BasePoint: 4,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 241,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 242,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 243,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 11,
+    BasePoint: 1,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 244,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCR",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 11,
+    BasePoint: 1,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 245,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 246,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 247,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCR",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 248,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCR",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 7,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 249,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 21,
+    BasePoint: 4,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 250,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCR",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 21,
+    BasePoint: 4,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 251,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 13,
+    BasePoint: 3,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 252,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 253,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 254,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 23,
+    BasePoint: 6,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 255,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 256,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "FirstSectionBeforeCut",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 257,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 11,
+    BasePoint: 2,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 0;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 258,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 0;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 259,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 0;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 260,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 21,
+    BasePoint: 5,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 0;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 261,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 13,
+    BasePoint: 3,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 262,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCR",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 13,
+    BasePoint: 3,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 263,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 264,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 265,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCR",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 266,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCR",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 33,
+    BasePoint: 9,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 267,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCF",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 23,
+    BasePoint: 6,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 20;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 268,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "RCR",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 23,
+    BasePoint: 6,
+    HardwareRotation: 180,
+    PosXOffset(contourData: any): number {
+      return 50;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 269,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 270,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "LastSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 271,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "BCF",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 11,
+    BasePoint: 2,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 0;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 272,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 0;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 273,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 31,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 0;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+  , {
+    _id: 274,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "LCF",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "",
+    in_CarcaseWidthMin: 0,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 600,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 21,
+    BasePoint: 5,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return 0;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return contourData.mod_CarcaseDepth / 2;
+    }
+
+  }
+  , {
+    _id: 275,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCF",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 20;
+    }
+
+  }
+  , {
+    _id: 276,
+    in_TypeElement: "All",
+    in_BaseboardCutLogic: "BetweenCabinets",
+    in_ModulePosition: "MiddleSection",
+    in_PlinthAreaDesign: "90",
+    in_PositionLeftMatrix: "",
+    in_PositionRightMatrix: "",
+    in_PositionBackMatrix: "",
+    in_PositionFrontMatrix: "FCR",
+    in_CarcaseWidthMin: 600,
+    in_CarcaseWidthMax: 9999,
+    in_CarcaseDepthMin: 0,
+    in_CarcaseDepthMax: 9999,
+    in_WeightMin: 0,
+    in_WeightMax: 9999,
+    SettingsLogic: "Library",
+    MatrixPositionType: 32,
+    BasePoint: 8,
+    HardwareRotation: 0,
+    PosXOffset(contourData: any): number {
+      return contourData.mod_CarcaseWidth / 2;
+    }
+    ,
+    PosYOffset(contourData: any): number {
+      return 50;
+    }
+
+  }
+];

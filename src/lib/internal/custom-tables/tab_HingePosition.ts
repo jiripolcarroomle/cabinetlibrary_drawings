@@ -1,0 +1,2033 @@
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../logging'
+import { IGlobalVars } from '../global-vars';
+import { GlobalFunc } from '../global-func';
+import { dc_mc_FrontPanel01, adc_mc_FrontPanel01 } from '../modules/mc_FrontPanel01'
+import { dc_mc_Drawer01, adc_mc_Drawer01 } from '../modules/mc_Drawer01'
+import { dc_mc_Handle01, adc_mc_Handle01 } from '../modules/mc_Handle01'
+import { dc_mc_DrawerBox01, adc_mc_DrawerBox01 } from '../modules/mc_DrawerBox01'
+import { dc_mc_Hinge01, adc_mc_Hinge01 } from '../modules/mc_Hinge01'
+import { dc_mc_Leg01, adc_mc_Leg01 } from '../modules/mc_Leg01'
+import { dc_mr_Paneltop, adc_mr_Paneltop } from '../modules/mr_Paneltop'
+import { dc_mc_Panel01, adc_mc_Panel01 } from '../modules/mc_Panel01'
+import { dc_mf_Drawer, adc_mf_Drawer } from '../modules/mf_Drawer'
+import { dc_mc_PlinthArea01, adc_mc_PlinthArea01 } from '../modules/mc_PlinthArea01'
+import { dc_mr_StorageunitSingle, adc_mr_StorageunitSingle } from '../modules/mr_StorageunitSingle'
+import { dc_mc_FrontPanelGlass01, adc_mc_FrontPanelGlass01 } from '../modules/mc_FrontPanelGlass01'
+import { dc_mc_LightSystem01, adc_mc_LightSystem01 } from '../modules/mc_LightSystem01'
+import { dc_mc_HangerSystem01, adc_mc_HangerSystem01 } from '../modules/mc_HangerSystem01'
+import { dc_mf_Fliplift, adc_mf_Fliplift } from '../modules/mf_Fliplift'
+import { dc_mc_Fliplift01, adc_mc_Fliplift01 } from '../modules/mc_Fliplift01'
+import { dc_mf_Door, adc_mf_Door } from '../modules/mf_Door'
+import { dc_mc_Door01, adc_mc_Door01 } from '../modules/mc_Door01'
+import { dc_mr_CornerunitStraight, adc_mr_CornerunitStraight } from '../modules/mr_CornerunitStraight'
+import { dc_mc_ShelfadjGroup01, adc_mc_ShelfadjGroup01 } from '../modules/mc_ShelfadjGroup01'
+import { dc_mc_ShelfadjWood01, adc_mc_ShelfadjWood01 } from '../modules/mc_ShelfadjWood01'
+import { dc_mc_ShelfadjGlass01, adc_mc_ShelfadjGlass01 } from '../modules/mc_ShelfadjGlass01'
+import { dc_mc_ShelfadjDrill01, adc_mc_ShelfadjDrill01 } from '../modules/mc_ShelfadjDrill01'
+import { dc_mc_ThermoformedPanel01, adc_mc_ThermoformedPanel01 } from '../modules/mc_ThermoformedPanel01'
+import { dc_mc_MetalFrame01, adc_mc_MetalFrame01 } from '../modules/mc_MetalFrame01'
+import { dc_mc_Storageunit01, adc_mc_Storageunit01 } from '../modules/mc_Storageunit01'
+import { dc_mc_Handlestrip01, adc_mc_Handlestrip01 } from '../modules/mc_Handlestrip01'
+import { dc_mc_StorageunitSidepanel01, adc_mc_StorageunitSidepanel01 } from '../modules/mc_StorageunitSidepanel01'
+import { dc_mc_StorageunitShelfbtm01, adc_mc_StorageunitShelfbtm01 } from '../modules/mc_StorageunitShelfbtm01'
+import { dc_mc_StorageunitShelftop01, adc_mc_StorageunitShelftop01 } from '../modules/mc_StorageunitShelftop01'
+import { dc_mc_StorageunitBackwall01, adc_mc_StorageunitBackwall01 } from '../modules/mc_StorageunitBackwall01'
+import { dc_mc_StorageunitShelffixed01, adc_mc_StorageunitShelffixed01 } from '../modules/mc_StorageunitShelffixed01'
+import { dc_mc_CleatVert01, adc_mc_CleatVert01 } from '../modules/mc_CleatVert01'
+import { dc_mc_Panelblind01, adc_mc_Panelblind01 } from '../modules/mc_Panelblind01'
+import { dc_mc_CornerunitStraight01, adc_mc_CornerunitStraight01 } from '../modules/mc_CornerunitStraight01'
+import { dc_mc_ShelfadjFitting01, adc_mc_ShelfadjFitting01 } from '../modules/mc_ShelfadjFitting01'
+import { dc_mf_Oven, adc_mf_Oven } from '../modules/mf_Oven'
+import { dc_mc_Oven01, adc_mc_Oven01 } from '../modules/mc_Oven01'
+import { dc_mf_Fridge, adc_mf_Fridge } from '../modules/mf_Fridge'
+import { dc_mf_RackArea, adc_mf_RackArea } from '../modules/mf_RackArea'
+import { dc_mc_RackArea01, adc_mc_RackArea01 } from '../modules/mc_RackArea01'
+import { dc_mc_ShelffixedGroup01, adc_mc_ShelffixedGroup01 } from '../modules/mc_ShelffixedGroup01'
+import { dc_mc_VertDivider01, adc_mc_VertDivider01 } from '../modules/mc_VertDivider01'
+import { dc_mc_Duststrip01, adc_mc_Duststrip01 } from '../modules/mc_Duststrip01'
+import { dc_mr_Upright, adc_mr_Upright } from '../modules/mr_Upright'
+import { dc_mc_Upright01, adc_mc_Upright01 } from '../modules/mc_Upright01'
+import { dc_mr_Countertop, adc_mr_Countertop } from '../modules/mr_Countertop'
+import { dc_mc_Countertop01, adc_mc_Countertop01 } from '../modules/mc_Countertop01'
+import { dc_mr_Backsplash, adc_mr_Backsplash } from '../modules/mr_Backsplash'
+import { dc_mc_Backsplash, adc_mc_Backsplash } from '../modules/mc_Backsplash'
+import { dc_mr_Toekick, adc_mr_Toekick } from '../modules/mr_Toekick'
+import { dc_mc_Toekick, adc_mc_Toekick } from '../modules/mc_Toekick'
+import { dc_mc_Pushtoopen01, adc_mc_Pushtoopen01 } from '../modules/mc_Pushtoopen01'
+import { dc_mc_PanelWoodFrame01, adc_mc_PanelWoodFrame01 } from '../modules/mc_PanelWoodFrame01'
+import { dc_mc_HingeGroup01, adc_mc_HingeGroup01 } from '../modules/mc_HingeGroup01'
+import { dc_mc_FlipliftHardware01, adc_mc_FlipliftHardware01 } from '../modules/mc_FlipliftHardware01'
+import { dc_mr_Fingergrip, adc_mr_Fingergrip } from '../modules/mr_Fingergrip'
+import { dc_mf_Fixedfront, adc_mf_Fixedfront } from '../modules/mf_Fixedfront'
+import { dc_mc_Fixedfront01, adc_mc_Fixedfront01 } from '../modules/mc_Fixedfront01'
+import { dc_mc_StorageunitShelftop02, adc_mc_StorageunitShelftop02 } from '../modules/mc_StorageunitShelftop02'
+import { dc_mc_StorageunitShelftop03, adc_mc_StorageunitShelftop03 } from '../modules/mc_StorageunitShelftop03'
+import { dc_mc_StorageunitShelftop04, adc_mc_StorageunitShelftop04 } from '../modules/mc_StorageunitShelftop04'
+import { dc_mc_Fingergrip01, adc_mc_Fingergrip01 } from '../modules/mc_Fingergrip01'
+import { dc_mc_Fridge01, adc_mc_Fridge01 } from '../modules/mc_Fridge01'
+import { dc_mc_ApplianceGraphic, adc_mc_ApplianceGraphic } from '../modules/mc_ApplianceGraphic'
+import { dc_mr_Hood, adc_mr_Hood } from '../modules/mr_Hood'
+import { dc_mc_Paneltop01, adc_mc_Paneltop01 } from '../modules/mc_Paneltop01'
+import { dc_mf_Hob, adc_mf_Hob } from '../modules/mf_Hob'
+import { dc_mc_Hob01, adc_mc_Hob01 } from '../modules/mc_Hob01'
+import { dc_mc_Sink01, adc_mc_Sink01 } from '../modules/mc_Sink01'
+import { dc_mf_Sink, adc_mf_Sink } from '../modules/mf_Sink'
+import { dc_mr_Filler01, adc_mr_Filler01 } from '../modules/mr_Filler01'
+import { dc_mf_FillerFront, adc_mf_FillerFront } from '../modules/mf_FillerFront'
+import { dc_mc_FillerFront01, adc_mc_FillerFront01 } from '../modules/mc_FillerFront01'
+import { dc_mr_Appliance, adc_mr_Appliance } from '../modules/mr_Appliance'
+import { dc_mf_Dishwasher, adc_mf_Dishwasher } from '../modules/mf_Dishwasher'
+import { dc_mr_CornerFiller, adc_mr_CornerFiller } from '../modules/mr_CornerFiller'
+import { dc_mc_Cornerunit01, adc_mc_Cornerunit01 } from '../modules/mc_Cornerunit01'
+import { dc_mr_IslandBackwall, adc_mr_IslandBackwall } from '../modules/mr_IslandBackwall'
+import { dc_mr_Shelves, adc_mr_Shelves } from '../modules/mr_Shelves'
+import { dc_mc_Shelves01, adc_mc_Shelves01 } from '../modules/mc_Shelves01'
+import { dc_mc_Bracket01, adc_mc_Bracket01 } from '../modules/mc_Bracket01'
+import { dc_mf_CornerFillerFront, adc_mf_CornerFillerFront } from '../modules/mf_CornerFillerFront'
+import { dc_mc_CornerFillerFront01, adc_mc_CornerFillerFront01 } from '../modules/mc_CornerFillerFront01'
+import { dc_mf_Pullout, adc_mf_Pullout } from '../modules/mf_Pullout'
+import { dc_mc_Pullout01, adc_mc_Pullout01 } from '../modules/mc_Pullout01'
+import { dc_mc_PulloutHardware01, adc_mc_PulloutHardware01 } from '../modules/mc_PulloutHardware01'
+import { dc_mc_Dishwasher01, adc_mc_Dishwasher01 } from '../modules/mc_Dishwasher01'
+import { dc_me_ShelfadjMultiple01, adc_me_ShelfadjMultiple01 } from '../modules/me_ShelfadjMultiple01'
+import { dc_mr_PlinthAreaBaseboard, adc_mr_PlinthAreaBaseboard } from '../modules/mr_PlinthAreaBaseboard'
+import { dc_mc_Baseboard01, adc_mc_Baseboard01 } from '../modules/mc_Baseboard01'
+import { dc_mc_BaseunitFridge01, adc_mc_BaseunitFridge01 } from '../modules/mc_BaseunitFridge01'
+import { dc_mf_BaseunitFridge, adc_mf_BaseunitFridge } from '../modules/mf_BaseunitFridge'
+import { dc_me_LaundryMachine, adc_me_LaundryMachine } from '../modules/me_LaundryMachine'
+import { dc_mf_PantryPullout, adc_mf_PantryPullout } from '../modules/mf_PantryPullout'
+import { dc_mc_PantryPullout01, adc_mc_PantryPullout01 } from '../modules/mc_PantryPullout01'
+import { dc_mr_MirrorBoard, adc_mr_MirrorBoard } from '../modules/mr_MirrorBoard'
+import { dc_mr_CoatBoard, adc_mr_CoatBoard } from '../modules/mr_CoatBoard'
+import { dc_mf_BoardShelf, adc_mf_BoardShelf } from '../modules/mf_BoardShelf'
+import { dc_me_BoardHanger, adc_me_BoardHanger } from '../modules/me_BoardHanger'
+import { dc_mc_PantryPulloutHardware01, adc_mc_PantryPulloutHardware01 } from '../modules/mc_PantryPulloutHardware01'
+import { dc_mc_MirrorBoard, adc_mc_MirrorBoard } from '../modules/mc_MirrorBoard'
+import { dc_mc_Mirror, adc_mc_Mirror } from '../modules/mc_Mirror'
+import { dc_mc_BoardShelf, adc_mc_BoardShelf } from '../modules/mc_BoardShelf'
+import { dc_mc_CoatBoard, adc_mc_CoatBoard } from '../modules/mc_CoatBoard'
+import { dc_mc_BoardHanger, adc_mc_BoardHanger } from '../modules/mc_BoardHanger'
+import { dc_me_ClothingOrganizer01, adc_me_ClothingOrganizer01 } from '../modules/me_ClothingOrganizer01'
+import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01 } from '../modules/mc_ClothingOrganizerHardware01'
+import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
+import { dc_mc_SegmentFront01, adc_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
+import { dc_me_HoodInsert, adc_me_HoodInsert } from '../modules/me_HoodInsert'
+import { dc_mc_HoodInsert01, adc_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
+import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
+import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
+import { dc_mr_CeilingFiller, adc_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
+import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
+import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
+import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
+
+export interface cti_tab_HingePosition {
+  readonly in_TypeElement?: string;
+  readonly in_FrontConstructionId?: string;
+  readonly in_AdditionalInfo1?: string;
+  readonly in_AdditionalInfo2?: string;
+  readonly in_FrontHeightMin?: number;
+  readonly in_FrontHeightMax?: number;
+  readonly in_FrontWidthMin?: number;
+  readonly in_FrontWidthMax?: number;
+  readonly in_WeightMax?: number;
+  readonly in_FingergripTypeTop?: string;
+  readonly in_FingergripTypeBtm?: string;
+  readonly in_HandleDesign?: string;
+  readonly in_HandlePosType?: string;
+}
+
+export interface ctm_tab_HingePosition {
+}
+
+export interface cto_tab_HingePosition extends ctm_tab_HingePosition {
+  readonly _id: number;
+  readonly Descriptor?: string;
+}
+
+export interface ICT_tab_HingePosition
+  extends cti_tab_HingePosition, cto_tab_HingePosition { }
+
+export class ct2_tab_HingePosition {
+
+  public findExactly(
+    in_TypeElement: string | undefined,
+    in_FrontConstructionId: string | undefined,
+    in_AdditionalInfo1: string | undefined,
+    in_AdditionalInfo2: string | undefined,
+    in_FrontHeightMin: number | undefined,
+    in_FrontHeightMax: number | undefined,
+    in_FrontWidthMin: number | undefined,
+    in_FrontWidthMax: number | undefined,
+    in_WeightMax: number | undefined,
+    in_FingergripTypeTop: string | undefined,
+    in_FingergripTypeBtm: string | undefined,
+    in_HandleDesign: string | undefined,
+    in_HandlePosType: string | undefined,
+  ): cto_tab_HingePosition | undefined {
+    const res = ct_tab_HingePosition.find((p) =>
+      p.in_TypeElement === in_TypeElement
+      && p.in_FrontConstructionId === in_FrontConstructionId
+      && p.in_AdditionalInfo1 === in_AdditionalInfo1
+      && p.in_AdditionalInfo2 === in_AdditionalInfo2
+      && p.in_FrontHeightMin === in_FrontHeightMin
+      && p.in_FrontHeightMax === in_FrontHeightMax
+      && p.in_FrontWidthMin === in_FrontWidthMin
+      && p.in_FrontWidthMax === in_FrontWidthMax
+      && p.in_WeightMax === in_WeightMax
+      && p.in_FingergripTypeTop === in_FingergripTypeTop
+      && p.in_FingergripTypeBtm === in_FingergripTypeBtm
+      && p.in_HandleDesign === in_HandleDesign
+      && p.in_HandlePosType === in_HandlePosType
+    );
+    return res;
+  }
+
+  public find(
+    predicate: (value: cti_tab_HingePosition) => boolean
+  ): cto_tab_HingePosition | undefined {
+    for (let index = 0; index < ct_tab_HingePosition.length; index++) {
+      const element = ct_tab_HingePosition[index];
+      if (predicate(element)) return element;
+    }
+    return undefined;
+  }
+}
+
+export var ct_tab_HingePosition: ICT_tab_HingePosition[] = [
+  {
+    _id: 632,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_80mm"
+  }
+  , {
+    _id: 633,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_80mm"
+  }
+  , {
+    _id: 634,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_80mm"
+  }
+  , {
+    _id: 635,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_80mm"
+  }
+  , {
+    _id: 636,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_1_80mm"
+  }
+  , {
+    _id: 637,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_80mm"
+  }
+  , {
+    _id: 638,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_80mm"
+  }
+  , {
+    _id: 639,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_80mm"
+  }
+  , {
+    _id: 640,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_80mm"
+  }
+  , {
+    _id: 641,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_1_80mm"
+  }
+  , {
+    _id: 642,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_80mm"
+  }
+  , {
+    _id: 643,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_80mm"
+  }
+  , {
+    _id: 644,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_80mm"
+  }
+  , {
+    _id: 645,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_80mm"
+  }
+  , {
+    _id: 646,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_1_80mm"
+  }
+  , {
+    _id: 647,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_80mm"
+  }
+  , {
+    _id: 648,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_80mm"
+  }
+  , {
+    _id: 649,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_80mm"
+  }
+  , {
+    _id: 650,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_80mm"
+  }
+  , {
+    _id: 651,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_1_80mm"
+  }
+  , {
+    _id: 652,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_80mm"
+  }
+  , {
+    _id: 653,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_80mm"
+  }
+  , {
+    _id: 654,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_80mm"
+  }
+  , {
+    _id: 655,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_80mm"
+  }
+  , {
+    _id: 656,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_1_80mm"
+  }
+  , {
+    _id: 657,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_80mm"
+  }
+  , {
+    _id: 658,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_80mm"
+  }
+  , {
+    _id: 659,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_80mm"
+  }
+  , {
+    _id: 660,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_80mm"
+  }
+  , {
+    _id: 661,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_1_80mm"
+  }
+  , {
+    _id: 662,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_80mm"
+  }
+  , {
+    _id: 663,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_80mm"
+  }
+  , {
+    _id: 664,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_80mm"
+  }
+  , {
+    _id: 665,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_80mm"
+  }
+  , {
+    _id: 666,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_1_80mm"
+  }
+  , {
+    _id: 667,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeBtm",
+    Descriptor: "115mm_1_80mm"
+  }
+  , {
+    _id: 668,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeBtm",
+    Descriptor: "115mm_1_1_80mm"
+  }
+  , {
+    _id: 669,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeBtm",
+    Descriptor: "115mm_1_1_1_80mm"
+  }
+  , {
+    _id: 670,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeBtm",
+    Descriptor: "115mm_1_1_1_1_80mm"
+  }
+  , {
+    _id: 671,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeBtm",
+    Descriptor: "115mm_1_1_1_1_1_80mm"
+  }
+  , {
+    _id: 672,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeTop",
+    Descriptor: "80mm_1_115mm"
+  }
+  , {
+    _id: 673,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeTop",
+    Descriptor: "80mm_1_1_115mm"
+  }
+  , {
+    _id: 674,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeTop",
+    Descriptor: "80mm_1_1_1_115mm"
+  }
+  , {
+    _id: 675,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeTop",
+    Descriptor: "80mm_1_1_1_1_115mm"
+  }
+  , {
+    _id: 676,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeTop",
+    Descriptor: "80mm_1_1_1_1_1_115mm"
+  }
+  , {
+    _id: 677,
+    in_TypeElement: "BaseUnitSink",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_170mm"
+  }
+  , {
+    _id: 678,
+    in_TypeElement: "BaseUnitSink",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_170mm"
+  }
+  , {
+    _id: 679,
+    in_TypeElement: "BaseUnitSink",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_170mm"
+  }
+  , {
+    _id: 680,
+    in_TypeElement: "BaseUnitSink",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_170mm"
+  }
+  , {
+    _id: 681,
+    in_TypeElement: "BaseUnitSink",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_1_1_170mm"
+  }
+  , {
+    _id: 682,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "FHF",
+    in_AdditionalInfo2: "Powerstorage",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 900,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 600,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_80mm"
+  }
+  , {
+    _id: 683,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "FHF",
+    in_AdditionalInfo2: "Powerstorage",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 900,
+    in_FrontWidthMin: 600,
+    in_FrontWidthMax: 1000,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_80mm"
+  }
+  , {
+    _id: 684,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "FHF",
+    in_AdditionalInfo2: "Powerstorage",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 900,
+    in_FrontWidthMin: 1000,
+    in_FrontWidthMax: 1400,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_80mm"
+  }
+  , {
+    _id: 685,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "UF",
+    in_AdditionalInfo2: "Gasspring",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 900,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 600,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_80mm"
+  }
+  , {
+    _id: 686,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "UF",
+    in_AdditionalInfo2: "Gasspring",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 900,
+    in_FrontWidthMin: 600,
+    in_FrontWidthMax: 1000,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_80mm"
+  }
+  , {
+    _id: 687,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "UF",
+    in_AdditionalInfo2: "Gasspring",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 900,
+    in_FrontWidthMin: 1000,
+    in_FrontWidthMax: 1400,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_80mm"
+  }
+  , {
+    _id: 688,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "DF",
+    in_AdditionalInfo2: "DropDownHinge",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 900,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 600,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_80mm"
+  }
+  , {
+    _id: 689,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "DF",
+    in_AdditionalInfo2: "DropDownHinge",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 900,
+    in_FrontWidthMin: 600,
+    in_FrontWidthMax: 1000,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_80mm"
+  }
+  , {
+    _id: 690,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "All",
+    in_AdditionalInfo1: "DF",
+    in_AdditionalInfo2: "DropDownHinge",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 900,
+    in_FrontWidthMin: 1000,
+    in_FrontWidthMax: 1400,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "80mm_1_1_1_80mm"
+  }
+  , {
+    _id: 691,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_140mm"
+  }
+  , {
+    _id: 692,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_140mm"
+  }
+  , {
+    _id: 693,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_140mm"
+  }
+  , {
+    _id: 694,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_1_140mm"
+  }
+  , {
+    _id: 695,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_1_1_140mm"
+  }
+  , {
+    _id: 696,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_140mm"
+  }
+  , {
+    _id: 697,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_140mm"
+  }
+  , {
+    _id: 698,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_140mm"
+  }
+  , {
+    _id: 699,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_1_140mm"
+  }
+  , {
+    _id: 700,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_1_1_140mm"
+  }
+  , {
+    _id: 701,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_140mm"
+  }
+  , {
+    _id: 702,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_140mm"
+  }
+  , {
+    _id: 703,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_140mm"
+  }
+  , {
+    _id: 704,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_1_140mm"
+  }
+  , {
+    _id: 705,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_1_1_140mm"
+  }
+  , {
+    _id: 706,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_140mm"
+  }
+  , {
+    _id: 707,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_140mm"
+  }
+  , {
+    _id: 708,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_140mm"
+  }
+  , {
+    _id: 709,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_1_140mm"
+  }
+  , {
+    _id: 710,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "Metal",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_1_1_140mm"
+  }
+  , {
+    _id: 711,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_140mm"
+  }
+  , {
+    _id: 712,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_140mm"
+  }
+  , {
+    _id: 713,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_140mm"
+  }
+  , {
+    _id: 714,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_1_140mm"
+  }
+  , {
+    _id: 715,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Metal",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_1_1_140mm"
+  }
+  , {
+    _id: 716,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_140mm"
+  }
+  , {
+    _id: 717,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_140mm"
+  }
+  , {
+    _id: 718,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_140mm"
+  }
+  , {
+    _id: 719,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_1_140mm"
+  }
+  , {
+    _id: 720,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "Wood",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_1_1_140mm"
+  }
+  , {
+    _id: 721,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_140mm"
+  }
+  , {
+    _id: 722,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_140mm"
+  }
+  , {
+    _id: 723,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_140mm"
+  }
+  , {
+    _id: 724,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_1_140mm"
+  }
+  , {
+    _id: 725,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "Wood",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "140mm_1_1_1_1_1_140mm"
+  }
+  , {
+    _id: 726,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeBtm",
+    Descriptor: "140mm_1_140mm"
+  }
+  , {
+    _id: 727,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeBtm",
+    Descriptor: "140mm_1_1_140mm"
+  }
+  , {
+    _id: 728,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeBtm",
+    Descriptor: "140mm_1_1_1_140mm"
+  }
+  , {
+    _id: 729,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeBtm",
+    Descriptor: "140mm_1_1_1_1_140mm"
+  }
+  , {
+    _id: 730,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeBtm",
+    Descriptor: "140mm_1_1_1_1_1_140mm"
+  }
+  , {
+    _id: 731,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 0,
+    in_FrontHeightMax: 750,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 6,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeTop",
+    Descriptor: "140mm_1_140mm"
+  }
+  , {
+    _id: 732,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 12,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeTop",
+    Descriptor: "140mm_1_1_140mm"
+  }
+  , {
+    _id: 733,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 2100,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 17,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeTop",
+    Descriptor: "140mm_1_1_1_140mm"
+  }
+  , {
+    _id: 734,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2100,
+    in_FrontHeightMax: 2500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 22,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeTop",
+    Descriptor: "140mm_1_1_1_1_140mm"
+  }
+  , {
+    _id: 735,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "TraditionFrame01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 2500,
+    in_FrontHeightMax: 3000,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 28,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "50",
+    in_HandlePosType: "StripeTop",
+    Descriptor: "140mm_1_1_1_1_1_140mm"
+  }
+  , {
+    _id: 736,
+    in_TypeElement: "WallUnit",
+    in_FrontConstructionId: "SegmentFront01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 99,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "60mm_520mm_1_60mm"
+  }
+  , {
+    _id: 737,
+    in_TypeElement: "WallUnit",
+    in_FrontConstructionId: "SegmentFront01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 9999,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 99,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "60mm_520mm_1_1_60mm"
+  }
+  , {
+    _id: 738,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "SegmentFront01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 750,
+    in_FrontHeightMax: 1500,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 99,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "60mm_1_520mm_60mm"
+  }
+  , {
+    _id: 739,
+    in_TypeElement: "All",
+    in_FrontConstructionId: "SegmentFront01",
+    in_AdditionalInfo1: "All",
+    in_AdditionalInfo2: "All",
+    in_FrontHeightMin: 1500,
+    in_FrontHeightMax: 9999,
+    in_FrontWidthMin: 0,
+    in_FrontWidthMax: 700,
+    in_WeightMax: 99,
+    in_FingergripTypeTop: "NoFingergrip",
+    in_FingergripTypeBtm: "NoFingergrip",
+    in_HandleDesign: "All",
+    in_HandlePosType: "All",
+    Descriptor: "60mm_1_1_520mm_60mm"
+  }
+];
