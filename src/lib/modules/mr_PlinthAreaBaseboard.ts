@@ -305,7 +305,7 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 		 * @param end 
 		 * @returns mc_Toekick instance
 		 */
-		const addToekick = (start: Vector3, end: Vector3) => {
+		const addToekick = (start:  Vector3, end:  Vector3) => {
 			const toekick = this.addOD_M_mc_Toekick();
 			toekick.mod_ToekickId = `Toekick_${toekickIndex++}`;
 			const equation = new LineSegmentEquation(start, end);
@@ -858,7 +858,7 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 
 				const leftToekickStartPoint = getPointAtXY(leftToekickPosX, leftToekickLength + leftToekickPosY);
 				const leftToekickEndPoint = getPointAtXY(leftToekickPosX, leftToekickPosY);
-				const leftToekick = addToekick(leftToekickStartPoint, leftToekickEndPoint);
+				const leftToekick = addToekick(leftToekickStartPoint.toVector3(), leftToekickEndPoint.toVector3());
 				leftToekick.mod_ToekickThk = this.mod_ToekickThk;
 				leftToekick.mod_ToekickHeight = plintAreaHeightSpace;
 			}
@@ -876,7 +876,7 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 
 				const rightToekickStartPoint = getPointAtXY(rightToekickPosX, rightToekickPosY);
 				const rightToekickEndPoint = getPointAtXY(rightToekickPosX, rightToekickPosY + rightToekickLength);
-				const rightToekick = addToekick(rightToekickStartPoint, rightToekickEndPoint);
+				const rightToekick = addToekick(rightToekickStartPoint.toVector3(), rightToekickEndPoint.toVector3());
 				rightToekick.mod_ToekickThk = this.mod_ToekickThk;
 				rightToekick.mod_ToekickHeight = plintAreaHeightSpace;
 			}
@@ -897,7 +897,7 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 					const frontToekickPosY = LineFront;
 					const frontToekickStartPoint = getPointAtXY(toekickStartCoordinateX, frontToekickPosY);
 					const frontToekickEndPoint = getPointAtXY(toekickStartCoordinateX + toekickLength, frontToekickPosY);
-					const frontToekick = addToekick(frontToekickStartPoint, frontToekickEndPoint);
+					const frontToekick = addToekick(frontToekickStartPoint.toVector3(), frontToekickEndPoint.toVector3());
 					frontToekick.mod_ToekickThk = this.mod_ToekickThk;
 					frontToekick.mod_ToekickHeight = plintAreaHeightSpace;
 					runningPosX += toekickLength;
