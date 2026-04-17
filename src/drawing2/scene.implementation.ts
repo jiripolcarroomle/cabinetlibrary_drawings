@@ -362,7 +362,7 @@ class GeometryData implements IGeometryData {
 
 function reparentPartsFromPosGroupsToModulesRecursive(posGroupNode: IOrderSceneNode, currentNode: IOrderSceneNode): void {
     if (currentNode !== posGroupNode) {
-        const currentNodePartChildren = currentNode.orderLineEntry?.p ?? [];
+        const currentNodePartChildren = currentNode.orderLineEntry?.['p'] ?? [];
         currentNodePartChildren?.forEach((partChild: any) => {
             // Only visible leaf parts are reparented to the owning module.
             if (partChild._hidden || partChild._childParts.length) {
@@ -402,7 +402,7 @@ function reparentPartsFromPosGroupsToModulesRecursive(posGroupNode: IOrderSceneN
     
  */
 function reparentGenerationModuleChildrenToGroupRoot(currentNode: IOrderSceneNode, nodeToReparent: IOrderSceneNode): void {
-    if (currentNode.kind === Object3DNodeKind.Module && currentNode.orderLineEntry?._isGenerated) {
+    if (currentNode.kind === Object3DNodeKind.Module && currentNode.orderLineEntry?.['_isGenerated']) {
         const childrenToReparent = [...currentNode.children];
         childrenToReparent.forEach(child => {
             currentNode.removeChild(child);

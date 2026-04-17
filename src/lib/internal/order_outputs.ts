@@ -7,7 +7,6 @@ import { create as xmlbuilder2Create } from 'xmlbuilder2';
 import { GlobalFunc } from './global-func'
 import { GlobalVars } from './global-vars';
 import { Matrix4, OD_Base, RoomContour, Vector3 } from './base';
-import { appOrderFunction } from '../../drawing2/orderfunction';
 import { IRenderOrthoCameraParams, IRenderOrthoCameraResult } from '../../drawing2/orderdrawingrenderer.interface';
 import { createScene } from '../../drawing2/scene.implementation';
 import { IExtendedDrawingRenderSettings } from '../../drawing2/orderdrawingrenderer.theejs.helpers';
@@ -1121,7 +1120,8 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
         .flatMap(group => group.children) // module + part candidates
         .filter(node => node.kind === Object3DNodeKind.Module);
 
-      const generationModules = allModuleNodesIncludingGenerationModules.filter(moduleNode => moduleNode.orderLineEntry?._isGenerated);
+      
+      const generationModules = allModuleNodesIncludingGenerationModules.filter(moduleNode => moduleNode.orderLineEntry?.['_isGenerated']);
 
       const allModuleNodes = allModuleNodesIncludingGenerationModules.filter(node => !generationModules.includes(node));
 
@@ -1179,7 +1179,7 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
         }
 
 
-        const cameraDirection = side === 'front' ? wall.wallData?.normalToWall : wall.wallData?.normalToWall.copy().scale(-1);
+        const cameraDirection = side === 'front' ? wall.wallData?.normalToWall : wall.wallData?.normalToWall.clone().multiply(-1);
 
         const result = await renderScene(orderScene, renderingFilter, drawingSettings, { ...orthoCameraRenderSettings, direction: cameraDirection });
         orthoCameraRenderResults.push(result);
@@ -1199,7 +1199,7 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
           const moduleData = moduleNode.orderLineEntry;
           const nodeMatrix = moduleNode.worldTransform;
           if (!moduleData) { return; }
-          const id = moduleData!.modId;
+          const id = moduleData!['modId'];
           if (!id) { return; }
           const annotations = filterAnnotationForModule(id, moduleData, drawing);
           if (annotations.length > 0) {
