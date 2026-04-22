@@ -305,10 +305,10 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 		 * @param end 
 		 * @returns mc_Toekick instance
 		 */
-		const addToekick = (start:  Vector3, end:  Vector3) => {
+		const addToekick = (start: { _x: number, _y: number, _z: number }, end: { _x: number, _y: number, _z: number }) => {
 			const toekick = this.addOD_M_mc_Toekick();
 			toekick.mod_ToekickId = `Toekick_${toekickIndex++}`;
-			const equation = new LineSegmentEquation(start, end);
+			const equation = new LineSegmentEquation(new Vector3(start._x, start._y, start._z), new Vector3(end._x, end._y, end._z));
 			toekick.mod_ToekickLength = equation.length;
 			toekick.setOrigin(equation.getTransformationMatrixToStartPoint());
 			// for pricing
@@ -858,7 +858,7 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 
 				const leftToekickStartPoint = getPointAtXY(leftToekickPosX, leftToekickLength + leftToekickPosY);
 				const leftToekickEndPoint = getPointAtXY(leftToekickPosX, leftToekickPosY);
-				const leftToekick = addToekick(leftToekickStartPoint.toVector3(), leftToekickEndPoint.toVector3());
+				const leftToekick = addToekick(leftToekickStartPoint, leftToekickEndPoint);
 				leftToekick.mod_ToekickThk = this.mod_ToekickThk;
 				leftToekick.mod_ToekickHeight = plintAreaHeightSpace;
 			}
@@ -876,7 +876,7 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 
 				const rightToekickStartPoint = getPointAtXY(rightToekickPosX, rightToekickPosY);
 				const rightToekickEndPoint = getPointAtXY(rightToekickPosX, rightToekickPosY + rightToekickLength);
-				const rightToekick = addToekick(rightToekickStartPoint.toVector3(), rightToekickEndPoint.toVector3());
+				const rightToekick = addToekick(rightToekickStartPoint, rightToekickEndPoint);
 				rightToekick.mod_ToekickThk = this.mod_ToekickThk;
 				rightToekick.mod_ToekickHeight = plintAreaHeightSpace;
 			}
@@ -897,7 +897,7 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 					const frontToekickPosY = LineFront;
 					const frontToekickStartPoint = getPointAtXY(toekickStartCoordinateX, frontToekickPosY);
 					const frontToekickEndPoint = getPointAtXY(toekickStartCoordinateX + toekickLength, frontToekickPosY);
-					const frontToekick = addToekick(frontToekickStartPoint.toVector3(), frontToekickEndPoint.toVector3());
+					const frontToekick = addToekick(frontToekickStartPoint, frontToekickEndPoint);
 					frontToekick.mod_ToekickThk = this.mod_ToekickThk;
 					frontToekick.mod_ToekickHeight = plintAreaHeightSpace;
 					runningPosX += toekickLength;
