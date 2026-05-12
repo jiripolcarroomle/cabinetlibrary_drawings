@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary, ct2_tab_ApplianceGraphicLibrary } from '../custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction, ct2_tab_BaseunitFridgeConstruction } from '../custom-tables/tab_BaseunitFridgeConstruction'
 import { ct_tab_BaseunitFridgeMapping, ICT_tab_BaseunitFridgeMapping, ct2_tab_BaseunitFridgeMapping } from '../custom-tables/tab_BaseunitFridgeMapping'
@@ -125,10 +125,10 @@ import { ct_tab_SinkMapping, ICT_tab_SinkMapping, ct2_tab_SinkMapping } from '..
 import { ct_tab_SlopedCeilingSettings, ICT_tab_SlopedCeilingSettings, ct2_tab_SlopedCeilingSettings } from '../custom-tables/tab_SlopedCeilingSettings'
 
 import { OD_Base, PartGroup, OpenGroup, Matrix4, Vector3, GenerationContour, Contour, GenerationMethod, RoomContour, ArticlePos } from '../base'
-import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp } from '../mod-base'
+import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IContextData } from '../mod-base'
 import { loadOrderData } from '../loader'
 import { GlobalFunc } from '../global-func'
-import { IModParents_mc_Storageunit01 } from '../mod-interfaces'
+import { IModParents_mc_Filler01_mc_Storageunit01 } from '../mod-interfaces'
 import { IP_part_Shelftop_PartVarsWritable, P_part_Shelftop } from '../parts/part_Shelftop'
 import { IP_part_Railhortopfront_PartVarsWritable, P_part_Railhortopfront } from '../parts/part_Railhortopfront'
 import { IP_part_Railhortopback_PartVarsWritable, P_part_Railhortopback } from '../parts/part_Railhortopback'
@@ -144,7 +144,7 @@ import { mc_StorageunitShelftop01_createBuildPlan, mc_StorageunitShelftop01_afte
 
 export interface cbp_mc_StorageunitShelftop01 extends IModBaseProp
   , IPartAdd_part_Shelftop, IPartAdd_part_Railhortopfront, IPartAdd_part_Railhortopback, IPartAdd_part_Railverttopfront, IPartAdd_part_Railverttopback, IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_CarcaseVisTop, IModVarNonNull_mod_Depth, IModVarNonNull_mod_Height, IModVarNonNull_mod_ShelftopConstruction, IModVarNonNull_mod_Width, IModVarNonNull_mod_CarcaseColor, IModVarNonNull_mod_CarcaseOutsideColor, IModVarNonNull_mod_CarcaseEdgeBackColor, IModVarNonNull_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseProgram, IModVarNonNull_mod_CarcaseOutsideProgram, IModVarNonNull_mod_EdgeFrontType, IModVarNonNull_mod_EdgeBackType, IModVarNonNull_mod_EdgeLeftType, IModVarNonNull_mod_EdgeRightType, IModVarNonNull_mod_EdgeJointType, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_CarcaseConnectionLeftTop, IModVarNonNull_mod_CarcaseConnectionRightTop, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_HardwareColor, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_FittingConnectionLeftTop, IModVarNonNull_mod_FittingConnectionRightTop, IModVarNonNull_mod_FittingConnectionTopVert, IModVarNonNull_mod_CarcasePartConnectionTopVert, IModVarNonNull_mod_PartInfo, IModVarNonNull_mod_SlopeAngle {
-  parent: IModParents_mc_Storageunit01;
+  parent: IModParents_mc_Filler01_mc_Storageunit01;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
   createOpenGroup(groupName: string, part: IPartBase): OpenGroup;
@@ -159,7 +159,7 @@ export interface dc_mc_StorageunitShelftop01 extends IModBaseProp
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_StorageunitShelftop01;
-  parent: IModParents_mc_Storageunit01;
+  parent: IModParents_mc_Filler01_mc_Storageunit01;
 }
 
 export interface adc_base_mc_StorageunitShelftop01 extends IModBaseProp
@@ -178,12 +178,12 @@ export interface ccm_mc_StorageunitShelftop01 extends adc_base_mc_StorageunitShe
 export class OD_M_mc_StorageunitShelftop01 extends OD_Base implements dc_mc_StorageunitShelftop01
   , IModParents_mc_StorageunitShelftop01
   , IModVar_mod_CarcaseId, IModVar_mod_CarcaseVisTop, IModVar_mod_Depth, IModVar_mod_Height, IModVar_mod_ShelftopConstruction, IModVar_mod_Width, IModVar_mod_CarcaseColor, IModVar_mod_CarcaseOutsideColor, IModVar_mod_CarcaseEdgeBackColor, IModVar_mod_CarcaseEdgeColor, IModVar_mod_CarcaseEdgeFrontColor, IModVar_mod_CarcaseProgram, IModVar_mod_CarcaseOutsideProgram, IModVar_mod_EdgeFrontType, IModVar_mod_EdgeBackType, IModVar_mod_EdgeLeftType, IModVar_mod_EdgeRightType, IModVar_mod_EdgeJointType, IModVar_mod_ModuleName, IModVar_mod_CarcaseConnectionLeftTop, IModVar_mod_CarcaseConnectionRightTop, IModVar_mod_TypeElement, IModVar_mod_HardwareColor, IModVar_mod_ParentName, IModVar_mod_FittingConnectionLeftTop, IModVar_mod_FittingConnectionRightTop, IModVar_mod_FittingConnectionTopVert, IModVar_mod_CarcasePartConnectionTopVert, IModVar_mod_PartInfo, IModVar_mod_SlopeAngle {
-  constructor(parent: IModParents_mc_Storageunit01, manufacturerMode?: boolean) {
+  constructor(parent: IModParents_mc_Filler01_mc_Storageunit01, manufacturerMode?: boolean) {
     super('mc_StorageunitShelftop01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
     this._selfNonNull = new OD_M_mc_StorageunitShelftop01_NonNull(this);
   }
-  parent: IModParents_mc_Storageunit01;
+  parent: IModParents_mc_Filler01_mc_Storageunit01;
   _selfNonNull: OD_M_mc_StorageunitShelftop01_NonNull;
 
   override variants: string[] = ['mod_CarcaseId', 'mod_CarcaseVisTop', 'mod_Depth', 'mod_Height', 'mod_ShelftopConstruction', 'mod_Width', 'mod_CarcaseColor', 'mod_CarcaseOutsideColor', 'mod_CarcaseEdgeBackColor', 'mod_CarcaseEdgeColor', 'mod_CarcaseEdgeFrontColor', 'mod_CarcaseProgram', 'mod_CarcaseOutsideProgram', 'mod_EdgeFrontType', 'mod_EdgeBackType', 'mod_EdgeLeftType', 'mod_EdgeRightType', 'mod_EdgeJointType', 'mod_ModuleName', 'mod_CarcaseConnectionLeftTop', 'mod_CarcaseConnectionRightTop', 'mod_TypeElement', 'mod_HardwareColor', 'mod_ParentName', 'mod_FittingConnectionLeftTop', 'mod_FittingConnectionRightTop', 'mod_FittingConnectionTopVert', 'mod_CarcasePartConnectionTopVert', 'mod_PartInfo', 'mod_SlopeAngle',];
@@ -586,6 +586,7 @@ export class OD_M_mc_StorageunitShelftop01 extends OD_Base implements dc_mc_Stor
     if (json['articleId']) {
       this._articleId = json['articleId'];
     }
+    this._contextData = json['contextData'];
     // only take over the attributes we know...
     {
       internal_enterValidateVariant(this.modId, this._id, 'mod_CarcaseId');
@@ -1265,7 +1266,7 @@ class OD_M_mc_StorageunitShelftop01_NonNull implements cbp_mc_StorageunitShelfto
   }
   get m(): OD_Base[] { return this.#internalParent.m; }
   get g(): IGlobalVars { return this.#internalParent.g; }
-  parent: IModParents_mc_Storageunit01;
+  parent: IModParents_mc_Filler01_mc_Storageunit01;
   addpart_Shelftop(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_Shelftop_PartVarsWritable {
     return this.#internalParent.addpart_Shelftop(x, y, z, dimx, dimy, dimz);
   }

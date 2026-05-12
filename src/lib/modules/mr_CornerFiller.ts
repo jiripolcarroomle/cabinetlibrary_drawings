@@ -1,7 +1,7 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../internal/logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
 
 //#region Imports
-import { cbp_mr_CornerFiller, dc_mr_CornerFiller, adc_mr_CornerFiller, ccm_mr_CornerFiller } from '../internal/modules/mr_CornerFiller'
+import { cbp_mr_CornerFiller, dc_mr_CornerFiller, adc_mr_CornerFiller, ccm_mr_CornerFiller, pc_mr_CornerFiller } from '../internal/modules/mr_CornerFiller'
 import { GlobalFunc } from '../internal/global-func'
 import { dc_mc_Cornerunit01, OD_M_mc_Cornerunit01 } from '../internal/modules/mc_Cornerunit01'
 import { dc_mc_CornerFillerFront01, OD_M_mc_CornerFillerFront01 } from '../internal/modules/mc_CornerFillerFront01'
@@ -130,7 +130,7 @@ import { ct_tab_SinkConstruction, ICT_tab_SinkConstruction } from '../internal/c
 import { ct_tab_SinkMapping, ICT_tab_SinkMapping } from '../internal/custom-tables/tab_SinkMapping'
 import { ct_tab_SlopedCeilingSettings, ICT_tab_SlopedCeilingSettings } from '../internal/custom-tables/tab_SlopedCeilingSettings'
 import { CKind, Contour, GenerationMethod, Matrix4, Vector3 } from '../internal/base'
-import { Dock, IDockingInfo, FaceKey, IPartBase, MatrixHelper, ModuleHelper, PartHelper } from '../internal/mod-base'
+import { Dock, IDockingInfo, FaceKey, IPartBase, MatrixHelper, ModuleHelper, PartHelper, IContextData } from '../internal/mod-base'
 declare function uuidv4(): string;
 //#endregion Imports
 
@@ -758,6 +758,30 @@ export function mr_CornerFiller_afterDataCompletion(this: adc_mr_CornerFiller): 
   }
   finally {
     internal_leaveModuleAfterDataCompletion();
+  }
+}
+// ---------------------------------------------------------------
+export function mr_CornerFiller_prepareContext(this: pc_mr_CornerFiller): void {
+  internal_enterModulePrepareContext('mr_CornerFiller', this._id);
+  try {
+    // ###############################################################
+    // ####################### CUSTOM SCRIPTS ########################
+    // ###############################################################
+    // CUSTOMSCRIPT_mr_CornerFiller_PREPARECONTEXT
+
+    // ###############################################################
+    // ################### END CUSTOM SCRIPTS ########################
+    // ###############################################################
+  }
+  catch (error) {
+    if (error instanceof Error) {
+      logError(error.message + "\n" + error.stack);
+    } else {
+      logError(JSON.stringify(error, null, 4));
+    }
+  }
+  finally {
+    internal_leaveModulePrepareContext();
   }
 }
 // ---------------------------------------------------------------

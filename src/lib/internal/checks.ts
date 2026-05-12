@@ -1,7 +1,9 @@
 import { getSelectionsByAttrId } from './selections';
-import { CheckFunc } from './check-func'
+import { CheckFunc } from './check-func';
+import { clearLogMessages, getLogMessages, logError, LogMessage, logWarning } from './logging';
 
-import { VariantValidation, SelectionEntryBase_number, SelectionEntryBase_string } from './selections';
+import { IModVarNonNull_mod_ClothingOrganizerDesign, IModVarNonNull_mod_CarcaseEdgeFrontColor } from './var-interfaces';
+import { VariantValidation, SelectionEntryBase_number, SelectionEntryBase_string, SelectionEntry_mod_CarcaseEdgeFrontColor, SelectionEntry_mod_ClothingOrganizerDesign, IMatrix_mod_ClothingOrganizerDesign } from './selections';
 export const posScriptChecks: Map<string, string[]> = new Map<string, string[]>([
 ]);
 export namespace Checks {
@@ -106,34 +108,6 @@ export namespace Checks {
                 [{ value: "222" }, { value: "Style" }],
                 [{ value: "215" }, { value: "Style" }],
                 [{ value: "214" }, { value: "Style" }],
-            ] as CheckRow[],
-        } as CheckDefinition,
-        {
-            attrIds: [
-                'mod_HandleColor', 'mod_HandleDesign'],
-            colIds: [
-                undefined, undefined],
-            validEntries: [
-                [{ value: "NoColor" }, { value: "10" }],
-                [{ value: "Black" }, { value: "100" }],
-                [{ value: "Tin" }, { value: "100" }],
-                [{ value: "StainlessSteel" }, { value: "110" }],
-                [{ value: "Black" }, { value: "120" }],
-                [{ value: "StainlessSteel" }, { value: "120" }],
-                [{ value: "Black" }, { value: "130" }],
-                [{ value: "BrassPlatedAntique" }, { value: "130" }],
-                [{ value: "StainlessSteel" }, { value: "130" }],
-                [{ value: "StainlessSteelMattBrushed" }, { value: "20" }],
-                [{ value: "StainlessSteelMattBrushed" }, { value: "30" }],
-                [{ value: "StainlessSteel" }, { value: "40" }],
-                [{ value: "StainlessSteelMattBrushed" }, { value: "40" }],
-                [{ value: "StainlessSteel" }, { value: "50" }],
-                [{ value: "StainlessSteelMattBrushed" }, { value: "50" }],
-                [{ value: "Black" }, { value: "60" }],
-                [{ value: "BrassPlatedAntique" }, { value: "60" }],
-                [{ value: "ChromedPolished" }, { value: "60" }],
-                [{ value: "NickelPlated" }, { value: "40" }],
-                [{ value: "NickelPlated" }, { value: "50" }],
             ] as CheckRow[],
         } as CheckDefinition,
         {
@@ -482,6 +456,13 @@ export namespace Checks {
                 [{ value: "Tuscan" }, { value: "FillingGlass" }],
             ] as CheckRow[],
         } as CheckDefinition,
+        {
+            attrIds: [
+                'mod_ClothingOrganizerDesign', 'mod_CarcaseEdgeFrontColor'],
+            colIds: [
+                undefined, undefined],
+            checkName: 'FrontDefenition',
+        } as CheckDefinition,
     ];
 
 
@@ -511,6 +492,10 @@ export namespace Checks {
     export class CheckAttributeValue {
         attrId: string = '';
         value: AttributeValue;
+    }
+
+    export class SolveInitialResult {
+        logs: LogMessage[] = [];
     }
 
     export class CheckConflictResult {
@@ -552,6 +537,50 @@ export namespace Checks {
     }
     type CheckRow = CellEntry[];
     export type CheckAttributesMap = Map<string, AttributeValue>;
+
+    // See also
+    // FE: libs\global\df-frontend-order-configurator\src\lib\order-configurator\state\models\domain\oc-scripts-domain.ts
+    // LIB: PosEditorLib.cs (PosGroup)
+    type PosGroup = {
+        roots: PosModuleData[]
+    }
+
+    type PosModuleData = {
+        name: string
+        modules?: PosModuleData[]
+        attributes?: PosModuleAttribute[],
+        articleId?: string,
+        checkAttributes?: CheckAttributesMap
+    }
+
+    type PosModuleAttribute = {
+        id: string,
+        isInput?: boolean,
+        value: AttributeValue
+    }
+
+    type MasterData = {
+        modules: MDModule[],
+        attributes: MDAttribute[]
+    }
+
+    type MDModule = {
+        id: string,
+        assignedAttributes?: string[]
+    }
+
+    type MDAttribute = {
+        id: string,
+        isMain?: boolean,
+        selections?: MDAttributeSelection[]
+    }
+
+    type MDAttributeSelection = {
+        value: AttributeValue,
+        min?: number,
+        max?: number,
+        step?: number
+    }
 
     export class ChecksLogic {
 
@@ -608,6 +637,7 @@ export namespace Checks {
         static calculateConflictingChange(
             checkAttributes: CheckAttributesMap | undefined,
             leadingAttribute: CheckAttributeValue,
+            forceCheck: boolean = false
         ): CheckConflictResult {
             let conflictResult = new CheckConflictResult();
             const attributesWithColumnIds = getUsedAttributesWithColumnIds(leadingAttribute.attrId, checks);
@@ -642,11 +672,17 @@ export namespace Checks {
                 ? getRangedLeadingAttributeConflictResult(checkAttributes, leadingAttribute)
                 : getNonRangedLeadingAttributeConflictResult(minCheckAttributes, leadingAttribute);
 
-            if (leadingAttributeConflictResult !== undefined) {
+            // error conflict results are unsolvable
+            if (leadingAttributeConflictResult?.errorMsg !== undefined) {
                 return leadingAttributeConflictResult;
             }
 
-            conflictResult = solveConflict(minCheckAttributes, leadingAttribute, attributeType, attributesWithColumnIds);
+            // positive conflict results are not be enough if thorough checking is required.
+            if (leadingAttributeConflictResult !== undefined && !forceCheck) {
+                return leadingAttributeConflictResult;
+            }
+
+            conflictResult = solveConflict(minCheckAttributes, leadingAttribute, attributeType, attributesWithColumnIds, forceCheck);
 
             return conflictResult;
         }
@@ -654,6 +690,138 @@ export namespace Checks {
         static checkConflicts(module: any) {
             // TODO: Can be called when we open an order after the checks had changed
         }
+
+        static solveInitial(posGroup: PosGroup, masterData: MasterData): SolveInitialResult {
+            clearLogMessages(true);
+            for (const module of posGroup.roots) {
+                // roots should always have article name
+                this.solveModuleInitial(module, masterData, module.articleId!);
+            }
+            return { logs: getLogMessages() };
+        }
+
+        static solveModuleInitial(module: PosModuleData, masterData: MasterData, articleId: string) {
+            const subNetworks = splitAttributesIntoSubNetworks(module);
+            if (module.checkAttributes === undefined) {
+                logError(`Module ${module.name} has undefined checkAttributes. Make sure the calc function is called`);
+                return;
+            }
+
+            for (const subNetwork of subNetworks) {
+                const leaderAttributeId = getSubNetworkLeader(subNetwork, module, masterData);
+                if (leaderAttributeId === undefined) {
+                    // only if subnetwork is empty, which should never happen. skip just in case.
+                    continue;
+                }
+
+                const leaderAttributeValue = module.attributes?.find(attr => attr.id === leaderAttributeId)?.value;
+                const conflictResult = this.calculateConflictingChange(module.checkAttributes, { attrId: leaderAttributeId, value: leaderAttributeValue }, true);
+                if (conflictResult.errorMsg !== undefined) {
+                    // this subnetwork of module attributes could not be made valid
+                    const invalidSubnetworkAttributes = subNetwork.map(a => `'${a}'`).join(', ');
+                    logWarning(`Module ${module.name} cannot reach a valid state (sub-network composed of attributes [${invalidSubnetworkAttributes}] does not have a valid state)`);
+                    continue;
+                }
+
+                // apply changes to module
+                for (const attributeToOverride of conflictResult.overrideAttributes) {
+                    const mdAttribute = module.attributes?.find(mdAttr => mdAttr.id === attributeToOverride.attrId);
+                    if (mdAttribute !== undefined) {
+                        mdAttribute.value = attributeToOverride.value;
+                    }
+                }
+            }
+
+            // recursive call for submodules
+            for (const subModule of module.modules ?? []) {
+                this.solveModuleInitial(subModule, masterData, subModule.articleId ?? articleId);
+            }
+        }
+    }
+
+    /**
+    * Splits the attributes of a module into connected-component groups based on
+    * the checks network. Two attributes belong to the same group if they appear
+    * together (directly or transitively) in one or more CheckDefinitions.
+    * Attributes that do not appear in any check are excluded from the result.
+    *
+    * @returns An array of groups, each group being an array of attribute IDs.
+    */
+    export function splitAttributesIntoSubNetworks(module: PosModuleData): string[][] {
+        const moduleAttrIds = new Set((module.attributes ?? []).map(a => a.id));
+
+        // Union-Find helpers
+        const parent = new Map<string, string>();
+
+        function find(x: string): string {
+            if (parent.get(x) !== x) {
+                parent.set(x, find(parent.get(x)!));
+            }
+            return parent.get(x)!;
+        }
+
+        function union(x: string, y: string) {
+            const px = find(x);
+            const py = find(y);
+            if (px !== py) {
+                parent.set(px, py);
+            }
+        }
+
+        for (const attribute of module.attributes ?? []) {
+            if (!parent.has(attribute.id)) {
+                parent.set(attribute.id, attribute.id);
+            }
+        }
+
+        // For each check, union all module-present attribute IDs that appear in it
+        for (const check of checks) {
+            const presentAttrIds = check.attrIds.filter(id => moduleAttrIds.has(id));
+
+            // Union them all together
+            for (let i = 1; i < presentAttrIds.length; i++) {
+                union(presentAttrIds[0], presentAttrIds[i]);
+            }
+        }
+
+        // Collect groups
+        const groupMap = new Map<string, string[]>();
+        for (const id of parent.keys()) {
+            const root = find(id);
+            if (!groupMap.has(root)) {
+                groupMap.set(root, []);
+            }
+            groupMap.get(root)!.push(id);
+        }
+        return Array.from(groupMap.values());
+    }
+
+    export function getSubNetworkLeader(subNetwork: string[], module: PosModuleData, masterData: MasterData): string | undefined {
+        const availableMDAttributes = masterData.attributes.filter(mdAttribute => subNetwork.includes(mdAttribute.id));
+
+        const bestAttribute = availableMDAttributes.reduce<MDAttribute | undefined>((best, current) => {
+            if (!best) return current;
+
+            const bestIsInput = module.attributes?.find(a => a.id === best.id)?.isInput ?? false;
+            const currentIsInput = module.attributes?.find(a => a.id === current.id)?.isInput ?? false;
+
+            // isInput beats non-isInput
+            if (currentIsInput && !bestIsInput) return current;
+            if (!currentIsInput && bestIsInput) return best;
+
+            // Same isInput tier — prefer isMain
+            if (current.isMain && !best.isMain) return current;
+            if (!current.isMain && best.isMain) return best;
+
+            // Same isMain tier — prefer more selections
+            if ((current.selections ?? []).length > (best.selections ?? []).length) {
+                return current;
+            }
+            return best;
+
+        }, undefined);
+
+        return bestAttribute?.id;
     }
 
     function getRangedLeadingAttributeConflictResult(checkAttributes: CheckAttributesMap, leadingAttribute: CheckAttributeValue): CheckConflictResult | undefined {
@@ -803,42 +971,31 @@ export namespace Checks {
         let checksCount = 0;
 
         checks.forEach((c: CheckDefinition) => {
-            // Find Index in attrArray
             const idx = c.attrIds.findIndex((p) => p === attrId);
-
             // work only with checks that contain attrId
             if (idx < 0) {
                 return;
             }
 
-            checksCount++;
-            const attributeColumn = c.colIds[idx];
-            // INFO: Currently we ONLY support two columns!
-            // INFO: We later might just go through ALL the other columns
-            const otherIdx = (idx + 1) % 2;
-            let otherCurrentValue: AttributeValue;
-
-            if (!c.colIds[otherIdx]) {
-                otherCurrentValue = checkAttributes.get(c.attrIds[otherIdx]);
-            } else {
-                const columnId = (c.colIds[otherIdx])!;
-                const attributeId = c.attrIds[otherIdx] + ':' + columnId;
-
-                //Checks if the module supports the attribute
-                const attribute = checkAttributes.get(attributeId);
-                if (attribute) {
-                    otherCurrentValue = attribute;
-                }
-            }
-
-            // this is undefined if the attribute is not provided in the checkAttributes.
-            // if not provided in the checksAttributes, it can be ignored
-            if (otherCurrentValue === undefined) {
+            // skip checks where no other attribute is present in checkAttributes
+            const hasOtherAttribute = c.attrIds.some((id, i) => {
+                if (i === idx) return false;
+                const colId = c.colIds[i];
+                const key = getAttributeCheckKey(id, colId);
+                return checkAttributes.has(key);
+            });
+            if (!hasOtherAttribute) {
                 return;
             }
-            const otherAttributeType = c.attrTypes?.[otherIdx];
 
-            const validValues = calculateValidValues_NonRanged(c, checkAttributes, attrId, selections, allowAllDropdownValues, otherIdx, otherCurrentValue, otherAttributeType, attributeColumn, idx);
+            checksCount++;
+            const validValues = c.checkName !== undefined
+                ? calculateValidValues_NonRanged_ScriptCheck(c, checkAttributes, attrId, selections)
+                : calculateValidValues_NonRanged(c, checkAttributes, attrId, selections, allowAllDropdownValues);
+
+            if (validValues === undefined) {
+                return;
+            }
 
             const isConflictSolvable = !isCheckIgnoredOnSolve(c);
 
@@ -860,19 +1017,29 @@ export namespace Checks {
         return { dropDownEntries, dropDownRange: undefined };
     }
 
-    function calculateValidValues_NonRanged(c: CheckDefinition, checkAttributes: CheckAttributesMap, attrId: string, selections: any[], allowAllDropdownValues: boolean, otherIdx: number, otherCurrentValue: string | number | boolean, otherAttributeType: CheckAttributeType | undefined, attributeColumn: string | undefined, idx: number) {
-        if (c.checkName) {
-            const scriptResult = executeScriptGetDropDownValues(checkAttributes, c.checkName, attrId, selections);
-            const validValues = (scriptResult?.dropDownEntries ?? []).filter(entry => entry.kind === CheckDropDownEntryKind.Normal).map(entry => entry.value);
+    function calculateValidValues_NonRanged_ScriptCheck(c: CheckDefinition, checkAttributes: CheckAttributesMap, attrId: string, selections: any[]): AttributeValue[] {
+        const scriptResult = executeScriptGetDropDownValues(checkAttributes, c.checkName!, attrId, selections);
+        const validValues = (scriptResult?.dropDownEntries ?? []).filter(entry => entry.kind === CheckDropDownEntryKind.Normal).map(entry => entry.value);
 
-            if (attributeColumn === undefined) {
-                return validValues;
-            }
+        const idx = c.attrIds.findIndex((p) => p === attrId);
+        const attributeColumn = c.colIds[idx];
+        if (attributeColumn === undefined) {
+            return validValues;
+        }
 
-            // identify which selections were marked as valid.
-            const validSelections = selections.filter(s => validValues.includes((s as any).value));
-            // take only the values for the attribute column
-            return validSelections.map(s => ((s as any).matrix as any)[attributeColumn]);
+        // identify which selections were marked as valid.
+        const validSelections = selections.filter(s => validValues.includes((s as any).value));
+        // take only the values for the attribute column
+        return validSelections.map(s => ((s as any).matrix as any)[attributeColumn]);
+    }
+
+    function calculateValidValues_NonRanged(c: CheckDefinition, checkAttributes: CheckAttributesMap, attrId: string, selections: any[], allowAllDropdownValues: boolean): AttributeValue[] | undefined {
+        const otherCurrentValue = getOtherCurrentValue(c, attrId, checkAttributes);
+
+        // this is undefined if the other attribute is not provided in the checkAttributes.
+        // in this case, it can be ignored
+        if (otherCurrentValue === undefined) {
+            return undefined;
         }
 
         // Cases where all selections are valid:
@@ -881,7 +1048,14 @@ export namespace Checks {
         // 2. We cannot find any entry for the other attribute value, and this other attribute is NOT ranged
         // Explanation:
         // If the attribute is not ranged, the only way it could not be found is if the value was added at a later stage, and therefore we consider it valid with all selections
-        // if the attribute is ranged, it could just be outside any range deifned in the check. We should not assume in this case that all selections are valid. 
+        // if the attribute is ranged, it could just be outside any range deifned in the check. We should not assume in this case that all selections are valid.
+
+        const idx = c.attrIds.findIndex((p) => p === attrId);
+        const attributeColumn = c.colIds[idx];
+
+        const otherIdx = (idx + 1) % 2;
+        const otherAttributeType = c.attrTypes?.[otherIdx];
+
         if ((allowAllDropdownValues && c.allowAllDropdownValuesAttrId === attrId) ||
             (findMatchingEntries(c.validEntries, c, otherIdx, otherCurrentValue).length === 0 && otherAttributeType !== CheckAttributeType.Ranged)) {
 
@@ -917,70 +1091,40 @@ export namespace Checks {
         attrId: string, allowAllDropdownValues: boolean): CheckDropDownResult | undefined {
 
         let validRange: CheckDropDownRange | undefined;
-        let isValidRangeInitialized: boolean = false;
         let checksCount = 0;
+        let validRangeInitialized = false;
 
         checks.forEach((c: CheckDefinition) => {
-            // Find Index in attrArray
             const idx = c.attrIds.findIndex((p) => p === attrId);
-
             // work only with checks that contain attrId
             if (idx < 0) {
                 return;
             }
 
-            let localValidRange: CheckDropDownRange;
-            checksCount++;
-
-            let otherCurrentValue: AttributeValue;
-            const otherIdx = (idx + 1) % 2;
-
-            if (!c.colIds[otherIdx]) {
-                otherCurrentValue = checkAttributes.get(c.attrIds[otherIdx]);
-            } else {
-                const columnId = (c.colIds[otherIdx])!;
-                const attributeId = c.attrIds[otherIdx] + ':' + columnId;
-
-                //Checks if the module supports the attribute
-                const attribute = checkAttributes.get(attributeId);
-                if (attribute) {
-                    otherCurrentValue = attribute;
-                }
-            }
-
-            // this is undefined if the attribute is not provided in the checkAttributes.
-            // if not provided in the checksAttributes, it can be ignored
-            if (otherCurrentValue === undefined) {
+            // skip checks where no other attribute is present in checkAttributes
+            const hasOtherAttribute = c.attrIds.some((id, i) => {
+                if (i === idx) return false;
+                const colId = c.colIds[i];
+                const key = getAttributeCheckKey(id, colId);
+                return checkAttributes.has(key);
+            });
+            if (!hasOtherAttribute) {
                 return;
             }
 
-            if (c.checkName) {
-                const scriptResult = executeScriptGetDropDownValues(checkAttributes, c.checkName, attrId, getSelectionsByAttrId(attrId));
-                if (scriptResult === undefined || scriptResult.dropDownRange === undefined) {
-                    // if the script that was supposed to provide a range fails to do so, we ignore this check
-                    return;
-                }
-                else {
-                    localValidRange = scriptResult.dropDownRange;
-                }
-            }
-            else {
-                const validEntries = c.validEntries.filter(entry => entry[otherIdx].value === otherCurrentValue);
-                if ((allowAllDropdownValues && c.allowAllDropdownValuesAttrId === attrId) || validEntries.length === 0) {
-                    localValidRange = { min: c.defaultRange!.min, max: c.defaultRange!.max, step: c.defaultRange!.step };
-                }
-                else {
-                    localValidRange = {
-                        min: validEntries[0][idx].min,
-                        max: validEntries[0][idx].max,
-                        step: validEntries[0][idx].step
-                    };
-                }
+            checksCount++;
+
+            const localValidRange = c.checkName !== undefined
+                ? getLocalValidRangeFromScriptCheck(checkAttributes, c.checkName, attrId)
+                : getLocalValidRangeFromNonScriptCheck(checkAttributes, c, attrId, allowAllDropdownValues);
+
+            if (localValidRange === undefined) {
+                return;
             }
 
-            if (validRange === undefined && !isValidRangeInitialized) {
+            if (validRange === undefined && !validRangeInitialized) {
                 validRange = localValidRange;
-                isValidRangeInitialized = true;
+                validRangeInitialized = true;
             } else if (validRange !== undefined) {
                 validRange = intersectSets(validRange, localValidRange);
             }
@@ -993,6 +1137,51 @@ export namespace Checks {
         }
 
         return { dropDownEntries: [], dropDownRange: validRange };
+    }
+
+    function getLocalValidRangeFromScriptCheck(checkAttributes: CheckAttributesMap, checkName: string, attrId: string): CheckDropDownRange | undefined {
+        const scriptResult = executeScriptGetDropDownValues(checkAttributes, checkName, attrId, getSelectionsByAttrId(attrId));
+        return scriptResult?.dropDownRange;
+    }
+
+    function getLocalValidRangeFromNonScriptCheck(checkAttributes: CheckAttributesMap, c: CheckDefinition, attrId: string, allowAllDropdownValues: boolean): CheckDropDownRange | undefined {
+        const otherCurrentValue = getOtherCurrentValue(c, attrId, checkAttributes);
+
+        // this is undefined if the other attribute is not provided in the checkAttributes.
+        // in this case, it can be ignored
+        if (otherCurrentValue === undefined) {
+            return undefined;
+        }
+
+        const idx = c.attrIds.findIndex((p) => p === attrId);
+        const otherIdx = (idx + 1) % 2;
+
+        let localValidRange: CheckDropDownRange;
+        const validEntries = c.validEntries.filter(entry => entry[otherIdx].value === otherCurrentValue);
+        if ((allowAllDropdownValues && c.allowAllDropdownValuesAttrId === attrId) || validEntries.length === 0) {
+            localValidRange = {
+                min: c.defaultRange!.min,
+                max: c.defaultRange!.max,
+                step: c.defaultRange!.step
+            };
+        } else {
+            localValidRange = {
+                min: validEntries[0][idx].min,
+                max: validEntries[0][idx].max,
+                step: validEntries[0][idx].step
+            };
+        }
+
+        return localValidRange;
+    }
+
+    function getOtherCurrentValue(c: CheckDefinition, attrId: string, checkAttributes: CheckAttributesMap): AttributeValue | undefined {
+        const idx = c.attrIds.findIndex((p) => p === attrId);
+        const otherIdx = (idx + 1) % 2;
+        const otherAttributeId = c.attrIds[otherIdx];
+        const otherAttributeColumn = c.colIds[otherIdx];
+        const otherAttributeKey = getAttributeCheckKey(otherAttributeId, otherAttributeColumn);
+        return checkAttributes.get(otherAttributeKey);
     }
 
     function findMatchingEntries(checkRows: CheckRow[], check: CheckDefinition, otherIdx: number, otherCurrentValue: AttributeValue): CheckRow[] {
@@ -1043,7 +1232,7 @@ export namespace Checks {
         });
     }
 
-    function solveConflict(checkAttributes: CheckAttributesMap, leadingAttribute: CheckAttributeValue, leadingAttributeType: CheckAttributeType | undefined, attributesWithColumnIds: AttributeAndColumnId[]): CheckConflictResult {
+    function solveConflict(checkAttributes: CheckAttributesMap, leadingAttribute: CheckAttributeValue, leadingAttributeType: CheckAttributeType | undefined, attributesWithColumnIds: AttributeAndColumnId[], forceCheck: boolean): CheckConflictResult {
         const state = new Map<string, AttributeValue>();
         setAttributeValue(state, leadingAttribute, leadingAttributeType, attributesWithColumnIds);
 
@@ -1051,7 +1240,8 @@ export namespace Checks {
         const neighbors = getAttributeNeighborsMap(leadingAttribute.attrId);
         filterNeighborsByCheckAttributesMap(neighbors, checkAttributes);
 
-        const result = solveConflictRecursively(checkAttributes, attributesWithColumnIds, state, neighbors);
+        const validated = new Map<string, boolean>();
+        const result = solveConflictRecursively(checkAttributes, attributesWithColumnIds, state, neighbors, forceCheck, validated);
 
         return result;
     }
@@ -1085,9 +1275,11 @@ export namespace Checks {
      * initialState: the original values of the attributes
      * attributesWithColumnIds: attributes and columns needed from the checks. just for simpler usage, I think
      * state: the required new values set for attributes
-     * neighborsQueue: the attributes that might be affected by the attributes set in s
+     * neighbors: the attributes that might be affected by the attributes in the state,
+     * forceCheck: boolean value that represents whether all attributes should be manually checked instead of assuming the initial state is valid,
+     * validated: the attributes that are already validated to work with the current state, and therefore do not need to be checked again, unless one of their neighbors changes.
     */
-    function solveConflictRecursively(initialState: CheckAttributesMap, attributesWithColumnIds: AttributeAndColumnId[], state: CheckAttributesMap, neighbors: Map<string, CheckDefinition>): CheckConflictResult {
+    function solveConflictRecursively(initialState: CheckAttributesMap, attributesWithColumnIds: AttributeAndColumnId[], state: CheckAttributesMap, neighbors: Map<string, CheckDefinition>, forceCheck: boolean, validated: Map<string, boolean>): CheckConflictResult {
         if (neighbors.size === 0) {
             const conflictResult = new CheckConflictResult();
             conflictResult.overrideAttributes = Array.from(state.entries())
@@ -1101,18 +1293,23 @@ export namespace Checks {
         const attributeType = getAttributeType(attributeId);
 
         const conflictResult = attributeType === CheckAttributeType.Ranged
-            ? solveForRangedAttribute(initialState, attributesWithColumnIds, state, neighbors)
-            : solveForNonRangedAttribute(initialState, attributesWithColumnIds, state, neighbors);
+            ? solveForRangedAttribute(initialState, attributesWithColumnIds, state, neighbors, forceCheck, validated)
+            : solveForNonRangedAttribute(initialState, attributesWithColumnIds, state, neighbors, forceCheck, validated);
 
         return conflictResult;
     }
 
-    function solveForRangedAttribute(initialState: CheckAttributesMap, attributesWithColumnIds: AttributeAndColumnId[], state: CheckAttributesMap, neighbors: Map<string, CheckDefinition>): CheckConflictResult {
+    function solveForRangedAttribute(initialState: CheckAttributesMap, attributesWithColumnIds: AttributeAndColumnId[], state: CheckAttributesMap, neighbors: Map<string, CheckDefinition>, forceCheck: boolean, validated: Map<string, boolean>): CheckConflictResult {
         const [attributeId, _] = neighbors.entries().next().value!;
         neighbors.delete(attributeId);
         const searchedAttributeValue = initialState.get(attributeId);
 
-        const dropdownResult = calculateDropDownEntriesFromRanges(state, attributeId, false);
+        // injecting validated into state to ensure neighbors of the attribute are initialised
+        const validatedState = new Map(state);
+        for (const validatedAttributeId of validated.keys()) {
+            validatedState.set(validatedAttributeId, initialState.get(validatedAttributeId)!);
+        }
+        const dropdownResult = calculateDropDownEntriesFromRanges(validatedState, attributeId, false);
         const searchedAttributeValueAsNumber = Number(searchedAttributeValue);
 
         const range = dropdownResult?.dropDownRange;
@@ -1125,9 +1322,42 @@ export namespace Checks {
 
         if (isValueInRange(searchedAttributeValueAsNumber, range)) {
             // this current value of the attribute is already in the valid range
-            const conflictSolution = solveConflictRecursively(initialState, attributesWithColumnIds, state, neighbors);
+
+            if (forceCheck) {
+
+                // current attribute has a value that works with the current constraints (state)
+                // for now, this is a validated attribute: with a value that works, that does not require change
+                // in the future, if any of its neighbors changes, it will no longer be considered validated
+                if (validated.get(attributeId) === undefined) {
+                    validated.set(attributeId, true);
+                }
+
+                // if forced, even though initial value is valid, cannot be sure that the neighbors have valid value
+                // therefore, add all NOT VALIDATED neighbors into the queue
+                const attributeNeighbors = getAttributeNeighborsMap(attributeId);
+                filterNeighborsByCheckAttributesMap(attributeNeighbors, initialState);
+
+                // Q := (Q \ {attributeId}) U (Neighbors \ S \ V)
+                for (const [neighborAttributeId, neighborCheck] of attributeNeighbors) {
+                    if (state.get(neighborAttributeId) === undefined && validated.get(neighborAttributeId) === undefined && !neighbors.has(neighborAttributeId)) {
+                        neighbors.set(neighborAttributeId, neighborCheck);
+                    }
+                }
+
+            }
+
+            const conflictSolution = solveConflictRecursively(initialState, attributesWithColumnIds, state, neighbors, forceCheck, validated);
             if (conflictSolution.errorMsg === undefined) {
                 return conflictSolution;
+            }
+        }
+
+        if (forceCheck) {
+            // the current value of the leading attribute is not valid, according to the state.
+            // it will require changing, therefore its neighbors can no longer be considered valid
+            const attributeNeighbors = getAttributeNeighborsMap(attributeId);
+            for (const neighbor of attributeNeighbors.keys()) {
+                validated.delete(neighbor);
             }
         }
 
@@ -1147,7 +1377,7 @@ export namespace Checks {
                 }
             }
 
-            const conflictSolution = solveConflictRecursively(initialState, attributesWithColumnIds, state, new Map(neighbors));
+            const conflictSolution = solveConflictRecursively(initialState, attributesWithColumnIds, state, new Map(neighbors), forceCheck, validated);
             if (conflictSolution.errorMsg === undefined) {
                 return conflictSolution;
             }
@@ -1163,7 +1393,7 @@ export namespace Checks {
         return failedResult;
     }
 
-    function solveForNonRangedAttribute(initialState: CheckAttributesMap, attributesWithColumnIds: AttributeAndColumnId[], state: CheckAttributesMap, neighbors: Map<string, CheckDefinition>): CheckConflictResult {
+    function solveForNonRangedAttribute(initialState: CheckAttributesMap, attributesWithColumnIds: AttributeAndColumnId[], state: CheckAttributesMap, neighbors: Map<string, CheckDefinition>, forceCheck: boolean, validated: Map<string, boolean>): CheckConflictResult {
         // Is current selection valid? Try to see if it satisfies the current state.
         const [attributeId, check] = neighbors.entries().next().value!;
         neighbors.delete(attributeId);
@@ -1182,15 +1412,52 @@ export namespace Checks {
             return failedResult;
         }
 
-        const dropdownResult = calculateDropDownEntriesFromSelections_NonRanged(state, attributeId, attributeSelections!, false);
+        // injecting validated into state to ensure neighbors of the attribute are initialised
+        const validatedState = new Map(state);
+        for (const validatedAttributeId of validated.keys()) {
+            validatedState.set(validatedAttributeId, initialState.get(validatedAttributeId)!);
+        }
+        const dropdownResult = calculateDropDownEntriesFromSelections_NonRanged(validatedState, attributeId, attributeSelections!, false);
         const currentAttributeValue = dropdownResult.dropDownEntries?.find(entry => entry.value == searchedAttributeValue);
         const isInitialSelectionValid = currentAttributeValue?.kind === CheckDropDownEntryKind.Normal;
 
         if (isInitialSelectionValid) {
+
+            if (forceCheck) {
+
+                // current attribute has a value that works with the current constraints (state)
+                // for now, this is a validated attribute: with a value that works, that does not require change
+                // in the future, if any of its neighbors changes, it will no longer be considered validated
+                if (validated.get(attributeId) === undefined) {
+                    validated.set(attributeId, true);
+                }
+
+                // if forced, even though initial value is valid, cannot be sure that the neighbors have valid value
+                // therefore, add all NOT VALIDATED neighbors into the queue
+                const attributeNeighbors = getAttributeNeighborsMap(attributeId);
+                filterNeighborsByCheckAttributesMap(attributeNeighbors, initialState);
+
+                // Q := (Q \ {attributeId}) U (Neighbors \ S \ V)
+                for (const [neighborAttributeId, neighborCheck] of attributeNeighbors) {
+                    if (state.get(neighborAttributeId) === undefined && validated.get(neighborAttributeId) === undefined && !neighbors.has(neighborAttributeId)) {
+                        neighbors.set(neighborAttributeId, neighborCheck);
+                    }
+                }
+            }
+
             // the current state does not make this attribute change its value
-            const conflictSolution = solveConflictRecursively(initialState, attributesWithColumnIds, state, neighbors);
+            const conflictSolution = solveConflictRecursively(initialState, attributesWithColumnIds, state, neighbors, forceCheck, validated);
             if (conflictSolution.errorMsg === undefined) {
                 return conflictSolution;
+            }
+        }
+
+        if (forceCheck) {
+            // the current value of the leading attribute is not valid, according to the state.
+            // it will require changing, therefore its neighbors might no longer be considered valid
+            const attributeNeighbors = getAttributeNeighborsMap(attributeId);
+            for (const neighbor of attributeNeighbors.keys()) {
+                validated.delete(neighbor);
             }
         }
 
@@ -1214,7 +1481,7 @@ export namespace Checks {
                     neighbors.set(neighbourAttributeId, neighbourCheck);
                 }
             }
-            const conflictSolution = solveConflictRecursively(initialState, attributesWithColumnIds, state, new Map(neighbors));
+            const conflictSolution = solveConflictRecursively(initialState, attributesWithColumnIds, state, new Map(neighbors), forceCheck, validated);
             if (conflictSolution.errorMsg === undefined) {
                 return conflictSolution;
             }
@@ -1231,6 +1498,10 @@ export namespace Checks {
     }
 
     function getOrderedSelections(check: CheckDefinition, state: CheckAttributesMap, attributeSelections: any, attributeId: string) {
+        // there is no special ordering for selections when using a script check
+        if (check.checkName !== undefined) {
+            return attributeSelections;
+        }
         const otherAttributeIndex = check.colIds[0] === attributeId ? 1 : 0;
         const otherAttributeId = check.attrIds[otherAttributeIndex];
         const otherAttributeColumn = check.colIds[otherAttributeIndex];
@@ -1323,19 +1594,27 @@ export namespace Checks {
             const leadingAttributeKey = getAttributeKey(leadingAttributeAndColumnId);
             result.set(leadingAttributeKey, leadingAttributeAndColumnId);
 
-            const otherAttributeIndex = check.attrIds.findIndex(attributeId => attributeId !== leadingAttributeId);
-            const otherAttributeId = check.attrIds[otherAttributeIndex];
-            const otherAttributeColumnId = check.colIds[otherAttributeIndex];
-            const attributeAndColumnId = new AttributeAndColumnId(otherAttributeId, otherAttributeColumnId);
-            const attributeKey = getAttributeKey(attributeAndColumnId);
-            result.set(attributeKey, attributeAndColumnId);
+            const otherAttributeIds: string[] = [];
+            for (let otherAttributeIndex = 0; otherAttributeIndex < check.attrIds.length; otherAttributeIndex++) {
+                const otherAttributeId = check.attrIds[otherAttributeIndex];
+                if (otherAttributeId === leadingAttributeId) {
+                    continue;
+                }
+                otherAttributeIds.push(otherAttributeId);
+                const otherAttributeColumnId = check.colIds[otherAttributeIndex];
+                const attributeAndColumnId = new AttributeAndColumnId(otherAttributeId, otherAttributeColumnId);
+                const attributeKey = getAttributeKey(attributeAndColumnId);
+                result.set(attributeKey, attributeAndColumnId);
+            }
 
             visitedChecks.push(check);
 
-            const subResult = getUsedAttributesWithColumnIdsRecursively(otherAttributeId, checks, visitedChecks);
-            subResult.forEach((value, key) => {
-                result.set(key, value);
-            })
+            for (const otherAttributeId of otherAttributeIds) {
+                const subResult = getUsedAttributesWithColumnIdsRecursively(otherAttributeId, checks, visitedChecks);
+                subResult.forEach((value, key) => {
+                    result.set(key, value);
+                })
+            }
         });
 
         return result;
@@ -1599,9 +1878,37 @@ export namespace Checks {
         const rightDistance = rightNeighbor - x;
         return leftDistance < rightDistance ? leftNeighbor : rightNeighbor;
     }
+    export interface IFrontDefenition_Attributes extends IModVarNonNull_mod_ClothingOrganizerDesign, IModVarNonNull_mod_CarcaseEdgeFrontColor { }
+
+    class FrontDefenition_Attributes implements IFrontDefenition_Attributes {
+        constructor(attributes: Checks.CheckAttributesMap) {
+            this._mod_CarcaseEdgeFrontColor = (attributes.get('mod_CarcaseEdgeFrontColor') as string);
+            this._mod_ClothingOrganizerDesign = (attributes.get('mod_ClothingOrganizerDesign') as string);
+            this._mod_ClothingOrganizerDesign_matrix = VariantValidation.mod_ClothingOrganizerDesign(undefined, this._mod_ClothingOrganizerDesign);
+        }
+        _mod_CarcaseEdgeFrontColor: string
+        get mod_CarcaseEdgeFrontColor(): string { return this._mod_CarcaseEdgeFrontColor }
+        _mod_ClothingOrganizerDesign: string
+        get mod_ClothingOrganizerDesign(): string { return this._mod_ClothingOrganizerDesign }
+        _mod_ClothingOrganizerDesign_matrix: IMatrix_mod_ClothingOrganizerDesign;
+        get mod_ClothingOrganizerDesign_matrix(): IMatrix_mod_ClothingOrganizerDesign { return this._mod_ClothingOrganizerDesign_matrix }
+    }
+
     export function executeScriptGetDropDownValues(attributes: Checks.CheckAttributesMap, checkName: string, attrId: string, selections: SelectionEntryBase_number[] | SelectionEntryBase_string[] | undefined): Checks.CheckDropDownResult | undefined {
         const checkFunctions = new CheckFunc.CheckFunctions();
         switch (checkName) {
+            case 'FrontDefenition': {
+                const attr = new FrontDefenition_Attributes(attributes);
+                switch (attrId) {
+                    case 'mod_CarcaseEdgeFrontColor':
+                        return checkFunctions.check_FrontDefenition_getDropDownValues_mod_CarcaseEdgeFrontColor(attr, selections as SelectionEntry_mod_CarcaseEdgeFrontColor[]);
+                    case 'mod_ClothingOrganizerDesign':
+                        return checkFunctions.check_FrontDefenition_getDropDownValues_mod_ClothingOrganizerDesign(attr, selections as SelectionEntry_mod_ClothingOrganizerDesign[]);
+                    default:
+                        console.error(`Attribute ID '${attrId}' not found in check '${checkName}'.`);
+                        return undefined;
+                }
+            }
             default:
                 console.error(`Check named '${checkName}' not found.`);
                 return undefined;

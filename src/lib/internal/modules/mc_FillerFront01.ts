@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary, ct2_tab_ApplianceGraphicLibrary } from '../custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction, ct2_tab_BaseunitFridgeConstruction } from '../custom-tables/tab_BaseunitFridgeConstruction'
 import { ct_tab_BaseunitFridgeMapping, ICT_tab_BaseunitFridgeMapping, ct2_tab_BaseunitFridgeMapping } from '../custom-tables/tab_BaseunitFridgeMapping'
@@ -125,10 +125,10 @@ import { ct_tab_SinkMapping, ICT_tab_SinkMapping, ct2_tab_SinkMapping } from '..
 import { ct_tab_SlopedCeilingSettings, ICT_tab_SlopedCeilingSettings, ct2_tab_SlopedCeilingSettings } from '../custom-tables/tab_SlopedCeilingSettings'
 
 import { OD_Base, PartGroup, OpenGroup, Matrix4, Vector3, GenerationContour, Contour, GenerationMethod, RoomContour, ArticlePos } from '../base'
-import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp } from '../mod-base'
+import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IContextData } from '../mod-base'
 import { loadOrderData } from '../loader'
 import { GlobalFunc } from '../global-func'
-import { IModParents_mf_FillerFront } from '../mod-interfaces'
+import { IModParents_mc_Filler01_mf_FillerFront } from '../mod-interfaces'
 import { IP_part_FillerUnit_PartVarsWritable, P_part_FillerUnit } from '../parts/part_FillerUnit'
 import { IP_part_FillerHardware_PartVarsWritable, P_part_FillerHardware } from '../parts/part_FillerHardware'
 import { IP_part_FillerHardwareProcessing_PartVarsWritable, P_part_FillerHardwareProcessing } from '../parts/part_FillerHardwareProcessing'
@@ -146,7 +146,7 @@ import { mc_FillerFront01_createBuildPlan, mc_FillerFront01_afterDataCompletion,
 
 export interface cbp_mc_FillerFront01 extends IModBaseProp
   , IPartAdd_part_FillerUnit, IPartAdd_part_FillerHardware, IPartAdd_part_FillerHardwareProcessing, IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_CarcasePartInfo, IModVarNonNull_mod_Direction, IModVarNonNull_mod_FingergripBtmType, IModVarNonNull_mod_FingergripTop, IModVarNonNull_mod_FingergripTopType, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_FrontHeight, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontOversizeBtm, IModVarNonNull_mod_FrontOversizeRight, IModVarNonNull_mod_FrontOversizeLeft, IModVarNonNull_mod_FrontOversizeTop, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_FrontThk, IModVarNonNull_mod_FrontWidth, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_Originpos, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelrightThk, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_DoorDirection, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_FillerType, IModVarNonNull_mod_FillerHardware, IModVarNonNull_mod_FillerHardwareInfo, IModVarNonNull_mod_FirstFront, IModVarNonNull_mod_LastFront, IModVarNonNull_mod_FrontGapHorTop {
-  parent: IModParents_mf_FillerFront;
+  parent: IModParents_mc_Filler01_mf_FillerFront;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
   createOpenGroup(groupName: string, part: IPartBase): OpenGroup;
@@ -162,7 +162,7 @@ export interface dc_mc_FillerFront01 extends IModBaseProp
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_FillerFront01;
-  parent: IModParents_mf_FillerFront;
+  parent: IModParents_mc_Filler01_mf_FillerFront;
   addOD_M_mc_FrontPanel01(index?: number): dc_mc_FrontPanel01;
   addOD_M_mc_PanelWoodFrame01(index?: number): dc_mc_PanelWoodFrame01;
   addOD_M_mc_MetalFrame01(index?: number): dc_mc_MetalFrame01;
@@ -190,12 +190,12 @@ export interface ccm_mc_FillerFront01 extends adc_base_mc_FillerFront01 {
 export class OD_M_mc_FillerFront01 extends OD_Base implements dc_mc_FillerFront01
   , IModParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01, IModParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01, IModParents_mc_CornerFillerFront01_mc_FillerFront01_mf_CornerFillerFront, IModParents_mc_CornerFillerFront01_mc_FillerFront01
   , IModVar_mod_CarcaseId, IModVar_mod_CarcasePartInfo, IModVar_mod_Direction, IModVar_mod_FingergripBtmType, IModVar_mod_FingergripTop, IModVar_mod_FingergripTopType, IModVar_mod_FrontColor, IModVar_mod_FrontDesign, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapVert, IModVar_mod_FrontHeight, IModVar_mod_FrontId, IModVar_mod_FrontOversizeBtm, IModVar_mod_FrontOversizeRight, IModVar_mod_FrontOversizeLeft, IModVar_mod_FrontOversizeTop, IModVar_mod_FrontPosStart, IModVar_mod_FrontThk, IModVar_mod_FrontWidth, IModVar_mod_HeightPosInsertion, IModVar_mod_ModuleName, IModVar_mod_Originpos, IModVar_mod_PlinthAreaHeight, IModVar_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVar_mod_TypeElement, IModVar_mod_FrontProgram, IModVar_mod_DoorDirection, IModVar_mod_ParentName, IModVar_mod_FillerType, IModVar_mod_FillerHardware, IModVar_mod_FillerHardwareInfo, IModVar_mod_FirstFront, IModVar_mod_LastFront, IModVar_mod_FrontGapHorTop {
-  constructor(parent: IModParents_mf_FillerFront, manufacturerMode?: boolean) {
+  constructor(parent: IModParents_mc_Filler01_mf_FillerFront, manufacturerMode?: boolean) {
     super('mc_FillerFront01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
     this._selfNonNull = new OD_M_mc_FillerFront01_NonNull(this);
   }
-  parent: IModParents_mf_FillerFront;
+  parent: IModParents_mc_Filler01_mf_FillerFront;
   _selfNonNull: OD_M_mc_FillerFront01_NonNull;
 
   override variants: string[] = ['mod_CarcaseId', 'mod_CarcasePartInfo', 'mod_Direction', 'mod_FingergripBtmType', 'mod_FingergripTop', 'mod_FingergripTopType', 'mod_FrontColor', 'mod_FrontDesign', 'mod_FrontEdgeColor', 'mod_FrontEdgeThk', 'mod_FrontGapCarcase', 'mod_FrontGapHor', 'mod_FrontGapVert', 'mod_FrontHeight', 'mod_FrontId', 'mod_FrontOversizeBtm', 'mod_FrontOversizeRight', 'mod_FrontOversizeLeft', 'mod_FrontOversizeTop', 'mod_FrontPosStart', 'mod_FrontThk', 'mod_FrontWidth', 'mod_HeightPosInsertion', 'mod_ModuleName', 'mod_Originpos', 'mod_PlinthAreaHeight', 'mod_SidepanelleftThk', 'mod_SidepanelrightThk', 'mod_TypeElement', 'mod_FrontProgram', 'mod_DoorDirection', 'mod_ParentName', 'mod_FillerType', 'mod_FillerHardware', 'mod_FillerHardwareInfo', 'mod_FirstFront', 'mod_LastFront', 'mod_FrontGapHorTop',];
@@ -672,6 +672,7 @@ export class OD_M_mc_FillerFront01 extends OD_Base implements dc_mc_FillerFront0
     if (json['articleId']) {
       this._articleId = json['articleId'];
     }
+    this._contextData = json['contextData'];
     // only take over the attributes we know...
     {
       internal_enterValidateVariant(this.modId, this._id, 'mod_CarcaseId');
@@ -1587,7 +1588,7 @@ class OD_M_mc_FillerFront01_NonNull implements cbp_mc_FillerFront01, adc_mc_Fill
   }
   get m(): OD_Base[] { return this.#internalParent.m; }
   get g(): IGlobalVars { return this.#internalParent.g; }
-  parent: IModParents_mf_FillerFront;
+  parent: IModParents_mc_Filler01_mf_FillerFront;
   addpart_FillerUnit(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_FillerUnit_PartVarsWritable {
     return this.#internalParent.addpart_FillerUnit(x, y, z, dimx, dimy, dimz);
   }

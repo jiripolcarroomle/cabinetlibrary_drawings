@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from './logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from './logging'
 
 import { BomOutputFileEntry, createBomOutputById } from './bom_outputs';
 import { I3DElement, PartBase, } from './mod-base';
@@ -7,15 +7,6 @@ import { create as xmlbuilder2Create } from 'xmlbuilder2';
 import { GlobalFunc } from './global-func'
 import { GlobalVars } from './global-vars';
 import { Matrix4, OD_Base, RoomContour, Vector3 } from './base';
-import { IRenderOrthoCameraParams, IRenderOrthoCameraResult } from '../../drawing2/orderdrawingrenderer.interface';
-import { createScene } from '../../drawing2/scene.implementation';
-import { IExtendedDrawingRenderSettings } from '../../drawing2/orderdrawingrenderer.theejs.helpers';
-import { IOrderSceneNode, Object3DNodeKind } from '../../drawing2/scene.interface';
-import { renderScene } from '../../drawing2/orderdrawingrenderer.threejs';
-import { filterNodesCloseToWall } from '../../drawing2/wall';
-import { Drawing } from '../../drawing2/drawing.implementation';
-import { AnnotablePoint, Annotation, DrawingDirection, SvgInjectionData } from '../../drawing2/drawing.interface';
-import { filterAnnotationForModule, I_tab_Annotation } from '../../drawing2/annotationstable';
 
 export interface IOrderAdditionalData {
   key: string;
@@ -431,8 +422,8 @@ export class OrderOutputBaseOutput_ProductionManager extends OrderOutputBase {
       // ####################### CUSTOM SCRIPTS ########################
       // ###############################################################
 
-      // Schuler Consulting 
-      // Create: August 2023ƒ
+      // Schuler Consulting
+      // Create: August 2023
       // By Ludwig Weber
       // Purpose: Create OrderOutput for productionManager
       //
@@ -1058,184 +1049,6 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
       // ####################### CUSTOM SCRIPTS ########################
       // ###############################################################
 
-      const orthoCameraRenderResults: IRenderOrthoCameraResult[] = [];
-
-      // convert order to scene nodes, where the parts are grouped under modules and their world transforms can be calculated
-      const orderScene = createScene(o, ol);
-
-      // =================
-      // 1. settings and preparations 
-      // =================
-      const drawingSettings: IExtendedDrawingRenderSettings = {
-        material: { color: 0xcccccc, },
-        wireframeMaterial: { color: 0x000000, },
-        wallsMaterial: {
-          color: 0x555500,
-          transparent: true, opacity: 0.1,
-
-        },
-        wallsWireframeMaterial: { color: 0x000000, },
-        // will not fetch meshes and will render bounding boxes of the meshes instead
-        doNotFetchMeshes: true,
-        // three.js renderer property - angle in degrees between adjacent faces above which an edge will be rendered
-        edgesGeometryThresholdAngle: 10,
-      }
-      const moduleCloseToWallDistanceThreshold = 300; // in mm
-      const orthoCameraRenderSettings: IRenderOrthoCameraParams = {
-        drawingMaxWidth: 1920 * 2,
-        drawingMaxHeight: 1080 * 2,
-      }
-
-      const partsNameFilter = (node: IOrderSceneNode) => {
-        // filter out tiny parts that are not important for the overview drawings
-        if (node.kind === Object3DNodeKind.Part) {
-          if (
-            [
-              'hinge',
-              'hanger',
-              'drill',
-            ].some(x => node.id.toLowerCase().includes(x))
-          ) {
-            return false;
-          }
-        }
-        return true;
-      }
-      const getWallsFilter = (relevantWall: IOrderSceneNode | undefined) => {
-        return (node: IOrderSceneNode) => {
-          if (!relevantWall) {
-            return true;
-          }
-          if (node.kind === Object3DNodeKind.Wall) {
-            return node === relevantWall;
-          }
-          return true;
-        }
-      }
-
-      // get all content nodes (modules)
-      const allModuleNodesIncludingGenerationModules = orderScene.children // root
-        .filter(child => child.kind === Object3DNodeKind.Group || child.kind === Object3DNodeKind.PosGroup)
-        .flatMap(group => group.children) // pos-groups
-        .flatMap(group => group.children) // module + part candidates
-        .filter(node => node.kind === Object3DNodeKind.Module);
-
-      
-      const generationModules = allModuleNodesIncludingGenerationModules.filter(moduleNode => moduleNode.orderLineEntry?.['_isGenerated']);
-
-      const allModuleNodes = allModuleNodesIncludingGenerationModules.filter(node => !generationModules.includes(node));
-
-      // get all walls in the order
-      const allWalls = orderScene.children.find(child => child.kind === Object3DNodeKind.WallGroup)?.children ?? [];
-      // both sides of all walls
-      const allWallSides = allWalls.flatMap(wall => {
-        const wallData = wall.wallData;
-        if (!wallData) {
-          return []
-        }
-        return [
-          { wall, side: 'front' as const },
-          { wall, side: 'rear' as const },
-        ]
-      });
-
-      // =================
-      // 2. collect relevant renderings
-      // =================
-
-      const topView = await renderScene(orderScene, (node) => { void node; return true; }, drawingSettings, { ...orthoCameraRenderSettings, direction: undefined });
-      orthoCameraRenderResults.push(topView);
-
-      for (const wallAndSide of allWallSides) {
-        const { wall, side } = wallAndSide;
-        const modulesCloseToWall = filterNodesCloseToWall(allModuleNodes, wall.wallData!, side === 'rear', moduleCloseToWallDistanceThreshold)
-        // nothing -> do not render
-        if (!modulesCloseToWall.length) continue;
-
-        const isOwnedByModuleCloseToWall = (node: IOrderSceneNode) => {
-          let current: IOrderSceneNode | null = node;
-          while (current) {
-            if (modulesCloseToWall.includes(current)) {
-              return true;
-            }
-            current = current.parent;
-          }
-          return false;
-        };
-
-        const renderingFilter = (node: IOrderSceneNode) => {
-          // filter by name
-          if (!partsNameFilter(node)) {
-            return false;
-          }
-          if (node.kind === Object3DNodeKind.Wall) {
-            return getWallsFilter(wall)(node);
-          }
-          if (node.kind === Object3DNodeKind.Part || node.kind === Object3DNodeKind.Module) {
-            return isOwnedByModuleCloseToWall(node);
-          }
-
-          return true;
-        }
-
-
-        const cameraDirection = side === 'front' ? wall.wallData?.normalToWall : wall.wallData?.normalToWall.clone().multiply(-1);
-
-        const result = await renderScene(orderScene, renderingFilter, drawingSettings, { ...orthoCameraRenderSettings, direction: cameraDirection });
-        orthoCameraRenderResults.push(result);
-
-      }
-
-      // =================
-      // 3. make drawings from the renderings
-      // =================
-
-      const svgs: SVGElement[] = [];
-
-      orthoCameraRenderResults.forEach((renderResult, index) => {
-        const drawing = new Drawing(renderResult, { drawingDirection: index === 0 ? DrawingDirection.Top : DrawingDirection.Elevation });
-
-        renderResult.renderedNodes?.forEach((moduleNode: IOrderSceneNode) => {
-          const moduleData = moduleNode.orderLineEntry;
-          const nodeMatrix = moduleNode.worldTransform;
-          if (!moduleData) { return; }
-          const id = moduleData!['modId'];
-          if (!id) { return; }
-          const annotations = filterAnnotationForModule(id, moduleData, drawing);
-          if (annotations.length > 0) {
-            annotations.forEach((annotation: I_tab_Annotation) => {
-              annotation.out_SvgInjections?.(moduleData)?.forEach((injection: SvgInjectionData) => {
-                drawing.addOverlay(nodeMatrix, injection);
-              });
-              annotation.out_Annotations?.(moduleData)?.forEach((annotation: Annotation) => {
-                drawing.addAnnotation(nodeMatrix, annotation);
-              });
-              annotation.out_AnnotablePoints?.(moduleData)?.forEach((point: AnnotablePoint) => {
-                const radius = 15;
-                const svgCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                svgCircle.setAttribute("cx", point.coordinate._x.toString());
-                svgCircle.setAttribute("cy", point.coordinate._y.toString());
-                svgCircle.setAttribute("r", radius.toString());
-                svgCircle.setAttribute("fill", "blue");
-                drawing.addSvgObject(nodeMatrix, svgCircle);
-              });
-
-            });
-          }
-        });
-
-        const svg = drawing.render();
-        svgs.push(svg);
-      });
-
-
-      const xmlSerializer = new XMLSerializer();
-      svgs.forEach((svg, index) => {
-        const svgString = xmlSerializer.serializeToString(svg);
-        const fileName = index === 0 ? `overview_drawing.svg` : `elevation_drawing_${index}.svg`;
-        this.createFileEntry(result, fileName, svgString, "image/svg+xml");
-      });
-
       // ###############################################################
       // ################### END CUSTOM SCRIPTS ########################
       // ###############################################################
@@ -1844,13 +1657,25 @@ export class OrderOutputBaseoutput_CamManager extends OrderOutputBase {
           // Create Processings (Workgroups/Operations JSON pro Part)
           const procOut: Map<string, BomOutputFileEntry> = oOutput.createBomOutputcreate_CamManagerProcessings(p.bomEntries);
 
-
+          // Find the parent
           const findBomParent = (parent: string): any[] => {
             const r: any[] = [];
+
             bom.forEach((value: any, key: string) => {
-              const k = JSON.parse(key);
-              if (k.parent === parent) r.push(k);
+              try {
+                const raw = fileEntryToString(value);
+                const parsed = JSON.parse(raw);
+
+                const k = parsed.entry ?? parsed;
+
+                if (k.parent === parent) {
+                  r.push(k);
+                }
+              } catch (e) {
+                logError("Could not parse BOM entry: " + key + " value: " + value + "error: " + e);
+              }
             });
+
             return r;
           };
 

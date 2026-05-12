@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary, ct2_tab_ApplianceGraphicLibrary } from '../custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction, ct2_tab_BaseunitFridgeConstruction } from '../custom-tables/tab_BaseunitFridgeConstruction'
 import { ct_tab_BaseunitFridgeMapping, ICT_tab_BaseunitFridgeMapping, ct2_tab_BaseunitFridgeMapping } from '../custom-tables/tab_BaseunitFridgeMapping'
@@ -125,7 +125,7 @@ import { ct_tab_SinkMapping, ICT_tab_SinkMapping, ct2_tab_SinkMapping } from '..
 import { ct_tab_SlopedCeilingSettings, ICT_tab_SlopedCeilingSettings, ct2_tab_SlopedCeilingSettings } from '../custom-tables/tab_SlopedCeilingSettings'
 
 import { OD_Base, PartGroup, OpenGroup, Matrix4, Vector3, GenerationContour, Contour, GenerationMethod, RoomContour, ArticlePos } from '../base'
-import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IDockingInfo, Dock, IInsertLevelInfo } from '../mod-base'
+import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IContextData, IDockingInfo, Dock, IInsertLevelInfo } from '../mod-base'
 import { loadOrderData } from '../loader'
 import { GlobalFunc } from '../global-func'
 import { OD_M_mc_ApplianceGraphic, dc_mc_ApplianceGraphic } from './mc_ApplianceGraphic'
@@ -135,7 +135,7 @@ import { VariantValidation, IMatrix_mod_HoodSupplier, IMatrix_mod_HoodId, IMatri
 import { IGlobalVars, GlobalVars } from '../global-vars'
 import { IGlobalVarsParent } from '../global-vars-parent'
 
-import { mr_Hood_createBuildPlan, mr_Hood_afterDataCompletion, mr_Hood_manufacturerDataCompletion, mr_Hood_calculateContainerModules } from '../../modules/mr_Hood';
+import { mr_Hood_createBuildPlan, mr_Hood_afterDataCompletion, mr_Hood_manufacturerDataCompletion, mr_Hood_calculateContainerModules, mr_Hood_prepareContext } from '../../modules/mr_Hood';
 
 export interface cbp_mr_Hood extends IModBaseProp
   , IModVarNonNull_mod_HoodSupplier, IModVarNonNull_mod_HoodId, IModVarNonNull_mod_HeightPosInsertion {
@@ -156,6 +156,11 @@ export interface dc_mr_Hood extends IModBaseProp
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mr_Hood;
   addOD_M_mc_ApplianceGraphic(index?: number): dc_mc_ApplianceGraphic;
+}
+
+export interface pc_mr_Hood extends dc_mr_Hood {
+  getContextData(): IContextData | undefined;
+  getContextModule(id: string): OD_Base | undefined;
 }
 
 export interface adc_base_mr_Hood extends IModBaseProp
@@ -181,7 +186,7 @@ export interface ccm_mr_Hood extends adc_base_mr_Hood {
 }
 
 
-export class OD_M_mr_Hood extends OD_Base implements dc_mr_Hood
+export class OD_M_mr_Hood extends OD_Base implements pc_mr_Hood, dc_mr_Hood
   , IModParents_mc_BaseunitFridge01_mc_Dishwasher01_mc_Fridge01_mc_Hob01_mc_HoodInsert01_mc_Oven01_mc_Sink01_me_LaundryMachine_mf_Sink_mr_Hood
   , IModVar_mod_HoodSupplier, IModVar_mod_HoodId, IModVar_mod_HeightPosInsertion {
   constructor(parent?: OD_Base, manufacturerMode?: boolean) {
@@ -302,6 +307,7 @@ export class OD_M_mr_Hood extends OD_Base implements dc_mr_Hood
     if (json['articleId']) {
       this._articleId = json['articleId'];
     }
+    this._contextData = json['contextData'];
     // only take over the attributes we know...
     {
       internal_enterValidateVariant(this.modId, this._id, 'mod_HoodSupplier');
@@ -402,6 +408,14 @@ export class OD_M_mr_Hood extends OD_Base implements dc_mr_Hood
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
   }
+  override prepareContext(contextRoots: OD_Base[]): void {
+    super.prepareContext(contextRoots);
+    this.internallyPrepareContext();
+  }
+  internallyPrepareContext(): void {
+    this.#prepareContextInternal();
+  }
+  #prepareContextInternal = mr_Hood_prepareContext;
   seal(): IModuleNonNull_mr_Hood {
     this.afterDataCompletion();
     const adc = new OD_M_mr_Hood_NonNull(this);
@@ -456,6 +470,10 @@ class OD_M_mr_Hood_NonNull implements cbp_mr_Hood, adc_mr_Hood, ccm_mr_Hood, IPa
     );
   }
   getRoomContours(): RoomContour[] { return this.#internalParent.roomContours ?? []; }
+  getContextData(): IContextData | undefined { return this.#internalParent.getContextData(); }
+  getContextModule(id: string): OD_Base | undefined {
+    return this.#internalParent.getContextModule(id);
+  }
   get _posData(): Map<string, string | number> { return this.#internalParent._posData; }
 
   get _id(): string { return this.#internalParent._id; }

@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from './logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from './logging'
 //#region Imports
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary } from './custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction } from './custom-tables/tab_BaseunitFridgeConstruction'
@@ -243,6 +243,8 @@ import { OD_M_mr_CeilingFiller } from './modules/mr_CeilingFiller'
 import { OD_M_mc_CeilingFiller01 } from './modules/mc_CeilingFiller01'
 import { OD_M_md_FrontPlaceholder } from './modules/md_FrontPlaceholder'
 import { OD_M_md_FrontArticleBuilder } from './modules/md_FrontArticleBuilder'
+import { OD_M_mr_Filler } from './modules/mr_Filler'
+import { OD_M_mc_Filler01 } from './modules/mc_Filler01'
 import { IGlobalVars } from './global-vars'
 import { CKind, Contour, ContourEntry, GenerationContour, Matrix4, Vector3 } from './base'
 import { FaceKey, IFaceMaterial, ModuleHelper, PartHelper, IPartBase } from './mod-base'
@@ -5001,11 +5003,13 @@ export class GlobalFunc {
 			if (HandleRotation == 0 || HandleRotation == 180) {
 				if (m.mod_Width <= HandleLength) {
 					logError('The handle dimension is bigger than the front dimension!')
+					return retHandle;
 				}
 			}
 			else {
 				if (m.mod_Height <= HandleLength) {
 					logError('The handle dimension is bigger than the front dimension!')
+					return retHandle;
 				}
 			}
 
@@ -5281,11 +5285,13 @@ export class GlobalFunc {
 		if (HandleRotation == 0 || HandleRotation == 180) {
 			if (m.mod_Width <= HandleLength) {
 				logError('The handle dimension is bigger than the front dimension!')
+				return retHandle;
 			}
 		}
 		else {
 			if (m.mod_Height <= HandleLength) {
 				logError('The handle dimension is bigger than the front dimension!')
+				return retHandle;
 			}
 		}
 
@@ -6739,8 +6745,16 @@ export class GlobalFunc {
 				}
 			}
 
+			/**
+			 * Epsilon value to compare coordinate or position equality.
+			 * apparently, 0.000001 was too little
+			 * TC provided near-zero position values: "x": 900.0, "y": -2.6679314139854693E-12, "z": -6.103515625E-05, "rotationY": 1.1920928955078125E-07
+			 * where the previous value failed
+			 * 0.01 mm is a suggestion for trying out
+			 */
+			static EPS: number = 0.01;
 
-			override	add(v: Vector3) {
+			add(v: Vector3) {
 				return new Vector3Extended(this._x + v._x, this._y + v._y, this._z + v._z);
 			}
 			subtract(v: Vector3) {
@@ -6749,7 +6763,7 @@ export class GlobalFunc {
 			scale(scalar: number) {
 				return new Vector3Extended(this._x * scalar, this._y * scalar, this._z * scalar);
 			}
-			override	normalize(): Vector3Extended {
+			normalize() {
 				const magnitude = this.magnitude();
 				if (magnitude < Vector3Extended.EPS) {
 					return new Vector3Extended(0, 0, 0);
@@ -6762,14 +6776,23 @@ export class GlobalFunc {
 			magnitude() {
 				return Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z);
 			}
-
+			isCoincident(v: Vector3, tolerance: number = Vector3Extended.EPS) {
+				return this.subtract(v).magnitude() < Vector3Extended.EPS;
+			}
+			/** dot product */
+			dot(v: Vector3) {
+				return this._x * v._x + this._y * v._y + this._z * v._z;
+			}
 			/** cross product */
-			override cross(v: Vector3) {
+			cross(v: Vector3) {
 				return new Vector3Extended(this._y * v._z - this._z * v._y, this._z * v._x - this._x * v._z, this._x * v._y - this._y * v._x);
 			}
 			/** size of cross is size of area between two vectors - if that is 0, they are parallel */
 			isParallel(v: Vector3) {
 				return this.cross(v).magnitude() < Vector3Extended.EPS;
+			}
+			distanceTo(v: Vector3) {
+				return this.subtract(v).magnitude();
 			}
 		}
 
@@ -17557,6 +17580,10 @@ export class GlobalFunc {
 		CeilingAreaVisRight: 1 | 0;
 		CarcaseVisLeft: 1 | 0;
 		CarcaseVisRight: 1 | 0;
+		AutoFillerLeft: boolean;
+		AutoFillerRight: boolean;
+		WallDistanceLeft: number;
+		WallDistanceRight: number;
 	} {
 		//======================================================================
 		// Default object
@@ -17568,7 +17595,11 @@ export class GlobalFunc {
 			CeilingAreaVisLeft: 0 as 1 | 0,
 			CeilingAreaVisRight: 0 as 1 | 0,
 			CarcaseVisLeft: 0 as 1 | 0,
-			CarcaseVisRight: 0 as 1 | 0
+			CarcaseVisRight: 0 as 1 | 0,
+			AutoFillerLeft: false,
+			AutoFillerRight: false,
+			WallDistanceLeft: 999,
+			WallDistanceRight: 999
 		};
 
 		//======================================================================
@@ -17577,6 +17608,14 @@ export class GlobalFunc {
 
 		function isVisibilityValue(value: unknown): value is 1 | 0 {
 			return value === 1 || value === 0;
+		}
+
+		function isBoolean(value: unknown): value is boolean {
+			return typeof value === "boolean";
+		}
+
+		function isNumber(value: unknown): value is number {
+			return typeof value === "number" && !isNaN(value);
 		}
 
 		//======================================================================
@@ -17629,6 +17668,22 @@ export class GlobalFunc {
 			logError("Invalid CarcaseVisRight in storageunitInfo");
 			return result;
 		}
+		if (!isBoolean(v["AutoFillerLeft"])) {
+			logError("Invalid AutoFillerLeft in storageunitInfo");
+			return result;
+		}
+		if (!isBoolean(v["AutoFillerRight"])) {
+			logError("Invalid AutoFillerRight in storageunitInfo");
+			return result;
+		}
+		if (!isNumber(v["WallDistanceLeft"])) {
+			logError("Invalid WallDistanceLeft in storageunitInfo");
+			return result;
+		}
+		if (!isNumber(v["WallDistanceRight"])) {
+			logError("Invalid WallDistanceRight in storageunitInfo");
+			return result;
+		}
 
 		//======================================================================
 		// Return parsed values
@@ -17640,6 +17695,10 @@ export class GlobalFunc {
 		result.CeilingAreaVisRight = v["CeilingAreaVisRight"];
 		result.CarcaseVisLeft = v["CarcaseVisLeft"];
 		result.CarcaseVisRight = v["CarcaseVisRight"];
+		result.AutoFillerLeft = v["AutoFillerLeft"];
+		result.AutoFillerRight = v["AutoFillerRight"];
+		result.WallDistanceLeft = v["WallDistanceLeft"];
+		result.WallDistanceRight = v["WallDistanceRight"];
 
 		return result;
 	}

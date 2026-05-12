@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary, ct2_tab_ApplianceGraphicLibrary } from '../custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction, ct2_tab_BaseunitFridgeConstruction } from '../custom-tables/tab_BaseunitFridgeConstruction'
 import { ct_tab_BaseunitFridgeMapping, ICT_tab_BaseunitFridgeMapping, ct2_tab_BaseunitFridgeMapping } from '../custom-tables/tab_BaseunitFridgeMapping'
@@ -125,7 +125,7 @@ import { ct_tab_SinkMapping, ICT_tab_SinkMapping, ct2_tab_SinkMapping } from '..
 import { ct_tab_SlopedCeilingSettings, ICT_tab_SlopedCeilingSettings, ct2_tab_SlopedCeilingSettings } from '../custom-tables/tab_SlopedCeilingSettings'
 
 import { OD_Base, PartGroup, OpenGroup, Matrix4, Vector3, GenerationContour, Contour, GenerationMethod, RoomContour, ArticlePos } from '../base'
-import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp } from '../mod-base'
+import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IContextData } from '../mod-base'
 import { loadOrderData } from '../loader'
 import { GlobalFunc } from '../global-func'
 import { OD_M_mc_Countertop01, dc_mc_Countertop01 } from './mc_Countertop01'
@@ -134,7 +134,7 @@ import { IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_Coun
 import { VariantValidation, IMatrix_mod_ModuleName, IMatrix_mod_CountertopColor, IMatrix_mod_CountertopEdgeBackType, IMatrix_mod_CountertopEdgeFrontType, IMatrix_mod_CountertopEdgeLeftType, IMatrix_mod_CountertopEdgeRightType, IMatrix_mod_CountertopId, IMatrix_mod_CountertopThk, IMatrix_mod_CountertopOverhangLeft, IMatrix_mod_CountertopOverhangRight, IMatrix_mod_CountertopConnectionOversize, IMatrix_mod_CountertopProgram, IMatrix_mod_CountertopConnectionRadius, IMatrix_mod_CountertopConnectionSequence, IMatrix_mod_CountertopOverhangFront } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
-import { mr_Countertop_createBuildPlan, mr_Countertop_afterDataCompletion, mr_Countertop_manufacturerDataCompletion, mr_Countertop_calculateContainerModules } from '../../modules/mr_Countertop';
+import { mr_Countertop_createBuildPlan, mr_Countertop_afterDataCompletion, mr_Countertop_manufacturerDataCompletion, mr_Countertop_calculateContainerModules, mr_Countertop_prepareContext } from '../../modules/mr_Countertop';
 
 export interface cbp_mr_Countertop extends IModBaseProp
   , IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_CountertopColor, IModVarNonNull_mod_CountertopEdgeBackType, IModVarNonNull_mod_CountertopEdgeFrontType, IModVarNonNull_mod_CountertopEdgeLeftType, IModVarNonNull_mod_CountertopEdgeRightType, IModVarNonNull_mod_CountertopId, IModVarNonNull_mod_CountertopThk, IModVarNonNull_mod_CountertopOverhangLeft, IModVarNonNull_mod_CountertopOverhangRight, IModVarNonNull_mod_CountertopConnectionOversize, IModVarNonNull_mod_CountertopProgram, IModVarNonNull_mod_CountertopConnectionRadius, IModVarNonNull_mod_CountertopConnectionSequence, IModVarNonNull_mod_CountertopOverhangFront, IModVarNonNull_mod_LengthList {
@@ -158,6 +158,11 @@ export interface dc_mr_Countertop extends IModBaseProp
   addOD_M_mc_Countertop01(index?: number): dc_mc_Countertop01;
 }
 
+export interface pc_mr_Countertop extends dc_mr_Countertop {
+  getContextData(): IContextData | undefined;
+  getContextModule(id: string): OD_Base | undefined;
+}
+
 export interface adc_base_mr_Countertop extends IModBaseProp
   , IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_CountertopColor, IModVarNonNull_mod_CountertopEdgeBackType, IModVarNonNull_mod_CountertopEdgeFrontType, IModVarNonNull_mod_CountertopEdgeLeftType, IModVarNonNull_mod_CountertopEdgeRightType, IModVarNonNull_mod_CountertopId, IModVarNonNull_mod_CountertopThk, IModVarNonNull_mod_CountertopOverhangLeft, IModVarNonNull_mod_CountertopOverhangRight, IModVarNonNull_mod_CountertopConnectionOversize, IModVarNonNull_mod_CountertopProgram, IModVarNonNull_mod_CountertopConnectionRadius, IModVarNonNull_mod_CountertopConnectionSequence, IModVarNonNull_mod_CountertopOverhangFront, IModVarNonNull_mod_LengthList {
   get m(): OD_Base[];
@@ -175,7 +180,7 @@ export interface ccm_mr_Countertop extends adc_base_mr_Countertop {
 }
 
 
-export class OD_M_mr_Countertop extends OD_Base implements dc_mr_Countertop
+export class OD_M_mr_Countertop extends OD_Base implements pc_mr_Countertop, dc_mr_Countertop
   , IModParents_mr_Countertop
   , IModVar_mod_ModuleName, IModVar_mod_CountertopColor, IModVar_mod_CountertopEdgeBackType, IModVar_mod_CountertopEdgeFrontType, IModVar_mod_CountertopEdgeLeftType, IModVar_mod_CountertopEdgeRightType, IModVar_mod_CountertopId, IModVar_mod_CountertopThk, IModVar_mod_CountertopOverhangLeft, IModVar_mod_CountertopOverhangRight, IModVar_mod_CountertopConnectionOversize, IModVar_mod_CountertopProgram, IModVar_mod_CountertopConnectionRadius, IModVar_mod_CountertopConnectionSequence, IModVar_mod_CountertopOverhangFront, IModVar_mod_LengthList {
   constructor(parent?: OD_Base, manufacturerMode?: boolean) {
@@ -404,6 +409,7 @@ export class OD_M_mr_Countertop extends OD_Base implements dc_mr_Countertop
     if (json['articleId']) {
       this._articleId = json['articleId'];
     }
+    this._contextData = json['contextData'];
     // only take over the attributes we know...
     {
       internal_enterValidateVariant(this.modId, this._id, 'mod_ModuleName');
@@ -610,6 +616,14 @@ export class OD_M_mr_Countertop extends OD_Base implements dc_mr_Countertop
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
   }
+  override prepareContext(contextRoots: OD_Base[]): void {
+    super.prepareContext(contextRoots);
+    this.internallyPrepareContext();
+  }
+  internallyPrepareContext(): void {
+    this.#prepareContextInternal();
+  }
+  #prepareContextInternal = mr_Countertop_prepareContext;
   seal(): IModuleNonNull_mr_Countertop {
     this.afterDataCompletion();
     const adc = new OD_M_mr_Countertop_NonNull(this);
@@ -669,6 +683,10 @@ class OD_M_mr_Countertop_NonNull implements cbp_mr_Countertop, adc_mr_Countertop
   #internalParent: OD_M_mr_Countertop;
   getGenerationContours(): GenerationContour[] { return this.#internalParent.getGenerationContours(); }
   getRoomContours(): RoomContour[] { return this.#internalParent.roomContours ?? []; }
+  getContextData(): IContextData | undefined { return this.#internalParent.getContextData(); }
+  getContextModule(id: string): OD_Base | undefined {
+    return this.#internalParent.getContextModule(id);
+  }
   get _posData(): Map<string, string | number> { return this.#internalParent._posData; }
 
   get _id(): string { return this.#internalParent._id; }

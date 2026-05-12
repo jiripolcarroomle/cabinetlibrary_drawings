@@ -1,7 +1,7 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../internal/logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
 
 //#region Imports
-import { cbp_md_EquipmentArticleBuilder, dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, ccm_md_EquipmentArticleBuilder } from '../internal/modules/md_EquipmentArticleBuilder'
+import { cbp_md_EquipmentArticleBuilder, dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, ccm_md_EquipmentArticleBuilder, pc_md_EquipmentArticleBuilder } from '../internal/modules/md_EquipmentArticleBuilder'
 import { GlobalFunc } from '../internal/global-func'
 import { dc_me_ShelfadjMultiple01, OD_M_me_ShelfadjMultiple01 } from '../internal/modules/me_ShelfadjMultiple01'
 import { dc_me_ClothingOrganizer01, OD_M_me_ClothingOrganizer01 } from '../internal/modules/me_ClothingOrganizer01'
@@ -130,7 +130,7 @@ import { ct_tab_SinkConstruction, ICT_tab_SinkConstruction } from '../internal/c
 import { ct_tab_SinkMapping, ICT_tab_SinkMapping } from '../internal/custom-tables/tab_SinkMapping'
 import { ct_tab_SlopedCeilingSettings, ICT_tab_SlopedCeilingSettings } from '../internal/custom-tables/tab_SlopedCeilingSettings'
 import { CKind, Contour, GenerationMethod, Matrix4, Vector3 } from '../internal/base'
-import { Dock, IDockingInfo, FaceKey, IPartBase, MatrixHelper, ModuleHelper, PartHelper } from '../internal/mod-base'
+import { Dock, IDockingInfo, FaceKey, IPartBase, MatrixHelper, ModuleHelper, PartHelper, IContextData } from '../internal/mod-base'
 declare function uuidv4(): string;
 //#endregion Imports
 
@@ -179,6 +179,30 @@ export function md_EquipmentArticleBuilder_afterDataCompletion(this: adc_md_Equi
   }
   finally {
     internal_leaveModuleAfterDataCompletion();
+  }
+}
+// ---------------------------------------------------------------
+export function md_EquipmentArticleBuilder_prepareContext(this: pc_md_EquipmentArticleBuilder): void {
+  internal_enterModulePrepareContext('md_EquipmentArticleBuilder', this._id);
+  try {
+    // ###############################################################
+    // ####################### CUSTOM SCRIPTS ########################
+    // ###############################################################
+    // CUSTOMSCRIPT_md_EquipmentArticleBuilder_PREPARECONTEXT
+
+    // ###############################################################
+    // ################### END CUSTOM SCRIPTS ########################
+    // ###############################################################
+  }
+  catch (error) {
+    if (error instanceof Error) {
+      logError(error.message + "\n" + error.stack);
+    } else {
+      logError(JSON.stringify(error, null, 4));
+    }
+  }
+  finally {
+    internal_leaveModulePrepareContext();
   }
 }
 // ---------------------------------------------------------------
