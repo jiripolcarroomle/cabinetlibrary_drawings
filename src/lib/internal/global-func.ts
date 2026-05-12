@@ -6732,16 +6732,32 @@ export class GlobalFunc {
 		const mr_Upright = 'mr_Upright';
 		const mr_Filler01 = 'mr_Filler01';
 
-		/** Extends the base Vector3 with some vector math */
-		class Vector3Extended extends Vector3 {
+		/** 
+			 * Extends the base Vector3 with some vector math 
+			 * CHANGED April 2026
+			 * Vector3Extended is not inherited from Vector3 anymore, is a new class
+			 * because we need to extend the original base.ts/Vector3 with more vector math.
+			 * However, this has to be done in industry standard, where the Vector3Extended is not.
+			 * Difference is that standard Vector3 math mutates the original instance,
+			 * whereas the Vector3Extended math returns a new instance with the result, leaving the original instance unchanged.
+			 * */
+		class Vector3Extended {
+
+			_x: number;
+			_y: number;
+			_z: number;
 
 			constructor(x: number, y: number, z: number);
-			constructor(v: Vector3);
-			constructor(xOrVector: number | Vector3, y?: number, z?: number) {
-				if (xOrVector instanceof Vector3) {
-					super(xOrVector._x, xOrVector._y, xOrVector._z);
+			constructor(v: Vector3 | Vector3Extended);
+			constructor(xOrVector: number | Vector3 | Vector3Extended, y?: number, z?: number) {
+				if (xOrVector instanceof Vector3 || xOrVector instanceof Vector3Extended) {
+					this._x = xOrVector._x;
+					this._y = xOrVector._y;
+					this._z = xOrVector._z;
 				} else {
-					super(xOrVector, y!, z!);
+					this._x = xOrVector;
+					this._y = y ?? 0;
+					this._z = z ?? 0;
 				}
 			}
 
@@ -6754,10 +6770,10 @@ export class GlobalFunc {
 			 */
 			static EPS: number = 0.01;
 
-			add(v: Vector3) {
+			add(v: Vector3Extended | Vector3) {
 				return new Vector3Extended(this._x + v._x, this._y + v._y, this._z + v._z);
 			}
-			subtract(v: Vector3) {
+			subtract(v: Vector3Extended | Vector3) {
 				return new Vector3Extended(this._x - v._x, this._y - v._y, this._z - v._z);
 			}
 			scale(scalar: number) {
@@ -6776,23 +6792,26 @@ export class GlobalFunc {
 			magnitude() {
 				return Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z);
 			}
-			isCoincident(v: Vector3, tolerance: number = Vector3Extended.EPS) {
+			isCoincident(v: Vector3Extended | Vector3, tolerance: number = Vector3Extended.EPS) {
 				return this.subtract(v).magnitude() < Vector3Extended.EPS;
 			}
 			/** dot product */
-			dot(v: Vector3) {
+			dot(v: Vector3Extended | Vector3) {
 				return this._x * v._x + this._y * v._y + this._z * v._z;
 			}
 			/** cross product */
-			cross(v: Vector3) {
+			cross(v: Vector3Extended | Vector3) {
 				return new Vector3Extended(this._y * v._z - this._z * v._y, this._z * v._x - this._x * v._z, this._x * v._y - this._y * v._x);
 			}
 			/** size of cross is size of area between two vectors - if that is 0, they are parallel */
-			isParallel(v: Vector3) {
+			isParallel(v: Vector3Extended | Vector3) {
 				return this.cross(v).magnitude() < Vector3Extended.EPS;
 			}
-			distanceTo(v: Vector3) {
+			distanceTo(v: Vector3Extended | Vector3) {
 				return this.subtract(v).magnitude();
+			}
+			toVector3(): Vector3 {
+				return new Vector3(this._x, this._y, this._z);
 			}
 		}
 
@@ -6817,7 +6836,7 @@ export class GlobalFunc {
 			 * @param end line segment end point
 			 * @param footprintEquation whether to reduce the line segment to a 2D line by setting the y coordinate of the start and end points to 0
 			 */
-			constructor(start: Vector3, end: Vector3, footprintEquation: boolean = false) {
+			constructor(start: Vector3Extended | Vector3, end: Vector3Extended | Vector3, footprintEquation: boolean = false) {
 				this.start = new Vector3Extended(start);
 				this.end = new Vector3Extended(end);
 				this.explicitFootprintEquation = footprintEquation;
@@ -6902,7 +6921,7 @@ export class GlobalFunc {
 			/**
 			 * Returns the perpendicular distance of a point to the line the segment is on. Can be 0 if point is on the line.
 			 */
-			perpendicularDistanceOfPoint(point: Vector3): number {
+			perpendicularDistanceOfPoint(point: Vector3Extended | Vector3): number {
 				const pointToStart = this.start.subtract(point);
 				const cross = pointToStart.cross(this.direction);
 				return cross.magnitude();
@@ -6972,7 +6991,7 @@ export class GlobalFunc {
 				return this.start.add(this.direction.scale(t));
 			}
 			/** Returns a new equation which is moved by a vector to a different position */
-			translate(args: { both?: Vector3 | undefined, start?: Vector3 | undefined, end?: Vector3 | undefined }) {
+			translate(args: { both?: Vector3 | Vector3Extended | undefined, start?: Vector3 | Vector3Extended | undefined, end?: Vector3 | Vector3Extended | undefined }) {
 				const { both, start, end } = args;
 				return new LineSegmentEquation(this.start.add(start ?? new Vector3(0, 0, 0)).add(both ?? new Vector3(0, 0, 0)), this.end.add(end ?? new Vector3(0, 0, 0)).add(both ?? new Vector3(0, 0, 0)));
 			}
@@ -6981,6 +7000,7 @@ export class GlobalFunc {
 				return new LineSegmentEquation(this.getPointAt(start), this.getPointAt(this.length + end));
 			}
 		}
+
 
 		class MatchingOptions {
 			match3D: boolean = true;

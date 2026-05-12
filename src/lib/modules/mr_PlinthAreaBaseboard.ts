@@ -207,9 +207,11 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 			evaluateCornerUnitStraightSizeOfPerpendicularPart,
 			mr_CornerunitStraight,
 			mr_StorageunitSingle,
+			Vector3Extended,
 		} = GlobalFunc.process_MathLongparts();
 		type LongPartSegmentTypeAlias = InstanceType<typeof LongPartSegment>;
 		type LeftRightAny = { Left: any, Right: any }
+		type Vector3ExtendedTypeAlias = InstanceType<typeof Vector3Extended>;
 
 		// Values for the PlinthAreaBaseboardSettings table
 		enum ModulePosition {
@@ -305,7 +307,7 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 		 * @param end 
 		 * @returns mc_Toekick instance
 		 */
-		const addToekick = (start: Vector3, end: Vector3) => {
+		const addToekick = (start: Vector3ExtendedTypeAlias, end: Vector3ExtendedTypeAlias) => {
 			const toekick = this.addOD_M_mc_Toekick();
 			toekick.mod_ToekickId = `Toekick_${toekickIndex++}`;
 			const equation = new LineSegmentEquation(start, end);
