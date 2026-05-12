@@ -435,7 +435,7 @@
                 ]
             },
             "attributes": {
-                "mod_Depth": 548,
+                "mod_Depth": 348,
                 "mod_FrontProgram": "Classic",
                 "mod_Height": 950,
                 "mod_TypeElement": "WallUnit",
@@ -503,7 +503,7 @@
                 ]
             },
             "attributes": {
-                "mod_Depth": 548,
+                "mod_Depth": 300,
                 "mod_FrontProgram": "Classic",
                 "mod_Height": 600,
                 "mod_TypeElement": "WallUnit",
@@ -562,7 +562,7 @@
                 ]
             },
             "attributes": {
-                "mod_Depth": 548,
+                "mod_Depth": 300,
                 "mod_FrontProgram": "Classic",
                 "mod_Height": 600,
                 "mod_TypeElement": "WallUnit",
