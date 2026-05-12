@@ -1072,11 +1072,9 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
         wallsMaterial: {
           color: 0x555500,
           transparent: true, opacity: 0.1,
-
         },
         wallsWireframeMaterial: { color: 0x000000, },
-        // will not fetch meshes and will render bounding boxes of the meshes instead
-        doNotFetchMeshes: true,
+        doNotFetchMeshes: false,
         // three.js renderer property - angle in degrees between adjacent faces above which an edge will be rendered
         edgesGeometryThresholdAngle: 10,
         format: 'png',
@@ -1159,7 +1157,7 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
       // 2. collect relevant renderings
       // =================
 
-      const topView = await renderScene(orderScene, (node) => { void node; return true; }, drawingSettings, { ...orthoCameraRenderSettings, direction: undefined });
+      const topView = await renderScene(orderScene, (node) => { void node; return true; }, drawingSettings, { name: 'topview', ...orthoCameraRenderSettings, direction: undefined });
       orthoCameraRenderResults.push(topView);
 
       for (const wallAndSide of allWallSides) {
@@ -1212,10 +1210,10 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
 
         const cameraDirection = side === 'front' ? wall.wallData?.normalToWall : wall.wallData?.normalToWall.clone().multiply(-1);
 
-        const result = await renderScene(orderScene, renderingFilter, drawingSettings, { ...orthoCameraRenderSettings, direction: cameraDirection });
+        const result = await renderScene(orderScene, renderingFilter, drawingSettings, { name: `${wall.id}-${side}-elevation`, ...orthoCameraRenderSettings, direction: cameraDirection });
         orthoCameraRenderResults.push(result);
 
-        const resultWithoutFronts = await renderScene(orderScene, renderingFilterForFronts, drawingSettings, { ...orthoCameraRenderSettings, direction: cameraDirection });
+        const resultWithoutFronts = await renderScene(orderScene, renderingFilterForFronts, drawingSettings, { name: `${wall.id}-${side}-elevation-without-fronts`, ...orthoCameraRenderSettings, direction: cameraDirection });
         orthoCameraRenderResults.push(resultWithoutFronts);
 
       }
@@ -1224,7 +1222,7 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
       // 3. make drawings from the renderings
       // =================
 
-      const svgs: SVGElement[] = [];
+      const imageFileNames: string[] = [];
 
       orthoCameraRenderResults.forEach((renderResult, index) => {
         const drawing = new Drawing(renderResult, { drawingDirection: index === 0 ? DrawingDirection.Top : DrawingDirection.Elevation });
@@ -1273,10 +1271,27 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
         });
 
         const svg = drawing.render();
-        svgs.push(svg);
 
-        this.createFileEntry(result, `Drawing_${index}.svg`, new XMLSerializer().serializeToString(svg), "image/svg+xml");
+        const fileName = (renderResult.renderParameters?.name ?? `drawing-${index}`) + '.svg';
+        imageFileNames.push(fileName);
+        this.createFileEntry(result, fileName, new XMLSerializer().serializeToString(svg), "image/svg+xml");
       });
+
+      let htmlResult = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Drawings</title>
+        </head>
+        <body>
+          ${imageFileNames.map((fileName) => {
+        return `<div><h2>${fileName}</h2><img src="${fileName}"></div>`;
+      }).join('\n')}
+        </body>
+        </html>`;
+      this.createFileEntry(result, "Drawings.html", htmlResult, "text/html");
 
       // ###############################################################
       // ################### END CUSTOM SCRIPTS ########################
