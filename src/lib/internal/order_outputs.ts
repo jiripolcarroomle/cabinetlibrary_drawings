@@ -1066,7 +1066,7 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
       // =================
       // 1. settings and preparations 
       // =================
-      const drawingSettings: ISceneGeometryConversionToThreeJsSettings = {
+      const sceneSettings: ISceneGeometryConversionToThreeJsSettings = {
         material: { color: 0xcccccc, },
         wireframeMaterial: { color: 0x000000, },
         wallsMaterial: {
@@ -1107,6 +1107,7 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
             [
               'part_door',
               'part_drawer_',
+              'part_fliplift',
               'part_handle',
               'part_hinge',
             ].some(x => node.id.toLowerCase().includes(x))
@@ -1157,7 +1158,7 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
       // 2. collect relevant renderings
       // =================
 
-      const topView = await renderScene(orderScene, (node) => { void node; return true; }, drawingSettings, { name: 'topview', ...orthoCameraRenderSettings, direction: undefined });
+      const topView = await renderScene(orderScene, (node) => { void node; return true; }, sceneSettings, { name: 'topview', ...orthoCameraRenderSettings, direction: undefined });
       orthoCameraRenderResults.push(topView);
 
       for (const wallAndSide of allWallSides) {
@@ -1210,11 +1211,11 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
 
         const cameraDirection = side === 'front' ? wall.wallData?.normalToWall : wall.wallData?.normalToWall.clone().multiply(-1);
 
-        const result = await renderScene(orderScene, renderingFilter, drawingSettings, { name: `${wall.id}-${side}-elevation`, ...orthoCameraRenderSettings, direction: cameraDirection });
+        const result = await renderScene(orderScene, renderingFilter, sceneSettings, { name: `${wall.id}-${side}-elevation`, ...orthoCameraRenderSettings, direction: cameraDirection });
         orthoCameraRenderResults.push(result);
 
-        // const resultWithoutFronts = await renderScene(orderScene, renderingFilterForFronts, drawingSettings, { name: `${wall.id}-${side}-elevation-without-fronts`, ...orthoCameraRenderSettings, direction: cameraDirection });
-        // orthoCameraRenderResults.push(resultWithoutFronts);
+        const resultWithoutFronts = await renderScene(orderScene, renderingFilterForFronts, sceneSettings, { name: `${wall.id}-${side}-elevation-without-fronts`, ...orthoCameraRenderSettings, direction: cameraDirection });
+        orthoCameraRenderResults.push(resultWithoutFronts);
 
       }
 
@@ -1256,11 +1257,24 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
           const annotations = filterAnnotationForModule(id, moduleData, drawing);
           if (annotations.length > 0) {
             annotations.forEach((annotation: I_tab_Annotation) => {
+              const drawingWithoutFronts = renderResult.renderParameters?.name?.includes('elevation-without-fronts');
               annotation.out_SvgPathOverlays?.(moduleData, drawing)?.forEach((injection: SvgPathInjectionData) => {
-                drawing.addOverlay(nodeMatrix, injection);
+                const tags = injection.tags ?? [];
+                if (
+                  (drawingWithoutFronts && tags.includes('inside'))
+                  || (!drawingWithoutFronts && !tags.includes('inside'))
+                ) {
+                  drawing.addOverlay(nodeMatrix, injection);
+                }
               });
               annotation.out_Annotations?.(moduleData, drawing)?.forEach((annotation: Annotation) => {
-                drawing.addAnnotation(nodeMatrix, annotation);
+                const tags = annotation.tags ?? [];
+                if (
+                  (drawingWithoutFronts && tags.includes('inside'))
+                  || (!drawingWithoutFronts && !tags.includes('inside'))
+                ) {
+                  drawing.addAnnotation(nodeMatrix, annotation);
+                }
               });
               annotation.out_AnnotablePoints?.(moduleData, drawing)?.forEach((point: AnnotablePoint) => {
                 drawing.addAnnotablePoint(nodeMatrix, { coordinate: point.coordinate });

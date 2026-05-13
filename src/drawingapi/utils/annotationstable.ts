@@ -110,6 +110,33 @@ export const tab_Annotations: I_tab_Annotation[] = [
     },
 
     {
+        in_ModuleId: 'mc_Storageunit01',
+        in_Condition: (_m: any) => { return true; },
+        out_Annotations: (m: any, _drawingData: IPlanSvgDrawing) => {
+            const leftX = m.mod_SidepanelleftThk ?? 0;
+            const rightX = m.mod_CarcaseWidth - (m.mod_SidepanelrightThk ?? 0);
+            const bottomY = m.mod_ShelfbtmThk ?? 0;
+            const topY = m.mod_CarcaseHeight - (m.mod_ShelftopThk ?? 0);
+            return [
+                {
+                    start: new Vector3(leftX, bottomY, 0),
+                    end: new Vector3(rightX, bottomY, 0),
+                    layer: 'carcase-inside-elevation',
+                    displayAtPosition: true,
+                    tags: ['inside'],
+                },
+                {
+                    start: new Vector3(leftX, bottomY, 0),
+                    end: new Vector3(leftX, topY, 0),
+                    layer: 'accessory-dimension-horizontal',
+                    displayAtPosition: true,
+                    tags: ['inside'],
+                }
+            ];
+        }
+    },
+
+    {
         in_ModuleId: 'mc_Countertop01',
         in_Condition: (_m: any) => true,
         out_Annotations: (m: any, _drawingData: IPlanSvgDrawing) => {
@@ -156,12 +183,15 @@ export const tab_Annotations: I_tab_Annotation[] = [
                     ],
                     fill: 'none',
                     stroke: '#000000',
+                    tags: ['overall', 'carcase'],
                     strokeDasharray: '10,10',
                     strokeWidth: '2',
                 }
             ];
         },
     },
+
+
 
     {
         in_ModuleId: 'mr_StorageunitSingle',
@@ -183,6 +213,7 @@ export const tab_Annotations: I_tab_Annotation[] = [
                         { command: 'Z' },
                     ],
                     stroke: '#000000',
+                    tags: ['overall', 'carcase'],
                     strokeWidth: '2',
                     fill: 'rgb(112, 112, 112)'
                 }

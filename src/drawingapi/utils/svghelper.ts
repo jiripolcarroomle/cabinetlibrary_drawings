@@ -296,7 +296,7 @@ export function createSvgPathElement({
 }): SVGPathElement {
     const pathElement = createSvgElement("path") as SVGPathElement;
     pathElement.setAttribute("d", d);
-    applySvgProperties(pathElement, properties);
+    applySvgProperties(pathElement, properties, { excludedKeys: ["tags"] });
     parent.appendChild(pathElement);
     return pathElement;
 }
