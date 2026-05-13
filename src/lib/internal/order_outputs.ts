@@ -1213,8 +1213,8 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
         const result = await renderScene(orderScene, renderingFilter, drawingSettings, { name: `${wall.id}-${side}-elevation`, ...orthoCameraRenderSettings, direction: cameraDirection });
         orthoCameraRenderResults.push(result);
 
-        const resultWithoutFronts = await renderScene(orderScene, renderingFilterForFronts, drawingSettings, { name: `${wall.id}-${side}-elevation-without-fronts`, ...orthoCameraRenderSettings, direction: cameraDirection });
-        orthoCameraRenderResults.push(resultWithoutFronts);
+        // const resultWithoutFronts = await renderScene(orderScene, renderingFilterForFronts, drawingSettings, { name: `${wall.id}-${side}-elevation-without-fronts`, ...orthoCameraRenderSettings, direction: cameraDirection });
+        // orthoCameraRenderResults.push(resultWithoutFronts);
 
       }
 
