@@ -233,6 +233,7 @@
                 "mod_FrontProgram": "Classic",
                 "mod_Height": 720,
                 "mod_Width": 600,
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreateToekick": true,
                 "mod_CreateBacksplash": true
@@ -319,10 +320,11 @@
                 "mod_PlinthAreaVisLeft": false,
                 "mod_Width": 900,
                 "mod_CornerunitFrontWidth": 500,
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreatePaneltop": false,
                 "mod_CreateToekick": true,
-                "mod_CountertopThk": 19,
+                "mod_CountertopThk": 25,
                 "mod_CreateBacksplash": true
             },
             "extensions": {}
@@ -652,6 +654,7 @@
                 "mod_FrontProgram": "Classic",
                 "mod_Height": 720,
                 "mod_Width": 600,
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreateToekick": true,
                 "mod_CreatePaneltop": false,
@@ -733,6 +736,7 @@
                 "mod_FrontProgram": "Classic",
                 "mod_Height": 720,
                 "mod_Width": 600,
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreateToekick": true,
                 "mod_CreatePaneltop": false,
@@ -974,6 +978,7 @@
                 "mod_FrontProgram": "Classic",
                 "mod_Height": 720,
                 "mod_Width": 600,
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreateToekick": true
             },
@@ -1181,6 +1186,7 @@
                 "mod_FrontProgram": "Modern",
                 "mod_Height": 720,
                 "mod_Width": 600,
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreateToekick": true
             },
@@ -1389,6 +1395,7 @@
                 "mod_Height": 780,
                 "mod_Width": 900,
                 "mod_HandleDesign": "10",
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreateToekick": true
             },
@@ -1726,6 +1733,7 @@
                 "mod_PlinthAreaHeight": 119,
                 "mod_Width": 2000,
                 "mod_PlinthAreaDesign": "90",
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreateToekick": true,
                 "mod_CreateFingergrip": true,
@@ -1820,6 +1828,7 @@
                 "mod_Height": 780,
                 "mod_PlinthAreaHeight": 119,
                 "mod_Width": 900,
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreateToekick": true,
                 "mod_CreateBacksplash": true
@@ -1860,6 +1869,7 @@
                 "mod_PlinthAreaHeight": 119,
                 "mod_Width": 2000,
                 "mod_PlinthAreaDesign": "90",
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreateToekick": true,
                 "mod_CreateFingergrip": true,
@@ -1908,6 +1918,7 @@
                 "mod_PlinthAreaHeight": 119,
                 "mod_Width": 2300,
                 "mod_CornerunitFrontWidth": 2000,
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreateToekick": true,
                 "mod_CreateBacksplash": true
@@ -2150,6 +2161,7 @@
                 "mod_PlinthAreaHeight": 119,
                 "mod_Width": 650,
                 "mod_PlinthAreaDesign": "90",
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreateToekick": true,
                 "mod_CreateFingergrip": true,
@@ -2627,6 +2639,7 @@
                 "mod_Depth": 548,
                 "mod_Height": 720,
                 "mod_Width": 600,
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreateToekick": true
             },
@@ -2683,6 +2696,7 @@
                 "mod_Depth": 548,
                 "mod_Height": 720,
                 "mod_Width": 600,
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreateToekick": true
             },
@@ -2739,6 +2753,7 @@
                 "mod_Depth": 548,
                 "mod_Height": 720,
                 "mod_Width": 600,
+                "mod_CountertopThk": 25,
                 "mod_CreateCountertop": true,
                 "mod_CreateToekick": true
             },

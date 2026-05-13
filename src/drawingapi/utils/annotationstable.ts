@@ -41,6 +41,15 @@ export const tab_Annotations: I_tab_Annotation[] = [
                 tags: ['overall', 'carcase'],
             });
 
+            if (m.mod_CreateCountertop) {
+                result.push({
+                    start: new Vector3(0, plinthAreaHeight + m.mod_Height, 0),
+                    end: new Vector3(0, plinthAreaHeight + m.mod_Height + m.mod_CountertopThk, 0),
+                    layer: 'carcase-dimension-vertical',
+                    tags: ['overall', 'carcase'],
+                });
+            }
+
             if (plinthAreaHeight > 0) {
                 result.push({
                     start: new Vector3(0, 0, 0),
@@ -64,18 +73,6 @@ export const tab_Annotations: I_tab_Annotation[] = [
                 });
             }
 
-
-
-
-            result.push({
-                start: new Vector3(m.mod_Width / 4, 0, m.mod_Depth / 4),
-                end: new Vector3(3 * m.mod_Width / 4, 0, 3 * m.mod_Depth / 4),
-                label: m.modId,
-                layer: 'carcase-dimension-diagonal',
-                tags: ['overall', 'carcase'],
-                displayAtPosition: true,
-            });
-
             return result;
         },
     },
@@ -94,17 +91,19 @@ export const tab_Annotations: I_tab_Annotation[] = [
         in_ModuleId: 'mc_Countertop01',
         in_ModuleCondition: (_m: any) => true,
         out_Annotations: (m: any, _drawingData: IPlanSvgDrawing) => {
-            return [{
-                start: new Vector3(0, 0, 0),
-                end: new Vector3(0, m.mod_CountertopThk ?? 50, 0),
-                layer: 'carcase-dimension-vertical',
-                tags: ['overall', 'carcase'],
-            }];
+            return [
+                {
+                    start: new Vector3(0, 0, 0),
+                    end: new Vector3(0, m.mod_CountertopThk ?? 50, 0),
+                    layer: 'carcase-dimension-vertical',
+                    tags: ['overall', 'carcase'],
+                }
+            ];
         }
     },
 
     {
-        in_ModuleId: 'mr_StorageunitSingle',
+        in_ModuleId: 'mr_StorageunitSingle,mr_CornerunitStraight',
         in_ModuleCondition: (m: any, drawingData: IPlanSvgDrawing) => {
             return (
                 (m.mod_CreateCountertop || m.mod_CreatePaneltop)
@@ -129,29 +128,6 @@ export const tab_Annotations: I_tab_Annotation[] = [
             ];
         },
     },
-
-    {
-        in_ModuleId: 'mr_CornerunitStraight',
-        in_ModuleCondition: (m: any) => { return m.mod_CreateCountertop || m.mod_CreatePaneltop }, // apply to all modules with the specified ID
-        out_SvgPathOverlays: (m: any) => {
-            return [
-                {
-                    d: [
-                        { command: 'M', coordinate3d: new Vector3(0, 0, 0) },
-                        { command: 'L', coordinate3d: new Vector3(m.mod_Width, 0, 0) },
-                        { command: 'L', coordinate3d: new Vector3(m.mod_Width, 0, m.mod_Depth) },
-                        { command: 'L', coordinate3d: new Vector3(0, 0, m.mod_Depth) },
-                        { command: 'Z' }
-                    ],
-                    fill: 'none',
-                    stroke: '#00ff00',
-                    strokeDasharray: '10,5',
-                    strokeWidth: '2',
-                }
-            ];
-        }
-    },
-
 
     {
         in_ModuleId: 'mr_StorageunitSingle',
