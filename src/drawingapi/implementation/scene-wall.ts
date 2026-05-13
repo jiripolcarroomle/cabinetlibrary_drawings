@@ -1,23 +1,7 @@
-import { OrderSceneNode } from "./scene.implementation";
-import { type IOrderSceneNode } from "./scene.interface";
-import { IdsMap } from "./idsmap";
-import { Vector3 } from "../lib/internal/base";
-
-/**
- * Geometric description of a wall segment derived from a room contour.
- */
-export interface IWallSegment {
-    readonly segmentStart: Vector3;
-    readonly segmentEnd: Vector3;
-    readonly segmentBackStart: Vector3;
-    readonly segmentBackEnd: Vector3;
-    readonly direction: Vector3;
-    readonly wallLength: number;
-    readonly wallThickness: number;
-    readonly wallHeight: number;
-    readonly rotationY: number;
-    readonly normalToWall: Vector3;
-}
+import { OrderSceneNode } from "./scene";
+import { type IWallSegment, type IOrderSceneNode } from "../interfaces/scene";
+import { IdsMap } from "../interfaces/idsmap";
+import { Matrix4, Vector3 } from "../../lib/internal/base"
 
 const DEFAULT_WALL_HEIGHT = 3000;
 const DEFAULT_WALL_THICKNESS = 200;
@@ -61,8 +45,8 @@ export class WallSegment implements IWallSegment {
         const length = segmentEnd.clone().sub(segmentStart).length();
         const normalToWall = new Vector3(-direction._z, 0, direction._x);
         const rotationY = -Math.atan2(normalToWall._z, normalToWall._x) - Math.PI / 2;
-        const segmentBackStart = segmentStart.add(normalToWall.clone().multiply(wallThickness));
-        const segmentBackEnd = segmentEnd.add(normalToWall.clone().multiply(wallThickness));
+        const segmentBackStart = segmentStart.clone().add(normalToWall.clone().multiply(wallThickness));
+        const segmentBackEnd = segmentEnd.clone().add(normalToWall.clone().multiply(wallThickness));
 
         return new WallSegment(
             segmentStart,
@@ -120,7 +104,7 @@ export function createWallsGroupFromOrderData(roomContours: PosContour[], idsMap
             if (!from.segmentEnd.isCoincident(to.segmentStart)) {
                 continue;
             }
-            const jointPoint = from.segmentEnd
+            const jointPoint = from.segmentEnd.clone()
                 .add(to.direction.clone().multiply(from.wallThickness / from.normalToWall.dot(to.direction)))
                 .add(from.direction.clone().multiply(to.wallThickness / to.normalToWall.dot(from.direction)));
             from.segmentBackEnd = jointPoint;
@@ -183,7 +167,7 @@ export function filterNodesCloseToWall(nodes: IOrderSceneNode[], wallSegment: IW
         for (const corner of allCorners) {
             const toCorner = corner.clone().sub(wallStart);
             const projectionLength = toCorner.dot(wallEnd.clone().sub(wallStart).normalize());
-            const projectionPoint = wallStart.add(wallEnd.clone().sub(wallStart).normalize().clone().multiply(projectionLength));
+            const projectionPoint = wallStart.clone().add(wallEnd.clone().sub(wallStart).normalize().multiply(projectionLength));
             const distanceToWall = corner.clone().sub(projectionPoint).dot(normalFromWall);
             // floating point tolerance ... maybe down to >= -wallThickness / 2?
             if (distanceToWall >= -1 && distanceToWall <= distance) {

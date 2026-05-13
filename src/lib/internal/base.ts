@@ -1,7 +1,7 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from './logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from './logging'
 
 import { IGlobalVars, GlobalVars } from './global-vars'
-import { IModBase, IPartBase, PartBase, MatrixHelper, IDockingInfo, Dock, IInsertLevelInfo } from './mod-base'
+import { IModBase, IPartBase, PartBase, MatrixHelper, IDockingInfo, Dock, IInsertLevelInfo, IContextData } from './mod-base'
 
 declare function uuidv4(): string;
 
@@ -137,19 +137,17 @@ export class Euler {
   }
 }
 
-/** Epsilon value for floating point comparisons */
-
-
 export class Vector3 {
 
   /**
-   * Epsilon value to compare coordinate or position equality.
-   * apparently, 0.000001 was too little
-   * TC provided near-zero position values: "x": 900.0, "y": -2.6679314139854693E-12, "z": -6.103515625E-05, "rotationY": 1.1920928955078125E-07
-   * where the previous value failed
-   * 0.001 mm seems to work well when computing generation contours math
-   */
-  static EPS = 0.001;
+ * Epsilon value used to compare coordinate or position equality.
+ * Apparently, 0.000001 was too small.
+ * TC provided near-zero position values such as:
+ * "x": 900.0, "y": -2.6679314139854693E-12, "z": -6.103515625E-05, "rotationY": 1.1920928955078125E-07
+ * where the previous value failed.
+ * 0.01 mm is a reasonable value to try.
+ */
+  static EPS: number = 0.01;
 
   // See: https://github.com/mrdoob/three.js/blob/dev/src/math/Vector3.js
   constructor(x = 0, y = 0, z = 0) {
@@ -199,10 +197,17 @@ export class Vector3 {
     return Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z);
   }
 
+  /**
+   * Makes a copy of the vector with the same components.
+   */
   clone(): Vector3 {
     return new Vector3(this._x, this._y, this._z);
   }
 
+  /**
+ * Adds the given vector to this vector.
+ * Mutates the current vector and returns it for chaining.
+ */
   add(v: Vector3): Vector3 {
     this._x += v._x;
     this._y += v._y;
@@ -211,25 +216,9 @@ export class Vector3 {
   }
 
   /**
- * Calculates the cross product of the given vector with this instance.
- *
- * @param {Vector3} v - The vector to compute the cross product with.
- * @return {Vector3} The result of the cross product.
- */
-  cross(v: Vector3): Vector3 {
-    return this.crossVectors(this, v);
-  }
-
-  crossVectors(a: Vector3, b: Vector3): Vector3 {
-    const ax = a._x, ay = a._y, az = a._z;
-    const bx = b._x, by = b._y, bz = b._z;
-
-    this._x = ay * bz - az * by;
-    this._y = az * bx - ax * bz;
-    this._z = ax * by - ay * bx;
-    return this;
-  }
-
+   * Subtracts the given vector from this vector.
+   * Mutates the current vector and returns it for chaining.
+   */
   sub(v: Vector3): Vector3 {
     this._x -= v._x;
     this._y -= v._y;
@@ -237,48 +226,94 @@ export class Vector3 {
     return this;
   }
 
+  /**
+* Multiplies the vector by a scalar.
+* Mutates the current vector and returns it for chaining.
+*/
+  multiply(scalar: number): Vector3 {
+    this._x *= scalar;
+    this._y *= scalar;
+    this._z *= scalar;
+    return this;
+  }
+
+  /**
+   * Normalizes the vector so it has a length of 1.
+   * Mutates the current vector and returns it for chaining.
+   * If the length is very small (less than the given tolerance),
+   * the current vector is set to the zero vector instead
+   * to avoid division by zero and numerical instability.
+   */
+  normalize(tolerance: number = Vector3.EPS): Vector3 {
+    const magnitude = this.length();
+    if (magnitude < tolerance) {
+      this._x = 0;
+      this._y = 0;
+      this._z = 0;
+    } else {
+      this.multiply(1 / magnitude);
+    }
+    return this;
+  }
+
+  /**
+ * Returns the dot product with the given vector.
+ */
   dot(v: Vector3): number {
     return this._x * v._x + this._y * v._y + this._z * v._z;
   }
 
-  multiply(s: number): Vector3 {
-    this._x *= s;
-    this._y *= s;
-    this._z *= s;
+  /**
+   * Computes the cross product with the given vector.
+   * Mutates the current vector and returns it for chaining.
+   * The cross product is perpendicular to the plane defined by the two input vectors,
+   * in the right-hand direction from this vector to the other. Its length equals
+   * the area of the parallelogram defined by the two vectors and is zero when they
+   * are parallel.
+   */
+  cross(v: Vector3): Vector3 {
+    const x = this._x;
+    const y = this._y;
+    const z = this._z;
+
+    this._x = y * v._z - z * v._y;
+    this._y = z * v._x - x * v._z;
+    this._z = x * v._y - y * v._x;
     return this;
   }
 
-  normalize(): Vector3 {
-    const length = this.length();
-    return this.multiply(1 / (length || 1));
+  /**
+ * Returns true if this vector is parallel to the given vector.
+ * It does this by checking whether the length of the cross product is below
+ * the given tolerance.
+ * If the vectors are near-zero, they will result as false
+ */
+  isParallel(v: Vector3, tolerance: number = Vector3.EPS): boolean {
+    const thisLength = this.length();
+    const vLength = v.length();
+    if (thisLength < tolerance || vLength < tolerance) {
+      return false;
+    }
+    return this.clone().cross(v).length() < tolerance;
   }
 
   /**
-   * Checks if this vector is coincident with another vector within a given tolerance.
-   * Using simply equals is not sufficient for positions that are very close to zero, 
-   * which can happen in TC.
-   * @param v The vector to compare with.
-   * @param tolerance optional tolerance value, default is the static Vector3.EPS
-   * @returns True if the vectors are coincident within the given tolerance, false otherwise.
+   * Returns the distance between this vector and the given vector.
    */
-  isCoincident(v: Vector3, tolerance: number = Vector3.EPS): boolean {
-    if (
-      Math.abs(this._x - v._x) < tolerance &&
-      Math.abs(this._x - v._x) > -tolerance &&
-      Math.abs(this._y - v._y) < tolerance
-    ) {
-      return true;
-    }
-    return false;
-  }
-
-  distanceToSquared(v: Vector3): number {
-    const dx = this._x - v._x, dy = this._y - v._y, dz = this._z - v._z;
-    return dx * dx + dy * dy + dz * dz;
-  }
-
   distanceTo(v: Vector3): number {
-    return Math.sqrt(this.distanceToSquared(v));
+    return this.clone().sub(v).length();
+  }
+
+  /**
+ * Returns true if distance between vectors is less than the given tolerance.
+ * This is more robust for computing actual 3D position equality, as TC sometimes
+ * provides near-zero values that should be treated as zero and would not compare
+ * equal with the equals() method.
+ * @param v The vector to compare with.
+ * @param tolerance The distance threshold used to consider the vectors coincident.
+ */
+  isCoincident(v: Vector3, tolerance: number = Vector3.EPS) {
+    return this.clone().sub(v).length() < tolerance;
   }
 
 }
@@ -672,6 +707,20 @@ export abstract class OD_Base {
     this.#dockingInfo.push(di);
     return di;
   }
+  _contextData?: IContextData = undefined;
+  getContextData(): IContextData | undefined {
+    return this._contextData;
+  }
+
+  getContextModule(id: string): OD_Base | undefined {
+    const result = this._contextRoots?.find(cr => cr._id === id);
+    return result;
+  }
+
+  _contextRoots?: OD_Base[];
+  prepareContext(contextRoots: OD_Base[]): void {
+    this._contextRoots = contextRoots;
+  }
   #insertLevelInfo: IInsertLevelInfo[] = [];
   #insertLevelFixed: boolean = false;
   get insertLevelInfo(): IInsertLevelInfo[] { return this.#insertLevelInfo; }
@@ -969,6 +1018,9 @@ export abstract class OD_Base {
     }
     if (this._isDropContainer) {
       json.isDropContainer = this._isDropContainer;
+    }
+    if (this._contextData) {
+      json.contextData = this._contextData;
     }
 
     return json;

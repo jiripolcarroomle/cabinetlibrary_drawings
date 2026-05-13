@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary, ct2_tab_ApplianceGraphicLibrary } from '../custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction, ct2_tab_BaseunitFridgeConstruction } from '../custom-tables/tab_BaseunitFridgeConstruction'
 import { ct_tab_BaseunitFridgeMapping, ICT_tab_BaseunitFridgeMapping, ct2_tab_BaseunitFridgeMapping } from '../custom-tables/tab_BaseunitFridgeMapping'
@@ -125,7 +125,7 @@ import { ct_tab_SinkMapping, ICT_tab_SinkMapping, ct2_tab_SinkMapping } from '..
 import { ct_tab_SlopedCeilingSettings, ICT_tab_SlopedCeilingSettings, ct2_tab_SlopedCeilingSettings } from '../custom-tables/tab_SlopedCeilingSettings'
 
 import { OD_Base, PartGroup, OpenGroup, Matrix4, Vector3, GenerationContour, Contour, GenerationMethod, RoomContour, ArticlePos } from '../base'
-import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp } from '../mod-base'
+import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IContextData } from '../mod-base'
 import { loadOrderData } from '../loader'
 import { GlobalFunc } from '../global-func'
 import { IP_part_BaseboardGroup_PartVarsWritable, P_part_BaseboardGroup } from '../parts/part_BaseboardGroup'
@@ -138,7 +138,7 @@ import { VariantValidation, IMatrix_mod_PlinthAreaDesign, IMatrix_mod_PlinthArea
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
 import { IPartAdd_part_BaseboardGroup } from '../part-add-interfaces';
-import { mr_PlinthAreaBaseboard_createBuildPlan, mr_PlinthAreaBaseboard_afterDataCompletion, mr_PlinthAreaBaseboard_manufacturerDataCompletion, mr_PlinthAreaBaseboard_calculateContainerModules } from '../../modules/mr_PlinthAreaBaseboard';
+import { mr_PlinthAreaBaseboard_createBuildPlan, mr_PlinthAreaBaseboard_afterDataCompletion, mr_PlinthAreaBaseboard_manufacturerDataCompletion, mr_PlinthAreaBaseboard_calculateContainerModules, mr_PlinthAreaBaseboard_prepareContext } from '../../modules/mr_PlinthAreaBaseboard';
 
 export interface cbp_mr_PlinthAreaBaseboard extends IModBaseProp
   , IPartAdd_part_BaseboardGroup, IModVarNonNull_mod_PlinthAreaDesign, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaVisLeft, IModVarNonNull_mod_PlinthAreaVisRight, IModVarNonNull_mod_PlinthAreaPosLogic, IModVarNonNull_mod_PlinthAreaPosLeftMatrix, IModVarNonNull_mod_PlinthAreaPosRightMatrix, IModVarNonNull_mod_PlinthAreaPosFrontMatrix, IModVarNonNull_mod_PlinthAreaPosBackMatrix, IModVarNonNull_mod_PlinthAreaElementColor, IModVarNonNull_mod_PlinthAreaExtraItem, IModVarNonNull_mod_BaseboardDepthLogic, IModVarNonNull_mod_BaseboardOverdimensionBack, IModVarNonNull_mod_BaseboardOverdimensionLeft, IModVarNonNull_mod_BaseboardOverdimensionRight, IModVarNonNull_mod_BaseboardSplitLogic, IModVarNonNull_mod_CarcaseColor, IModVarNonNull_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseEdgeBackColor, IModVarNonNull_mod_LengthList, IModVarNonNull_mod_ToekickColor, IModVarNonNull_mod_ToekickConnectionOverhang, IModVarNonNull_mod_ToekickConnectionSequence, IModVarNonNull_mod_ToekickId, IModVarNonNull_mod_ToekickProgram, IModVarNonNull_mod_ToekickReductionTop, IModVarNonNull_mod_ToekickSidepanelOverdimensionBtm, IModVarNonNull_mod_ToekickSidepanelTransitionType, IModVarNonNull_mod_ToekickThk, IModVarNonNull_mod_BaseboardThk, IModVarNonNull_mod_BaseboardColor, IModVarNonNull_mod_BaseboardEdgeColor, IModVarNonNull_mod_BaseboardEdgeBackColor, IModVarNonNull_mod_BaseboardEdgeFrontColor, IModVarNonNull_mod_BaseboardProgram, IModVarNonNull_mod_CarcaseProgram {
@@ -164,6 +164,11 @@ export interface dc_mr_PlinthAreaBaseboard extends IModBaseProp
   addOD_M_mc_Baseboard01(index?: number): dc_mc_Baseboard01;
 }
 
+export interface pc_mr_PlinthAreaBaseboard extends dc_mr_PlinthAreaBaseboard {
+  getContextData(): IContextData | undefined;
+  getContextModule(id: string): OD_Base | undefined;
+}
+
 export interface adc_base_mr_PlinthAreaBaseboard extends IModBaseProp
   , IModVarNonNull_mod_PlinthAreaDesign, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaVisLeft, IModVarNonNull_mod_PlinthAreaVisRight, IModVarNonNull_mod_PlinthAreaPosLogic, IModVarNonNull_mod_PlinthAreaPosLeftMatrix, IModVarNonNull_mod_PlinthAreaPosRightMatrix, IModVarNonNull_mod_PlinthAreaPosFrontMatrix, IModVarNonNull_mod_PlinthAreaPosBackMatrix, IModVarNonNull_mod_PlinthAreaElementColor, IModVarNonNull_mod_PlinthAreaExtraItem, IModVarNonNull_mod_BaseboardDepthLogic, IModVarNonNull_mod_BaseboardOverdimensionBack, IModVarNonNull_mod_BaseboardOverdimensionLeft, IModVarNonNull_mod_BaseboardOverdimensionRight, IModVarNonNull_mod_BaseboardSplitLogic, IModVarNonNull_mod_CarcaseColor, IModVarNonNull_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseEdgeBackColor, IModVarNonNull_mod_LengthList, IModVarNonNull_mod_ToekickColor, IModVarNonNull_mod_ToekickConnectionOverhang, IModVarNonNull_mod_ToekickConnectionSequence, IModVarNonNull_mod_ToekickId, IModVarNonNull_mod_ToekickProgram, IModVarNonNull_mod_ToekickReductionTop, IModVarNonNull_mod_ToekickSidepanelOverdimensionBtm, IModVarNonNull_mod_ToekickSidepanelTransitionType, IModVarNonNull_mod_ToekickThk, IModVarNonNull_mod_BaseboardThk, IModVarNonNull_mod_BaseboardColor, IModVarNonNull_mod_BaseboardEdgeColor, IModVarNonNull_mod_BaseboardEdgeBackColor, IModVarNonNull_mod_BaseboardEdgeFrontColor, IModVarNonNull_mod_BaseboardProgram, IModVarNonNull_mod_CarcaseProgram {
   get m(): OD_Base[];
@@ -183,7 +188,7 @@ export interface ccm_mr_PlinthAreaBaseboard extends adc_base_mr_PlinthAreaBasebo
 }
 
 
-export class OD_M_mr_PlinthAreaBaseboard extends OD_Base implements dc_mr_PlinthAreaBaseboard
+export class OD_M_mr_PlinthAreaBaseboard extends OD_Base implements pc_mr_PlinthAreaBaseboard, dc_mr_PlinthAreaBaseboard
   , IModParents_mc_PlinthArea01_mr_PlinthAreaBaseboard, IModParents_mr_PlinthAreaBaseboard_mr_Toekick, IModParents_mr_PlinthAreaBaseboard
   , IModVar_mod_PlinthAreaDesign, IModVar_mod_PlinthAreaHeight, IModVar_mod_PlinthAreaVisLeft, IModVar_mod_PlinthAreaVisRight, IModVar_mod_PlinthAreaPosLogic, IModVar_mod_PlinthAreaPosLeftMatrix, IModVar_mod_PlinthAreaPosRightMatrix, IModVar_mod_PlinthAreaPosFrontMatrix, IModVar_mod_PlinthAreaPosBackMatrix, IModVar_mod_PlinthAreaElementColor, IModVar_mod_PlinthAreaExtraItem, IModVar_mod_BaseboardDepthLogic, IModVar_mod_BaseboardOverdimensionBack, IModVar_mod_BaseboardOverdimensionLeft, IModVar_mod_BaseboardOverdimensionRight, IModVar_mod_BaseboardSplitLogic, IModVar_mod_CarcaseColor, IModVar_mod_CarcaseEdgeColor, IModVar_mod_CarcaseEdgeFrontColor, IModVar_mod_CarcaseEdgeBackColor, IModVar_mod_LengthList, IModVar_mod_ToekickColor, IModVar_mod_ToekickConnectionOverhang, IModVar_mod_ToekickConnectionSequence, IModVar_mod_ToekickId, IModVar_mod_ToekickProgram, IModVar_mod_ToekickReductionTop, IModVar_mod_ToekickSidepanelOverdimensionBtm, IModVar_mod_ToekickSidepanelTransitionType, IModVar_mod_ToekickThk, IModVar_mod_BaseboardThk, IModVar_mod_BaseboardColor, IModVar_mod_BaseboardEdgeColor, IModVar_mod_BaseboardEdgeBackColor, IModVar_mod_BaseboardEdgeFrontColor, IModVar_mod_BaseboardProgram, IModVar_mod_CarcaseProgram {
   constructor(parent?: OD_Base, manufacturerMode?: boolean) {
@@ -679,6 +684,7 @@ export class OD_M_mr_PlinthAreaBaseboard extends OD_Base implements dc_mr_Plinth
     res.set('mod_PlinthAreaHeight', this.mod_PlinthAreaHeight);
     res.set('mod_CarcaseColor:GrainGroupId', this.mod_CarcaseColor_matrix?.GrainGroupId);
     res.set('mod_CarcaseColor', this.mod_CarcaseColor);
+    res.set('mod_CarcaseEdgeFrontColor', this.mod_CarcaseEdgeFrontColor);
     res.set('mod_ToekickColor:GrainGroupId', this.mod_ToekickColor_matrix?.GrainGroupId);
     res.set('mod_ToekickColor', this.mod_ToekickColor);
     res.set('mod_ToekickProgram:GrainGroupId', this.mod_ToekickProgram_matrix?.GrainGroupId);
@@ -693,6 +699,7 @@ export class OD_M_mr_PlinthAreaBaseboard extends OD_Base implements dc_mr_Plinth
     if (json['articleId']) {
       this._articleId = json['articleId'];
     }
+    this._contextData = json['contextData'];
     // only take over the attributes we know...
     {
       internal_enterValidateVariant(this.modId, this._id, 'mod_PlinthAreaDesign');
@@ -1144,6 +1151,14 @@ export class OD_M_mr_PlinthAreaBaseboard extends OD_Base implements dc_mr_Plinth
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
   }
+  override prepareContext(contextRoots: OD_Base[]): void {
+    super.prepareContext(contextRoots);
+    this.internallyPrepareContext();
+  }
+  internallyPrepareContext(): void {
+    this.#prepareContextInternal();
+  }
+  #prepareContextInternal = mr_PlinthAreaBaseboard_prepareContext;
   seal(): IModuleNonNull_mr_PlinthAreaBaseboard {
     this.afterDataCompletion();
     const adc = new OD_M_mr_PlinthAreaBaseboard_NonNull(this);
@@ -1255,6 +1270,10 @@ class OD_M_mr_PlinthAreaBaseboard_NonNull implements cbp_mr_PlinthAreaBaseboard,
   #internalParent: OD_M_mr_PlinthAreaBaseboard;
   getGenerationContours(): GenerationContour[] { return this.#internalParent.getGenerationContours(); }
   getRoomContours(): RoomContour[] { return this.#internalParent.roomContours ?? []; }
+  getContextData(): IContextData | undefined { return this.#internalParent.getContextData(); }
+  getContextModule(id: string): OD_Base | undefined {
+    return this.#internalParent.getContextModule(id);
+  }
   get _posData(): Map<string, string | number> { return this.#internalParent._posData; }
 
   get _id(): string { return this.#internalParent._id; }

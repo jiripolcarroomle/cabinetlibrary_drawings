@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary, ct2_tab_ApplianceGraphicLibrary } from '../custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction, ct2_tab_BaseunitFridgeConstruction } from '../custom-tables/tab_BaseunitFridgeConstruction'
 import { ct_tab_BaseunitFridgeMapping, ICT_tab_BaseunitFridgeMapping, ct2_tab_BaseunitFridgeMapping } from '../custom-tables/tab_BaseunitFridgeMapping'
@@ -125,7 +125,7 @@ import { ct_tab_SinkMapping, ICT_tab_SinkMapping, ct2_tab_SinkMapping } from '..
 import { ct_tab_SlopedCeilingSettings, ICT_tab_SlopedCeilingSettings, ct2_tab_SlopedCeilingSettings } from '../custom-tables/tab_SlopedCeilingSettings'
 
 import { OD_Base, PartGroup, OpenGroup, Matrix4, Vector3, GenerationContour, Contour, GenerationMethod, RoomContour, ArticlePos } from '../base'
-import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IDockingInfo, Dock, IInsertLevelInfo } from '../mod-base'
+import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IContextData, IDockingInfo, Dock, IInsertLevelInfo } from '../mod-base'
 import { loadOrderData } from '../loader'
 import { GlobalFunc } from '../global-func'
 import { OD_M_mc_Panel01, dc_mc_Panel01 } from './mc_Panel01'
@@ -135,7 +135,7 @@ import { VariantValidation, IMatrix_mod_Color, IMatrix_mod_Program, IMatrix_mod_
 import { IGlobalVars, GlobalVars } from '../global-vars'
 import { IGlobalVarsParent } from '../global-vars-parent'
 
-import { mr_IslandBackwall_createBuildPlan, mr_IslandBackwall_afterDataCompletion, mr_IslandBackwall_manufacturerDataCompletion, mr_IslandBackwall_calculateContainerModules } from '../../modules/mr_IslandBackwall';
+import { mr_IslandBackwall_createBuildPlan, mr_IslandBackwall_afterDataCompletion, mr_IslandBackwall_manufacturerDataCompletion, mr_IslandBackwall_calculateContainerModules, mr_IslandBackwall_prepareContext } from '../../modules/mr_IslandBackwall';
 
 export interface cbp_mr_IslandBackwall extends IModBaseProp
   , IModVarNonNull_mod_Color, IModVarNonNull_mod_Program, IModVarNonNull_mod_Depth, IModVarNonNull_mod_Height, IModVarNonNull_mod_Thk, IModVarNonNull_mod_PaneltopColor, IModVarNonNull_mod_PaneltopThk, IModVarNonNull_mod_IslandBackwallOverhangFront, IModVarNonNull_mod_IslandBackwallOverdimension, IModVarNonNull_mod_IslandBackwallWidth {
@@ -156,6 +156,11 @@ export interface dc_mr_IslandBackwall extends IModBaseProp
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mr_IslandBackwall;
   addOD_M_mc_Panel01(index?: number): dc_mc_Panel01;
+}
+
+export interface pc_mr_IslandBackwall extends dc_mr_IslandBackwall {
+  getContextData(): IContextData | undefined;
+  getContextModule(id: string): OD_Base | undefined;
 }
 
 export interface adc_base_mr_IslandBackwall extends IModBaseProp
@@ -181,7 +186,7 @@ export interface ccm_mr_IslandBackwall extends adc_base_mr_IslandBackwall {
 }
 
 
-export class OD_M_mr_IslandBackwall extends OD_Base implements dc_mr_IslandBackwall
+export class OD_M_mr_IslandBackwall extends OD_Base implements pc_mr_IslandBackwall, dc_mr_IslandBackwall
   , IModParents_mr_IslandBackwall
   , IModVar_mod_Color, IModVar_mod_Program, IModVar_mod_Depth, IModVar_mod_Height, IModVar_mod_Thk, IModVar_mod_PaneltopColor, IModVar_mod_PaneltopThk, IModVar_mod_IslandBackwallOverhangFront, IModVar_mod_IslandBackwallOverdimension, IModVar_mod_IslandBackwallWidth {
   constructor(parent?: OD_Base, manufacturerMode?: boolean) {
@@ -393,6 +398,7 @@ export class OD_M_mr_IslandBackwall extends OD_Base implements dc_mr_IslandBackw
     if (json['articleId']) {
       this._articleId = json['articleId'];
     }
+    this._contextData = json['contextData'];
     // only take over the attributes we know...
     {
       internal_enterValidateVariant(this.modId, this._id, 'mod_Color');
@@ -556,6 +562,14 @@ export class OD_M_mr_IslandBackwall extends OD_Base implements dc_mr_IslandBackw
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
   }
+  override prepareContext(contextRoots: OD_Base[]): void {
+    super.prepareContext(contextRoots);
+    this.internallyPrepareContext();
+  }
+  internallyPrepareContext(): void {
+    this.#prepareContextInternal();
+  }
+  #prepareContextInternal = mr_IslandBackwall_prepareContext;
   seal(): IModuleNonNull_mr_IslandBackwall {
     this.afterDataCompletion();
     const adc = new OD_M_mr_IslandBackwall_NonNull(this);
@@ -617,6 +631,10 @@ class OD_M_mr_IslandBackwall_NonNull implements cbp_mr_IslandBackwall, adc_mr_Is
     );
   }
   getRoomContours(): RoomContour[] { return this.#internalParent.roomContours ?? []; }
+  getContextData(): IContextData | undefined { return this.#internalParent.getContextData(); }
+  getContextModule(id: string): OD_Base | undefined {
+    return this.#internalParent.getContextModule(id);
+  }
   get _posData(): Map<string, string | number> { return this.#internalParent._posData; }
 
   get _id(): string { return this.#internalParent._id; }

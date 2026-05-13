@@ -1,5 +1,5 @@
-import type { IOrderSceneNode, IOrderSceneNodeFilter } from "./scene.interface";
-import * as TC from "../lib/internal/base";
+import type { IOrderSceneNode, IOrderSceneNodeFilter } from "./scene";
+import * as TC from "../../lib/internal/base"
 
 /**
  * A renderer function that takes a scene root node, an optional filter function, render settings, and returns a promise that resolves to the rendered result.
@@ -26,9 +26,15 @@ export interface ISceneGeometryConversionSettings {
     wallsWireframeMaterial?: any;
     /** Whether to fetch and use actual meshes or use just their bounding boxes. */
     doNotFetchMeshes?: boolean;
+    /**
+     * Defines output format of the drawing.
+     */
+    format?: 'png' | 'svg';
 }
 
 export interface IRenderOrthoCameraParams {
+    /** name of the drawing, future file name of the render */
+    name?: string;
     /** direction of the camera, if unprovided, down direction will be used */
     direction?: TC.Vector3;
     /** Output maximum image width in pixels. The actual size will depend on the content. */
@@ -50,10 +56,17 @@ export interface IRenderOrthoCameraParams {
  * Result of the rendered drawing.
  */
 export interface IRenderOrthoCameraResult {
+    /** the rigid matrix transforming world coordinates to orthographic camera-space coordinates */
+    worldToCameraMatrix: TC.Matrix4;
     /** the matrix transforming world coordinates to output image pixel coordinates */
-    worldToViewMatrix: TC.Matrix4;
+    worldToPixelMatrix: TC.Matrix4;
+    /** the matrix transforming camera coordinates to output image pixel coordinates */
+    cameraToPixelMatrix: TC.Matrix4;
     /** the rendered data in any format */
-    image: any;
+    image: {
+        dataUrl?: string; // for raster renderings
+        svg?: SVGSVGElement; // for SVG renderings
+    };
     /** the scene that has been rendered; useful for debugging or further processing */
     renderedScene?: any;
     /** the actual width of the rendered image in pixels or another unit */
@@ -63,7 +76,7 @@ export interface IRenderOrthoCameraResult {
     /** list of nodes that have been rendered in the scene */
     renderedNodes?: IOrderSceneNode[];
     /** original drawing settings with which the rendering was performed */
-    cameraParameters?: IRenderOrthoCameraParams;
+    renderParameters?: IRenderOrthoCameraParams;
 
     /** additional metadata or information related to the rendered image */
     data?: any;

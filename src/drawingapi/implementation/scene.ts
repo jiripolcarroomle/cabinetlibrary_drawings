@@ -1,10 +1,11 @@
 
-import { logWarning } from "../lib/internal/logging";
-import { Matrix4, Vector3 } from "../lib/internal/base";
-import { createWallsGroupFromOrderData, type IWallSegment } from "./wall";
-import { IdsMap } from "./idsmap";
-import { type IGeometryData, Object3DNodeKind, type IOrderLineEntry, type IOrderSceneNode } from "./scene.interface";
-import { type ISceneGeometryConversionSettings } from "./orderdrawingrenderer.interface";
+import { Matrix4, Vector3 } from "../../lib/internal/base"
+import { logWarning } from "../../lib/internal/logging";
+import { createWallsGroupFromOrderData } from "./scene-wall";
+import { type IWallSegment } from "../interfaces/scene";
+import { IdsMap } from "../interfaces/idsmap";
+import { type IGeometryData, Object3DNodeKind, type IOrderLineEntry, type IOrderSceneNode } from "../interfaces/scene";
+import { type ISceneGeometryConversionSettings } from "../interfaces/orderdrawingrenderer";
 
 /**
  * Builds the project's technology-agnostic scene graph from raw order data.
@@ -153,7 +154,7 @@ export class OrderSceneNode implements IOrderSceneNode {
     private constructor(idsMap: IdsMap, id: string | undefined, kind: Object3DNodeKind) {
         this.idsMap = idsMap;
         this.kind = kind;
-        this.id = id ? this.idsMap.useIdOrGenerateUnique(id) : this.idsMap.getRandomId();
+        this.id = id ? this.idsMap.useIdOrCreateUnique(id) : this.idsMap.createRandomId();
         this.idsMap.register(this);
         this._geometry = new GeometryData(this, new Matrix4());
     }
@@ -235,8 +236,7 @@ export class OrderSceneNode implements IOrderSceneNode {
             orderData.bomEntries?.forEach((bomEntry: any) => {
                 OrderSceneNode.createScenePartNodeFromPartBase(bomEntry, posGroupNode);
             });
-            const moduleOrderEntry = mergeModuleOrderEntryWithAttributes(orderData.orderItem, item.orderInput?.attributes);
-            OrderSceneNode.createSceneModuleNodeFromOD_Base(moduleOrderEntry, posGroupNode);
+            OrderSceneNode.createSceneModuleNodeFromOD_Base(orderData.orderItem, posGroupNode);
         });
         return posGroupNode;
     }
@@ -444,31 +444,3 @@ function computeWorldTransform(node: IOrderSceneNode): Matrix4 {
 function getPartId(part: any /* PartBase */): string {
     return `part__${part._partId}__${part._id}:${part._parentUniqueId}`;
 }
-
-let warned = false;
-
-function mergeModuleOrderEntryWithAttributes(source: any, attributes: any): any {
-    if (!warned) {
-        warned = true;
-        logWarning(`
-            
-            -------------------------
-
-            scene.implementation.ts / mergeModuleOrderEntryWithAttributes
-            
-            DOES THIS HAVE TO BE IN FINAL IMPLEMENTATION?
-
-            -------------------------
-            
-            `);
-    }
-    if (!attributes || typeof attributes !== 'object') {
-        return source;
-    }
-
-    return {
-        ...source,
-        ...attributes,
-    };
-}
-

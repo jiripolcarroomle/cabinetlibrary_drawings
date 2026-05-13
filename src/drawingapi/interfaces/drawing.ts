@@ -1,5 +1,5 @@
-import * as TC from "../lib/internal/base";
-import type { IRenderOrthoCameraResult } from "./orderdrawingrenderer.interface";
+import * as TC from "../../lib/internal/base"
+import type { IRenderOrthoCameraResult } from "./orderdrawingrenderer";
 
 /*
  * Interface for the drawings.
@@ -7,8 +7,6 @@ import type { IRenderOrthoCameraResult } from "./orderdrawingrenderer.interface"
  * All coordinates the content creator should define must be in world coordinate system or in the module coordinate system.
  * All projections to the 2D drawing coordinate system and all SVG related calculations should be handled by the provided app.
  */
-
-
 export enum DrawingDirection {
     Top = 'top',
     Elevation = 'elevation',
@@ -25,12 +23,14 @@ export interface IPlanSvgDrawing {
 
     get drawingDirection(): DrawingDirection;
 
-    /** Add an SVG object to the drawing at the specified world position. */
-    addSvgObject(worldTransform: TC.Matrix4, svgInjection: SVGElement): void;
     /** Add an annotable point to the drawing */
     addAnnotation(worldTransform: TC.Matrix4, annotation: Annotation): void;
     /** Add an overlay SVG object to the drawing at the specified world position */
-    addOverlay(worldTransform: TC.Matrix4, svgInjection: SvgInjectionData): void;
+    addOverlay(worldTransform: TC.Matrix4, svgInjection: SvgPathInjectionData): void;
+    /**
+     * Add an annotable point to the drawing. The point will be rendered as a circle and can be used for example to mark important points in the drawing.
+      */
+    addAnnotablePoint(worldTransform: TC.Matrix4, point: AnnotablePoint): void;
 
     /**
      * After all SVG objects have been added, render the final SVG element.
@@ -43,7 +43,12 @@ export interface IPlanSvgDrawing {
 
 
 export interface AnnotablePoint {
-    coordinate: TC.Vector3; // coordinate in the scene, relative to the module pivot
+    /** coordinate in the scene, relative to the module pivot */
+    coordinate: TC.Vector3;
+    /** whether the point is relevant for the horizontal (X) axis of the drawing. defaults false. if true, annotation won't show on the given annotation line */
+    notHorizontal?: boolean;
+    /** whether the point is relevant for the vertical (Y) axis of the drawing. defaults false. if true, annotation won't show on the given annotation line */
+    notVertical?: boolean;
 }
 
 /**
@@ -51,23 +56,22 @@ export interface AnnotablePoint {
  * Defined in the module coordinate system.
  */
 export interface Annotation {
-    /** Scene coordinate where the annotation starts */
     start: TC.Vector3;
-    /** Scene coordinate where the annotation ends */
     end: TC.Vector3;
-    /** The label the annotation should have. If not provided, the length of the annotation line will be used as the label */
+    /** The ID of the owner of the annotation. This can be used to group annotations by their owner. */
+    ownerId?: string;
+    /** The main meaning of the annotation. Layered annotation will go to a common line. */
+    layer: string;
+    /** Whether to show segments, only sum, or both */
+    aggregate?: 'segments' | 'sum' | 'segmentsAndSum';
+    /** General categorization useful for filtering the annotations for the drawings. */
+    tags?: string[];
+    /** if true, the dimension stays at its projected position; if false (or undefined), it is dragged to an annotation line */
+    displayAtPosition?: boolean;
+    /** The text to show on the annotation. If not provided, the real length will be shown. */
     label?: string;
-    /** Whether the annotation line should be at the annotated points (false) or if it will be on a common annotation line on the edge of the drawing (true) */
-    shouldGoToAnnotationLine?: boolean;
-    /**
-     * If !shouldGoToAnnotationLine, this applies. Defines the distance of the annotation line from the annotated points.
-     * Distance is given in the SVG drawing units.
-     * If distance is given and is long enough, helper lines are drawn.
-     * From start to end, positive distance lifts the annotation line to left (e.g. start 9 o'clock, end 3 o'clock, annotation line above if distance positive).
-     * The text might be flipped to always be legible (e.g. not upside-down etc.)
-     */
-    distance?: number;
 }
+
 
 
 export interface SvgPathCommandData {
@@ -84,10 +88,30 @@ export interface SvgPathCommandData {
  * The path is defined by a list of commands, where each command has a type (e.g. MoveTo, LineTo, ClosePath) and a world coordinate (for MoveTo and LineTo) in the scene relative to the module pivot.
  * If necessary, add more fields to the SvgInjectionData interface to allow the content creator to define more styles or properties for the injected SVG element.
  */
-export interface SvgInjectionData {
+export interface SvgPathInjectionData {
+    id?: string;
+    class?: string;
     fill?: string;
+    fillOpacity?: string;
+    opacity?: string;
     stroke?: string;
-    'stroke-dasharray'?: string;
-    'stroke-width'?: string;
-    path: SvgPathCommandData[];
-}
+    strokeDasharray?: string;
+    strokeDashoffset?: string;
+    strokeLinecap?: 'butt' | 'round' | 'square';
+    strokeLinejoin?: 'arcs' | 'bevel' | 'miter' | 'miter-clip' | 'round';
+    strokeMiterlimit?: string;
+    strokeOpacity?: string;
+    strokeWidth?: string;
+    paintOrder?: string;
+    vectorEffect?: 'none' | 'non-scaling-stroke' | 'non-scaling-size' | 'non-rotation' | 'fixed-position';
+    transform?: string;
+    display?: string;
+    visibility?: string;
+    pointerEvents?: string;
+    shapeRendering?: 'auto' | 'crispEdges' | 'geometricPrecision' | 'optimizeSpeed';
+    markerStart?: string;
+    markerMid?: string;
+    markerEnd?: string;
+    pathLength?: string;
+    d: SvgPathCommandData[];
+}   

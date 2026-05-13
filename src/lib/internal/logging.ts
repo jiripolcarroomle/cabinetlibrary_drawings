@@ -108,6 +108,18 @@ export function internal_leaveModuleAfterDataCompletion() {
   internal_leave();
 }
 
+export function internal_enterModulePrepareContext(moduleId: string, moduleUniqueId: string) {
+  internal_enter({
+    area: 'ModulePrepareContext',
+    moduleId: moduleId,
+    moduleUniqueId: moduleUniqueId,
+  });
+}
+
+export function internal_leaveModulePrepareContext() {
+  internal_leave();
+}
+
 export function internal_enterCalculateContainerModules(moduleId: string, moduleUniqueId: string) {
   internal_enter({
     area: 'CalculateContainerModules',

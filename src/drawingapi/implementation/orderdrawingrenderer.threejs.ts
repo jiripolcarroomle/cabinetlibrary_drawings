@@ -1,22 +1,22 @@
 // Both TC and THREE have a Matrix4 and Vector3 class, maybe also further overlapping types in the future.
 // Keep the *-as imports for legibility.
 import * as THREE from "three";
-import * as TC from "../lib/internal/base";
-import type { IRenderDrawing, IRenderOrthoCameraParams, IRenderOrthoCameraResult } from "./orderdrawingrenderer.interface";
-import type { IOrderSceneNode } from "./scene.interface";
-import { type IExtendedDrawingRenderSettings, sceneToThreeJsScene, _resolveUpVector, _getBox3Corners, rasterRenderer } from "./orderdrawingrenderer.theejs.helpers";
+import * as TC from "../../lib/internal/base"
+import type { IRenderDrawing, IRenderOrthoCameraParams, IRenderOrthoCameraResult } from "../interfaces/orderdrawingrenderer";
+import type { IOrderSceneNode } from "../interfaces/scene";
+import { type ISceneGeometryConversionToThreeJsSettings, sceneToThreeJsScene, _resolveUpVector, _getBox3Corners, rasterRenderer, svgRenderer } from "../implementation/orderdrawingrenderer.theejs.helpers";
 
 /**
  * Render the scene with an orthographic camera based on the provided settings, and return the rendered data along with the camera settings used.
  * @param sceneRoot the root node of the scene to render
- * @param settings @see IRenderOrthoCameraParams
+ * @param renderSettings @see IRenderOrthoCameraParams
  * @returns @see IRenderOrthoCameraResult
  */
 export const renderScene: IRenderDrawing = async function (
     sceneRoot: IOrderSceneNode,
     filter: ((node: IOrderSceneNode) => boolean) | undefined = undefined,
-    drawingSettings: IExtendedDrawingRenderSettings,
-    settings: IRenderOrthoCameraParams
+    drawingSettings: ISceneGeometryConversionToThreeJsSettings,
+    renderSettings: IRenderOrthoCameraParams
 ): Promise<IRenderOrthoCameraResult> {
 
     // Build a Three.js scene from the provided scene root and render settings
@@ -37,8 +37,8 @@ export const renderScene: IRenderDrawing = async function (
     const bboxSize = sceneBoundingBox.getSize(new THREE.Vector3());
     const bboxRadius = Math.max(bboxSize.length() * 0.5, 1);
     // fallback to top-view as per interface definition
-    const direction = settings.direction
-        ? new THREE.Vector3(settings.direction._x, settings.direction._y, settings.direction._z)
+    const direction = renderSettings.direction
+        ? new THREE.Vector3(renderSettings.direction._x, renderSettings.direction._y, renderSettings.direction._z)
         : new THREE.Vector3(0, -1, 0);
     if (direction.lengthSq() < 1e-12) {
         direction.set(0, -1, 0);
@@ -74,7 +74,7 @@ export const renderScene: IRenderDrawing = async function (
         maxZ = Math.max(maxZ, p.z);
     }
 
-    const extentPadding = Math.max(1e-4, Math.max(maxX - minX, maxY - minY) * 0.01);
+    const extentPadding = 0;//Math.max(1e-4, Math.max(maxX - minX, maxY - minY) * 0.00);
     const nearFarPadding = Math.max(1e-4, (maxZ - minZ) * 0.01);
 
     const computedLeft = minX - extentPadding;
@@ -84,19 +84,19 @@ export const renderScene: IRenderDrawing = async function (
     const computedNear = Math.max(1e-4, -maxZ - nearFarPadding);
     const computedFar = Math.max(computedNear + 1e-3, -minZ + nearFarPadding);
 
-    camera.left = settings.left ?? computedLeft;
-    camera.right = settings.right ?? computedRight;
-    camera.top = settings.top ?? computedTop;
-    camera.bottom = settings.bottom ?? computedBottom;
-    camera.near = settings.near ?? computedNear;
-    camera.far = settings.far ?? computedFar;
+    camera.left = renderSettings.left ?? computedLeft;
+    camera.right = renderSettings.right ?? computedRight;
+    camera.top = renderSettings.top ?? computedTop;
+    camera.bottom = renderSettings.bottom ?? computedBottom;
+    camera.near = renderSettings.near ?? computedNear;
+    camera.far = renderSettings.far ?? computedFar;
     camera.updateProjectionMatrix();
 
 
 
     // compute image size so that the image is not streched in width or height and does not exceed the maximum
-    const outputWidth = settings.drawingMaxWidth ?? 1200;
-    const outputHeight = settings.drawingMaxHeight ?? 800;
+    const outputWidth = renderSettings.drawingMaxWidth ?? 1200;
+    const outputHeight = renderSettings.drawingMaxHeight ?? 800;
 
     const frustrumRatio = (camera.right - camera.left) / (camera.top - camera.bottom);
     const imageRatio = outputWidth / outputHeight;
@@ -110,7 +110,7 @@ export const renderScene: IRenderDrawing = async function (
 
 
 
-    const pngDataUrl = rasterRenderer(threeScene, camera, adjustedWidth, adjustedHeight);
+    const imageData = drawingSettings.format === 'svg' ? svgRenderer(threeScene, camera, adjustedWidth, adjustedHeight) : rasterRenderer(threeScene, camera, adjustedWidth, adjustedHeight);
 
     const imageSpaceMatrix = new TC.Matrix4().set(
         adjustedWidth / 2, 0, 0, adjustedWidth / 2,
@@ -118,20 +118,24 @@ export const renderScene: IRenderDrawing = async function (
         0, 0, 0.5, 0.5,
         0, 0, 0, 1,
     );
-    const worldToViewMatrix = imageSpaceMatrix
+    const worldToCameraMatrix = new TC.Matrix4().fromArray(camera.matrixWorldInverse.elements);
+    const cameraToPixelMatrix = imageSpaceMatrix.clone().multiply(new TC.Matrix4().fromArray(camera.projectionMatrix.elements));
+    const worldToPixelMatrix = imageSpaceMatrix.clone()
         .multiply(new TC.Matrix4().fromArray(camera.projectionMatrix.elements))
-        .multiply(new TC.Matrix4().fromArray(camera.matrixWorldInverse.elements));
+        .multiply(worldToCameraMatrix);
 
 
 
 
     return {
-        worldToViewMatrix,
-        image: { dataUrl: pngDataUrl },
+        worldToCameraMatrix,
+        worldToPixelMatrix,
+        cameraToPixelMatrix,
+        image: imageData,
         renderedScene: threeScene,
         imageHeight: adjustedHeight,
         imageWidth: adjustedWidth,
-        cameraParameters: settings,
+        renderParameters: renderSettings,
         renderedNodes: collectedNodes,
     };
 

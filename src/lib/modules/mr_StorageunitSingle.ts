@@ -1,7 +1,7 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../internal/logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
 
 //#region Imports
-import { cbp_mr_StorageunitSingle, dc_mr_StorageunitSingle, adc_mr_StorageunitSingle, ccm_mr_StorageunitSingle } from '../internal/modules/mr_StorageunitSingle'
+import { cbp_mr_StorageunitSingle, dc_mr_StorageunitSingle, adc_mr_StorageunitSingle, ccm_mr_StorageunitSingle, pc_mr_StorageunitSingle } from '../internal/modules/mr_StorageunitSingle'
 import { GlobalFunc } from '../internal/global-func'
 import { dc_mc_Storageunit01, OD_M_mc_Storageunit01 } from '../internal/modules/mc_Storageunit01'
 import { dc_mf_Drawer, OD_M_mf_Drawer } from '../internal/modules/mf_Drawer'
@@ -17,6 +17,7 @@ import { dc_mf_Sink, OD_M_mf_Sink } from '../internal/modules/mf_Sink'
 import { dc_mf_Pullout, OD_M_mf_Pullout } from '../internal/modules/mf_Pullout'
 import { dc_mf_PantryPullout, OD_M_mf_PantryPullout } from '../internal/modules/mf_PantryPullout'
 import { dc_md_FrontPlaceholder, OD_M_md_FrontPlaceholder } from '../internal/modules/md_FrontPlaceholder'
+import { dc_mc_Filler01, OD_M_mc_Filler01 } from '../internal/modules/mc_Filler01'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary } from '../internal/custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction } from '../internal/custom-tables/tab_BaseunitFridgeConstruction'
 import { ct_tab_BaseunitFridgeMapping, ICT_tab_BaseunitFridgeMapping } from '../internal/custom-tables/tab_BaseunitFridgeMapping'
@@ -142,7 +143,7 @@ import { ct_tab_SinkConstruction, ICT_tab_SinkConstruction } from '../internal/c
 import { ct_tab_SinkMapping, ICT_tab_SinkMapping } from '../internal/custom-tables/tab_SinkMapping'
 import { ct_tab_SlopedCeilingSettings, ICT_tab_SlopedCeilingSettings } from '../internal/custom-tables/tab_SlopedCeilingSettings'
 import { CKind, Contour, GenerationMethod, Matrix4, Vector3 } from '../internal/base'
-import { Dock, IDockingInfo, FaceKey, IPartBase, MatrixHelper, ModuleHelper, PartHelper } from '../internal/mod-base'
+import { Dock, IDockingInfo, FaceKey, IPartBase, MatrixHelper, ModuleHelper, PartHelper, IContextData } from '../internal/mod-base'
 declare function uuidv4(): string;
 //#endregion Imports
 
@@ -172,6 +173,10 @@ export function mr_StorageunitSingle_createBuildPlan(this: cbp_mr_StorageunitSin
 
 		// Read the information for the surroundings (allow the automatism)
 		const storageunitInfo = GlobalFunc.process_ParseSuroundingInfo(this.mod_InformationList[0]);
+		const autoFillerLeft = storageunitInfo.AutoFillerLeft;
+		const wallDistanceLeft = storageunitInfo.WallDistanceLeft;
+		const autoFillerRight = storageunitInfo.AutoFillerRight;
+		const wallDistanceRight = storageunitInfo.WallDistanceRight;
 
 		// Check all the added Information of CountertopInfo
 		let cutout = 0;
@@ -223,12 +228,9 @@ export function mr_StorageunitSingle_createBuildPlan(this: cbp_mr_StorageunitSin
 		//======================================================================
 
 		const countertopContourBounds = {
-			xMin: 0,
-			xMax: this.mod_Width,
-			zMin: Math.min(
-				0,
-				-this.mod_CarcaseDistanceWall,
-			),
+			xMin: autoFillerLeft ? -wallDistanceLeft : 0,
+			xMax: autoFillerRight ? this.mod_Width + wallDistanceRight : this.mod_Width,
+			zMin: Math.min(0, -this.mod_CarcaseDistanceWall),
 			zMax: this.mod_Depth,
 		};
 
@@ -309,8 +311,8 @@ export function mr_StorageunitSingle_createBuildPlan(this: cbp_mr_StorageunitSin
 
 			contourPaneltop.attributes
 				.set(CONTOUR_ATTRIBUTE_OWNER_TYPE, mr_StorageunitSingle)
-				.set('mod_CeilingAreaVisLeft', storageunitInfo.CarcaseVisLeft)
-				.set('mod_CeilingAreaVisRight', storageunitInfo.CarcaseVisRight)
+				.set('mod_CeilingAreaVisLeft', storageunitInfo.CeilingAreaVisLeft)
+				.set('mod_CeilingAreaVisRight', storageunitInfo.CeilingAreaVisRight)
 				.set('mod_TypeElement', this.mod_TypeElement ?? 'None')
 				;
 
@@ -474,8 +476,8 @@ export function mr_StorageunitSingle_createBuildPlan(this: cbp_mr_StorageunitSin
 			const mod_PlinthAreaVisLeft = storageunitInfo.PlinthAreaVisLeft === 1;
 			const mod_PlinthAreaVisRight = storageunitInfo.PlinthAreaVisRight === 1;
 			const toekickContourBounds = {
-				xMin: mod_PlinthAreaVisLeft ? legPositionInfo.LineLeft : 0,
-				xMax: this.mod_Width - (mod_PlinthAreaVisRight ? legPositionInfo.LineRight : 0),
+				xMin: autoFillerLeft ? -wallDistanceLeft : (mod_PlinthAreaVisLeft ? legPositionInfo.LineLeft : 0),
+				xMax: autoFillerRight ? this.mod_Width + wallDistanceRight : this.mod_Width - (mod_PlinthAreaVisRight ? legPositionInfo.LineRight : 0),
 				zMin: legPositionInfo.LineBack,
 				zMax: this.mod_Depth - legPositionInfo.LineFront,
 			};
@@ -593,6 +595,7 @@ export function mr_StorageunitSingle_afterDataCompletion(this: adc_mr_Storageuni
 		};
 
 		// Analyze surroundings
+		//----------------------------------------------------	
 		const surroundingAnalysis = GlobalFunc.process_AnalyzeArticleSurroundings(surroundingContours, articlePos, articleDimension);
 
 		type VisibilityValue = 1 | 0;
@@ -624,8 +627,24 @@ export function mr_StorageunitSingle_afterDataCompletion(this: adc_mr_Storageuni
 				wallBackheight = surroundingAnalysis.slopedCeilingLevel;
 			}
 		}
-		const autoLeft = surroundingAnalysis.dataComplete ? surroundingAnalysis.firstElement : false;
-		const autoRight = surroundingAnalysis.dataComplete ? surroundingAnalysis.lastElement : false;
+
+		const isFirstElement = surroundingAnalysis.dataComplete ? surroundingAnalysis.firstElement : false;
+		const isLastElement = surroundingAnalysis.dataComplete ? surroundingAnalysis.lastElement : false;
+		const disWallDisLeft = surroundingAnalysis.dataComplete ? surroundingAnalysis.distanceWallLeft : 999;
+		const disWallDisRight = surroundingAnalysis.dataComplete ? surroundingAnalysis.distanceWallRight : 999;
+
+
+		// Understand if we are close to the wall with this cabinet
+		const isNearWallLeft = disWallDisLeft >= 0 && disWallDisLeft <= 200;
+		const isNearWallRight = disWallDisRight >= 0 && disWallDisRight <= 200;
+
+		// Flag for finishing sidepanels and add the closing parts at the toekick and ceiling filler
+		const autoLeft = isFirstElement && !isNearWallLeft;
+		const autoRight = isLastElement && !isNearWallRight;
+
+		// Flag to add the filler
+		const autoFillerLeft = isFirstElement && isNearWallLeft;
+		const autoFillerRight = isLastElement && isNearWallRight;
 
 		// Create the object for the automatism and visiblity control
 		const storageunitInfo = {
@@ -634,11 +653,43 @@ export function mr_StorageunitSingle_afterDataCompletion(this: adc_mr_Storageuni
 			CeilingAreaVisLeft: resolveVisibility(this.mod_CeilingAreaVisLeftSelection, autoLeft),
 			CeilingAreaVisRight: resolveVisibility(this.mod_CeilingAreaVisRightSelection, autoRight),
 			CarcaseVisLeft: resolveVisibility(this.mod_CarcaseVisLeftSelection, autoLeft),
-			CarcaseVisRight: resolveVisibility(this.mod_CarcaseVisRightSelection, autoRight)
+			CarcaseVisRight: resolveVisibility(this.mod_CarcaseVisRightSelection, autoRight),
+			AutoFillerLeft: autoFillerLeft,
+			AutoFillerRight: autoFillerRight,
+			WallDistanceLeft: disWallDisLeft,
+			WallDistanceRight: disWallDisRight
 		};
 		this.mod_InformationList[0] = JSON.stringify(storageunitInfo);
 
-		// Calculate the dimension logic
+		// Automatic filler and upright
+		//----------------------------------------------------	
+
+		if (autoFillerLeft) {
+			const filler = this.addOD_M_mc_Filler01();
+			filler.mod_FrontPosStart = this.mod_PlinthAreaHeight;
+			filler.mod_Direction = 'Left';
+			filler.mod_FillerHardware = 'Bracket01';
+			filler.mod_FillerType = 'LShape';
+			filler.mod_TypeElement = 'Filler';
+			filler.mod_Width = disWallDisLeft;
+
+			filler.setOrigin(-disWallDisLeft, 0, 0)
+		}
+
+		if (autoFillerRight) {
+			const filler = this.addOD_M_mc_Filler01();
+			filler.mod_FrontPosStart = this.mod_PlinthAreaHeight;
+			filler.mod_Direction = 'Left';
+			filler.mod_FillerHardware = 'Bracket01';
+			filler.mod_FillerType = 'LShape';
+			filler.mod_TypeElement = 'Filler';
+			filler.mod_Width = disWallDisRight;
+
+			filler.setOrigin(this.mod_Width, 0, 0)
+		}
+
+		// Calculate the dimension logic for sloped ceiling
+		//----------------------------------------------------	
 		if (this.mod_SlopedCeilingDimensionLogic_matrix.UseWallData) { // Use the Wall data
 			if (this.mod_SlopedCeilingDimensionLogic_matrix.Height == 'Max') { //Calculate the maximum height
 				angle = wallAngle;
@@ -1511,6 +1562,30 @@ export function mr_StorageunitSingle_afterDataCompletion(this: adc_mr_Storageuni
 	}
 	finally {
 		internal_leaveModuleAfterDataCompletion();
+	}
+}
+// ---------------------------------------------------------------
+export function mr_StorageunitSingle_prepareContext(this: pc_mr_StorageunitSingle): void {
+	internal_enterModulePrepareContext('mr_StorageunitSingle', this._id);
+	try {
+		// ###############################################################
+		// ####################### CUSTOM SCRIPTS ########################
+		// ###############################################################
+		// CUSTOMSCRIPT_mr_StorageunitSingle_PREPARECONTEXT
+
+		// ###############################################################
+		// ################### END CUSTOM SCRIPTS ########################
+		// ###############################################################
+	}
+	catch (error) {
+		if (error instanceof Error) {
+			logError(error.message + "\n" + error.stack);
+		} else {
+			logError(JSON.stringify(error, null, 4));
+		}
+	}
+	finally {
+		internal_leaveModulePrepareContext();
 	}
 }
 // ---------------------------------------------------------------

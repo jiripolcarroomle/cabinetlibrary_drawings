@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary, ct2_tab_ApplianceGraphicLibrary } from '../custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction, ct2_tab_BaseunitFridgeConstruction } from '../custom-tables/tab_BaseunitFridgeConstruction'
 import { ct_tab_BaseunitFridgeMapping, ICT_tab_BaseunitFridgeMapping, ct2_tab_BaseunitFridgeMapping } from '../custom-tables/tab_BaseunitFridgeMapping'
@@ -125,7 +125,7 @@ import { ct_tab_SinkMapping, ICT_tab_SinkMapping, ct2_tab_SinkMapping } from '..
 import { ct_tab_SlopedCeilingSettings, ICT_tab_SlopedCeilingSettings, ct2_tab_SlopedCeilingSettings } from '../custom-tables/tab_SlopedCeilingSettings'
 
 import { OD_Base, PartGroup, OpenGroup, Matrix4, Vector3, GenerationContour, Contour, GenerationMethod, RoomContour, ArticlePos } from '../base'
-import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp } from '../mod-base'
+import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IContextData } from '../mod-base'
 import { loadOrderData } from '../loader'
 import { GlobalFunc } from '../global-func'
 import { OD_M_mc_Fingergrip01, dc_mc_Fingergrip01 } from './mc_Fingergrip01'
@@ -134,7 +134,7 @@ import { IModVar_mod_FingergripColor, IModVarNonNull_mod_FingergripColor, IModVa
 import { VariantValidation, IMatrix_mod_FingergripColor, IMatrix_mod_FingergripType } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
-import { mr_Fingergrip_createBuildPlan, mr_Fingergrip_afterDataCompletion, mr_Fingergrip_manufacturerDataCompletion, mr_Fingergrip_calculateContainerModules } from '../../modules/mr_Fingergrip';
+import { mr_Fingergrip_createBuildPlan, mr_Fingergrip_afterDataCompletion, mr_Fingergrip_manufacturerDataCompletion, mr_Fingergrip_calculateContainerModules, mr_Fingergrip_prepareContext } from '../../modules/mr_Fingergrip';
 
 export interface cbp_mr_Fingergrip extends IModBaseProp
   , IModVarNonNull_mod_FingergripColor, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_LengthList {
@@ -158,6 +158,11 @@ export interface dc_mr_Fingergrip extends IModBaseProp
   addOD_M_mc_Fingergrip01(index?: number): dc_mc_Fingergrip01;
 }
 
+export interface pc_mr_Fingergrip extends dc_mr_Fingergrip {
+  getContextData(): IContextData | undefined;
+  getContextModule(id: string): OD_Base | undefined;
+}
+
 export interface adc_base_mr_Fingergrip extends IModBaseProp
   , IModVarNonNull_mod_FingergripColor, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_LengthList {
   get m(): OD_Base[];
@@ -175,7 +180,7 @@ export interface ccm_mr_Fingergrip extends adc_base_mr_Fingergrip {
 }
 
 
-export class OD_M_mr_Fingergrip extends OD_Base implements dc_mr_Fingergrip
+export class OD_M_mr_Fingergrip extends OD_Base implements pc_mr_Fingergrip, dc_mr_Fingergrip
   , IModParents_mr_Fingergrip
   , IModVar_mod_FingergripColor, IModVar_mod_FingergripType, IModVar_mod_LengthList {
   constructor(parent?: OD_Base, manufacturerMode?: boolean) {
@@ -233,6 +238,7 @@ export class OD_M_mr_Fingergrip extends OD_Base implements dc_mr_Fingergrip
     if (json['articleId']) {
       this._articleId = json['articleId'];
     }
+    this._contextData = json['contextData'];
     // only take over the attributes we know...
     {
       internal_enterValidateVariant(this.modId, this._id, 'mod_FingergripColor');
@@ -322,6 +328,14 @@ export class OD_M_mr_Fingergrip extends OD_Base implements dc_mr_Fingergrip
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
   }
+  override prepareContext(contextRoots: OD_Base[]): void {
+    super.prepareContext(contextRoots);
+    this.internallyPrepareContext();
+  }
+  internallyPrepareContext(): void {
+    this.#prepareContextInternal();
+  }
+  #prepareContextInternal = mr_Fingergrip_prepareContext;
   seal(): IModuleNonNull_mr_Fingergrip {
     this.afterDataCompletion();
     const adc = new OD_M_mr_Fingergrip_NonNull(this);
@@ -368,6 +382,10 @@ class OD_M_mr_Fingergrip_NonNull implements cbp_mr_Fingergrip, adc_mr_Fingergrip
   #internalParent: OD_M_mr_Fingergrip;
   getGenerationContours(): GenerationContour[] { return this.#internalParent.getGenerationContours(); }
   getRoomContours(): RoomContour[] { return this.#internalParent.roomContours ?? []; }
+  getContextData(): IContextData | undefined { return this.#internalParent.getContextData(); }
+  getContextModule(id: string): OD_Base | undefined {
+    return this.#internalParent.getContextModule(id);
+  }
   get _posData(): Map<string, string | number> { return this.#internalParent._posData; }
 
   get _id(): string { return this.#internalParent._id; }

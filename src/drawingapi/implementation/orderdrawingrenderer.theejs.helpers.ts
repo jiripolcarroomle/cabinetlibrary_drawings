@@ -1,80 +1,19 @@
 import * as THREE from "three";
 import { OBJLoader, SVGLoader, type SVGResultPaths } from "three/examples/jsm/Addons.js";
-import { type ISceneGeometryConversionSettings } from "./orderdrawingrenderer.interface";
-import { Object3DNodeKind } from "./scene.interface";
-import { type IOrderSceneNode } from "./scene.interface";
-import * as TC from "../lib/internal/base";
-import { logError, logWarning, logInfo } from "../lib/internal/logging";
+import { type ISceneGeometryConversionSettings } from "../interfaces/orderdrawingrenderer";
+import { Object3DNodeKind } from "../interfaces/scene";
+import { type IOrderSceneNode } from "../interfaces/scene";
+import * as TC from "../../lib/internal/base"
+import { logError, logWarning, logInfo } from "../../lib/internal/logging";
 import { SVGRenderer } from "three/examples/jsm/Addons.js";
 
-export interface IExtendedDrawingRenderSettings extends ISceneGeometryConversionSettings {
+export interface ISceneGeometryConversionToThreeJsSettings extends ISceneGeometryConversionSettings {
     edgesGeometryThresholdAngle?: number;
     cameraDirection?: TC.Vector3;
 }
 
 
-type ThreeFacadeHmrData = {
-    object3dCache?: Map<string, THREE.Object3D>;
-};
-const _hmrData = (import.meta as any).hot?.data as ThreeFacadeHmrData | undefined;
-const _object3dCache: Map<string, THREE.Object3D> = _hmrData?.object3dCache ?? new Map();
-if (_hmrData) {
-    _hmrData.object3dCache = _object3dCache;
-}
-
-if ((import.meta as any).hot) {
-    (import.meta as any).hot.dispose((data: ThreeFacadeHmrData) => {
-        data.object3dCache = _object3dCache;
-    });
-}
-
-const _OBJ_TEXT_CACHE_NAME = 'tc-drawings-three:obj-text:v1';
-const _USE_PERSISTENT_OBJ_TEXT_CACHE = Boolean((import.meta as any).env?.DEV);
-async function _fetchTextFromCacheOrFetch(url: string): Promise<string> {
-    // DEV-only: Persist downloads across HMR *and* full page reloads.
-    // This caches the raw OBJ response; we still parse it into Object3D per session.
-    // In production, prefer standard HTTP caching (Cache-Control/ETag) and/or
-    // versioned URLs instead of app-managed persistent caching.
-    if (!_USE_PERSISTENT_OBJ_TEXT_CACHE) {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`fetch(${url}) failed: ${response.status} ${response.statusText}`);
-        }
-        return await response.text();
-    }
-
-    try {
-        if (typeof caches !== 'undefined') {
-            const cache = await caches.open(_OBJ_TEXT_CACHE_NAME);
-            const cachedResponse = await cache.match(url);
-            if (cachedResponse) {
-                return await cachedResponse.text();
-            }
-            logInfo(`OBJ fetch ${url}`);
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`fetch(${url}) failed: ${response.status} ${response.statusText}`);
-            }
-            try {
-                await cache.put(url, response.clone());
-            } catch (e) {
-                // Cache put can fail for opaque/cors responses or storage limits.
-                logWarning(`OBJ CacheStorage put failed for ${url}: ${e}`);
-            }
-            return await response.text();
-        }
-    } catch (e) {
-        logWarning(`OBJ CacheStorage error for ${url}: ${e}`);
-    }
-
-    const response = await fetch(url);
-    if (!response.ok) {
-        throw new Error(`fetch(${url}) failed: ${response.status} ${response.statusText}`);
-    }
-    return await response.text();
-}
-
-
+const _object3dCache: Map<string, THREE.Object3D> = new Map();
 
 const objLoader = new OBJLoader();
 
@@ -89,7 +28,11 @@ async function _loadObject3DFromCacheOrFetch(
 
     let obj: THREE.Object3D;
     try {
-        const md = await _fetchTextFromCacheOrFetch(url);
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`fetch(${url}) failed: ${response.status} ${response.statusText}`);
+        }
+        const md = await response.text();
         obj = objLoader.parse(md);
         if (material) {
             obj.traverse((child) => {
@@ -147,12 +90,83 @@ function _addConfiguredRenderable(
 function _createEdgesWireframe(
     geometry: THREE.BufferGeometry,
     material: THREE.LineBasicMaterial,
-    drawingRenderSettings: IExtendedDrawingRenderSettings,
+    drawingRenderSettings: ISceneGeometryConversionToThreeJsSettings,
 ): THREE.LineSegments {
     return new THREE.LineSegments(
         new THREE.EdgesGeometry(geometry, drawingRenderSettings.edgesGeometryThresholdAngle),
         material,
     );
+}
+
+function _createSvgBoxPlanesAndWireframe(
+    size: { _x: number; _y: number; _z: number },
+    materialBase: any | undefined,
+    wireframeMaterialBase: any | undefined,
+    drawingRenderSettings: ISceneGeometryConversionToThreeJsSettings,
+): THREE.Object3D {
+    const group = new THREE.Group();
+    const halfX = size._x / 2;
+    const halfY = size._y / 2;
+    const halfZ = size._z / 2;
+
+    const surfaceMaterial = _createSurfaceMaterial(materialBase);
+    if (surfaceMaterial) {
+        // Keep faces visible from either side in orthographic SVG output.
+        surfaceMaterial.side = THREE.DoubleSide;
+
+        const faceDefinitions: Array<{
+            geometry: THREE.PlaneGeometry;
+            position: THREE.Vector3;
+            rotation: THREE.Euler;
+        }> = [
+                {
+                    geometry: new THREE.PlaneGeometry(size._z, size._y),
+                    position: new THREE.Vector3(halfX, 0, 0),
+                    rotation: new THREE.Euler(0, Math.PI / 2, 0),
+                },
+                {
+                    geometry: new THREE.PlaneGeometry(size._z, size._y),
+                    position: new THREE.Vector3(-halfX, 0, 0),
+                    rotation: new THREE.Euler(0, -Math.PI / 2, 0),
+                },
+                {
+                    geometry: new THREE.PlaneGeometry(size._x, size._z),
+                    position: new THREE.Vector3(0, halfY, 0),
+                    rotation: new THREE.Euler(-Math.PI / 2, 0, 0),
+                },
+                {
+                    geometry: new THREE.PlaneGeometry(size._x, size._z),
+                    position: new THREE.Vector3(0, -halfY, 0),
+                    rotation: new THREE.Euler(Math.PI / 2, 0, 0),
+                },
+                {
+                    geometry: new THREE.PlaneGeometry(size._x, size._y),
+                    position: new THREE.Vector3(0, 0, halfZ),
+                    rotation: new THREE.Euler(0, 0, 0),
+                },
+                {
+                    geometry: new THREE.PlaneGeometry(size._x, size._y),
+                    position: new THREE.Vector3(0, 0, -halfZ),
+                    rotation: new THREE.Euler(0, Math.PI, 0),
+                },
+            ];
+
+        for (const face of faceDefinitions) {
+            const mesh = new THREE.Mesh(face.geometry, surfaceMaterial);
+            mesh.position.copy(face.position);
+            mesh.rotation.copy(face.rotation);
+            group.add(mesh);
+        }
+    }
+
+    const wireframeMaterial = _createWireframeMaterial(wireframeMaterialBase);
+    if (wireframeMaterial) {
+        const boxGeometry = new THREE.BoxGeometry(size._x, size._y, size._z);
+        const wireframe = _createEdgesWireframe(boxGeometry, wireframeMaterial, drawingRenderSettings);
+        group.add(wireframe);
+    }
+
+    return group;
 }
 
 function _collectMeshChildren(objectGroup: THREE.Object3D): THREE.Mesh[] {
@@ -184,7 +198,7 @@ function _addRenderableWithOptionalWireframe(
     renderable: THREE.BufferGeometry | THREE.Object3D,
     materialBase: any | undefined,
     wireframeMaterialBase: any | undefined,
-    drawingRenderSettings: IExtendedDrawingRenderSettings,
+    drawingRenderSettings: ISceneGeometryConversionToThreeJsSettings,
     configureRenderable?: (object: THREE.Object3D) => void,
     configureSurfaceMaterial?: (material: THREE.MeshBasicMaterial) => void,
 ): void {
@@ -241,7 +255,7 @@ function _addRenderableWithOptionalWireframe(
  */
 export async function sceneToThreeJsScene(
     rootObject3DNode: IOrderSceneNode,
-    drawingRenderSettings: IExtendedDrawingRenderSettings = {},
+    drawingRenderSettings: ISceneGeometryConversionToThreeJsSettings = {} as ISceneGeometryConversionToThreeJsSettings,
     filter: ((node: IOrderSceneNode) => boolean) | undefined = undefined,
 ): Promise<{ scene: THREE.Scene, nodesInScene: IOrderSceneNode[] }> {
     const scene = new THREE.Scene();
@@ -288,7 +302,7 @@ export async function sceneToThreeJsScene(
  */
 export async function orderObjectNodeToThreeObject3D(
     node: IOrderSceneNode,
-    drawingRenderSettings: IExtendedDrawingRenderSettings = {},
+    drawingRenderSettings: ISceneGeometryConversionToThreeJsSettings = {},
     filter: ((node: IOrderSceneNode) => boolean) | undefined = undefined,
     convertedNodesCollector: IOrderSceneNode[],
 ): Promise<THREE.Object3D | null> {
@@ -406,21 +420,36 @@ export async function orderObjectNodeToThreeObject3D(
         _addRenderableWithOptionalWireframe(threeObject, objGrp, mainMaterial, wireframeMaterial, drawingRenderSettings);
     }
     else if (geom.size) {
-        const geometry = new THREE.BoxGeometry(geom.size._x, geom.size._y, geom.size._z);
-        _addRenderableWithOptionalWireframe(
-            threeObject,
-            geometry,
-            mainMaterial,
-            wireframeMaterial,
-            drawingRenderSettings,
-            (object) => {
-                object.position.copy(new THREE.Vector3(
-                    geom.origin.elements[12] + geom.size!._x / 2,
-                    geom.origin.elements[13] + geom.size!._y / 2,
-                    geom.origin.elements[14] + geom.size!._z / 2,
-                ));
-            },
+        const boxPosition = new THREE.Vector3(
+            geom.origin.elements[12] + geom.size._x / 2,
+            geom.origin.elements[13] + geom.size._y / 2,
+            geom.origin.elements[14] + geom.size._z / 2,
         );
+
+        if (drawingRenderSettings.format === 'svg') {
+            const boxGroup = _createSvgBoxPlanesAndWireframe(
+                geom.size,
+                mainMaterial,
+                wireframeMaterial,
+                drawingRenderSettings,
+            );
+            _addConfiguredRenderable(threeObject, boxGroup, (object) => {
+                object.position.copy(boxPosition);
+            });
+        }
+        else {
+            const geometry = new THREE.BoxGeometry(geom.size._x, geom.size._y, geom.size._z);
+            _addRenderableWithOptionalWireframe(
+                threeObject,
+                geometry,
+                mainMaterial,
+                wireframeMaterial,
+                drawingRenderSettings,
+                (object) => {
+                    object.position.copy(boxPosition);
+                },
+            );
+        }
     }
     convertedNodesCollector.push(node);
 
@@ -459,7 +488,7 @@ export function _resolveUpVector(direction: THREE.Vector3): THREE.Vector3 {
     return new THREE.Vector3(0, 0, 1);
 }
 
-export function rasterRenderer(threeScene: THREE.Scene, camera: THREE.Camera, outputWidth = 1200, outputHeight = 800): string {
+export function rasterRenderer(threeScene: THREE.Scene, camera: THREE.Camera, outputWidth = 1200, outputHeight = 800): { dataUrl: string } {
     const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
     renderer.setSize(outputWidth, outputHeight, false);
     renderer.setPixelRatio(1);
@@ -468,22 +497,20 @@ export function rasterRenderer(threeScene: THREE.Scene, camera: THREE.Camera, ou
 
     const pngDataUrl = renderer.domElement.toDataURL('image/png');
     renderer.dispose();
-    return pngDataUrl;
+    return { dataUrl: pngDataUrl };
 }
 
-function svgRenderer(threeScene: THREE.Scene, camera: THREE.Camera, outputWidth = 1200, outputHeight = 800): SVGSVGElement {
+export function svgRenderer(threeScene: THREE.Scene, camera: THREE.Camera, outputWidth = 1200, outputHeight = 800): { svg: SVGSVGElement } {
     const renderer = new SVGRenderer();
     renderer.setSize(outputWidth, outputHeight);
     renderer.render(threeScene, camera);
     const svg = renderer.domElement as SVGSVGElement;
     svg.classList.add('preview-image');
-    return svg;
+    return { svg };
 }
 
 
 // Cache parsed SVG shapes (module-local) and fetched+parsed Object3D models.
-// Only the Object3D cache is persisted across Vite HMR updates to avoid
-// re-downloading meshes while iterating.
 const _svgShapeCache = new Map<string, THREE.Shape[]>();
 
 const svgLoader = new SVGLoader();

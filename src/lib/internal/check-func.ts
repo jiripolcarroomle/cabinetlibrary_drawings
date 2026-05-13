@@ -124,10 +124,32 @@ import { ct_tab_SinkConstruction, ICT_tab_SinkConstruction } from './custom-tabl
 import { ct_tab_SinkMapping, ICT_tab_SinkMapping } from './custom-tables/tab_SinkMapping'
 import { ct_tab_SlopedCeilingSettings, ICT_tab_SlopedCeilingSettings } from './custom-tables/tab_SlopedCeilingSettings'
 import { Checks } from './checks'
+import { SelectionEntry_mod_CarcaseEdgeFrontColor, SelectionEntry_mod_ClothingOrganizerDesign, IMatrix_mod_ClothingOrganizerDesign } from './selections';
 //#endregion Imports
 
 export namespace CheckFunc {
   export class CheckFunctions {
+    // ###############################################################
+    // ####################### CUSTOM SCRIPTS ########################
+    // ###############################################################
+    //#region FrontDefenition
+    check_FrontDefenition_getDropDownValues_mod_CarcaseEdgeFrontColor(attr: Checks.IFrontDefenition_Attributes, selections: SelectionEntry_mod_CarcaseEdgeFrontColor[]): Checks.CheckDropDownResult | undefined {
+      return undefined;
+    }
+
+
+    check_FrontDefenition_getDropDownValues_mod_ClothingOrganizerDesign(attr: Checks.IFrontDefenition_Attributes, selections: SelectionEntry_mod_ClothingOrganizerDesign[]): Checks.CheckDropDownResult | undefined {
+      return undefined;
+    }
+
+
+    check_FrontDefenition_solve(): void { }
+
+
+    //#endregion
+    // ###############################################################
+    // ################### END CUSTOM SCRIPTS ########################
+    // ###############################################################
 
   }
 }

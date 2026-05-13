@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary, ct2_tab_ApplianceGraphicLibrary } from '../custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction, ct2_tab_BaseunitFridgeConstruction } from '../custom-tables/tab_BaseunitFridgeConstruction'
 import { ct_tab_BaseunitFridgeMapping, ICT_tab_BaseunitFridgeMapping, ct2_tab_BaseunitFridgeMapping } from '../custom-tables/tab_BaseunitFridgeMapping'
@@ -125,7 +125,7 @@ import { ct_tab_SinkMapping, ICT_tab_SinkMapping, ct2_tab_SinkMapping } from '..
 import { ct_tab_SlopedCeilingSettings, ICT_tab_SlopedCeilingSettings, ct2_tab_SlopedCeilingSettings } from '../custom-tables/tab_SlopedCeilingSettings'
 
 import { OD_Base, PartGroup, OpenGroup, Matrix4, Vector3, GenerationContour, Contour, GenerationMethod, RoomContour, ArticlePos } from '../base'
-import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp } from '../mod-base'
+import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IContextData } from '../mod-base'
 import { loadOrderData } from '../loader'
 import { GlobalFunc } from '../global-func'
 import { IModParents_mr_Paneltop } from '../mod-interfaces'
@@ -134,15 +134,15 @@ import { IP_part_CeilingFillerPanel_PartVarsWritable, P_part_CeilingFillerPanel 
 import { IP_part_PaneltopGroup_PartVarsWritable, P_part_PaneltopGroup } from '../parts/part_PaneltopGroup'
 import { IP_part_Paneltop_PartVarsWritable, P_part_Paneltop } from '../parts/part_Paneltop'
 import { IModuleNonNull_mc_Paneltop01, IModParents_mc_Paneltop01, IModParents_mc_CeilingFiller01_mc_Paneltop01, IPartParentsNonNull_mc_Paneltop01, IPartParentsNonNull_mc_CeilingFiller01_mc_Paneltop01 } from '../mod-interfaces'
-import { IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_Depth, IModVarNonNull_mod_Depth, IModVar_mod_CeilingFillerFittingPanelDepth, IModVarNonNull_mod_CeilingFillerFittingPanelDepth, IModVar_mod_CeilingFillerFittingPanelThk, IModVarNonNull_mod_CeilingFillerFittingPanelThk, IModVar_mod_CeilingFillerHeight, IModVarNonNull_mod_CeilingFillerHeight, IModVar_mod_CeilingFillerThk, IModVarNonNull_mod_CeilingFillerThk, IModVar_mod_PaneltopColor, IModVarNonNull_mod_PaneltopColor, IModVar_mod_PaneltopConstruction, IModVarNonNull_mod_PaneltopConstruction, IModVar_mod_PaneltopProgram, IModVarNonNull_mod_PaneltopProgram, IModVar_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeBackColor, IModVar_mod_PaneltopEdgeFrontColor, IModVarNonNull_mod_PaneltopEdgeFrontColor, IModVar_mod_PaneltopEdgeRightColor, IModVarNonNull_mod_PaneltopEdgeRightColor, IModVar_mod_PaneltopEdgeLeftColor, IModVarNonNull_mod_PaneltopEdgeLeftColor, IModVar_mod_PaneltopEdgeVisFront, IModVarNonNull_mod_PaneltopEdgeVisFront, IModVar_mod_PaneltopEdgeVisBack, IModVarNonNull_mod_PaneltopEdgeVisBack, IModVar_mod_PaneltopOversizeBack, IModVarNonNull_mod_PaneltopOversizeBack, IModVar_mod_PaneltopEdgeVisLeft, IModVarNonNull_mod_PaneltopEdgeVisLeft, IModVar_mod_PaneltopEdgeVisRight, IModVarNonNull_mod_PaneltopEdgeVisRight, IModVar_mod_PaneltopThk, IModVarNonNull_mod_PaneltopThk, IModVar_mod_PaneltopOverhangFront, IModVarNonNull_mod_PaneltopOverhangFront, IModVar_mod_ParentName, IModVarNonNull_mod_ParentName, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_PaneltopId, IModVarNonNull_mod_PaneltopId, IModVar_mod_FrontGapHor, IModVarNonNull_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapCarcase, IModVar_mod_CeilingFillerRecess, IModVarNonNull_mod_CeilingFillerRecess } from '../var-interfaces'
-import { VariantValidation, IMatrix_mod_Width, IMatrix_mod_Depth, IMatrix_mod_CeilingFillerFittingPanelDepth, IMatrix_mod_CeilingFillerFittingPanelThk, IMatrix_mod_CeilingFillerHeight, IMatrix_mod_CeilingFillerThk, IMatrix_mod_PaneltopColor, IMatrix_mod_PaneltopConstruction, IMatrix_mod_PaneltopProgram, IMatrix_mod_PaneltopEdgeBackColor, IMatrix_mod_PaneltopEdgeFrontColor, IMatrix_mod_PaneltopEdgeRightColor, IMatrix_mod_PaneltopEdgeLeftColor, IMatrix_mod_PaneltopEdgeVisFront, IMatrix_mod_PaneltopEdgeVisBack, IMatrix_mod_PaneltopOversizeBack, IMatrix_mod_PaneltopEdgeVisLeft, IMatrix_mod_PaneltopEdgeVisRight, IMatrix_mod_PaneltopThk, IMatrix_mod_PaneltopOverhangFront, IMatrix_mod_ParentName, IMatrix_mod_ModuleName, IMatrix_mod_PaneltopId, IMatrix_mod_FrontGapHor, IMatrix_mod_FrontGapCarcase, IMatrix_mod_CeilingFillerRecess } from '../selections'
+import { IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_Depth, IModVarNonNull_mod_Depth, IModVar_mod_PaneltopColor, IModVarNonNull_mod_PaneltopColor, IModVar_mod_PaneltopConstruction, IModVarNonNull_mod_PaneltopConstruction, IModVar_mod_PaneltopProgram, IModVarNonNull_mod_PaneltopProgram, IModVar_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeBackColor, IModVar_mod_PaneltopEdgeFrontColor, IModVarNonNull_mod_PaneltopEdgeFrontColor, IModVar_mod_PaneltopEdgeRightColor, IModVarNonNull_mod_PaneltopEdgeRightColor, IModVar_mod_PaneltopEdgeLeftColor, IModVarNonNull_mod_PaneltopEdgeLeftColor, IModVar_mod_PaneltopEdgeVisFront, IModVarNonNull_mod_PaneltopEdgeVisFront, IModVar_mod_PaneltopEdgeVisBack, IModVarNonNull_mod_PaneltopEdgeVisBack, IModVar_mod_PaneltopOversizeBack, IModVarNonNull_mod_PaneltopOversizeBack, IModVar_mod_PaneltopEdgeVisLeft, IModVarNonNull_mod_PaneltopEdgeVisLeft, IModVar_mod_PaneltopEdgeVisRight, IModVarNonNull_mod_PaneltopEdgeVisRight, IModVar_mod_PaneltopThk, IModVarNonNull_mod_PaneltopThk, IModVar_mod_PaneltopOverhangFront, IModVarNonNull_mod_PaneltopOverhangFront, IModVar_mod_ParentName, IModVarNonNull_mod_ParentName, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_PaneltopId, IModVarNonNull_mod_PaneltopId, IModVar_mod_FrontGapHor, IModVarNonNull_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapCarcase } from '../var-interfaces'
+import { VariantValidation, IMatrix_mod_Width, IMatrix_mod_Depth, IMatrix_mod_PaneltopColor, IMatrix_mod_PaneltopConstruction, IMatrix_mod_PaneltopProgram, IMatrix_mod_PaneltopEdgeBackColor, IMatrix_mod_PaneltopEdgeFrontColor, IMatrix_mod_PaneltopEdgeRightColor, IMatrix_mod_PaneltopEdgeLeftColor, IMatrix_mod_PaneltopEdgeVisFront, IMatrix_mod_PaneltopEdgeVisBack, IMatrix_mod_PaneltopOversizeBack, IMatrix_mod_PaneltopEdgeVisLeft, IMatrix_mod_PaneltopEdgeVisRight, IMatrix_mod_PaneltopThk, IMatrix_mod_PaneltopOverhangFront, IMatrix_mod_ParentName, IMatrix_mod_ModuleName, IMatrix_mod_PaneltopId, IMatrix_mod_FrontGapHor, IMatrix_mod_FrontGapCarcase } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
 import { IPartAdd_part_CeilingFillerFittingPanel, IPartAdd_part_CeilingFillerPanel, IPartAdd_part_PaneltopGroup, IPartAdd_part_Paneltop } from '../part-add-interfaces';
 import { mc_Paneltop01_createBuildPlan, mc_Paneltop01_afterDataCompletion, mc_Paneltop01_manufacturerDataCompletion, mc_Paneltop01_calculateContainerModules } from '../../modules/mc_Paneltop01';
 
 export interface cbp_mc_Paneltop01 extends IModBaseProp
-  , IPartAdd_part_CeilingFillerFittingPanel, IPartAdd_part_CeilingFillerPanel, IPartAdd_part_PaneltopGroup, IPartAdd_part_Paneltop, IModVarNonNull_mod_Width, IModVarNonNull_mod_Depth, IModVarNonNull_mod_CeilingFillerFittingPanelDepth, IModVarNonNull_mod_CeilingFillerFittingPanelThk, IModVarNonNull_mod_CeilingFillerHeight, IModVarNonNull_mod_CeilingFillerThk, IModVarNonNull_mod_PaneltopColor, IModVarNonNull_mod_PaneltopConstruction, IModVarNonNull_mod_PaneltopProgram, IModVarNonNull_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeFrontColor, IModVarNonNull_mod_PaneltopEdgeRightColor, IModVarNonNull_mod_PaneltopEdgeLeftColor, IModVarNonNull_mod_PaneltopEdgeVisFront, IModVarNonNull_mod_PaneltopEdgeVisBack, IModVarNonNull_mod_PaneltopOversizeBack, IModVarNonNull_mod_PaneltopEdgeVisLeft, IModVarNonNull_mod_PaneltopEdgeVisRight, IModVarNonNull_mod_PaneltopThk, IModVarNonNull_mod_PaneltopOverhangFront, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PaneltopId, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_CeilingFillerRecess {
+  , IPartAdd_part_CeilingFillerFittingPanel, IPartAdd_part_CeilingFillerPanel, IPartAdd_part_PaneltopGroup, IPartAdd_part_Paneltop, IModVarNonNull_mod_Width, IModVarNonNull_mod_Depth, IModVarNonNull_mod_PaneltopColor, IModVarNonNull_mod_PaneltopConstruction, IModVarNonNull_mod_PaneltopProgram, IModVarNonNull_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeFrontColor, IModVarNonNull_mod_PaneltopEdgeRightColor, IModVarNonNull_mod_PaneltopEdgeLeftColor, IModVarNonNull_mod_PaneltopEdgeVisFront, IModVarNonNull_mod_PaneltopEdgeVisBack, IModVarNonNull_mod_PaneltopOversizeBack, IModVarNonNull_mod_PaneltopEdgeVisLeft, IModVarNonNull_mod_PaneltopEdgeVisRight, IModVarNonNull_mod_PaneltopThk, IModVarNonNull_mod_PaneltopOverhangFront, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PaneltopId, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapCarcase {
   parent: IModParents_mr_Paneltop;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
@@ -154,7 +154,7 @@ export interface cbp_mc_Paneltop01 extends IModBaseProp
 }
 
 export interface dc_mc_Paneltop01 extends IModBaseProp
-  , IModVar_mod_Width, IModVar_mod_Depth, IModVar_mod_CeilingFillerFittingPanelDepth, IModVar_mod_CeilingFillerFittingPanelThk, IModVar_mod_CeilingFillerHeight, IModVar_mod_CeilingFillerThk, IModVar_mod_PaneltopColor, IModVar_mod_PaneltopConstruction, IModVar_mod_PaneltopProgram, IModVar_mod_PaneltopEdgeBackColor, IModVar_mod_PaneltopEdgeFrontColor, IModVar_mod_PaneltopEdgeRightColor, IModVar_mod_PaneltopEdgeLeftColor, IModVar_mod_PaneltopEdgeVisFront, IModVar_mod_PaneltopEdgeVisBack, IModVar_mod_PaneltopOversizeBack, IModVar_mod_PaneltopEdgeVisLeft, IModVar_mod_PaneltopEdgeVisRight, IModVar_mod_PaneltopThk, IModVar_mod_PaneltopOverhangFront, IModVar_mod_ParentName, IModVar_mod_ModuleName, IModVar_mod_PaneltopId, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVar_mod_CeilingFillerRecess {
+  , IModVar_mod_Width, IModVar_mod_Depth, IModVar_mod_PaneltopColor, IModVar_mod_PaneltopConstruction, IModVar_mod_PaneltopProgram, IModVar_mod_PaneltopEdgeBackColor, IModVar_mod_PaneltopEdgeFrontColor, IModVar_mod_PaneltopEdgeRightColor, IModVar_mod_PaneltopEdgeLeftColor, IModVar_mod_PaneltopEdgeVisFront, IModVar_mod_PaneltopEdgeVisBack, IModVar_mod_PaneltopOversizeBack, IModVar_mod_PaneltopEdgeVisLeft, IModVar_mod_PaneltopEdgeVisRight, IModVar_mod_PaneltopThk, IModVar_mod_PaneltopOverhangFront, IModVar_mod_ParentName, IModVar_mod_ModuleName, IModVar_mod_PaneltopId, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapCarcase {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_Paneltop01;
@@ -162,7 +162,7 @@ export interface dc_mc_Paneltop01 extends IModBaseProp
 }
 
 export interface adc_base_mc_Paneltop01 extends IModBaseProp
-  , IModVarNonNull_mod_Width, IModVarNonNull_mod_Depth, IModVarNonNull_mod_CeilingFillerFittingPanelDepth, IModVarNonNull_mod_CeilingFillerFittingPanelThk, IModVarNonNull_mod_CeilingFillerHeight, IModVarNonNull_mod_CeilingFillerThk, IModVarNonNull_mod_PaneltopColor, IModVarNonNull_mod_PaneltopConstruction, IModVarNonNull_mod_PaneltopProgram, IModVarNonNull_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeFrontColor, IModVarNonNull_mod_PaneltopEdgeRightColor, IModVarNonNull_mod_PaneltopEdgeLeftColor, IModVarNonNull_mod_PaneltopEdgeVisFront, IModVarNonNull_mod_PaneltopEdgeVisBack, IModVarNonNull_mod_PaneltopOversizeBack, IModVarNonNull_mod_PaneltopEdgeVisLeft, IModVarNonNull_mod_PaneltopEdgeVisRight, IModVarNonNull_mod_PaneltopThk, IModVarNonNull_mod_PaneltopOverhangFront, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PaneltopId, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_CeilingFillerRecess {
+  , IModVarNonNull_mod_Width, IModVarNonNull_mod_Depth, IModVarNonNull_mod_PaneltopColor, IModVarNonNull_mod_PaneltopConstruction, IModVarNonNull_mod_PaneltopProgram, IModVarNonNull_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeFrontColor, IModVarNonNull_mod_PaneltopEdgeRightColor, IModVarNonNull_mod_PaneltopEdgeLeftColor, IModVarNonNull_mod_PaneltopEdgeVisFront, IModVarNonNull_mod_PaneltopEdgeVisBack, IModVarNonNull_mod_PaneltopOversizeBack, IModVarNonNull_mod_PaneltopEdgeVisLeft, IModVarNonNull_mod_PaneltopEdgeVisRight, IModVarNonNull_mod_PaneltopThk, IModVarNonNull_mod_PaneltopOverhangFront, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PaneltopId, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapCarcase {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
 }
@@ -176,7 +176,7 @@ export interface ccm_mc_Paneltop01 extends adc_base_mc_Paneltop01 {
 
 export class OD_M_mc_Paneltop01 extends OD_Base implements dc_mc_Paneltop01
   , IModParents_mc_Paneltop01, IModParents_mc_CeilingFiller01_mc_Paneltop01
-  , IModVar_mod_Width, IModVar_mod_Depth, IModVar_mod_CeilingFillerFittingPanelDepth, IModVar_mod_CeilingFillerFittingPanelThk, IModVar_mod_CeilingFillerHeight, IModVar_mod_CeilingFillerThk, IModVar_mod_PaneltopColor, IModVar_mod_PaneltopConstruction, IModVar_mod_PaneltopProgram, IModVar_mod_PaneltopEdgeBackColor, IModVar_mod_PaneltopEdgeFrontColor, IModVar_mod_PaneltopEdgeRightColor, IModVar_mod_PaneltopEdgeLeftColor, IModVar_mod_PaneltopEdgeVisFront, IModVar_mod_PaneltopEdgeVisBack, IModVar_mod_PaneltopOversizeBack, IModVar_mod_PaneltopEdgeVisLeft, IModVar_mod_PaneltopEdgeVisRight, IModVar_mod_PaneltopThk, IModVar_mod_PaneltopOverhangFront, IModVar_mod_ParentName, IModVar_mod_ModuleName, IModVar_mod_PaneltopId, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVar_mod_CeilingFillerRecess {
+  , IModVar_mod_Width, IModVar_mod_Depth, IModVar_mod_PaneltopColor, IModVar_mod_PaneltopConstruction, IModVar_mod_PaneltopProgram, IModVar_mod_PaneltopEdgeBackColor, IModVar_mod_PaneltopEdgeFrontColor, IModVar_mod_PaneltopEdgeRightColor, IModVar_mod_PaneltopEdgeLeftColor, IModVar_mod_PaneltopEdgeVisFront, IModVar_mod_PaneltopEdgeVisBack, IModVar_mod_PaneltopOversizeBack, IModVar_mod_PaneltopEdgeVisLeft, IModVar_mod_PaneltopEdgeVisRight, IModVar_mod_PaneltopThk, IModVar_mod_PaneltopOverhangFront, IModVar_mod_ParentName, IModVar_mod_ModuleName, IModVar_mod_PaneltopId, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapCarcase {
   constructor(parent: IModParents_mr_Paneltop, manufacturerMode?: boolean) {
     super('mc_Paneltop01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
@@ -185,7 +185,7 @@ export class OD_M_mc_Paneltop01 extends OD_Base implements dc_mc_Paneltop01
   parent: IModParents_mr_Paneltop;
   _selfNonNull: OD_M_mc_Paneltop01_NonNull;
 
-  override variants: string[] = ['mod_Width', 'mod_Depth', 'mod_CeilingFillerFittingPanelDepth', 'mod_CeilingFillerFittingPanelThk', 'mod_CeilingFillerHeight', 'mod_CeilingFillerThk', 'mod_PaneltopColor', 'mod_PaneltopConstruction', 'mod_PaneltopProgram', 'mod_PaneltopEdgeBackColor', 'mod_PaneltopEdgeFrontColor', 'mod_PaneltopEdgeRightColor', 'mod_PaneltopEdgeLeftColor', 'mod_PaneltopEdgeVisFront', 'mod_PaneltopEdgeVisBack', 'mod_PaneltopOversizeBack', 'mod_PaneltopEdgeVisLeft', 'mod_PaneltopEdgeVisRight', 'mod_PaneltopThk', 'mod_PaneltopOverhangFront', 'mod_ParentName', 'mod_ModuleName', 'mod_PaneltopId', 'mod_FrontGapHor', 'mod_FrontGapCarcase', 'mod_CeilingFillerRecess',];
+  override variants: string[] = ['mod_Width', 'mod_Depth', 'mod_PaneltopColor', 'mod_PaneltopConstruction', 'mod_PaneltopProgram', 'mod_PaneltopEdgeBackColor', 'mod_PaneltopEdgeFrontColor', 'mod_PaneltopEdgeRightColor', 'mod_PaneltopEdgeLeftColor', 'mod_PaneltopEdgeVisFront', 'mod_PaneltopEdgeVisBack', 'mod_PaneltopOversizeBack', 'mod_PaneltopEdgeVisLeft', 'mod_PaneltopEdgeVisRight', 'mod_PaneltopThk', 'mod_PaneltopOverhangFront', 'mod_ParentName', 'mod_ModuleName', 'mod_PaneltopId', 'mod_FrontGapHor', 'mod_FrontGapCarcase',];
   #mod_Width?: number;
   get mod_Width(): number | undefined { return this.#mod_Width }
   set mod_Width(value: number | undefined) {
@@ -210,54 +210,6 @@ export class OD_M_mc_Paneltop01 extends OD_Base implements dc_mc_Paneltop01
   }
 
   mod_Depth_matrix?: IMatrix_mod_Depth;
-  #mod_CeilingFillerFittingPanelDepth?: number;
-  get mod_CeilingFillerFittingPanelDepth(): number | undefined { return this.#mod_CeilingFillerFittingPanelDepth }
-  set mod_CeilingFillerFittingPanelDepth(value: number | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_CeilingFillerFittingPanelDepth' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_CeilingFillerFittingPanelDepth === value) return;
-    this.#mod_CeilingFillerFittingPanelDepth = value;
-  }
-
-  mod_CeilingFillerFittingPanelDepth_matrix?: IMatrix_mod_CeilingFillerFittingPanelDepth;
-  #mod_CeilingFillerFittingPanelThk?: number;
-  get mod_CeilingFillerFittingPanelThk(): number | undefined { return this.#mod_CeilingFillerFittingPanelThk }
-  set mod_CeilingFillerFittingPanelThk(value: number | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_CeilingFillerFittingPanelThk' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_CeilingFillerFittingPanelThk === value) return;
-    this.#mod_CeilingFillerFittingPanelThk = value;
-  }
-
-  mod_CeilingFillerFittingPanelThk_matrix?: IMatrix_mod_CeilingFillerFittingPanelThk;
-  #mod_CeilingFillerHeight?: number;
-  get mod_CeilingFillerHeight(): number | undefined { return this.#mod_CeilingFillerHeight }
-  set mod_CeilingFillerHeight(value: number | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_CeilingFillerHeight' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_CeilingFillerHeight === value) return;
-    this.#mod_CeilingFillerHeight = value;
-  }
-
-  mod_CeilingFillerHeight_matrix?: IMatrix_mod_CeilingFillerHeight;
-  #mod_CeilingFillerThk?: number;
-  get mod_CeilingFillerThk(): number | undefined { return this.#mod_CeilingFillerThk }
-  set mod_CeilingFillerThk(value: number | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_CeilingFillerThk' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_CeilingFillerThk === value) return;
-    this.#mod_CeilingFillerThk = value;
-  }
-
-  mod_CeilingFillerThk_matrix?: IMatrix_mod_CeilingFillerThk;
   #mod_PaneltopColor?: string;
   get mod_PaneltopColor(): string | undefined { return this.#mod_PaneltopColor }
   set mod_PaneltopColor(value: string | undefined) {
@@ -486,26 +438,10 @@ export class OD_M_mc_Paneltop01 extends OD_Base implements dc_mc_Paneltop01
   }
 
   mod_FrontGapCarcase_matrix?: IMatrix_mod_FrontGapCarcase;
-  #mod_CeilingFillerRecess?: number;
-  get mod_CeilingFillerRecess(): number | undefined { return this.#mod_CeilingFillerRecess }
-  set mod_CeilingFillerRecess(value: number | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_CeilingFillerRecess' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_CeilingFillerRecess === value) return;
-    this.#mod_CeilingFillerRecess = value;
-  }
-
-  mod_CeilingFillerRecess_matrix?: IMatrix_mod_CeilingFillerRecess;
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
     res.set('mod_Width', this.mod_Width);
     res.set('mod_Depth', this.mod_Depth);
-    res.set('mod_CeilingFillerFittingPanelDepth', this.mod_CeilingFillerFittingPanelDepth);
-    res.set('mod_CeilingFillerFittingPanelThk', this.mod_CeilingFillerFittingPanelThk);
-    res.set('mod_CeilingFillerHeight', this.mod_CeilingFillerHeight);
-    res.set('mod_CeilingFillerThk', this.mod_CeilingFillerThk);
     res.set('mod_PaneltopColor', this.mod_PaneltopColor);
     res.set('mod_PaneltopConstruction', this.mod_PaneltopConstruction);
     res.set('mod_PaneltopProgram', this.mod_PaneltopProgram);
@@ -525,7 +461,6 @@ export class OD_M_mc_Paneltop01 extends OD_Base implements dc_mc_Paneltop01
     res.set('mod_PaneltopId', this.mod_PaneltopId);
     res.set('mod_FrontGapHor', this.mod_FrontGapHor);
     res.set('mod_FrontGapCarcase', this.mod_FrontGapCarcase);
-    res.set('mod_CeilingFillerRecess', this.mod_CeilingFillerRecess);
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -533,6 +468,7 @@ export class OD_M_mc_Paneltop01 extends OD_Base implements dc_mc_Paneltop01
     if (json['articleId']) {
       this._articleId = json['articleId'];
     }
+    this._contextData = json['contextData'];
     // only take over the attributes we know...
     {
       internal_enterValidateVariant(this.modId, this._id, 'mod_Width');
@@ -545,30 +481,6 @@ export class OD_M_mc_Paneltop01 extends OD_Base implements dc_mc_Paneltop01
       const val = _toFloat(json['attributes']['mod_Depth'], 'mod_Depth');
       internal_leaveValidateVariant();
       this.mod_Depth = val;
-    }
-    {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_CeilingFillerFittingPanelDepth');
-      const val = _toFloat(json['attributes']['mod_CeilingFillerFittingPanelDepth'], 'mod_CeilingFillerFittingPanelDepth');
-      internal_leaveValidateVariant();
-      this.mod_CeilingFillerFittingPanelDepth = val;
-    }
-    {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_CeilingFillerFittingPanelThk');
-      const val = _toFloat(json['attributes']['mod_CeilingFillerFittingPanelThk'], 'mod_CeilingFillerFittingPanelThk');
-      internal_leaveValidateVariant();
-      this.mod_CeilingFillerFittingPanelThk = val;
-    }
-    {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_CeilingFillerHeight');
-      const val = _toFloat(json['attributes']['mod_CeilingFillerHeight'], 'mod_CeilingFillerHeight');
-      internal_leaveValidateVariant();
-      this.mod_CeilingFillerHeight = val;
-    }
-    {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_CeilingFillerThk');
-      const val = _toFloat(json['attributes']['mod_CeilingFillerThk'], 'mod_CeilingFillerThk');
-      internal_leaveValidateVariant();
-      this.mod_CeilingFillerThk = val;
     }
     {
       internal_enterValidateVariant(this.modId, this._id, 'mod_PaneltopColor');
@@ -684,12 +596,6 @@ export class OD_M_mc_Paneltop01 extends OD_Base implements dc_mc_Paneltop01
       internal_leaveValidateVariant();
       this.mod_FrontGapCarcase = val;
     }
-    {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_CeilingFillerRecess');
-      const val = _toFloat(json['attributes']['mod_CeilingFillerRecess'], 'mod_CeilingFillerRecess');
-      internal_leaveValidateVariant();
-      this.mod_CeilingFillerRecess = val;
-    }
     if (withSubModules && json['modules']) {
       json['modules'].forEach((subMod: any) => { this.m.push(loadOrderData(subMod, this, manufacturerMode)) });
     }
@@ -697,62 +603,6 @@ export class OD_M_mc_Paneltop01 extends OD_Base implements dc_mc_Paneltop01
   }
   #dataCompletionAssignDerivedData() {
     internal_enterDataCompletionAssignDerivedData(this.modId, this._id);
-    if (this.mod_CeilingFillerFittingPanelDepth === undefined) {
-      let s = this.parentBase;
-      // try to find a parent with a valid value
-      while (s !== undefined) {
-        if (s.variants.includes('mod_CeilingFillerFittingPanelDepth')) {
-          let pv = <IModVar_mod_CeilingFillerFittingPanelDepth>s;
-          if (pv.mod_CeilingFillerFittingPanelDepth !== undefined) {
-            this.mod_CeilingFillerFittingPanelDepth = (<IModVar_mod_CeilingFillerFittingPanelDepth>s).mod_CeilingFillerFittingPanelDepth;
-            break;
-          };
-        }
-        s = s.parentBase;
-      }
-    }
-    if (this.mod_CeilingFillerFittingPanelThk === undefined) {
-      let s = this.parentBase;
-      // try to find a parent with a valid value
-      while (s !== undefined) {
-        if (s.variants.includes('mod_CeilingFillerFittingPanelThk')) {
-          let pv = <IModVar_mod_CeilingFillerFittingPanelThk>s;
-          if (pv.mod_CeilingFillerFittingPanelThk !== undefined) {
-            this.mod_CeilingFillerFittingPanelThk = (<IModVar_mod_CeilingFillerFittingPanelThk>s).mod_CeilingFillerFittingPanelThk;
-            break;
-          };
-        }
-        s = s.parentBase;
-      }
-    }
-    if (this.mod_CeilingFillerHeight === undefined) {
-      let s = this.parentBase;
-      // try to find a parent with a valid value
-      while (s !== undefined) {
-        if (s.variants.includes('mod_CeilingFillerHeight')) {
-          let pv = <IModVar_mod_CeilingFillerHeight>s;
-          if (pv.mod_CeilingFillerHeight !== undefined) {
-            this.mod_CeilingFillerHeight = (<IModVar_mod_CeilingFillerHeight>s).mod_CeilingFillerHeight;
-            break;
-          };
-        }
-        s = s.parentBase;
-      }
-    }
-    if (this.mod_CeilingFillerThk === undefined) {
-      let s = this.parentBase;
-      // try to find a parent with a valid value
-      while (s !== undefined) {
-        if (s.variants.includes('mod_CeilingFillerThk')) {
-          let pv = <IModVar_mod_CeilingFillerThk>s;
-          if (pv.mod_CeilingFillerThk !== undefined) {
-            this.mod_CeilingFillerThk = (<IModVar_mod_CeilingFillerThk>s).mod_CeilingFillerThk;
-            break;
-          };
-        }
-        s = s.parentBase;
-      }
-    }
     if (this.mod_PaneltopColor === undefined) {
       let s = this.parentBase;
       // try to find a parent with a valid value
@@ -949,20 +799,6 @@ export class OD_M_mc_Paneltop01 extends OD_Base implements dc_mc_Paneltop01
         s = s.parentBase;
       }
     }
-    if (this.mod_CeilingFillerRecess === undefined) {
-      let s = this.parentBase;
-      // try to find a parent with a valid value
-      while (s !== undefined) {
-        if (s.variants.includes('mod_CeilingFillerRecess')) {
-          let pv = <IModVar_mod_CeilingFillerRecess>s;
-          if (pv.mod_CeilingFillerRecess !== undefined) {
-            this.mod_CeilingFillerRecess = (<IModVar_mod_CeilingFillerRecess>s).mod_CeilingFillerRecess;
-            break;
-          };
-        }
-        s = s.parentBase;
-      }
-    }
     internal_leaveDataCompletionAssignDerivedData();
   }
 
@@ -1052,10 +888,6 @@ export class OD_M_mc_Paneltop01 extends OD_Base implements dc_mc_Paneltop01
   override validateSelections(): void {
     this.mod_Width_matrix = VariantValidation.mod_Width(this, this.mod_Width);
     this.mod_Depth_matrix = VariantValidation.mod_Depth(this, this.mod_Depth);
-    this.mod_CeilingFillerFittingPanelDepth_matrix = VariantValidation.mod_CeilingFillerFittingPanelDepth(this, this.mod_CeilingFillerFittingPanelDepth);
-    this.mod_CeilingFillerFittingPanelThk_matrix = VariantValidation.mod_CeilingFillerFittingPanelThk(this, this.mod_CeilingFillerFittingPanelThk);
-    this.mod_CeilingFillerHeight_matrix = VariantValidation.mod_CeilingFillerHeight(this, this.mod_CeilingFillerHeight);
-    this.mod_CeilingFillerThk_matrix = VariantValidation.mod_CeilingFillerThk(this, this.mod_CeilingFillerThk);
     this.mod_PaneltopColor_matrix = VariantValidation.mod_PaneltopColor(this, this.mod_PaneltopColor);
     this.mod_PaneltopConstruction_matrix = VariantValidation.mod_PaneltopConstruction(this, this.mod_PaneltopConstruction);
     this.mod_PaneltopProgram_matrix = VariantValidation.mod_PaneltopProgram(this, this.mod_PaneltopProgram);
@@ -1075,7 +907,6 @@ export class OD_M_mc_Paneltop01 extends OD_Base implements dc_mc_Paneltop01
     this.mod_PaneltopId_matrix = VariantValidation.mod_PaneltopId(this, this.mod_PaneltopId);
     this.mod_FrontGapHor_matrix = VariantValidation.mod_FrontGapHor(this, this.mod_FrontGapHor);
     this.mod_FrontGapCarcase_matrix = VariantValidation.mod_FrontGapCarcase(this, this.mod_FrontGapCarcase);
-    this.mod_CeilingFillerRecess_matrix = VariantValidation.mod_CeilingFillerRecess(this, this.mod_CeilingFillerRecess);
   }
 
   override calculateContainerModules(): void {
@@ -1182,18 +1013,6 @@ class OD_M_mc_Paneltop01_NonNull implements cbp_mc_Paneltop01, adc_mc_Paneltop01
   get mod_Depth(): number {
     return this.#internalParent.mod_Depth!;
   }
-  get mod_CeilingFillerFittingPanelDepth(): number {
-    return this.#internalParent.mod_CeilingFillerFittingPanelDepth!;
-  }
-  get mod_CeilingFillerFittingPanelThk(): number {
-    return this.#internalParent.mod_CeilingFillerFittingPanelThk!;
-  }
-  get mod_CeilingFillerHeight(): number {
-    return this.#internalParent.mod_CeilingFillerHeight!;
-  }
-  get mod_CeilingFillerThk(): number {
-    return this.#internalParent.mod_CeilingFillerThk!;
-  }
   get mod_PaneltopColor(): string {
     return this.#internalParent.mod_PaneltopColor!;
   }
@@ -1256,9 +1075,6 @@ class OD_M_mc_Paneltop01_NonNull implements cbp_mc_Paneltop01, adc_mc_Paneltop01
   }
   get mod_FrontGapCarcase(): number {
     return this.#internalParent.mod_FrontGapCarcase!;
-  }
-  get mod_CeilingFillerRecess(): number {
-    return this.#internalParent.mod_CeilingFillerRecess!;
   }
 }
 

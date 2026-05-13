@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary, ct2_tab_ApplianceGraphicLibrary } from '../custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction, ct2_tab_BaseunitFridgeConstruction } from '../custom-tables/tab_BaseunitFridgeConstruction'
 import { ct_tab_BaseunitFridgeMapping, ICT_tab_BaseunitFridgeMapping, ct2_tab_BaseunitFridgeMapping } from '../custom-tables/tab_BaseunitFridgeMapping'
@@ -125,7 +125,7 @@ import { ct_tab_SinkMapping, ICT_tab_SinkMapping, ct2_tab_SinkMapping } from '..
 import { ct_tab_SlopedCeilingSettings, ICT_tab_SlopedCeilingSettings, ct2_tab_SlopedCeilingSettings } from '../custom-tables/tab_SlopedCeilingSettings'
 
 import { OD_Base, PartGroup, OpenGroup, Matrix4, Vector3, GenerationContour, Contour, GenerationMethod, RoomContour, ArticlePos } from '../base'
-import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp } from '../mod-base'
+import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IContextData } from '../mod-base'
 import { loadOrderData } from '../loader'
 import { GlobalFunc } from '../global-func'
 import { OD_M_mc_Paneltop01, dc_mc_Paneltop01 } from './mc_Paneltop01'
@@ -134,7 +134,7 @@ import { IModVar_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeBackC
 import { VariantValidation, IMatrix_mod_PaneltopEdgeBackColor, IMatrix_mod_PaneltopEdgeFrontColor, IMatrix_mod_PaneltopEdgeLeftColor, IMatrix_mod_PaneltopEdgeRightColor, IMatrix_mod_PaneltopEdgeVisBack, IMatrix_mod_PaneltopEdgeVisFront, IMatrix_mod_PaneltopEdgeVisLeft, IMatrix_mod_PaneltopEdgeVisRight, IMatrix_mod_ModuleName, IMatrix_mod_PaneltopColor, IMatrix_mod_PaneltopThk, IMatrix_mod_PaneltopConstruction, IMatrix_mod_PaneltopOverhangFront, IMatrix_mod_PaneltopProgram, IMatrix_mod_PaneltopOversizeBack, IMatrix_mod_FrontGapHor, IMatrix_mod_FrontGapCarcase } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
-import { mr_Paneltop_createBuildPlan, mr_Paneltop_afterDataCompletion, mr_Paneltop_manufacturerDataCompletion, mr_Paneltop_calculateContainerModules } from '../../modules/mr_Paneltop';
+import { mr_Paneltop_createBuildPlan, mr_Paneltop_afterDataCompletion, mr_Paneltop_manufacturerDataCompletion, mr_Paneltop_calculateContainerModules, mr_Paneltop_prepareContext } from '../../modules/mr_Paneltop';
 
 export interface cbp_mr_Paneltop extends IModBaseProp
   , IModVarNonNull_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeFrontColor, IModVarNonNull_mod_PaneltopEdgeLeftColor, IModVarNonNull_mod_PaneltopEdgeRightColor, IModVarNonNull_mod_PaneltopEdgeVisBack, IModVarNonNull_mod_PaneltopEdgeVisFront, IModVarNonNull_mod_PaneltopEdgeVisLeft, IModVarNonNull_mod_PaneltopEdgeVisRight, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PaneltopColor, IModVarNonNull_mod_PaneltopThk, IModVarNonNull_mod_PaneltopConstruction, IModVarNonNull_mod_PaneltopOverhangFront, IModVarNonNull_mod_PaneltopProgram, IModVarNonNull_mod_PaneltopOversizeBack, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_LengthList {
@@ -158,6 +158,11 @@ export interface dc_mr_Paneltop extends IModBaseProp
   addOD_M_mc_Paneltop01(index?: number): dc_mc_Paneltop01;
 }
 
+export interface pc_mr_Paneltop extends dc_mr_Paneltop {
+  getContextData(): IContextData | undefined;
+  getContextModule(id: string): OD_Base | undefined;
+}
+
 export interface adc_base_mr_Paneltop extends IModBaseProp
   , IModVarNonNull_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeFrontColor, IModVarNonNull_mod_PaneltopEdgeLeftColor, IModVarNonNull_mod_PaneltopEdgeRightColor, IModVarNonNull_mod_PaneltopEdgeVisBack, IModVarNonNull_mod_PaneltopEdgeVisFront, IModVarNonNull_mod_PaneltopEdgeVisLeft, IModVarNonNull_mod_PaneltopEdgeVisRight, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PaneltopColor, IModVarNonNull_mod_PaneltopThk, IModVarNonNull_mod_PaneltopConstruction, IModVarNonNull_mod_PaneltopOverhangFront, IModVarNonNull_mod_PaneltopProgram, IModVarNonNull_mod_PaneltopOversizeBack, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_LengthList {
   get m(): OD_Base[];
@@ -175,7 +180,7 @@ export interface ccm_mr_Paneltop extends adc_base_mr_Paneltop {
 }
 
 
-export class OD_M_mr_Paneltop extends OD_Base implements dc_mr_Paneltop
+export class OD_M_mr_Paneltop extends OD_Base implements pc_mr_Paneltop, dc_mr_Paneltop
   , IModParents_mr_Paneltop
   , IModVar_mod_PaneltopEdgeBackColor, IModVar_mod_PaneltopEdgeFrontColor, IModVar_mod_PaneltopEdgeLeftColor, IModVar_mod_PaneltopEdgeRightColor, IModVar_mod_PaneltopEdgeVisBack, IModVar_mod_PaneltopEdgeVisFront, IModVar_mod_PaneltopEdgeVisLeft, IModVar_mod_PaneltopEdgeVisRight, IModVar_mod_ModuleName, IModVar_mod_PaneltopColor, IModVar_mod_PaneltopThk, IModVar_mod_PaneltopConstruction, IModVar_mod_PaneltopOverhangFront, IModVar_mod_PaneltopProgram, IModVar_mod_PaneltopOversizeBack, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVar_mod_LengthList {
   constructor(parent?: OD_Base, manufacturerMode?: boolean) {
@@ -428,6 +433,7 @@ export class OD_M_mr_Paneltop extends OD_Base implements dc_mr_Paneltop
     if (json['articleId']) {
       this._articleId = json['articleId'];
     }
+    this._contextData = json['contextData'];
     // only take over the attributes we know...
     {
       internal_enterValidateVariant(this.modId, this._id, 'mod_PaneltopEdgeBackColor');
@@ -680,6 +686,14 @@ export class OD_M_mr_Paneltop extends OD_Base implements dc_mr_Paneltop
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
   }
+  override prepareContext(contextRoots: OD_Base[]): void {
+    super.prepareContext(contextRoots);
+    this.internallyPrepareContext();
+  }
+  internallyPrepareContext(): void {
+    this.#prepareContextInternal();
+  }
+  #prepareContextInternal = mr_Paneltop_prepareContext;
   seal(): IModuleNonNull_mr_Paneltop {
     this.afterDataCompletion();
     const adc = new OD_M_mr_Paneltop_NonNull(this);
@@ -741,6 +755,10 @@ class OD_M_mr_Paneltop_NonNull implements cbp_mr_Paneltop, adc_mr_Paneltop, ccm_
   #internalParent: OD_M_mr_Paneltop;
   getGenerationContours(): GenerationContour[] { return this.#internalParent.getGenerationContours(); }
   getRoomContours(): RoomContour[] { return this.#internalParent.roomContours ?? []; }
+  getContextData(): IContextData | undefined { return this.#internalParent.getContextData(); }
+  getContextModule(id: string): OD_Base | undefined {
+    return this.#internalParent.getContextModule(id);
+  }
   get _posData(): Map<string, string | number> { return this.#internalParent._posData; }
 
   get _id(): string { return this.#internalParent._id; }

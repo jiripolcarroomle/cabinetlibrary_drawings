@@ -1,7 +1,7 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from '../internal/logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
 
 //#region Imports
-import { cbp_mr_PlinthAreaBaseboard, dc_mr_PlinthAreaBaseboard, adc_mr_PlinthAreaBaseboard, ccm_mr_PlinthAreaBaseboard } from '../internal/modules/mr_PlinthAreaBaseboard'
+import { cbp_mr_PlinthAreaBaseboard, dc_mr_PlinthAreaBaseboard, adc_mr_PlinthAreaBaseboard, ccm_mr_PlinthAreaBaseboard, pc_mr_PlinthAreaBaseboard } from '../internal/modules/mr_PlinthAreaBaseboard'
 import { GlobalFunc } from '../internal/global-func'
 import { dc_mc_Toekick, OD_M_mc_Toekick } from '../internal/modules/mc_Toekick'
 import { dc_mc_Leg01, OD_M_mc_Leg01 } from '../internal/modules/mc_Leg01'
@@ -131,7 +131,7 @@ import { ct_tab_SinkConstruction, ICT_tab_SinkConstruction } from '../internal/c
 import { ct_tab_SinkMapping, ICT_tab_SinkMapping } from '../internal/custom-tables/tab_SinkMapping'
 import { ct_tab_SlopedCeilingSettings, ICT_tab_SlopedCeilingSettings } from '../internal/custom-tables/tab_SlopedCeilingSettings'
 import { CKind, Contour, GenerationMethod, Matrix4, Vector3 } from '../internal/base'
-import { Dock, IDockingInfo, FaceKey, IPartBase, MatrixHelper, ModuleHelper, PartHelper } from '../internal/mod-base'
+import { Dock, IDockingInfo, FaceKey, IPartBase, MatrixHelper, ModuleHelper, PartHelper, IContextData } from '../internal/mod-base'
 declare function uuidv4(): string;
 //#endregion Imports
 
@@ -207,9 +207,11 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 			evaluateCornerUnitStraightSizeOfPerpendicularPart,
 			mr_CornerunitStraight,
 			mr_StorageunitSingle,
+			Vector3Extended,
 		} = GlobalFunc.process_MathLongparts();
 		type LongPartSegmentTypeAlias = InstanceType<typeof LongPartSegment>;
 		type LeftRightAny = { Left: any, Right: any }
+		type Vector3ExtendedTypeAlias = InstanceType<typeof Vector3Extended>;
 
 		// Values for the PlinthAreaBaseboardSettings table
 		enum ModulePosition {
@@ -305,7 +307,7 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 		 * @param end 
 		 * @returns mc_Toekick instance
 		 */
-		const addToekick = (start: Vector3, end: Vector3) => {
+		const addToekick = (start: Vector3ExtendedTypeAlias, end: Vector3ExtendedTypeAlias) => {
 			const toekick = this.addOD_M_mc_Toekick();
 			toekick.mod_ToekickId = `Toekick_${toekickIndex++}`;
 			const equation = new LineSegmentEquation(start, end);
@@ -922,6 +924,30 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 	}
 	finally {
 		internal_leaveModuleAfterDataCompletion();
+	}
+}
+// ---------------------------------------------------------------
+export function mr_PlinthAreaBaseboard_prepareContext(this: pc_mr_PlinthAreaBaseboard): void {
+	internal_enterModulePrepareContext('mr_PlinthAreaBaseboard', this._id);
+	try {
+		// ###############################################################
+		// ####################### CUSTOM SCRIPTS ########################
+		// ###############################################################
+		// CUSTOMSCRIPT_mr_PlinthAreaBaseboard_PREPARECONTEXT
+
+		// ###############################################################
+		// ################### END CUSTOM SCRIPTS ########################
+		// ###############################################################
+	}
+	catch (error) {
+		if (error instanceof Error) {
+			logError(error.message + "\n" + error.stack);
+		} else {
+			logError(JSON.stringify(error, null, 4));
+		}
+	}
+	finally {
+		internal_leaveModulePrepareContext();
 	}
 }
 // ---------------------------------------------------------------

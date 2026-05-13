@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars } from './logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from './logging'
 
 import { BomOutputFileEntry, createBomOutputById } from './bom_outputs';
 import { I3DElement, PartBase, } from './mod-base';
@@ -7,15 +7,15 @@ import { create as xmlbuilder2Create } from 'xmlbuilder2';
 import { GlobalFunc } from './global-func'
 import { GlobalVars } from './global-vars';
 import { Matrix4, OD_Base, RoomContour, Vector3 } from './base';
-import { IRenderOrthoCameraParams, IRenderOrthoCameraResult } from '../../drawing2/orderdrawingrenderer.interface';
-import { createScene } from '../../drawing2/scene.implementation';
-import { IExtendedDrawingRenderSettings } from '../../drawing2/orderdrawingrenderer.theejs.helpers';
-import { IOrderSceneNode, Object3DNodeKind } from '../../drawing2/scene.interface';
-import { renderScene } from '../../drawing2/orderdrawingrenderer.threejs';
-import { filterNodesCloseToWall } from '../../drawing2/wall';
-import { Drawing } from '../../drawing2/drawing.implementation';
-import { AnnotablePoint, Annotation, DrawingDirection, SvgInjectionData } from '../../drawing2/drawing.interface';
-import { filterAnnotationForModule, I_tab_Annotation } from '../../drawing2/annotationstable';
+import { AnnotablePoint, Annotation, DrawingDirection, IOrderSceneNode, IRenderOrthoCameraParams, IRenderOrthoCameraResult, SvgPathInjectionData } from '../../drawingapi/interfaces';
+import { createScene } from '../../drawingapi/implementation/scene';
+import { ISceneGeometryConversionToThreeJsSettings } from '../../drawingapi/implementation/orderdrawingrenderer.theejs.helpers';
+import { IOrderLineEntry, Object3DNodeKind } from '../../drawingapi/interfaces/scene';
+import { renderScene } from '../../drawingapi/implementation/orderdrawingrenderer.threejs';
+import { filterNodesCloseToWall } from '../../drawingapi/implementation/scene-wall';
+import { Drawing } from '../../drawingapi/implementation/drawing';
+import { filterAnnotationForModule, I_tab_Annotation } from '../../drawingapi/utils/annotationstable';
+
 
 export interface IOrderAdditionalData {
   key: string;
@@ -431,8 +431,8 @@ export class OrderOutputBaseOutput_ProductionManager extends OrderOutputBase {
       // ####################### CUSTOM SCRIPTS ########################
       // ###############################################################
 
-      // Schuler Consulting 
-      // Create: August 2023ƒ
+      // Schuler Consulting
+      // Create: August 2023
       // By Ludwig Weber
       // Purpose: Create OrderOutput for productionManager
       //
@@ -1066,19 +1066,18 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
       // =================
       // 1. settings and preparations 
       // =================
-      const drawingSettings: IExtendedDrawingRenderSettings = {
+      const drawingSettings: ISceneGeometryConversionToThreeJsSettings = {
         material: { color: 0xcccccc, },
         wireframeMaterial: { color: 0x000000, },
         wallsMaterial: {
           color: 0x555500,
           transparent: true, opacity: 0.1,
-
         },
         wallsWireframeMaterial: { color: 0x000000, },
-        // will not fetch meshes and will render bounding boxes of the meshes instead
-        doNotFetchMeshes: true,
+        doNotFetchMeshes: false,
         // three.js renderer property - angle in degrees between adjacent faces above which an edge will be rendered
         edgesGeometryThresholdAngle: 10,
+        format: 'png',
       }
       const moduleCloseToWallDistanceThreshold = 300; // in mm
       const orthoCameraRenderSettings: IRenderOrthoCameraParams = {
@@ -1094,6 +1093,22 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
               'hinge',
               'hanger',
               'drill',
+            ].some(x => node.id.toLowerCase().includes(x))
+          ) {
+            return false;
+          }
+        }
+        return true;
+      }
+      const frontsNameFilter = (node: IOrderSceneNode) => {
+        // filter out tiny parts that are not important for the overview drawings
+        if (node.kind === Object3DNodeKind.Part) {
+          if (
+            [
+              'part_door',
+              'part_drawer_',
+              'part_handle',
+              'part_hinge',
             ].some(x => node.id.toLowerCase().includes(x))
           ) {
             return false;
@@ -1120,8 +1135,7 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
         .flatMap(group => group.children) // module + part candidates
         .filter(node => node.kind === Object3DNodeKind.Module);
 
-      
-      const generationModules = allModuleNodesIncludingGenerationModules.filter(moduleNode => moduleNode.orderLineEntry?.['_isGenerated']);
+      const generationModules = allModuleNodesIncludingGenerationModules.filter(moduleNode => moduleNode.orderLineEntry!['_isGenerated']);
 
       const allModuleNodes = allModuleNodesIncludingGenerationModules.filter(node => !generationModules.includes(node));
 
@@ -1143,7 +1157,7 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
       // 2. collect relevant renderings
       // =================
 
-      const topView = await renderScene(orderScene, (node) => { void node; return true; }, drawingSettings, { ...orthoCameraRenderSettings, direction: undefined });
+      const topView = await renderScene(orderScene, (node) => { void node; return true; }, drawingSettings, { name: 'topview', ...orthoCameraRenderSettings, direction: undefined });
       orthoCameraRenderResults.push(topView);
 
       for (const wallAndSide of allWallSides) {
@@ -1178,11 +1192,29 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
           return true;
         }
 
+        const renderingFilterForFronts = (node: IOrderSceneNode) => {
+          // filter by name
+          if (!frontsNameFilter(node)) {
+            return false;
+          }
+          if (node.kind === Object3DNodeKind.Wall) {
+            return getWallsFilter(wall)(node);
+          }
+          if (node.kind === Object3DNodeKind.Part || node.kind === Object3DNodeKind.Module) {
+            return isOwnedByModuleCloseToWall(node);
+          }
+
+          return true;
+        }
+
 
         const cameraDirection = side === 'front' ? wall.wallData?.normalToWall : wall.wallData?.normalToWall.clone().multiply(-1);
 
-        const result = await renderScene(orderScene, renderingFilter, drawingSettings, { ...orthoCameraRenderSettings, direction: cameraDirection });
+        const result = await renderScene(orderScene, renderingFilter, drawingSettings, { name: `${wall.id}-${side}-elevation`, ...orthoCameraRenderSettings, direction: cameraDirection });
         orthoCameraRenderResults.push(result);
+
+        // const resultWithoutFronts = await renderScene(orderScene, renderingFilterForFronts, drawingSettings, { name: `${wall.id}-${side}-elevation-without-fronts`, ...orthoCameraRenderSettings, direction: cameraDirection });
+        // orthoCameraRenderResults.push(resultWithoutFronts);
 
       }
 
@@ -1190,10 +1222,30 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
       // 3. make drawings from the renderings
       // =================
 
-      const svgs: SVGElement[] = [];
+      const imageFileNames: string[] = [];
 
       orthoCameraRenderResults.forEach((renderResult, index) => {
         const drawing = new Drawing(renderResult, { drawingDirection: index === 0 ? DrawingDirection.Top : DrawingDirection.Elevation });
+
+        // get the walls in the drawing
+        const walls = renderResult.renderedNodes?.filter(node => node.kind === Object3DNodeKind.Wall) ?? [];
+        walls.forEach(wall => {
+          const wallData = wall.wallData;
+          if (!wallData) {
+            return;
+          }
+          [
+            wallData.segmentStart,
+            wallData.segmentEnd,
+            wallData.segmentStart.clone().add(new Vector3(0, wallData.wallHeight, 0)),
+            wallData.segmentEnd.clone().add(new Vector3(0, wallData.wallHeight, 0)),
+          ].forEach((wallEndPoint) => {
+            const annotablePoint: AnnotablePoint = {
+              coordinate: wallEndPoint,
+            }
+            drawing.addAnnotablePoint(wall.worldTransform, annotablePoint);
+          });
+        });
 
         renderResult.renderedNodes?.forEach((moduleNode: IOrderSceneNode) => {
           const moduleData = moduleNode.orderLineEntry;
@@ -1204,20 +1256,14 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
           const annotations = filterAnnotationForModule(id, moduleData, drawing);
           if (annotations.length > 0) {
             annotations.forEach((annotation: I_tab_Annotation) => {
-              annotation.out_SvgInjections?.(moduleData)?.forEach((injection: SvgInjectionData) => {
+              annotation.out_SvgPathOverlays?.(moduleData, drawing)?.forEach((injection: SvgPathInjectionData) => {
                 drawing.addOverlay(nodeMatrix, injection);
               });
-              annotation.out_Annotations?.(moduleData)?.forEach((annotation: Annotation) => {
+              annotation.out_Annotations?.(moduleData, drawing)?.forEach((annotation: Annotation) => {
                 drawing.addAnnotation(nodeMatrix, annotation);
               });
-              annotation.out_AnnotablePoints?.(moduleData)?.forEach((point: AnnotablePoint) => {
-                const radius = 15;
-                const svgCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                svgCircle.setAttribute("cx", point.coordinate._x.toString());
-                svgCircle.setAttribute("cy", point.coordinate._y.toString());
-                svgCircle.setAttribute("r", radius.toString());
-                svgCircle.setAttribute("fill", "blue");
-                drawing.addSvgObject(nodeMatrix, svgCircle);
+              annotation.out_AnnotablePoints?.(moduleData, drawing)?.forEach((point: AnnotablePoint) => {
+                drawing.addAnnotablePoint(nodeMatrix, { coordinate: point.coordinate });
               });
 
             });
@@ -1225,16 +1271,27 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
         });
 
         const svg = drawing.render();
-        svgs.push(svg);
+
+        const fileName = (renderResult.renderParameters?.name ?? `drawing-${index}`) + '.svg';
+        imageFileNames.push(fileName);
+        this.createFileEntry(result, fileName, new XMLSerializer().serializeToString(svg), "image/svg+xml");
       });
 
-
-      const xmlSerializer = new XMLSerializer();
-      svgs.forEach((svg, index) => {
-        const svgString = xmlSerializer.serializeToString(svg);
-        const fileName = index === 0 ? `overview_drawing.svg` : `elevation_drawing_${index}.svg`;
-        this.createFileEntry(result, fileName, svgString, "image/svg+xml");
-      });
+      let htmlResult = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Drawings</title>
+        </head>
+        <body>
+          ${imageFileNames.map((fileName) => {
+        return `<div><h2>${fileName}</h2><img src="${fileName}"></div>`;
+      }).join('\n')}
+        </body>
+        </html>`;
+      this.createFileEntry(result, "Drawings.html", htmlResult, "text/html");
 
       // ###############################################################
       // ################### END CUSTOM SCRIPTS ########################
@@ -1844,13 +1901,25 @@ export class OrderOutputBaseoutput_CamManager extends OrderOutputBase {
           // Create Processings (Workgroups/Operations JSON pro Part)
           const procOut: Map<string, BomOutputFileEntry> = oOutput.createBomOutputcreate_CamManagerProcessings(p.bomEntries);
 
-
+          // Find the parent
           const findBomParent = (parent: string): any[] => {
             const r: any[] = [];
+
             bom.forEach((value: any, key: string) => {
-              const k = JSON.parse(key);
-              if (k.parent === parent) r.push(k);
+              try {
+                const raw = fileEntryToString(value);
+                const parsed = JSON.parse(raw);
+
+                const k = parsed.entry ?? parsed;
+
+                if (k.parent === parent) {
+                  r.push(k);
+                }
+              } catch (e) {
+                logError("Could not parse BOM entry: " + key + " value: " + value + "error: " + e);
+              }
             });
+
             return r;
           };
 
