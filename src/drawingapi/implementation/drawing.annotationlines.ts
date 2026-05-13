@@ -275,7 +275,7 @@ export function drawAnnotationsWithAnnotationLines(args: {
                     startY: intervalStart._y,
                     endX: intervalEnd._x,
                     endY: intervalEnd._y,
-                    textOffset: { _x: 0, _y: 0 },
+                    textOffset: { _x: 0, _y: 16 },
                     textContent: interval.realLength.toFixed(0),
                     lineProperties: {
                         ...SVGHelper.thickLineStyle,

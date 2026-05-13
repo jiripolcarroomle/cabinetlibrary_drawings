@@ -210,7 +210,6 @@ export class Drawing implements IPlanSvgDrawing {
                         startY: annotation.startPoint.pixelCoordinate._y,
                         endX: annotation.endPoint.pixelCoordinate._x,
                         endY: annotation.endPoint.pixelCoordinate._y,
-                        textOffset: new Vector3(0, 0, 0),
                         textContent: annotation.annotation.label ?? annotation.realLength.toFixed(0),
                         lineProperties: { ...thickLineStyle, ...arrowLineStyle },
                         textProperties: { ...textStyle, flipIfUpsideDown: true },
@@ -363,7 +362,6 @@ export class Drawing implements IPlanSvgDrawing {
                             startY: segmentStart._y,
                             endX: segmentEnd._x,
                             endY: segmentEnd._y,
-                            textOffset: normal.clone().multiply(0),
                             textContent: realLength.toFixed(0),
                             lineProperties: {
                                 ...thinLineStyle,
