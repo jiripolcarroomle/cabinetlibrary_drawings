@@ -31,6 +31,68 @@ const areIntervalsConflicting = (left: IntervalSnapshot, right: IntervalSnapshot
     return !sameInterval;
 };
 
+const getContinuousClusterSignature = (intervals: IntervalSnapshot[]): string => {
+    if (intervals.length === 0) {
+        return "";
+    }
+
+    const sorted = [...intervals].sort((a, b) => a.start - b.start || a.end - b.end);
+    const clusters: IntervalSnapshot[] = [];
+
+    sorted.forEach(interval => {
+        const lastCluster = clusters[clusters.length - 1];
+        if (!lastCluster) {
+            clusters.push({ start: interval.start, end: interval.end });
+            return;
+        }
+
+        if (interval.start <= lastCluster.end) {
+            lastCluster.end = Math.max(lastCluster.end, interval.end);
+            return;
+        }
+
+        clusters.push({ start: interval.start, end: interval.end });
+    });
+
+    return clusters.map(cluster => `${cluster.start}:${cluster.end}`).join("|");
+};
+
+const preMergeIdenticalContinuousClusters = <T extends LineForMerge>(lines: T[]): T[] => {
+    if (lines.length <= 1) {
+        return lines;
+    }
+
+    const groupsByCluster = new Map<string, T[]>();
+    lines.forEach(line => {
+        const signature = getContinuousClusterSignature(line.usedIntervals);
+        const group = groupsByCluster.get(signature);
+        if (group) {
+            group.push(line);
+            return;
+        }
+        groupsByCluster.set(signature, [line]);
+    });
+
+    const preMerged: T[] = [];
+    groupsByCluster.forEach(group => {
+        if (group.length === 1) {
+            preMerged.push(group[0]);
+            return;
+        }
+
+        const survivors: T[] = [];
+        group.forEach(line => {
+            const mergeTarget = survivors.find(candidate => candidate.merge(line));
+            if (!mergeTarget) {
+                survivors.push(line);
+            }
+        });
+        preMerged.push(...survivors);
+    });
+
+    return preMerged;
+};
+
 const findOptimalMergeGroups = (lines: LineForMerge[]): number[][] => {
     if (lines.length <= 1) {
         return lines.length === 1 ? [[0]] : [];
@@ -184,13 +246,20 @@ export function optimalAnnotationLinesMerge<T extends LineForMerge>(linesWithAnn
         return [];
     }
 
+    // Fast-path optimization: merge lines that share identical continuous interval clusters.
+    // This can significantly reduce the branch-and-bound search space for the global optimizer.
+    const preMergedLines = preMergeIdenticalContinuousClusters(linesWithAnnotations);
+    if (preMergedLines.length <= 1) {
+        return preMergedLines;
+    }
+
     // Find globally optimal merge groups: minimize the number of final annotation lines.
-    const optimalMergeGroups = findOptimalMergeGroups(linesWithAnnotations);
+    const optimalMergeGroups = findOptimalMergeGroups(preMergedLines);
     const mergedLines = optimalMergeGroups.map(group => {
         const [headIndex, ...restIndexes] = group;
-        const mergedLine = linesWithAnnotations[headIndex];
+        const mergedLine = preMergedLines[headIndex];
         restIndexes.forEach(index => {
-            mergedLine.merge(linesWithAnnotations[index]);
+            mergedLine.merge(preMergedLines[index]);
         });
         return mergedLine;
     });
