@@ -4,7 +4,7 @@ import { DrawingDirection, type AnnotablePoint, type Annotation, type IPlanSvgDr
 
 export interface I_tab_Annotation {
     in_ModuleId: string;
-    in_ModuleCondition?: (m: any, drawingData: IPlanSvgDrawing) => boolean;
+    in_Condition?: (m: any, drawingData: IPlanSvgDrawing) => boolean;
     out_AnnotablePoints?: (m: any, drawingData: IPlanSvgDrawing) => AnnotablePoint[];
     out_SvgPathOverlays?: (m: any, drawingData: IPlanSvgDrawing) => SvgPathInjectionData[];
     out_Annotations?: (m: any, drawingData: IPlanSvgDrawing) => Annotation[];
@@ -15,7 +15,7 @@ export function filterAnnotationForModule(moduleId: string, m: any, drawingData:
     return tab_Annotations.filter(annotation => {
         const ids = annotation.in_ModuleId.split(',').map(id => id.trim());
         return ids.includes(moduleId)
-            && (annotation.in_ModuleCondition ? annotation.in_ModuleCondition(m, drawingData) : true);
+            && (annotation.in_Condition ? annotation.in_Condition(m, drawingData) : true);
     });
 }
 
@@ -45,7 +45,7 @@ export const tab_Annotations: I_tab_Annotation[] = [
                 result.push({
                     start: new Vector3(0, plinthAreaHeight + m.mod_Height, 0),
                     end: new Vector3(0, plinthAreaHeight + m.mod_Height + m.mod_CountertopThk, 0),
-                    layer: 'carcase-dimension-vertical',
+                    layer: 'carcase-dimension-elevation',
                     tags: ['overall', 'carcase'],
                 });
             }
@@ -54,13 +54,13 @@ export const tab_Annotations: I_tab_Annotation[] = [
                 result.push({
                     start: new Vector3(0, 0, 0),
                     end: new Vector3(0, plinthAreaHeight, 0),
-                    layer: 'carcase-dimension-vertical',
+                    layer: 'carcase-dimension-elevation',
                     tags: ['plinth', 'carcase'],
                 });
                 result.push({
                     start: new Vector3(0, plinthAreaHeight, 0),
                     end: new Vector3(0, plinthAreaHeight + m.mod_Height, 0),
-                    layer: 'carcase-dimension-vertical',
+                    layer: 'carcase-dimension-elevation',
                     tags: ['plinth', 'carcase'],
                 });
             }
@@ -68,7 +68,7 @@ export const tab_Annotations: I_tab_Annotation[] = [
                 result.push({
                     start: new Vector3(0, 0, 0),
                     end: new Vector3(0, m.mod_Height, 0),
-                    layer: 'carcase-dimension-vertical',
+                    layer: 'carcase-dimension-elevation',
                     tags: ['overall', 'carcase'],
                 });
             }
@@ -79,23 +79,57 @@ export const tab_Annotations: I_tab_Annotation[] = [
 
     {
         in_ModuleId: 'mr_CornerunitStraight',
-        in_ModuleCondition: (_m: any) => true,
+        in_Condition: (_m: any) => true,
     },
 
     {
         in_ModuleId: 'mc_Backsplash',
-        in_ModuleCondition: (_m: any) => true,
+        in_Condition: (_m: any) => { return true; },
+        out_Annotations: (m: any, _drawingData: IPlanSvgDrawing) => {
+            return [
+                {
+                    start: new Vector3(0, 0, 0),
+                    end: new Vector3(0, m.mod_BacksplashHeight, 0),
+                    layer: 'carcase-dimension-elevation',
+                    tags: ['overall', 'carcase'],
+                },
+                {
+                    start: new Vector3(0, 0, 0),
+                    end: new Vector3(0, 0, m.mod_BacksplashThk),
+                    layer: 'accessory-dimension-horizontal',
+                    tags: ['overall', 'carcase'],
+                },
+                {
+                    start: new Vector3(0, 0, 0),
+                    end: new Vector3(m.mod_BacksplashWidth, 0, 0),
+                    layer: 'accessory-dimension-horizontal',
+                    tags: ['overall', 'carcase'],
+                }
+            ];
+        }
     },
 
     {
         in_ModuleId: 'mc_Countertop01',
-        in_ModuleCondition: (_m: any) => true,
+        in_Condition: (_m: any) => true,
         out_Annotations: (m: any, _drawingData: IPlanSvgDrawing) => {
             return [
                 {
                     start: new Vector3(0, 0, 0),
                     end: new Vector3(0, m.mod_CountertopThk ?? 50, 0),
-                    layer: 'carcase-dimension-vertical',
+                    layer: 'carcase-dimension-elevation',
+                    tags: ['overall', 'carcase'],
+                },
+                {
+                    start: new Vector3(0, 0, 0),
+                    end: new Vector3(0, 0, m.mod_CountertopDepth),
+                    layer: 'accessory-dimension-horizontal',
+                    tags: ['overall', 'carcase'],
+                },
+                {
+                    start: new Vector3(0, 0, 0),
+                    end: new Vector3(m.mod_CountertopWidth, 0, 0),
+                    layer: 'accessory-dimension-horizontal',
                     tags: ['overall', 'carcase'],
                 }
             ];
@@ -104,7 +138,7 @@ export const tab_Annotations: I_tab_Annotation[] = [
 
     {
         in_ModuleId: 'mr_StorageunitSingle,mr_CornerunitStraight',
-        in_ModuleCondition: (m: any, drawingData: IPlanSvgDrawing) => {
+        in_Condition: (m: any, drawingData: IPlanSvgDrawing) => {
             return (
                 (m.mod_CreateCountertop || m.mod_CreatePaneltop)
                 && drawingData.drawingDirection === DrawingDirection.Top
@@ -131,7 +165,7 @@ export const tab_Annotations: I_tab_Annotation[] = [
 
     {
         in_ModuleId: 'mr_StorageunitSingle',
-        in_ModuleCondition: (m: any) => { return m._articlePos.y > 100 /** todo: base on mod_ElementType */ },
+        in_Condition: (m: any) => { return m._articlePos.y > 100 /** todo: base on mod_ElementType */ },
         out_SvgPathOverlays: (m: any) => {
             return [
                 {
