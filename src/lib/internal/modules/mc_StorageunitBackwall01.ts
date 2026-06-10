@@ -9,7 +9,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping, ct2_tab_BracketMapping }
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction, ct2_tab_CarcaseBackwallConstruction } from '../custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings, ct2_tab_CarcaseBackwallSettings } from '../custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction, ct2_tab_CarcaseCornerunitConstruction } from '../custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction, ct2_tab_CarcaseHoodConstruction } from '../custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection, ct2_tab_CarcasePanelSelection } from '../custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations, ct2_tab_CarcasePartConnectionCalculations } from '../custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping, ct2_tab_CarcasePartConnectionMapping } from '../custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape, ct2_tab_CarcasePartsShape } from '../custom-tables/tab_CarcasePartsShape'
@@ -19,9 +19,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings, ct2_
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension, ct2_tab_CarcaseSlopedCeilingDimension } from '../custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction, ct2_tab_CarcaseStorageunitConstruction } from '../custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping, ct2_tab_ClothingOrganizerColorMapping } from '../custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition, ct2_tab_ClothingOrganizerDepthPosition } from '../custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping, ct2_tab_ClothingOrganizerExtraItemMapping } from '../custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions, ct2_tab_ClothingOrganizerInstallationDimensions } from '../custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping, ct2_tab_ClothingOrganizerMapping } from '../custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings, ct2_tab_ClothingOrganizerPositionZSettings } from '../custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary, ct2_tab_ComponentLibrary } from '../custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables, ct2_tab_ComponentVariables } from '../custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction, ct2_tab_CornerFillerFrontpanelConstruction } from '../custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -47,7 +48,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping, ct2_tab_EdgeMapping } from '..
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings, ct2_tab_EdgeNumberSettings } from '../custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings, ct2_tab_EdgeSettings } from '../custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList, ct2_tab_ErrorList } from '../custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction, ct2_tab_FillerConstruction } from '../custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings, ct2_tab_FillerHardwareSettings } from '../custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction, ct2_tab_FillerPartConstruction } from '../custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings, ct2_tab_FillerSettings } from '../custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping, ct2_tab_FlipliftColorMapping } from '../custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction, ct2_tab_FlipliftConstruction } from '../custom-tables/tab_FlipliftConstruction'
@@ -62,6 +65,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction, ct2_ta
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction, ct2_tab_FrontConstruction } from '../custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping, ct2_tab_FrontEdgeColorMapping } from '../custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction, ct2_tab_FrontPanelConstruction } from '../custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection, ct2_tab_FrontPanelSelection } from '../custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings, ct2_tab_GrainDirectionSettings } from '../custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary, ct2_tab_GraphicFileLibrary } from '../custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary, ct2_tab_GraphicLibrary } from '../custom-tables/tab_GraphicLibrary'
@@ -136,7 +140,7 @@ import { VariantValidation, IMatrix_mod_CarcaseId, IMatrix_mod_CarcaseVisBack, I
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
 import { IPartAdd_part_Backwall } from '../part-add-interfaces';
-import { mc_StorageunitBackwall01_createBuildPlan, mc_StorageunitBackwall01_afterDataCompletion, mc_StorageunitBackwall01_manufacturerDataCompletion, mc_StorageunitBackwall01_calculateContainerModules } from '../../modules/mc_StorageunitBackwall01';
+import { mc_StorageunitBackwall01_createBuildPlan, mc_StorageunitBackwall01_afterDataCompletion, mc_StorageunitBackwall01_manufacturerDataCompletion, mc_StorageunitBackwall01_calculateContainerModules, mc_StorageunitBackwall01_prepareContext } from '../../modules/mc_StorageunitBackwall01';
 
 export interface cbp_mc_StorageunitBackwall01 extends IModBaseProp
   , IPartAdd_part_Backwall, IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_CarcaseVisBack, IModVarNonNull_mod_Depth, IModVarNonNull_mod_Height, IModVarNonNull_mod_Width, IModVarNonNull_mod_CarcaseBackwallColor, IModVarNonNull_mod_CarcaseBackwallProgram, IModVarNonNull_mod_CarcaseOutsideColor, IModVarNonNull_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseOutsideProgram, IModVarNonNull_mod_EdgeBackType, IModVarNonNull_mod_EdgeLeftType, IModVarNonNull_mod_EdgeFrontType, IModVarNonNull_mod_EdgeRightType, IModVarNonNull_mod_EdgeJointType, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_CarcaseProgram, IModVarNonNull_mod_CarcaseConnectionLeftTop, IModVarNonNull_mod_CarcaseConnectionRightTop, IModVarNonNull_mod_SlopedCeilingConstruction, IModVarNonNull_mod_SlopeAngle, IModVarNonNull_mod_TypeElement {
@@ -158,6 +162,13 @@ export interface dc_mc_StorageunitBackwall01 extends IModBaseProp
   parent: IModParents_mc_Storageunit01;
 }
 
+export interface pc_mc_StorageunitBackwall01 extends dc_mc_StorageunitBackwall01 {
+  _forcedInputAttributes?: string[];
+  getContextData(): IContextData | undefined;
+  getContextModule(id: string): OD_Base | undefined;
+  getRoomContours(): RoomContour[];
+}
+
 export interface adc_base_mc_StorageunitBackwall01 extends IModBaseProp
   , IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_CarcaseVisBack, IModVarNonNull_mod_Depth, IModVarNonNull_mod_Height, IModVarNonNull_mod_Width, IModVarNonNull_mod_CarcaseBackwallColor, IModVarNonNull_mod_CarcaseBackwallProgram, IModVarNonNull_mod_CarcaseOutsideColor, IModVarNonNull_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseOutsideProgram, IModVarNonNull_mod_EdgeBackType, IModVarNonNull_mod_EdgeLeftType, IModVarNonNull_mod_EdgeFrontType, IModVarNonNull_mod_EdgeRightType, IModVarNonNull_mod_EdgeJointType, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_CarcaseProgram, IModVarNonNull_mod_CarcaseConnectionLeftTop, IModVarNonNull_mod_CarcaseConnectionRightTop, IModVarNonNull_mod_SlopedCeilingConstruction, IModVarNonNull_mod_SlopeAngle, IModVarNonNull_mod_TypeElement {
   get m(): OD_Base[];
@@ -171,7 +182,7 @@ export interface ccm_mc_StorageunitBackwall01 extends adc_base_mc_StorageunitBac
 }
 
 
-export class OD_M_mc_StorageunitBackwall01 extends OD_Base implements dc_mc_StorageunitBackwall01
+export class OD_M_mc_StorageunitBackwall01 extends OD_Base implements pc_mc_StorageunitBackwall01, dc_mc_StorageunitBackwall01
   , IModParents_mc_StorageunitBackwall01
   , IModVar_mod_CarcaseId, IModVar_mod_CarcaseVisBack, IModVar_mod_Depth, IModVar_mod_Height, IModVar_mod_Width, IModVar_mod_CarcaseBackwallColor, IModVar_mod_CarcaseBackwallProgram, IModVar_mod_CarcaseOutsideColor, IModVar_mod_CarcaseEdgeColor, IModVar_mod_CarcaseOutsideProgram, IModVar_mod_EdgeBackType, IModVar_mod_EdgeLeftType, IModVar_mod_EdgeFrontType, IModVar_mod_EdgeRightType, IModVar_mod_EdgeJointType, IModVar_mod_ModuleName, IModVar_mod_CarcaseProgram, IModVar_mod_CarcaseConnectionLeftTop, IModVar_mod_CarcaseConnectionRightTop, IModVar_mod_SlopedCeilingConstruction, IModVar_mod_SlopeAngle, IModVar_mod_TypeElement {
   constructor(parent: IModParents_mc_Storageunit01, manufacturerMode?: boolean) {
@@ -880,6 +891,15 @@ export class OD_M_mc_StorageunitBackwall01 extends OD_Base implements dc_mc_Stor
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
   }
+  override prepareContext(contextRoots: OD_Base[]): void {
+    super.prepareContext(contextRoots);
+    this.internallyPrepareContext();
+    this.m.forEach(subMod => subMod.prepareContext(contextRoots));
+  }
+  internallyPrepareContext(): void {
+    this.#prepareContextInternal();
+  }
+  #prepareContextInternal = mc_StorageunitBackwall01_prepareContext;
   seal(): IModuleNonNull_mc_StorageunitBackwall01 {
     this.afterDataCompletion();
     const adc = new OD_M_mc_StorageunitBackwall01_NonNull(this);

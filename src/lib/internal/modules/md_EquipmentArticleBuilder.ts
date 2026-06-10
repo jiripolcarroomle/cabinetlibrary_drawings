@@ -9,7 +9,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping, ct2_tab_BracketMapping }
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction, ct2_tab_CarcaseBackwallConstruction } from '../custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings, ct2_tab_CarcaseBackwallSettings } from '../custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction, ct2_tab_CarcaseCornerunitConstruction } from '../custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction, ct2_tab_CarcaseHoodConstruction } from '../custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection, ct2_tab_CarcasePanelSelection } from '../custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations, ct2_tab_CarcasePartConnectionCalculations } from '../custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping, ct2_tab_CarcasePartConnectionMapping } from '../custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape, ct2_tab_CarcasePartsShape } from '../custom-tables/tab_CarcasePartsShape'
@@ -19,9 +19,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings, ct2_
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension, ct2_tab_CarcaseSlopedCeilingDimension } from '../custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction, ct2_tab_CarcaseStorageunitConstruction } from '../custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping, ct2_tab_ClothingOrganizerColorMapping } from '../custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition, ct2_tab_ClothingOrganizerDepthPosition } from '../custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping, ct2_tab_ClothingOrganizerExtraItemMapping } from '../custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions, ct2_tab_ClothingOrganizerInstallationDimensions } from '../custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping, ct2_tab_ClothingOrganizerMapping } from '../custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings, ct2_tab_ClothingOrganizerPositionZSettings } from '../custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary, ct2_tab_ComponentLibrary } from '../custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables, ct2_tab_ComponentVariables } from '../custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction, ct2_tab_CornerFillerFrontpanelConstruction } from '../custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -47,7 +48,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping, ct2_tab_EdgeMapping } from '..
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings, ct2_tab_EdgeNumberSettings } from '../custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings, ct2_tab_EdgeSettings } from '../custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList, ct2_tab_ErrorList } from '../custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction, ct2_tab_FillerConstruction } from '../custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings, ct2_tab_FillerHardwareSettings } from '../custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction, ct2_tab_FillerPartConstruction } from '../custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings, ct2_tab_FillerSettings } from '../custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping, ct2_tab_FlipliftColorMapping } from '../custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction, ct2_tab_FlipliftConstruction } from '../custom-tables/tab_FlipliftConstruction'
@@ -62,6 +65,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction, ct2_ta
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction, ct2_tab_FrontConstruction } from '../custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping, ct2_tab_FrontEdgeColorMapping } from '../custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction, ct2_tab_FrontPanelConstruction } from '../custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection, ct2_tab_FrontPanelSelection } from '../custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings, ct2_tab_GrainDirectionSettings } from '../custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary, ct2_tab_GraphicFileLibrary } from '../custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary, ct2_tab_GraphicLibrary } from '../custom-tables/tab_GraphicLibrary'
@@ -131,7 +135,7 @@ import { GlobalFunc } from '../global-func'
 import { IP_part_Placeholder_PartVarsWritable, P_part_Placeholder } from '../parts/part_Placeholder'
 import { OD_M_me_ShelfadjMultiple01, dc_me_ShelfadjMultiple01 } from './me_ShelfadjMultiple01'
 import { OD_M_me_ClothingOrganizer01, dc_me_ClothingOrganizer01 } from './me_ClothingOrganizer01'
-import { IModuleNonNull_md_EquipmentArticleBuilder, IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_Fliplift_mf_RackArea, IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_RackArea, IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_md_FrontArticleBuilder_md_FrontPlaceholder, IPartParentsNonNull_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_Fliplift_mf_RackArea, IPartParentsNonNull_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_RackArea, IPartParentsNonNull_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_md_FrontArticleBuilder_md_FrontPlaceholder } from '../mod-interfaces'
+import { IModuleNonNull_md_EquipmentArticleBuilder, IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_Fliplift_mf_RackArea, IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_md_FrontArticleBuilder_md_FrontPlaceholder, IPartParentsNonNull_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_Fliplift_mf_RackArea, IPartParentsNonNull_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_md_FrontArticleBuilder_md_FrontPlaceholder } from '../mod-interfaces'
 import { IModVar_mod_CarcaseColor, IModVarNonNull_mod_CarcaseColor, IModVar_mod_CarcaseId, IModVarNonNull_mod_CarcaseId, IModVar_mod_CarcaseProgram, IModVarNonNull_mod_CarcaseProgram, IModVar_mod_FrontDesign, IModVarNonNull_mod_FrontDesign, IModVar_mod_FrontProgram, IModVarNonNull_mod_FrontProgram, IModVar_mod_ShelfadjColor, IModVarNonNull_mod_ShelfadjColor, IModVar_mod_ShelfadjDescriptor, IModVarNonNull_mod_ShelfadjDescriptor, IModVar_mod_ShelfadjDesign, IModVarNonNull_mod_ShelfadjDesign, IModVar_mod_ShelfadjDrillDistance, IModVarNonNull_mod_ShelfadjDrillDistance, IModVar_mod_ShelfadjDrillType, IModVarNonNull_mod_ShelfadjDrillType, IModVar_mod_TypeElement, IModVarNonNull_mod_TypeElement, IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_CarcaseSpaceDimension, IModVarNonNull_mod_CarcaseSpaceDimension } from '../var-interfaces'
 import { VariantValidation, IMatrix_mod_CarcaseColor, IMatrix_mod_CarcaseId, IMatrix_mod_CarcaseProgram, IMatrix_mod_FrontDesign, IMatrix_mod_FrontProgram, IMatrix_mod_ShelfadjColor, IMatrix_mod_ShelfadjDescriptor, IMatrix_mod_ShelfadjDesign, IMatrix_mod_ShelfadjDrillDistance, IMatrix_mod_ShelfadjDrillType, IMatrix_mod_TypeElement, IMatrix_mod_Width } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
@@ -163,8 +167,10 @@ export interface dc_md_EquipmentArticleBuilder extends IModBaseProp
 }
 
 export interface pc_md_EquipmentArticleBuilder extends dc_md_EquipmentArticleBuilder {
+  _forcedInputAttributes?: string[];
   getContextData(): IContextData | undefined;
   getContextModule(id: string): OD_Base | undefined;
+  getRoomContours(): RoomContour[];
 }
 
 export interface adc_base_md_EquipmentArticleBuilder extends IModBaseProp
@@ -192,7 +198,7 @@ export interface ccm_md_EquipmentArticleBuilder extends adc_base_md_EquipmentArt
 
 
 export class OD_M_md_EquipmentArticleBuilder extends OD_Base implements pc_md_EquipmentArticleBuilder, dc_md_EquipmentArticleBuilder
-  , IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_Fliplift_mf_RackArea, IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_RackArea, IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_md_FrontArticleBuilder_md_FrontPlaceholder
+  , IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_Fliplift_mf_RackArea, IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_md_FrontArticleBuilder_md_FrontPlaceholder
   , IModVar_mod_CarcaseColor, IModVar_mod_CarcaseId, IModVar_mod_CarcaseProgram, IModVar_mod_FrontDesign, IModVar_mod_FrontProgram, IModVar_mod_ShelfadjColor, IModVar_mod_ShelfadjDescriptor, IModVar_mod_ShelfadjDesign, IModVar_mod_ShelfadjDrillDistance, IModVar_mod_ShelfadjDrillType, IModVar_mod_TypeElement, IModVar_mod_Width, IModVar_mod_CarcaseSpaceDimension {
   constructor(parent?: OD_Base, manufacturerMode?: boolean) {
     super('md_EquipmentArticleBuilder', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
@@ -629,6 +635,7 @@ export class OD_M_md_EquipmentArticleBuilder extends OD_Base implements pc_md_Eq
   override prepareContext(contextRoots: OD_Base[]): void {
     super.prepareContext(contextRoots);
     this.internallyPrepareContext();
+    this.m.forEach(subMod => subMod.prepareContext(contextRoots));
   }
   internallyPrepareContext(): void {
     this.#prepareContextInternal();
@@ -701,7 +708,7 @@ export class OD_M_md_EquipmentArticleBuilder extends OD_Base implements pc_md_Eq
 
 }
 
-class OD_M_md_EquipmentArticleBuilder_NonNull implements cbp_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, ccm_md_EquipmentArticleBuilder, IPartParentsNonNull_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_Fliplift_mf_RackArea, IPartParentsNonNull_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_RackArea, IPartParentsNonNull_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_md_FrontArticleBuilder_md_FrontPlaceholder {
+class OD_M_md_EquipmentArticleBuilder_NonNull implements cbp_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, ccm_md_EquipmentArticleBuilder, IPartParentsNonNull_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_Fliplift_mf_RackArea, IPartParentsNonNull_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_md_FrontArticleBuilder_md_FrontPlaceholder {
   constructor(parent: OD_M_md_EquipmentArticleBuilder) {
     this.#internalParent = parent;
   }
@@ -714,7 +721,7 @@ class OD_M_md_EquipmentArticleBuilder_NonNull implements cbp_md_EquipmentArticle
       contour
     );
   }
-  getRoomContours(): RoomContour[] { return this.#internalParent.roomContours ?? []; }
+  getRoomContours(): RoomContour[] { return this.#internalParent.getRoomContours(); }
   getContextData(): IContextData | undefined { return this.#internalParent.getContextData(); }
   getContextModule(id: string): OD_Base | undefined {
     return this.#internalParent.getContextModule(id);

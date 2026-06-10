@@ -9,7 +9,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping, ct2_tab_BracketMapping }
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction, ct2_tab_CarcaseBackwallConstruction } from '../custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings, ct2_tab_CarcaseBackwallSettings } from '../custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction, ct2_tab_CarcaseCornerunitConstruction } from '../custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction, ct2_tab_CarcaseHoodConstruction } from '../custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection, ct2_tab_CarcasePanelSelection } from '../custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations, ct2_tab_CarcasePartConnectionCalculations } from '../custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping, ct2_tab_CarcasePartConnectionMapping } from '../custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape, ct2_tab_CarcasePartsShape } from '../custom-tables/tab_CarcasePartsShape'
@@ -19,9 +19,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings, ct2_
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension, ct2_tab_CarcaseSlopedCeilingDimension } from '../custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction, ct2_tab_CarcaseStorageunitConstruction } from '../custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping, ct2_tab_ClothingOrganizerColorMapping } from '../custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition, ct2_tab_ClothingOrganizerDepthPosition } from '../custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping, ct2_tab_ClothingOrganizerExtraItemMapping } from '../custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions, ct2_tab_ClothingOrganizerInstallationDimensions } from '../custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping, ct2_tab_ClothingOrganizerMapping } from '../custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings, ct2_tab_ClothingOrganizerPositionZSettings } from '../custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary, ct2_tab_ComponentLibrary } from '../custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables, ct2_tab_ComponentVariables } from '../custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction, ct2_tab_CornerFillerFrontpanelConstruction } from '../custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -47,7 +48,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping, ct2_tab_EdgeMapping } from '..
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings, ct2_tab_EdgeNumberSettings } from '../custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings, ct2_tab_EdgeSettings } from '../custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList, ct2_tab_ErrorList } from '../custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction, ct2_tab_FillerConstruction } from '../custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings, ct2_tab_FillerHardwareSettings } from '../custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction, ct2_tab_FillerPartConstruction } from '../custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings, ct2_tab_FillerSettings } from '../custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping, ct2_tab_FlipliftColorMapping } from '../custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction, ct2_tab_FlipliftConstruction } from '../custom-tables/tab_FlipliftConstruction'
@@ -62,6 +65,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction, ct2_ta
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction, ct2_tab_FrontConstruction } from '../custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping, ct2_tab_FrontEdgeColorMapping } from '../custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction, ct2_tab_FrontPanelConstruction } from '../custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection, ct2_tab_FrontPanelSelection } from '../custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings, ct2_tab_GrainDirectionSettings } from '../custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary, ct2_tab_GraphicFileLibrary } from '../custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary, ct2_tab_GraphicLibrary } from '../custom-tables/tab_GraphicLibrary'
@@ -128,18 +132,24 @@ import { OD_Base, PartGroup, OpenGroup, Matrix4, Vector3, GenerationContour, Con
 import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IContextData } from '../mod-base'
 import { loadOrderData } from '../loader'
 import { GlobalFunc } from '../global-func'
-import { IModParents_me_HoodInsert } from '../mod-interfaces'
-import { OD_M_mc_ApplianceGraphic, dc_mc_ApplianceGraphic } from './mc_ApplianceGraphic'
-import { IModuleNonNull_mc_HoodInsert01, IModParents_mc_BaseunitFridge01_mc_Dishwasher01_mc_Fridge01_mc_Hob01_mc_HoodInsert01_mc_Oven01_mc_Sink01_me_LaundryMachine_mf_Sink_mr_Hood, IPartParentsNonNull_mc_BaseunitFridge01_mc_Dishwasher01_mc_Fridge01_mc_Hob01_mc_HoodInsert01_mc_Oven01_mc_Sink01_me_LaundryMachine_mf_Sink_mr_Hood } from '../mod-interfaces'
-import { IModVar_mod_CarcaseDepth, IModVarNonNull_mod_CarcaseDepth, IModVar_mod_CarcaseHeight, IModVarNonNull_mod_CarcaseHeight, IModVar_mod_CarcaseWidth, IModVarNonNull_mod_CarcaseWidth, IModVar_mod_Originpos, IModVarNonNull_mod_Originpos, IModVar_mod_HoodId, IModVarNonNull_mod_HoodId } from '../var-interfaces'
-import { VariantValidation, IMatrix_mod_CarcaseDepth, IMatrix_mod_CarcaseHeight, IMatrix_mod_CarcaseWidth, IMatrix_mod_HoodId } from '../selections'
+import { IModParents_mc_Storageunit01 } from '../mod-interfaces'
+import { IP_part_HoodRail_PartVarsWritable, P_part_HoodRail } from '../parts/part_HoodRail'
+import { IP_part_HoodShelftop_PartVarsWritable, P_part_HoodShelftop } from '../parts/part_HoodShelftop'
+import { IP_part_HoodShelfbtm_PartVarsWritable, P_part_HoodShelfbtm } from '../parts/part_HoodShelfbtm'
+import { IP_part_HoodBackwall_PartVarsWritable, P_part_HoodBackwall } from '../parts/part_HoodBackwall'
+import { IP_part_HoodSidepanelleft_PartVarsWritable, P_part_HoodSidepanelleft } from '../parts/part_HoodSidepanelleft'
+import { IP_part_HoodSidepanelright_PartVarsWritable, P_part_HoodSidepanelright } from '../parts/part_HoodSidepanelright'
+import { IModuleNonNull_mc_HoodCarcaseParts01, IModParents_mc_HoodCarcaseParts01, IPartParentsNonNull_mc_HoodCarcaseParts01 } from '../mod-interfaces'
+import { IModVar_mod_HoodInformation, IModVarNonNull_mod_HoodInformation, IModVar_mod_CarcaseWidth, IModVarNonNull_mod_CarcaseWidth, IModVar_mod_CarcaseHeight, IModVarNonNull_mod_CarcaseHeight, IModVar_mod_CarcaseDepth, IModVarNonNull_mod_CarcaseDepth, IModVar_mod_CarcaseSpaceDimension, IModVarNonNull_mod_CarcaseSpaceDimension, IModVar_mod_HoodRailverttopbackthk, IModVarNonNull_mod_HoodRailverttopbackthk } from '../var-interfaces'
+import { VariantValidation, IMatrix_mod_HoodInformation, IMatrix_mod_CarcaseWidth, IMatrix_mod_CarcaseHeight, IMatrix_mod_CarcaseDepth, IMatrix_mod_HoodRailverttopbackthk } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
-import { mc_HoodInsert01_createBuildPlan, mc_HoodInsert01_afterDataCompletion, mc_HoodInsert01_manufacturerDataCompletion, mc_HoodInsert01_calculateContainerModules } from '../../modules/mc_HoodInsert01';
+import { IPartAdd_part_HoodRail, IPartAdd_part_HoodShelftop, IPartAdd_part_HoodShelfbtm, IPartAdd_part_HoodBackwall, IPartAdd_part_HoodSidepanelleft, IPartAdd_part_HoodSidepanelright } from '../part-add-interfaces';
+import { mc_HoodCarcaseParts01_createBuildPlan, mc_HoodCarcaseParts01_afterDataCompletion, mc_HoodCarcaseParts01_manufacturerDataCompletion, mc_HoodCarcaseParts01_calculateContainerModules, mc_HoodCarcaseParts01_prepareContext } from '../../modules/mc_HoodCarcaseParts01';
 
-export interface cbp_mc_HoodInsert01 extends IModBaseProp
-  , IModVarNonNull_mod_CarcaseDepth, IModVarNonNull_mod_CarcaseHeight, IModVarNonNull_mod_CarcaseWidth, IModVarNonNull_mod_Originpos, IModVarNonNull_mod_HoodId {
-  parent: IModParents_me_HoodInsert;
+export interface cbp_mc_HoodCarcaseParts01 extends IModBaseProp
+  , IPartAdd_part_HoodRail, IPartAdd_part_HoodShelftop, IPartAdd_part_HoodShelfbtm, IPartAdd_part_HoodBackwall, IPartAdd_part_HoodSidepanelleft, IPartAdd_part_HoodSidepanelright, IModVarNonNull_mod_HoodInformation, IModVarNonNull_mod_CarcaseWidth, IModVarNonNull_mod_CarcaseHeight, IModVarNonNull_mod_CarcaseDepth, IModVarNonNull_mod_CarcaseSpaceDimension, IModVarNonNull_mod_HoodRailverttopbackthk {
+  parent: IModParents_mc_Storageunit01;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
   createOpenGroup(groupName: string, part: IPartBase): OpenGroup;
@@ -147,69 +157,62 @@ export interface cbp_mc_HoodInsert01 extends IModBaseProp
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   getFullOrigin(): Vector3;
   get m(): OD_Base[];
-  ct_tab_ApplianceGraphicLibrary: ct2_tab_ApplianceGraphicLibrary;
+  ct_tab_HoodAssemblyParts: ct2_tab_HoodAssemblyParts;
 }
 
-export interface dc_mc_HoodInsert01 extends IModBaseProp
-  , IModVar_mod_CarcaseDepth, IModVar_mod_CarcaseHeight, IModVar_mod_CarcaseWidth, IModVar_mod_Originpos, IModVar_mod_HoodId {
+export interface dc_mc_HoodCarcaseParts01 extends IModBaseProp
+  , IModVar_mod_HoodInformation, IModVar_mod_CarcaseWidth, IModVar_mod_CarcaseHeight, IModVar_mod_CarcaseDepth, IModVar_mod_CarcaseSpaceDimension, IModVar_mod_HoodRailverttopbackthk {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
-  seal(): IModuleNonNull_mc_HoodInsert01;
-  parent: IModParents_me_HoodInsert;
-  addOD_M_mc_ApplianceGraphic(index?: number): dc_mc_ApplianceGraphic;
+  seal(): IModuleNonNull_mc_HoodCarcaseParts01;
+  parent: IModParents_mc_Storageunit01;
 }
 
-export interface adc_base_mc_HoodInsert01 extends IModBaseProp
-  , IModVarNonNull_mod_CarcaseDepth, IModVarNonNull_mod_CarcaseHeight, IModVarNonNull_mod_CarcaseWidth, IModVarNonNull_mod_Originpos, IModVarNonNull_mod_HoodId {
+export interface pc_mc_HoodCarcaseParts01 extends dc_mc_HoodCarcaseParts01 {
+  _forcedInputAttributes?: string[];
+  getContextData(): IContextData | undefined;
+  getContextModule(id: string): OD_Base | undefined;
+  getRoomContours(): RoomContour[];
+}
+
+export interface adc_base_mc_HoodCarcaseParts01 extends IModBaseProp
+  , IModVarNonNull_mod_HoodInformation, IModVarNonNull_mod_CarcaseWidth, IModVarNonNull_mod_CarcaseHeight, IModVarNonNull_mod_CarcaseDepth, IModVarNonNull_mod_CarcaseSpaceDimension, IModVarNonNull_mod_HoodRailverttopbackthk {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
-  ct_tab_ApplianceGraphicLibrary: ct2_tab_ApplianceGraphicLibrary;
+  ct_tab_HoodAssemblyParts: ct2_tab_HoodAssemblyParts;
 }
 
-export interface adc_mc_HoodInsert01 extends adc_base_mc_HoodInsert01 {
-  addOD_M_mc_ApplianceGraphic(index?: number): dc_mc_ApplianceGraphic;
+export interface adc_mc_HoodCarcaseParts01 extends adc_base_mc_HoodCarcaseParts01 {
 }
 
-export interface ccm_mc_HoodInsert01 extends adc_base_mc_HoodInsert01 {
+export interface ccm_mc_HoodCarcaseParts01 extends adc_base_mc_HoodCarcaseParts01 {
 }
 
 
-export class OD_M_mc_HoodInsert01 extends OD_Base implements dc_mc_HoodInsert01
-  , IModParents_mc_BaseunitFridge01_mc_Dishwasher01_mc_Fridge01_mc_Hob01_mc_HoodInsert01_mc_Oven01_mc_Sink01_me_LaundryMachine_mf_Sink_mr_Hood
-  , IModVar_mod_CarcaseDepth, IModVar_mod_CarcaseHeight, IModVar_mod_CarcaseWidth, IModVar_mod_Originpos, IModVar_mod_HoodId {
-  constructor(parent: IModParents_me_HoodInsert, manufacturerMode?: boolean) {
-    super('mc_HoodInsert01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
+export class OD_M_mc_HoodCarcaseParts01 extends OD_Base implements pc_mc_HoodCarcaseParts01, dc_mc_HoodCarcaseParts01
+  , IModParents_mc_HoodCarcaseParts01
+  , IModVar_mod_HoodInformation, IModVar_mod_CarcaseWidth, IModVar_mod_CarcaseHeight, IModVar_mod_CarcaseDepth, IModVar_mod_CarcaseSpaceDimension, IModVar_mod_HoodRailverttopbackthk {
+  constructor(parent: IModParents_mc_Storageunit01, manufacturerMode?: boolean) {
+    super('mc_HoodCarcaseParts01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
-    this._selfNonNull = new OD_M_mc_HoodInsert01_NonNull(this);
+    this._selfNonNull = new OD_M_mc_HoodCarcaseParts01_NonNull(this);
   }
-  parent: IModParents_me_HoodInsert;
-  _selfNonNull: OD_M_mc_HoodInsert01_NonNull;
+  parent: IModParents_mc_Storageunit01;
+  _selfNonNull: OD_M_mc_HoodCarcaseParts01_NonNull;
 
-  override variants: string[] = ['mod_CarcaseDepth', 'mod_CarcaseHeight', 'mod_CarcaseWidth', 'mod_Originpos', 'mod_HoodId',];
-  #mod_CarcaseDepth?: number;
-  get mod_CarcaseDepth(): number | undefined { return this.#mod_CarcaseDepth }
-  set mod_CarcaseDepth(value: number | undefined) {
+  override variants: string[] = ['mod_HoodInformation', 'mod_CarcaseWidth', 'mod_CarcaseHeight', 'mod_CarcaseDepth', 'mod_CarcaseSpaceDimension', 'mod_HoodRailverttopbackthk',];
+  #mod_HoodInformation?: string;
+  get mod_HoodInformation(): string | undefined { return this.#mod_HoodInformation }
+  set mod_HoodInformation(value: string | undefined) {
     if (this._adcFinished) {
-      logError("The property 'mod_CarcaseDepth' must not be changed after the module was completed with 'afterDataCompletion'");
+      logError("The property 'mod_HoodInformation' must not be changed after the module was completed with 'afterDataCompletion'");
       return;
     }
-    if (this.#mod_CarcaseDepth === value) return;
-    this.#mod_CarcaseDepth = value;
+    if (this.#mod_HoodInformation === value) return;
+    this.#mod_HoodInformation = value;
   }
 
-  mod_CarcaseDepth_matrix?: IMatrix_mod_CarcaseDepth;
-  #mod_CarcaseHeight?: number;
-  get mod_CarcaseHeight(): number | undefined { return this.#mod_CarcaseHeight }
-  set mod_CarcaseHeight(value: number | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_CarcaseHeight' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_CarcaseHeight === value) return;
-    this.#mod_CarcaseHeight = value;
-  }
-
-  mod_CarcaseHeight_matrix?: IMatrix_mod_CarcaseHeight;
+  mod_HoodInformation_matrix?: IMatrix_mod_HoodInformation;
   #mod_CarcaseWidth?: number;
   get mod_CarcaseWidth(): number | undefined { return this.#mod_CarcaseWidth }
   set mod_CarcaseWidth(value: number | undefined) {
@@ -222,27 +225,52 @@ export class OD_M_mc_HoodInsert01 extends OD_Base implements dc_mc_HoodInsert01
   }
 
   mod_CarcaseWidth_matrix?: IMatrix_mod_CarcaseWidth;
-  #mod_Originpos: number[] = [];
-  get mod_Originpos(): number[] { return this.#mod_Originpos; }
-  #mod_HoodId?: string;
-  get mod_HoodId(): string | undefined { return this.#mod_HoodId }
-  set mod_HoodId(value: string | undefined) {
+  #mod_CarcaseHeight?: number;
+  get mod_CarcaseHeight(): number | undefined { return this.#mod_CarcaseHeight }
+  set mod_CarcaseHeight(value: number | undefined) {
     if (this._adcFinished) {
-      logError("The property 'mod_HoodId' must not be changed after the module was completed with 'afterDataCompletion'");
+      logError("The property 'mod_CarcaseHeight' must not be changed after the module was completed with 'afterDataCompletion'");
       return;
     }
-    if (this.#mod_HoodId === value) return;
-    this.#mod_HoodId = value;
+    if (this.#mod_CarcaseHeight === value) return;
+    this.#mod_CarcaseHeight = value;
   }
 
-  mod_HoodId_matrix?: IMatrix_mod_HoodId;
+  mod_CarcaseHeight_matrix?: IMatrix_mod_CarcaseHeight;
+  #mod_CarcaseDepth?: number;
+  get mod_CarcaseDepth(): number | undefined { return this.#mod_CarcaseDepth }
+  set mod_CarcaseDepth(value: number | undefined) {
+    if (this._adcFinished) {
+      logError("The property 'mod_CarcaseDepth' must not be changed after the module was completed with 'afterDataCompletion'");
+      return;
+    }
+    if (this.#mod_CarcaseDepth === value) return;
+    this.#mod_CarcaseDepth = value;
+  }
+
+  mod_CarcaseDepth_matrix?: IMatrix_mod_CarcaseDepth;
+  #mod_CarcaseSpaceDimension: string[] = [];
+  get mod_CarcaseSpaceDimension(): string[] { return this.#mod_CarcaseSpaceDimension; }
+  #mod_HoodRailverttopbackthk?: number;
+  get mod_HoodRailverttopbackthk(): number | undefined { return this.#mod_HoodRailverttopbackthk }
+  set mod_HoodRailverttopbackthk(value: number | undefined) {
+    if (this._adcFinished) {
+      logError("The property 'mod_HoodRailverttopbackthk' must not be changed after the module was completed with 'afterDataCompletion'");
+      return;
+    }
+    if (this.#mod_HoodRailverttopbackthk === value) return;
+    this.#mod_HoodRailverttopbackthk = value;
+  }
+
+  mod_HoodRailverttopbackthk_matrix?: IMatrix_mod_HoodRailverttopbackthk;
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
-    res.set('mod_CarcaseDepth', this.mod_CarcaseDepth);
-    res.set('mod_CarcaseHeight', this.mod_CarcaseHeight);
+    res.set('mod_HoodInformation', this.mod_HoodInformation);
     res.set('mod_CarcaseWidth', this.mod_CarcaseWidth);
-    res.set('mod_Originpos', JSON.stringify(this.mod_Originpos));
-    res.set('mod_HoodId', this.mod_HoodId);
+    res.set('mod_CarcaseHeight', this.mod_CarcaseHeight);
+    res.set('mod_CarcaseDepth', this.mod_CarcaseDepth);
+    res.set('mod_CarcaseSpaceDimension', JSON.stringify(this.mod_CarcaseSpaceDimension));
+    res.set('mod_HoodRailverttopbackthk', this.mod_HoodRailverttopbackthk);
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -253,16 +281,10 @@ export class OD_M_mc_HoodInsert01 extends OD_Base implements dc_mc_HoodInsert01
     this._contextData = json['contextData'];
     // only take over the attributes we know...
     {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_CarcaseDepth');
-      const val = _toFloat(json['attributes']['mod_CarcaseDepth'], 'mod_CarcaseDepth');
+      internal_enterValidateVariant(this.modId, this._id, 'mod_HoodInformation');
+      const val = _toString(json['attributes']['mod_HoodInformation'], 'mod_HoodInformation');
       internal_leaveValidateVariant();
-      this.mod_CarcaseDepth = val;
-    }
-    {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_CarcaseHeight');
-      const val = _toFloat(json['attributes']['mod_CarcaseHeight'], 'mod_CarcaseHeight');
-      internal_leaveValidateVariant();
-      this.mod_CarcaseHeight = val;
+      this.mod_HoodInformation = val;
     }
     {
       internal_enterValidateVariant(this.modId, this._id, 'mod_CarcaseWidth');
@@ -271,10 +293,22 @@ export class OD_M_mc_HoodInsert01 extends OD_Base implements dc_mc_HoodInsert01
       this.mod_CarcaseWidth = val;
     }
     {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_HoodId');
-      const val = _toString(json['attributes']['mod_HoodId'], 'mod_HoodId');
+      internal_enterValidateVariant(this.modId, this._id, 'mod_CarcaseHeight');
+      const val = _toFloat(json['attributes']['mod_CarcaseHeight'], 'mod_CarcaseHeight');
       internal_leaveValidateVariant();
-      this.mod_HoodId = val;
+      this.mod_CarcaseHeight = val;
+    }
+    {
+      internal_enterValidateVariant(this.modId, this._id, 'mod_CarcaseDepth');
+      const val = _toFloat(json['attributes']['mod_CarcaseDepth'], 'mod_CarcaseDepth');
+      internal_leaveValidateVariant();
+      this.mod_CarcaseDepth = val;
+    }
+    {
+      internal_enterValidateVariant(this.modId, this._id, 'mod_HoodRailverttopbackthk');
+      const val = _toFloat(json['attributes']['mod_HoodRailverttopbackthk'], 'mod_HoodRailverttopbackthk');
+      internal_leaveValidateVariant();
+      this.mod_HoodRailverttopbackthk = val;
     }
     if (withSubModules && json['modules']) {
       json['modules'].forEach((subMod: any) => { this.m.push(loadOrderData(subMod, this, manufacturerMode)) });
@@ -283,28 +317,14 @@ export class OD_M_mc_HoodInsert01 extends OD_Base implements dc_mc_HoodInsert01
   }
   #dataCompletionAssignDerivedData() {
     internal_enterDataCompletionAssignDerivedData(this.modId, this._id);
-    if (this.mod_CarcaseDepth === undefined) {
+    if (this.mod_HoodInformation === undefined) {
       let s = this.parentBase;
       // try to find a parent with a valid value
       while (s !== undefined) {
-        if (s.variants.includes('mod_CarcaseDepth')) {
-          let pv = <IModVar_mod_CarcaseDepth>s;
-          if (pv.mod_CarcaseDepth !== undefined) {
-            this.mod_CarcaseDepth = (<IModVar_mod_CarcaseDepth>s).mod_CarcaseDepth;
-            break;
-          };
-        }
-        s = s.parentBase;
-      }
-    }
-    if (this.mod_CarcaseHeight === undefined) {
-      let s = this.parentBase;
-      // try to find a parent with a valid value
-      while (s !== undefined) {
-        if (s.variants.includes('mod_CarcaseHeight')) {
-          let pv = <IModVar_mod_CarcaseHeight>s;
-          if (pv.mod_CarcaseHeight !== undefined) {
-            this.mod_CarcaseHeight = (<IModVar_mod_CarcaseHeight>s).mod_CarcaseHeight;
+        if (s.variants.includes('mod_HoodInformation')) {
+          let pv = <IModVar_mod_HoodInformation>s;
+          if (pv.mod_HoodInformation !== undefined) {
+            this.mod_HoodInformation = (<IModVar_mod_HoodInformation>s).mod_HoodInformation;
             break;
           };
         }
@@ -325,6 +345,34 @@ export class OD_M_mc_HoodInsert01 extends OD_Base implements dc_mc_HoodInsert01
         s = s.parentBase;
       }
     }
+    if (this.mod_CarcaseHeight === undefined) {
+      let s = this.parentBase;
+      // try to find a parent with a valid value
+      while (s !== undefined) {
+        if (s.variants.includes('mod_CarcaseHeight')) {
+          let pv = <IModVar_mod_CarcaseHeight>s;
+          if (pv.mod_CarcaseHeight !== undefined) {
+            this.mod_CarcaseHeight = (<IModVar_mod_CarcaseHeight>s).mod_CarcaseHeight;
+            break;
+          };
+        }
+        s = s.parentBase;
+      }
+    }
+    if (this.mod_CarcaseDepth === undefined) {
+      let s = this.parentBase;
+      // try to find a parent with a valid value
+      while (s !== undefined) {
+        if (s.variants.includes('mod_CarcaseDepth')) {
+          let pv = <IModVar_mod_CarcaseDepth>s;
+          if (pv.mod_CarcaseDepth !== undefined) {
+            this.mod_CarcaseDepth = (<IModVar_mod_CarcaseDepth>s).mod_CarcaseDepth;
+            break;
+          };
+        }
+        s = s.parentBase;
+      }
+    }
     internal_leaveDataCompletionAssignDerivedData();
   }
 
@@ -334,8 +382,11 @@ export class OD_M_mc_HoodInsert01 extends OD_Base implements dc_mc_HoodInsert01
   }
   #dataCompletionSetDefaultValues() {
     internal_enterDataCompletionSetDefault(this.modId, this._id);
-    if (this.mod_HoodId === undefined) {
-      this.mod_HoodId = "None";
+    if (this.mod_HoodInformation === undefined) {
+      this.mod_HoodInformation = "";
+    }
+    if (this.mod_HoodRailverttopbackthk === undefined) {
+      this.mod_HoodRailverttopbackthk = 19;
     }
     internal_leaveDataCompletionSetDefault();
   }
@@ -370,63 +421,90 @@ export class OD_M_mc_HoodInsert01 extends OD_Base implements dc_mc_HoodInsert01
     this.#manufacturerDataCompletionInternal();
     this.m.forEach(subMod => subMod.manufacturerDataCompletion());
   }
-  #manufacturerDataCompletionInternal = mc_HoodInsert01_manufacturerDataCompletion;
+  #manufacturerDataCompletionInternal = mc_HoodCarcaseParts01_manufacturerDataCompletion;
   override afterDataCompletion(): void {
     if (this._adcFinished) return;
     this._adcFinished = true;
     this.validateSelections();
-    var adc = new OD_M_mc_HoodInsert01_NonNull(this);
+    var adc = new OD_M_mc_HoodCarcaseParts01_NonNull(this);
     adc.afterDataCompletion();
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
   }
-  seal(): IModuleNonNull_mc_HoodInsert01 {
+  override prepareContext(contextRoots: OD_Base[]): void {
+    super.prepareContext(contextRoots);
+    this.internallyPrepareContext();
+    this.m.forEach(subMod => subMod.prepareContext(contextRoots));
+  }
+  internallyPrepareContext(): void {
+    this.#prepareContextInternal();
+  }
+  #prepareContextInternal = mc_HoodCarcaseParts01_prepareContext;
+  seal(): IModuleNonNull_mc_HoodCarcaseParts01 {
     this.afterDataCompletion();
-    const adc = new OD_M_mc_HoodInsert01_NonNull(this);
+    const adc = new OD_M_mc_HoodCarcaseParts01_NonNull(this);
     return adc;
   }
 
-  addOD_M_mc_ApplianceGraphic(index?: number): dc_mc_ApplianceGraphic {
-    var m = new OD_M_mc_ApplianceGraphic(this);
-    m.dataCompletion();
-    if (this._manufacturerMode) {
-      m.manufacturerDataCompletion();
-    }
-    if (index !== undefined) {
-      this.m.splice(index, 0, m);
-    } else {
-      this.m.push(m);
-    }
-    return m;
-  }
   override validateSelections(): void {
-    this.mod_CarcaseDepth_matrix = VariantValidation.mod_CarcaseDepth(this, this.mod_CarcaseDepth);
-    this.mod_CarcaseHeight_matrix = VariantValidation.mod_CarcaseHeight(this, this.mod_CarcaseHeight);
+    this.mod_HoodInformation_matrix = VariantValidation.mod_HoodInformation(this, this.mod_HoodInformation);
     this.mod_CarcaseWidth_matrix = VariantValidation.mod_CarcaseWidth(this, this.mod_CarcaseWidth);
-    this.mod_HoodId_matrix = VariantValidation.mod_HoodId(this, this.mod_HoodId);
+    this.mod_CarcaseHeight_matrix = VariantValidation.mod_CarcaseHeight(this, this.mod_CarcaseHeight);
+    this.mod_CarcaseDepth_matrix = VariantValidation.mod_CarcaseDepth(this, this.mod_CarcaseDepth);
+    this.mod_HoodRailverttopbackthk_matrix = VariantValidation.mod_HoodRailverttopbackthk(this, this.mod_HoodRailverttopbackthk);
   }
 
   override calculateContainerModules(): void {
-    let ccm = new OD_M_mc_HoodInsert01_NonNull(this);
+    let ccm = new OD_M_mc_HoodCarcaseParts01_NonNull(this);
     ccm.calculateContainerModules();
     this.m.forEach(subMod => subMod.calculateContainerModules());
   }
 
+  addpart_HoodRail(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodRail_PartVarsWritable {
+    var c = new P_part_HoodRail(this._selfNonNull, x, y, z, dimx, dimy, dimz, undefined);
+    this.p.push(c);
+    return c;
+  }
+  addpart_HoodShelftop(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodShelftop_PartVarsWritable {
+    var c = new P_part_HoodShelftop(this._selfNonNull, x, y, z, dimx, dimy, dimz, undefined);
+    this.p.push(c);
+    return c;
+  }
+  addpart_HoodShelfbtm(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodShelfbtm_PartVarsWritable {
+    var c = new P_part_HoodShelfbtm(this._selfNonNull, x, y, z, dimx, dimy, dimz, undefined);
+    this.p.push(c);
+    return c;
+  }
+  addpart_HoodBackwall(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodBackwall_PartVarsWritable {
+    var c = new P_part_HoodBackwall(this._selfNonNull, x, y, z, dimx, dimy, dimz, undefined);
+    this.p.push(c);
+    return c;
+  }
+  addpart_HoodSidepanelleft(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodSidepanelleft_PartVarsWritable {
+    var c = new P_part_HoodSidepanelleft(this._selfNonNull, x, y, z, dimx, dimy, dimz, undefined);
+    this.p.push(c);
+    return c;
+  }
+  addpart_HoodSidepanelright(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodSidepanelright_PartVarsWritable {
+    var c = new P_part_HoodSidepanelright(this._selfNonNull, x, y, z, dimx, dimy, dimz, undefined);
+    this.p.push(c);
+    return c;
+  }
 
   override createBuildPlan(): void {
-    var cbp = new OD_M_mc_HoodInsert01_NonNull(this);
+    var cbp = new OD_M_mc_HoodCarcaseParts01_NonNull(this);
     cbp.createBuildPlan();
     this.m.forEach(subMod => subMod.createBuildPlan());
   }
 
 }
 
-class OD_M_mc_HoodInsert01_NonNull implements cbp_mc_HoodInsert01, adc_mc_HoodInsert01, ccm_mc_HoodInsert01, IPartParentsNonNull_mc_BaseunitFridge01_mc_Dishwasher01_mc_Fridge01_mc_Hob01_mc_HoodInsert01_mc_Oven01_mc_Sink01_me_LaundryMachine_mf_Sink_mr_Hood {
-  constructor(parent: OD_M_mc_HoodInsert01) {
+class OD_M_mc_HoodCarcaseParts01_NonNull implements cbp_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, ccm_mc_HoodCarcaseParts01, IPartParentsNonNull_mc_HoodCarcaseParts01 {
+  constructor(parent: OD_M_mc_HoodCarcaseParts01) {
     this.#internalParent = parent;
     this.parent = parent.parent;
   }
-  #internalParent: OD_M_mc_HoodInsert01;
+  #internalParent: OD_M_mc_HoodCarcaseParts01;
 
   get _id(): string { return this.#internalParent._id; }
   get modId(): string { return this.#internalParent.modId; }
@@ -439,19 +517,19 @@ class OD_M_mc_HoodInsert01_NonNull implements cbp_mc_HoodInsert01, adc_mc_HoodIn
   getArticlePos(): ArticlePos {
     return this.#internalParent.getArticlePos();
   }
-  ct_tab_ApplianceGraphicLibrary: ct2_tab_ApplianceGraphicLibrary = new ct2_tab_ApplianceGraphicLibrary();
+  ct_tab_HoodAssemblyParts: ct2_tab_HoodAssemblyParts = new ct2_tab_HoodAssemblyParts();
   createBuildPlan(): void {
     this.#createBuildPlanInternal();
   }
-  #createBuildPlanInternal = mc_HoodInsert01_createBuildPlan;
+  #createBuildPlanInternal = mc_HoodCarcaseParts01_createBuildPlan;
   afterDataCompletion(): void {
     this.#afterDataCompletionInternal();
   }
-  #afterDataCompletionInternal = mc_HoodInsert01_afterDataCompletion;
+  #afterDataCompletionInternal = mc_HoodCarcaseParts01_afterDataCompletion;
   calculateContainerModules(): void {
     this.#calculateContainerModulesInternal();
   }
-  #calculateContainerModulesInternal = mc_HoodInsert01_calculateContainerModules;
+  #calculateContainerModulesInternal = mc_HoodCarcaseParts01_calculateContainerModules;
   createPartGroup(groupName: string, part: PartBase): PartGroup {
     return this.#internalParent.createPartGroup(groupName, part);
   }
@@ -472,24 +550,42 @@ class OD_M_mc_HoodInsert01_NonNull implements cbp_mc_HoodInsert01, adc_mc_HoodIn
   }
   get m(): OD_Base[] { return this.#internalParent.m; }
   get g(): IGlobalVars { return this.#internalParent.g; }
-  parent: IModParents_me_HoodInsert;
-  get mod_CarcaseDepth(): number {
-    return this.#internalParent.mod_CarcaseDepth!;
+  parent: IModParents_mc_Storageunit01;
+  addpart_HoodRail(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodRail_PartVarsWritable {
+    return this.#internalParent.addpart_HoodRail(x, y, z, dimx, dimy, dimz);
   }
-  get mod_CarcaseHeight(): number {
-    return this.#internalParent.mod_CarcaseHeight!;
+  addpart_HoodShelftop(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodShelftop_PartVarsWritable {
+    return this.#internalParent.addpart_HoodShelftop(x, y, z, dimx, dimy, dimz);
+  }
+  addpart_HoodShelfbtm(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodShelfbtm_PartVarsWritable {
+    return this.#internalParent.addpart_HoodShelfbtm(x, y, z, dimx, dimy, dimz);
+  }
+  addpart_HoodBackwall(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodBackwall_PartVarsWritable {
+    return this.#internalParent.addpart_HoodBackwall(x, y, z, dimx, dimy, dimz);
+  }
+  addpart_HoodSidepanelleft(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodSidepanelleft_PartVarsWritable {
+    return this.#internalParent.addpart_HoodSidepanelleft(x, y, z, dimx, dimy, dimz);
+  }
+  addpart_HoodSidepanelright(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodSidepanelright_PartVarsWritable {
+    return this.#internalParent.addpart_HoodSidepanelright(x, y, z, dimx, dimy, dimz);
+  }
+  get mod_HoodInformation(): string {
+    return this.#internalParent.mod_HoodInformation!;
   }
   get mod_CarcaseWidth(): number {
     return this.#internalParent.mod_CarcaseWidth!;
   }
-  get mod_Originpos(): number[] {
-    return this.#internalParent.mod_Originpos!;
+  get mod_CarcaseHeight(): number {
+    return this.#internalParent.mod_CarcaseHeight!;
   }
-  get mod_HoodId(): string {
-    return this.#internalParent.mod_HoodId!;
+  get mod_CarcaseDepth(): number {
+    return this.#internalParent.mod_CarcaseDepth!;
   }
-  addOD_M_mc_ApplianceGraphic(index?: number): dc_mc_ApplianceGraphic {
-    return this.#internalParent.addOD_M_mc_ApplianceGraphic(index);
+  get mod_CarcaseSpaceDimension(): string[] {
+    return this.#internalParent.mod_CarcaseSpaceDimension!;
+  }
+  get mod_HoodRailverttopbackthk(): number {
+    return this.#internalParent.mod_HoodRailverttopbackthk!;
   }
 }
 

@@ -112,15 +112,17 @@ import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01, 
 import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01, cbp_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
 import { dc_mc_SegmentFront01, adc_mc_SegmentFront01, cbp_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
 import { dc_me_HoodInsert, adc_me_HoodInsert, cbp_me_HoodInsert } from '../modules/me_HoodInsert'
-import { dc_mc_HoodInsert01, adc_mc_HoodInsert01, cbp_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
 import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, cbp_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
 import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder, cbp_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
 import { dc_mr_CeilingFiller, adc_mr_CeilingFiller, cbp_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
 import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01, cbp_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
 import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder, cbp_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
 import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder, cbp_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
-import { dc_mr_Filler, adc_mr_Filler, cbp_mr_Filler } from '../modules/mr_Filler'
-import { dc_mc_Filler01, adc_mc_Filler01, cbp_mc_Filler01 } from '../modules/mc_Filler01'
+import { dc_mr_FillerStraight, adc_mr_FillerStraight, cbp_mr_FillerStraight } from '../modules/mr_FillerStraight'
+import { dc_mc_FillerStraight01, adc_mc_FillerStraight01, cbp_mc_FillerStraight01 } from '../modules/mc_FillerStraight01'
+import { dc_mc_FillerHardware01, adc_mc_FillerHardware01, cbp_mc_FillerHardware01 } from '../modules/mc_FillerHardware01'
+import { dc_mc_FillerSupportPanels01, adc_mc_FillerSupportPanels01, cbp_mc_FillerSupportPanels01 } from '../modules/mc_FillerSupportPanels01'
+import { dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, cbp_mc_HoodCarcaseParts01 } from '../modules/mc_HoodCarcaseParts01'
 import { ITableParents_mc_Handle01_mc_Handlestrip01 } from '../var-interfaces';
 
 export interface cti_tab_HandleSettings {
@@ -169,7 +171,7 @@ export class ct2_tab_HandleSettings {
 
 export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
   {
-    _id: 2384,
+    _id: 2567,
     in_PartGroup: "Door",
     in_HandlePosType: "01",
     ReferencePointX: "Border",
@@ -179,7 +181,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorSide"
   }
   , {
-    _id: 2385,
+    _id: 2568,
     in_PartGroup: "Door",
     in_HandlePosType: "02",
     ReferencePointX: "Center",
@@ -189,7 +191,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2386,
+    _id: 2569,
     in_PartGroup: "Door",
     in_HandlePosType: "03",
     ReferencePointX: "Border",
@@ -199,7 +201,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleVertSide"
   }
   , {
-    _id: 2387,
+    _id: 2570,
     in_PartGroup: "Door",
     in_HandlePosType: "04",
     ReferencePointX: "Border",
@@ -209,7 +211,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleVertSideInverse"
   }
   , {
-    _id: 2388,
+    _id: 2571,
     in_PartGroup: "Door",
     in_HandlePosType: "05",
     ReferencePointX: "Center",
@@ -219,7 +221,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleVertMiddle"
   }
   , {
-    _id: 2389,
+    _id: 2572,
     in_PartGroup: "Door",
     in_HandlePosType: "06",
     ReferencePointX: "Center",
@@ -229,7 +231,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleVertMiddleInverse"
   }
   , {
-    _id: 2390,
+    _id: 2573,
     in_PartGroup: "Door",
     in_HandlePosType: "07",
     ReferencePointX: "Center",
@@ -239,7 +241,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2391,
+    _id: 2574,
     in_PartGroup: "Door",
     in_HandlePosType: "08",
     ReferencePointX: "Border",
@@ -249,7 +251,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorSideInverse"
   }
   , {
-    _id: 2392,
+    _id: 2575,
     in_PartGroup: "Door",
     in_HandlePosType: "11",
     ReferencePointX: "Border",
@@ -259,7 +261,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorSide"
   }
   , {
-    _id: 2393,
+    _id: 2576,
     in_PartGroup: "Door",
     in_HandlePosType: "12",
     ReferencePointX: "Border",
@@ -269,7 +271,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2394,
+    _id: 2577,
     in_PartGroup: "Door",
     in_HandlePosType: "13",
     ReferencePointX: "Center",
@@ -279,7 +281,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleVertSide"
   }
   , {
-    _id: 2395,
+    _id: 2578,
     in_PartGroup: "Door",
     in_HandlePosType: "14",
     ReferencePointX: "Center",
@@ -289,7 +291,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleVertSideInverse"
   }
   , {
-    _id: 2396,
+    _id: 2579,
     in_PartGroup: "Door",
     in_HandlePosType: "50",
     ReferencePointX: "Border",
@@ -299,7 +301,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeTop"
   }
   , {
-    _id: 2397,
+    _id: 2580,
     in_PartGroup: "Door",
     in_HandlePosType: "51",
     ReferencePointX: "Border",
@@ -309,7 +311,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeBtm"
   }
   , {
-    _id: 2398,
+    _id: 2581,
     in_PartGroup: "Door",
     in_HandlePosType: "52",
     ReferencePointX: "Border",
@@ -319,7 +321,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeBtmTop"
   }
   , {
-    _id: 2399,
+    _id: 2582,
     in_PartGroup: "Door",
     in_HandlePosType: "53",
     ReferencePointX: "Border",
@@ -329,7 +331,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeLeft"
   }
   , {
-    _id: 2400,
+    _id: 2583,
     in_PartGroup: "Door",
     in_HandlePosType: "54",
     ReferencePointX: "Border",
@@ -339,7 +341,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeRight"
   }
   , {
-    _id: 2401,
+    _id: 2584,
     in_PartGroup: "Door",
     in_HandlePosType: "55",
     ReferencePointX: "Border",
@@ -349,7 +351,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeLeftRight"
   }
   , {
-    _id: 2402,
+    _id: 2585,
     in_PartGroup: "Drawer",
     in_HandlePosType: "01",
     ReferencePointX: "Center",
@@ -359,7 +361,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2403,
+    _id: 2586,
     in_PartGroup: "Drawer",
     in_HandlePosType: "02",
     ReferencePointX: "Center",
@@ -369,7 +371,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2404,
+    _id: 2587,
     in_PartGroup: "Drawer",
     in_HandlePosType: "03",
     ReferencePointX: "Center",
@@ -379,7 +381,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2405,
+    _id: 2588,
     in_PartGroup: "Drawer",
     in_HandlePosType: "04",
     ReferencePointX: "Center",
@@ -389,7 +391,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2406,
+    _id: 2589,
     in_PartGroup: "Drawer",
     in_HandlePosType: "05",
     ReferencePointX: "Center",
@@ -399,7 +401,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2407,
+    _id: 2590,
     in_PartGroup: "Drawer",
     in_HandlePosType: "06",
     ReferencePointX: "Center",
@@ -409,7 +411,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2408,
+    _id: 2591,
     in_PartGroup: "Drawer",
     in_HandlePosType: "07",
     ReferencePointX: "Center",
@@ -419,7 +421,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2409,
+    _id: 2592,
     in_PartGroup: "Drawer",
     in_HandlePosType: "08",
     ReferencePointX: "Center",
@@ -429,7 +431,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2410,
+    _id: 2593,
     in_PartGroup: "Drawer",
     in_HandlePosType: "11",
     ReferencePointX: "Center",
@@ -439,7 +441,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2411,
+    _id: 2594,
     in_PartGroup: "Drawer",
     in_HandlePosType: "12",
     ReferencePointX: "Center",
@@ -449,7 +451,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2412,
+    _id: 2595,
     in_PartGroup: "Drawer",
     in_HandlePosType: "13",
     ReferencePointX: "Center",
@@ -459,7 +461,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2413,
+    _id: 2596,
     in_PartGroup: "Drawer",
     in_HandlePosType: "14",
     ReferencePointX: "Center",
@@ -469,7 +471,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2414,
+    _id: 2597,
     in_PartGroup: "Drawer",
     in_HandlePosType: "50",
     ReferencePointX: "Border",
@@ -479,7 +481,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeTop"
   }
   , {
-    _id: 2415,
+    _id: 2598,
     in_PartGroup: "Drawer",
     in_HandlePosType: "51",
     ReferencePointX: "Border",
@@ -489,7 +491,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeBtm"
   }
   , {
-    _id: 2416,
+    _id: 2599,
     in_PartGroup: "Drawer",
     in_HandlePosType: "52",
     ReferencePointX: "Border",
@@ -499,7 +501,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeBtmTop"
   }
   , {
-    _id: 2417,
+    _id: 2600,
     in_PartGroup: "Drawer",
     in_HandlePosType: "53",
     ReferencePointX: "Border",
@@ -509,7 +511,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeLeft"
   }
   , {
-    _id: 2418,
+    _id: 2601,
     in_PartGroup: "Drawer",
     in_HandlePosType: "54",
     ReferencePointX: "Border",
@@ -519,7 +521,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeRight"
   }
   , {
-    _id: 2419,
+    _id: 2602,
     in_PartGroup: "Drawer",
     in_HandlePosType: "55",
     ReferencePointX: "Border",
@@ -529,7 +531,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeLeftRight"
   }
   , {
-    _id: 2420,
+    _id: 2603,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "01",
     ReferencePointX: "Center",
@@ -539,7 +541,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2421,
+    _id: 2604,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "02",
     ReferencePointX: "Center",
@@ -549,7 +551,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2422,
+    _id: 2605,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "03",
     ReferencePointX: "Center",
@@ -559,7 +561,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2423,
+    _id: 2606,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "04",
     ReferencePointX: "Center",
@@ -569,7 +571,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2424,
+    _id: 2607,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "05",
     ReferencePointX: "Center",
@@ -579,7 +581,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2425,
+    _id: 2608,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "06",
     ReferencePointX: "Center",
@@ -589,7 +591,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2426,
+    _id: 2609,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "07",
     ReferencePointX: "Center",
@@ -599,7 +601,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2427,
+    _id: 2610,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "11",
     ReferencePointX: "Center",
@@ -609,7 +611,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2428,
+    _id: 2611,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "12",
     ReferencePointX: "Center",
@@ -619,7 +621,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2429,
+    _id: 2612,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "13",
     ReferencePointX: "Center",
@@ -629,7 +631,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2430,
+    _id: 2613,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "14",
     ReferencePointX: "Center",
@@ -639,7 +641,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2431,
+    _id: 2614,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "50",
     ReferencePointX: "Border",
@@ -649,7 +651,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeTop"
   }
   , {
-    _id: 2432,
+    _id: 2615,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "51",
     ReferencePointX: "Border",
@@ -659,7 +661,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeBtm"
   }
   , {
-    _id: 2433,
+    _id: 2616,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "52",
     ReferencePointX: "Border",
@@ -669,7 +671,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeBtmTop"
   }
   , {
-    _id: 2434,
+    _id: 2617,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "53",
     ReferencePointX: "Border",
@@ -679,7 +681,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeLeft"
   }
   , {
-    _id: 2435,
+    _id: 2618,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "54",
     ReferencePointX: "Border",
@@ -689,7 +691,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeRight"
   }
   , {
-    _id: 2436,
+    _id: 2619,
     in_PartGroup: "Fliplift",
     in_HandlePosType: "55",
     ReferencePointX: "Border",
@@ -699,7 +701,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeLeftRight"
   }
   , {
-    _id: 2437,
+    _id: 2620,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "01",
     ReferencePointX: "Center",
@@ -709,7 +711,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2438,
+    _id: 2621,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "02",
     ReferencePointX: "Center",
@@ -719,7 +721,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2439,
+    _id: 2622,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "03",
     ReferencePointX: "Center",
@@ -729,7 +731,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2440,
+    _id: 2623,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "04",
     ReferencePointX: "Center",
@@ -739,7 +741,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2441,
+    _id: 2624,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "05",
     ReferencePointX: "Center",
@@ -749,7 +751,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2442,
+    _id: 2625,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "06",
     ReferencePointX: "Center",
@@ -759,7 +761,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2443,
+    _id: 2626,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "07",
     ReferencePointX: "Center",
@@ -769,7 +771,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2444,
+    _id: 2627,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "08",
     ReferencePointX: "Center",
@@ -779,7 +781,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2445,
+    _id: 2628,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "11",
     ReferencePointX: "Center",
@@ -789,7 +791,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2446,
+    _id: 2629,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "12",
     ReferencePointX: "Center",
@@ -799,7 +801,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2447,
+    _id: 2630,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "13",
     ReferencePointX: "Center",
@@ -809,7 +811,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2448,
+    _id: 2631,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "14",
     ReferencePointX: "Center",
@@ -819,7 +821,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2449,
+    _id: 2632,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "50",
     ReferencePointX: "Border",
@@ -829,7 +831,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeTop"
   }
   , {
-    _id: 2450,
+    _id: 2633,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "51",
     ReferencePointX: "Border",
@@ -839,7 +841,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeBtm"
   }
   , {
-    _id: 2451,
+    _id: 2634,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "52",
     ReferencePointX: "Border",
@@ -849,7 +851,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeBtmTop"
   }
   , {
-    _id: 2452,
+    _id: 2635,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "53",
     ReferencePointX: "Border",
@@ -859,7 +861,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeLeft"
   }
   , {
-    _id: 2453,
+    _id: 2636,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "54",
     ReferencePointX: "Border",
@@ -869,7 +871,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeRight"
   }
   , {
-    _id: 2454,
+    _id: 2637,
     in_PartGroup: "Dishwasher",
     in_HandlePosType: "55",
     ReferencePointX: "Border",
@@ -879,7 +881,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeLeftRight"
   }
   , {
-    _id: 2455,
+    _id: 2638,
     in_PartGroup: "Pullout",
     in_HandlePosType: "02",
     ReferencePointX: "Center",
@@ -889,7 +891,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2456,
+    _id: 2639,
     in_PartGroup: "Pullout",
     in_HandlePosType: "03",
     ReferencePointX: "Center",
@@ -899,7 +901,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2457,
+    _id: 2640,
     in_PartGroup: "Pullout",
     in_HandlePosType: "04",
     ReferencePointX: "Center",
@@ -909,7 +911,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2458,
+    _id: 2641,
     in_PartGroup: "Pullout",
     in_HandlePosType: "05",
     ReferencePointX: "Center",
@@ -919,7 +921,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2459,
+    _id: 2642,
     in_PartGroup: "Pullout",
     in_HandlePosType: "06",
     ReferencePointX: "Center",
@@ -929,7 +931,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2460,
+    _id: 2643,
     in_PartGroup: "Pullout",
     in_HandlePosType: "07",
     ReferencePointX: "Center",
@@ -939,7 +941,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2461,
+    _id: 2644,
     in_PartGroup: "Pullout",
     in_HandlePosType: "08",
     ReferencePointX: "Center",
@@ -949,7 +951,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2462,
+    _id: 2645,
     in_PartGroup: "Pullout",
     in_HandlePosType: "50",
     ReferencePointX: "Center",
@@ -959,7 +961,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2463,
+    _id: 2646,
     in_PartGroup: "Pullout",
     in_HandlePosType: "11",
     ReferencePointX: "Center",
@@ -969,7 +971,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2464,
+    _id: 2647,
     in_PartGroup: "Pullout",
     in_HandlePosType: "12",
     ReferencePointX: "Center",
@@ -979,7 +981,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2465,
+    _id: 2648,
     in_PartGroup: "Pullout",
     in_HandlePosType: "13",
     ReferencePointX: "Center",
@@ -989,7 +991,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddle"
   }
   , {
-    _id: 2466,
+    _id: 2649,
     in_PartGroup: "Pullout",
     in_HandlePosType: "14",
     ReferencePointX: "Center",
@@ -999,7 +1001,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "HandleHorMiddleInverse"
   }
   , {
-    _id: 2467,
+    _id: 2650,
     in_PartGroup: "Pullout",
     in_HandlePosType: "50",
     ReferencePointX: "Border",
@@ -1009,7 +1011,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeTop"
   }
   , {
-    _id: 2468,
+    _id: 2651,
     in_PartGroup: "Pullout",
     in_HandlePosType: "51",
     ReferencePointX: "Border",
@@ -1019,7 +1021,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeBtm"
   }
   , {
-    _id: 2469,
+    _id: 2652,
     in_PartGroup: "Pullout",
     in_HandlePosType: "52",
     ReferencePointX: "Border",
@@ -1029,7 +1031,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeBtmTop"
   }
   , {
-    _id: 2470,
+    _id: 2653,
     in_PartGroup: "Pullout",
     in_HandlePosType: "53",
     ReferencePointX: "Border",
@@ -1039,7 +1041,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeLeft"
   }
   , {
-    _id: 2471,
+    _id: 2654,
     in_PartGroup: "Pullout",
     in_HandlePosType: "54",
     ReferencePointX: "Border",
@@ -1049,7 +1051,7 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     HandleOrientation: "StripeRight"
   }
   , {
-    _id: 2472,
+    _id: 2655,
     in_PartGroup: "Pullout",
     in_HandlePosType: "55",
     ReferencePointX: "Border",
@@ -1057,5 +1059,205 @@ export var ct_tab_HandleSettings: ICT_tab_HandleSettings[] = [
     DistanceX: 0,
     DistanceY: 0,
     HandleOrientation: "StripeLeftRight"
+  }
+  , {
+    _id: 2656,
+    in_PartGroup: "Dishwasher",
+    in_HandlePosType: "03.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddle"
+  }
+  , {
+    _id: 2657,
+    in_PartGroup: "Door",
+    in_HandlePosType: "03.1",
+    ReferencePointX: "Border",
+    ReferencePointY: "Border",
+    DistanceX: 30,
+    DistanceY: 30,
+    HandleOrientation: "HandleVertSideTopAligned"
+  }
+  , {
+    _id: 2658,
+    in_PartGroup: "Drawer",
+    in_HandlePosType: "03.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddle"
+  }
+  , {
+    _id: 2659,
+    in_PartGroup: "Fliplift",
+    in_HandlePosType: "03.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddle"
+  }
+  , {
+    _id: 2660,
+    in_PartGroup: "Pullout",
+    in_HandlePosType: "03.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddle"
+  }
+  , {
+    _id: 2661,
+    in_PartGroup: "Door",
+    in_HandlePosType: "04.1",
+    ReferencePointX: "Border",
+    ReferencePointY: "Border",
+    DistanceX: 30,
+    DistanceY: 30,
+    HandleOrientation: "HandleVertSideInverseTopAligned"
+  }
+  , {
+    _id: 2662,
+    in_PartGroup: "Drawer",
+    in_HandlePosType: "04.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddleInverse"
+  }
+  , {
+    _id: 2663,
+    in_PartGroup: "Fliplift",
+    in_HandlePosType: "04.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddleInverse"
+  }
+  , {
+    _id: 2664,
+    in_PartGroup: "Dishwasher",
+    in_HandlePosType: "04.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddleInverse"
+  }
+  , {
+    _id: 2665,
+    in_PartGroup: "Pullout",
+    in_HandlePosType: "04.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddle"
+  }
+  , {
+    _id: 2666,
+    in_PartGroup: "Door",
+    in_HandlePosType: "05.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Center",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleVertMiddleTopAligned"
+  }
+  , {
+    _id: 2667,
+    in_PartGroup: "Drawer",
+    in_HandlePosType: "05.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddle"
+  }
+  , {
+    _id: 2668,
+    in_PartGroup: "Fliplift",
+    in_HandlePosType: "05.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddleInverse"
+  }
+  , {
+    _id: 2669,
+    in_PartGroup: "Dishwasher",
+    in_HandlePosType: "05.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddleInverse"
+  }
+  , {
+    _id: 2670,
+    in_PartGroup: "Pullout",
+    in_HandlePosType: "05.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddleInverse"
+  }
+  , {
+    _id: 2671,
+    in_PartGroup: "Door",
+    in_HandlePosType: "06.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Center",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleVertMiddleInverseTopAligned"
+  }
+  , {
+    _id: 2672,
+    in_PartGroup: "Drawer",
+    in_HandlePosType: "06.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddleInverse"
+  }
+  , {
+    _id: 2673,
+    in_PartGroup: "Fliplift",
+    in_HandlePosType: "06.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddleInverse"
+  }
+  , {
+    _id: 2674,
+    in_PartGroup: "Dishwasher",
+    in_HandlePosType: "06.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddleInverse"
+  }
+  , {
+    _id: 2675,
+    in_PartGroup: "Pullout",
+    in_HandlePosType: "06.1",
+    ReferencePointX: "Center",
+    ReferencePointY: "Border",
+    DistanceX: 0,
+    DistanceY: 30,
+    HandleOrientation: "HandleHorMiddle"
   }
 ];

@@ -112,15 +112,17 @@ import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01, 
 import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01, cbp_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
 import { dc_mc_SegmentFront01, adc_mc_SegmentFront01, cbp_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
 import { dc_me_HoodInsert, adc_me_HoodInsert, cbp_me_HoodInsert } from '../modules/me_HoodInsert'
-import { dc_mc_HoodInsert01, adc_mc_HoodInsert01, cbp_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
 import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, cbp_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
 import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder, cbp_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
 import { dc_mr_CeilingFiller, adc_mr_CeilingFiller, cbp_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
 import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01, cbp_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
 import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder, cbp_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
 import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder, cbp_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
-import { dc_mr_Filler, adc_mr_Filler, cbp_mr_Filler } from '../modules/mr_Filler'
-import { dc_mc_Filler01, adc_mc_Filler01, cbp_mc_Filler01 } from '../modules/mc_Filler01'
+import { dc_mr_FillerStraight, adc_mr_FillerStraight, cbp_mr_FillerStraight } from '../modules/mr_FillerStraight'
+import { dc_mc_FillerStraight01, adc_mc_FillerStraight01, cbp_mc_FillerStraight01 } from '../modules/mc_FillerStraight01'
+import { dc_mc_FillerHardware01, adc_mc_FillerHardware01, cbp_mc_FillerHardware01 } from '../modules/mc_FillerHardware01'
+import { dc_mc_FillerSupportPanels01, adc_mc_FillerSupportPanels01, cbp_mc_FillerSupportPanels01 } from '../modules/mc_FillerSupportPanels01'
+import { dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, cbp_mc_HoodCarcaseParts01 } from '../modules/mc_HoodCarcaseParts01'
 import { ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01 } from '../var-interfaces';
 
 export interface cti_tab_FrontConstruction {
@@ -132,7 +134,7 @@ export interface cti_tab_FrontConstruction {
   readonly in_MaxWidth: number;
   readonly in_MinHeight: number;
   readonly in_MaxHeight: number;
-  readonly in_HandleStrip?: string;
+  readonly in_HandleDesignGroup?: string;
   readonly in_HandlePosType?: string;
 }
 
@@ -170,7 +172,7 @@ export class ct2_tab_FrontConstruction {
     in_MaxWidth: number,
     in_MinHeight: number,
     in_MaxHeight: number,
-    in_HandleStrip: string | undefined,
+    in_HandleDesignGroup: string | undefined,
     in_HandlePosType: string | undefined,
   ): cto_tab_FrontConstruction | undefined {
     const res = ct_tab_FrontConstruction.find((p) =>
@@ -182,7 +184,7 @@ export class ct2_tab_FrontConstruction {
       && p.in_MaxWidth === in_MaxWidth
       && p.in_MinHeight === in_MinHeight
       && p.in_MaxHeight === in_MaxHeight
-      && p.in_HandleStrip === in_HandleStrip
+      && p.in_HandleDesignGroup === in_HandleDesignGroup
       && p.in_HandlePosType === in_HandlePosType
     );
     return res;
@@ -201,7 +203,7 @@ export class ct2_tab_FrontConstruction {
 
 export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
   {
-    _id: 339,
+    _id: 39,
     in_PartGroup: "Door",
     in_FrontProgram: "Classic",
     in_FrontColor: "All",
@@ -210,7 +212,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StandardPanel01",
@@ -242,7 +244,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 340,
+    _id: 40,
     in_PartGroup: "Drawer",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -251,7 +253,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StandardPanel01",
@@ -283,7 +285,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 341,
+    _id: 41,
     in_PartGroup: "Door",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -292,7 +294,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "StripGroup1",
+    in_HandleDesignGroup: "StripGroup1",
     in_HandlePosType: "StripTop",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StripTop01",
@@ -324,7 +326,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 342,
+    _id: 42,
     in_PartGroup: "Drawer",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -333,7 +335,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "StripGroup1",
+    in_HandleDesignGroup: "StripGroup1",
     in_HandlePosType: "StripTop",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StripTop01",
@@ -365,7 +367,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 343,
+    _id: 43,
     in_PartGroup: "Door",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -374,7 +376,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "StripGroup1",
+    in_HandleDesignGroup: "StripGroup1",
     in_HandlePosType: "StripBtm",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StripBtm01",
@@ -406,7 +408,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 344,
+    _id: 44,
     in_PartGroup: "Drawer",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -415,7 +417,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "StripGroup1",
+    in_HandleDesignGroup: "StripGroup1",
     in_HandlePosType: "StripBtm",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StripBtm01",
@@ -447,7 +449,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 345,
+    _id: 45,
     in_PartGroup: "Door",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -456,7 +458,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "StripGroup1",
+    in_HandleDesignGroup: "StripGroup1",
     in_HandlePosType: "StripLeft",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StripLeft01",
@@ -488,7 +490,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 346,
+    _id: 46,
     in_PartGroup: "Drawer",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -497,7 +499,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "StripGroup1",
+    in_HandleDesignGroup: "StripGroup1",
     in_HandlePosType: "StripLeft",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StripLeft01",
@@ -529,7 +531,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 347,
+    _id: 47,
     in_PartGroup: "Door",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -538,7 +540,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "StripGroup1",
+    in_HandleDesignGroup: "StripGroup1",
     in_HandlePosType: "StripRight",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StripRight01",
@@ -570,7 +572,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 348,
+    _id: 48,
     in_PartGroup: "Drawer",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -579,7 +581,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "StripGroup1",
+    in_HandleDesignGroup: "StripGroup1",
     in_HandlePosType: "StripRight",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StripRight01",
@@ -611,7 +613,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 349,
+    _id: 49,
     in_PartGroup: "Filler",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -620,7 +622,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StandardPanel01",
@@ -652,7 +654,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 350,
+    _id: 50,
     in_PartGroup: "Fliplift",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -661,7 +663,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StandardPanel01",
@@ -693,7 +695,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 351,
+    _id: 51,
     in_PartGroup: "Door",
     in_FrontProgram: "Nature",
     in_FrontColor: "All",
@@ -702,7 +704,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StandardPanel01",
@@ -734,7 +736,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 352,
+    _id: 52,
     in_PartGroup: "Drawer",
     in_FrontProgram: "Tradition",
     in_FrontColor: "All",
@@ -743,7 +745,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 220,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StandardPanel01",
@@ -775,7 +777,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 353,
+    _id: 53,
     in_PartGroup: "Door",
     in_FrontProgram: "Tradition",
     in_FrontColor: "All",
@@ -784,7 +786,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "WoodFrame01",
     FrontConstructionId: "TraditionFrame01",
@@ -816,7 +818,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 354,
+    _id: 54,
     in_PartGroup: "Drawer",
     in_FrontProgram: "Modern",
     in_FrontColor: "All",
@@ -825,7 +827,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 220,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StandardPanel01",
@@ -857,7 +859,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 355,
+    _id: 55,
     in_PartGroup: "Door",
     in_FrontProgram: "Modern",
     in_FrontColor: "All",
@@ -866,7 +868,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "WoodFrame01",
     FrontConstructionId: "ModernFrame01",
@@ -898,7 +900,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 356,
+    _id: 56,
     in_PartGroup: "Drawer",
     in_FrontProgram: "Tradition",
     in_FrontColor: "All",
@@ -907,7 +909,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 220,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "WoodFrame01",
     FrontConstructionId: "TraditionFrame01",
@@ -939,7 +941,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 357,
+    _id: 57,
     in_PartGroup: "Drawer",
     in_FrontProgram: "Modern",
     in_FrontColor: "All",
@@ -948,7 +950,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 220,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "WoodFrame01",
     FrontConstructionId: "ModernFrame01",
@@ -980,7 +982,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 358,
+    _id: 58,
     in_PartGroup: "Fliplift",
     in_FrontProgram: "Tradition",
     in_FrontColor: "All",
@@ -989,7 +991,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 299,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StandardPanel01",
@@ -1021,7 +1023,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 359,
+    _id: 59,
     in_PartGroup: "Fliplift",
     in_FrontProgram: "Tradition",
     in_FrontColor: "All",
@@ -1030,7 +1032,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 300,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "WoodFrame01",
     FrontConstructionId: "TraditionFrame01",
@@ -1062,7 +1064,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 360,
+    _id: 60,
     in_PartGroup: "Fliplift",
     in_FrontProgram: "Modern",
     in_FrontColor: "All",
@@ -1071,7 +1073,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 300,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "WoodFrame01",
     FrontConstructionId: "ModernFrame01",
@@ -1103,7 +1105,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 361,
+    _id: 61,
     in_PartGroup: "Fliplift",
     in_FrontProgram: "Modern",
     in_FrontColor: "All",
@@ -1112,7 +1114,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 299,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StandardPanel01",
@@ -1144,7 +1146,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 362,
+    _id: 62,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -1153,7 +1155,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StandardPanel01",
@@ -1185,7 +1187,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 363,
+    _id: 63,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -1194,7 +1196,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "StripGroup1",
+    in_HandleDesignGroup: "StripGroup1",
     in_HandlePosType: "StripBtm",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StripBtm01",
@@ -1226,7 +1228,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 364,
+    _id: 64,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -1235,7 +1237,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "StripGroup1",
+    in_HandleDesignGroup: "StripGroup1",
     in_HandlePosType: "StripLeft",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StripLeft01",
@@ -1267,7 +1269,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 365,
+    _id: 65,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -1276,7 +1278,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "StripGroup1",
+    in_HandleDesignGroup: "StripGroup1",
     in_HandlePosType: "StripRight",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StripRight01",
@@ -1308,7 +1310,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 366,
+    _id: 66,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -1317,7 +1319,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "StripGroup1",
+    in_HandleDesignGroup: "StripGroup1",
     in_HandlePosType: "StripTop",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StripTop01",
@@ -1349,7 +1351,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 367,
+    _id: 67,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "Modern",
     in_FrontColor: "All",
@@ -1358,7 +1360,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 220,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StandardPanel01",
@@ -1390,7 +1392,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 368,
+    _id: 68,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "Modern",
     in_FrontColor: "All",
@@ -1399,7 +1401,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 220,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "WoodFrame01",
     FrontConstructionId: "ModernFrame01",
@@ -1431,7 +1433,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 369,
+    _id: 69,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "Tradition",
     in_FrontColor: "All",
@@ -1440,7 +1442,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 220,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StandardPanel01",
@@ -1472,7 +1474,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 370,
+    _id: 70,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "Tradition",
     in_FrontColor: "All",
@@ -1481,7 +1483,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 220,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "WoodFrame01",
     FrontConstructionId: "TraditionFrame01",
@@ -1513,7 +1515,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 371,
+    _id: 71,
     in_PartGroup: "CornerFiller",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -1522,7 +1524,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StandardPanel01",
@@ -1554,7 +1556,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 372,
+    _id: 72,
     in_PartGroup: "CornerStraightFiller",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -1563,7 +1565,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "StandardPanel01",
@@ -1595,7 +1597,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 373,
+    _id: 73,
     in_PartGroup: "Door",
     in_FrontProgram: "Tuscan",
     in_FrontColor: "All",
@@ -1604,7 +1606,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "TuscanPanel01",
@@ -1636,7 +1638,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 374,
+    _id: 74,
     in_PartGroup: "Fliplift",
     in_FrontProgram: "Tuscan",
     in_FrontColor: "All",
@@ -1645,7 +1647,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",
     FrontConstructionId: "TuscanPanel01",
@@ -1677,7 +1679,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 375,
+    _id: 75,
     in_PartGroup: "Door",
     in_FrontProgram: "Classic",
     in_FrontColor: "All",
@@ -1686,7 +1688,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "SegmentFront01",
     FrontConstructionId: "SegmentFront01",
@@ -1718,7 +1720,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 376,
+    _id: 76,
     in_PartGroup: "Door",
     in_FrontProgram: "Nature",
     in_FrontColor: "All",
@@ -1727,10 +1729,92 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
-    in_HandleStrip: "All",
+    in_HandleDesignGroup: "All",
     in_HandlePosType: "All",
     FrontModuleId: "SegmentFront01",
     FrontConstructionId: "SegmentFront01",
+    Width(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontWidth - m.mod_FrontGapVert;
+    }
+    ,
+    Height(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontHeight;
+    }
+    ,
+    Thickness: 19,
+    WidthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontGapVert / 2;
+    }
+    ,
+    HeightPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    DepthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    EdgeTypeTop: "FRE",
+    EdgeTypeLeft: "FRE",
+    EdgeTypeBtm: "FRE",
+    EdgeTypeRight: "FRE",
+    EdgeJointType: "VVVV"
+  }
+  , {
+    _id: 77,
+    in_PartGroup: "Door",
+    in_FrontProgram: "Classic",
+    in_FrontColor: "All",
+    in_FrontDesign: "All",
+    in_MinWidth: 0,
+    in_MaxWidth: 9999,
+    in_MinHeight: 0,
+    in_MaxHeight: 9999,
+    in_HandleDesignGroup: "InsetHandle",
+    in_HandlePosType: "All",
+    FrontModuleId: "FrontPanel01",
+    FrontConstructionId: "InsetHandle01",
+    Width(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontWidth - m.mod_FrontGapVert;
+    }
+    ,
+    Height(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontHeight;
+    }
+    ,
+    Thickness: 19,
+    WidthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontGapVert / 2;
+    }
+    ,
+    HeightPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    DepthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    EdgeTypeTop: "FRE",
+    EdgeTypeLeft: "FRE",
+    EdgeTypeBtm: "FRE",
+    EdgeTypeRight: "FRE",
+    EdgeJointType: "VVVV"
+  }
+  , {
+    _id: 78,
+    in_PartGroup: "Door",
+    in_FrontProgram: "Nature",
+    in_FrontColor: "All",
+    in_FrontDesign: "All",
+    in_MinWidth: 0,
+    in_MaxWidth: 9999,
+    in_MinHeight: 0,
+    in_MaxHeight: 9999,
+    in_HandleDesignGroup: "InsetHandle",
+    in_HandlePosType: "All",
+    FrontModuleId: "FrontPanel01",
+    FrontConstructionId: "InsetHandle01",
     Width(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
       return m.mod_FrontWidth - m.mod_FrontGapVert;
     }

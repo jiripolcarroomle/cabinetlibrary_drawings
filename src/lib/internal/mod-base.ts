@@ -656,6 +656,7 @@ export function _toBoolean(val: boolean | number | string | undefined, name: str
 
 export interface IContextData {
   dockedRoots?: IDockedContext[];
+  insertPosition?: number[];
 }
 
 export interface IDockedContext {

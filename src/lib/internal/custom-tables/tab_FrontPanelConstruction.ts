@@ -112,15 +112,17 @@ import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01, 
 import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01, cbp_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
 import { dc_mc_SegmentFront01, adc_mc_SegmentFront01, cbp_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
 import { dc_me_HoodInsert, adc_me_HoodInsert, cbp_me_HoodInsert } from '../modules/me_HoodInsert'
-import { dc_mc_HoodInsert01, adc_mc_HoodInsert01, cbp_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
 import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, cbp_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
 import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder, cbp_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
 import { dc_mr_CeilingFiller, adc_mr_CeilingFiller, cbp_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
 import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01, cbp_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
 import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder, cbp_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
 import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder, cbp_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
-import { dc_mr_Filler, adc_mr_Filler, cbp_mr_Filler } from '../modules/mr_Filler'
-import { dc_mc_Filler01, adc_mc_Filler01, cbp_mc_Filler01 } from '../modules/mc_Filler01'
+import { dc_mr_FillerStraight, adc_mr_FillerStraight, cbp_mr_FillerStraight } from '../modules/mr_FillerStraight'
+import { dc_mc_FillerStraight01, adc_mc_FillerStraight01, cbp_mc_FillerStraight01 } from '../modules/mc_FillerStraight01'
+import { dc_mc_FillerHardware01, adc_mc_FillerHardware01, cbp_mc_FillerHardware01 } from '../modules/mc_FillerHardware01'
+import { dc_mc_FillerSupportPanels01, adc_mc_FillerSupportPanels01, cbp_mc_FillerSupportPanels01 } from '../modules/mc_FillerSupportPanels01'
+import { dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, cbp_mc_HoodCarcaseParts01 } from '../modules/mc_HoodCarcaseParts01'
 
 export interface cti_tab_FrontPanelConstruction {
   readonly in_PartGroup?: string;
@@ -138,6 +140,8 @@ export interface cto_tab_FrontPanelConstruction extends ctm_tab_FrontPanelConstr
   readonly Weight: number;
   readonly GraphicFileId?: string;
   readonly ProcessingItem?: string;
+  readonly InsetHandleConstruction?: boolean;
+  readonly AddVirtualPartOnBack?: boolean;
 }
 
 export interface ICT_tab_FrontPanelConstruction
@@ -171,7 +175,7 @@ export class ct2_tab_FrontPanelConstruction {
 
 export var ct_tab_FrontPanelConstruction: ICT_tab_FrontPanelConstruction[] = [
   {
-    _id: 65,
+    _id: 35,
     in_PartGroup: "Door",
     in_FrontConstructionId: "StripBtm01",
     in_GrainGroupId: "Grain",
@@ -179,10 +183,12 @@ export var ct_tab_FrontPanelConstruction: ICT_tab_FrontPanelConstruction[] = [
     InHouseProduction: true,
     Weight: 12.16,
     GraphicFileId: "GCodeStripBtm01",
-    ProcessingItem: undefined
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
   }
   , {
-    _id: 66,
+    _id: 36,
     in_PartGroup: "Door",
     in_FrontConstructionId: "StripBtm01",
     in_GrainGroupId: "NoGrain",
@@ -190,336 +196,424 @@ export var ct_tab_FrontPanelConstruction: ICT_tab_FrontPanelConstruction[] = [
     InHouseProduction: true,
     Weight: 12.16,
     GraphicFileId: "GCodeStripBtm01",
-    ProcessingItem: undefined
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 37,
+    in_PartGroup: "Door",
+    in_FrontConstructionId: "StripLeft01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "GCodeStripLeft01",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 38,
+    in_PartGroup: "Door",
+    in_FrontConstructionId: "StripLeft01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "GCodeStripLeft01",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 39,
+    in_PartGroup: "Door",
+    in_FrontConstructionId: "StripRight01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "GCodeStripRight01",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 40,
+    in_PartGroup: "Door",
+    in_FrontConstructionId: "StripRight01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "GCodeStripRight01",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 41,
+    in_PartGroup: "Door",
+    in_FrontConstructionId: "StripTop01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "GCodeStripTop01",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 42,
+    in_PartGroup: "Door",
+    in_FrontConstructionId: "StripTop01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "GCodeStripTop01",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 43,
+    in_PartGroup: "Door",
+    in_FrontConstructionId: "StandardPanel01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "None",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 44,
+    in_PartGroup: "Door",
+    in_FrontConstructionId: "StandardPanel01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "None",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 45,
+    in_PartGroup: "Drawer",
+    in_FrontConstructionId: "StripBtm01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "GCodeStripBtm01",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 46,
+    in_PartGroup: "Drawer",
+    in_FrontConstructionId: "StripBtm01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "GCodeStripBtm01",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 47,
+    in_PartGroup: "Drawer",
+    in_FrontConstructionId: "StripLeft01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "GCodeStripLeft01",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 48,
+    in_PartGroup: "Drawer",
+    in_FrontConstructionId: "StripLeft01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "GCodeStripLeft01",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 49,
+    in_PartGroup: "Drawer",
+    in_FrontConstructionId: "StripRight01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "GCodeStripRight01",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 50,
+    in_PartGroup: "Drawer",
+    in_FrontConstructionId: "StripRight01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "GCodeStripRight01",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 51,
+    in_PartGroup: "Drawer",
+    in_FrontConstructionId: "StripTop01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "GCodeStripTop01",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 52,
+    in_PartGroup: "Drawer",
+    in_FrontConstructionId: "StripTop01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "GCodeStripTop01",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 53,
+    in_PartGroup: "Drawer",
+    in_FrontConstructionId: "StandardPanel01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "None",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 54,
+    in_PartGroup: "Drawer",
+    in_FrontConstructionId: "StandardPanel01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "None",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 55,
+    in_PartGroup: "Fliplift",
+    in_FrontConstructionId: "StandardPanel01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "None",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 56,
+    in_PartGroup: "Fliplift",
+    in_FrontConstructionId: "StandardPanel01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "None",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 57,
+    in_PartGroup: "Filler",
+    in_FrontConstructionId: "StandardPanel01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: undefined,
+    Weight: 12.16,
+    GraphicFileId: "None",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 58,
+    in_PartGroup: "Filler",
+    in_FrontConstructionId: "StandardPanel01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: undefined,
+    Weight: 12.16,
+    GraphicFileId: "None",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 59,
+    in_PartGroup: "CornerFiller",
+    in_FrontConstructionId: "StandardPanel01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: undefined,
+    Weight: 12.16,
+    GraphicFileId: "None",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 60,
+    in_PartGroup: "CornerFiller",
+    in_FrontConstructionId: "StandardPanel01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: undefined,
+    Weight: 12.16,
+    GraphicFileId: "None",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 61,
+    in_PartGroup: "CornerStraightFiller",
+    in_FrontConstructionId: "StandardPanel01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: undefined,
+    Weight: 12.16,
+    GraphicFileId: "None",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 62,
+    in_PartGroup: "CornerStraightFiller",
+    in_FrontConstructionId: "StandardPanel01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: undefined,
+    Weight: 12.16,
+    GraphicFileId: "None",
+    ProcessingItem: "",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 63,
+    in_PartGroup: "Door",
+    in_FrontConstructionId: "TuscanPanel01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "FrontTuscanMilling",
+    ProcessingItem: "FrontTuscanMilling",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 64,
+    in_PartGroup: "Door",
+    in_FrontConstructionId: "TuscanPanel01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "FrontTuscanMilling",
+    ProcessingItem: "FrontTuscanMilling",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 65,
+    in_PartGroup: "Fliplift",
+    in_FrontConstructionId: "TuscanPanel01",
+    in_GrainGroupId: "Grain",
+    GrainDirection: "Lengthwise",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "FrontTuscanMilling",
+    ProcessingItem: "FrontTuscanMilling",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
+  }
+  , {
+    _id: 66,
+    in_PartGroup: "Fliplift",
+    in_FrontConstructionId: "TuscanPanel01",
+    in_GrainGroupId: "NoGrain",
+    GrainDirection: "None",
+    InHouseProduction: true,
+    Weight: 12.16,
+    GraphicFileId: "FrontTuscanMilling",
+    ProcessingItem: "FrontTuscanMilling",
+    InsetHandleConstruction: false,
+    AddVirtualPartOnBack: false
   }
   , {
     _id: 67,
     in_PartGroup: "Door",
-    in_FrontConstructionId: "StripLeft01",
+    in_FrontConstructionId: "InsetHandle01",
     in_GrainGroupId: "Grain",
     GrainDirection: "Lengthwise",
-    InHouseProduction: true,
+    InHouseProduction: undefined,
     Weight: 12.16,
-    GraphicFileId: "GCodeStripLeft01",
-    ProcessingItem: undefined
+    GraphicFileId: "None",
+    ProcessingItem: "",
+    InsetHandleConstruction: true,
+    AddVirtualPartOnBack: true
   }
   , {
     _id: 68,
     in_PartGroup: "Door",
-    in_FrontConstructionId: "StripLeft01",
-    in_GrainGroupId: "NoGrain",
-    GrainDirection: "None",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "GCodeStripLeft01",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 69,
-    in_PartGroup: "Door",
-    in_FrontConstructionId: "StripRight01",
-    in_GrainGroupId: "Grain",
-    GrainDirection: "Lengthwise",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "GCodeStripRight01",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 70,
-    in_PartGroup: "Door",
-    in_FrontConstructionId: "StripRight01",
-    in_GrainGroupId: "NoGrain",
-    GrainDirection: "None",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "GCodeStripRight01",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 71,
-    in_PartGroup: "Door",
-    in_FrontConstructionId: "StripTop01",
-    in_GrainGroupId: "Grain",
-    GrainDirection: "Lengthwise",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "GCodeStripTop01",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 72,
-    in_PartGroup: "Door",
-    in_FrontConstructionId: "StripTop01",
-    in_GrainGroupId: "NoGrain",
-    GrainDirection: "None",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "GCodeStripTop01",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 73,
-    in_PartGroup: "Door",
-    in_FrontConstructionId: "StandardPanel01",
-    in_GrainGroupId: "Grain",
-    GrainDirection: "Lengthwise",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "None",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 74,
-    in_PartGroup: "Door",
-    in_FrontConstructionId: "StandardPanel01",
-    in_GrainGroupId: "NoGrain",
-    GrainDirection: "None",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "None",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 75,
-    in_PartGroup: "Drawer",
-    in_FrontConstructionId: "StripBtm01",
-    in_GrainGroupId: "Grain",
-    GrainDirection: "Lengthwise",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "GCodeStripBtm01",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 76,
-    in_PartGroup: "Drawer",
-    in_FrontConstructionId: "StripBtm01",
-    in_GrainGroupId: "NoGrain",
-    GrainDirection: "None",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "GCodeStripBtm01",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 77,
-    in_PartGroup: "Drawer",
-    in_FrontConstructionId: "StripLeft01",
-    in_GrainGroupId: "Grain",
-    GrainDirection: "Lengthwise",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "GCodeStripLeft01",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 78,
-    in_PartGroup: "Drawer",
-    in_FrontConstructionId: "StripLeft01",
-    in_GrainGroupId: "NoGrain",
-    GrainDirection: "None",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "GCodeStripLeft01",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 79,
-    in_PartGroup: "Drawer",
-    in_FrontConstructionId: "StripRight01",
-    in_GrainGroupId: "Grain",
-    GrainDirection: "Lengthwise",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "GCodeStripRight01",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 80,
-    in_PartGroup: "Drawer",
-    in_FrontConstructionId: "StripRight01",
-    in_GrainGroupId: "NoGrain",
-    GrainDirection: "None",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "GCodeStripRight01",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 81,
-    in_PartGroup: "Drawer",
-    in_FrontConstructionId: "StripTop01",
-    in_GrainGroupId: "Grain",
-    GrainDirection: "Lengthwise",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "GCodeStripTop01",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 82,
-    in_PartGroup: "Drawer",
-    in_FrontConstructionId: "StripTop01",
-    in_GrainGroupId: "NoGrain",
-    GrainDirection: "None",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "GCodeStripTop01",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 83,
-    in_PartGroup: "Drawer",
-    in_FrontConstructionId: "StandardPanel01",
-    in_GrainGroupId: "Grain",
-    GrainDirection: "Lengthwise",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "None",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 84,
-    in_PartGroup: "Drawer",
-    in_FrontConstructionId: "StandardPanel01",
-    in_GrainGroupId: "NoGrain",
-    GrainDirection: "None",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "None",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 85,
-    in_PartGroup: "Fliplift",
-    in_FrontConstructionId: "StandardPanel01",
-    in_GrainGroupId: "Grain",
-    GrainDirection: "Lengthwise",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "None",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 86,
-    in_PartGroup: "Fliplift",
-    in_FrontConstructionId: "StandardPanel01",
-    in_GrainGroupId: "NoGrain",
-    GrainDirection: "None",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "None",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 87,
-    in_PartGroup: "Filler",
-    in_FrontConstructionId: "StandardPanel01",
-    in_GrainGroupId: "Grain",
-    GrainDirection: "Lengthwise",
-    InHouseProduction: undefined,
-    Weight: 12.16,
-    GraphicFileId: "None",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 88,
-    in_PartGroup: "Filler",
-    in_FrontConstructionId: "StandardPanel01",
+    in_FrontConstructionId: "InsetHandle01",
     in_GrainGroupId: "NoGrain",
     GrainDirection: "None",
     InHouseProduction: undefined,
     Weight: 12.16,
     GraphicFileId: "None",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 89,
-    in_PartGroup: "CornerFiller",
-    in_FrontConstructionId: "StandardPanel01",
-    in_GrainGroupId: "Grain",
-    GrainDirection: "Lengthwise",
-    InHouseProduction: undefined,
-    Weight: 12.16,
-    GraphicFileId: "None",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 90,
-    in_PartGroup: "CornerFiller",
-    in_FrontConstructionId: "StandardPanel01",
-    in_GrainGroupId: "NoGrain",
-    GrainDirection: "None",
-    InHouseProduction: undefined,
-    Weight: 12.16,
-    GraphicFileId: "None",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 91,
-    in_PartGroup: "CornerStraightFiller",
-    in_FrontConstructionId: "StandardPanel01",
-    in_GrainGroupId: "Grain",
-    GrainDirection: "Lengthwise",
-    InHouseProduction: undefined,
-    Weight: 12.16,
-    GraphicFileId: "None",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 92,
-    in_PartGroup: "CornerStraightFiller",
-    in_FrontConstructionId: "StandardPanel01",
-    in_GrainGroupId: "NoGrain",
-    GrainDirection: "None",
-    InHouseProduction: undefined,
-    Weight: 12.16,
-    GraphicFileId: "None",
-    ProcessingItem: undefined
-  }
-  , {
-    _id: 93,
-    in_PartGroup: "Door",
-    in_FrontConstructionId: "TuscanPanel01",
-    in_GrainGroupId: "Grain",
-    GrainDirection: "Lengthwise",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "FrontTuscanMilling",
-    ProcessingItem: "FrontTuscanMilling"
-  }
-  , {
-    _id: 94,
-    in_PartGroup: "Door",
-    in_FrontConstructionId: "TuscanPanel01",
-    in_GrainGroupId: "NoGrain",
-    GrainDirection: "None",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "FrontTuscanMilling",
-    ProcessingItem: "FrontTuscanMilling"
-  }
-  , {
-    _id: 95,
-    in_PartGroup: "Fliplift",
-    in_FrontConstructionId: "TuscanPanel01",
-    in_GrainGroupId: "Grain",
-    GrainDirection: "Lengthwise",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "FrontTuscanMilling",
-    ProcessingItem: "FrontTuscanMilling"
-  }
-  , {
-    _id: 96,
-    in_PartGroup: "Fliplift",
-    in_FrontConstructionId: "TuscanPanel01",
-    in_GrainGroupId: "NoGrain",
-    GrainDirection: "None",
-    InHouseProduction: true,
-    Weight: 12.16,
-    GraphicFileId: "FrontTuscanMilling",
-    ProcessingItem: "FrontTuscanMilling"
+    ProcessingItem: "",
+    InsetHandleConstruction: true,
+    AddVirtualPartOnBack: true
   }
 ];

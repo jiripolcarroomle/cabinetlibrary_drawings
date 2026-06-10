@@ -2,6 +2,8 @@ import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPart
 import { IGlobalVars } from './global-vars';
 import { IMatrix_mod_BaseboardColor, IMatrix_mod_BaseboardProgram, IMatrix_mod_BoardShelfColor, IMatrix_mod_BoardShelfProgram, IMatrix_mod_CarcaseBackwallColor, IMatrix_mod_CarcaseBackwallProgram, IMatrix_mod_CarcaseColor, IMatrix_mod_CarcaseFrontConstruction, IMatrix_mod_CarcaseOutsideColor, IMatrix_mod_CarcaseOutsideProgram, IMatrix_mod_CarcaseProgram, IMatrix_mod_CeilingFillerColor, IMatrix_mod_CeilingFillerProgram, IMatrix_mod_ClothingOrganizerDesign, IMatrix_mod_CoatBoardColor, IMatrix_mod_CoatBoardProgram, IMatrix_mod_CornerunitStraightConstruction, IMatrix_mod_CornerunitStraightFillerConstruction, IMatrix_mod_CountertopColor, IMatrix_mod_CountertopProgram, IMatrix_mod_DrawerBoxDesign, IMatrix_mod_FingergripType, IMatrix_mod_FlipliftType, IMatrix_mod_FrameFillingColor, IMatrix_mod_FrontColor, IMatrix_mod_FrontProgram, IMatrix_mod_FrontSegmentColor, IMatrix_mod_HandleDesign, IMatrix_mod_HandlePosMatrix, IMatrix_mod_HandlePosMatrixMultiple, IMatrix_mod_HangerPosX, IMatrix_mod_HingeLogic, IMatrix_mod_HingeType, IMatrix_mod_LightPosX, IMatrix_mod_LightSystem, IMatrix_mod_MirrorBoardColor, IMatrix_mod_MirrorBoardProgram, IMatrix_mod_PaneltopColor, IMatrix_mod_PaneltopProgram, IMatrix_mod_PlinthAreaDesign, IMatrix_mod_PlinthAreaExtraItem, IMatrix_mod_Program, IMatrix_mod_PulloutType, IMatrix_mod_ShelfadjColor, IMatrix_mod_ShelfadjDrillType, IMatrix_mod_ShelfadjWoodColor, IMatrix_mod_ShelvesBrackets, IMatrix_mod_ShelvesColor, IMatrix_mod_SlopedCeilingDimensionLogic, IMatrix_mod_ToekickColor, IMatrix_mod_ToekickProgram, IMatrix_mod_UprightColor, IMatrix_mod_UprightConstruction, IMatrix_mod_UprightProgram, IMatrix_mod_VertDividerType } from './selections';
 
+export interface IModVar_mod_AutomaticHeightAdjustment { mod_AutomaticHeightAdjustment?: boolean; }
+export interface IModVarNonNull_mod_AutomaticHeightAdjustment { get mod_AutomaticHeightAdjustment(): boolean; }
 export interface IModVar_mod_BackHeight { mod_BackHeight?: number; }
 export interface IModVarNonNull_mod_BackHeight { get mod_BackHeight(): number; }
 export interface IModVar_mod_BacksplashColor { mod_BacksplashColor?: string; }
@@ -78,6 +80,8 @@ export interface IModVar_mod_CarcaseBackwallConstructionList { mod_CarcaseBackwa
 export interface IModVarNonNull_mod_CarcaseBackwallConstructionList { get mod_CarcaseBackwallConstructionList(): string[]; }
 export interface IModVar_mod_CarcaseBackwallProgram { mod_CarcaseBackwallProgram?: string; }
 export interface IModVarNonNull_mod_CarcaseBackwallProgram { get mod_CarcaseBackwallProgram(): string; get mod_CarcaseBackwallProgram_matrix(): IMatrix_mod_CarcaseBackwallProgram; }
+export interface IModVar_mod_CarcaseCeilingDistance { mod_CarcaseCeilingDistance?: number; }
+export interface IModVarNonNull_mod_CarcaseCeilingDistance { get mod_CarcaseCeilingDistance(): number; }
 export interface IModVar_mod_CarcaseColor { mod_CarcaseColor?: string; }
 export interface IModVarNonNull_mod_CarcaseColor { get mod_CarcaseColor(): string; get mod_CarcaseColor_matrix(): IMatrix_mod_CarcaseColor; }
 export interface IModVar_mod_CarcaseConnectionLeftBtm { mod_CarcaseConnectionLeftBtm?: string; }
@@ -168,22 +172,22 @@ export interface IModVar_mod_CarcaseVisBtm { mod_CarcaseVisBtm?: boolean; }
 export interface IModVarNonNull_mod_CarcaseVisBtm { get mod_CarcaseVisBtm(): boolean; }
 export interface IModVar_mod_CarcaseVisLeft { mod_CarcaseVisLeft?: boolean; }
 export interface IModVarNonNull_mod_CarcaseVisLeft { get mod_CarcaseVisLeft(): boolean; }
+export interface IModVar_mod_CarcaseVisLeftAutomaticType { mod_CarcaseVisLeftAutomaticType?: string; }
+export interface IModVarNonNull_mod_CarcaseVisLeftAutomaticType { get mod_CarcaseVisLeftAutomaticType(): string; }
 export interface IModVar_mod_CarcaseVisLeftSelection { mod_CarcaseVisLeftSelection?: string; }
 export interface IModVarNonNull_mod_CarcaseVisLeftSelection { get mod_CarcaseVisLeftSelection(): string; }
 export interface IModVar_mod_CarcaseVisRight { mod_CarcaseVisRight?: boolean; }
 export interface IModVarNonNull_mod_CarcaseVisRight { get mod_CarcaseVisRight(): boolean; }
+export interface IModVar_mod_CarcaseVisRightAutomaticType { mod_CarcaseVisRightAutomaticType?: string; }
+export interface IModVarNonNull_mod_CarcaseVisRightAutomaticType { get mod_CarcaseVisRightAutomaticType(): string; }
 export interface IModVar_mod_CarcaseVisRightSelection { mod_CarcaseVisRightSelection?: string; }
 export interface IModVarNonNull_mod_CarcaseVisRightSelection { get mod_CarcaseVisRightSelection(): string; }
 export interface IModVar_mod_CarcaseVisTop { mod_CarcaseVisTop?: boolean; }
 export interface IModVarNonNull_mod_CarcaseVisTop { get mod_CarcaseVisTop(): boolean; }
 export interface IModVar_mod_CarcaseWidth { mod_CarcaseWidth?: number; }
 export interface IModVarNonNull_mod_CarcaseWidth { get mod_CarcaseWidth(): number; }
-export interface IModVar_mod_CeilingAreaVisLeft { mod_CeilingAreaVisLeft?: boolean; }
-export interface IModVarNonNull_mod_CeilingAreaVisLeft { get mod_CeilingAreaVisLeft(): boolean; }
 export interface IModVar_mod_CeilingAreaVisLeftSelection { mod_CeilingAreaVisLeftSelection?: string; }
 export interface IModVarNonNull_mod_CeilingAreaVisLeftSelection { get mod_CeilingAreaVisLeftSelection(): string; }
-export interface IModVar_mod_CeilingAreaVisRight { mod_CeilingAreaVisRight?: boolean; }
-export interface IModVarNonNull_mod_CeilingAreaVisRight { get mod_CeilingAreaVisRight(): boolean; }
 export interface IModVar_mod_CeilingAreaVisRightSelection { mod_CeilingAreaVisRightSelection?: string; }
 export interface IModVarNonNull_mod_CeilingAreaVisRightSelection { get mod_CeilingAreaVisRightSelection(): string; }
 export interface IModVar_mod_CeilingFillerColor { mod_CeilingFillerColor?: string; }
@@ -304,6 +308,8 @@ export interface IModVar_mod_CountertopWidth { mod_CountertopWidth?: number; }
 export interface IModVarNonNull_mod_CountertopWidth { get mod_CountertopWidth(): number; }
 export interface IModVar_mod_CreateBacksplash { mod_CreateBacksplash?: boolean; }
 export interface IModVarNonNull_mod_CreateBacksplash { get mod_CreateBacksplash(): boolean; }
+export interface IModVar_mod_CreateBom { mod_CreateBom?: string; }
+export interface IModVarNonNull_mod_CreateBom { get mod_CreateBom(): string; }
 export interface IModVar_mod_CreateCeilingFiller { mod_CreateCeilingFiller?: boolean; }
 export interface IModVarNonNull_mod_CreateCeilingFiller { get mod_CreateCeilingFiller(): boolean; }
 export interface IModVar_mod_CreateCountertop { mod_CreateCountertop?: boolean; }
@@ -566,6 +572,8 @@ export interface IModVar_mod_HandleOffsetX { mod_HandleOffsetX?: number; }
 export interface IModVarNonNull_mod_HandleOffsetX { get mod_HandleOffsetX(): number; }
 export interface IModVar_mod_HandleOffsetY { mod_HandleOffsetY?: number; }
 export interface IModVarNonNull_mod_HandleOffsetY { get mod_HandleOffsetY(): number; }
+export interface IModVar_mod_HandlePosFrontOversize { mod_HandlePosFrontOversize?: string; }
+export interface IModVarNonNull_mod_HandlePosFrontOversize { get mod_HandlePosFrontOversize(): string; }
 export interface IModVar_mod_HandlePosLogic { mod_HandlePosLogic?: string; }
 export interface IModVarNonNull_mod_HandlePosLogic { get mod_HandlePosLogic(): string; }
 export interface IModVar_mod_HandlePosMatrix { mod_HandlePosMatrix?: string; }
@@ -598,6 +606,8 @@ export interface IModVar_mod_HardwareTypeList { mod_HardwareTypeList: string[]; 
 export interface IModVarNonNull_mod_HardwareTypeList { get mod_HardwareTypeList(): string[]; }
 export interface IModVar_mod_Height { mod_Height?: number; }
 export interface IModVarNonNull_mod_Height { get mod_Height(): number; }
+export interface IModVar_mod_HeightInputMode { mod_HeightInputMode?: string; }
+export interface IModVarNonNull_mod_HeightInputMode { get mod_HeightInputMode(): string; }
 export interface IModVar_mod_HeightLeft { mod_HeightLeft?: number; }
 export interface IModVarNonNull_mod_HeightLeft { get mod_HeightLeft(): number; }
 export interface IModVar_mod_HeightPosInsertion { mod_HeightPosInsertion?: number; }
@@ -640,8 +650,18 @@ export interface IModVar_mod_HobMoveWidth { mod_HobMoveWidth?: number; }
 export interface IModVarNonNull_mod_HobMoveWidth { get mod_HobMoveWidth(): number; }
 export interface IModVar_mod_HobSupplier { mod_HobSupplier?: string; }
 export interface IModVarNonNull_mod_HobSupplier { get mod_HobSupplier(): string; }
+export interface IModVar_mod_HoodConstructionType { mod_HoodConstructionType?: string; }
+export interface IModVarNonNull_mod_HoodConstructionType { get mod_HoodConstructionType(): string; }
 export interface IModVar_mod_HoodId { mod_HoodId?: string; }
 export interface IModVarNonNull_mod_HoodId { get mod_HoodId(): string; }
+export interface IModVar_mod_HoodInformation { mod_HoodInformation?: string; }
+export interface IModVarNonNull_mod_HoodInformation { get mod_HoodInformation(): string; }
+export interface IModVar_mod_HoodInsertion { mod_HoodInsertion?: boolean; }
+export interface IModVarNonNull_mod_HoodInsertion { get mod_HoodInsertion(): boolean; }
+export interface IModVar_mod_HoodIntegrationType { mod_HoodIntegrationType?: string; }
+export interface IModVarNonNull_mod_HoodIntegrationType { get mod_HoodIntegrationType(): string; }
+export interface IModVar_mod_HoodRailverttopbackthk { mod_HoodRailverttopbackthk?: number; }
+export interface IModVarNonNull_mod_HoodRailverttopbackthk { get mod_HoodRailverttopbackthk(): number; }
 export interface IModVar_mod_HoodSupplier { mod_HoodSupplier?: string; }
 export interface IModVarNonNull_mod_HoodSupplier { get mod_HoodSupplier(): string; }
 export interface IModVar_mod_Information { mod_Information?: string; }
@@ -730,6 +750,8 @@ export interface IModVar_mod_Model { mod_Model?: string; }
 export interface IModVarNonNull_mod_Model { get mod_Model(): string; }
 export interface IModVar_mod_Model3DGroupName { mod_Model3DGroupName?: string; }
 export interface IModVarNonNull_mod_Model3DGroupName { get mod_Model3DGroupName(): string; }
+export interface IModVar_mod_ModuleContextInformationList { mod_ModuleContextInformationList: string[]; }
+export interface IModVarNonNull_mod_ModuleContextInformationList { get mod_ModuleContextInformationList(): string[]; }
 export interface IModVar_mod_ModuleName { mod_ModuleName?: string; }
 export interface IModVarNonNull_mod_ModuleName { get mod_ModuleName(): string; }
 export interface IModVar_mod_MountingPlateType { mod_MountingPlateType?: string; }
@@ -812,6 +834,8 @@ export interface IModVar_mod_PartName { mod_PartName?: string; }
 export interface IModVarNonNull_mod_PartName { get mod_PartName(): string; }
 export interface IModVar_mod_PartgroupDrawerWeight { mod_PartgroupDrawerWeight?: number; }
 export interface IModVarNonNull_mod_PartgroupDrawerWeight { get mod_PartgroupDrawerWeight(): number; }
+export interface IModVar_mod_PlacementLevels { mod_PlacementLevels?: string; }
+export interface IModVarNonNull_mod_PlacementLevels { get mod_PlacementLevels(): string; }
 export interface IModVar_mod_PlinthAreaDesign { mod_PlinthAreaDesign?: string; }
 export interface IModVarNonNull_mod_PlinthAreaDesign { get mod_PlinthAreaDesign(): string; get mod_PlinthAreaDesign_matrix(): IMatrix_mod_PlinthAreaDesign; }
 export interface IModVar_mod_PlinthAreaElementColor { mod_PlinthAreaElementColor?: string; }
@@ -1091,13 +1115,6 @@ export interface IModVarNonNull_mod_WidthLeft { get mod_WidthLeft(): number; }
 export interface IModVar_mod_WidthRight { mod_WidthRight?: number; }
 export interface IModVarNonNull_mod_WidthRight { get mod_WidthRight(): number; }
 
-export interface ITableParents_mc_HoodInsert01 extends IModVarNonNull_mod_CarcaseDepth
-  , IModVarNonNull_mod_CarcaseHeight
-  , IModVarNonNull_mod_CarcaseWidth
-  , IModVarNonNull_mod_Originpos
-  , IModVarNonNull_mod_HoodId {
-  get g(): IGlobalVars;
-}
 export interface ITableParents_mc_Storageunit01 extends IModVarNonNull_mod_BackwallPos
   , IModVarNonNull_mod_BackwallPosList
   , IModVarNonNull_mod_BackwallThk
@@ -1205,7 +1222,9 @@ export interface ITableParents_mc_Storageunit01 extends IModVarNonNull_mod_Backw
   , IModVarNonNull_mod_TopDepth
   , IModVarNonNull_mod_CarcaseDirection
   , IModVarNonNull_mod_CarcaseMovement
-  , IModVarNonNull_mod_Originpos {
+  , IModVarNonNull_mod_Originpos
+  , IModVarNonNull_mod_HoodInsertion
+  , IModVarNonNull_mod_HoodInformation {
   get g(): IGlobalVars;
 }
 export interface ITableParents_mc_Cornerunit01 extends IModVarNonNull_mod_ModuleName
@@ -1515,7 +1534,9 @@ export interface ITableParents_mr_CornerunitStraight extends IModVarNonNull_mod_
   , IModVarNonNull_mod_FrontSegmentColor
   , IModVarNonNull_mod_FrontSegmentType
   , IModVarNonNull_mod_DoorDirectionSelection
-  , IModVarNonNull_mod_CreateCeilingFiller {
+  , IModVarNonNull_mod_CreateCeilingFiller
+  , IModVarNonNull_mod_CeilingFillerHeight
+  , IModVarNonNull_mod_CeilingFillerConstruction {
   get g(): IGlobalVars;
 }
 export interface ITableParents_mc_Drawer01 extends IModVarNonNull_mod_BackwallPos
@@ -1709,7 +1730,17 @@ export interface ITableParents_mc_Handle01_mc_Handlestrip01 extends IModVarNonNu
   , IModVarNonNull_mod_Rotation
   , IModVarNonNull_mod_FrontThk
   , IModVarNonNull_mod_FrontWidth
-  , IModVarNonNull_mod_FrontType {
+  , IModVarNonNull_mod_FrontType
+  , IModVarNonNull_mod_FrontOversizeBtm
+  , IModVarNonNull_mod_HandlePosFrontOversize {
+  get g(): IGlobalVars;
+}
+export interface ITableParents_mc_HoodCarcaseParts01 extends IModVarNonNull_mod_HoodInformation
+  , IModVarNonNull_mod_CarcaseWidth
+  , IModVarNonNull_mod_CarcaseHeight
+  , IModVarNonNull_mod_CarcaseDepth
+  , IModVarNonNull_mod_CarcaseSpaceDimension
+  , IModVarNonNull_mod_HoodRailverttopbackthk {
   get g(): IGlobalVars;
 }
 export interface ITableParents_mc_PlinthArea01 extends IModVarNonNull_mod_CarcaseDepth
@@ -1820,6 +1851,7 @@ import { dc_mc_VertDivider01 } from './modules/mc_VertDivider01'
 import { dc_mc_StorageunitShelftop02 } from './modules/mc_StorageunitShelftop02'
 import { dc_mc_StorageunitShelftop03 } from './modules/mc_StorageunitShelftop03'
 import { dc_mc_StorageunitShelftop04 } from './modules/mc_StorageunitShelftop04'
+import { dc_mc_HoodCarcaseParts01 } from './modules/mc_HoodCarcaseParts01'
 import { dc_mc_Storageunit01 } from './modules/mc_Storageunit01'
 import { dc_mc_PlinthArea01 } from './modules/mc_PlinthArea01'
 import { dc_mf_Door } from './modules/mf_Door'
@@ -1882,6 +1914,7 @@ export interface IFuncParents_mc_ShelfadjGroup01 extends IModBaseProp, IModVarNo
 
 export interface IFuncParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_Fixedfront01_mc_Fliplift01_mc_Handlestrip01 extends IModBaseProp, IModVarNonNull_mod_FrontGapVert
   , IModVarNonNull_mod_FrontId
+  , IModVarNonNull_mod_FrontOversizeBtm
   , IModVarNonNull_mod_FrontPosStart
   , IModVarNonNull_mod_FrontProgram
   , IModVarNonNull_mod_ModuleName
@@ -2068,7 +2101,9 @@ export interface IFuncParents_mc_Storageunit01 extends IModBaseProp, IModVarNonN
   , IModVarNonNull_mod_TopDepth
   , IModVarNonNull_mod_CarcaseDirection
   , IModVarNonNull_mod_CarcaseMovement
-  , IModVarNonNull_mod_Originpos {
+  , IModVarNonNull_mod_Originpos
+  , IModVarNonNull_mod_HoodInsertion
+  , IModVarNonNull_mod_HoodInformation {
   get m(): OD_Base[];
   addOD_M_mc_StorageunitSidepanel01(index?: number): dc_mc_StorageunitSidepanel01
   addOD_M_mc_StorageunitShelfbtm01(index?: number): dc_mc_StorageunitShelfbtm01
@@ -2081,6 +2116,7 @@ export interface IFuncParents_mc_Storageunit01 extends IModBaseProp, IModVarNonN
   addOD_M_mc_StorageunitShelftop02(index?: number): dc_mc_StorageunitShelftop02
   addOD_M_mc_StorageunitShelftop03(index?: number): dc_mc_StorageunitShelftop03
   addOD_M_mc_StorageunitShelftop04(index?: number): dc_mc_StorageunitShelftop04
+  addOD_M_mc_HoodCarcaseParts01(index?: number): dc_mc_HoodCarcaseParts01
 }
 
 export interface IFuncParents_mr_CornerunitStraight extends IModBaseProp, IModVarNonNull_mod_BackwallFixedHeight
@@ -2240,7 +2276,9 @@ export interface IFuncParents_mr_CornerunitStraight extends IModBaseProp, IModVa
   , IModVarNonNull_mod_FrontSegmentColor
   , IModVarNonNull_mod_FrontSegmentType
   , IModVarNonNull_mod_DoorDirectionSelection
-  , IModVarNonNull_mod_CreateCeilingFiller {
+  , IModVarNonNull_mod_CreateCeilingFiller
+  , IModVarNonNull_mod_CeilingFillerHeight
+  , IModVarNonNull_mod_CeilingFillerConstruction {
   get m(): OD_Base[];
   addOD_M_mc_Storageunit01(index?: number): dc_mc_Storageunit01
   addOD_M_mc_PlinthArea01(index?: number): dc_mc_PlinthArea01
@@ -2419,7 +2457,9 @@ export interface IFuncParents_mc_Handle01 extends IModBaseProp, IModVarNonNull_m
   , IModVarNonNull_mod_FrontWidth
   , IModVarNonNull_mod_HandleWeightCalculations
   , IModVarNonNull_mod_FrontType
-  , IModVarNonNull_mod_HardwareTypeList {
+  , IModVarNonNull_mod_HardwareTypeList
+  , IModVarNonNull_mod_FrontOversizeBtm
+  , IModVarNonNull_mod_HandlePosFrontOversize {
   get m(): OD_Base[];
 }
 

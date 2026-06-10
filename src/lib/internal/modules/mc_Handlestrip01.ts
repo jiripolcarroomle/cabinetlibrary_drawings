@@ -9,7 +9,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping, ct2_tab_BracketMapping }
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction, ct2_tab_CarcaseBackwallConstruction } from '../custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings, ct2_tab_CarcaseBackwallSettings } from '../custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction, ct2_tab_CarcaseCornerunitConstruction } from '../custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction, ct2_tab_CarcaseHoodConstruction } from '../custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection, ct2_tab_CarcasePanelSelection } from '../custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations, ct2_tab_CarcasePartConnectionCalculations } from '../custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping, ct2_tab_CarcasePartConnectionMapping } from '../custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape, ct2_tab_CarcasePartsShape } from '../custom-tables/tab_CarcasePartsShape'
@@ -19,9 +19,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings, ct2_
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension, ct2_tab_CarcaseSlopedCeilingDimension } from '../custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction, ct2_tab_CarcaseStorageunitConstruction } from '../custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping, ct2_tab_ClothingOrganizerColorMapping } from '../custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition, ct2_tab_ClothingOrganizerDepthPosition } from '../custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping, ct2_tab_ClothingOrganizerExtraItemMapping } from '../custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions, ct2_tab_ClothingOrganizerInstallationDimensions } from '../custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping, ct2_tab_ClothingOrganizerMapping } from '../custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings, ct2_tab_ClothingOrganizerPositionZSettings } from '../custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary, ct2_tab_ComponentLibrary } from '../custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables, ct2_tab_ComponentVariables } from '../custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction, ct2_tab_CornerFillerFrontpanelConstruction } from '../custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -47,7 +48,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping, ct2_tab_EdgeMapping } from '..
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings, ct2_tab_EdgeNumberSettings } from '../custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings, ct2_tab_EdgeSettings } from '../custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList, ct2_tab_ErrorList } from '../custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction, ct2_tab_FillerConstruction } from '../custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings, ct2_tab_FillerHardwareSettings } from '../custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction, ct2_tab_FillerPartConstruction } from '../custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings, ct2_tab_FillerSettings } from '../custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping, ct2_tab_FlipliftColorMapping } from '../custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction, ct2_tab_FlipliftConstruction } from '../custom-tables/tab_FlipliftConstruction'
@@ -62,6 +65,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction, ct2_ta
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction, ct2_tab_FrontConstruction } from '../custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping, ct2_tab_FrontEdgeColorMapping } from '../custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction, ct2_tab_FrontPanelConstruction } from '../custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection, ct2_tab_FrontPanelSelection } from '../custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings, ct2_tab_GrainDirectionSettings } from '../custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary, ct2_tab_GraphicFileLibrary } from '../custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary, ct2_tab_GraphicLibrary } from '../custom-tables/tab_GraphicLibrary'
@@ -132,15 +136,15 @@ import { IModParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_Fixedfront0
 import { IP_part_Handlestrip_PartVarsWritable, P_part_Handlestrip } from '../parts/part_Handlestrip'
 import { IP_part_HandlestripDrill_PartVarsWritable, P_part_HandlestripDrill } from '../parts/part_HandlestripDrill'
 import { IModuleNonNull_mc_Handlestrip01, IModParents_mc_Handlestrip01, IPartParentsNonNull_mc_Handlestrip01 } from '../mod-interfaces'
-import { IModVar_mod_Depth, IModVarNonNull_mod_Depth, IModVar_mod_DoorDirection, IModVarNonNull_mod_DoorDirection, IModVar_mod_FrontHeight, IModVarNonNull_mod_FrontHeight, IModVar_mod_FrontId, IModVarNonNull_mod_FrontId, IModVar_mod_FrontType, IModVarNonNull_mod_FrontType, IModVar_mod_HandleDrill, IModVarNonNull_mod_HandleDrill, IModVar_mod_HandleLine, IModVarNonNull_mod_HandleLine, IModVar_mod_HandlePosLogic, IModVarNonNull_mod_HandlePosLogic, IModVar_mod_Height, IModVarNonNull_mod_Height, IModVar_mod_FrontPosStart, IModVarNonNull_mod_FrontPosStart, IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_FrontProgram, IModVarNonNull_mod_FrontProgram, IModVar_mod_HandleColor, IModVarNonNull_mod_HandleColor, IModVar_mod_HandleLength, IModVarNonNull_mod_HandleLength, IModVar_mod_HandleOffsetX, IModVarNonNull_mod_HandleOffsetX, IModVar_mod_HandleOffsetY, IModVarNonNull_mod_HandleOffsetY, IModVar_mod_HandlePosMatrix, IModVarNonNull_mod_HandlePosMatrix, IModVar_mod_HandlePosType, IModVarNonNull_mod_HandlePosType, IModVar_mod_HeightPosInsertion, IModVarNonNull_mod_HeightPosInsertion, IModVar_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaHeight, IModVar_mod_PartInfo, IModVarNonNull_mod_PartInfo, IModVar_mod_HandleDesign, IModVarNonNull_mod_HandleDesign, IModVar_mod_CarcaseWidth, IModVarNonNull_mod_CarcaseWidth, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_Information, IModVarNonNull_mod_Information, IModVar_mod_FrontWidth, IModVarNonNull_mod_FrontWidth, IModVar_mod_FrontGapVert, IModVarNonNull_mod_FrontGapVert, IModVar_mod_ProcessingId, IModVarNonNull_mod_ProcessingId, IModVar_mod_ProcessingLibrary, IModVarNonNull_mod_ProcessingLibrary, IModVar_mod_Rotation, IModVarNonNull_mod_Rotation, IModVar_mod_HardwareId, IModVarNonNull_mod_HardwareId, IModVar_mod_Model3DGroupName, IModVarNonNull_mod_Model3DGroupName, IModVar_mod_FrontThk, IModVarNonNull_mod_FrontThk } from '../var-interfaces'
-import { VariantValidation, IMatrix_mod_Depth, IMatrix_mod_DoorDirection, IMatrix_mod_FrontHeight, IMatrix_mod_FrontId, IMatrix_mod_FrontType, IMatrix_mod_HandleDrill, IMatrix_mod_HandleLine, IMatrix_mod_HandlePosLogic, IMatrix_mod_Height, IMatrix_mod_FrontPosStart, IMatrix_mod_Width, IMatrix_mod_FrontProgram, IMatrix_mod_HandleColor, IMatrix_mod_HandleLength, IMatrix_mod_HandleOffsetX, IMatrix_mod_HandleOffsetY, IMatrix_mod_HandlePosMatrix, IMatrix_mod_HandlePosType, IMatrix_mod_HeightPosInsertion, IMatrix_mod_PlinthAreaHeight, IMatrix_mod_PartInfo, IMatrix_mod_HandleDesign, IMatrix_mod_CarcaseWidth, IMatrix_mod_ModuleName, IMatrix_mod_Information, IMatrix_mod_FrontWidth, IMatrix_mod_FrontGapVert, IMatrix_mod_ProcessingId, IMatrix_mod_ProcessingLibrary, IMatrix_mod_Rotation, IMatrix_mod_HardwareId, IMatrix_mod_Model3DGroupName, IMatrix_mod_FrontThk } from '../selections'
+import { IModVar_mod_Depth, IModVarNonNull_mod_Depth, IModVar_mod_DoorDirection, IModVarNonNull_mod_DoorDirection, IModVar_mod_FrontHeight, IModVarNonNull_mod_FrontHeight, IModVar_mod_FrontId, IModVarNonNull_mod_FrontId, IModVar_mod_FrontType, IModVarNonNull_mod_FrontType, IModVar_mod_HandleDrill, IModVarNonNull_mod_HandleDrill, IModVar_mod_HandleLine, IModVarNonNull_mod_HandleLine, IModVar_mod_HandlePosLogic, IModVarNonNull_mod_HandlePosLogic, IModVar_mod_Height, IModVarNonNull_mod_Height, IModVar_mod_FrontPosStart, IModVarNonNull_mod_FrontPosStart, IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_FrontProgram, IModVarNonNull_mod_FrontProgram, IModVar_mod_HandleColor, IModVarNonNull_mod_HandleColor, IModVar_mod_HandleLength, IModVarNonNull_mod_HandleLength, IModVar_mod_HandleOffsetX, IModVarNonNull_mod_HandleOffsetX, IModVar_mod_HandleOffsetY, IModVarNonNull_mod_HandleOffsetY, IModVar_mod_HandlePosMatrix, IModVarNonNull_mod_HandlePosMatrix, IModVar_mod_HandlePosType, IModVarNonNull_mod_HandlePosType, IModVar_mod_HeightPosInsertion, IModVarNonNull_mod_HeightPosInsertion, IModVar_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaHeight, IModVar_mod_PartInfo, IModVarNonNull_mod_PartInfo, IModVar_mod_HandleDesign, IModVarNonNull_mod_HandleDesign, IModVar_mod_CarcaseWidth, IModVarNonNull_mod_CarcaseWidth, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_Information, IModVarNonNull_mod_Information, IModVar_mod_FrontWidth, IModVarNonNull_mod_FrontWidth, IModVar_mod_FrontGapVert, IModVarNonNull_mod_FrontGapVert, IModVar_mod_ProcessingId, IModVarNonNull_mod_ProcessingId, IModVar_mod_ProcessingLibrary, IModVarNonNull_mod_ProcessingLibrary, IModVar_mod_Rotation, IModVarNonNull_mod_Rotation, IModVar_mod_HardwareId, IModVarNonNull_mod_HardwareId, IModVar_mod_Model3DGroupName, IModVarNonNull_mod_Model3DGroupName, IModVar_mod_FrontThk, IModVarNonNull_mod_FrontThk, IModVar_mod_FrontOversizeBtm, IModVarNonNull_mod_FrontOversizeBtm, IModVar_mod_HandlePosFrontOversize, IModVarNonNull_mod_HandlePosFrontOversize } from '../var-interfaces'
+import { VariantValidation, IMatrix_mod_Depth, IMatrix_mod_DoorDirection, IMatrix_mod_FrontHeight, IMatrix_mod_FrontId, IMatrix_mod_FrontType, IMatrix_mod_HandleDrill, IMatrix_mod_HandleLine, IMatrix_mod_HandlePosLogic, IMatrix_mod_Height, IMatrix_mod_FrontPosStart, IMatrix_mod_Width, IMatrix_mod_FrontProgram, IMatrix_mod_HandleColor, IMatrix_mod_HandleLength, IMatrix_mod_HandleOffsetX, IMatrix_mod_HandleOffsetY, IMatrix_mod_HandlePosMatrix, IMatrix_mod_HandlePosType, IMatrix_mod_HeightPosInsertion, IMatrix_mod_PlinthAreaHeight, IMatrix_mod_PartInfo, IMatrix_mod_HandleDesign, IMatrix_mod_CarcaseWidth, IMatrix_mod_ModuleName, IMatrix_mod_Information, IMatrix_mod_FrontWidth, IMatrix_mod_FrontGapVert, IMatrix_mod_ProcessingId, IMatrix_mod_ProcessingLibrary, IMatrix_mod_Rotation, IMatrix_mod_HardwareId, IMatrix_mod_Model3DGroupName, IMatrix_mod_FrontThk, IMatrix_mod_FrontOversizeBtm, IMatrix_mod_HandlePosFrontOversize } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
 import { IPartAdd_part_Handlestrip, IPartAdd_part_HandlestripDrill } from '../part-add-interfaces';
-import { mc_Handlestrip01_createBuildPlan, mc_Handlestrip01_afterDataCompletion, mc_Handlestrip01_manufacturerDataCompletion, mc_Handlestrip01_calculateContainerModules } from '../../modules/mc_Handlestrip01';
+import { mc_Handlestrip01_createBuildPlan, mc_Handlestrip01_afterDataCompletion, mc_Handlestrip01_manufacturerDataCompletion, mc_Handlestrip01_calculateContainerModules, mc_Handlestrip01_prepareContext } from '../../modules/mc_Handlestrip01';
 
 export interface cbp_mc_Handlestrip01 extends IModBaseProp
-  , IPartAdd_part_Handlestrip, IPartAdd_part_HandlestripDrill, IModVarNonNull_mod_Depth, IModVarNonNull_mod_DoorDirection, IModVarNonNull_mod_FrontHeight, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontType, IModVarNonNull_mod_HandleDrill, IModVarNonNull_mod_HandleLine, IModVarNonNull_mod_HandlePosLogic, IModVarNonNull_mod_Height, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_Width, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_HandleColor, IModVarNonNull_mod_HandleLength, IModVarNonNull_mod_HandleOffsetX, IModVarNonNull_mod_HandleOffsetY, IModVarNonNull_mod_HandlePosMatrix, IModVarNonNull_mod_HandlePosType, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_PartInfo, IModVarNonNull_mod_HandleDesign, IModVarNonNull_mod_CarcaseWidth, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_Information, IModVarNonNull_mod_FrontWidth, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_ProcessingId, IModVarNonNull_mod_ProcessingLibrary, IModVarNonNull_mod_Rotation, IModVarNonNull_mod_HardwareId, IModVarNonNull_mod_Model3DGroupName, IModVarNonNull_mod_FrontThk {
+  , IPartAdd_part_Handlestrip, IPartAdd_part_HandlestripDrill, IModVarNonNull_mod_Depth, IModVarNonNull_mod_DoorDirection, IModVarNonNull_mod_FrontHeight, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontType, IModVarNonNull_mod_HandleDrill, IModVarNonNull_mod_HandleLine, IModVarNonNull_mod_HandlePosLogic, IModVarNonNull_mod_Height, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_Width, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_HandleColor, IModVarNonNull_mod_HandleLength, IModVarNonNull_mod_HandleOffsetX, IModVarNonNull_mod_HandleOffsetY, IModVarNonNull_mod_HandlePosMatrix, IModVarNonNull_mod_HandlePosType, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_PartInfo, IModVarNonNull_mod_HandleDesign, IModVarNonNull_mod_CarcaseWidth, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_Information, IModVarNonNull_mod_FrontWidth, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_ProcessingId, IModVarNonNull_mod_ProcessingLibrary, IModVarNonNull_mod_Rotation, IModVarNonNull_mod_HardwareId, IModVarNonNull_mod_Model3DGroupName, IModVarNonNull_mod_FrontThk, IModVarNonNull_mod_FrontOversizeBtm, IModVarNonNull_mod_HandlePosFrontOversize {
   parent: IModParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
@@ -154,15 +158,22 @@ export interface cbp_mc_Handlestrip01 extends IModBaseProp
 }
 
 export interface dc_mc_Handlestrip01 extends IModBaseProp
-  , IModVar_mod_Depth, IModVar_mod_DoorDirection, IModVar_mod_FrontHeight, IModVar_mod_FrontId, IModVar_mod_FrontType, IModVar_mod_HandleDrill, IModVar_mod_HandleLine, IModVar_mod_HandlePosLogic, IModVar_mod_Height, IModVar_mod_FrontPosStart, IModVar_mod_Width, IModVar_mod_FrontProgram, IModVar_mod_HandleColor, IModVar_mod_HandleLength, IModVar_mod_HandleOffsetX, IModVar_mod_HandleOffsetY, IModVar_mod_HandlePosMatrix, IModVar_mod_HandlePosType, IModVar_mod_HeightPosInsertion, IModVar_mod_PlinthAreaHeight, IModVar_mod_PartInfo, IModVar_mod_HandleDesign, IModVar_mod_CarcaseWidth, IModVar_mod_ModuleName, IModVar_mod_Information, IModVar_mod_FrontWidth, IModVar_mod_FrontGapVert, IModVar_mod_ProcessingId, IModVar_mod_ProcessingLibrary, IModVar_mod_Rotation, IModVar_mod_HardwareId, IModVar_mod_Model3DGroupName, IModVar_mod_FrontThk {
+  , IModVar_mod_Depth, IModVar_mod_DoorDirection, IModVar_mod_FrontHeight, IModVar_mod_FrontId, IModVar_mod_FrontType, IModVar_mod_HandleDrill, IModVar_mod_HandleLine, IModVar_mod_HandlePosLogic, IModVar_mod_Height, IModVar_mod_FrontPosStart, IModVar_mod_Width, IModVar_mod_FrontProgram, IModVar_mod_HandleColor, IModVar_mod_HandleLength, IModVar_mod_HandleOffsetX, IModVar_mod_HandleOffsetY, IModVar_mod_HandlePosMatrix, IModVar_mod_HandlePosType, IModVar_mod_HeightPosInsertion, IModVar_mod_PlinthAreaHeight, IModVar_mod_PartInfo, IModVar_mod_HandleDesign, IModVar_mod_CarcaseWidth, IModVar_mod_ModuleName, IModVar_mod_Information, IModVar_mod_FrontWidth, IModVar_mod_FrontGapVert, IModVar_mod_ProcessingId, IModVar_mod_ProcessingLibrary, IModVar_mod_Rotation, IModVar_mod_HardwareId, IModVar_mod_Model3DGroupName, IModVar_mod_FrontThk, IModVar_mod_FrontOversizeBtm, IModVar_mod_HandlePosFrontOversize {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_Handlestrip01;
   parent: IModParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01;
 }
 
+export interface pc_mc_Handlestrip01 extends dc_mc_Handlestrip01 {
+  _forcedInputAttributes?: string[];
+  getContextData(): IContextData | undefined;
+  getContextModule(id: string): OD_Base | undefined;
+  getRoomContours(): RoomContour[];
+}
+
 export interface adc_base_mc_Handlestrip01 extends IModBaseProp
-  , IModVarNonNull_mod_Depth, IModVarNonNull_mod_DoorDirection, IModVarNonNull_mod_FrontHeight, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontType, IModVarNonNull_mod_HandleDrill, IModVarNonNull_mod_HandleLine, IModVarNonNull_mod_HandlePosLogic, IModVarNonNull_mod_Height, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_Width, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_HandleColor, IModVarNonNull_mod_HandleLength, IModVarNonNull_mod_HandleOffsetX, IModVarNonNull_mod_HandleOffsetY, IModVarNonNull_mod_HandlePosMatrix, IModVarNonNull_mod_HandlePosType, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_PartInfo, IModVarNonNull_mod_HandleDesign, IModVarNonNull_mod_CarcaseWidth, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_Information, IModVarNonNull_mod_FrontWidth, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_ProcessingId, IModVarNonNull_mod_ProcessingLibrary, IModVarNonNull_mod_Rotation, IModVarNonNull_mod_HardwareId, IModVarNonNull_mod_Model3DGroupName, IModVarNonNull_mod_FrontThk {
+  , IModVarNonNull_mod_Depth, IModVarNonNull_mod_DoorDirection, IModVarNonNull_mod_FrontHeight, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontType, IModVarNonNull_mod_HandleDrill, IModVarNonNull_mod_HandleLine, IModVarNonNull_mod_HandlePosLogic, IModVarNonNull_mod_Height, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_Width, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_HandleColor, IModVarNonNull_mod_HandleLength, IModVarNonNull_mod_HandleOffsetX, IModVarNonNull_mod_HandleOffsetY, IModVarNonNull_mod_HandlePosMatrix, IModVarNonNull_mod_HandlePosType, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_PartInfo, IModVarNonNull_mod_HandleDesign, IModVarNonNull_mod_CarcaseWidth, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_Information, IModVarNonNull_mod_FrontWidth, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_ProcessingId, IModVarNonNull_mod_ProcessingLibrary, IModVarNonNull_mod_Rotation, IModVarNonNull_mod_HardwareId, IModVarNonNull_mod_Model3DGroupName, IModVarNonNull_mod_FrontThk, IModVarNonNull_mod_FrontOversizeBtm, IModVarNonNull_mod_HandlePosFrontOversize {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   ct_tab_HandleSettings: ct2_tab_HandleSettings;
@@ -176,9 +187,9 @@ export interface ccm_mc_Handlestrip01 extends adc_base_mc_Handlestrip01 {
 }
 
 
-export class OD_M_mc_Handlestrip01 extends OD_Base implements dc_mc_Handlestrip01
+export class OD_M_mc_Handlestrip01 extends OD_Base implements pc_mc_Handlestrip01, dc_mc_Handlestrip01
   , IModParents_mc_Handlestrip01
-  , IModVar_mod_Depth, IModVar_mod_DoorDirection, IModVar_mod_FrontHeight, IModVar_mod_FrontId, IModVar_mod_FrontType, IModVar_mod_HandleDrill, IModVar_mod_HandleLine, IModVar_mod_HandlePosLogic, IModVar_mod_Height, IModVar_mod_FrontPosStart, IModVar_mod_Width, IModVar_mod_FrontProgram, IModVar_mod_HandleColor, IModVar_mod_HandleLength, IModVar_mod_HandleOffsetX, IModVar_mod_HandleOffsetY, IModVar_mod_HandlePosMatrix, IModVar_mod_HandlePosType, IModVar_mod_HeightPosInsertion, IModVar_mod_PlinthAreaHeight, IModVar_mod_PartInfo, IModVar_mod_HandleDesign, IModVar_mod_CarcaseWidth, IModVar_mod_ModuleName, IModVar_mod_Information, IModVar_mod_FrontWidth, IModVar_mod_FrontGapVert, IModVar_mod_ProcessingId, IModVar_mod_ProcessingLibrary, IModVar_mod_Rotation, IModVar_mod_HardwareId, IModVar_mod_Model3DGroupName, IModVar_mod_FrontThk {
+  , IModVar_mod_Depth, IModVar_mod_DoorDirection, IModVar_mod_FrontHeight, IModVar_mod_FrontId, IModVar_mod_FrontType, IModVar_mod_HandleDrill, IModVar_mod_HandleLine, IModVar_mod_HandlePosLogic, IModVar_mod_Height, IModVar_mod_FrontPosStart, IModVar_mod_Width, IModVar_mod_FrontProgram, IModVar_mod_HandleColor, IModVar_mod_HandleLength, IModVar_mod_HandleOffsetX, IModVar_mod_HandleOffsetY, IModVar_mod_HandlePosMatrix, IModVar_mod_HandlePosType, IModVar_mod_HeightPosInsertion, IModVar_mod_PlinthAreaHeight, IModVar_mod_PartInfo, IModVar_mod_HandleDesign, IModVar_mod_CarcaseWidth, IModVar_mod_ModuleName, IModVar_mod_Information, IModVar_mod_FrontWidth, IModVar_mod_FrontGapVert, IModVar_mod_ProcessingId, IModVar_mod_ProcessingLibrary, IModVar_mod_Rotation, IModVar_mod_HardwareId, IModVar_mod_Model3DGroupName, IModVar_mod_FrontThk, IModVar_mod_FrontOversizeBtm, IModVar_mod_HandlePosFrontOversize {
   constructor(parent: IModParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01, manufacturerMode?: boolean) {
     super('mc_Handlestrip01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
@@ -187,7 +198,7 @@ export class OD_M_mc_Handlestrip01 extends OD_Base implements dc_mc_Handlestrip0
   parent: IModParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01;
   _selfNonNull: OD_M_mc_Handlestrip01_NonNull;
 
-  override variants: string[] = ['mod_Depth', 'mod_DoorDirection', 'mod_FrontHeight', 'mod_FrontId', 'mod_FrontType', 'mod_HandleDrill', 'mod_HandleLine', 'mod_HandlePosLogic', 'mod_Height', 'mod_FrontPosStart', 'mod_Width', 'mod_FrontProgram', 'mod_HandleColor', 'mod_HandleLength', 'mod_HandleOffsetX', 'mod_HandleOffsetY', 'mod_HandlePosMatrix', 'mod_HandlePosType', 'mod_HeightPosInsertion', 'mod_PlinthAreaHeight', 'mod_PartInfo', 'mod_HandleDesign', 'mod_CarcaseWidth', 'mod_ModuleName', 'mod_Information', 'mod_FrontWidth', 'mod_FrontGapVert', 'mod_ProcessingId', 'mod_ProcessingLibrary', 'mod_Rotation', 'mod_HardwareId', 'mod_Model3DGroupName', 'mod_FrontThk',];
+  override variants: string[] = ['mod_Depth', 'mod_DoorDirection', 'mod_FrontHeight', 'mod_FrontId', 'mod_FrontType', 'mod_HandleDrill', 'mod_HandleLine', 'mod_HandlePosLogic', 'mod_Height', 'mod_FrontPosStart', 'mod_Width', 'mod_FrontProgram', 'mod_HandleColor', 'mod_HandleLength', 'mod_HandleOffsetX', 'mod_HandleOffsetY', 'mod_HandlePosMatrix', 'mod_HandlePosType', 'mod_HeightPosInsertion', 'mod_PlinthAreaHeight', 'mod_PartInfo', 'mod_HandleDesign', 'mod_CarcaseWidth', 'mod_ModuleName', 'mod_Information', 'mod_FrontWidth', 'mod_FrontGapVert', 'mod_ProcessingId', 'mod_ProcessingLibrary', 'mod_Rotation', 'mod_HardwareId', 'mod_Model3DGroupName', 'mod_FrontThk', 'mod_FrontOversizeBtm', 'mod_HandlePosFrontOversize',];
   #mod_Depth?: number;
   get mod_Depth(): number | undefined { return this.#mod_Depth }
   set mod_Depth(value: number | undefined) {
@@ -584,6 +595,30 @@ export class OD_M_mc_Handlestrip01 extends OD_Base implements dc_mc_Handlestrip0
   }
 
   mod_FrontThk_matrix?: IMatrix_mod_FrontThk;
+  #mod_FrontOversizeBtm?: number;
+  get mod_FrontOversizeBtm(): number | undefined { return this.#mod_FrontOversizeBtm }
+  set mod_FrontOversizeBtm(value: number | undefined) {
+    if (this._adcFinished) {
+      logError("The property 'mod_FrontOversizeBtm' must not be changed after the module was completed with 'afterDataCompletion'");
+      return;
+    }
+    if (this.#mod_FrontOversizeBtm === value) return;
+    this.#mod_FrontOversizeBtm = value;
+  }
+
+  mod_FrontOversizeBtm_matrix?: IMatrix_mod_FrontOversizeBtm;
+  #mod_HandlePosFrontOversize?: string;
+  get mod_HandlePosFrontOversize(): string | undefined { return this.#mod_HandlePosFrontOversize }
+  set mod_HandlePosFrontOversize(value: string | undefined) {
+    if (this._adcFinished) {
+      logError("The property 'mod_HandlePosFrontOversize' must not be changed after the module was completed with 'afterDataCompletion'");
+      return;
+    }
+    if (this.#mod_HandlePosFrontOversize === value) return;
+    this.#mod_HandlePosFrontOversize = value;
+  }
+
+  mod_HandlePosFrontOversize_matrix?: IMatrix_mod_HandlePosFrontOversize;
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
     res.set('mod_Depth', this.mod_Depth);
@@ -619,6 +654,8 @@ export class OD_M_mc_Handlestrip01 extends OD_Base implements dc_mc_Handlestrip0
     res.set('mod_HardwareId', this.mod_HardwareId);
     res.set('mod_Model3DGroupName', this.mod_Model3DGroupName);
     res.set('mod_FrontThk', this.mod_FrontThk);
+    res.set('mod_FrontOversizeBtm', this.mod_FrontOversizeBtm);
+    res.set('mod_HandlePosFrontOversize', this.mod_HandlePosFrontOversize);
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -825,6 +862,18 @@ export class OD_M_mc_Handlestrip01 extends OD_Base implements dc_mc_Handlestrip0
       const val = _toFloat(json['attributes']['mod_FrontThk'], 'mod_FrontThk');
       internal_leaveValidateVariant();
       this.mod_FrontThk = val;
+    }
+    {
+      internal_enterValidateVariant(this.modId, this._id, 'mod_FrontOversizeBtm');
+      const val = _toFloat(json['attributes']['mod_FrontOversizeBtm'], 'mod_FrontOversizeBtm');
+      internal_leaveValidateVariant();
+      this.mod_FrontOversizeBtm = val;
+    }
+    {
+      internal_enterValidateVariant(this.modId, this._id, 'mod_HandlePosFrontOversize');
+      const val = _toString(json['attributes']['mod_HandlePosFrontOversize'], 'mod_HandlePosFrontOversize');
+      internal_leaveValidateVariant();
+      this.mod_HandlePosFrontOversize = val;
     }
     if (withSubModules && json['modules']) {
       json['modules'].forEach((subMod: any) => { this.m.push(loadOrderData(subMod, this, manufacturerMode)) });
@@ -1127,6 +1176,20 @@ export class OD_M_mc_Handlestrip01 extends OD_Base implements dc_mc_Handlestrip0
         s = s.parentBase;
       }
     }
+    if (this.mod_FrontOversizeBtm === undefined) {
+      let s = this.parentBase;
+      // try to find a parent with a valid value
+      while (s !== undefined) {
+        if (s.variants.includes('mod_FrontOversizeBtm')) {
+          let pv = <IModVar_mod_FrontOversizeBtm>s;
+          if (pv.mod_FrontOversizeBtm !== undefined) {
+            this.mod_FrontOversizeBtm = (<IModVar_mod_FrontOversizeBtm>s).mod_FrontOversizeBtm;
+            break;
+          };
+        }
+        s = s.parentBase;
+      }
+    }
     internal_leaveDataCompletionAssignDerivedData();
   }
 
@@ -1192,6 +1255,9 @@ export class OD_M_mc_Handlestrip01 extends OD_Base implements dc_mc_Handlestrip0
   }
   #dataCompletionSetDefaultScripts_globalVars() {
     internal_enterDataCompletionSetDefaultScripts_globalVars(this.modId, this._id);
+    if (this.mod_HandlePosFrontOversize === undefined) {
+      this.mod_HandlePosFrontOversize = this.g.basic_HandlePosFrontOversize;
+    }
     internal_leaveDataCompletionSetDefaultScripts_globalVars();
   }
 
@@ -1215,6 +1281,15 @@ export class OD_M_mc_Handlestrip01 extends OD_Base implements dc_mc_Handlestrip0
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
   }
+  override prepareContext(contextRoots: OD_Base[]): void {
+    super.prepareContext(contextRoots);
+    this.internallyPrepareContext();
+    this.m.forEach(subMod => subMod.prepareContext(contextRoots));
+  }
+  internallyPrepareContext(): void {
+    this.#prepareContextInternal();
+  }
+  #prepareContextInternal = mc_Handlestrip01_prepareContext;
   seal(): IModuleNonNull_mc_Handlestrip01 {
     this.afterDataCompletion();
     const adc = new OD_M_mc_Handlestrip01_NonNull(this);
@@ -1255,6 +1330,8 @@ export class OD_M_mc_Handlestrip01 extends OD_Base implements dc_mc_Handlestrip0
     this.mod_HardwareId_matrix = VariantValidation.mod_HardwareId(this, this.mod_HardwareId);
     this.mod_Model3DGroupName_matrix = VariantValidation.mod_Model3DGroupName(this, this.mod_Model3DGroupName);
     this.mod_FrontThk_matrix = VariantValidation.mod_FrontThk(this, this.mod_FrontThk);
+    this.mod_FrontOversizeBtm_matrix = VariantValidation.mod_FrontOversizeBtm(this, this.mod_FrontOversizeBtm);
+    this.mod_HandlePosFrontOversize_matrix = VariantValidation.mod_HandlePosFrontOversize(this, this.mod_HandlePosFrontOversize);
   }
 
   override calculateContainerModules(): void {
@@ -1448,6 +1525,12 @@ class OD_M_mc_Handlestrip01_NonNull implements cbp_mc_Handlestrip01, adc_mc_Hand
   }
   get mod_FrontThk(): number {
     return this.#internalParent.mod_FrontThk!;
+  }
+  get mod_FrontOversizeBtm(): number {
+    return this.#internalParent.mod_FrontOversizeBtm!;
+  }
+  get mod_HandlePosFrontOversize(): string {
+    return this.#internalParent.mod_HandlePosFrontOversize!;
   }
 }
 

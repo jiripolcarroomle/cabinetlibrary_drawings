@@ -1,9 +1,8 @@
 import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
 
 //#region Imports
-import { cbp_mc_HoodInsert01, dc_mc_HoodInsert01, adc_mc_HoodInsert01, ccm_mc_HoodInsert01 } from '../internal/modules/mc_HoodInsert01'
+import { cbp_mc_HoodCarcaseParts01, dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, ccm_mc_HoodCarcaseParts01, pc_mc_HoodCarcaseParts01 } from '../internal/modules/mc_HoodCarcaseParts01'
 import { GlobalFunc } from '../internal/global-func'
-import { dc_mc_ApplianceGraphic, OD_M_mc_ApplianceGraphic } from '../internal/modules/mc_ApplianceGraphic'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary } from '../internal/custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction } from '../internal/custom-tables/tab_BaseunitFridgeConstruction'
 import { ct_tab_BaseunitFridgeMapping, ICT_tab_BaseunitFridgeMapping } from '../internal/custom-tables/tab_BaseunitFridgeMapping'
@@ -14,7 +13,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping } from '../internal/custo
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction } from '../internal/custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings } from '../internal/custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction } from '../internal/custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction } from '../internal/custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection } from '../internal/custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations } from '../internal/custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping } from '../internal/custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape } from '../internal/custom-tables/tab_CarcasePartsShape'
@@ -24,9 +23,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings } fro
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension } from '../internal/custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction } from '../internal/custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping } from '../internal/custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition } from '../internal/custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping } from '../internal/custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions } from '../internal/custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping } from '../internal/custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings } from '../internal/custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary } from '../internal/custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables } from '../internal/custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction } from '../internal/custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -52,7 +52,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping } from '../internal/custom-tabl
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings } from '../internal/custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings } from '../internal/custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList } from '../internal/custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction } from '../internal/custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings } from '../internal/custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction } from '../internal/custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings } from '../internal/custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping } from '../internal/custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction } from '../internal/custom-tables/tab_FlipliftConstruction'
@@ -67,6 +69,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction } from 
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction } from '../internal/custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping } from '../internal/custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction } from '../internal/custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection } from '../internal/custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings } from '../internal/custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary } from '../internal/custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary } from '../internal/custom-tables/tab_GraphicLibrary'
@@ -133,14 +136,73 @@ import { Dock, IDockingInfo, FaceKey, IPartBase, MatrixHelper, ModuleHelper, Par
 declare function uuidv4(): string;
 //#endregion Imports
 
-export function mc_HoodInsert01_createBuildPlan(this: cbp_mc_HoodInsert01): void {
-  internal_enterModuleCreateBuildPlan('mc_HoodInsert01', this._id);
+export function mc_HoodCarcaseParts01_createBuildPlan(this: cbp_mc_HoodCarcaseParts01): void {
+  internal_enterModuleCreateBuildPlan('mc_HoodCarcaseParts01', this._id);
   try {
     // ###############################################################
     // ####################### CUSTOM SCRIPTS ########################
     // ###############################################################
-    // CUSTOMSCRIPT_mc_HoodInsert01_CREATEBUILDPLAN
+    // CUSTOMSCRIPT_mc_HoodCarcaseParts01_CREATEBUILDPLAN
 
+    // Homag Digital
+    // Create: May 2026
+    // By Reto Schuler
+    // Purpose: CabinetLibrary
+    //
+    // Description:
+    // CreateBuildPlan of mc_HoodCarcaseParts01
+    // Add the carcase parts for the hood
+    //
+    //===================================================
+    //================================================================================================
+    //          Initialize (Create the map)
+    //================================================================================================
+    // Mapping for Part configurations with direct method references
+    let partConfig = new Map([
+      ['part_HoodShelftop', { createPart: () => this.addpart_HoodShelftop(0, 0, 0, this.mod_CarcaseWidth, this.mod_CarcaseHeight, this.mod_CarcaseDepth) }],
+      ['part_HoodShelfbtm', { createPart: () => this.addpart_HoodShelfbtm(0, 0, 0, this.mod_CarcaseWidth, this.mod_CarcaseHeight, this.mod_CarcaseDepth) }],
+      ['part_HoodBackwall', { createPart: () => this.addpart_HoodBackwall(10, 50, 100, this.mod_CarcaseWidth, this.mod_CarcaseHeight, this.mod_CarcaseDepth) }],
+      ['part_HoodRail', { createPart: () => this.addpart_HoodRail(0, 0, 0, this.mod_CarcaseWidth, this.mod_CarcaseHeight, this.mod_CarcaseDepth) }],
+    ]);
+
+    if (!this.mod_HoodInformation && this.mod_HoodInformation == "") {
+      return;
+    }
+    const hoodInformation = JSON.parse(this.mod_HoodInformation);
+
+    if (!hoodInformation.constructionId && hoodInformation.ConstructionId == "") {
+      return;
+    }
+    let rearPanel = hoodInformation.RearOffset;
+    // Read the table
+    const partList = GlobalFunc.find_HoddAssemblyParts(hoodInformation.ConstructionId);
+
+    if (!partList || partList.length === 0) {
+      //Fehlermeldung kommt schon aus findfun...
+      return;
+    }
+    //===================================================
+    // Add the carcase parts for the hood
+    //===================================================
+    partList.forEach(part => {
+      const partData = part;
+
+      let config = partConfig.get(partData.PartID ?? "");
+      if (config) {
+        let { createPart } = config;
+        try {
+          let element = createPart();
+
+        }
+        catch (error: any) {
+          // Log the error and stop execution if any function call fails
+          let ErrorMessage = GlobalFunc.find_ErrorList('Error 21004', 1);
+          logError(ErrorMessage.Message(error.message));
+          return;
+        }
+
+      }
+    });
     // ###############################################################
     // ################### END CUSTOM SCRIPTS ########################
     // ###############################################################
@@ -157,20 +219,13 @@ export function mc_HoodInsert01_createBuildPlan(this: cbp_mc_HoodInsert01): void
   }
 }
 // ---------------------------------------------------------------
-export function mc_HoodInsert01_afterDataCompletion(this: adc_mc_HoodInsert01): void {
-  internal_enterModuleAfterDataCompletion('mc_HoodInsert01', this._id);
+export function mc_HoodCarcaseParts01_afterDataCompletion(this: adc_mc_HoodCarcaseParts01): void {
+  internal_enterModuleAfterDataCompletion('mc_HoodCarcaseParts01', this._id);
   try {
     // ###############################################################
     // ####################### CUSTOM SCRIPTS ########################
     // ###############################################################
-    // CUSTOMSCRIPT_mc_HoodInsert01_AFTERDATACOMPLETION
-
-
-    let Graphic = this.addOD_M_mc_ApplianceGraphic();
-
-    Graphic.mod_GraphicId = this.mod_HoodId;
-
-    Graphic.setOrigin(0, 0, 0);
+    // CUSTOMSCRIPT_mc_HoodCarcaseParts01_AFTERDATACOMPLETION
 
     // ###############################################################
     // ################### END CUSTOM SCRIPTS ########################
@@ -188,13 +243,37 @@ export function mc_HoodInsert01_afterDataCompletion(this: adc_mc_HoodInsert01): 
   }
 }
 // ---------------------------------------------------------------
-export function mc_HoodInsert01_calculateContainerModules(this: ccm_mc_HoodInsert01): void {
-  internal_enterCalculateContainerModules('mc_HoodInsert01', this._id);
+export function mc_HoodCarcaseParts01_prepareContext(this: pc_mc_HoodCarcaseParts01): void {
+  internal_enterModulePrepareContext('mc_HoodCarcaseParts01', this._id);
   try {
     // ###############################################################
     // ####################### CUSTOM SCRIPTS ########################
     // ###############################################################
-    // CUSTOMSCRIPT_mc_HoodInsert01_CALCULATECONTAINERMODULES
+    // CUSTOMSCRIPT_mc_HoodCarcaseParts01_PREPARECONTEXT
+
+    // ###############################################################
+    // ################### END CUSTOM SCRIPTS ########################
+    // ###############################################################
+  }
+  catch (error) {
+    if (error instanceof Error) {
+      logError(error.message + "\n" + error.stack);
+    } else {
+      logError(JSON.stringify(error, null, 4));
+    }
+  }
+  finally {
+    internal_leaveModulePrepareContext();
+  }
+}
+// ---------------------------------------------------------------
+export function mc_HoodCarcaseParts01_calculateContainerModules(this: ccm_mc_HoodCarcaseParts01): void {
+  internal_enterCalculateContainerModules('mc_HoodCarcaseParts01', this._id);
+  try {
+    // ###############################################################
+    // ####################### CUSTOM SCRIPTS ########################
+    // ###############################################################
+    // CUSTOMSCRIPT_mc_HoodCarcaseParts01_CALCULATECONTAINERMODULES
 
     // ###############################################################
     // ################### END CUSTOM SCRIPTS ########################
@@ -212,13 +291,13 @@ export function mc_HoodInsert01_calculateContainerModules(this: ccm_mc_HoodInser
   }
 }
 // ---------------------------------------------------------------
-export function mc_HoodInsert01_manufacturerDataCompletion(this: dc_mc_HoodInsert01): void {
-  internal_enterModuleManufacturerDataCompletion('mc_HoodInsert01', this._id);
+export function mc_HoodCarcaseParts01_manufacturerDataCompletion(this: dc_mc_HoodCarcaseParts01): void {
+  internal_enterModuleManufacturerDataCompletion('mc_HoodCarcaseParts01', this._id);
   try {
     // ###############################################################
     // ####################### CUSTOM SCRIPTS ########################
     // ###############################################################
-    // CUSTOMSCRIPT_mc_HoodInsert01_MANUFACTURERDATACOMPLETION
+    // CUSTOMSCRIPT_mc_HoodCarcaseParts01_MANUFACTURERDATACOMPLETION
 
     // ###############################################################
     // ################### END CUSTOM SCRIPTS ########################

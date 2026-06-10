@@ -22,8 +22,7 @@ import { P_part_Backwall, IP_part_Backwall_PartVarsReadOnly } from './part_Backw
 import { P_part_FillerHardwareProcessing, IP_part_FillerHardwareProcessing_PartVarsReadOnly } from './part_FillerHardwareProcessing'
 import { P_part_PulloutHardwareDrillings, IP_part_PulloutHardwareDrillings_PartVarsReadOnly } from './part_PulloutHardwareDrillings'
 import { P_part_ClothingOrganizerDrilling, IP_part_ClothingOrganizerDrilling_PartVarsReadOnly } from './part_ClothingOrganizerDrilling'
-import { BOM_ElementType_bomout_Board } from '../bom/types/bom_bomout_Board'
-import { BOM_ElementType_bomout_Edge } from '../bom/types/bom_bomout_Edge'
+import { BOM_ElementType_bomout_Group } from '../bom/types/bom_bomout_Group'
 import { BOM_ElementType_ncout_Group } from '../bom/types/touch_ncout_Group'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary, cto_tab_ApplianceGraphicLibrary, ct2_tab_ApplianceGraphicLibrary } from '../custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction, cto_tab_BaseunitFridgeConstruction, ct2_tab_BaseunitFridgeConstruction } from '../custom-tables/tab_BaseunitFridgeConstruction'
@@ -35,7 +34,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping, cto_tab_BracketMapping, 
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction, cto_tab_CarcaseBackwallConstruction, ct2_tab_CarcaseBackwallConstruction } from '../custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings, cto_tab_CarcaseBackwallSettings, ct2_tab_CarcaseBackwallSettings } from '../custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction, cto_tab_CarcaseCornerunitConstruction, ct2_tab_CarcaseCornerunitConstruction } from '../custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction, cto_tab_CarcaseHoodConstruction, ct2_tab_CarcaseHoodConstruction } from '../custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection, cto_tab_CarcasePanelSelection, ct2_tab_CarcasePanelSelection } from '../custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations, cto_tab_CarcasePartConnectionCalculations, ct2_tab_CarcasePartConnectionCalculations } from '../custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping, cto_tab_CarcasePartConnectionMapping, ct2_tab_CarcasePartConnectionMapping } from '../custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape, cto_tab_CarcasePartsShape, ct2_tab_CarcasePartsShape } from '../custom-tables/tab_CarcasePartsShape'
@@ -45,9 +44,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings, cto_
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension, cto_tab_CarcaseSlopedCeilingDimension, ct2_tab_CarcaseSlopedCeilingDimension } from '../custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction, cto_tab_CarcaseStorageunitConstruction, ct2_tab_CarcaseStorageunitConstruction } from '../custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping, cto_tab_ClothingOrganizerColorMapping, ct2_tab_ClothingOrganizerColorMapping } from '../custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition, cto_tab_ClothingOrganizerDepthPosition, ct2_tab_ClothingOrganizerDepthPosition } from '../custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping, cto_tab_ClothingOrganizerExtraItemMapping, ct2_tab_ClothingOrganizerExtraItemMapping } from '../custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions, cto_tab_ClothingOrganizerInstallationDimensions, ct2_tab_ClothingOrganizerInstallationDimensions } from '../custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping, cto_tab_ClothingOrganizerMapping, ct2_tab_ClothingOrganizerMapping } from '../custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings, cto_tab_ClothingOrganizerPositionZSettings, ct2_tab_ClothingOrganizerPositionZSettings } from '../custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary, cto_tab_ComponentLibrary, ct2_tab_ComponentLibrary } from '../custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables, cto_tab_ComponentVariables, ct2_tab_ComponentVariables } from '../custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction, cto_tab_CornerFillerFrontpanelConstruction, ct2_tab_CornerFillerFrontpanelConstruction } from '../custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -73,7 +73,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping, cto_tab_EdgeMapping, ct2_tab_E
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings, cto_tab_EdgeNumberSettings, ct2_tab_EdgeNumberSettings } from '../custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings, cto_tab_EdgeSettings, ct2_tab_EdgeSettings } from '../custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList, cto_tab_ErrorList, ct2_tab_ErrorList } from '../custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction, cto_tab_FillerConstruction, ct2_tab_FillerConstruction } from '../custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings, cto_tab_FillerHardwareSettings, ct2_tab_FillerHardwareSettings } from '../custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction, cto_tab_FillerPartConstruction, ct2_tab_FillerPartConstruction } from '../custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings, cto_tab_FillerSettings, ct2_tab_FillerSettings } from '../custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping, cto_tab_FlipliftColorMapping, ct2_tab_FlipliftColorMapping } from '../custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction, cto_tab_FlipliftConstruction, ct2_tab_FlipliftConstruction } from '../custom-tables/tab_FlipliftConstruction'
@@ -88,6 +90,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction, cto_ta
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction, cto_tab_FrontConstruction, ct2_tab_FrontConstruction } from '../custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping, cto_tab_FrontEdgeColorMapping, ct2_tab_FrontEdgeColorMapping } from '../custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction, cto_tab_FrontPanelConstruction, ct2_tab_FrontPanelConstruction } from '../custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection, cto_tab_FrontPanelSelection, ct2_tab_FrontPanelSelection } from '../custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings, cto_tab_GrainDirectionSettings, ct2_tab_GrainDirectionSettings } from '../custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary, cto_tab_GraphicFileLibrary, ct2_tab_GraphicFileLibrary } from '../custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary, cto_tab_GraphicLibrary, ct2_tab_GraphicLibrary } from '../custom-tables/tab_GraphicLibrary'
@@ -620,10 +623,10 @@ export class P_part_Sidepanelleft extends PartBase implements IP_part_Sidepanell
   createBomElements() {
     try {
       const partSelf = this;
-      // bomout_Board: 141
-      if (partSelf._g?.basic_CreateBom == 'Library') { // ####################### CUSTOM SCRIPTS ########################
+      // bomout_Group: 240
+      if (partSelf._g?.basic_CreateBom != null && partSelf._g.basic_CreateBom !== 'Custom') { // ####################### CUSTOM SCRIPTS ########################
         const parentId = partSelf._id;
-        const _bom = new class BOM141 extends BOM_ElementType_bomout_Board {
+        const _bom = new class BOM240 extends BOM_ElementType_bomout_Group {
           constructor() { super(partSelf); }
           set(partSelf: IP_part_Sidepanelleft_PartVarsReadOnly) {
             const part = partSelf;
@@ -631,16 +634,19 @@ export class P_part_Sidepanelleft extends PartBase implements IP_part_Sidepanell
             try {
               // ####################### CUSTOM SCRIPTS ########################
               // Type of the Bom-Element (will be checked in order output)
-              let elementType = 'Board';
+              const elementType = 'Board';
 
               // ProductionSite Category (to split the orders for different production sites)
-              let elementCategory = '';
+              const elementCategory = '';
 
               // Id of the parent to create the hierarchy
-              let parentBomId = part.pa_BomId;
+              const parentBomId = part.pa_BomId;
+
+              // Mode from basic setting
+              const Mode = partSelf._g?.basic_CreateBom ? partSelf._g.basic_CreateBom : 'SimpleBoard';
 
               // Call the function to process the Bom-Element
-              GlobalFunc.process_BoardBom(this, part, elementType, elementCategory, parentBomId)
+              GlobalFunc.process_BomGeneration(this, part, elementType, elementCategory, parentBomId, Mode, 'Carcase');
               // ################### END CUSTOM SCRIPTS ########################
             }
             finally {
@@ -648,332 +654,12 @@ export class P_part_Sidepanelleft extends PartBase implements IP_part_Sidepanell
             }
           }
         }
-        _bom._description = "Output Parts / Boards";
+        _bom._description = "Output parts / edges / stockparts in relation to the basic_CreateBom setting";
         _bom.set(partSelf);
         partSelf._bom.push(_bom);
-      }
-      // bomout_Edge: 142
-      if (partSelf._g?.basic_CreateBom == 'Library') { // ####################### CUSTOM SCRIPTS ########################
-        const parentId = partSelf._id;
-        const _bom = new class BOM142 extends BOM_ElementType_bomout_Edge {
-          constructor() { super(partSelf); }
-          set(partSelf: IP_part_Sidepanelleft_PartVarsReadOnly) {
-            const part = partSelf;
-            internal_enterBomPartMasterDataElements(partSelf._id, partSelf._partId);
-            try {
-              // ####################### CUSTOM SCRIPTS ########################
-              // CONSTANTS PER EDGE
-              let edgeName: string = 'EdgeFront';
-
-              //MANUAL STUFF
-              let elementType: string = 'Edge';
-              let elementCategory: string = ''; //ProductionSite Category
-              let parentId: string = part._id;
-
-              // Get EdgeNumberSettings
-              let edgeNumber = GlobalFunc.find_EdgeNumberSettings(part._partId, edgeName)!;
-
-              // Get data from find_EdgeLibrary
-              let edgeInfo = GlobalFunc.process_EdgeInfo(part._partId, part._thickness, part.pa_EdgeFrontColor, part.pa_EdgeLeftColor, part.pa_EdgeBackColor, part.pa_EdgeRightColor, part.pa_EdgeFrontType, part.pa_EdgeLeftType, part.pa_EdgeBackType, part.pa_EdgeRightType, part.pa_EdgeJointType)!;
-
-              // Check empty data
-              let height: number = 0;
-              if (edgeInfo.EdgeFrontData) {
-                if (edgeInfo.EdgeFrontData.Height) {
-                  height = edgeInfo.EdgeFrontData.Height!;
-                }
-              }
-
-              let thickness: number = 0;
-              if (edgeInfo.EdgeFrontData) {
-                if (edgeInfo.EdgeFrontData.Thickness) {
-                  thickness = edgeInfo.EdgeFrontData.Thickness!;
-                }
-              }
-
-              let glueType: string = ' ';
-              if (edgeInfo.EdgeFrontData) {
-                if (edgeInfo.EdgeFrontData.GlueType) {
-                  glueType = edgeInfo.EdgeFrontData.GlueType!;
-                }
-              }
-
-              let supplierArticleCode: string = ' ';
-              if (edgeInfo.EdgeFrontData) {
-                if (edgeInfo.EdgeFrontData.SupplierArticleNumber!) {
-                  supplierArticleCode = edgeInfo.EdgeFrontData.SupplierArticleNumber!;
-                }
-              }
-
-              // Output data
-              this.bom_Type = edgeNumber.BomEdgeType!;
-              this.bom_Name = edgeNumber.BomEdgeDescription!;
-              this.bom_EdgeId = edgeInfo.EdgeFrontCode!;
-              this.bom_PartId = part._id;
-              this.bom_Length = part._width;
-              this.bom_Width = height;
-              this.bom_Thk = thickness;
-              this.bom_EdgeJoint = edgeInfo.EdgeJointFrontLeft!;
-              this.bom_GlueType = glueType;
-              this.bom_EdgeNumber = edgeNumber.BomEdgeNumber!;
-              this.bom_Color = part.pa_EdgeFrontColor;
-              this.bom_SupplierArticle = supplierArticleCode;
-              this.bom_ElementId = part._id + '_' + edgeNumber.BomEdgeNumber!;
-              this.bom_ParentId = parentId;
-              this.bom_ElementType = elementType;
-              // ################### END CUSTOM SCRIPTS ########################
-            }
-            finally {
-              internal_leaveBomPartMasterDataElements();
-            }
-          }
+        if (_bom._subBom) {
+          _bom._subBom.forEach(p => partSelf._bom.push(p));
         }
-        _bom._description = "Edge Front";
-        _bom.set(partSelf);
-        partSelf._bom.push(_bom);
-      }
-      // bomout_Edge: 144
-      if (partSelf._g?.basic_CreateBom == 'Library') { // ####################### CUSTOM SCRIPTS ########################
-        const parentId = partSelf._id;
-        const _bom = new class BOM144 extends BOM_ElementType_bomout_Edge {
-          constructor() { super(partSelf); }
-          set(partSelf: IP_part_Sidepanelleft_PartVarsReadOnly) {
-            const part = partSelf;
-            internal_enterBomPartMasterDataElements(partSelf._id, partSelf._partId);
-            try {
-              // ####################### CUSTOM SCRIPTS ########################
-
-              // CONSTANTS PER EDGE
-              let edgeName: string = 'EdgeLeft';
-
-              //MANUAL STUFF
-              let elementType: string = 'Edge';
-              let elementCategory: string = ''; //ProductionSite Category
-              let parentId: string = part._id;
-
-              // Get EdgeNumberSettings
-              let edgeNumber = GlobalFunc.find_EdgeNumberSettings(part._partId, edgeName)!;
-
-              // Get data from find_EdgeLibrary
-              let edgeInfo = GlobalFunc.process_EdgeInfo(part._partId, part._thickness, part.pa_EdgeFrontColor, part.pa_EdgeLeftColor, part.pa_EdgeBackColor, part.pa_EdgeRightColor, part.pa_EdgeFrontType, part.pa_EdgeLeftType, part.pa_EdgeBackType, part.pa_EdgeRightType, part.pa_EdgeJointType)!;
-
-              // Check empty data
-              let height: number = 0;
-              if (edgeInfo.EdgeLeftData) {
-                if (edgeInfo.EdgeLeftData.Height) {
-                  height = edgeInfo.EdgeLeftData.Height!;
-                }
-              }
-
-              let thickness: number = 0;
-              if (edgeInfo.EdgeLeftData) {
-                if (edgeInfo.EdgeLeftData.Thickness) {
-                  thickness = edgeInfo.EdgeLeftData.Thickness!;
-                }
-              }
-
-              let glueType: string = ' ';
-              if (edgeInfo.EdgeLeftData) {
-                if (edgeInfo.EdgeLeftData.GlueType) {
-                  glueType = edgeInfo.EdgeLeftData.GlueType!;
-                }
-              }
-
-              let supplierArticleCode: string = ' ';
-              if (edgeInfo.EdgeLeftData) {
-                if (edgeInfo.EdgeLeftData.SupplierArticleNumber!) {
-                  supplierArticleCode = edgeInfo.EdgeLeftData.SupplierArticleNumber!;
-                }
-              }
-
-              // Output data
-              this.bom_Type = edgeNumber.BomEdgeType!;
-              this.bom_Name = edgeNumber.BomEdgeDescription!;
-              this.bom_EdgeId = edgeInfo.EdgeLeftCode!;
-              this.bom_PartId = part._id;
-              this.bom_Length = part._depth;
-              this.bom_Width = height;
-              this.bom_Thk = thickness;
-              this.bom_EdgeJoint = edgeInfo.EdgeJointLeftBack!;
-              this.bom_GlueType = glueType;
-              this.bom_EdgeNumber = edgeNumber.BomEdgeNumber!;
-              this.bom_Color = part.pa_EdgeLeftColor;
-              this.bom_SupplierArticle = supplierArticleCode;
-              this.bom_ElementId = part._id + '_' + edgeNumber.BomEdgeNumber!;
-              this.bom_ParentId = parentId;
-              this.bom_ElementType = elementType;
-
-              // ################### END CUSTOM SCRIPTS ########################
-            }
-            finally {
-              internal_leaveBomPartMasterDataElements();
-            }
-          }
-        }
-        _bom._description = "Edge Left";
-        _bom.set(partSelf);
-        partSelf._bom.push(_bom);
-      }
-      // bomout_Edge: 145
-      if (partSelf._g?.basic_CreateBom == 'Library') { // ####################### CUSTOM SCRIPTS ########################
-        const parentId = partSelf._id;
-        const _bom = new class BOM145 extends BOM_ElementType_bomout_Edge {
-          constructor() { super(partSelf); }
-          set(partSelf: IP_part_Sidepanelleft_PartVarsReadOnly) {
-            const part = partSelf;
-            internal_enterBomPartMasterDataElements(partSelf._id, partSelf._partId);
-            try {
-              // ####################### CUSTOM SCRIPTS ########################
-              // CONSTANTS PER EDGE
-              let edgeName: string = 'EdgeBack';
-
-              //MANUAL STUFF
-              let elementType: string = 'Edge';
-              let elementCategory: string = ''; //ProductionSite Category
-              let parentId: string = part._id;
-
-              // Get EdgeNumberSettings
-              let edgeNumber = GlobalFunc.find_EdgeNumberSettings(part._partId, edgeName)!;
-
-              // Get data from find_EdgeLibrary
-              let edgeInfo = GlobalFunc.process_EdgeInfo(part._partId, part._thickness, part.pa_EdgeFrontColor, part.pa_EdgeLeftColor, part.pa_EdgeBackColor, part.pa_EdgeRightColor, part.pa_EdgeFrontType, part.pa_EdgeLeftType, part.pa_EdgeBackType, part.pa_EdgeRightType, part.pa_EdgeJointType)!;
-
-              // Check empty data
-              let height: number = 0;
-              if (edgeInfo.EdgeBackData) {
-                if (edgeInfo.EdgeBackData.Height) {
-                  height = edgeInfo.EdgeBackData.Height!;
-                }
-              }
-
-              let thickness: number = 0;
-              if (edgeInfo.EdgeBackData) {
-                if (edgeInfo.EdgeBackData.Thickness) {
-                  thickness = edgeInfo.EdgeBackData.Thickness!;
-                }
-              }
-
-              let glueType: string = ' ';
-              if (edgeInfo.EdgeBackData) {
-                if (edgeInfo.EdgeBackData.GlueType) {
-                  glueType = edgeInfo.EdgeBackData.GlueType!;
-                }
-              }
-
-              let supplierArticleCode: string = ' ';
-              if (edgeInfo.EdgeBackData) {
-                if (edgeInfo.EdgeBackData.SupplierArticleNumber!) {
-                  supplierArticleCode = edgeInfo.EdgeBackData.SupplierArticleNumber!;
-                }
-              }
-
-              // Output data
-              this.bom_Type = edgeNumber.BomEdgeType!;
-              this.bom_Name = edgeNumber.BomEdgeDescription!;
-              this.bom_EdgeId = edgeInfo.EdgeBackCode!;
-              this.bom_PartId = part._id;
-              this.bom_Length = part._width;
-              this.bom_Width = height;
-              this.bom_Thk = thickness;
-              this.bom_EdgeJoint = edgeInfo.EdgeJointBackRight!;
-              this.bom_GlueType = glueType;
-              this.bom_EdgeNumber = edgeNumber.BomEdgeNumber!;
-              this.bom_Color = part.pa_EdgeBackColor;
-              this.bom_SupplierArticle = supplierArticleCode;
-              this.bom_ElementId = part._id + '_' + edgeNumber.BomEdgeNumber!;
-              this.bom_ParentId = parentId;
-              this.bom_ElementType = elementType;
-
-              // ################### END CUSTOM SCRIPTS ########################
-            }
-            finally {
-              internal_leaveBomPartMasterDataElements();
-            }
-          }
-        }
-        _bom._description = "Edge Back";
-        _bom.set(partSelf);
-        partSelf._bom.push(_bom);
-      }
-      // bomout_Edge: 146
-      if (partSelf._g?.basic_CreateBom == 'Library') { // ####################### CUSTOM SCRIPTS ########################
-        const parentId = partSelf._id;
-        const _bom = new class BOM146 extends BOM_ElementType_bomout_Edge {
-          constructor() { super(partSelf); }
-          set(partSelf: IP_part_Sidepanelleft_PartVarsReadOnly) {
-            const part = partSelf;
-            internal_enterBomPartMasterDataElements(partSelf._id, partSelf._partId);
-            try {
-              // ####################### CUSTOM SCRIPTS ########################
-              // CONSTANTS PER EDGE
-              let edgeName: string = 'EdgeRight';
-
-              //MANUAL STUFF
-              let elementType: string = 'Edge';
-              let elementCategory: string = ''; //ProductionSite Category
-              let parentId: string = part._id;
-
-              // Get EdgeNumberSettings
-              let edgeNumber = GlobalFunc.find_EdgeNumberSettings(part._partId, edgeName)!;
-
-              // Get data from find_EdgeLibrary
-              let edgeInfo = GlobalFunc.process_EdgeInfo(part._partId, part._thickness, part.pa_EdgeFrontColor, part.pa_EdgeLeftColor, part.pa_EdgeBackColor, part.pa_EdgeRightColor, part.pa_EdgeFrontType, part.pa_EdgeLeftType, part.pa_EdgeBackType, part.pa_EdgeRightType, part.pa_EdgeJointType)!;
-
-              // Check empty data
-              let height: number = 0;
-              if (edgeInfo.EdgeRightData) {
-                if (edgeInfo.EdgeRightData.Height) {
-                  height = edgeInfo.EdgeRightData.Height!;
-                }
-              }
-
-              let thickness: number = 0;
-              if (edgeInfo.EdgeRightData) {
-                if (edgeInfo.EdgeRightData.Thickness) {
-                  thickness = edgeInfo.EdgeRightData.Thickness!;
-                }
-              }
-
-              let glueType: string = ' ';
-              if (edgeInfo.EdgeRightData) {
-                if (edgeInfo.EdgeRightData.GlueType) {
-                  glueType = edgeInfo.EdgeRightData.GlueType!;
-                }
-              }
-
-              let supplierArticleCode: string = ' ';
-              if (edgeInfo.EdgeRightData) {
-                if (edgeInfo.EdgeRightData.SupplierArticleNumber!) {
-                  supplierArticleCode = edgeInfo.EdgeRightData.SupplierArticleNumber!;
-                }
-              }
-
-              // Output data
-              this.bom_Type = edgeNumber.BomEdgeType!;
-              this.bom_Name = edgeNumber.BomEdgeDescription!;
-              this.bom_EdgeId = edgeInfo.EdgeRightCode!;
-              this.bom_PartId = part._id;
-              this.bom_Length = part._depth;
-              this.bom_Width = height;
-              this.bom_Thk = thickness;
-              this.bom_EdgeJoint = edgeInfo.EdgeJointRightFront!;
-              this.bom_GlueType = glueType;
-              this.bom_EdgeNumber = edgeNumber.BomEdgeNumber!;
-              this.bom_Color = part.pa_EdgeRightColor;
-              this.bom_SupplierArticle = supplierArticleCode;
-              this.bom_ElementId = part._id + '_' + edgeNumber.BomEdgeNumber!;
-              this.bom_ParentId = parentId;
-              this.bom_ElementType = elementType;
-              // ################### END CUSTOM SCRIPTS ########################
-            }
-            finally {
-              internal_leaveBomPartMasterDataElements();
-            }
-          }
-        }
-        _bom._description = "Edge Right";
-        _bom.set(partSelf);
-        partSelf._bom.push(_bom);
       }
     }
     catch (error) {

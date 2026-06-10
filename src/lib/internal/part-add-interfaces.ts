@@ -9,6 +9,7 @@ import { IP_part_DishwasherPanel_PartVarsWritable } from './parts/part_Dishwashe
 import { IP_part_Pullout_PartVarsWritable } from './parts/part_Pullout'
 import { IP_part_BaseunitFridgePanel_PartVarsWritable } from './parts/part_BaseunitFridgePanel'
 import { IP_part_PantryPullout_PartVarsWritable } from './parts/part_PantryPullout'
+import { IP_part_VirtualFront_PartVarsWritable } from './parts/part_VirtualFront'
 import { IP_part_DrawerUnit_PartVarsWritable } from './parts/part_DrawerUnit'
 import { IP_part_Handle_PartVarsWritable } from './parts/part_Handle'
 import { IP_part_HandleDrill_PartVarsWritable } from './parts/part_HandleDrill'
@@ -140,6 +141,12 @@ import { IP_part_ClothingOrganizerBoard_PartVarsWritable } from './parts/part_Cl
 import { IP_part_DoorSegmented_PartVarsWritable } from './parts/part_DoorSegmented'
 import { IP_part_SegmentedFront_PartVarsWritable } from './parts/part_SegmentedFront'
 import { IP_part_Placeholder_PartVarsWritable } from './parts/part_Placeholder'
+import { IP_part_HoodRail_PartVarsWritable } from './parts/part_HoodRail'
+import { IP_part_HoodShelftop_PartVarsWritable } from './parts/part_HoodShelftop'
+import { IP_part_HoodShelfbtm_PartVarsWritable } from './parts/part_HoodShelfbtm'
+import { IP_part_HoodBackwall_PartVarsWritable } from './parts/part_HoodBackwall'
+import { IP_part_HoodSidepanelleft_PartVarsWritable } from './parts/part_HoodSidepanelleft'
+import { IP_part_HoodSidepanelright_PartVarsWritable } from './parts/part_HoodSidepanelright'
 import { IP_part_FixedfrontDrill_PartVarsWritable } from './parts/part_FixedfrontDrill'
 import { IP_part_FlipliftDrill_PartVarsWritable } from './parts/part_FlipliftDrill'
 import { IP_part_Hinge_PartVarsWritable } from './parts/part_Hinge'
@@ -173,6 +180,9 @@ export interface IPartAdd_part_BaseunitFridgePanel {
 }
 export interface IPartAdd_part_PantryPullout {
   addpart_PantryPullout(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_PantryPullout_PartVarsWritable;
+}
+export interface IPartAdd_part_VirtualFront {
+  addpart_VirtualFront(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_VirtualFront_PartVarsWritable;
 }
 export interface IPartAdd_part_DrawerUnit {
   addpart_DrawerUnit(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_DrawerUnit_PartVarsWritable;
@@ -566,6 +576,24 @@ export interface IPartAdd_part_SegmentedFront {
 }
 export interface IPartAdd_part_Placeholder {
   addpart_Placeholder(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_Placeholder_PartVarsWritable;
+}
+export interface IPartAdd_part_HoodRail {
+  addpart_HoodRail(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodRail_PartVarsWritable;
+}
+export interface IPartAdd_part_HoodShelftop {
+  addpart_HoodShelftop(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodShelftop_PartVarsWritable;
+}
+export interface IPartAdd_part_HoodShelfbtm {
+  addpart_HoodShelfbtm(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodShelfbtm_PartVarsWritable;
+}
+export interface IPartAdd_part_HoodBackwall {
+  addpart_HoodBackwall(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodBackwall_PartVarsWritable;
+}
+export interface IPartAdd_part_HoodSidepanelleft {
+  addpart_HoodSidepanelleft(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodSidepanelleft_PartVarsWritable;
+}
+export interface IPartAdd_part_HoodSidepanelright {
+  addpart_HoodSidepanelright(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_HoodSidepanelright_PartVarsWritable;
 }
 export interface IPartAdd_part_FixedfrontDrill {
   addpart_FixedfrontDrill(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_FixedfrontDrill_PartVarsWritable;

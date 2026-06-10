@@ -112,25 +112,25 @@ import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01, 
 import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01, cbp_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
 import { dc_mc_SegmentFront01, adc_mc_SegmentFront01, cbp_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
 import { dc_me_HoodInsert, adc_me_HoodInsert, cbp_me_HoodInsert } from '../modules/me_HoodInsert'
-import { dc_mc_HoodInsert01, adc_mc_HoodInsert01, cbp_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
 import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, cbp_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
 import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder, cbp_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
 import { dc_mr_CeilingFiller, adc_mr_CeilingFiller, cbp_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
 import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01, cbp_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
 import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder, cbp_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
 import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder, cbp_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
-import { dc_mr_Filler, adc_mr_Filler, cbp_mr_Filler } from '../modules/mr_Filler'
-import { dc_mc_Filler01, adc_mc_Filler01, cbp_mc_Filler01 } from '../modules/mc_Filler01'
+import { dc_mr_FillerStraight, adc_mr_FillerStraight, cbp_mr_FillerStraight } from '../modules/mr_FillerStraight'
+import { dc_mc_FillerStraight01, adc_mc_FillerStraight01, cbp_mc_FillerStraight01 } from '../modules/mc_FillerStraight01'
+import { dc_mc_FillerHardware01, adc_mc_FillerHardware01, cbp_mc_FillerHardware01 } from '../modules/mc_FillerHardware01'
+import { dc_mc_FillerSupportPanels01, adc_mc_FillerSupportPanels01, cbp_mc_FillerSupportPanels01 } from '../modules/mc_FillerSupportPanels01'
+import { dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, cbp_mc_HoodCarcaseParts01 } from '../modules/mc_HoodCarcaseParts01'
 
 export interface cti_tab_HoodAssemblyMapping {
-  readonly in_HoodConstructionID?: string;
-  readonly in_MountingType?: string;
-  readonly in_MinCorpusWidth?: number;
-  readonly in_MaxCorpusWidth?: number;
-  readonly in_MinCorpusHeight?: number;
-  readonly in_MaxCorpusHeight?: number;
-  readonly in_MinCorpusDepth?: number;
-  readonly in_MaxCorpusDepth?: number;
+  readonly in_ConstructionId?: string;
+  readonly in_CabinetWidth: number;
+  readonly in_CabinetHeight: number;
+  readonly in_CabinetDepth: number;
+  readonly in_IntegrationType?: string;
+  readonly in_ConstructionType?: string;
 }
 
 export interface ctm_tab_HoodAssemblyMapping {
@@ -138,7 +138,9 @@ export interface ctm_tab_HoodAssemblyMapping {
 
 export interface cto_tab_HoodAssemblyMapping extends ctm_tab_HoodAssemblyMapping {
   readonly _id: number;
-  readonly CarcaseConstructionID?: string;
+  readonly CarcaseConstructionId?: string;
+  readonly RearOffset: number;
+  readonly BottomShortening: number;
 }
 
 export interface ICT_tab_HoodAssemblyMapping
@@ -147,24 +149,20 @@ export interface ICT_tab_HoodAssemblyMapping
 export class ct2_tab_HoodAssemblyMapping {
 
   public findExactly(
-    in_HoodConstructionID: string | undefined,
-    in_MountingType: string | undefined,
-    in_MinCorpusWidth: number | undefined,
-    in_MaxCorpusWidth: number | undefined,
-    in_MinCorpusHeight: number | undefined,
-    in_MaxCorpusHeight: number | undefined,
-    in_MinCorpusDepth: number | undefined,
-    in_MaxCorpusDepth: number | undefined,
+    in_ConstructionId: string | undefined,
+    in_CabinetWidth: number,
+    in_CabinetHeight: number,
+    in_CabinetDepth: number,
+    in_IntegrationType: string | undefined,
+    in_ConstructionType: string | undefined,
   ): cto_tab_HoodAssemblyMapping | undefined {
     const res = ct_tab_HoodAssemblyMapping.find((p) =>
-      p.in_HoodConstructionID === in_HoodConstructionID
-      && p.in_MountingType === in_MountingType
-      && p.in_MinCorpusWidth === in_MinCorpusWidth
-      && p.in_MaxCorpusWidth === in_MaxCorpusWidth
-      && p.in_MinCorpusHeight === in_MinCorpusHeight
-      && p.in_MaxCorpusHeight === in_MaxCorpusHeight
-      && p.in_MinCorpusDepth === in_MinCorpusDepth
-      && p.in_MaxCorpusDepth === in_MaxCorpusDepth
+      p.in_ConstructionId === in_ConstructionId
+      && p.in_CabinetWidth === in_CabinetWidth
+      && p.in_CabinetHeight === in_CabinetHeight
+      && p.in_CabinetDepth === in_CabinetDepth
+      && p.in_IntegrationType === in_IntegrationType
+      && p.in_ConstructionType === in_ConstructionType
     );
     return res;
   }
@@ -181,4 +179,16 @@ export class ct2_tab_HoodAssemblyMapping {
 }
 
 export var ct_tab_HoodAssemblyMapping: ICT_tab_HoodAssemblyMapping[] = [
+  {
+    _id: 1,
+    in_ConstructionId: "Siemens_LI97SA561S",
+    in_CabinetWidth: 600,
+    in_CabinetHeight: 600,
+    in_CabinetDepth: 320,
+    in_IntegrationType: "",
+    in_ConstructionType: "",
+    CarcaseConstructionId: "",
+    RearOffset: 10,
+    BottomShortening: 0
+  }
 ];

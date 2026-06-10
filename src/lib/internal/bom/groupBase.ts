@@ -4,6 +4,7 @@ import { BOM_ElementType_bomout_Board } from './types/bom_bomout_Board';
 import { BOM_ElementType_bomout_Edge } from './types/bom_bomout_Edge';
 import { BOM_ElementType_bomout_Hardware } from './types/bom_bomout_Hardware';
 import { BOM_ElementType_bomout_PartGroup } from './types/bom_bomout_PartGroup';
+import { BOM_ElementType_bomout_StockPanel } from './types/bom_bomout_StockPanel';
 import { BOM_ElementType_ncout_Component } from './types/touch_ncout_Component';
 import { BOM_ElementType_ncout_CountertopConnectionLong } from './types/touch_ncout_CountertopConnectionLong';
 import { BOM_ElementType_ncout_CountertopConnectionShort } from './types/touch_ncout_CountertopConnectionShort';
@@ -44,6 +45,12 @@ export abstract class BOM_ElementTypeGroupBaseBom extends BOM_ElementTypeBase {
 
   addbomout_PartGroup(): BOM_ElementType_bomout_PartGroup {
     const et = new BOM_ElementType_bomout_PartGroup(this.#partSelf, this._id);
+    this._subBom.push(et);
+    return et;
+  }
+
+  addbomout_StockPanel(): BOM_ElementType_bomout_StockPanel {
+    const et = new BOM_ElementType_bomout_StockPanel(this.#partSelf, this._id);
     this._subBom.push(et);
     return et;
   }

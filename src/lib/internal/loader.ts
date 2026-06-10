@@ -111,16 +111,18 @@ import { OD_M_mc_ClothingOrganizerHardware01 } from './modules/mc_ClothingOrgani
 import { OD_M_mc_ClothingOrganizerBoard01 } from './modules/mc_ClothingOrganizerBoard01'
 import { OD_M_mc_SegmentFront01 } from './modules/mc_SegmentFront01'
 import { OD_M_me_HoodInsert } from './modules/me_HoodInsert'
-import { OD_M_mc_HoodInsert01 } from './modules/mc_HoodInsert01'
 import { OD_M_md_EquipmentArticleBuilder } from './modules/md_EquipmentArticleBuilder'
 import { OD_M_md_EquipmentPlaceholder } from './modules/md_EquipmentPlaceholder'
 import { OD_M_mr_CeilingFiller } from './modules/mr_CeilingFiller'
 import { OD_M_mc_CeilingFiller01 } from './modules/mc_CeilingFiller01'
 import { OD_M_md_FrontPlaceholder } from './modules/md_FrontPlaceholder'
 import { OD_M_md_FrontArticleBuilder } from './modules/md_FrontArticleBuilder'
-import { OD_M_mr_Filler } from './modules/mr_Filler'
-import { OD_M_mc_Filler01 } from './modules/mc_Filler01'
-import { IModParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01, IModParents_mf_Drawer, IModParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01, IModParents_mc_Drawer01, IModParents_mc_HingeGroup01, IModParents_mc_PlinthArea01_mr_PlinthAreaBaseboard, IModParents_mr_IslandBackwall, IModParents_md_FrontArticleBuilder_md_FrontPlaceholder_mr_CornerunitStraight_mr_StorageunitSingle, IModParents_mr_CornerunitStraight_mr_Filler01_mr_StorageunitSingle, IModParents_mc_Door01_mc_Drawer01_mc_Fliplift01, IModParents_mc_Storageunit01, IModParents_md_FrontArticleBuilder_md_FrontPlaceholder_mr_StorageunitSingle, IModParents_mf_Fliplift, IModParents_mf_Door_mf_Fridge, IModParents_mf_Door_mf_Fliplift_mf_RackArea, IModParents_mc_ShelfadjGroup01_me_ShelfadjMultiple01, IModParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01, IModParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01, IModParents_mc_Cornerunit01_mc_Filler01_mc_Storageunit01_mc_VertDivider01, IModParents_mc_Filler01_mc_Storageunit01, IModParents_mc_PantryPullout01_mc_Storageunit01, IModParents_mc_VertDivider01, IModParents_mc_CornerunitStraight01, IModParents_mr_CornerunitStraight, IModParents_mf_Oven, IModParents_mf_RackArea, IModParents_mc_CornerunitStraight01_mc_Storageunit01, IModParents_mc_Door01, IModParents_mr_Upright, IModParents_mr_Countertop, IModParents_mr_Backsplash, IModParents_mr_PlinthAreaBaseboard_mr_Toekick, IModParents_mc_Door01_mc_Fliplift01, IModParents_mc_Fliplift01, IModParents_mr_CornerunitStraight_mr_StorageunitSingle, IModParents_mf_Fixedfront, IModParents_mr_Fingergrip, IModParents_mf_Fridge, IModParents_mc_BaseunitFridge01_mc_Dishwasher01_mc_Fridge01_mc_Hob01_mc_HoodInsert01_mc_Oven01_mc_Sink01_me_LaundryMachine_mf_Sink_mr_Hood, IModParents_mr_Paneltop, IModParents_mr_StorageunitSingle, IModParents_mf_Hob, IModParents_mf_Sink, IModParents_mr_Filler01, IModParents_mc_Filler01_mf_FillerFront, IModParents_mr_Appliance, IModParents_mr_CornerFiller, IModParents_mr_Shelves, IModParents_mf_CornerFillerFront_mr_CornerFiller, IModParents_mf_Pullout, IModParents_mc_Pullout01, IModParents_mf_Dishwasher, IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_Fliplift_mf_RackArea, IModParents_mr_PlinthAreaBaseboard, IModParents_mf_BaseunitFridge, IModParents_mf_PantryPullout, IModParents_mr_CoatBoard_mr_MirrorBoard, IModParents_mf_BoardShelf, IModParents_mc_PantryPullout01, IModParents_mr_MirrorBoard, IModParents_mc_MirrorBoard, IModParents_mr_CoatBoard, IModParents_me_BoardHanger, IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_RackArea, IModParents_me_ClothingOrganizer01, IModParents_mf_Door, IModParents_me_HoodInsert, IModParents_mr_CeilingFiller, IModParents_mr_Filler_mr_StorageunitSingle } from './mod-interfaces'
+import { OD_M_mr_FillerStraight } from './modules/mr_FillerStraight'
+import { OD_M_mc_FillerStraight01 } from './modules/mc_FillerStraight01'
+import { OD_M_mc_FillerHardware01 } from './modules/mc_FillerHardware01'
+import { OD_M_mc_FillerSupportPanels01 } from './modules/mc_FillerSupportPanels01'
+import { OD_M_mc_HoodCarcaseParts01 } from './modules/mc_HoodCarcaseParts01'
+import { IModParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01, IModParents_mf_Drawer, IModParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01, IModParents_mc_Drawer01, IModParents_mc_HingeGroup01, IModParents_mc_PlinthArea01_mr_PlinthAreaBaseboard, IModParents_mr_IslandBackwall, IModParents_md_FrontArticleBuilder_md_FrontPlaceholder_mr_CornerunitStraight_mr_StorageunitSingle, IModParents_mr_CornerunitStraight_mr_Filler01_mr_StorageunitSingle, IModParents_mc_Door01_mc_Drawer01_mc_Fliplift01, IModParents_mc_Storageunit01, IModParents_md_FrontArticleBuilder_md_FrontPlaceholder_mr_StorageunitSingle, IModParents_mf_Fliplift, IModParents_mf_Door_mf_Fridge, IModParents_mf_Door_mf_Fliplift_mf_RackArea, IModParents_mc_ShelfadjGroup01_me_ShelfadjMultiple01, IModParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01, IModParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01, IModParents_mc_Cornerunit01_mc_FillerStraight01_mc_Storageunit01_mc_VertDivider01, IModParents_mc_FillerStraight01_mc_Storageunit01, IModParents_mc_PantryPullout01_mc_Storageunit01, IModParents_mc_VertDivider01, IModParents_mc_CornerunitStraight01, IModParents_mr_CornerunitStraight, IModParents_mf_Oven, IModParents_mf_RackArea, IModParents_mc_CornerunitStraight01_mc_Storageunit01, IModParents_mc_Door01, IModParents_mr_StorageunitSingle_mr_Upright, IModParents_mr_Countertop, IModParents_mr_Backsplash, IModParents_mr_PlinthAreaBaseboard_mr_Toekick, IModParents_mc_Door01_mc_Fliplift01, IModParents_mc_Fliplift01, IModParents_mr_CornerunitStraight_mr_StorageunitSingle, IModParents_mf_Fixedfront, IModParents_mr_Fingergrip, IModParents_mf_Fridge, IModParents_mc_BaseunitFridge01_mc_Dishwasher01_mc_Fridge01_mc_Hob01_mc_Oven01_mc_Sink01_me_HoodInsert_me_LaundryMachine_mf_Sink_mr_Hood, IModParents_mr_Paneltop, IModParents_mr_StorageunitSingle, IModParents_mf_Hob, IModParents_mf_Sink, IModParents_mr_Filler01, IModParents_mc_FillerStraight01_mf_FillerFront, IModParents_mr_Appliance, IModParents_mr_CornerFiller, IModParents_mr_Shelves, IModParents_mf_CornerFillerFront_mr_CornerFiller, IModParents_mf_Pullout, IModParents_mc_Pullout01, IModParents_mf_Dishwasher, IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_Fliplift_mf_RackArea, IModParents_mr_PlinthAreaBaseboard, IModParents_mf_BaseunitFridge, IModParents_mf_PantryPullout, IModParents_mr_CoatBoard_mr_MirrorBoard, IModParents_mf_BoardShelf, IModParents_mc_PantryPullout01, IModParents_mr_MirrorBoard, IModParents_mc_MirrorBoard, IModParents_mr_CoatBoard, IModParents_me_BoardHanger, IModParents_me_ClothingOrganizer01, IModParents_mf_Door, IModParents_mr_CeilingFiller, IModParents_mr_FillerStraight_mr_StorageunitSingle, IModParents_mc_FillerStraight01 } from './mod-interfaces'
 
 function createRoot(moduleId: string, manufacturerMode: boolean): OD_Base {
   switch (moduleId.toLowerCase()) {
@@ -150,8 +152,8 @@ function createRoot(moduleId: string, manufacturerMode: boolean): OD_Base {
       return new OD_M_md_EquipmentArticleBuilder(undefined, manufacturerMode);
     case 'md_frontarticlebuilder':
       return new OD_M_md_FrontArticleBuilder(undefined, manufacturerMode);
-    case 'mr_filler':
-      return new OD_M_mr_Filler(undefined, manufacturerMode);
+    case 'mr_fillerstraight':
+      return new OD_M_mr_FillerStraight(undefined, manufacturerMode);
     default: {
       const notFoundModule = new OD_Base_NotFound(moduleId, undefined, manufacturerMode);
       logError('Unknown root module: ' + moduleId);
@@ -239,11 +241,11 @@ function createModule(moduleId: string, parent: OD_Base, manufacturerMode: boole
     case 'mc_handlestrip01':
       return new OD_M_mc_Handlestrip01(<IModParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01><unknown>parent, manufacturerMode);
     case 'mc_storageunitsidepanel01':
-      return new OD_M_mc_StorageunitSidepanel01(<IModParents_mc_Cornerunit01_mc_Filler01_mc_Storageunit01_mc_VertDivider01><unknown>parent, manufacturerMode);
+      return new OD_M_mc_StorageunitSidepanel01(<IModParents_mc_Cornerunit01_mc_FillerStraight01_mc_Storageunit01_mc_VertDivider01><unknown>parent, manufacturerMode);
     case 'mc_storageunitshelfbtm01':
-      return new OD_M_mc_StorageunitShelfbtm01(<IModParents_mc_Filler01_mc_Storageunit01><unknown>parent, manufacturerMode);
+      return new OD_M_mc_StorageunitShelfbtm01(<IModParents_mc_FillerStraight01_mc_Storageunit01><unknown>parent, manufacturerMode);
     case 'mc_storageunitshelftop01':
-      return new OD_M_mc_StorageunitShelftop01(<IModParents_mc_Filler01_mc_Storageunit01><unknown>parent, manufacturerMode);
+      return new OD_M_mc_StorageunitShelftop01(<IModParents_mc_FillerStraight01_mc_Storageunit01><unknown>parent, manufacturerMode);
     case 'mc_storageunitbackwall01':
       return new OD_M_mc_StorageunitBackwall01(<IModParents_mc_Storageunit01><unknown>parent, manufacturerMode);
     case 'mc_storageunitshelffixed01':
@@ -275,7 +277,7 @@ function createModule(moduleId: string, parent: OD_Base, manufacturerMode: boole
     case 'mr_upright':
       return new OD_M_mr_Upright(parent, manufacturerMode);
     case 'mc_upright01':
-      return new OD_M_mc_Upright01(<IModParents_mr_Upright><unknown>parent, manufacturerMode);
+      return new OD_M_mc_Upright01(<IModParents_mr_StorageunitSingle_mr_Upright><unknown>parent, manufacturerMode);
     case 'mc_countertop01':
       return new OD_M_mc_Countertop01(<IModParents_mr_Countertop><unknown>parent, manufacturerMode);
     case 'mc_backsplash':
@@ -305,7 +307,7 @@ function createModule(moduleId: string, parent: OD_Base, manufacturerMode: boole
     case 'mc_fridge01':
       return new OD_M_mc_Fridge01(<IModParents_mf_Fridge><unknown>parent, manufacturerMode);
     case 'mc_appliancegraphic':
-      return new OD_M_mc_ApplianceGraphic(<IModParents_mc_BaseunitFridge01_mc_Dishwasher01_mc_Fridge01_mc_Hob01_mc_HoodInsert01_mc_Oven01_mc_Sink01_me_LaundryMachine_mf_Sink_mr_Hood><unknown>parent, manufacturerMode);
+      return new OD_M_mc_ApplianceGraphic(<IModParents_mc_BaseunitFridge01_mc_Dishwasher01_mc_Fridge01_mc_Hob01_mc_Oven01_mc_Sink01_me_HoodInsert_me_LaundryMachine_mf_Sink_mr_Hood><unknown>parent, manufacturerMode);
     case 'mr_hood':
       return new OD_M_mr_Hood(parent, manufacturerMode);
     case 'mc_paneltop01':
@@ -323,7 +325,7 @@ function createModule(moduleId: string, parent: OD_Base, manufacturerMode: boole
     case 'mf_fillerfront':
       return new OD_M_mf_FillerFront(<IModParents_mr_Filler01><unknown>parent, manufacturerMode);
     case 'mc_fillerfront01':
-      return new OD_M_mc_FillerFront01(<IModParents_mc_Filler01_mf_FillerFront><unknown>parent, manufacturerMode);
+      return new OD_M_mc_FillerFront01(<IModParents_mc_FillerStraight01_mf_FillerFront><unknown>parent, manufacturerMode);
     case 'mr_appliance':
       return new OD_M_mr_Appliance(parent, manufacturerMode);
     case 'mf_dishwasher':
@@ -387,7 +389,7 @@ function createModule(moduleId: string, parent: OD_Base, manufacturerMode: boole
     case 'mc_boardhanger':
       return new OD_M_mc_BoardHanger(<IModParents_me_BoardHanger><unknown>parent, manufacturerMode);
     case 'me_clothingorganizer01':
-      return new OD_M_me_ClothingOrganizer01(<IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_RackArea><unknown>parent, manufacturerMode);
+      return new OD_M_me_ClothingOrganizer01(<IModParents_md_EquipmentArticleBuilder_md_EquipmentPlaceholder_mf_Door_mf_Fliplift_mf_RackArea><unknown>parent, manufacturerMode);
     case 'mc_clothingorganizerhardware01':
       return new OD_M_mc_ClothingOrganizerHardware01(<IModParents_me_ClothingOrganizer01><unknown>parent, manufacturerMode);
     case 'mc_clothingorganizerboard01':
@@ -396,8 +398,6 @@ function createModule(moduleId: string, parent: OD_Base, manufacturerMode: boole
       return new OD_M_mc_SegmentFront01(<IModParents_mc_Door01><unknown>parent, manufacturerMode);
     case 'me_hoodinsert':
       return new OD_M_me_HoodInsert(<IModParents_mf_Door><unknown>parent, manufacturerMode);
-    case 'mc_hoodinsert01':
-      return new OD_M_mc_HoodInsert01(<IModParents_me_HoodInsert><unknown>parent, manufacturerMode);
     case 'md_equipmentarticlebuilder':
       return new OD_M_md_EquipmentArticleBuilder(parent, manufacturerMode);
     case 'md_equipmentplaceholder':
@@ -408,10 +408,16 @@ function createModule(moduleId: string, parent: OD_Base, manufacturerMode: boole
       return new OD_M_md_FrontPlaceholder(<IModParents_mr_StorageunitSingle><unknown>parent, manufacturerMode);
     case 'md_frontarticlebuilder':
       return new OD_M_md_FrontArticleBuilder(parent, manufacturerMode);
-    case 'mr_filler':
-      return new OD_M_mr_Filler(parent, manufacturerMode);
-    case 'mc_filler01':
-      return new OD_M_mc_Filler01(<IModParents_mr_Filler_mr_StorageunitSingle><unknown>parent, manufacturerMode);
+    case 'mr_fillerstraight':
+      return new OD_M_mr_FillerStraight(parent, manufacturerMode);
+    case 'mc_fillerstraight01':
+      return new OD_M_mc_FillerStraight01(<IModParents_mr_FillerStraight_mr_StorageunitSingle><unknown>parent, manufacturerMode);
+    case 'mc_fillerhardware01':
+      return new OD_M_mc_FillerHardware01(parent, manufacturerMode);
+    case 'mc_fillersupportpanels01':
+      return new OD_M_mc_FillerSupportPanels01(<IModParents_mc_FillerStraight01><unknown>parent, manufacturerMode);
+    case 'mc_hoodcarcaseparts01':
+      return new OD_M_mc_HoodCarcaseParts01(<IModParents_mc_Storageunit01><unknown>parent, manufacturerMode);
     default: {
       const notFoundModule = new OD_Base_NotFound(moduleId, parent, manufacturerMode);
       logError('Unknown module: ' + moduleId);

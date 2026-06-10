@@ -9,7 +9,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping, ct2_tab_BracketMapping }
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction, ct2_tab_CarcaseBackwallConstruction } from '../custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings, ct2_tab_CarcaseBackwallSettings } from '../custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction, ct2_tab_CarcaseCornerunitConstruction } from '../custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction, ct2_tab_CarcaseHoodConstruction } from '../custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection, ct2_tab_CarcasePanelSelection } from '../custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations, ct2_tab_CarcasePartConnectionCalculations } from '../custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping, ct2_tab_CarcasePartConnectionMapping } from '../custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape, ct2_tab_CarcasePartsShape } from '../custom-tables/tab_CarcasePartsShape'
@@ -19,9 +19,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings, ct2_
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension, ct2_tab_CarcaseSlopedCeilingDimension } from '../custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction, ct2_tab_CarcaseStorageunitConstruction } from '../custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping, ct2_tab_ClothingOrganizerColorMapping } from '../custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition, ct2_tab_ClothingOrganizerDepthPosition } from '../custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping, ct2_tab_ClothingOrganizerExtraItemMapping } from '../custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions, ct2_tab_ClothingOrganizerInstallationDimensions } from '../custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping, ct2_tab_ClothingOrganizerMapping } from '../custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings, ct2_tab_ClothingOrganizerPositionZSettings } from '../custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary, ct2_tab_ComponentLibrary } from '../custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables, ct2_tab_ComponentVariables } from '../custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction, ct2_tab_CornerFillerFrontpanelConstruction } from '../custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -47,7 +48,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping, ct2_tab_EdgeMapping } from '..
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings, ct2_tab_EdgeNumberSettings } from '../custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings, ct2_tab_EdgeSettings } from '../custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList, ct2_tab_ErrorList } from '../custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction, ct2_tab_FillerConstruction } from '../custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings, ct2_tab_FillerHardwareSettings } from '../custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction, ct2_tab_FillerPartConstruction } from '../custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings, ct2_tab_FillerSettings } from '../custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping, ct2_tab_FlipliftColorMapping } from '../custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction, ct2_tab_FlipliftConstruction } from '../custom-tables/tab_FlipliftConstruction'
@@ -62,6 +65,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction, ct2_ta
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction, ct2_tab_FrontConstruction } from '../custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping, ct2_tab_FrontEdgeColorMapping } from '../custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction, ct2_tab_FrontPanelConstruction } from '../custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection, ct2_tab_FrontPanelSelection } from '../custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings, ct2_tab_GrainDirectionSettings } from '../custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary, ct2_tab_GraphicFileLibrary } from '../custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary, ct2_tab_GraphicLibrary } from '../custom-tables/tab_GraphicLibrary'
@@ -128,7 +132,7 @@ import { OD_Base, PartGroup, OpenGroup, Matrix4, Vector3, GenerationContour, Con
 import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IContextData } from '../mod-base'
 import { loadOrderData } from '../loader'
 import { GlobalFunc } from '../global-func'
-import { IModParents_mc_Filler01_mf_FillerFront } from '../mod-interfaces'
+import { IModParents_mc_FillerStraight01_mf_FillerFront } from '../mod-interfaces'
 import { IP_part_FillerUnit_PartVarsWritable, P_part_FillerUnit } from '../parts/part_FillerUnit'
 import { IP_part_FillerHardware_PartVarsWritable, P_part_FillerHardware } from '../parts/part_FillerHardware'
 import { IP_part_FillerHardwareProcessing_PartVarsWritable, P_part_FillerHardwareProcessing } from '../parts/part_FillerHardwareProcessing'
@@ -142,11 +146,11 @@ import { VariantValidation, IMatrix_mod_CarcaseId, IMatrix_mod_Direction, IMatri
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
 import { IPartAdd_part_FillerUnit, IPartAdd_part_FillerHardware, IPartAdd_part_FillerHardwareProcessing } from '../part-add-interfaces';
-import { mc_FillerFront01_createBuildPlan, mc_FillerFront01_afterDataCompletion, mc_FillerFront01_manufacturerDataCompletion, mc_FillerFront01_calculateContainerModules } from '../../modules/mc_FillerFront01';
+import { mc_FillerFront01_createBuildPlan, mc_FillerFront01_afterDataCompletion, mc_FillerFront01_manufacturerDataCompletion, mc_FillerFront01_calculateContainerModules, mc_FillerFront01_prepareContext } from '../../modules/mc_FillerFront01';
 
 export interface cbp_mc_FillerFront01 extends IModBaseProp
   , IPartAdd_part_FillerUnit, IPartAdd_part_FillerHardware, IPartAdd_part_FillerHardwareProcessing, IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_CarcasePartInfo, IModVarNonNull_mod_Direction, IModVarNonNull_mod_FingergripBtmType, IModVarNonNull_mod_FingergripTop, IModVarNonNull_mod_FingergripTopType, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_FrontHeight, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontOversizeBtm, IModVarNonNull_mod_FrontOversizeRight, IModVarNonNull_mod_FrontOversizeLeft, IModVarNonNull_mod_FrontOversizeTop, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_FrontThk, IModVarNonNull_mod_FrontWidth, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_Originpos, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelrightThk, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_DoorDirection, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_FillerType, IModVarNonNull_mod_FillerHardware, IModVarNonNull_mod_FillerHardwareInfo, IModVarNonNull_mod_FirstFront, IModVarNonNull_mod_LastFront, IModVarNonNull_mod_FrontGapHorTop {
-  parent: IModParents_mc_Filler01_mf_FillerFront;
+  parent: IModParents_mc_FillerStraight01_mf_FillerFront;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
   createOpenGroup(groupName: string, part: IPartBase): OpenGroup;
@@ -162,11 +166,18 @@ export interface dc_mc_FillerFront01 extends IModBaseProp
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_FillerFront01;
-  parent: IModParents_mc_Filler01_mf_FillerFront;
+  parent: IModParents_mc_FillerStraight01_mf_FillerFront;
   addOD_M_mc_FrontPanel01(index?: number): dc_mc_FrontPanel01;
   addOD_M_mc_PanelWoodFrame01(index?: number): dc_mc_PanelWoodFrame01;
   addOD_M_mc_MetalFrame01(index?: number): dc_mc_MetalFrame01;
   addOD_M_mc_ThermoformedPanel01(index?: number): dc_mc_ThermoformedPanel01;
+}
+
+export interface pc_mc_FillerFront01 extends dc_mc_FillerFront01 {
+  _forcedInputAttributes?: string[];
+  getContextData(): IContextData | undefined;
+  getContextModule(id: string): OD_Base | undefined;
+  getRoomContours(): RoomContour[];
 }
 
 export interface adc_base_mc_FillerFront01 extends IModBaseProp
@@ -187,15 +198,15 @@ export interface ccm_mc_FillerFront01 extends adc_base_mc_FillerFront01 {
 }
 
 
-export class OD_M_mc_FillerFront01 extends OD_Base implements dc_mc_FillerFront01
+export class OD_M_mc_FillerFront01 extends OD_Base implements pc_mc_FillerFront01, dc_mc_FillerFront01
   , IModParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01, IModParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01, IModParents_mc_CornerFillerFront01_mc_FillerFront01_mf_CornerFillerFront, IModParents_mc_CornerFillerFront01_mc_FillerFront01
   , IModVar_mod_CarcaseId, IModVar_mod_CarcasePartInfo, IModVar_mod_Direction, IModVar_mod_FingergripBtmType, IModVar_mod_FingergripTop, IModVar_mod_FingergripTopType, IModVar_mod_FrontColor, IModVar_mod_FrontDesign, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapVert, IModVar_mod_FrontHeight, IModVar_mod_FrontId, IModVar_mod_FrontOversizeBtm, IModVar_mod_FrontOversizeRight, IModVar_mod_FrontOversizeLeft, IModVar_mod_FrontOversizeTop, IModVar_mod_FrontPosStart, IModVar_mod_FrontThk, IModVar_mod_FrontWidth, IModVar_mod_HeightPosInsertion, IModVar_mod_ModuleName, IModVar_mod_Originpos, IModVar_mod_PlinthAreaHeight, IModVar_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVar_mod_TypeElement, IModVar_mod_FrontProgram, IModVar_mod_DoorDirection, IModVar_mod_ParentName, IModVar_mod_FillerType, IModVar_mod_FillerHardware, IModVar_mod_FillerHardwareInfo, IModVar_mod_FirstFront, IModVar_mod_LastFront, IModVar_mod_FrontGapHorTop {
-  constructor(parent: IModParents_mc_Filler01_mf_FillerFront, manufacturerMode?: boolean) {
+  constructor(parent: IModParents_mc_FillerStraight01_mf_FillerFront, manufacturerMode?: boolean) {
     super('mc_FillerFront01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
     this._selfNonNull = new OD_M_mc_FillerFront01_NonNull(this);
   }
-  parent: IModParents_mc_Filler01_mf_FillerFront;
+  parent: IModParents_mc_FillerStraight01_mf_FillerFront;
   _selfNonNull: OD_M_mc_FillerFront01_NonNull;
 
   override variants: string[] = ['mod_CarcaseId', 'mod_CarcasePartInfo', 'mod_Direction', 'mod_FingergripBtmType', 'mod_FingergripTop', 'mod_FingergripTopType', 'mod_FrontColor', 'mod_FrontDesign', 'mod_FrontEdgeColor', 'mod_FrontEdgeThk', 'mod_FrontGapCarcase', 'mod_FrontGapHor', 'mod_FrontGapVert', 'mod_FrontHeight', 'mod_FrontId', 'mod_FrontOversizeBtm', 'mod_FrontOversizeRight', 'mod_FrontOversizeLeft', 'mod_FrontOversizeTop', 'mod_FrontPosStart', 'mod_FrontThk', 'mod_FrontWidth', 'mod_HeightPosInsertion', 'mod_ModuleName', 'mod_Originpos', 'mod_PlinthAreaHeight', 'mod_SidepanelleftThk', 'mod_SidepanelrightThk', 'mod_TypeElement', 'mod_FrontProgram', 'mod_DoorDirection', 'mod_ParentName', 'mod_FillerType', 'mod_FillerHardware', 'mod_FillerHardwareInfo', 'mod_FirstFront', 'mod_LastFront', 'mod_FrontGapHorTop',];
@@ -1411,6 +1422,15 @@ export class OD_M_mc_FillerFront01 extends OD_Base implements dc_mc_FillerFront0
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
   }
+  override prepareContext(contextRoots: OD_Base[]): void {
+    super.prepareContext(contextRoots);
+    this.internallyPrepareContext();
+    this.m.forEach(subMod => subMod.prepareContext(contextRoots));
+  }
+  internallyPrepareContext(): void {
+    this.#prepareContextInternal();
+  }
+  #prepareContextInternal = mc_FillerFront01_prepareContext;
   seal(): IModuleNonNull_mc_FillerFront01 {
     this.afterDataCompletion();
     const adc = new OD_M_mc_FillerFront01_NonNull(this);
@@ -1588,7 +1608,7 @@ class OD_M_mc_FillerFront01_NonNull implements cbp_mc_FillerFront01, adc_mc_Fill
   }
   get m(): OD_Base[] { return this.#internalParent.m; }
   get g(): IGlobalVars { return this.#internalParent.g; }
-  parent: IModParents_mc_Filler01_mf_FillerFront;
+  parent: IModParents_mc_FillerStraight01_mf_FillerFront;
   addpart_FillerUnit(x: number, y: number, z: number, dimx: number, dimy: number, dimz: number): IP_part_FillerUnit_PartVarsWritable {
     return this.#internalParent.addpart_FillerUnit(x, y, z, dimx, dimy, dimz);
   }

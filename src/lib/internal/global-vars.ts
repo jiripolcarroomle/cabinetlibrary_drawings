@@ -892,6 +892,12 @@ export interface IGlobalVars {
   get basic_CeilingFillerRecess(): number;
   get basic_CeilingFillerRecessLeft(): number;
   get basic_CeilingFillerRecessRight(): number;
+  get basic_HandlePosFrontOversize(): string;
+  get basic_CarcaseVisLeftAutomaticType(): string;
+  get basic_CarcaseVisRightAutomaticType(): string;
+  get basic_CarcaseCeilingDistance(): number;
+  get basic_HeightInputMode(): string;
+  get basic_PlacementLevels(): string;
 }
 class GlobalVarInfoMessage {
   constructor(type: string, message: string) {
@@ -1171,6 +1177,12 @@ export class GlobalVars {
     res.set('basic_CeilingFillerRecess', this._basic_CeilingFillerRecess);
     res.set('basic_CeilingFillerRecessLeft', this._basic_CeilingFillerRecessLeft);
     res.set('basic_CeilingFillerRecessRight', this._basic_CeilingFillerRecessRight);
+    res.set('basic_HandlePosFrontOversize', this._basic_HandlePosFrontOversize);
+    res.set('basic_CarcaseVisLeftAutomaticType', this._basic_CarcaseVisLeftAutomaticType);
+    res.set('basic_CarcaseVisRightAutomaticType', this._basic_CarcaseVisRightAutomaticType);
+    res.set('basic_CarcaseCeilingDistance', this._basic_CarcaseCeilingDistance);
+    res.set('basic_HeightInputMode', this._basic_HeightInputMode);
+    res.set('basic_PlacementLevels', this._basic_PlacementLevels);
     return res;
   }
   _basic_SidePanelThk: number = 19;
@@ -1627,7 +1639,7 @@ export class GlobalVars {
   get basic_DrawingCanvasBackgroundColor(): string { this.checkMsg('basic_DrawingCanvasBackgroundColor'); return this._basic_DrawingCanvasBackgroundColor; }
   _basic_DrawingCanvasEdgeColor: string = "magenta";
   get basic_DrawingCanvasEdgeColor(): string { this.checkMsg('basic_DrawingCanvasEdgeColor'); return this._basic_DrawingCanvasEdgeColor; }
-  _basic_CreateBom: string = "Library";
+  _basic_CreateBom: string = "SimpleBoard";
   get basic_CreateBom(): string { this.checkMsg('basic_CreateBom'); return this._basic_CreateBom; }
   _basic_BaseboardDepthLogic: string = "FollowsMaxDepth ";
   get basic_BaseboardDepthLogic(): string { this.checkMsg('basic_BaseboardDepthLogic'); return this._basic_BaseboardDepthLogic; }
@@ -1679,18 +1691,30 @@ export class GlobalVars {
   get basic_CeilingAreaVisLeftSelection(): string { this.checkMsg('basic_CeilingAreaVisLeftSelection'); return this._basic_CeilingAreaVisLeftSelection; }
   _basic_CeilingAreaVisRightSelection: string = "Automatic";
   get basic_CeilingAreaVisRightSelection(): string { this.checkMsg('basic_CeilingAreaVisRightSelection'); return this._basic_CeilingAreaVisRightSelection; }
-  _basic_CeilingFillerConstruction: string = "Construction1";
+  _basic_CeilingFillerConstruction: string = "Construction2";
   get basic_CeilingFillerConstruction(): string { this.checkMsg('basic_CeilingFillerConstruction'); return this._basic_CeilingFillerConstruction; }
-  _basic_CeilingFillerRecess: number = 0;
+  _basic_CeilingFillerRecess: number = 10;
   get basic_CeilingFillerRecess(): number { this.checkMsg('basic_CeilingFillerRecess'); return this._basic_CeilingFillerRecess; }
-  _basic_CeilingFillerRecessLeft: number = 0;
+  _basic_CeilingFillerRecessLeft: number = 10;
   get basic_CeilingFillerRecessLeft(): number { this.checkMsg('basic_CeilingFillerRecessLeft'); return this._basic_CeilingFillerRecessLeft; }
-  _basic_CeilingFillerRecessRight: number = 0;
+  _basic_CeilingFillerRecessRight: number = 10;
   get basic_CeilingFillerRecessRight(): number { this.checkMsg('basic_CeilingFillerRecessRight'); return this._basic_CeilingFillerRecessRight; }
+  _basic_HandlePosFrontOversize: string = "IncludeFrontOversizeBottom";
+  get basic_HandlePosFrontOversize(): string { this.checkMsg('basic_HandlePosFrontOversize'); return this._basic_HandlePosFrontOversize; }
+  _basic_CarcaseVisLeftAutomaticType: string = "AddFinishedSide";
+  get basic_CarcaseVisLeftAutomaticType(): string { this.checkMsg('basic_CarcaseVisLeftAutomaticType'); return this._basic_CarcaseVisLeftAutomaticType; }
+  _basic_CarcaseVisRightAutomaticType: string = "AddFinishedSide";
+  get basic_CarcaseVisRightAutomaticType(): string { this.checkMsg('basic_CarcaseVisRightAutomaticType'); return this._basic_CarcaseVisRightAutomaticType; }
+  _basic_CarcaseCeilingDistance: number = 80;
+  get basic_CarcaseCeilingDistance(): number { this.checkMsg('basic_CarcaseCeilingDistance'); return this._basic_CarcaseCeilingDistance; }
+  _basic_HeightInputMode: string = "CarcaseHeight";
+  get basic_HeightInputMode(): string { this.checkMsg('basic_HeightInputMode'); return this._basic_HeightInputMode; }
+  _basic_PlacementLevels: string = "OnFloor";
+  get basic_PlacementLevels(): string { this.checkMsg('basic_PlacementLevels'); return this._basic_PlacementLevels; }
 
   setDefaultValuesForGlobalVarsWithExceptions() {
     this._basic_BackwallThk = 8;
-    this._basic_RailverttopfrontOffsetFront = 0;
+    this._basic_RailverttopfrontOffsetFront = 10;
     this._basic_CarcaseShelftopConstruction = "ShelfTop";
     this._basic_CarcaseBackwallConstruction = "Grooved_LBRT";
     this._basic_BackwallPos = 28;

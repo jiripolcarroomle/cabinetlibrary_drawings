@@ -112,18 +112,20 @@ import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01, 
 import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01, cbp_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
 import { dc_mc_SegmentFront01, adc_mc_SegmentFront01, cbp_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
 import { dc_me_HoodInsert, adc_me_HoodInsert, cbp_me_HoodInsert } from '../modules/me_HoodInsert'
-import { dc_mc_HoodInsert01, adc_mc_HoodInsert01, cbp_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
 import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, cbp_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
 import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder, cbp_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
 import { dc_mr_CeilingFiller, adc_mr_CeilingFiller, cbp_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
 import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01, cbp_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
 import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder, cbp_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
 import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder, cbp_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
-import { dc_mr_Filler, adc_mr_Filler, cbp_mr_Filler } from '../modules/mr_Filler'
-import { dc_mc_Filler01, adc_mc_Filler01, cbp_mc_Filler01 } from '../modules/mc_Filler01'
+import { dc_mr_FillerStraight, adc_mr_FillerStraight, cbp_mr_FillerStraight } from '../modules/mr_FillerStraight'
+import { dc_mc_FillerStraight01, adc_mc_FillerStraight01, cbp_mc_FillerStraight01 } from '../modules/mc_FillerStraight01'
+import { dc_mc_FillerHardware01, adc_mc_FillerHardware01, cbp_mc_FillerHardware01 } from '../modules/mc_FillerHardware01'
+import { dc_mc_FillerSupportPanels01, adc_mc_FillerSupportPanels01, cbp_mc_FillerSupportPanels01 } from '../modules/mc_FillerSupportPanels01'
+import { dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, cbp_mc_HoodCarcaseParts01 } from '../modules/mc_HoodCarcaseParts01'
 
 export interface cti_tab_HoodConstruction {
-  readonly in_HoodConstructionID?: string;
+  readonly in_HoodId?: string;
 }
 
 export interface ctm_tab_HoodConstruction {
@@ -131,15 +133,24 @@ export interface ctm_tab_HoodConstruction {
 
 export interface cto_tab_HoodConstruction extends ctm_tab_HoodConstruction {
   readonly _id: number;
-  readonly TotalWidth?: number;
-  readonly TotalHeight?: number;
-  readonly TotalDepth?: number;
-  readonly ExhaustDiameter?: number;
-  readonly ExhaustHeight: number;
-  readonly FunctionPanelHeight?: number;
-  readonly ApronWidth?: number;
-  readonly ApronHeight?: number;
-  readonly ApronDepth?: number;
+  readonly Height: number;
+  readonly Width: number;
+  readonly Depth: number;
+  readonly TowerHeightTotal: number;
+  readonly Tower1Height: number;
+  readonly Tower1Width: number;
+  readonly Tower1Depth: number;
+  readonly Tower1XOffset: number;
+  readonly Tower1YOffset: number;
+  readonly Tower2Height: number;
+  readonly Tower2Width: number;
+  readonly Tower2Depth: number;
+  readonly Tower2XOffset: number;
+  readonly Tower2YOffset: number;
+  readonly CutOutWidthMin: number;
+  readonly CutOutWidthMax: number;
+  readonly CutOutDepthMin: number;
+  readonly CutOutDepthMax: number;
 }
 
 export interface ICT_tab_HoodConstruction
@@ -148,10 +159,10 @@ export interface ICT_tab_HoodConstruction
 export class ct2_tab_HoodConstruction {
 
   public findExactly(
-    in_HoodConstructionID: string | undefined,
+    in_HoodId: string | undefined,
   ): cto_tab_HoodConstruction | undefined {
     const res = ct_tab_HoodConstruction.find((p) =>
-      p.in_HoodConstructionID === in_HoodConstructionID
+      p.in_HoodId === in_HoodId
     );
     return res;
   }
@@ -168,4 +179,48 @@ export class ct2_tab_HoodConstruction {
 }
 
 export var ct_tab_HoodConstruction: ICT_tab_HoodConstruction[] = [
+  {
+    _id: 1,
+    in_HoodId: "D46ED52X1",
+    Height: 388,
+    Width: 898,
+    Depth: 290,
+    TowerHeightTotal: 347,
+    Tower1Height: 82,
+    Tower1Width: 524,
+    Tower1Depth: 266,
+    Tower1XOffset: 187,
+    Tower1YOffset: 10,
+    Tower2Height: 265,
+    Tower2Width: 524,
+    Tower2Depth: 182,
+    Tower2XOffset: 0,
+    Tower2YOffset: 84,
+    CutOutWidthMin: 600,
+    CutOutWidthMax: 900,
+    CutOutDepthMin: 300,
+    CutOutDepthMax: 320
+  }
+  , {
+    _id: 2,
+    in_HoodId: "LI99SA684",
+    Height: 179,
+    Width: 598,
+    Depth: 290,
+    TowerHeightTotal: 138,
+    Tower1Height: 138,
+    Tower1Width: 526,
+    Tower1Depth: 266,
+    Tower1XOffset: 36,
+    Tower1YOffset: 10,
+    Tower2Height: 0,
+    Tower2Width: 526,
+    Tower2Depth: 0,
+    Tower2XOffset: 0,
+    Tower2YOffset: 0,
+    CutOutWidthMin: 600,
+    CutOutWidthMax: 600,
+    CutOutDepthMin: 300,
+    CutOutDepthMax: 320
+  }
 ];
