@@ -25,26 +25,29 @@ export const tab_Annotations: I_tab_Annotation[] = [
     {
         in_ModuleId: 'mr_StorageunitSingle,mr_CornerunitStraight',
         out_Annotations: (m: any, _drawingData: IPlanSvgDrawing) => {
-            const plinthAreaHeight = m.mod_PlinthAreaDesign_matrix.PlinthAreaType !== 'None' ? m.mod_PlinthAreaHeight : 0;
+            const plinthAreaHeight = (m.mod_PlinthAreaDesign_matrix.PlinthAreaType !== 'None' ? m.mod_PlinthAreaHeight : 0) ?? 0;
+            const countertopThk = m.mod_CreateCountertop ? (m.mod_CountertopThk ?? 0) : 0;
             const result = [];
+
+            const layerName = ['WallUnit'].includes(m.mod_TypeElement) ? `wallunit-dimension-horizontal` : 'carcase-dimension-horizontal';
 
             result.push({
                 start: new Vector3(0, 0, 0),
                 end: new Vector3(m.mod_Width, 0, 0),
-                layer: 'carcase-dimension-horizontal',
+                layer: layerName,
                 tags: ['overall', 'carcase'],
             });
             result.push({
-                start: new Vector3(0, 0, 0),
-                end: new Vector3(0, 0, m.mod_Depth),
-                layer: 'carcase-dimension-horizontal',
+                start: new Vector3(0, plinthAreaHeight, 0),
+                end: new Vector3(0, plinthAreaHeight, m.mod_Depth),
+                layer: layerName,
                 tags: ['overall', 'carcase'],
             });
 
             if (m.mod_CreateCountertop) {
                 result.push({
                     start: new Vector3(0, plinthAreaHeight + m.mod_Height, 0),
-                    end: new Vector3(0, plinthAreaHeight + m.mod_Height + m.mod_CountertopThk, 0),
+                    end: new Vector3(0, plinthAreaHeight + m.mod_Height + countertopThk, 0),
                     layer: 'carcase-dimension-elevation',
                     tags: ['overall', 'carcase'],
                 });
@@ -82,32 +85,32 @@ export const tab_Annotations: I_tab_Annotation[] = [
         in_Condition: (_m: any) => true,
     },
 
-    {
-        in_ModuleId: 'mc_Backsplash',
-        in_Condition: (_m: any) => { return true; },
-        out_Annotations: (m: any, _drawingData: IPlanSvgDrawing) => {
-            return [
-                {
-                    start: new Vector3(0, 0, 0),
-                    end: new Vector3(0, m.mod_BacksplashHeight, 0),
-                    layer: 'carcase-dimension-elevation',
-                    tags: ['overall', 'carcase'],
-                },
-                {
-                    start: new Vector3(0, 0, 0),
-                    end: new Vector3(0, 0, m.mod_BacksplashThk),
-                    layer: 'accessory-dimension-horizontal',
-                    tags: ['overall', 'carcase'],
-                },
-                {
-                    start: new Vector3(0, 0, 0),
-                    end: new Vector3(m.mod_BacksplashWidth, 0, 0),
-                    layer: 'accessory-dimension-horizontal',
-                    tags: ['overall', 'carcase'],
-                }
-            ];
-        }
-    },
+    // {
+    //     in_ModuleId: 'mc_Backsplash',
+    //     in_Condition: (_m: any) => { return true; },
+    //     out_Annotations: (m: any, _drawingData: IPlanSvgDrawing) => {
+    //         return [
+    //             {
+    //                 start: new Vector3(0, 0, 0),
+    //                 end: new Vector3(0, m.mod_BacksplashHeight, 0),
+    //                 layer: 'carcase-dimension-elevation',
+    //                 tags: ['overall', 'carcase'],
+    //             },
+    //             {
+    //                 start: new Vector3(0, 0, 0),
+    //                 end: new Vector3(0, 0, m.mod_BacksplashThk),
+    //                 layer: 'accessory-dimension-horizontal',
+    //                 tags: ['overall', 'carcase'],
+    //             },
+    //             {
+    //                 start: new Vector3(0, 0, 0),
+    //                 end: new Vector3(m.mod_BacksplashWidth, 0, 0),
+    //                 layer: 'accessory-dimension-horizontal',
+    //                 tags: ['overall', 'carcase'],
+    //             }
+    //         ];
+    //     }
+    // },
 
     {
         in_ModuleId: 'mc_Storageunit01',
@@ -117,6 +120,8 @@ export const tab_Annotations: I_tab_Annotation[] = [
             const rightX = m.mod_CarcaseWidth - (m.mod_SidepanelrightThk ?? 0);
             const bottomY = m.mod_ShelfbtmThk ?? 0;
             const topY = m.mod_CarcaseHeight - (m.mod_ShelftopThk ?? 0);
+            if (isNaN(leftX) || isNaN(rightX) || isNaN(bottomY) || isNaN(topY)) { return []; }
+            if (leftX >= rightX || bottomY >= topY) { return []; }
             return [
                 {
                     start: new Vector3(leftX, bottomY, 0),
@@ -172,13 +177,15 @@ export const tab_Annotations: I_tab_Annotation[] = [
             );
         }, // apply to all modules with the specified ID
         out_SvgPathOverlays: (m: any) => {
+            // dashed line around the module if it is covered with a countertop
+            const yPosition = m.mod_Height + (m.mod_PlinthAreaDesign_matrix.PlinthAreaType !== 'None' ? (m.mod_PlinthAreaHeight ?? 0) : 0);
             return [
                 {
                     d: [
-                        { command: 'M', coordinate3d: new Vector3(0, 0, 0) },
-                        { command: 'L', coordinate3d: new Vector3(m.mod_Width, 0, 0) },
-                        { command: 'L', coordinate3d: new Vector3(m.mod_Width, 0, m.mod_Depth) },
-                        { command: 'L', coordinate3d: new Vector3(0, 0, m.mod_Depth) },
+                        { command: 'M', coordinate3d: new Vector3(0, yPosition, 0) },
+                        { command: 'L', coordinate3d: new Vector3(m.mod_Width, yPosition, 0) },
+                        { command: 'L', coordinate3d: new Vector3(m.mod_Width, yPosition, m.mod_Depth) },
+                        { command: 'L', coordinate3d: new Vector3(0, yPosition, m.mod_Depth) },
                         { command: 'Z' }
                     ],
                     fill: 'none',
@@ -197,19 +204,20 @@ export const tab_Annotations: I_tab_Annotation[] = [
         in_ModuleId: 'mr_StorageunitSingle',
         in_Condition: (m: any) => { return m._articlePos.y > 100 /** todo: base on mod_ElementType */ },
         out_SvgPathOverlays: (m: any) => {
+            const yPosition = m.mod_Height + (m.mod_PlinthAreaDesign_matrix.PlinthAreaType !== 'None' ? (m.mod_PlinthAreaHeight ?? 0) : 0);
             return [
                 {
                     d: [
-                        { command: 'M', coordinate3d: new Vector3(0, 0, 0) },
-                        { command: 'L', coordinate3d: new Vector3(m.mod_Width, 0, 0) },
-                        { command: 'L', coordinate3d: new Vector3(m.mod_Width, 0, m.mod_Depth) },
-                        { command: 'L', coordinate3d: new Vector3(0, 0, m.mod_Depth) },
+                        { command: 'M', coordinate3d: new Vector3(0, yPosition, 0) },
+                        { command: 'L', coordinate3d: new Vector3(m.mod_Width, yPosition, 0) },
+                        { command: 'L', coordinate3d: new Vector3(m.mod_Width, yPosition, m.mod_Depth) },
+                        { command: 'L', coordinate3d: new Vector3(0, yPosition, m.mod_Depth) },
                         { command: 'Z' },
-                        { command: 'M', coordinate3d: new Vector3(0, 0, 0) },
-                        { command: 'L', coordinate3d: new Vector3(m.mod_Width, 0, m.mod_Depth) },
+                        { command: 'M', coordinate3d: new Vector3(0, yPosition, 0) },
+                        { command: 'L', coordinate3d: new Vector3(m.mod_Width, yPosition, m.mod_Depth) },
                         { command: 'Z' },
-                        { command: 'M', coordinate3d: new Vector3(m.mod_Width, 0, 0) },
-                        { command: 'L', coordinate3d: new Vector3(0, 0, m.mod_Depth) },
+                        { command: 'M', coordinate3d: new Vector3(m.mod_Width, yPosition, 0) },
+                        { command: 'L', coordinate3d: new Vector3(0, yPosition, m.mod_Depth) },
                         { command: 'Z' },
                     ],
                     stroke: '#000000',

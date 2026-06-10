@@ -114,12 +114,11 @@ export class Drawing implements IPlanSvgDrawing {
         });
         SVGHelper.createSvgDefsForArrowMarkers({ parent: svgRoot, properties: linesArrowMarkerStyle });
 
-        const baseMargin = 10;
-        const annotationSpacing = 50;
+        const baseMargin = 20;
+        const finalMargin = 20;
+        const annotationSpacing = 40;
 
         let marginDown = baseMargin, marginUp = baseMargin, marginLeft = baseMargin, marginRight = baseMargin; // you can adjust margins as needed
-        marginDown += annotationSpacing / 2; // leave space for the first annotation line
-        marginRight += annotationSpacing / 2; // leave space for the first annotation line
 
         // rect around the image
         const m = 3;
@@ -193,6 +192,8 @@ export class Drawing implements IPlanSvgDrawing {
             annotationLayers.get(layer)!.push(annotation);
         }
 
+        const directPositionAnnotations: AnnotationTransformed[] = [];
+
         const allLayers = Array.from(annotationLayers.keys()).sort();
         allLayers.forEach(layer => {
             const annotationsInLayer = annotationLayers.get(layer)!;
@@ -202,27 +203,15 @@ export class Drawing implements IPlanSvgDrawing {
             annotationsInLayer.forEach((annotation) => {
                 // calculate the azimuth, it only make sense to show the annotation on the aggregate lines if the annotation is rectangular to the drawing view
                 const azimuth = Math.round(Math.atan2(annotation.endPoint.cameraSpaceCoordinate._y - annotation.startPoint.cameraSpaceCoordinate._y, annotation.endPoint.cameraSpaceCoordinate._x - annotation.startPoint.cameraSpaceCoordinate._x) * 180 / Math.PI);
-                const isRightAngle = [-180, -90, 0, 90, 180].indexOf(azimuth) >= 0; // you can adjust the angles that are considered right angles as needed
-                if (!isRightAngle || annotation.annotation.displayAtPosition) {
-                    SVGHelper.createSvgLineElementWithText({
-                        parent: annotationsRoot,
-                        startX: annotation.startPoint.pixelCoordinate._x,
-                        startY: annotation.startPoint.pixelCoordinate._y,
-                        endX: annotation.endPoint.pixelCoordinate._x,
-                        endY: annotation.endPoint.pixelCoordinate._y,
-                        textContent: annotation.annotation.label ?? annotation.realLength.toFixed(0),
-                        lineProperties: { ...thickLineStyle, ...arrowLineStyle },
-                        textProperties: { ...textStyle, flipIfUpsideDown: true },
-                    });
+                const isVertical = Math.abs(azimuth) === 90 || Math.abs(azimuth) === -90;
+                const isHorizontal = Math.abs(azimuth) === 0 || Math.abs(azimuth) === 180 || Math.abs(azimuth) === -180;
+                if (isVertical && !annotation.annotation.displayAtPosition) {
+                    verticalAnnotations.push(annotation);
+                } else if (isHorizontal && !annotation.annotation.displayAtPosition) {
+                    horizontalAnnotations.push(annotation);
                 }
                 else {
-                    const isVertical = Math.abs(azimuth) === 90;
-                    const isHorizontal = Math.abs(azimuth) === 0 || Math.abs(azimuth) === 180;
-                    if (isVertical) {
-                        verticalAnnotations.push(annotation);
-                    } else if (isHorizontal) {
-                        horizontalAnnotations.push(annotation);
-                    }
+                    directPositionAnnotations.push(annotation);
                 }
             });
 
@@ -234,9 +223,12 @@ export class Drawing implements IPlanSvgDrawing {
                 lineStart: new Vector3(0, this._renderResult.imageHeight + marginDown, 0),
                 lineDirection: new Vector3(1, 0, 0),
                 lineNormalDirection: new Vector3(0, 1, 0),
-                lineSpacing: annotationSpacing
+                lineSpacing: annotationSpacing,
+                drawingSizeY: this.sceneRender.imageHeight,
             });
-            marginDown += (horizontalAnnotationsResult.countOfLines) * annotationSpacing;
+            horizontalAnnotationsResult.annotationsAtPosition.forEach(annotation => {
+                directPositionAnnotations.push(annotation);
+            });
 
             // drawAnnotationsWithAnnotationLines(annotationsRoot, layer, verticalAnnotations, new Vector3(0, 0, 0), new Vector3(0, 1, 0), new Vector3(-1, 0, 0));
             const verticalAnnotationsResult = drawAnnotationsWithAnnotationLines({
@@ -246,10 +238,48 @@ export class Drawing implements IPlanSvgDrawing {
                 lineStart: new Vector3(this._renderResult.imageWidth + marginRight, 0, 0),
                 lineDirection: new Vector3(0, 1, 0),
                 lineNormalDirection: new Vector3(1, 0, 0),
-                lineSpacing: annotationSpacing
+                lineSpacing: annotationSpacing,
+                drawingSizeY: this.sceneRender.imageWidth,
             });
-            marginRight += (verticalAnnotationsResult.countOfLines) * annotationSpacing;
+            verticalAnnotationsResult.annotationsAtPosition.forEach(annotation => {
+                directPositionAnnotations.push(annotation);
+            });
 
+            const debugLabel = (line: any) => {
+                return undefined;
+                return `${line.getMergeCriteria().toFixed(0)}`;
+            }
+
+            horizontalAnnotationsResult.annotationLines.forEach(line => {
+                marginDown += annotationSpacing;
+                line.toSvg(annotationsRoot, new Vector3(0, this.sceneRender.imageHeight + marginDown, 0), new Vector3(1, 0, 0), debugLabel(line));
+            });
+            horizontalAnnotationsResult.secondaryAnnotationLines.forEach(line => {
+                line.toSvg(annotationsRoot, new Vector3(0, - marginUp, 0), new Vector3(1, 0, 0), debugLabel(line));
+                marginUp += annotationSpacing;
+            });
+
+            verticalAnnotationsResult.annotationLines.forEach(line => {
+                marginRight += annotationSpacing;
+                line.toSvg(annotationsRoot, new Vector3(this.sceneRender.imageWidth + marginRight, 0, 0), new Vector3(0, 1, 0), debugLabel(line));
+            });
+            verticalAnnotationsResult.secondaryAnnotationLines.forEach(line => {
+                line.toSvg(annotationsRoot, new Vector3(- marginLeft, 0, 0), new Vector3(0, 1, 0), debugLabel(line));
+                marginLeft += annotationSpacing;
+            });
+        });
+
+        directPositionAnnotations.forEach(annotation => {
+            SVGHelper.createSvgLineElementWithText({
+                parent: annotationsRoot,
+                startX: annotation.startPoint.pixelCoordinate._x,
+                startY: annotation.startPoint.pixelCoordinate._y,
+                endX: annotation.endPoint.pixelCoordinate._x,
+                endY: annotation.endPoint.pixelCoordinate._y,
+                textContent: annotation.annotation.label ?? annotation.realLength.toFixed(0),
+                lineProperties: { ...thickLineStyle, ...arrowLineStyle },
+                textProperties: { ...textStyle, flipIfUpsideDown: true },
+            });
         });
 
 
@@ -410,6 +440,21 @@ export class Drawing implements IPlanSvgDrawing {
 
         svgRoot.appendChild(sortedAnnotationsRoot);
 
+        marginLeft += finalMargin; // leave space for the first annotation line
+        marginRight += finalMargin; // leave space for the first annotation line
+        marginUp += finalMargin; // leave space for the first annotation line
+        marginDown += finalMargin; // leave space for the first annotation line
+
+
+        // margin around the whole image
+        SVGHelper.createSvgRectElement({
+            parent: svgRoot,
+            x: -marginLeft,
+            y: -marginUp,
+            width: this.sceneRender.imageWidth + marginLeft + marginRight,
+            height: this.sceneRender.imageHeight + marginDown + marginUp,
+            properties: { fill: 'none', stroke: 'blue', strokeWidth: 1 },
+        })
 
         svgRoot.setAttribute("viewBox", `${-marginLeft} ${-marginUp} ${this.sceneRender.imageWidth + marginLeft + marginRight} ${this.sceneRender.imageHeight + marginDown + marginUp}`); // Default, or you can use actual image size if available
         return svgRoot;
