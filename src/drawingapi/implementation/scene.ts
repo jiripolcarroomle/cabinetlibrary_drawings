@@ -1,7 +1,7 @@
 
 import { Matrix4, Vector3 } from "../../lib/internal/base"
 import { logWarning } from "../../lib/internal/logging";
-import { createWallsGroupFromOrderData } from "./scene-wall";
+import { createWallsGroupFromOrderData, WallSegment } from "./scene-wall";
 import { type IWallSegment } from "../interfaces/scene";
 import { IdsMap } from "../interfaces/idsmap";
 import { type IGeometryData, Object3DNodeKind, type IOrderLineEntry, type IOrderSceneNode } from "../interfaces/scene";
@@ -303,6 +303,121 @@ export class OrderSceneNode implements IOrderSceneNode {
         return moduleNode;
     }
 
+    /**
+     * Order is not JSON.stringify-able due to heavy circular dependencies.
+     * This is a developer utility to serialize the scene into a JSON-compatible format by stripping
+     * the circular references and converting the complex types into plain objects/arrays.
+     * This only serializes the fields necessary to reconstruct the scene, so some data is intentionally omitted.
+     * @returns JSON.stringify compatible serialized representation of this node and its subtree.
+     */
+    serialize() {
+        const serialized: any = {
+            ...this,
+            parent: undefined,
+            children: [],
+        };
+        serialized.orderLineEntry = {} as any;
+        const orderLineEntryRelevantKeys = getSerializablePropertyKeysIncludingGetters(this.orderLineEntry).filter(k => {
+            if (['_dimx', '_dimy', '_dimz', '_isGenerated', '_xAbs', '_yAbs', '_zAbs', '_x', '_y', '_z', '_partId', '_articlePos'].indexOf(k) >= 0) { return true; }
+            else if (k.startsWith('_')) { return false; }
+            else if (['parentId', 'parent', 'm', 'p', 'parentBase', 'variants', 'roomContours', 'generationContours', 'groupPos', 'items'].indexOf(k) >= 0) { return false; }
+            else { return true; }
+        });
+        orderLineEntryRelevantKeys.forEach(k => {
+            let value: any;
+            try {
+                value = (this.orderLineEntry as any)[k];
+            }
+            catch {
+                return;
+            }
+            if (typeof value === 'function') {
+                return;
+            }
+            serialized.orderLineEntry[k] = value;
+        });
+        if (this.id.startsWith('mr_StorageunitSingle')) {
+            console.log('serializing mr_StorageunitSingle', JSON.stringify(Object.keys(serialized.orderLineEntry), null, 2));
+            console.log('serializing', this.id, serialized.orderLineEntry);
+        }
+        serialized.children = this.children.map(child => (child as OrderSceneNode).serialize());
+        serialized._geometry.ownerNode = undefined;
+        return serialized;
+    }
+    private static deserializeMatrix4(sourceMatrix: any): Matrix4 {
+        if (sourceMatrix instanceof Matrix4) {
+            return sourceMatrix.clone();
+        }
+        if (Array.isArray(sourceMatrix)) {
+            return new Matrix4().fromArray(sourceMatrix);
+        }
+        if (sourceMatrix?.elements && Array.isArray(sourceMatrix.elements)) {
+            return new Matrix4().fromArray(sourceMatrix.elements);
+        }
+        return new Matrix4();
+    }
+
+    private static deserializeVector3(sourceVector: any): Vector3 {
+        if (sourceVector instanceof Vector3) {
+            return sourceVector.clone();
+        }
+        if (Array.isArray(sourceVector)) {
+            return new Vector3(sourceVector[0] ?? 0, sourceVector[1] ?? 0, sourceVector[2] ?? 0);
+        }
+        return new Vector3(sourceVector?._x ?? 0, sourceVector?._y ?? 0, sourceVector?._z ?? 0);
+    }
+
+    /**
+     * Deserialize a scene that has been serialized with the `serialize` method. This is a developer utility to reconstruct the scene from the JSON-compatible format.
+     * @param idsMap A map of IDs to scene nodes, used to resolve references during deserialization. Use new IdsMap() if you don't have an existing map and do not need it afterwards.
+     * @param source The source JSON
+     * @param parent If relevant, a node to attach this node to. Use undefined for root.
+     * @returns Deserialized instance.
+     */
+    static deserialize(idsMap: IdsMap, source: any, parent?: IOrderSceneNode): OrderSceneNode {
+        const deserialized = new OrderSceneNode(idsMap, source.id, source.kind);
+        for (const key in source) {
+            if (['children', '_geometry', 'worldTransform', 'idsMap', 'parent', 'transform', '_worldTransform', 'wallData'].indexOf(key) < 0) {
+                (deserialized as any)[key] = source[key];
+            }
+        }
+        deserialized.transform = OrderSceneNode.deserializeMatrix4(source.transform);
+        deserialized._worldTransform = OrderSceneNode.deserializeMatrix4(source._worldTransform);
+        deserialized.orderLineEntry = source.orderLineEntry;
+        if (parent) {
+            deserialized.parent = parent;
+        }
+        deserialized._geometry.hidden = source._geometry.hidden;
+        deserialized._geometry.meshUrl = source._geometry.meshUrl;
+        deserialized._geometry.origin = OrderSceneNode.deserializeMatrix4(source._geometry.origin);
+        deserialized._geometry.size = source._geometry.size
+            ? OrderSceneNode.deserializeVector3(source._geometry.size)
+            : undefined;
+        deserialized._geometry.svgDepth = source._geometry.svgDepth;
+        deserialized._geometry.svgExtrusionDirection = source._geometry.svgExtrusionDirection;
+        deserialized._geometry.svgString = source._geometry.svgString;
+        if (source.wallData) {
+            deserialized.wallData = new WallSegment(
+                OrderSceneNode.deserializeVector3(source.wallData.segmentStart),
+                OrderSceneNode.deserializeVector3(source.wallData.segmentEnd),
+                OrderSceneNode.deserializeVector3(source.wallData.segmentBackStart),
+                OrderSceneNode.deserializeVector3(source.wallData.segmentBackEnd),
+                OrderSceneNode.deserializeVector3(source.wallData.direction),
+                source.wallData.wallLength,
+                source.wallData.wallThickness,
+                source.wallData.wallHeight,
+                source.wallData.rotationY,
+                OrderSceneNode.deserializeVector3(source.wallData.normalToWall),
+            )
+        }
+
+        deserialized.children = source.children.map((serializedChild: any) => (OrderSceneNode.deserialize(idsMap, serializedChild, deserialized)));
+        if (!parent) {
+            deserialized.updateWorldTransform(new Matrix4());
+        }
+        return deserialized;
+    }
+
 }
 
 class GeometryData implements IGeometryData {
@@ -443,4 +558,41 @@ function computeWorldTransform(node: IOrderSceneNode): Matrix4 {
  */
 function getPartId(part: any /* PartBase */): string {
     return `part__${part._partId}__${part._id}:${part._parentUniqueId}`;
+}
+
+
+/** Similar like Object.keys but includes value getters */
+function getSerializablePropertyKeysIncludingGetters(source: any): string[] {
+    if (!source) {
+        return [];
+    }
+
+    const keys = new Set<string>();
+    let current = source;
+
+    while (current && current !== Object.prototype) {
+        Object.getOwnPropertyNames(current).forEach((propertyName) => {
+            if (propertyName === 'constructor' || keys.has(propertyName)) {
+                return;
+            }
+
+            const descriptor = Object.getOwnPropertyDescriptor(current, propertyName);
+            if (!descriptor) {
+                return;
+            }
+
+            if (typeof descriptor.get === 'function') {
+                keys.add(propertyName);
+                return;
+            }
+
+            if ('value' in descriptor && typeof descriptor.value !== 'function') {
+                keys.add(propertyName);
+            }
+        });
+
+        current = Object.getPrototypeOf(current);
+    }
+
+    return [...keys].sort();
 }

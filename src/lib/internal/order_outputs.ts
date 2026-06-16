@@ -8,7 +8,7 @@ import { GlobalFunc } from './global-func'
 import { GlobalVars } from './global-vars';
 import { Matrix4, OD_Base, RoomContour, Vector3 } from './base';
 import { AnnotablePoint, Annotation, DrawingDirection, IOrderSceneNode, IRenderOrthoCameraParams, IRenderOrthoCameraResult, SvgPathInjectionData } from '../../drawingapi/interfaces';
-import { createScene } from '../../drawingapi/implementation/scene';
+import { createScene, OrderSceneNode } from '../../drawingapi/implementation/scene';
 import { ISceneGeometryConversionToThreeJsSettings } from '../../drawingapi/implementation/orderdrawingrenderer.theejs.helpers';
 import { IOrderLineEntry, Object3DNodeKind } from '../../drawingapi/interfaces/scene';
 import { renderScene } from '../../drawingapi/implementation/orderdrawingrenderer.threejs';
@@ -1062,6 +1062,10 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
 
       // convert order to scene nodes, where the parts are grouped under modules and their world transforms can be calculated
       const orderScene = createScene(o, ol);
+
+      const serializedScene = (orderScene as OrderSceneNode).serialize();
+      const stringifiedScene = JSON.stringify(serializedScene, null, 4);
+      this.createFileEntry(result, "dev_serialized_scene.json", stringifiedScene);
 
       // =================
       // 1. settings and preparations 
