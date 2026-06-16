@@ -1,8 +1,9 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterModuleGroupOrchestrator, internal_leaveModuleGroupOrchestrator, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { IModBaseProp, IPartBase, PartBase, PartTouch, I3DElement, TouchType } from '../mod-base'
 import { CollisionDataRel } from '../touches'
 import { GlobalFunc } from '../global-func'
 import { P_part_PulloutHardwareDrillings, IP_part_PulloutHardwareDrillings_PartVarsReadOnly } from './part_PulloutHardwareDrillings'
+import { P_part_HandleDrill, IP_part_HandleDrill_PartVarsReadOnly } from './part_HandleDrill'
 import { BOM_ElementType_bomout_Board } from '../bom/types/bom_bomout_Board'
 import { BOM_ElementType_ncout_Group } from '../bom/types/touch_ncout_Group'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary, cto_tab_ApplianceGraphicLibrary, ct2_tab_ApplianceGraphicLibrary } from '../custom-tables/tab_ApplianceGraphicLibrary'
@@ -524,6 +525,47 @@ export class P_part_Pullout extends PartBase implements IP_part_Pullout_PartVars
           }
           _bom._parentId = partSelf._id;
           _bom._description = "Connects Front to Drillings";
+          _bom.set(partSelf, touch, part2, posRel);
+          partSelf._bom.push(_bom);
+          if (_bom._subBom) {
+            _bom._subBom.forEach(p => partSelf._bom.push(p));
+          }
+        }
+      }
+    }
+    catch (error) {
+      if (error instanceof Error) {
+        logError(error.message + "\n" + error.stack);
+      } else {
+        logError(JSON.stringify(error, null, 4));
+      }
+    }
+    try {
+      // ncout_Group: 667: part_HandleDrill FromFront
+      if (touch == PartTouch.FromFront && partNext instanceof P_part_HandleDrill) {
+        let part2 = <P_part_HandleDrill>partNext;
+        const partSelf = this;
+        if (true) { // ####################### CUSTOM SCRIPTS ########################
+          let parentId = partSelf._id;
+          const _bom = new class BOMT667 extends BOM_ElementType_ncout_Group {
+            constructor() { super(partSelf); }
+            set(partSelf: IP_part_Pullout_PartVarsReadOnly, touch: PartTouch, part2: IP_part_HandleDrill_PartVarsReadOnly, posRel: CollisionDataRel) {
+              this._touchOrigin = touch;
+              this._touchPart2Id = part2._id;
+              this._touchPart2Name = part2._partId;
+              internal_enterBomPartMasterDataTouches(partSelf._id, partSelf._partId, part2._id, part2._partId, touch);
+              try {
+                // ####################### CUSTOM SCRIPTS ########################
+                GlobalFunc.ncout_HandleDrill(this, partSelf, part2, posRel)
+                // ################### END CUSTOM SCRIPTS ########################
+              }
+              finally {
+                internal_leaveBomPartMasterDataTouches();
+              }
+            }
+          }
+          _bom._parentId = partSelf._id;
+          _bom._description = "Drillings for Handles";
           _bom.set(partSelf, touch, part2, posRel);
           partSelf._bom.push(_bom);
           if (_bom._subBom) {

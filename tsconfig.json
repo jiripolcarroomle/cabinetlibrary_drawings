@@ -1,14 +1,9 @@
 {
-"buildOptions": {},
   "compilerOptions": {
     "target": "es2022",
     "useDefineForClassFields": true,
     "module": "es2022",
-    "lib": [
-      "es2022",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": [ "es2022", "DOM", "DOM.Iterable" ],
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -26,7 +21,5 @@
     "noUncheckedSideEffectImports": true,
     "noPropertyAccessFromIndexSignature": true
   },
-  "include": [
-    "src"
-  ]
+  "include": [ "src" ]
 }

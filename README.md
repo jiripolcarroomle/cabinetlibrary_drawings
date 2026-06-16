@@ -22,7 +22,7 @@
    * Execute in the terminal: `nvm install 22.2.0`
    * Execute in the terminal: `nvm use 22.2.0`
    * Install yarn
-   * Execute in the terminal: `npm install -g yarn`
+   * Execute in the terminal: `npm install -g yarn --registry=https://registry.yarnpkg.com/`
    * You need to allow yarn to execute PowerShell scripts; the easiest way is to allow all scripts: `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope LocalMachine`
 
 ## Development

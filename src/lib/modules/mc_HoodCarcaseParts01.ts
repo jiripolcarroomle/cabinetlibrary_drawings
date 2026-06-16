@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterModuleGroupOrchestrator, internal_leaveModuleGroupOrchestrator, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
 
 //#region Imports
 import { cbp_mc_HoodCarcaseParts01, dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, ccm_mc_HoodCarcaseParts01, pc_mc_HoodCarcaseParts01 } from '../internal/modules/mc_HoodCarcaseParts01'
@@ -159,11 +159,13 @@ export function mc_HoodCarcaseParts01_createBuildPlan(this: cbp_mc_HoodCarcasePa
     //================================================================================================
     // Mapping for Part configurations with direct method references
     let partConfig = new Map([
-      ['part_HoodShelftop', { createPart: () => this.addpart_HoodShelftop(0, 0, 0, this.mod_CarcaseWidth, this.mod_CarcaseHeight, this.mod_CarcaseDepth) }],
-      ['part_HoodShelfbtm', { createPart: () => this.addpart_HoodShelfbtm(0, 0, 0, this.mod_CarcaseWidth, this.mod_CarcaseHeight, this.mod_CarcaseDepth) }],
-      ['part_HoodBackwall', { createPart: () => this.addpart_HoodBackwall(10, 50, 100, this.mod_CarcaseWidth, this.mod_CarcaseHeight, this.mod_CarcaseDepth) }],
-      ['part_HoodRail', { createPart: () => this.addpart_HoodRail(0, 0, 0, this.mod_CarcaseWidth, this.mod_CarcaseHeight, this.mod_CarcaseDepth) }],
+      ['part_HoodShelftop', { createPart: (posx: number, posy: number, posz: number, w: number, h: number, d: number) => this.addpart_HoodShelftop(posx, posy, posz, w, h, d) }],
+      //    ['part_HoodShelftop',         {createPart: () => this.addpart_HoodShelftop(0, 0, 0, this.mod_CarcaseWidth, this.mod_CarcaseHeight, this.mod_CarcaseDepth) }],
+      ['part_HoodShelfbtm', { createPart: (posx: number, posy: number, posz: number, w: number, h: number, d: number) => this.addpart_HoodShelfbtm(posx, posy, posz, w, h, d) }],
+      ['part_HoodBackwall', { createPart: (posx: number, posy: number, posz: number, w: number, h: number, d: number) => this.addpart_HoodBackwall(posx, posy, posz, w, h, d) }],
+      ['part_HoodRail', { createPart: (posx: number, posy: number, posz: number, w: number, h: number, d: number) => this.addpart_HoodRail(posx, posy, posz, w, h, d) }],
     ]);
+
 
     if (!this.mod_HoodInformation && this.mod_HoodInformation == "") {
       return;
@@ -173,17 +175,26 @@ export function mc_HoodCarcaseParts01_createBuildPlan(this: cbp_mc_HoodCarcasePa
     if (!hoodInformation.constructionId && hoodInformation.ConstructionId == "") {
       return;
     }
-    let rearPanel = hoodInformation.RearOffset;
-    // Read the table
+    let hoodRearOffset = hoodInformation.RearOffset;
+
+    // Find all Parts for the current construction
     const partList = GlobalFunc.find_HoddAssemblyParts(hoodInformation.ConstructionId);
 
     if (!partList || partList.length === 0) {
-      //Fehlermeldung kommt schon aus findfun...
       return;
     }
+    // Installationinfo hood
+    const hoodAssInfo = hoodInformation.HoodAssemblyInfo;
+
+
     //===================================================
     // Add the carcase parts for the hood
     //===================================================
+    let t1Depth = hoodAssInfo.Tower1Depth;
+    let t2Depth = hoodAssInfo.Tower2Depth;
+    let h1 = hoodAssInfo.Tower1Height;
+    let cutOutDepthMin = hoodAssInfo.CutOutDepthMin;
+
     partList.forEach(part => {
       const partData = part;
 
@@ -191,18 +202,52 @@ export function mc_HoodCarcaseParts01_createBuildPlan(this: cbp_mc_HoodCarcasePa
       if (config) {
         let { createPart } = config;
         try {
-          let element = createPart();
+          let posHeight = partData.PositionHeight(this, h1);
+          let posDepth = partData.PositionDepth(this, t2Depth);
+          let partDepth = partData.Depth(this, t2Depth, hoodRearOffset);
+          let partHeight = partData.Height(this, h1);
+
+          if (hoodInformation.ConstructionId == "HoodConstructId01") {
+            if (partData.PartID === "part_HoodShelfbtm") {
+              //posHeight += hoodAssInfo.Tower1Height;
+              //partDepth -= hoodAssInfo.Tower2Depth;
+              //posDepth += hoodAssInfo.Tower2Depth;
+            }
+            else if (partData.PartID === "part_HoodBackwall") {
+              //posHeight += hoodAssInfo.Tower1Height;
+              //posHeight += this.mod_HoodRailverttopbackthk; // bsp. Stärke Boden 
+
+              //posDepth += hoodAssInfo.Tower2Depth;
+              //posDepth += 10;
+
+              //partHeight -= hoodAssInfo.Tower1Height;
+            }
+            else if (partData.PartID === "part_HoodShelftop") {
+              //posDepth += hoodAssInfo.Tower2Depth;
+              //partDepth -= hoodAssInfo.Tower2Depth;
+              //partDepth -= 8; // To Do Backwall thk
+              //partDepth -= 10; // To Do Groove Pos
+
+            }
+            else if (partData.PartID === "part_HoodRail") {
+              //partHeight = hoodAssInfo.Tower1Height;
+            }
+          }
+          //let element = createPart(partData.PositionWidth(this), partData.PositionHeight(this), partData.PositionDepth(this), partData.Width(this), partData.Height(this), partData.Depth(this));
+          let element = createPart(partData.PositionWidth(this, 0), posHeight, posDepth, partData.Width(this, 0), partHeight, partDepth);
 
         }
         catch (error: any) {
           // Log the error and stop execution if any function call fails
+          // ToD Add new Error Message
           let ErrorMessage = GlobalFunc.find_ErrorList('Error 21004', 1);
           logError(ErrorMessage.Message(error.message));
           return;
         }
-
       }
     });
+
+
     // ###############################################################
     // ################### END CUSTOM SCRIPTS ########################
     // ###############################################################

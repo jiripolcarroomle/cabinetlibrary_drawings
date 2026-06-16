@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterModuleGroupOrchestrator, internal_leaveModuleGroupOrchestrator, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
 
 //#region Imports
 import { cbp_mc_Storageunit01, dc_mc_Storageunit01, adc_mc_Storageunit01, ccm_mc_Storageunit01, pc_mc_Storageunit01 } from '../internal/modules/mc_Storageunit01'
@@ -377,9 +377,26 @@ export function mc_Storageunit01_afterDataCompletion(this: adc_mc_Storageunit01)
 		//          Add the backwalls
 		//==========================================================================================================
 
-		// Call the process function
-		let retBackwall = GlobalFunc.process_StorageunitBackwallConstruction(this, tmpLSpPart, tmpRSpPart, tmpBtmPart, tmpTopPart, freeSpaceHeight, freeSpaceWidth, freeSpaceWidthPos, freeSpaceHeightPos, retShelfFixed);
-		let retBackwalls = JSON.parse(retBackwall);
+		// Default if there is a hood insertion
+		// We have to replace that later
+		let retBackwalls: any[] = [
+			{
+				Part: "part_Backwall",
+				Height: this.mod_CarcaseHeight - this.mod_ShelfbtmThk - this.mod_ShelftopThk,
+				Width: this.mod_CarcaseWidth - this.mod_SidepanelleftThk - this.mod_SidepanelrightThk,
+				Depth: 8,
+				WidthPos: this.mod_SidepanelleftThk,
+				HeightPos: this.mod_ShelfbtmThk,
+				DepthPos: this.mod_BackwallPos
+			}
+		];
+		let retBackwall = JSON.stringify(retBackwalls);
+
+		// Call the process function to insert the backwall
+		if (!this.mod_HoodInsertion) {
+			retBackwall = GlobalFunc.process_StorageunitBackwallConstruction(this, tmpLSpPart, tmpRSpPart, tmpBtmPart, tmpTopPart, freeSpaceHeight, freeSpaceWidth, freeSpaceWidthPos, freeSpaceHeightPos, retShelfFixed);
+			retBackwalls = JSON.parse(retBackwall);
+		}
 
 		//==========================================================================================================
 		//          Calculate free space

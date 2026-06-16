@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterModuleGroupOrchestrator, internal_leaveModuleGroupOrchestrator, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { IGlobalVars } from '../global-vars';
 import { GlobalFunc } from '../global-func';
 import { dc_mc_FrontPanel01, adc_mc_FrontPanel01, cbp_mc_FrontPanel01 } from '../modules/mc_FrontPanel01'
@@ -175,7 +175,7 @@ export class ct2_tab_HardwareMillingLibrary {
 
 export var ct_tab_HardwareMillingLibrary: ICT_tab_HardwareMillingLibrary[] = [
   {
-    _id: 10,
+    _id: 40,
     in_ProcessingId: "Processing_LegraboxBtm",
     in_Part: "BoxBtm",
     Side: "Btm",
@@ -205,7 +205,7 @@ export var ct_tab_HardwareMillingLibrary: ICT_tab_HardwareMillingLibrary[] = [
     matrix_T_: "101"
   }
   , {
-    _id: 11,
+    _id: 41,
     in_ProcessingId: "Processing_LegraboxBtm",
     in_Part: "BoxBtm",
     Side: "Btm",
@@ -235,7 +235,7 @@ export var ct_tab_HardwareMillingLibrary: ICT_tab_HardwareMillingLibrary[] = [
     matrix_T_: "101"
   }
   , {
-    _id: 12,
+    _id: 42,
     in_ProcessingId: "ProcessingHanger290.40.980_1",
     in_Part: "Backwall",
     Side: "Top",
@@ -265,7 +265,7 @@ export var ct_tab_HardwareMillingLibrary: ICT_tab_HardwareMillingLibrary[] = [
     matrix_T_: "101"
   }
   , {
-    _id: 13,
+    _id: 43,
     in_ProcessingId: "ProcessingHanger290.02.702_3",
     in_Part: "Backwall",
     Side: "Top",
@@ -295,7 +295,7 @@ export var ct_tab_HardwareMillingLibrary: ICT_tab_HardwareMillingLibrary[] = [
     matrix_T_: "101"
   }
   , {
-    _id: 14,
+    _id: 44,
     in_ProcessingId: "ProcessingHanger290.40.901_2",
     in_Part: "Backwall",
     Side: "Top",
@@ -325,7 +325,7 @@ export var ct_tab_HardwareMillingLibrary: ICT_tab_HardwareMillingLibrary[] = [
     matrix_T_: "101"
   }
   , {
-    _id: 15,
+    _id: 45,
     in_ProcessingId: "ProcessingHanger290.02.710_1",
     in_Part: "Backwall",
     Side: "Top",
@@ -355,7 +355,7 @@ export var ct_tab_HardwareMillingLibrary: ICT_tab_HardwareMillingLibrary[] = [
     matrix_T_: "101"
   }
   , {
-    _id: 16,
+    _id: 46,
     in_ProcessingId: "Fingergrip",
     in_Part: "Sidepanelleft",
     Side: "Top",
@@ -385,7 +385,7 @@ export var ct_tab_HardwareMillingLibrary: ICT_tab_HardwareMillingLibrary[] = [
     matrix_T_: "102"
   }
   , {
-    _id: 17,
+    _id: 47,
     in_ProcessingId: "Fingergrip",
     in_Part: "Sidepanelright",
     Side: "Top",
@@ -415,7 +415,7 @@ export var ct_tab_HardwareMillingLibrary: ICT_tab_HardwareMillingLibrary[] = [
     matrix_T_: "102"
   }
   , {
-    _id: 18,
+    _id: 48,
     in_ProcessingId: "Fingergrip",
     in_Part: "Sidepanelmiddle",
     Side: "Top",
@@ -445,31 +445,31 @@ export var ct_tab_HardwareMillingLibrary: ICT_tab_HardwareMillingLibrary[] = [
     matrix_T_: "102"
   }
   , {
-    _id: 19,
+    _id: 49,
     in_ProcessingId: "Proc_Handle_140",
     in_Part: "Front",
     Side: "Btm",
     XA(varPos: number, partSelf: any, part2: any, posRel: any): number {
-      return 100;
+      return 0;
     }
     ,
     YA(varPos: number, partSelf: any, part2: any, posRel: any): number {
-      return 100;
+      return 0;
     }
     ,
     LA(varLength: number, partSelf: any, part2: any, posRel: any): number {
-      return 95;
+      return 30;
     }
     ,
     BR(varWidth: number, partSelf: any, part2: any, posRel: any): number {
-      return 30;
+      return 95;
     }
     ,
     TI(varDepth: number, partSelf: any, part2: any, posRel: any): number {
       return 0;
     }
     ,
-    matrix_RD: 0,
+    matrix_RD: 15,
     matrix_WI: 0,
     matrix_KO: "",
     matrix_T_: "101"

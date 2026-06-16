@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterModuleGroupOrchestrator, internal_leaveModuleGroupOrchestrator, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
 
 //#region Imports
 import { cbp_mc_FrontPanel01, dc_mc_FrontPanel01, adc_mc_FrontPanel01, ccm_mc_FrontPanel01, pc_mc_FrontPanel01 } from '../internal/modules/mc_FrontPanel01'
@@ -251,7 +251,8 @@ export function mc_FrontPanel01_createBuildPlan(this: cbp_mc_FrontPanel01): void
         //================================================================================================
 
         //Construction with OBJ file
-        if (retFrontConstruction.retSpecificConstruction.GraphicFileId != 'None' && retFrontConstruction.retSpecificConstruction.GraphicFileId != '') {
+        //---------------------------------------------------
+        if (retFrontConstruction.retSpecificConstruction.Type == 'FrontWithMilling') {
 
           // Get the obj file
           let graphicFileLibrary = GlobalFunc.find_GraphicFileLibrary(retFrontConstruction.retSpecificConstruction.GraphicFileId);
@@ -262,7 +263,9 @@ export function mc_FrontPanel01_createBuildPlan(this: cbp_mc_FrontPanel01): void
           // Set materialCategory
           materialCategory = "FrontPanelObj01";
         }
+
         // Fillers that need SvgPath
+          //---------------------------------------------------
         else if (this.mod_ParentName == 'mf_CornerFillerFront' && this.mod_CornerunitStraightFillerConstruction_matrix.PartInCornerCabinet === 'Mitre') {
           let points = (this.mod_FrontType === 'CornerStraightFillerRight' || this.mod_FrontType === 'CornerFillerRight')
             ? `0,0 ${this.mod_Width},0 ${this.mod_Width},${this.mod_Depth} ${this.mod_Depth},${this.mod_Depth}`
@@ -270,17 +273,72 @@ export function mc_FrontPanel01_createBuildPlan(this: cbp_mc_FrontPanel01): void
 
           element.extrude(`<svg><polygon points="${points}" /></svg>`, 'y');
         }
+
         // Construction with InSetHandles
-        else if (retFrontConstruction.retSpecificConstruction.InsetHandleConstruction) {
+        //---------------------------------------------------
+        else if (retFrontConstruction.retSpecificConstruction.Type == 'InsetHandle') {
           //Create SvgPath for the Front
           let points = `M0,0 ${this.mod_Width},0 ${this.mod_Width},${this.mod_Height} 0,${this.mod_Height} 0,0 Z`
-          //Add SvgPath for the Pocket
-          points += ` M100,100 200,100 200,200 100,200 100,100 Z`;
-          // Extrude element
+
+          // Get handle data
+          interface HandleData {
+            Model3D?: any;
+            Model3DGroupName: string;
+            ColorId: string;
+            Length: number;
+            Depth: number;
+            Thickness: number;
+            Weight: number;
+            Rotation: number;
+            PosVertical: number;
+            PosHorizontal: number;
+            ProcessingId: string;
+            HardwareId: string;
+          }
+
+          const handleJson = this.mod_HardwareTypeList?.[0];
+          if (handleJson) {
+            const retHandle: HandleData = JSON.parse(handleJson);
+            if (!retHandle.Model3DGroupName) throw new Error("Model3DGroupName is missing in retHandle");
+
+            // Get the handle ProcessingItem
+            let handleProcessings = GlobalFunc.find_ProcessingMapping(retFrontConstruction.retSpecificConstruction.ProcessingItem);
+
+            // Get the millings
+            handleProcessings.forEach(handleProcessing => {
+              if (handleProcessing.ProcessingLibrary == "Milling") {
+                let handleMillings = GlobalFunc.find_HardwareMilingLibrary(handleProcessing.ProcessingId!, 'Front')
+                handleMillings.forEach(handleMilling => {
+                  //Add SvgPath for the Pocket (Rotation of Handle affects the SvgPath)
+                  if (retHandle.Rotation == 0) {
+                    let posV = retHandle.PosVertical - handleMilling.BR(0, 0, 0, 0) / 2;
+                    let posH = retHandle.PosHorizontal - handleMilling.LA(0, 0, 0, 0) / 2;
+                    points += `M${posV},${posH} l0,${handleMilling.LA(0, 0, 0, 0)} l${handleMilling.BR(0, 0, 0, 0)},0 l0,-${handleMilling.LA(0, 0, 0, 0)} Z`;
+                  }
+                  else if (retHandle.Rotation == 90) {
+                    let posV = retHandle.PosVertical - handleMilling.LA(0, 0, 0, 0) / 2;
+                    let posH = retHandle.PosHorizontal - handleMilling.BR(0, 0, 0, 0) / 2;
+                    points += `M${posV},${posH} l0,${handleMilling.BR(0, 0, 0, 0)} l${handleMilling.LA(0, 0, 0, 0)},0 l0,-${handleMilling.BR(0, 0, 0, 0)} Z`;
+                  }
+                  else if (retHandle.Rotation == 180) {
+                    let posV = retHandle.PosVertical - handleMilling.BR(0, 0, 0, 0) / 2;
+                    let posH = retHandle.PosHorizontal - handleMilling.LA(0, 0, 0, 0) / 2;
+                    points += `M${posV},${posH} l0,${handleMilling.LA(0, 0, 0, 0)} l${handleMilling.BR(0, 0, 0, 0)},0 l0,-${handleMilling.LA(0, 0, 0, 0)} Z`;
+                  }
+                  else if (retHandle.Rotation == 270) {
+                    let posV = retHandle.PosVertical - handleMilling.LA(0, 0, 0, 0) / 2;
+                    let posH = retHandle.PosHorizontal - handleMilling.BR(0, 0, 0, 0) / 2;
+                    points += `M${posV},${posH} l0,${handleMilling.BR(0, 0, 0, 0)} l${handleMilling.LA(0, 0, 0, 0)},0 l0,-${handleMilling.BR(0, 0, 0, 0)} Z`;
+                  }
+                })
+              }
+            })
+          }
+          // Extrude element (Door + pocket)
           element.extrude('<svg><path d="' + points + '"></path></svg>', 'z');
         }
 
-        // Add the material
+        // Add the material to Door
         GlobalFunc.process_AddMaterialFront(element, this, materialCategory, retFrontConstruction.retSpecificConstruction.GrainDirection, FrontEdgeColor);
 
         // Front opening
@@ -289,11 +347,11 @@ export function mc_FrontPanel01_createBuildPlan(this: cbp_mc_FrontPanel01): void
         }
 
         //================================================================================================
-        // Add VirtualPartOnBack
+        // Add VirtualPartOnBack (in case there's a pocket for handle as an example)
         //================================================================================================
         if (retFrontConstruction.retSpecificConstruction.AddVirtualPartOnBack) {
           // Add the VirtualPartOnBack
-          let VirtualPartOnBack = this.addpart_VirtualFront(0, 0, 500, this.mod_Width, this.mod_Height, 0.5);
+          let VirtualPartOnBack = this.addpart_VirtualFront(0, 0, 0, this.mod_Width, this.mod_Height, 0.5);
 
           // Add the material
           GlobalFunc.process_AddMaterialFront(VirtualPartOnBack, this, materialCategory, retFrontConstruction.retSpecificConstruction.GrainDirection, FrontEdgeColor);

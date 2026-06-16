@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterModuleGroupOrchestrator, internal_leaveModuleGroupOrchestrator, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
 
 //#region Imports
 import { cbp_mc_PantryPullout01, dc_mc_PantryPullout01, adc_mc_PantryPullout01, ccm_mc_PantryPullout01, pc_mc_PantryPullout01 } from '../internal/modules/mc_PantryPullout01'
@@ -297,7 +297,9 @@ export function mc_PantryPullout01_afterDataCompletion(this: adc_mc_PantryPullou
         frontWeight += setModule(PullOut, retDrawerInfo, OversizeInfo, front.height, front.start);
 
         // Handle insertion
-        handleWeight += handleInsertionHelper(this, retDrawerInfo, front.height, front.start, i, finalFrontList.length);
+        let handleDataResult = handleInsertionHelper(this, retDrawerInfo, front.height, front.start, i, finalFrontList.length);
+        handleWeight += handleDataResult.weight;
+        PullOut.mod_HardwareTypeList.push(handleDataResult.hardwareTypeList[0]);
       }
     }
 
@@ -311,7 +313,9 @@ export function mc_PantryPullout01_afterDataCompletion(this: adc_mc_PantryPullou
       frontWeight = setModule(PullOut, retDrawerInfo, OversizeInfo, retDrawerInfo.height, retDrawerInfo.posY);
 
       // Handle insertion
-      handleWeight += handleInsertionHelper(this, retDrawerInfo, retDrawerInfo.height, retDrawerInfo.posY, 1, 1);
+      let handleDataResult = handleInsertionHelper(this, retDrawerInfo, retDrawerInfo.height, retDrawerInfo.posY, 1, 1);
+      handleWeight += handleDataResult.weight;
+      PullOut.mod_HardwareTypeList.push(handleDataResult.hardwareTypeList[0]);
     }
 
     //-------------------Helper function AddModule-------
@@ -381,10 +385,13 @@ export function mc_PantryPullout01_afterDataCompletion(this: adc_mc_PantryPullou
     //          Add module for the handle
     //===================================================
 
-    function handleInsertionHelper(m: any, retDrawerInfo: any, heightFront: number, startPos: number, index: number, quantity: number): number {
+    function handleInsertionHelper(m: any, retDrawerInfo: any, heightFront: number, startPos: number, index: number, quantity: number): { weight: number, hardwareTypeList: string[] } {
+      // Interface
+      let weight: number = 0;
+      let hardwareTypeList: string[] = [];
 
       // Check if there should be a handle inserted:
-      if (m.mod_HandleDesign_matrix?.HandleType !== "Handle") return 0;
+      if (m.mod_HandleDesign_matrix?.HandleType !== "Handle" && m.mod_HandleDesign_matrix?.HandleType !== "InsetHandle") return { weight, hardwareTypeList };
 
       // Check if there should be a handle for the specific front
       const mode = m.mod_HandleActivated ?? "All";
@@ -408,7 +415,7 @@ export function mc_PantryPullout01_afterDataCompletion(this: adc_mc_PantryPullou
       }
 
       // Break if the handle should not be inserted
-      if (!insert) return 0;
+      if (!insert) return { weight, hardwareTypeList };
 
       // Add the module
       let Handle = m.addOD_M_mc_Handle01();
@@ -441,7 +448,9 @@ export function mc_PantryPullout01_afterDataCompletion(this: adc_mc_PantryPullou
 
       // Seal the handle to get the frontWeight
       let sealedHandle = Handle.seal();
-      return sealedHandle.mod_HandleWeightCalculations[0] ?? 0;
+      weight = sealedHandle.mod_HandleWeightCalculations[0] ?? 0;
+      hardwareTypeList.push(sealedHandle.mod_HardwareTypeList[0]);
+      return { weight, hardwareTypeList }
     };
 
     //===================================================

@@ -16,22 +16,23 @@
       <label class="field">
         Test order:
         <select id="testOrderCb"></select>
-        </label>
+      </label>
       <button id="calculate-btn" class="calculate-btn">CALCULATE</button>
       <label id="calculate-status" class="lable-hidden">Calculate in progress...</label>
-      
+
       <div class="input-scroll">
         <div id="inputEditor" class="json-editor"></div>
       </div>
     </aside>
-    
+
     <!-- MIDDLE COLUMN -->
     <section class="col-mid">
       <div class="tab-strip" role="tablist">
         <button class="tab-btn" role="tab" data-tab="output" aria-selected="true">Output</button>
         <button class="tab-btn" role="tab" data-tab="checks" aria-selected="false">Checks</button>
+        <button class="tab-btn" role="tab" data-tab="groupOrchestrator" aria-selected="false">GroupOrchestrator</button>
       </div>
-    
+
       <div class="tab-pane" data-pane="output">
         <fieldset class="settings-group">
           <legend>Settings</legend>
@@ -48,23 +49,21 @@
           <div id="displaySettingsList" class="dropdown-check-list" tabindex="100">
             <span class="anchor">Display settings</span>
             <ul class="items">
-              <li><label for="display_articles"><input type="checkbox" id="display_articles" checked="true" />Articles</label>
-              </li>
+              <li><label for="display_articles"><input type="checkbox" id="display_articles" checked="true" />Articles</label></li>
               <li><label for="display_touches"><input type="checkbox" id="display_touches" />Touches</label></li>
-              <li><label for="display_bom_after_touches"><input type="checkbox"
-                    id="display_bom_after_touches" />BOMAfterTouches</label></li>
+              <li><label for="display_bom_after_touches"><input type="checkbox" id="display_bom_after_touches" />BOMAfterTouches</label></li>
               <li><label for="display_logs"><input type="checkbox" id="display_logs" />Logs</label></li>
               <li><label for="display_attr_changes"><input type="checkbox" id="display_attr_changes" />AttrChanges</label></li>
               <li><label for="display_touches_logs"><input type="checkbox" id="display_touches_logs" />TouchesLogs</label></li>
             </ul>
           </div>
-          </fieldset>
-          <fieldset class="settings-group">
-            <legend>Outputs</legend>
-            <label class="field field-row">
-              <span>Select view:</span>
-              <select id="showBomCb"></select>
-            </label>
+        </fieldset>
+        <fieldset class="settings-group">
+          <legend>Outputs</legend>
+          <label class="field field-row">
+            <span>Select view:</span>
+            <select id="showBomCb"></select>
+          </label>
           <label class="field field-row">
             <span>Output:</span>
             <select id="bomOutputCb"></select>
@@ -83,12 +82,12 @@
         <div class="bom-table-wrap">
           <table id="bomTable" class="bom"></table>
         </div>
-        </div>
-        
-        <div class="tab-pane" data-pane="checks" hidden>
-          <h3>Checks calculator</h3>
-          <label class="field">Module: <select id="conflictingChecksModuleList"></select></label>
-          <label class="field">Attribute Id: <select id="conflictingChecksAttributeList"></select></label>
+      </div>
+
+      <div class="tab-pane" data-pane="checks" hidden>
+        <h3>Checks calculator</h3>
+        <label class="field">Module: <select id="conflictingChecksModuleList"></select></label>
+        <label class="field">Attribute Id: <select id="conflictingChecksAttributeList"></select></label>
 
         <h4>Dropdown entries calculator</h4>
         <button id="calculateDropdownEntries">Calculate</button>
@@ -98,11 +97,28 @@
         <label class="field">
           Attribute value:
           <select id="conflictingChecksAttributeSelectionsList"></select>
-          <input id="conflictingChecksAttributeValueInput" type="number" step="any" style="display:none"
-            placeholder="Enter numeric value" />
+          <input id="conflictingChecksAttributeValueInput" type="number" step="any" style="display:none" placeholder="Enter numeric value" />
         </label>
         <button id="calculateConflictingChecksButton">Solve</button>
         <p id="conflictingChecksResult"></p>
+      </div>
+
+      <div class="tab-pane" data-pane="groupOrchestrator" hidden>
+        <fieldset class="params-group">
+          <legend>Parameters</legend>
+          <div class="params-editor-wrap">
+            <div id="paramsEditor" class="json-editor"></div>
+          </div>
+        </fieldset>
+
+        <button id="adjustGroupBtn" class="adjust-group-btn">Adjust group</button>
+
+        <fieldset class="output-group">
+          <legend>Output</legend>
+          <div class="group-output-editor-wrap">
+            <div id="groupOutputEditor" class="json-editor"></div>
+          </div>
+        </fieldset>
       </div>
     </section>
 
@@ -111,7 +127,7 @@
       <textarea id="errorInfo" readonly></textarea>
       <div id="root3d"></div>
     </aside>
-    </div>
+  </div>
 
   <script type="module" src="./src/main.ts"></script>
 </body>

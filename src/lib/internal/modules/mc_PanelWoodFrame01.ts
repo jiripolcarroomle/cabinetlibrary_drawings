@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterModuleGroupOrchestrator, internal_leaveModuleGroupOrchestrator, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary, ct2_tab_ApplianceGraphicLibrary } from '../custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction, ct2_tab_BaseunitFridgeConstruction } from '../custom-tables/tab_BaseunitFridgeConstruction'
 import { ct_tab_BaseunitFridgeMapping, ICT_tab_BaseunitFridgeMapping, ct2_tab_BaseunitFridgeMapping } from '../custom-tables/tab_BaseunitFridgeMapping'
@@ -145,7 +145,7 @@ import { IP_part_FixedfrontPanelWoodFrame_PartVarsWritable, P_part_FixedfrontPan
 import { IP_part_DishwasherPanelWoodFrame_PartVarsWritable, P_part_DishwasherPanelWoodFrame } from '../parts/part_DishwasherPanelWoodFrame'
 import { IP_part_BaseunitFridgePanelWoodFrame_PartVarsWritable, P_part_BaseunitFridgePanelWoodFrame } from '../parts/part_BaseunitFridgePanelWoodFrame'
 import { IModuleNonNull_mc_PanelWoodFrame01, IModParents_mc_PanelWoodFrame01, IPartParentsNonNull_mc_PanelWoodFrame01 } from '../mod-interfaces'
-import { IModVar_mod_Depth, IModVarNonNull_mod_Depth, IModVar_mod_FrontDesign, IModVarNonNull_mod_FrontDesign, IModVar_mod_FrontColor, IModVarNonNull_mod_FrontColor, IModVar_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVarNonNull_mod_FrontEdgeThk, IModVar_mod_FrontId, IModVarNonNull_mod_FrontId, IModVar_mod_FrontpanelWeightCalculations, IModVarNonNull_mod_FrontpanelWeightCalculations, IModVar_mod_FrontProgram, IModVarNonNull_mod_FrontProgram, IModVar_mod_FrontType, IModVarNonNull_mod_FrontType, IModVar_mod_HandleDesign, IModVarNonNull_mod_HandleDesign, IModVar_mod_HandlePosType, IModVarNonNull_mod_HandlePosType, IModVar_mod_Height, IModVarNonNull_mod_Height, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_PartInfo, IModVarNonNull_mod_PartInfo, IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_TypeElement, IModVarNonNull_mod_TypeElement, IModVar_mod_DoorDirection, IModVarNonNull_mod_DoorDirection, IModVar_mod_FlipliftType, IModVarNonNull_mod_FlipliftType, IModVar_mod_Information, IModVarNonNull_mod_Information, IModVar_mod_FrameFillingColor, IModVarNonNull_mod_FrameFillingColor } from '../var-interfaces'
+import { IModVar_mod_Depth, IModVarNonNull_mod_Depth, IModVar_mod_FrontDesign, IModVarNonNull_mod_FrontDesign, IModVar_mod_FrontColor, IModVarNonNull_mod_FrontColor, IModVar_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVarNonNull_mod_FrontEdgeThk, IModVar_mod_FrontId, IModVarNonNull_mod_FrontId, IModVar_mod_FrontpanelWeightCalculations, IModVarNonNull_mod_FrontpanelWeightCalculations, IModVar_mod_FrontProgram, IModVarNonNull_mod_FrontProgram, IModVar_mod_FrontType, IModVarNonNull_mod_FrontType, IModVar_mod_HandleDesign, IModVarNonNull_mod_HandleDesign, IModVar_mod_HandlePosType, IModVarNonNull_mod_HandlePosType, IModVar_mod_Height, IModVarNonNull_mod_Height, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_PartInfo, IModVarNonNull_mod_PartInfo, IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_TypeElement, IModVarNonNull_mod_TypeElement, IModVar_mod_DoorDirection, IModVarNonNull_mod_DoorDirection, IModVar_mod_FlipliftType, IModVarNonNull_mod_FlipliftType, IModVar_mod_Information, IModVarNonNull_mod_Information, IModVar_mod_FrameFillingColor, IModVarNonNull_mod_FrameFillingColor, IModVar_mod_HardwareTypeList, IModVarNonNull_mod_HardwareTypeList } from '../var-interfaces'
 import { VariantValidation, IMatrix_mod_Depth, IMatrix_mod_FrontDesign, IMatrix_mod_FrontColor, IMatrix_mod_FrontEdgeColor, IMatrix_mod_FrontEdgeThk, IMatrix_mod_FrontId, IMatrix_mod_FrontProgram, IMatrix_mod_FrontType, IMatrix_mod_HandleDesign, IMatrix_mod_HandlePosType, IMatrix_mod_Height, IMatrix_mod_ModuleName, IMatrix_mod_PartInfo, IMatrix_mod_Width, IMatrix_mod_TypeElement, IMatrix_mod_DoorDirection, IMatrix_mod_FlipliftType, IMatrix_mod_Information, IMatrix_mod_FrameFillingColor } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
@@ -153,7 +153,7 @@ import { IPartAdd_part_PanelWoodFrameTop, IPartAdd_part_PanelWoodFrameLeft, IPar
 import { mc_PanelWoodFrame01_createBuildPlan, mc_PanelWoodFrame01_afterDataCompletion, mc_PanelWoodFrame01_manufacturerDataCompletion, mc_PanelWoodFrame01_calculateContainerModules, mc_PanelWoodFrame01_prepareContext } from '../../modules/mc_PanelWoodFrame01';
 
 export interface cbp_mc_PanelWoodFrame01 extends IModBaseProp
-  , IPartAdd_part_PanelWoodFrameTop, IPartAdd_part_PanelWoodFrameLeft, IPartAdd_part_PanelWoodFrameBtm, IPartAdd_part_PanelWoodFrameRight, IPartAdd_part_PanelWoodFrameFilling, IPartAdd_part_DrawerPanelWoodFrame, IPartAdd_part_DoorPanelWoodFrame, IPartAdd_part_FlipliftPanelWoodFrame, IPartAdd_part_FixedfrontPanelWoodFrame, IPartAdd_part_DishwasherPanelWoodFrame, IPartAdd_part_BaseunitFridgePanelWoodFrame, IModVarNonNull_mod_Depth, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontpanelWeightCalculations, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_FrontType, IModVarNonNull_mod_HandleDesign, IModVarNonNull_mod_HandlePosType, IModVarNonNull_mod_Height, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PartInfo, IModVarNonNull_mod_Width, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_DoorDirection, IModVarNonNull_mod_FlipliftType, IModVarNonNull_mod_Information, IModVarNonNull_mod_FrameFillingColor {
+  , IPartAdd_part_PanelWoodFrameTop, IPartAdd_part_PanelWoodFrameLeft, IPartAdd_part_PanelWoodFrameBtm, IPartAdd_part_PanelWoodFrameRight, IPartAdd_part_PanelWoodFrameFilling, IPartAdd_part_DrawerPanelWoodFrame, IPartAdd_part_DoorPanelWoodFrame, IPartAdd_part_FlipliftPanelWoodFrame, IPartAdd_part_FixedfrontPanelWoodFrame, IPartAdd_part_DishwasherPanelWoodFrame, IPartAdd_part_BaseunitFridgePanelWoodFrame, IModVarNonNull_mod_Depth, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontpanelWeightCalculations, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_FrontType, IModVarNonNull_mod_HandleDesign, IModVarNonNull_mod_HandlePosType, IModVarNonNull_mod_Height, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PartInfo, IModVarNonNull_mod_Width, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_DoorDirection, IModVarNonNull_mod_FlipliftType, IModVarNonNull_mod_Information, IModVarNonNull_mod_FrameFillingColor, IModVarNonNull_mod_HardwareTypeList {
   parent: IModParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
@@ -165,7 +165,7 @@ export interface cbp_mc_PanelWoodFrame01 extends IModBaseProp
 }
 
 export interface dc_mc_PanelWoodFrame01 extends IModBaseProp
-  , IModVar_mod_Depth, IModVar_mod_FrontDesign, IModVar_mod_FrontColor, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontId, IModVar_mod_FrontpanelWeightCalculations, IModVar_mod_FrontProgram, IModVar_mod_FrontType, IModVar_mod_HandleDesign, IModVar_mod_HandlePosType, IModVar_mod_Height, IModVar_mod_ModuleName, IModVar_mod_PartInfo, IModVar_mod_Width, IModVar_mod_TypeElement, IModVar_mod_DoorDirection, IModVar_mod_FlipliftType, IModVar_mod_Information, IModVar_mod_FrameFillingColor {
+  , IModVar_mod_Depth, IModVar_mod_FrontDesign, IModVar_mod_FrontColor, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontId, IModVar_mod_FrontpanelWeightCalculations, IModVar_mod_FrontProgram, IModVar_mod_FrontType, IModVar_mod_HandleDesign, IModVar_mod_HandlePosType, IModVar_mod_Height, IModVar_mod_ModuleName, IModVar_mod_PartInfo, IModVar_mod_Width, IModVar_mod_TypeElement, IModVar_mod_DoorDirection, IModVar_mod_FlipliftType, IModVar_mod_Information, IModVar_mod_FrameFillingColor, IModVar_mod_HardwareTypeList {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_PanelWoodFrame01;
@@ -180,7 +180,7 @@ export interface pc_mc_PanelWoodFrame01 extends dc_mc_PanelWoodFrame01 {
 }
 
 export interface adc_base_mc_PanelWoodFrame01 extends IModBaseProp
-  , IModVarNonNull_mod_Depth, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontpanelWeightCalculations, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_FrontType, IModVarNonNull_mod_HandleDesign, IModVarNonNull_mod_HandlePosType, IModVarNonNull_mod_Height, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PartInfo, IModVarNonNull_mod_Width, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_DoorDirection, IModVarNonNull_mod_FlipliftType, IModVarNonNull_mod_Information, IModVarNonNull_mod_FrameFillingColor {
+  , IModVarNonNull_mod_Depth, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontpanelWeightCalculations, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_FrontType, IModVarNonNull_mod_HandleDesign, IModVarNonNull_mod_HandlePosType, IModVarNonNull_mod_Height, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PartInfo, IModVarNonNull_mod_Width, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_DoorDirection, IModVarNonNull_mod_FlipliftType, IModVarNonNull_mod_Information, IModVarNonNull_mod_FrameFillingColor, IModVarNonNull_mod_HardwareTypeList {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
 }
@@ -194,7 +194,7 @@ export interface ccm_mc_PanelWoodFrame01 extends adc_base_mc_PanelWoodFrame01 {
 
 export class OD_M_mc_PanelWoodFrame01 extends OD_Base implements pc_mc_PanelWoodFrame01, dc_mc_PanelWoodFrame01
   , IModParents_mc_PanelWoodFrame01
-  , IModVar_mod_Depth, IModVar_mod_FrontDesign, IModVar_mod_FrontColor, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontId, IModVar_mod_FrontpanelWeightCalculations, IModVar_mod_FrontProgram, IModVar_mod_FrontType, IModVar_mod_HandleDesign, IModVar_mod_HandlePosType, IModVar_mod_Height, IModVar_mod_ModuleName, IModVar_mod_PartInfo, IModVar_mod_Width, IModVar_mod_TypeElement, IModVar_mod_DoorDirection, IModVar_mod_FlipliftType, IModVar_mod_Information, IModVar_mod_FrameFillingColor {
+  , IModVar_mod_Depth, IModVar_mod_FrontDesign, IModVar_mod_FrontColor, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontId, IModVar_mod_FrontpanelWeightCalculations, IModVar_mod_FrontProgram, IModVar_mod_FrontType, IModVar_mod_HandleDesign, IModVar_mod_HandlePosType, IModVar_mod_Height, IModVar_mod_ModuleName, IModVar_mod_PartInfo, IModVar_mod_Width, IModVar_mod_TypeElement, IModVar_mod_DoorDirection, IModVar_mod_FlipliftType, IModVar_mod_Information, IModVar_mod_FrameFillingColor, IModVar_mod_HardwareTypeList {
   constructor(parent: IModParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01, manufacturerMode?: boolean) {
     super('mc_PanelWoodFrame01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
@@ -203,7 +203,7 @@ export class OD_M_mc_PanelWoodFrame01 extends OD_Base implements pc_mc_PanelWood
   parent: IModParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01;
   _selfNonNull: OD_M_mc_PanelWoodFrame01_NonNull;
 
-  override variants: string[] = ['mod_Depth', 'mod_FrontDesign', 'mod_FrontColor', 'mod_FrontEdgeColor', 'mod_FrontEdgeThk', 'mod_FrontId', 'mod_FrontpanelWeightCalculations', 'mod_FrontProgram', 'mod_FrontType', 'mod_HandleDesign', 'mod_HandlePosType', 'mod_Height', 'mod_ModuleName', 'mod_PartInfo', 'mod_Width', 'mod_TypeElement', 'mod_DoorDirection', 'mod_FlipliftType', 'mod_Information', 'mod_FrameFillingColor',];
+  override variants: string[] = ['mod_Depth', 'mod_FrontDesign', 'mod_FrontColor', 'mod_FrontEdgeColor', 'mod_FrontEdgeThk', 'mod_FrontId', 'mod_FrontpanelWeightCalculations', 'mod_FrontProgram', 'mod_FrontType', 'mod_HandleDesign', 'mod_HandlePosType', 'mod_Height', 'mod_ModuleName', 'mod_PartInfo', 'mod_Width', 'mod_TypeElement', 'mod_DoorDirection', 'mod_FlipliftType', 'mod_Information', 'mod_FrameFillingColor', 'mod_HardwareTypeList',];
   #mod_Depth?: number;
   get mod_Depth(): number | undefined { return this.#mod_Depth }
   set mod_Depth(value: number | undefined) {
@@ -434,6 +434,8 @@ export class OD_M_mc_PanelWoodFrame01 extends OD_Base implements pc_mc_PanelWood
   }
 
   mod_FrameFillingColor_matrix?: IMatrix_mod_FrameFillingColor;
+  #mod_HardwareTypeList: string[] = [];
+  get mod_HardwareTypeList(): string[] { return this.#mod_HardwareTypeList; }
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
     res.set('mod_Depth', this.mod_Depth);
@@ -456,6 +458,7 @@ export class OD_M_mc_PanelWoodFrame01 extends OD_Base implements pc_mc_PanelWood
     res.set('mod_FlipliftType', this.mod_FlipliftType);
     res.set('mod_Information', this.mod_Information);
     res.set('mod_FrameFillingColor', this.mod_FrameFillingColor);
+    res.set('mod_HardwareTypeList', JSON.stringify(this.mod_HardwareTypeList));
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -1081,6 +1084,9 @@ class OD_M_mc_PanelWoodFrame01_NonNull implements cbp_mc_PanelWoodFrame01, adc_m
   }
   get mod_FrameFillingColor_matrix(): IMatrix_mod_FrameFillingColor {
     return this.#internalParent.mod_FrameFillingColor_matrix!;
+  }
+  get mod_HardwareTypeList(): string[] {
+    return this.#internalParent.mod_HardwareTypeList!;
   }
 }
 

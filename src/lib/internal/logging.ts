@@ -144,6 +144,18 @@ export function internal_leaveModuleCreateBuildPlan() {
   internal_leave();
 }
 
+export function internal_enterModuleGroupOrchestrator(moduleId: string, moduleUniqueId: string) {
+  internal_enter({
+    area: 'ModuleGroupOrchestrator',
+    moduleId: moduleId,
+    moduleUniqueId: moduleUniqueId,
+  });
+}
+
+export function internal_leaveModuleGroupOrchestrator() {
+  internal_leave();
+}
+
 export function internal_enterCollectParts(moduleId: string, moduleUniqueId: string, id: string, partId: string) {
   internal_enter({
     area: 'CollectParts',

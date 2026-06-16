@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterModuleGroupOrchestrator, internal_leaveModuleGroupOrchestrator, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
 
 //#region Imports
 import { cbp_mc_BaseunitFridge01, dc_mc_BaseunitFridge01, adc_mc_BaseunitFridge01, ccm_mc_BaseunitFridge01, pc_mc_BaseunitFridge01 } from '../internal/modules/mc_BaseunitFridge01'
@@ -275,35 +275,35 @@ export function mc_BaseunitFridge01_afterDataCompletion(this: adc_mc_BaseunitFri
 
       // Get the front weight
       frontWeight = retDoorInfo.weight;
+
+
+      //===================================================
+      //          Add module for the handle
+      //===================================================
+
+      if (this.mod_HandleDesign_matrix.HandleType == "Handle" || this.mod_HandleDesign_matrix.HandleType == "InsetHandle") {
+
+        // Add the module
+        let Handle = this.addOD_M_mc_Handle01(3);
+
+        // Set values to the attributes of the child
+        Handle.mod_Width = retDoorInfo.width;
+        Handle.mod_Height = retDoorInfo.height;
+        Handle.mod_Depth = retDoorInfo.thickness;
+
+        // Provide Information about part on which the handle is positioned
+        Handle.mod_FrontType = 'part_BaseunitFridgePanel';
+        Handle.mod_PartInfo = this.mod_DoorDirection;
+
+        // setOrigin
+        Handle.setOrigin(retDoorInfo.posX, retDoorInfo.posY, retDoorInfo.posZ);
+
+        // Seal the handle to get the frontWeight
+        let sealedHandle = Handle.seal();
+        handleWeight = sealedHandle.mod_HandleWeightCalculations[0];
+        Door.mod_HardwareTypeList.push(sealedHandle.mod_HardwareTypeList[0]);
+      }
     }
-
-    //===================================================
-    //          Add module for the handle
-    //===================================================
-
-    if (this.mod_HandleDesign_matrix.HandleType == "Handle" && dwInfo.Integration !== 'NoPanel') {
-
-      // Add the module
-      let Handle = this.addOD_M_mc_Handle01(3);
-
-      // Set values to the attributes of the child
-      Handle.mod_Width = retDoorInfo.width;
-      Handle.mod_Height = retDoorInfo.height;
-      Handle.mod_Depth = retDoorInfo.thickness;
-
-      // Provide Information about part on which the handle is positioned
-      Handle.mod_FrontType = 'part_BaseunitFridgePanel';
-      Handle.mod_PartInfo = this.mod_DoorDirection;
-
-      // setOrigin
-      Handle.setOrigin(retDoorInfo.posX, retDoorInfo.posY, retDoorInfo.posZ);
-
-      // Seal the handle to get the frontWeight
-      let sealedHandle = Handle.seal();
-      handleWeight = sealedHandle.mod_HandleWeightCalculations[0];
-
-    }
-
     //===================================================================================
     // Add the graphic module for appliances
     //===================================================================================

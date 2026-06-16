@@ -16,7 +16,7 @@ body {
 
 .json-editor,
 .json-editor .jsoneditor,
-.json-editor > div,
+.json-editor>div,
 .json-editor jsoneditor-outer {
   height: 100%;
 }
@@ -53,10 +53,10 @@ body {
   font-size: 0.9em;
 }
 
-  .col-left .field select {
-    width: 100%;
-    min-width: 0;
-  }
+.col-left .field select {
+  width: 100%;
+  min-width: 0;
+}
 
 .calculate-btn {
   height: 50px;
@@ -79,10 +79,10 @@ body {
   flex: 0 0 auto;
 }
 
-  .settings-group legend {
-    padding: 0 4px;
-    font-weight: bold;
-  }
+.settings-group legend {
+  padding: 0 4px;
+  font-weight: bold;
+}
 
 .input-scroll {
   flex: 1;
@@ -108,12 +108,12 @@ body {
   font-size: 0.95em;
 }
 
-  .tab-btn[aria-selected="true"] {
-    background: #fff;
-    font-weight: bold;
-    border-bottom: 2px solid #06c;
-    margin-bottom: -1px;
-  }
+.tab-btn[aria-selected="true"] {
+  background: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #06c;
+  margin-bottom: -1px;
+}
 
 .tab-pane {
   flex: 1;
@@ -125,9 +125,9 @@ body {
   padding-top: 8px;
 }
 
-  .tab-pane[hidden] {
-    display: none;
-  }
+.tab-pane[hidden] {
+  display: none;
+}
 
 .field.field-row {
   display: flex;
@@ -136,12 +136,39 @@ body {
   gap: 6px;
 }
 
-.output-editor-wrap {
+/* ---------- Middle column: parameters + output ---------- */
+.params-group,
+.output-group {
   flex: 1 1 50%;
-  min-height: 150px;
+  min-height: 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    margin: 0;
+  }
+  
+  .params-group legend,
+  .output-group legend {
+    padding: 0 4px;
+    font-weight: bold;
+  }
+  
+  .params-editor-wrap,
+  .output-editor-wrap,
+  .group-output-editor-wrap {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
   border: 1px solid #ccc;
 }
 
+.adjust-group-btn {
+  flex: 0 0 auto;
+  padding: 8px 20px;
+  font-size: 0.95em;
+  cursor: pointer;
+}
 .bom-table-wrap {
   flex: 1 1 50%;
   min-height: 100px;
@@ -152,7 +179,8 @@ body {
 /* ---------- Right column ---------- */
 .col-right {
   display: grid;
-  grid-template-rows: 20% 1fr; /* 1fr fills the rest after the gap to avoid overflow */
+  grid-template-rows: 20% 1fr;
+    /* 1fr fills the rest after the gap to avoid overflow */
   gap: 8px;
 }
 
@@ -168,10 +196,10 @@ body {
   border: 1px solid #c00;
 }
 
-  #errorInfo:not(.has-error) {
-    background-color: #f4f4f4;
-    border-color: #ddd;
-  }
+#errorInfo:not(.has-error) {
+  background-color: #f4f4f4;
+  border-color: #ddd;
+}
 
 #root3d {
   width: 100%;
@@ -212,60 +240,60 @@ td.bom-level {
   position: relative;
 }
 
-  .dropdown-check-list .anchor {
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
-    padding: 5px 30px 5px 10px;
-    border: 1px solid #ccc;
-    background: #f4f4f4;
-  }
+.dropdown-check-list .anchor {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 30px 5px 10px;
+  border: 1px solid #ccc;
+  background: #f4f4f4;
+}
 
-    .dropdown-check-list .anchor:after {
-      position: absolute;
-      content: '';
-      border-left: 2px solid black;
-      border-top: 2px solid black;
-      padding: 4px;
-      right: 10px;
-      top: 30%;
-      transform: rotate(-135deg);
-    }
+.dropdown-check-list .anchor:after {
+  position: absolute;
+  content: '';
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  padding: 4px;
+  right: 10px;
+  top: 30%;
+  transform: rotate(-135deg);
+}
 
-  .dropdown-check-list ul.items {
-    padding: 4px;
-    display: none;
-    margin: 0;
-    border: 1px solid #ccc;
-    border-top: none;
-    background: #fff;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 10;
-    min-width: 180px;
-  }
+.dropdown-check-list ul.items {
+  padding: 4px;
+  display: none;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 180px;
+}
 
-    .dropdown-check-list ul.items li {
-      list-style: none;
-    }
+.dropdown-check-list ul.items li {
+  list-style: none;
+}
 
-      .dropdown-check-list ul.items li label {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 3px 6px;
-        cursor: pointer;
-        user-select: none;
-      }
+.dropdown-check-list ul.items li label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 6px;
+  cursor: pointer;
+  user-select: none;
+}
 
-        .dropdown-check-list ul.items li label:hover {
-          background: #eef;
-        }
+.dropdown-check-list ul.items li label:hover {
+  background: #eef;
+}
 
-  .dropdown-check-list.visible .items {
-    display: block;
-  }
+.dropdown-check-list.visible .items {
+  display: block;
+}
 
 /* ---------- Status label ---------- */
 .lable-hidden {

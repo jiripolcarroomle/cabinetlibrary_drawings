@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterModuleGroupOrchestrator, internal_leaveModuleGroupOrchestrator, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { IGlobalVars } from '../global-vars';
 import { GlobalFunc } from '../global-func';
 import { dc_mc_FrontPanel01, adc_mc_FrontPanel01, cbp_mc_FrontPanel01 } from '../modules/mc_FrontPanel01'
@@ -203,7 +203,7 @@ export class ct2_tab_FrontConstruction {
 
 export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
   {
-    _id: 39,
+    _id: 164,
     in_PartGroup: "Door",
     in_FrontProgram: "Classic",
     in_FrontColor: "All",
@@ -244,7 +244,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 40,
+    _id: 165,
     in_PartGroup: "Drawer",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -285,7 +285,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 41,
+    _id: 166,
     in_PartGroup: "Door",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -326,7 +326,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 42,
+    _id: 167,
     in_PartGroup: "Drawer",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -367,7 +367,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 43,
+    _id: 168,
     in_PartGroup: "Door",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -408,7 +408,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 44,
+    _id: 169,
     in_PartGroup: "Drawer",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -449,7 +449,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 45,
+    _id: 170,
     in_PartGroup: "Door",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -490,7 +490,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 46,
+    _id: 171,
     in_PartGroup: "Drawer",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -531,7 +531,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 47,
+    _id: 172,
     in_PartGroup: "Door",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -572,7 +572,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 48,
+    _id: 173,
     in_PartGroup: "Drawer",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -613,7 +613,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 49,
+    _id: 174,
     in_PartGroup: "Filler",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -654,7 +654,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 50,
+    _id: 175,
     in_PartGroup: "Fliplift",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -695,7 +695,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 51,
+    _id: 176,
     in_PartGroup: "Door",
     in_FrontProgram: "Nature",
     in_FrontColor: "All",
@@ -736,7 +736,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 52,
+    _id: 177,
     in_PartGroup: "Drawer",
     in_FrontProgram: "Tradition",
     in_FrontColor: "All",
@@ -777,7 +777,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 53,
+    _id: 178,
     in_PartGroup: "Door",
     in_FrontProgram: "Tradition",
     in_FrontColor: "All",
@@ -818,7 +818,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 54,
+    _id: 179,
     in_PartGroup: "Drawer",
     in_FrontProgram: "Modern",
     in_FrontColor: "All",
@@ -859,7 +859,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 55,
+    _id: 180,
     in_PartGroup: "Door",
     in_FrontProgram: "Modern",
     in_FrontColor: "All",
@@ -900,7 +900,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 56,
+    _id: 181,
     in_PartGroup: "Drawer",
     in_FrontProgram: "Tradition",
     in_FrontColor: "All",
@@ -941,7 +941,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 57,
+    _id: 182,
     in_PartGroup: "Drawer",
     in_FrontProgram: "Modern",
     in_FrontColor: "All",
@@ -982,7 +982,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 58,
+    _id: 183,
     in_PartGroup: "Fliplift",
     in_FrontProgram: "Tradition",
     in_FrontColor: "All",
@@ -1023,7 +1023,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 59,
+    _id: 184,
     in_PartGroup: "Fliplift",
     in_FrontProgram: "Tradition",
     in_FrontColor: "All",
@@ -1064,7 +1064,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 60,
+    _id: 185,
     in_PartGroup: "Fliplift",
     in_FrontProgram: "Modern",
     in_FrontColor: "All",
@@ -1105,7 +1105,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 61,
+    _id: 186,
     in_PartGroup: "Fliplift",
     in_FrontProgram: "Modern",
     in_FrontColor: "All",
@@ -1146,7 +1146,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 62,
+    _id: 187,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -1187,7 +1187,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 63,
+    _id: 188,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -1228,7 +1228,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 64,
+    _id: 189,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -1269,7 +1269,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 65,
+    _id: 190,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -1310,7 +1310,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 66,
+    _id: 191,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -1351,7 +1351,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 67,
+    _id: 192,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "Modern",
     in_FrontColor: "All",
@@ -1392,7 +1392,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 68,
+    _id: 193,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "Modern",
     in_FrontColor: "All",
@@ -1433,7 +1433,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 69,
+    _id: 194,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "Tradition",
     in_FrontColor: "All",
@@ -1474,7 +1474,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 70,
+    _id: 195,
     in_PartGroup: "Dishwasher",
     in_FrontProgram: "Tradition",
     in_FrontColor: "All",
@@ -1515,7 +1515,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 71,
+    _id: 196,
     in_PartGroup: "CornerFiller",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -1556,7 +1556,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 72,
+    _id: 197,
     in_PartGroup: "CornerStraightFiller",
     in_FrontProgram: "All",
     in_FrontColor: "All",
@@ -1597,7 +1597,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 73,
+    _id: 198,
     in_PartGroup: "Door",
     in_FrontProgram: "Tuscan",
     in_FrontColor: "All",
@@ -1638,7 +1638,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 74,
+    _id: 199,
     in_PartGroup: "Fliplift",
     in_FrontProgram: "Tuscan",
     in_FrontColor: "All",
@@ -1679,7 +1679,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 75,
+    _id: 200,
     in_PartGroup: "Door",
     in_FrontProgram: "Classic",
     in_FrontColor: "All",
@@ -1720,7 +1720,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 76,
+    _id: 201,
     in_PartGroup: "Door",
     in_FrontProgram: "Nature",
     in_FrontColor: "All",
@@ -1761,7 +1761,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 77,
+    _id: 202,
     in_PartGroup: "Door",
     in_FrontProgram: "Classic",
     in_FrontColor: "All",
@@ -1802,7 +1802,7 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     EdgeJointType: "VVVV"
   }
   , {
-    _id: 78,
+    _id: 203,
     in_PartGroup: "Door",
     in_FrontProgram: "Nature",
     in_FrontColor: "All",
@@ -1811,6 +1811,252 @@ export var ct_tab_FrontConstruction: ICT_tab_FrontConstruction[] = [
     in_MaxWidth: 9999,
     in_MinHeight: 0,
     in_MaxHeight: 9999,
+    in_HandleDesignGroup: "InsetHandle",
+    in_HandlePosType: "All",
+    FrontModuleId: "FrontPanel01",
+    FrontConstructionId: "InsetHandle01",
+    Width(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontWidth - m.mod_FrontGapVert;
+    }
+    ,
+    Height(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontHeight;
+    }
+    ,
+    Thickness: 19,
+    WidthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontGapVert / 2;
+    }
+    ,
+    HeightPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    DepthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    EdgeTypeTop: "FRE",
+    EdgeTypeLeft: "FRE",
+    EdgeTypeBtm: "FRE",
+    EdgeTypeRight: "FRE",
+    EdgeJointType: "VVVV"
+  }
+  , {
+    _id: 204,
+    in_PartGroup: "Drawer",
+    in_FrontProgram: "Modern",
+    in_FrontColor: "All",
+    in_FrontDesign: "All",
+    in_MinWidth: 0,
+    in_MaxWidth: 9999,
+    in_MinHeight: 0,
+    in_MaxHeight: 220,
+    in_HandleDesignGroup: "InsetHandle",
+    in_HandlePosType: "All",
+    FrontModuleId: "FrontPanel01",
+    FrontConstructionId: "InsetHandle01",
+    Width(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontWidth - m.mod_FrontGapVert;
+    }
+    ,
+    Height(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontHeight;
+    }
+    ,
+    Thickness: 19,
+    WidthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontGapVert / 2;
+    }
+    ,
+    HeightPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    DepthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    EdgeTypeTop: "FRE",
+    EdgeTypeLeft: "FRE",
+    EdgeTypeBtm: "FRE",
+    EdgeTypeRight: "FRE",
+    EdgeJointType: "VVVV"
+  }
+  , {
+    _id: 205,
+    in_PartGroup: "Drawer",
+    in_FrontProgram: "Tradition",
+    in_FrontColor: "All",
+    in_FrontDesign: "All",
+    in_MinWidth: 0,
+    in_MaxWidth: 9999,
+    in_MinHeight: 0,
+    in_MaxHeight: 220,
+    in_HandleDesignGroup: "InsetHandle",
+    in_HandlePosType: "All",
+    FrontModuleId: "FrontPanel01",
+    FrontConstructionId: "InsetHandle01",
+    Width(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontWidth - m.mod_FrontGapVert;
+    }
+    ,
+    Height(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontHeight;
+    }
+    ,
+    Thickness: 19,
+    WidthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontGapVert / 2;
+    }
+    ,
+    HeightPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    DepthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    EdgeTypeTop: "FRE",
+    EdgeTypeLeft: "FRE",
+    EdgeTypeBtm: "FRE",
+    EdgeTypeRight: "FRE",
+    EdgeJointType: "VVVV"
+  }
+  , {
+    _id: 206,
+    in_PartGroup: "Drawer",
+    in_FrontProgram: "All",
+    in_FrontColor: "All",
+    in_FrontDesign: "All",
+    in_MinWidth: 0,
+    in_MaxWidth: 9999,
+    in_MinHeight: 0,
+    in_MaxHeight: 9999,
+    in_HandleDesignGroup: "InsetHandle",
+    in_HandlePosType: "All",
+    FrontModuleId: "FrontPanel01",
+    FrontConstructionId: "InsetHandle01",
+    Width(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontWidth - m.mod_FrontGapVert;
+    }
+    ,
+    Height(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontHeight;
+    }
+    ,
+    Thickness: 19,
+    WidthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontGapVert / 2;
+    }
+    ,
+    HeightPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    DepthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    EdgeTypeTop: "FRE",
+    EdgeTypeLeft: "FRE",
+    EdgeTypeBtm: "FRE",
+    EdgeTypeRight: "FRE",
+    EdgeJointType: "VVVV"
+  }
+  , {
+    _id: 207,
+    in_PartGroup: "Fliplift",
+    in_FrontProgram: "All",
+    in_FrontColor: "All",
+    in_FrontDesign: "All",
+    in_MinWidth: 0,
+    in_MaxWidth: 9999,
+    in_MinHeight: 0,
+    in_MaxHeight: 9999,
+    in_HandleDesignGroup: "InsetHandle",
+    in_HandlePosType: "All",
+    FrontModuleId: "FrontPanel01",
+    FrontConstructionId: "InsetHandle01",
+    Width(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontWidth - m.mod_FrontGapVert;
+    }
+    ,
+    Height(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontHeight;
+    }
+    ,
+    Thickness: 19,
+    WidthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontGapVert / 2;
+    }
+    ,
+    HeightPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    DepthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    EdgeTypeTop: "FRE",
+    EdgeTypeLeft: "FRE",
+    EdgeTypeBtm: "FRE",
+    EdgeTypeRight: "FRE",
+    EdgeJointType: "VVVV"
+  }
+  , {
+    _id: 208,
+    in_PartGroup: "Fliplift",
+    in_FrontProgram: "Tradition",
+    in_FrontColor: "All",
+    in_FrontDesign: "All",
+    in_MinWidth: 0,
+    in_MaxWidth: 9999,
+    in_MinHeight: 0,
+    in_MaxHeight: 299,
+    in_HandleDesignGroup: "InsetHandle",
+    in_HandlePosType: "All",
+    FrontModuleId: "FrontPanel01",
+    FrontConstructionId: "InsetHandle01",
+    Width(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontWidth - m.mod_FrontGapVert;
+    }
+    ,
+    Height(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontHeight;
+    }
+    ,
+    Thickness: 19,
+    WidthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return m.mod_FrontGapVert / 2;
+    }
+    ,
+    HeightPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    DepthPos(m: ITableParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_Pullout01): number {
+      return 0;
+    }
+    ,
+    EdgeTypeTop: "FRE",
+    EdgeTypeLeft: "FRE",
+    EdgeTypeBtm: "FRE",
+    EdgeTypeRight: "FRE",
+    EdgeJointType: "VVVV"
+  }
+  , {
+    _id: 209,
+    in_PartGroup: "Fliplift",
+    in_FrontProgram: "Modern",
+    in_FrontColor: "All",
+    in_FrontDesign: "All",
+    in_MinWidth: 0,
+    in_MaxWidth: 9999,
+    in_MinHeight: 0,
+    in_MaxHeight: 299,
     in_HandleDesignGroup: "InsetHandle",
     in_HandlePosType: "All",
     FrontModuleId: "FrontPanel01",

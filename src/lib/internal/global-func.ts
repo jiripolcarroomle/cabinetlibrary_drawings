@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from './logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterModuleGroupOrchestrator, internal_leaveModuleGroupOrchestrator, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from './logging'
 //#region Imports
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary } from './custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction } from './custom-tables/tab_BaseunitFridgeConstruction'
@@ -3607,14 +3607,24 @@ export class GlobalFunc {
 		let rotation = part2.pa_Rotation;
 		let drillings: any[] = [];
 		let drills: any[] = [];
+		let millings: any[] = [];
+		let mills: any[] = [];
 		let InsertionInfo = GlobalFunc.process_MachiningInsertionHelper('110', part2.pa_Model3DGroupName)
 		let processings = GlobalFunc.find_ProcessingMapping(part2.pa_ProcessingId);
 
 		processings.forEach((processing) => {
-			drills = GlobalFunc.find_HardwareDrillVertLibrary(processing.ProcessingId!, 'Front');
-			drills.forEach((drill) => {
-				drillings.push(drill);
-			});
+			if (processing.ProcessingLibrary == "DrillVertical") {
+				drills = GlobalFunc.find_HardwareDrillVertLibrary(processing.ProcessingId!, 'Front');
+				drills.forEach((drill) => {
+					drillings.push(drill);
+				});
+			}
+			if (processing.ProcessingLibrary == "Milling") {
+				mills = GlobalFunc.find_HardwareMilingLibrary(processing.ProcessingId!, 'Front');
+				mills.forEach((mill) => {
+					millings.push(mill);
+				});
+			}
 		});
 
 		//--------------------For each drilling (insert the drillings)------------------------
@@ -3664,6 +3674,75 @@ export class GlobalFunc {
 			// Add drawing
 			let drilling01 = partSelf.add3DElement('Drilling01', DrillVert, posX, posY, 0, x.DU, x.DU, partSelf._dimz);
 			drilling01.extrude('<svg><circle cx="' + 0 + '" cy="' + 0 + '" r="' + x.DU / 2 + '" /></svg>', 'z');
+		})
+
+		//--------------------For each milling (insert the millings)------------------------
+
+		millings.forEach(x => {
+
+			// Calculate the offset	
+			let offsetX = InsertionInfo.InsertionPointX;
+			let offsetY = InsertionInfo.InsertionPointY;
+
+			// Calculate the position
+			let posX = 0;
+			let posY = 0;
+			let xa = x.XA(0, partSelf, part2, posRel);
+			let ya = x.YA(0, partSelf, part2, posRel);
+			let millLengthX = 0;
+			let millLengthY = 0;
+
+			if (rotation == 0) {
+				posX = posRel.x + xa + offsetX;
+				posY = posRel.y + ya + offsetY;
+				millLengthX = x.BR(0, partSelf, part2, posRel);
+				millLengthY = x.LA(0, partSelf, part2, posRel);
+			}
+			else if (rotation == 90) {
+				posY = posRel.y - (xa + offsetX);
+				posX = posRel.x + ya - offsetY;
+				millLengthY = x.BR(0, partSelf, part2, posRel);
+				millLengthX = x.LA(0, partSelf, part2, posRel);
+			}
+			else if (rotation == 270) {
+				posY = posRel.y - (xa + offsetX);
+				posX = posRel.x + ya + offsetY;
+				millLengthY = x.BR(0, partSelf, part2, posRel);
+				millLengthX = x.LA(0, partSelf, part2, posRel);
+			}
+			else if (rotation == 180) {
+				posX = posRel.x + xa + offsetX;
+				posY = posRel.y + ya - offsetY;
+				millLengthX = x.BR(0, partSelf, part2, posRel);
+				millLengthY = x.LA(0, partSelf, part2, posRel);
+			}
+
+			let posZ = 0;
+
+			// Calculate Depth
+			let tmpDimZ: number = x.TI(0, partSelf, part2, posRel);
+			if (tmpDimZ == 0) {
+				tmpDimZ = partSelf._dimz;
+			}
+
+			// Add Milling
+			let Milling = elem.addncout_Pocket();
+			Milling.nc_TOOL = "112";
+			Milling.nc_Side = x.Side;
+			Milling.nc_XA = posX;
+			Milling.nc_YA = partSelf._dimy - posY;
+			Milling.nc_LA = millLengthX;
+			Milling.nc_BR = millLengthY;
+			Milling.nc_TI = tmpDimZ;
+			let rd = x.matrix_RD || 0
+			Milling.nc_RD = rd;
+			Milling.nc_KO = x.matrix_KO || "00";
+			Milling.nc_T_ = '101';
+
+
+			// Add drawing
+			let drilling01 = partSelf.add3DElement('Milling01', Milling, posX - millLengthX / 2, posY - millLengthY / 2, posZ, millLengthX, millLengthY, tmpDimZ);
+			drilling01.extrude('<svg><rect x="' + 0 + '" y="' + 0 + '" width="' + millLengthX + '" height="' + millLengthY + '" rx="' + (rd) + '" ry="' + (rd) + '" /></svg>', 'z');
 		})
 	}
 
@@ -3980,42 +4059,37 @@ export class GlobalFunc {
 
 
 	// Return value from hanger settings\n//########################################################
-	static find_HangerSettings(TypeElement: string, CarcaseHeight: number, CarcaseWidth: number, Weight: number, DistanceBehindBackwall: number, BackwallPosition: number): ICT_tab_HangerSettings {
+	static find_HangerSettings(TypeElement: string, CarcaseHeight: number, CarcaseWidth: number, Weight: number, DistanceBehindBackwall: number, BackwallPosition: number): ICT_tab_HangerSettings | undefined {
 
 		// Save original values of variables that allow wildcards
-		let TypeElement_IN = TypeElement;
+		const typeElementIn = TypeElement;
 
-		let retEntry: any;
-
-		let i = 1;
-		do {
-			if (i == 1) {
-				TypeElement = TypeElement_IN;
-			}
-			else if (i == 2) {
-				TypeElement = 'All';
-			}
-
-			//Query the table
-			retEntry = queryTable(TypeElement, CarcaseHeight, CarcaseWidth, Weight, DistanceBehindBackwall, BackwallPosition);
-			i++;
-		} while (retEntry == undefined && i <= 2)
+		let retEntry =
+			queryTable(typeElementIn) ??
+			queryTable('All');
 
 		if (retEntry == undefined) {
-			let Text = ' TypeElement: ' + TypeElement_IN + ' and CarcaseHeight: ' + CarcaseHeight + ' and CarcaseWidth: ' + CarcaseWidth + ' and Weight: ' + Weight + ' and DistanceBehindBackwall: ' + DistanceBehindBackwall + ' and BackwallPosition: ' + BackwallPosition;
-			let ErrorMessage = GlobalFunc.find_ErrorList('Error 14010', 1)
-			logError(ErrorMessage.Message(Text));
+			const text = ' TypeElement: ' + typeElementIn + ' and CarcaseHeight: ' + CarcaseHeight + ' and CarcaseWidth: ' + CarcaseWidth + ' and Weight: ' + Weight + ' and DistanceBehindBackwall: ' + DistanceBehindBackwall + ' and BackwallPosition: ' + BackwallPosition;
+			const errorMessage = GlobalFunc.find_ErrorList('Error 14010', 1);
+			logError(errorMessage.Message(text));
 		}
+
 		return retEntry;
 
-
-		function queryTable(TypeElement: string, CarcaseHeight: number, CarcaseWidth: number, Weight: number, DistanceBehindBackwall: number, BackwallPosition: number): ICT_tab_HangerSettings {
-
-			let TableResult = ct_tab_HangerSettings.find(p => p.in_TypeElement! == TypeElement && p.in_CarcaseHeightMin! <= CarcaseHeight && p.in_CarcaseHeightMax! >= CarcaseHeight && p.in_CarcaseWidthMin! <= CarcaseWidth && p.in_CarcaseWidthMax! >= CarcaseWidth && p.in_WeightMin! <= Weight && p.in_WeightMax! >= Weight && p.in_DistanceBehindBackwallMin! <= DistanceBehindBackwall && p.in_BackwallPositionMin! <= BackwallPosition && p.in_BackwallPositionMax! >= BackwallPosition)!;
-			return TableResult;
+		function queryTable(typeElement: string): ICT_tab_HangerSettings | undefined {
+			return ct_tab_HangerSettings.find(p =>
+				p.in_TypeElement === typeElement &&
+				p.in_CarcaseHeightMin! <= CarcaseHeight &&
+				p.in_CarcaseHeightMax! >= CarcaseHeight &&
+				p.in_CarcaseWidthMin! <= CarcaseWidth &&
+				p.in_CarcaseWidthMax! >= CarcaseWidth &&
+				p.in_WeightMin! <= Weight &&
+				p.in_WeightMax! >= Weight &&
+				p.in_DistanceBehindBackwallMin! <= DistanceBehindBackwall &&
+				p.in_BackwallPositionMin! <= BackwallPosition &&
+				p.in_BackwallPositionMax! >= BackwallPosition
+			);
 		}
-
-
 	}
 
 
@@ -4117,6 +4191,11 @@ export class GlobalFunc {
 
 			//---------------Get data from table HangerSettings---------------------------
 			let retHangerSettings = GlobalFunc.find_HangerSettings(m.mod_TypeElement, m.mod_CarcaseHeight, m.mod_CarcaseWidth, 20, DistanceBehindBackwallMin, BackwallPosition); ////////////////////////////////// ROOT MODULE NOT DEFINED AND CALCULATION OF WEIGHT PENDING!!!!!!!!!
+
+			// Guard
+			if (retHangerSettings == undefined) {
+				return HangerData;
+			}
 
 			//---------------Get data from table HangerMapping---------------------------
 			let retHangerMapping = GlobalFunc.find_HangerMapping(retHangerSettings.HangerType!, m.mod_CarcaseWidth, m.mod_HangerColor);
@@ -4270,6 +4349,11 @@ export class GlobalFunc {
 
 		//---------------Get data from table HangerSettings---------------------------
 		let retHangerSettings = GlobalFunc.find_HangerSettings(m.mod_TypeElement, m.mod_CarcaseHeight, m.mod_CarcaseWidth, 20, DistanceBehindBackwallMin, BackwallPosition); ////////////////////////////////// ROOT MODULE NOT DEFINED AND CALCULATION OF WEIGHT PENDING!!!!!!!!!
+
+		// Guard
+		if (retHangerSettings == undefined) {
+			return HangerData;
+		}
 
 		//---------------Get data from table HangerMapping---------------------------
 		let retHangerMapping = GlobalFunc.find_HangerMapping(retHangerSettings.HangerType!, m.mod_CarcaseWidth, m.mod_HangerColor);
@@ -4967,17 +5051,26 @@ export class GlobalFunc {
 
 			let minValue = 9999;
 			let maxValue = 0;
+			let DrillDistance = 0;
 			let processings = GlobalFunc.find_ProcessingMapping(retObjectMapping.ProcessingItem!);
 
 			processings.forEach((processing) => {
-				let drills = GlobalFunc.find_HardwareDrillVertLibrary(processing.ProcessingId!, 'Front');
-				drills.forEach((drill) => {
-					if (drill.XA < minValue) { minValue = drill.XA }
-					if (drill.XA > maxValue) { maxValue = drill.XA }
-				});
-			});
+				if (processing.ProcessingLibrary == "DrillVertical") {
+					let drills = GlobalFunc.find_HardwareDrillVertLibrary(processing.ProcessingId!, 'Front');
+					drills.forEach((drill) => {
+						if (drill.XA < minValue) { minValue = drill.XA }
+						if (drill.XA > maxValue) { maxValue = drill.XA }
+					});
+					DrillDistance = maxValue - minValue;
+				}
+				else if (processing.ProcessingLibrary == "Milling") {
+					let mills = GlobalFunc.find_HardwareMilingLibrary(processing.ProcessingId!, 'Front');
+					mills.forEach((mill) => {
+						DrillDistance = mill.BR(0, 0, 0, 0) ?? 0
+					});
 
-			let DrillDistance = maxValue - minValue;
+				}
+			});
 
 			//---------------Find sector for the handle---------------------------
 
@@ -18122,6 +18215,7 @@ export class GlobalFunc {
 		CarcaseConstructionId: string;
 		RearOffset: number;
 		BottomShortening: number;
+		HoodAssemblyInfo: ICT_tab_HoodConstruction;
 	} {
 		const result = {
 			DatasetComplete: false,
@@ -18129,7 +18223,8 @@ export class GlobalFunc {
 			ConstructionId: "",
 			CarcaseConstructionId: "",
 			RearOffset: 0,
-			BottomShortening: 0
+			BottomShortening: 0,
+			HoodAssemblyInfo: { in_HoodId: "" } as ICT_tab_HoodConstruction
 		};
 
 		// ----------------------------------------
@@ -18156,7 +18251,8 @@ export class GlobalFunc {
 			return result;
 		}
 		// ----------------------------------------
-		// Schritt 1 – Mapping auswerten
+		// Step 1 Get Hood-Mapping
+		// --> Consturction for the Hood
 		// ----------------------------------------
 		const hoodmapping = GlobalFunc.find_HoodMapping(HoodSupplier, HoodId);
 
@@ -18165,19 +18261,26 @@ export class GlobalFunc {
 		}
 
 		result.ConstructionId = hoodmapping.ConstructionId ? hoodmapping.ConstructionId : "";
-		//result.GraphicId = hoodmapping.GraphicId ? hoodmapping.GraphicId:"";
 		result.GraphicId = hoodmapping.GraphicId ?? "";
 
+		// ----------------------------------------
+		// Step 2 Get Hood Installation Info
+		// ----------------------------------------
 		const hoodconstruction = GlobalFunc.find_HoodConstruction(HoodSupplier, HoodId);
 		if (!hoodconstruction) {
 			return result;
 		}
+		/*
+		let hoodHeight  = hoodconstruction.Height ?? 0;
+		let hoodWidth   = hoodconstruction.Width ?? 0;
+		let hoodDepth   = hoodconstruction.Depth ?? 0;
+		*/
+		// ToDo from Insertpoint of the hood
+		result.RearOffset = 0; //hoodconstruction.Tower2Depth ?? 0;
+		// Save the Installation Info from Hood 
+		result.HoodAssemblyInfo = hoodconstruction;
 
-		let hoodHeight = hoodconstruction.Height ?? 0;
-		let hoodWidth = hoodconstruction.Width ?? 0;
-		let hoodDepth = hoodconstruction.Depth ?? 0;
-
-		// wenn alles richtig ist im fehlerfall sind wir vorher ausgestiegen.
+		// everything ok!
 		result.DatasetComplete = true;
 		return result;
 	}

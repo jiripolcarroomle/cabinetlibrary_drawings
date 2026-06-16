@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterModuleGroupOrchestrator, internal_leaveModuleGroupOrchestrator, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { IGlobalVars } from '../global-vars';
 import { GlobalFunc } from '../global-func';
 import { dc_mc_FrontPanel01, adc_mc_FrontPanel01, cbp_mc_FrontPanel01 } from '../modules/mc_FrontPanel01'
@@ -190,8 +190,8 @@ export class ct2_tab_HangerSettings {
 
 export var ct_tab_HangerSettings: ICT_tab_HangerSettings[] = [
   {
-    _id: 1,
-    in_TypeElement: "WallUnit",
+    _id: 6,
+    in_TypeElement: "All",
     in_CarcaseHeightMin: 0,
     in_CarcaseHeightMax: 9999,
     in_CarcaseWidthMin: 0,
@@ -204,8 +204,8 @@ export var ct_tab_HangerSettings: ICT_tab_HangerSettings[] = [
     HangerType: "WallUnitVisibleHanger75kg"
   }
   , {
-    _id: 2,
-    in_TypeElement: "WallUnit",
+    _id: 7,
+    in_TypeElement: "All",
     in_CarcaseHeightMin: 0,
     in_CarcaseHeightMax: 9999,
     in_CarcaseWidthMin: 0,
@@ -218,8 +218,8 @@ export var ct_tab_HangerSettings: ICT_tab_HangerSettings[] = [
     HangerType: "WallUnitVisibleHanger52kg"
   }
   , {
-    _id: 3,
-    in_TypeElement: "BaseUnit",
+    _id: 8,
+    in_TypeElement: "All",
     in_CarcaseHeightMin: 0,
     in_CarcaseHeightMax: 9999,
     in_CarcaseWidthMin: 0,
@@ -232,8 +232,8 @@ export var ct_tab_HangerSettings: ICT_tab_HangerSettings[] = [
     HangerType: "BaseUnitVisibleHanger120kg"
   }
   , {
-    _id: 4,
-    in_TypeElement: "WallUnit",
+    _id: 9,
+    in_TypeElement: "All",
     in_CarcaseHeightMin: 0,
     in_CarcaseHeightMax: 9999,
     in_CarcaseWidthMin: 0,
@@ -246,8 +246,8 @@ export var ct_tab_HangerSettings: ICT_tab_HangerSettings[] = [
     HangerType: "WallUnitHiddenHanger92kg"
   }
   , {
-    _id: 5,
-    in_TypeElement: "WallUnit",
+    _id: 10,
+    in_TypeElement: "All",
     in_CarcaseHeightMin: 0,
     in_CarcaseHeightMax: 9999,
     in_CarcaseWidthMin: 0,

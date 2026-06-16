@@ -24,6 +24,11 @@ import jsonUrl from './test-orders.json?url';
 import { BomOutputData, DisplaySettings, DisplaySettingsType, OutputData } from './types/custom-types';
 import { getSelectionsByAttrId } from './lib/internal/selections';
 import { newDrawingApi } from './drawing/drawing-api-implementation';
+import {
+  groupAdjust,
+  IPosArticleInfo,
+  IRoomData,
+} from './lib/internal/group-orchestrator';
 
 const _global = window as any;
 function uuidv4() {
@@ -36,7 +41,9 @@ _global.drawingApi = newDrawingApi();
 const root3dRef = document.getElementById('root3d');
 console.log('Log ~ root3dRef:', root3dRef);
 const inputEditor = createEditor('inputEditor', INPUT_EDITOR_OPTIONS);
+const paramsEditor = createEditor('paramsEditor', INPUT_EDITOR_OPTIONS);
 const outputEditor = createEditor('outputEditor', OUTPUT_EDITOR_OPTIONS);
+const groupOutputEditor = createEditor('groupOutputEditor', OUTPUT_EDITOR_OPTIONS);
 
 let testOrders: Record<string, any> = {};
 let lastOrder: string | undefined;
@@ -119,6 +126,54 @@ const onTestOrderCbChanged = async (value: string): Promise<void> => {
   lastOrder = value;
   localStorage.setItem('orderId', value);
   await doAll();
+};
+
+const doAdjust = async (): Promise<void> => {
+  const rootsJson = inputEditor.get();
+  const paramsJson = paramsEditor.get();
+
+  // Build the article list
+  let articles: Record<string, IPosArticleInfo> = {};
+  Object.keys(testOrders).forEach((k) => {
+    if (k.startsWith('Article_')) {
+      articles[k.substring(8)] = {
+        roots: testOrders[k],
+        articleId: k.substring(8),
+      };
+    }
+  });
+
+  // Adjust the groups based on the roots and the parameters and get the resulting json back
+  const res = groupAdjust(
+    rootsJson,
+    paramsJson['attributes'],
+    articles,
+    paramsJson['roomData'] as IRoomData,
+  );
+
+  if (res === undefined) {
+    updateErrorInfo('An error occurred during group adjustment.');
+    return;
+  }
+
+  // Set the output
+  groupOutputEditor.set({
+    logs: res.logMessages,
+    articles: res.articleResults.map((p) => ({
+      articleInfo: p.articleInfo,
+      root: p.root.toJson(false),
+    })),
+  });
+
+  if (res.logMessages.length > 0) {
+    let text = '';
+    res.logMessages.forEach((logMessage) => {
+      if (logMessage.category == 'Error' || logMessage.category == 'Fatal') {
+        text += logMessage.msg + '\r\n';
+      }
+    });
+    updateErrorInfo(text);
+  }
 };
 
 const doAll = async (): Promise<void> => {
@@ -251,7 +306,6 @@ const doAll = async (): Promise<void> => {
 
     // Create the entries for the BOM table
     // Assign bom outputs to combobox
-    const showBomCb = document.getElementById('showBomCb') as HTMLSelectElement;
     const bd1 = new BomOutputData();
     bd1.bomAfterTouches = p.bom;
     bd1.outputId = 'bom';
@@ -952,7 +1006,6 @@ const onDownload3d = async (): Promise<void> => {
 const onCalculateDropdownEntries = async (): Promise<void> => {
   const moduleId = (document.getElementById('conflictingChecksModuleList') as HTMLSelectElement).value;
   const attributeId = (document.getElementById('conflictingChecksAttributeList') as HTMLSelectElement).value;
-  let articleId = (document.getElementById('testOrderCb') as HTMLSelectElement).value;
   const resultField = (document.getElementById('dropdownEntriesResult') as HTMLParagraphElement);
   const module = findModule(moduleId);
   if (module === undefined) {
@@ -966,10 +1019,6 @@ const onCalculateDropdownEntries = async (): Promise<void> => {
     return;
   }
   const checkAttributes = module.getCheckAttributes();
-  if (articleId.startsWith('Article_')) {
-    articleId = articleId.slice('Article_'.length);
-  }
-  checkAttributes?.set("_articleId", articleId);
   const result = Checks.ChecksLogic.getDropDownValuesWithRanges(checkAttributes, attributeId);
   if (!result) {
     resultField.innerHTML = 'No dropdown entries'
@@ -1009,7 +1058,6 @@ const onCalculateConflictingCheck = async (): Promise<void> => {
     ? (document.getElementById('conflictingChecksAttributeValueInput') as HTMLInputElement).value
     : (document.getElementById('conflictingChecksAttributeSelectionsList') as HTMLSelectElement).value;
   const resultField = (document.getElementById('conflictingChecksResult') as HTMLParagraphElement);
-  let articleId = (document.getElementById('testOrderCb') as HTMLSelectElement).value;
   if (moduleId === '' || attributeId == '' || attributeValue == '') {
     window.alert("Ensure all inputs are filled")
     resultField.innerHTML = ''
@@ -1026,10 +1074,6 @@ const onCalculateConflictingCheck = async (): Promise<void> => {
   //TODO: this attribute value is always a string (i think), which is not always what we want.
   leadingAttribute.value = attributeValue;
   const checkAttributes = module.getCheckAttributes();
-  if (articleId.startsWith('Article_')) {
-    articleId = articleId.slice('Article_'.length);
-  }
-  checkAttributes?.set("_articleId", articleId);
   const result = Checks.ChecksLogic.calculateConflictingChange(checkAttributes, leadingAttribute);
   if (result.errorMsg !== undefined) {
     resultField.innerHTML = result.errorMsg;
@@ -1157,8 +1201,8 @@ document.getElementById('calculate-btn')!.addEventListener('click', async () => 
   await onBtnDataCompletionClick();
 });
 
-document.getElementById('calculateConflictingChecksButton')!.addEventListener('click', async () => {
-  await onCalculateConflictingCheck();
+document.getElementById('adjustGroupBtn')!.addEventListener('click', async () => {
+  await doAdjust();
 });
 
 document.getElementById('testOrderCb')!.addEventListener('change', async ev => {
@@ -1210,6 +1254,10 @@ document.getElementById('calculateDropdownEntries')!.addEventListener('click', (
   onCalculateDropdownEntries();
 });
 
+document.getElementById('calculateConflictingChecksButton')!.addEventListener('click', async () => {
+  await onCalculateConflictingCheck();
+});
+
 //#endregion
 
 // Close the Display Settings dropdown when clicking outside of it.
@@ -1219,6 +1267,8 @@ document.addEventListener('mousedown', (ev) => {
   if (displaySettingsListEl.contains(ev.target as Node)) return;
   void onDisplaySettingsDropdownVisibilityChanged();
 });
+
+paramsEditor.set(JSON.parse('{ "attributes": {}, "roomData": { "levels": [] } }'));
 
 initTabs();
 

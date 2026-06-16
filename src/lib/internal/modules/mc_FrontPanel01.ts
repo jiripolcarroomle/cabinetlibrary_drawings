@@ -1,4 +1,4 @@
-import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
+import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterModuleGroupOrchestrator, internal_leaveModuleGroupOrchestrator, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../logging'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary, ct2_tab_ApplianceGraphicLibrary } from '../custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction, ct2_tab_BaseunitFridgeConstruction } from '../custom-tables/tab_BaseunitFridgeConstruction'
 import { ct_tab_BaseunitFridgeMapping, ICT_tab_BaseunitFridgeMapping, ct2_tab_BaseunitFridgeMapping } from '../custom-tables/tab_BaseunitFridgeMapping'
@@ -145,7 +145,7 @@ import { IP_part_BaseunitFridgePanel_PartVarsWritable, P_part_BaseunitFridgePane
 import { IP_part_PantryPullout_PartVarsWritable, P_part_PantryPullout } from '../parts/part_PantryPullout'
 import { IP_part_VirtualFront_PartVarsWritable, P_part_VirtualFront } from '../parts/part_VirtualFront'
 import { IModuleNonNull_mc_FrontPanel01, IModParents_mc_FrontPanel01, IPartParentsNonNull_mc_FrontPanel01 } from '../mod-interfaces'
-import { IModVar_mod_Depth, IModVarNonNull_mod_Depth, IModVar_mod_FrontId, IModVarNonNull_mod_FrontId, IModVar_mod_FrontType, IModVarNonNull_mod_FrontType, IModVar_mod_Height, IModVarNonNull_mod_Height, IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_FrontColor, IModVarNonNull_mod_FrontColor, IModVar_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVarNonNull_mod_FrontEdgeThk, IModVar_mod_FrontProgram, IModVarNonNull_mod_FrontProgram, IModVar_mod_PartInfo, IModVarNonNull_mod_PartInfo, IModVar_mod_FrontDesign, IModVarNonNull_mod_FrontDesign, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_CornerunitStraightFillerConstruction, IModVarNonNull_mod_CornerunitStraightFillerConstruction, IModVar_mod_CarcaseDirection, IModVarNonNull_mod_CarcaseDirection, IModVar_mod_FrontpanelWeightCalculations, IModVarNonNull_mod_FrontpanelWeightCalculations, IModVar_mod_DoorDirection, IModVarNonNull_mod_DoorDirection, IModVar_mod_FlipliftType, IModVarNonNull_mod_FlipliftType, IModVar_mod_ParentName, IModVarNonNull_mod_ParentName, IModVar_mod_FillerHardwareInfo, IModVarNonNull_mod_FillerHardwareInfo, IModVar_mod_Information, IModVarNonNull_mod_Information } from '../var-interfaces'
+import { IModVar_mod_Depth, IModVarNonNull_mod_Depth, IModVar_mod_FrontId, IModVarNonNull_mod_FrontId, IModVar_mod_FrontType, IModVarNonNull_mod_FrontType, IModVar_mod_Height, IModVarNonNull_mod_Height, IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_FrontColor, IModVarNonNull_mod_FrontColor, IModVar_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVarNonNull_mod_FrontEdgeThk, IModVar_mod_FrontProgram, IModVarNonNull_mod_FrontProgram, IModVar_mod_PartInfo, IModVarNonNull_mod_PartInfo, IModVar_mod_FrontDesign, IModVarNonNull_mod_FrontDesign, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_CornerunitStraightFillerConstruction, IModVarNonNull_mod_CornerunitStraightFillerConstruction, IModVar_mod_CarcaseDirection, IModVarNonNull_mod_CarcaseDirection, IModVar_mod_FrontpanelWeightCalculations, IModVarNonNull_mod_FrontpanelWeightCalculations, IModVar_mod_DoorDirection, IModVarNonNull_mod_DoorDirection, IModVar_mod_FlipliftType, IModVarNonNull_mod_FlipliftType, IModVar_mod_ParentName, IModVarNonNull_mod_ParentName, IModVar_mod_FillerHardwareInfo, IModVarNonNull_mod_FillerHardwareInfo, IModVar_mod_Information, IModVarNonNull_mod_Information, IModVar_mod_HardwareTypeList, IModVarNonNull_mod_HardwareTypeList } from '../var-interfaces'
 import { VariantValidation, IMatrix_mod_Depth, IMatrix_mod_FrontId, IMatrix_mod_FrontType, IMatrix_mod_Height, IMatrix_mod_Width, IMatrix_mod_FrontColor, IMatrix_mod_FrontEdgeColor, IMatrix_mod_FrontEdgeThk, IMatrix_mod_FrontProgram, IMatrix_mod_PartInfo, IMatrix_mod_FrontDesign, IMatrix_mod_ModuleName, IMatrix_mod_CornerunitStraightFillerConstruction, IMatrix_mod_CarcaseDirection, IMatrix_mod_DoorDirection, IMatrix_mod_FlipliftType, IMatrix_mod_ParentName, IMatrix_mod_Information } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
@@ -153,7 +153,7 @@ import { IPartAdd_part_Drawer, IPartAdd_part_Fliplift, IPartAdd_part_Door, IPart
 import { mc_FrontPanel01_createBuildPlan, mc_FrontPanel01_afterDataCompletion, mc_FrontPanel01_manufacturerDataCompletion, mc_FrontPanel01_calculateContainerModules, mc_FrontPanel01_prepareContext } from '../../modules/mc_FrontPanel01';
 
 export interface cbp_mc_FrontPanel01 extends IModBaseProp
-  , IPartAdd_part_Drawer, IPartAdd_part_Fliplift, IPartAdd_part_Door, IPartAdd_part_Filler, IPartAdd_part_Fixedfront, IPartAdd_part_ApplianceFront, IPartAdd_part_DishwasherPanel, IPartAdd_part_Pullout, IPartAdd_part_BaseunitFridgePanel, IPartAdd_part_PantryPullout, IPartAdd_part_VirtualFront, IModVarNonNull_mod_Depth, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontType, IModVarNonNull_mod_Height, IModVarNonNull_mod_Width, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_PartInfo, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_CornerunitStraightFillerConstruction, IModVarNonNull_mod_CarcaseDirection, IModVarNonNull_mod_FrontpanelWeightCalculations, IModVarNonNull_mod_DoorDirection, IModVarNonNull_mod_FlipliftType, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_FillerHardwareInfo, IModVarNonNull_mod_Information {
+  , IPartAdd_part_Drawer, IPartAdd_part_Fliplift, IPartAdd_part_Door, IPartAdd_part_Filler, IPartAdd_part_Fixedfront, IPartAdd_part_ApplianceFront, IPartAdd_part_DishwasherPanel, IPartAdd_part_Pullout, IPartAdd_part_BaseunitFridgePanel, IPartAdd_part_PantryPullout, IPartAdd_part_VirtualFront, IModVarNonNull_mod_Depth, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontType, IModVarNonNull_mod_Height, IModVarNonNull_mod_Width, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_PartInfo, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_CornerunitStraightFillerConstruction, IModVarNonNull_mod_CarcaseDirection, IModVarNonNull_mod_FrontpanelWeightCalculations, IModVarNonNull_mod_DoorDirection, IModVarNonNull_mod_FlipliftType, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_FillerHardwareInfo, IModVarNonNull_mod_Information, IModVarNonNull_mod_HardwareTypeList {
   parent: IModParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
@@ -165,7 +165,7 @@ export interface cbp_mc_FrontPanel01 extends IModBaseProp
 }
 
 export interface dc_mc_FrontPanel01 extends IModBaseProp
-  , IModVar_mod_Depth, IModVar_mod_FrontId, IModVar_mod_FrontType, IModVar_mod_Height, IModVar_mod_Width, IModVar_mod_FrontColor, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontProgram, IModVar_mod_PartInfo, IModVar_mod_FrontDesign, IModVar_mod_ModuleName, IModVar_mod_CornerunitStraightFillerConstruction, IModVar_mod_CarcaseDirection, IModVar_mod_FrontpanelWeightCalculations, IModVar_mod_DoorDirection, IModVar_mod_FlipliftType, IModVar_mod_ParentName, IModVar_mod_FillerHardwareInfo, IModVar_mod_Information {
+  , IModVar_mod_Depth, IModVar_mod_FrontId, IModVar_mod_FrontType, IModVar_mod_Height, IModVar_mod_Width, IModVar_mod_FrontColor, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontProgram, IModVar_mod_PartInfo, IModVar_mod_FrontDesign, IModVar_mod_ModuleName, IModVar_mod_CornerunitStraightFillerConstruction, IModVar_mod_CarcaseDirection, IModVar_mod_FrontpanelWeightCalculations, IModVar_mod_DoorDirection, IModVar_mod_FlipliftType, IModVar_mod_ParentName, IModVar_mod_FillerHardwareInfo, IModVar_mod_Information, IModVar_mod_HardwareTypeList {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_FrontPanel01;
@@ -180,7 +180,7 @@ export interface pc_mc_FrontPanel01 extends dc_mc_FrontPanel01 {
 }
 
 export interface adc_base_mc_FrontPanel01 extends IModBaseProp
-  , IModVarNonNull_mod_Depth, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontType, IModVarNonNull_mod_Height, IModVarNonNull_mod_Width, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_PartInfo, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_CornerunitStraightFillerConstruction, IModVarNonNull_mod_CarcaseDirection, IModVarNonNull_mod_FrontpanelWeightCalculations, IModVarNonNull_mod_DoorDirection, IModVarNonNull_mod_FlipliftType, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_FillerHardwareInfo, IModVarNonNull_mod_Information {
+  , IModVarNonNull_mod_Depth, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontType, IModVarNonNull_mod_Height, IModVarNonNull_mod_Width, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_PartInfo, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_CornerunitStraightFillerConstruction, IModVarNonNull_mod_CarcaseDirection, IModVarNonNull_mod_FrontpanelWeightCalculations, IModVarNonNull_mod_DoorDirection, IModVarNonNull_mod_FlipliftType, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_FillerHardwareInfo, IModVarNonNull_mod_Information, IModVarNonNull_mod_HardwareTypeList {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
 }
@@ -194,7 +194,7 @@ export interface ccm_mc_FrontPanel01 extends adc_base_mc_FrontPanel01 {
 
 export class OD_M_mc_FrontPanel01 extends OD_Base implements pc_mc_FrontPanel01, dc_mc_FrontPanel01
   , IModParents_mc_FrontPanel01
-  , IModVar_mod_Depth, IModVar_mod_FrontId, IModVar_mod_FrontType, IModVar_mod_Height, IModVar_mod_Width, IModVar_mod_FrontColor, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontProgram, IModVar_mod_PartInfo, IModVar_mod_FrontDesign, IModVar_mod_ModuleName, IModVar_mod_CornerunitStraightFillerConstruction, IModVar_mod_CarcaseDirection, IModVar_mod_FrontpanelWeightCalculations, IModVar_mod_DoorDirection, IModVar_mod_FlipliftType, IModVar_mod_ParentName, IModVar_mod_FillerHardwareInfo, IModVar_mod_Information {
+  , IModVar_mod_Depth, IModVar_mod_FrontId, IModVar_mod_FrontType, IModVar_mod_Height, IModVar_mod_Width, IModVar_mod_FrontColor, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontProgram, IModVar_mod_PartInfo, IModVar_mod_FrontDesign, IModVar_mod_ModuleName, IModVar_mod_CornerunitStraightFillerConstruction, IModVar_mod_CarcaseDirection, IModVar_mod_FrontpanelWeightCalculations, IModVar_mod_DoorDirection, IModVar_mod_FlipliftType, IModVar_mod_ParentName, IModVar_mod_FillerHardwareInfo, IModVar_mod_Information, IModVar_mod_HardwareTypeList {
   constructor(parent: IModParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01, manufacturerMode?: boolean) {
     super('mc_FrontPanel01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
@@ -203,7 +203,7 @@ export class OD_M_mc_FrontPanel01 extends OD_Base implements pc_mc_FrontPanel01,
   parent: IModParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01;
   _selfNonNull: OD_M_mc_FrontPanel01_NonNull;
 
-  override variants: string[] = ['mod_Depth', 'mod_FrontId', 'mod_FrontType', 'mod_Height', 'mod_Width', 'mod_FrontColor', 'mod_FrontEdgeColor', 'mod_FrontEdgeThk', 'mod_FrontProgram', 'mod_PartInfo', 'mod_FrontDesign', 'mod_ModuleName', 'mod_CornerunitStraightFillerConstruction', 'mod_CarcaseDirection', 'mod_FrontpanelWeightCalculations', 'mod_DoorDirection', 'mod_FlipliftType', 'mod_ParentName', 'mod_FillerHardwareInfo', 'mod_Information',];
+  override variants: string[] = ['mod_Depth', 'mod_FrontId', 'mod_FrontType', 'mod_Height', 'mod_Width', 'mod_FrontColor', 'mod_FrontEdgeColor', 'mod_FrontEdgeThk', 'mod_FrontProgram', 'mod_PartInfo', 'mod_FrontDesign', 'mod_ModuleName', 'mod_CornerunitStraightFillerConstruction', 'mod_CarcaseDirection', 'mod_FrontpanelWeightCalculations', 'mod_DoorDirection', 'mod_FlipliftType', 'mod_ParentName', 'mod_FillerHardwareInfo', 'mod_Information', 'mod_HardwareTypeList',];
   #mod_Depth?: number;
   get mod_Depth(): number | undefined { return this.#mod_Depth }
   set mod_Depth(value: number | undefined) {
@@ -424,6 +424,8 @@ export class OD_M_mc_FrontPanel01 extends OD_Base implements pc_mc_FrontPanel01,
   }
 
   mod_Information_matrix?: IMatrix_mod_Information;
+  #mod_HardwareTypeList: string[] = [];
+  get mod_HardwareTypeList(): string[] { return this.#mod_HardwareTypeList; }
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
     res.set('mod_Depth', this.mod_Depth);
@@ -446,6 +448,7 @@ export class OD_M_mc_FrontPanel01 extends OD_Base implements pc_mc_FrontPanel01,
     res.set('mod_ParentName', this.mod_ParentName);
     res.set('mod_FillerHardwareInfo', JSON.stringify(this.mod_FillerHardwareInfo));
     res.set('mod_Information', this.mod_Information);
+    res.set('mod_HardwareTypeList', JSON.stringify(this.mod_HardwareTypeList));
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -1014,6 +1017,9 @@ class OD_M_mc_FrontPanel01_NonNull implements cbp_mc_FrontPanel01, adc_mc_FrontP
   }
   get mod_Information(): string {
     return this.#internalParent.mod_Information!;
+  }
+  get mod_HardwareTypeList(): string[] {
+    return this.#internalParent.mod_HardwareTypeList!;
   }
 }
 
