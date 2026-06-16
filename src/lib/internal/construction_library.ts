@@ -237,7 +237,7 @@ export function processMultipleArticles(json: any, manMode: boolean, withBom: bo
             setLogMessages(ares.logMessages);
             ares.orderItem.prepareContext(rootModules);
             ares.logMessages = getLogMessages();
-    // INFO: When we want to enable attribute change logs, we also must do the same here for getAttrChangeLogs!
+            // INFO: When we want to enable attribute change logs, we also must do the same here for getAttrChangeLogs!
         }
     });
 

@@ -112,15 +112,17 @@ import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01, 
 import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01, cbp_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
 import { dc_mc_SegmentFront01, adc_mc_SegmentFront01, cbp_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
 import { dc_me_HoodInsert, adc_me_HoodInsert, cbp_me_HoodInsert } from '../modules/me_HoodInsert'
-import { dc_mc_HoodInsert01, adc_mc_HoodInsert01, cbp_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
 import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, cbp_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
 import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder, cbp_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
 import { dc_mr_CeilingFiller, adc_mr_CeilingFiller, cbp_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
 import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01, cbp_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
 import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder, cbp_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
 import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder, cbp_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
-import { dc_mr_Filler, adc_mr_Filler, cbp_mr_Filler } from '../modules/mr_Filler'
-import { dc_mc_Filler01, adc_mc_Filler01, cbp_mc_Filler01 } from '../modules/mc_Filler01'
+import { dc_mr_FillerStraight, adc_mr_FillerStraight, cbp_mr_FillerStraight } from '../modules/mr_FillerStraight'
+import { dc_mc_FillerStraight01, adc_mc_FillerStraight01, cbp_mc_FillerStraight01 } from '../modules/mc_FillerStraight01'
+import { dc_mc_FillerHardware01, adc_mc_FillerHardware01, cbp_mc_FillerHardware01 } from '../modules/mc_FillerHardware01'
+import { dc_mc_FillerSupportPanels01, adc_mc_FillerSupportPanels01, cbp_mc_FillerSupportPanels01 } from '../modules/mc_FillerSupportPanels01'
+import { dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, cbp_mc_HoodCarcaseParts01 } from '../modules/mc_HoodCarcaseParts01'
 
 export interface cti_tab_HandleMapping {
   readonly in_HandleDesign?: string;
@@ -170,7 +172,7 @@ export class ct2_tab_HandleMapping {
 
 export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
   {
-    _id: 200,
+    _id: 196,
     in_HandleDesign: "20",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -178,7 +180,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Rail_96"
   }
   , {
-    _id: 201,
+    _id: 197,
     in_HandleDesign: "20",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -186,7 +188,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Rail_128"
   }
   , {
-    _id: 202,
+    _id: 198,
     in_HandleDesign: "20",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -194,7 +196,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Rail_160"
   }
   , {
-    _id: 203,
+    _id: 199,
     in_HandleDesign: "20",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -202,7 +204,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Rail_192"
   }
   , {
-    _id: 204,
+    _id: 200,
     in_HandleDesign: "20",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -210,7 +212,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Rail_224"
   }
   , {
-    _id: 205,
+    _id: 201,
     in_HandleDesign: "20",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -218,7 +220,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Rail_288"
   }
   , {
-    _id: 206,
+    _id: 202,
     in_HandleDesign: "20",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -226,7 +228,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Rail_320"
   }
   , {
-    _id: 207,
+    _id: 203,
     in_HandleDesign: "20",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -234,7 +236,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Rail_352"
   }
   , {
-    _id: 208,
+    _id: 204,
     in_HandleDesign: "20",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -242,7 +244,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Rail_448"
   }
   , {
-    _id: 209,
+    _id: 205,
     in_HandleDesign: "20",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -250,7 +252,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Rail_560"
   }
   , {
-    _id: 210,
+    _id: 206,
     in_HandleDesign: "20",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -258,7 +260,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Rail_660"
   }
   , {
-    _id: 211,
+    _id: 207,
     in_HandleDesign: "20",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -266,7 +268,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Rail_760"
   }
   , {
-    _id: 212,
+    _id: 208,
     in_HandleDesign: "30",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -274,7 +276,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Bracket_96"
   }
   , {
-    _id: 213,
+    _id: 209,
     in_HandleDesign: "30",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -282,7 +284,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Bracket_128"
   }
   , {
-    _id: 214,
+    _id: 210,
     in_HandleDesign: "30",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -290,7 +292,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Bracket_160"
   }
   , {
-    _id: 215,
+    _id: 211,
     in_HandleDesign: "30",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -298,7 +300,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Bracket_192"
   }
   , {
-    _id: 216,
+    _id: 212,
     in_HandleDesign: "30",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -306,7 +308,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Bracket_224"
   }
   , {
-    _id: 217,
+    _id: 213,
     in_HandleDesign: "30",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -314,7 +316,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Bracket_288"
   }
   , {
-    _id: 218,
+    _id: 214,
     in_HandleDesign: "30",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -322,7 +324,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Bracket_320"
   }
   , {
-    _id: 219,
+    _id: 215,
     in_HandleDesign: "30",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -330,7 +332,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Bracket_352"
   }
   , {
-    _id: 220,
+    _id: 216,
     in_HandleDesign: "30",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -338,7 +340,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Bracket_448"
   }
   , {
-    _id: 221,
+    _id: 217,
     in_HandleDesign: "30",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -346,7 +348,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Bracket_480"
   }
   , {
-    _id: 222,
+    _id: 218,
     in_HandleDesign: "30",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -354,7 +356,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Bracket_560"
   }
   , {
-    _id: 223,
+    _id: 219,
     in_HandleDesign: "30",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -362,7 +364,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Bracket_640"
   }
   , {
-    _id: 224,
+    _id: 220,
     in_HandleDesign: "30",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "N/A",
@@ -370,10 +372,42 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_Bracket_960"
   }
   , {
-    _id: 225,
+    _id: 221,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeTop",
+    in_HandleLength: 294,
+    Object: ""
+  }
+  , {
+    _id: 222,
+    in_HandleDesign: "40",
+    in_HandleColor: "StainlessSteelMattBrushed",
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 294,
+    Object: ""
+  }
+  , {
+    _id: 223,
+    in_HandleDesign: "40",
+    in_HandleColor: "StainlessSteelMattBrushed",
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 294,
+    Object: ""
+  }
+  , {
+    _id: 224,
+    in_HandleDesign: "40",
+    in_HandleColor: "StainlessSteelMattBrushed",
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 294,
+    Object: ""
+  }
+  , {
+    _id: 225,
+    in_HandleDesign: "40",
+    in_HandleColor: "StainlessSteelMattBrushed",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 294,
     Object: ""
   }
@@ -381,7 +415,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 226,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 294,
     Object: ""
   }
@@ -389,39 +423,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 227,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 294,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 394,
     Object: ""
   }
   , {
     _id: 228,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 294,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 394,
     Object: ""
   }
   , {
     _id: 229,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 294,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 394,
     Object: ""
   }
   , {
     _id: 230,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 294,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 394,
     Object: ""
   }
   , {
     _id: 231,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 394,
     Object: ""
   }
@@ -429,7 +463,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 232,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 394,
     Object: ""
   }
@@ -437,39 +471,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 233,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 394,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 444,
     Object: ""
   }
   , {
     _id: 234,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 394,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 444,
     Object: ""
   }
   , {
     _id: 235,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 394,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 444,
     Object: ""
   }
   , {
     _id: 236,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 394,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 444,
     Object: ""
   }
   , {
     _id: 237,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 444,
     Object: ""
   }
@@ -477,7 +511,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 238,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 444,
     Object: ""
   }
@@ -485,39 +519,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 239,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 444,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 494,
     Object: ""
   }
   , {
     _id: 240,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 444,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 494,
     Object: ""
   }
   , {
     _id: 241,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 444,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 494,
     Object: ""
   }
   , {
     _id: 242,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 444,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 494,
     Object: ""
   }
   , {
     _id: 243,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 494,
     Object: ""
   }
@@ -525,7 +559,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 244,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 494,
     Object: ""
   }
@@ -533,39 +567,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 245,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 494,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 594,
     Object: ""
   }
   , {
     _id: 246,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 494,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 594,
     Object: ""
   }
   , {
     _id: 247,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 494,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 594,
     Object: ""
   }
   , {
     _id: 248,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 494,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 594,
     Object: ""
   }
   , {
     _id: 249,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 594,
     Object: ""
   }
@@ -573,7 +607,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 250,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 594,
     Object: ""
   }
@@ -581,39 +615,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 251,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 594,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 794,
     Object: ""
   }
   , {
     _id: 252,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 594,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 794,
     Object: ""
   }
   , {
     _id: 253,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 594,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 794,
     Object: ""
   }
   , {
     _id: 254,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 594,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 794,
     Object: ""
   }
   , {
     _id: 255,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 794,
     Object: ""
   }
@@ -621,7 +655,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 256,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 794,
     Object: ""
   }
@@ -629,39 +663,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 257,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 794,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 894,
     Object: ""
   }
   , {
     _id: 258,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 794,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 894,
     Object: ""
   }
   , {
     _id: 259,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 794,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 894,
     Object: ""
   }
   , {
     _id: 260,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 794,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 894,
     Object: ""
   }
   , {
     _id: 261,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 894,
     Object: ""
   }
@@ -669,7 +703,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 262,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 894,
     Object: ""
   }
@@ -677,39 +711,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 263,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 894,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 994,
     Object: ""
   }
   , {
     _id: 264,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 894,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 994,
     Object: ""
   }
   , {
     _id: 265,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 894,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 994,
     Object: ""
   }
   , {
     _id: 266,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 894,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 994,
     Object: ""
   }
   , {
     _id: 267,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 994,
     Object: ""
   }
@@ -717,7 +751,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 268,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 994,
     Object: ""
   }
@@ -725,39 +759,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 269,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 994,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 1194,
     Object: ""
   }
   , {
     _id: 270,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 994,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 1194,
     Object: ""
   }
   , {
     _id: 271,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 994,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 1194,
     Object: ""
   }
   , {
     _id: 272,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 994,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 1194,
     Object: ""
   }
   , {
     _id: 273,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 1194,
     Object: ""
   }
@@ -765,7 +799,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 274,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 1194,
     Object: ""
   }
@@ -773,44 +807,12 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 275,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 1194,
-    Object: ""
-  }
-  , {
-    _id: 276,
-    in_HandleDesign: "40",
-    in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 1194,
-    Object: ""
-  }
-  , {
-    _id: 277,
-    in_HandleDesign: "40",
-    in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 1194,
-    Object: ""
-  }
-  , {
-    _id: 278,
-    in_HandleDesign: "40",
-    in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 1194,
-    Object: ""
-  }
-  , {
-    _id: 279,
-    in_HandleDesign: "40",
-    in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeTop",
     in_HandleLength: 2504,
     Object: ""
   }
   , {
-    _id: 280,
+    _id: 276,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeBtm",
@@ -818,7 +820,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: ""
   }
   , {
-    _id: 281,
+    _id: 277,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeBtmTop",
@@ -826,7 +828,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: ""
   }
   , {
-    _id: 282,
+    _id: 278,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeLeft",
@@ -834,7 +836,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: ""
   }
   , {
-    _id: 283,
+    _id: 279,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeRight",
@@ -842,7 +844,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: ""
   }
   , {
-    _id: 284,
+    _id: 280,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeLeftRight",
@@ -850,10 +852,42 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: ""
   }
   , {
-    _id: 285,
+    _id: 281,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeTop",
+    in_HandleLength: 294,
+    Object: ""
+  }
+  , {
+    _id: 282,
+    in_HandleDesign: "40",
+    in_HandleColor: "StainlessSteelMattBrushed",
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 294,
+    Object: ""
+  }
+  , {
+    _id: 283,
+    in_HandleDesign: "40",
+    in_HandleColor: "StainlessSteelMattBrushed",
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 294,
+    Object: ""
+  }
+  , {
+    _id: 284,
+    in_HandleDesign: "40",
+    in_HandleColor: "StainlessSteelMattBrushed",
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 294,
+    Object: ""
+  }
+  , {
+    _id: 285,
+    in_HandleDesign: "40",
+    in_HandleColor: "StainlessSteelMattBrushed",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 294,
     Object: ""
   }
@@ -861,7 +895,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 286,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 294,
     Object: ""
   }
@@ -869,39 +903,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 287,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 294,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 394,
     Object: ""
   }
   , {
     _id: 288,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 294,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 394,
     Object: ""
   }
   , {
     _id: 289,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 294,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 394,
     Object: ""
   }
   , {
     _id: 290,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 294,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 394,
     Object: ""
   }
   , {
     _id: 291,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 394,
     Object: ""
   }
@@ -909,7 +943,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 292,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 394,
     Object: ""
   }
@@ -917,39 +951,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 293,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 394,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 444,
     Object: ""
   }
   , {
     _id: 294,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 394,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 444,
     Object: ""
   }
   , {
     _id: 295,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 394,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 444,
     Object: ""
   }
   , {
     _id: 296,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 394,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 444,
     Object: ""
   }
   , {
     _id: 297,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 444,
     Object: ""
   }
@@ -957,7 +991,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 298,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 444,
     Object: ""
   }
@@ -965,39 +999,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 299,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 444,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 494,
     Object: ""
   }
   , {
     _id: 300,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 444,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 494,
     Object: ""
   }
   , {
     _id: 301,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 444,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 494,
     Object: ""
   }
   , {
     _id: 302,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 444,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 494,
     Object: ""
   }
   , {
     _id: 303,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 494,
     Object: ""
   }
@@ -1005,7 +1039,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 304,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 494,
     Object: ""
   }
@@ -1013,39 +1047,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 305,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 494,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 594,
     Object: ""
   }
   , {
     _id: 306,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 494,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 594,
     Object: ""
   }
   , {
     _id: 307,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 494,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 594,
     Object: ""
   }
   , {
     _id: 308,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 494,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 594,
     Object: ""
   }
   , {
     _id: 309,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 594,
     Object: ""
   }
@@ -1053,7 +1087,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 310,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 594,
     Object: ""
   }
@@ -1061,39 +1095,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 311,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 594,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 794,
     Object: ""
   }
   , {
     _id: 312,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 594,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 794,
     Object: ""
   }
   , {
     _id: 313,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 594,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 794,
     Object: ""
   }
   , {
     _id: 314,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 594,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 794,
     Object: ""
   }
   , {
     _id: 315,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 794,
     Object: ""
   }
@@ -1101,7 +1135,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 316,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 794,
     Object: ""
   }
@@ -1109,39 +1143,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 317,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 794,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 894,
     Object: ""
   }
   , {
     _id: 318,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 794,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 894,
     Object: ""
   }
   , {
     _id: 319,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 794,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 894,
     Object: ""
   }
   , {
     _id: 320,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 794,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 894,
     Object: ""
   }
   , {
     _id: 321,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 894,
     Object: ""
   }
@@ -1149,7 +1183,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 322,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 894,
     Object: ""
   }
@@ -1157,39 +1191,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 323,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 894,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 994,
     Object: ""
   }
   , {
     _id: 324,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 894,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 994,
     Object: ""
   }
   , {
     _id: 325,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 894,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 994,
     Object: ""
   }
   , {
     _id: 326,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 894,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 994,
     Object: ""
   }
   , {
     _id: 327,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 994,
     Object: ""
   }
@@ -1197,7 +1231,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 328,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 994,
     Object: ""
   }
@@ -1205,39 +1239,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 329,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 994,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 1194,
     Object: ""
   }
   , {
     _id: 330,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 994,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 1194,
     Object: ""
   }
   , {
     _id: 331,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 994,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 1194,
     Object: ""
   }
   , {
     _id: 332,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 994,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 1194,
     Object: ""
   }
   , {
     _id: 333,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 1194,
     Object: ""
   }
@@ -1245,7 +1279,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 334,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
+    in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 1194,
     Object: ""
   }
@@ -1253,39 +1287,39 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 335,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 1194,
+    in_HandlePosType: "StripeTop",
+    in_HandleLength: 2500,
     Object: ""
   }
   , {
     _id: 336,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 1194,
+    in_HandlePosType: "StripeBtm",
+    in_HandleLength: 2500,
     Object: ""
   }
   , {
     _id: 337,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 1194,
+    in_HandlePosType: "StripeBtmTop",
+    in_HandleLength: 2500,
     Object: ""
   }
   , {
     _id: 338,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeftRight",
-    in_HandleLength: 1194,
+    in_HandlePosType: "StripeLeft",
+    in_HandleLength: 2500,
     Object: ""
   }
   , {
     _id: 339,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeTop",
+    in_HandlePosType: "StripeRight",
     in_HandleLength: 2500,
     Object: ""
   }
@@ -1293,44 +1327,12 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     _id: 340,
     in_HandleDesign: "40",
     in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtm",
-    in_HandleLength: 2500,
-    Object: ""
-  }
-  , {
-    _id: 341,
-    in_HandleDesign: "40",
-    in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeBtmTop",
-    in_HandleLength: 2500,
-    Object: ""
-  }
-  , {
-    _id: 342,
-    in_HandleDesign: "40",
-    in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeLeft",
-    in_HandleLength: 2500,
-    Object: ""
-  }
-  , {
-    _id: 343,
-    in_HandleDesign: "40",
-    in_HandleColor: "StainlessSteelMattBrushed",
-    in_HandlePosType: "StripeRight",
-    in_HandleLength: 2500,
-    Object: ""
-  }
-  , {
-    _id: 344,
-    in_HandleDesign: "40",
-    in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeLeftRight",
     in_HandleLength: 2500,
     Object: ""
   }
   , {
-    _id: 345,
+    _id: 341,
     in_HandleDesign: "50",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeTop",
@@ -1338,7 +1340,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: ""
   }
   , {
-    _id: 346,
+    _id: 342,
     in_HandleDesign: "50",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeBtm",
@@ -1346,7 +1348,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: ""
   }
   , {
-    _id: 347,
+    _id: 343,
     in_HandleDesign: "50",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeBtmTop",
@@ -1354,7 +1356,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: ""
   }
   , {
-    _id: 348,
+    _id: 344,
     in_HandleDesign: "50",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeLeft",
@@ -1362,7 +1364,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: ""
   }
   , {
-    _id: 349,
+    _id: 345,
     in_HandleDesign: "50",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeRight",
@@ -1370,7 +1372,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: ""
   }
   , {
-    _id: 350,
+    _id: 346,
     in_HandleDesign: "50",
     in_HandleColor: "StainlessSteelMattBrushed",
     in_HandlePosType: "StripeLeftRight",
@@ -1378,7 +1380,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: ""
   }
   , {
-    _id: 351,
+    _id: 347,
     in_HandleDesign: "100",
     in_HandleColor: "Black",
     in_HandlePosType: "All",
@@ -1386,7 +1388,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_100_Black_64"
   }
   , {
-    _id: 352,
+    _id: 348,
     in_HandleDesign: "100",
     in_HandleColor: "Black",
     in_HandlePosType: "All",
@@ -1394,7 +1396,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_100_Black_160"
   }
   , {
-    _id: 353,
+    _id: 349,
     in_HandleDesign: "100",
     in_HandleColor: "Black",
     in_HandlePosType: "All",
@@ -1402,55 +1404,55 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_100_Black_320"
   }
   , {
-    _id: 354,
+    _id: 350,
     in_HandleDesign: "100",
     in_HandleColor: "NickelPlated",
     in_HandlePosType: "All",
     in_HandleLength: 64,
     Object: "Handle_100_NickelPlated_64"
+  }
+  , {
+    _id: 351,
+    in_HandleDesign: "100",
+    in_HandleColor: "NickelPlated",
+    in_HandlePosType: "All",
+    in_HandleLength: 160,
+    Object: "Handle_100_NickelPlated_160"
+  }
+  , {
+    _id: 352,
+    in_HandleDesign: "100",
+    in_HandleColor: "NickelPlated",
+    in_HandlePosType: "All",
+    in_HandleLength: 320,
+    Object: "Handle_100_NickelPlated_320"
+  }
+  , {
+    _id: 353,
+    in_HandleDesign: "100",
+    in_HandleColor: "Tin",
+    in_HandlePosType: "All",
+    in_HandleLength: 64,
+    Object: "Handle_100_NickelPlated_64"
+  }
+  , {
+    _id: 354,
+    in_HandleDesign: "100",
+    in_HandleColor: "Tin",
+    in_HandlePosType: "All",
+    in_HandleLength: 160,
+    Object: "Handle_100_NickelPlated_160"
   }
   , {
     _id: 355,
     in_HandleDesign: "100",
-    in_HandleColor: "NickelPlated",
+    in_HandleColor: "Tin",
     in_HandlePosType: "All",
-    in_HandleLength: 160,
-    Object: "Handle_100_NickelPlated_160"
+    in_HandleLength: 320,
+    Object: "Handle_100_NickelPlated_320"
   }
   , {
     _id: 356,
-    in_HandleDesign: "100",
-    in_HandleColor: "NickelPlated",
-    in_HandlePosType: "All",
-    in_HandleLength: 320,
-    Object: "Handle_100_NickelPlated_320"
-  }
-  , {
-    _id: 357,
-    in_HandleDesign: "100",
-    in_HandleColor: "Tin",
-    in_HandlePosType: "All",
-    in_HandleLength: 64,
-    Object: "Handle_100_NickelPlated_64"
-  }
-  , {
-    _id: 358,
-    in_HandleDesign: "100",
-    in_HandleColor: "Tin",
-    in_HandlePosType: "All",
-    in_HandleLength: 160,
-    Object: "Handle_100_NickelPlated_160"
-  }
-  , {
-    _id: 359,
-    in_HandleDesign: "100",
-    in_HandleColor: "Tin",
-    in_HandlePosType: "All",
-    in_HandleLength: 320,
-    Object: "Handle_100_NickelPlated_320"
-  }
-  , {
-    _id: 360,
     in_HandleDesign: "60",
     in_HandleColor: "Black",
     in_HandlePosType: "N/A",
@@ -1458,7 +1460,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_60_Black_128"
   }
   , {
-    _id: 361,
+    _id: 357,
     in_HandleDesign: "60",
     in_HandleColor: "Black",
     in_HandlePosType: "N/A",
@@ -1466,7 +1468,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_60_Black_160"
   }
   , {
-    _id: 362,
+    _id: 358,
     in_HandleDesign: "60",
     in_HandleColor: "ChromedPolished",
     in_HandlePosType: "N/A",
@@ -1474,7 +1476,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_60_ChromedPolished_128"
   }
   , {
-    _id: 363,
+    _id: 359,
     in_HandleDesign: "60",
     in_HandleColor: "ChromedPolished",
     in_HandlePosType: "N/A",
@@ -1482,7 +1484,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_60_ChromedPolished_160"
   }
   , {
-    _id: 364,
+    _id: 360,
     in_HandleDesign: "60",
     in_HandleColor: "BrassPlatedAntique",
     in_HandlePosType: "N/A",
@@ -1490,7 +1492,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_60_BrassPlatedAntique_128"
   }
   , {
-    _id: 365,
+    _id: 361,
     in_HandleDesign: "60",
     in_HandleColor: "BrassPlatedAntique",
     in_HandlePosType: "N/A",
@@ -1498,7 +1500,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_60_BrassPlatedAntique_160"
   }
   , {
-    _id: 366,
+    _id: 362,
     in_HandleDesign: "60",
     in_HandleColor: "NickelPlated",
     in_HandlePosType: "N/A",
@@ -1506,7 +1508,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_60_NickelPlated_128"
   }
   , {
-    _id: 367,
+    _id: 363,
     in_HandleDesign: "60",
     in_HandleColor: "NickelPlated",
     in_HandlePosType: "N/A",
@@ -1514,7 +1516,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_60_NickelPlated_160"
   }
   , {
-    _id: 368,
+    _id: 364,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1522,7 +1524,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_960"
   }
   , {
-    _id: 369,
+    _id: 365,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1530,7 +1532,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_1060"
   }
   , {
-    _id: 370,
+    _id: 366,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1538,7 +1540,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_1160"
   }
   , {
-    _id: 371,
+    _id: 367,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1546,7 +1548,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_1260"
   }
   , {
-    _id: 372,
+    _id: 368,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1554,7 +1556,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_1360"
   }
   , {
-    _id: 373,
+    _id: 369,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1562,7 +1564,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_1460"
   }
   , {
-    _id: 374,
+    _id: 370,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1570,7 +1572,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_1560"
   }
   , {
-    _id: 375,
+    _id: 371,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1578,7 +1580,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_1760"
   }
   , {
-    _id: 376,
+    _id: 372,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1586,7 +1588,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_1960"
   }
   , {
-    _id: 377,
+    _id: 373,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1594,7 +1596,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_96"
   }
   , {
-    _id: 378,
+    _id: 374,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1602,7 +1604,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_128"
   }
   , {
-    _id: 379,
+    _id: 375,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1610,7 +1612,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_160"
   }
   , {
-    _id: 380,
+    _id: 376,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1618,7 +1620,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_210"
   }
   , {
-    _id: 381,
+    _id: 377,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1626,7 +1628,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_260"
   }
   , {
-    _id: 382,
+    _id: 378,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1634,7 +1636,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_310"
   }
   , {
-    _id: 383,
+    _id: 379,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1642,7 +1644,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_360"
   }
   , {
-    _id: 384,
+    _id: 380,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1650,7 +1652,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_410"
   }
   , {
-    _id: 385,
+    _id: 381,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1658,7 +1660,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_460"
   }
   , {
-    _id: 386,
+    _id: 382,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1666,7 +1668,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_560"
   }
   , {
-    _id: 387,
+    _id: 383,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1674,7 +1676,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_660"
   }
   , {
-    _id: 388,
+    _id: 384,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1682,7 +1684,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_760"
   }
   , {
-    _id: 389,
+    _id: 385,
     in_HandleDesign: "110",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1690,7 +1692,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_110_StainlessSteel_860"
   }
   , {
-    _id: 390,
+    _id: 386,
     in_HandleDesign: "120",
     in_HandleColor: "Black",
     in_HandlePosType: "All",
@@ -1698,7 +1700,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_120_Black"
   }
   , {
-    _id: 391,
+    _id: 387,
     in_HandleDesign: "120",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1706,7 +1708,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_120_StainlessSteel"
   }
   , {
-    _id: 392,
+    _id: 388,
     in_HandleDesign: "130",
     in_HandleColor: "StainlessSteel",
     in_HandlePosType: "All",
@@ -1714,7 +1716,7 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_130_StainlessSteel"
   }
   , {
-    _id: 393,
+    _id: 389,
     in_HandleDesign: "130",
     in_HandleColor: "Black",
     in_HandlePosType: "All",
@@ -1722,11 +1724,27 @@ export var ct_tab_HandleMapping: ICT_tab_HandleMapping[] = [
     Object: "Handle_130_Black"
   }
   , {
-    _id: 394,
+    _id: 390,
     in_HandleDesign: "130",
     in_HandleColor: "BrassPlatedAntique",
     in_HandlePosType: "All",
     in_HandleLength: 5,
     Object: "Handle_130_BrassPlatedAntique"
+  }
+  , {
+    _id: 391,
+    in_HandleDesign: "140",
+    in_HandleColor: "StainlessSteel",
+    in_HandlePosType: "All",
+    in_HandleLength: 96,
+    Object: "Handle_140_StainlessSteel"
+  }
+  , {
+    _id: 392,
+    in_HandleDesign: "140",
+    in_HandleColor: "Black",
+    in_HandlePosType: "All",
+    in_HandleLength: 96,
+    Object: "Handle_140_Black"
   }
 ];

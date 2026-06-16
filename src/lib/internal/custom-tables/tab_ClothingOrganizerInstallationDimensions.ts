@@ -112,65 +112,89 @@ import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01, 
 import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01, cbp_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
 import { dc_mc_SegmentFront01, adc_mc_SegmentFront01, cbp_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
 import { dc_me_HoodInsert, adc_me_HoodInsert, cbp_me_HoodInsert } from '../modules/me_HoodInsert'
-import { dc_mc_HoodInsert01, adc_mc_HoodInsert01, cbp_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
 import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, cbp_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
 import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder, cbp_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
 import { dc_mr_CeilingFiller, adc_mr_CeilingFiller, cbp_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
 import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01, cbp_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
 import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder, cbp_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
 import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder, cbp_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
-import { dc_mr_Filler, adc_mr_Filler, cbp_mr_Filler } from '../modules/mr_Filler'
-import { dc_mc_Filler01, adc_mc_Filler01, cbp_mc_Filler01 } from '../modules/mc_Filler01'
+import { dc_mr_FillerStraight, adc_mr_FillerStraight, cbp_mr_FillerStraight } from '../modules/mr_FillerStraight'
+import { dc_mc_FillerStraight01, adc_mc_FillerStraight01, cbp_mc_FillerStraight01 } from '../modules/mc_FillerStraight01'
+import { dc_mc_FillerHardware01, adc_mc_FillerHardware01, cbp_mc_FillerHardware01 } from '../modules/mc_FillerHardware01'
+import { dc_mc_FillerSupportPanels01, adc_mc_FillerSupportPanels01, cbp_mc_FillerSupportPanels01 } from '../modules/mc_FillerSupportPanels01'
+import { dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, cbp_mc_HoodCarcaseParts01 } from '../modules/mc_HoodCarcaseParts01'
 
-export interface cti_tab_CarcaseHoodConstruction {
-  readonly in_CarcaseConstructionID?: string;
-  readonly in_PartID?: string;
+export interface cti_tab_ClothingOrganizerInstallationDimensions {
+  readonly in_ClothingOrganizerDesign?: string;
 }
 
-export interface ctm_tab_CarcaseHoodConstruction {
+export interface ctm_tab_ClothingOrganizerInstallationDimensions {
 }
 
-export interface cto_tab_CarcaseHoodConstruction extends ctm_tab_CarcaseHoodConstruction {
+export interface cto_tab_ClothingOrganizerInstallationDimensions extends ctm_tab_ClothingOrganizerInstallationDimensions {
   readonly _id: number;
-  readonly Width?: number;
-  readonly Height?: number;
-  readonly Depth?: number;
-  readonly PosX?: number;
-  readonly PosY?: number;
-  readonly PosZ?: number;
-  readonly EdgeTypeFront?: string;
-  readonly EdgeTypeLeft?: string;
-  readonly EdgeTypeBack?: string;
-  readonly EdgeTypeRight?: string;
-  readonly EdgeJointType?: string;
+  readonly ClothingOrganizerInstallationMinWidth: number;
+  readonly ClothingOrganizerInstallationMaxWidth: number;
+  readonly ClothingOrganizerInstallationMinHeight: number;
+  readonly ClothingOrganizerInstallationMinDepth: number;
 }
 
-export interface ICT_tab_CarcaseHoodConstruction
-  extends cti_tab_CarcaseHoodConstruction, cto_tab_CarcaseHoodConstruction { }
+export interface ICT_tab_ClothingOrganizerInstallationDimensions
+  extends cti_tab_ClothingOrganizerInstallationDimensions, cto_tab_ClothingOrganizerInstallationDimensions { }
 
-export class ct2_tab_CarcaseHoodConstruction {
+export class ct2_tab_ClothingOrganizerInstallationDimensions {
 
   public findExactly(
-    in_CarcaseConstructionID: string | undefined,
-    in_PartID: string | undefined,
-  ): cto_tab_CarcaseHoodConstruction | undefined {
-    const res = ct_tab_CarcaseHoodConstruction.find((p) =>
-      p.in_CarcaseConstructionID === in_CarcaseConstructionID
-      && p.in_PartID === in_PartID
+    in_ClothingOrganizerDesign: string | undefined,
+  ): cto_tab_ClothingOrganizerInstallationDimensions | undefined {
+    const res = ct_tab_ClothingOrganizerInstallationDimensions.find((p) =>
+      p.in_ClothingOrganizerDesign === in_ClothingOrganizerDesign
     );
     return res;
   }
 
   public find(
-    predicate: (value: cti_tab_CarcaseHoodConstruction) => boolean
-  ): cto_tab_CarcaseHoodConstruction | undefined {
-    for (let index = 0; index < ct_tab_CarcaseHoodConstruction.length; index++) {
-      const element = ct_tab_CarcaseHoodConstruction[index];
+    predicate: (value: cti_tab_ClothingOrganizerInstallationDimensions) => boolean
+  ): cto_tab_ClothingOrganizerInstallationDimensions | undefined {
+    for (let index = 0; index < ct_tab_ClothingOrganizerInstallationDimensions.length; index++) {
+      const element = ct_tab_ClothingOrganizerInstallationDimensions[index];
       if (predicate(element)) return element;
     }
     return undefined;
   }
 }
 
-export var ct_tab_CarcaseHoodConstruction: ICT_tab_CarcaseHoodConstruction[] = [
+export var ct_tab_ClothingOrganizerInstallationDimensions: ICT_tab_ClothingOrganizerInstallationDimensions[] = [
+  {
+    _id: 15,
+    in_ClothingOrganizerDesign: "ConeroLift",
+    ClothingOrganizerInstallationMinWidth: 445,
+    ClothingOrganizerInstallationMaxWidth: 628,
+    ClothingOrganizerInstallationMinHeight: 1314,
+    ClothingOrganizerInstallationMinDepth: 355
+  }
+  , {
+    _id: 16,
+    in_ClothingOrganizerDesign: "ConeroLift_445–628mm",
+    ClothingOrganizerInstallationMinWidth: 445,
+    ClothingOrganizerInstallationMaxWidth: 628,
+    ClothingOrganizerInstallationMinHeight: 1314,
+    ClothingOrganizerInstallationMinDepth: 355
+  }
+  , {
+    _id: 17,
+    in_ClothingOrganizerDesign: "ConeroTrouser",
+    ClothingOrganizerInstallationMinWidth: 536,
+    ClothingOrganizerInstallationMaxWidth: 594,
+    ClothingOrganizerInstallationMinHeight: 650,
+    ClothingOrganizerInstallationMinDepth: 482
+  }
+  , {
+    _id: 18,
+    in_ClothingOrganizerDesign: "ConeroTie",
+    ClothingOrganizerInstallationMinWidth: 85.5,
+    ClothingOrganizerInstallationMaxWidth: 9999,
+    ClothingOrganizerInstallationMinHeight: 90.5,
+    ClothingOrganizerInstallationMinDepth: 475
+  }
 ];

@@ -112,15 +112,18 @@ import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01, 
 import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01, cbp_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
 import { dc_mc_SegmentFront01, adc_mc_SegmentFront01, cbp_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
 import { dc_me_HoodInsert, adc_me_HoodInsert, cbp_me_HoodInsert } from '../modules/me_HoodInsert'
-import { dc_mc_HoodInsert01, adc_mc_HoodInsert01, cbp_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
 import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, cbp_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
 import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder, cbp_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
 import { dc_mr_CeilingFiller, adc_mr_CeilingFiller, cbp_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
 import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01, cbp_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
 import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder, cbp_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
 import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder, cbp_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
-import { dc_mr_Filler, adc_mr_Filler, cbp_mr_Filler } from '../modules/mr_Filler'
-import { dc_mc_Filler01, adc_mc_Filler01, cbp_mc_Filler01 } from '../modules/mc_Filler01'
+import { dc_mr_FillerStraight, adc_mr_FillerStraight, cbp_mr_FillerStraight } from '../modules/mr_FillerStraight'
+import { dc_mc_FillerStraight01, adc_mc_FillerStraight01, cbp_mc_FillerStraight01 } from '../modules/mc_FillerStraight01'
+import { dc_mc_FillerHardware01, adc_mc_FillerHardware01, cbp_mc_FillerHardware01 } from '../modules/mc_FillerHardware01'
+import { dc_mc_FillerSupportPanels01, adc_mc_FillerSupportPanels01, cbp_mc_FillerSupportPanels01 } from '../modules/mc_FillerSupportPanels01'
+import { dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, cbp_mc_HoodCarcaseParts01 } from '../modules/mc_HoodCarcaseParts01'
+import { ITableParents_mc_HoodCarcaseParts01 } from '../var-interfaces';
 
 export interface cti_tab_HoodAssemblyParts {
   readonly in_CarcaseConstructionID?: string;
@@ -132,6 +135,12 @@ export interface ctm_tab_HoodAssemblyParts {
 export interface cto_tab_HoodAssemblyParts extends ctm_tab_HoodAssemblyParts {
   readonly _id: number;
   readonly PartID?: string;
+  Width(m: ITableParents_mc_HoodCarcaseParts01): number;
+  Height(m: ITableParents_mc_HoodCarcaseParts01): number;
+  Depth(m: ITableParents_mc_HoodCarcaseParts01): number;
+  PositionWidth(m: ITableParents_mc_HoodCarcaseParts01): number;
+  PositionHeight(m: ITableParents_mc_HoodCarcaseParts01): number;
+  PositionDepth(m: ITableParents_mc_HoodCarcaseParts01): number;
 }
 
 export interface ICT_tab_HoodAssemblyParts
@@ -160,4 +169,352 @@ export class ct2_tab_HoodAssemblyParts {
 }
 
 export var ct_tab_HoodAssemblyParts: ICT_tab_HoodAssemblyParts[] = [
+  {
+    _id: 51,
+    in_CarcaseConstructionID: "HoodConstructId01",
+    PartID: "part_HoodShelftop",
+    Width(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseWidth;
+    }
+    ,
+    Height(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 19;
+    }
+    ,
+    Depth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseDepth - 0.5;
+    }
+    ,
+    PositionWidth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionHeight(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseHeight - 19.5;
+    }
+    ,
+    PositionDepth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+
+  }
+  , {
+    _id: 52,
+    in_CarcaseConstructionID: "HoodConstructId01",
+    PartID: "part_HoodShelfbtm",
+    Width(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseWidth;
+    }
+    ,
+    Height(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 19;
+    }
+    ,
+    Depth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseDepth;
+    }
+    ,
+    PositionWidth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionHeight(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionDepth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+
+  }
+  , {
+    _id: 53,
+    in_CarcaseConstructionID: "HoodConstructId01",
+    PartID: "part_HoodRail",
+    Width(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseWidth;
+    }
+    ,
+    Height(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 120;
+    }
+    ,
+    Depth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseDepth;
+    }
+    ,
+    PositionWidth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionHeight(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionDepth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+
+  }
+  , {
+    _id: 54,
+    in_CarcaseConstructionID: "HoodConstructId01",
+    PartID: "part_HoodBackwall",
+    Width(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseWidth;
+    }
+    ,
+    Height(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseHeight;
+    }
+    ,
+    Depth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 8;
+    }
+    ,
+    PositionWidth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionHeight(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionDepth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+
+  }
+  , {
+    _id: 55,
+    in_CarcaseConstructionID: "HoodConstructId02",
+    PartID: "part_HoodShelftop",
+    Width(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseWidth;
+    }
+    ,
+    Height(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 19;
+    }
+    ,
+    Depth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseDepth - 0.5;
+    }
+    ,
+    PositionWidth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionHeight(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseHeight - 19.5;
+    }
+    ,
+    PositionDepth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+
+  }
+  , {
+    _id: 56,
+    in_CarcaseConstructionID: "HoodConstructId02",
+    PartID: "part_HoodShelfbtm",
+    Width(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseWidth;
+    }
+    ,
+    Height(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 19;
+    }
+    ,
+    Depth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseDepth;
+    }
+    ,
+    PositionWidth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionHeight(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionDepth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+
+  }
+  , {
+    _id: 57,
+    in_CarcaseConstructionID: "HoodConstructId02",
+    PartID: "part_HoodBackwall",
+    Width(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseWidth;
+    }
+    ,
+    Height(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseHeight;
+    }
+    ,
+    Depth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 8;
+    }
+    ,
+    PositionWidth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionHeight(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionDepth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+
+  }
+  , {
+    _id: 58,
+    in_CarcaseConstructionID: "HoodConstructId03",
+    PartID: "part_HoodSidepanelleft",
+    Width(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 19;
+    }
+    ,
+    Height(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseHeight;
+    }
+    ,
+    Depth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseDepth;
+    }
+    ,
+    PositionWidth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionHeight(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionDepth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+
+  }
+  , {
+    _id: 59,
+    in_CarcaseConstructionID: "HoodConstructId03",
+    PartID: "part_HoodSidepanelright",
+    Width(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 19;
+    }
+    ,
+    Height(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseHeight;
+    }
+    ,
+    Depth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseDepth;
+    }
+    ,
+    PositionWidth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionHeight(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionDepth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+
+  }
+  , {
+    _id: 60,
+    in_CarcaseConstructionID: "HoodConstructId03",
+    PartID: "part_HoodShelftop",
+    Width(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseWidth;
+    }
+    ,
+    Height(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 19;
+    }
+    ,
+    Depth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseDepth - 0.5;
+    }
+    ,
+    PositionWidth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionHeight(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseHeight - 19.5;
+    }
+    ,
+    PositionDepth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+
+  }
+  , {
+    _id: 61,
+    in_CarcaseConstructionID: "HoodConstructId03",
+    PartID: "part_HoodShelfbtm",
+    Width(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseWidth;
+    }
+    ,
+    Height(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 19;
+    }
+    ,
+    Depth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseDepth;
+    }
+    ,
+    PositionWidth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionHeight(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionDepth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+
+  }
+  , {
+    _id: 62,
+    in_CarcaseConstructionID: "HoodConstructId03",
+    PartID: "part_HoodBackwall",
+    Width(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseWidth;
+    }
+    ,
+    Height(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseHeight;
+    }
+    ,
+    Depth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return m.mod_CarcaseDepth;
+    }
+    ,
+    PositionWidth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionHeight(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+    ,
+    PositionDepth(m: ITableParents_mc_HoodCarcaseParts01): number {
+      return 0;
+    }
+
+  }
 ];

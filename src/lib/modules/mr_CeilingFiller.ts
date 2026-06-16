@@ -14,7 +14,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping } from '../internal/custo
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction } from '../internal/custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings } from '../internal/custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction } from '../internal/custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction } from '../internal/custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection } from '../internal/custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations } from '../internal/custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping } from '../internal/custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape } from '../internal/custom-tables/tab_CarcasePartsShape'
@@ -24,9 +24,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings } fro
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension } from '../internal/custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction } from '../internal/custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping } from '../internal/custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition } from '../internal/custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping } from '../internal/custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions } from '../internal/custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping } from '../internal/custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings } from '../internal/custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary } from '../internal/custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables } from '../internal/custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction } from '../internal/custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -52,7 +53,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping } from '../internal/custom-tabl
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings } from '../internal/custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings } from '../internal/custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList } from '../internal/custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction } from '../internal/custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings } from '../internal/custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction } from '../internal/custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings } from '../internal/custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping } from '../internal/custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction } from '../internal/custom-tables/tab_FlipliftConstruction'
@@ -67,6 +70,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction } from 
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction } from '../internal/custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping } from '../internal/custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction } from '../internal/custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection } from '../internal/custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings } from '../internal/custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary } from '../internal/custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary } from '../internal/custom-tables/tab_GraphicLibrary'
@@ -166,13 +170,17 @@ export function mr_CeilingFiller_afterDataCompletion(this: adc_mr_CeilingFiller)
     // CUSTOMSCRIPT_mr_CeilingFiller_AFTERDATACOMPLETION
 
     // By Jiri Polcar Mar 2026, split from mr_Paneltop
+    // Update April 2026 - move mod_CeilingFillerConstruction and mod_CeilingFillerHeight to the contour-owning modules
 
-    const ceilingFillerConstruction = this.mod_CeilingFillerConstruction ?? 'Construction1';
+
     const fillerRecessFront = this.mod_CeilingFillerRecess ?? 0;
     const fillerRecessLeft = this.mod_CeilingFillerRecessLeft ?? 0;
     const fillerRecessRight = this.mod_CeilingFillerRecessRight ?? 0;
+    const ceilingFillerHeight = this.mod_CeilingFillerHeight ?? -1;
+    const ceilingFillerConstruction = this.mod_CeilingFillerConstruction ?? 'NONE';
     // todo: replace this with proper table or matrix
-    const canHaveSideFillers = ['Construction2'].includes(ceilingFillerConstruction);
+    //const canHaveSideFillers = (x: string) => ['Construction2'].includes(x);
+    const canHaveSideFillers = (x: string) => true;
 
     const {
       LongPartSegment,
@@ -197,26 +205,50 @@ export function mr_CeilingFiller_afterDataCompletion(this: adc_mr_CeilingFiller)
       const current = segments[i];
       const rest = segments.slice(i + 1);
       for (let j = 0; j < rest.length; j++) {
-        current.tryMatchNeighboursByAxialContinuity(CKind.Front, rest, { match3D: true, matchFootprint: true, });
+        current.tryMatchNeighboursByAxialContinuity(
+          CKind.Front,
+          rest,
+          {
+            match3D: true,
+            matchFootprint: true,
+            condition(a, b) {
+              const aHeight = a.getAttributeOrDefault('mod_CeilingFillerHeight', -1);
+              const bHeight = b.getAttributeOrDefault('mod_CeilingFillerHeight', -1);
+              const aConst = a.getAttributeOrDefault('mod_CeilingFillerConstruction', 'NONE');
+              const bConst = b.getAttributeOrDefault('mod_CeilingFillerConstruction', 'NONE');
+              // uprights and possibly further modules won't define heights or constructions, but they still need to match
+              if (aConst === 'NONE' || bConst === 'NONE' || aHeight <= 0 || bHeight <= 0) {
+                return true;
+              }
+              else {
+                return aHeight === bHeight && aConst === bConst;
+              }
+            },
+          }
+        );
       }
     }
 
     const startingSegments = segments.filter(segment => segment.neighbours.get(CKind.Left)?.other === null);
 
     let ceilingFillerIndex = 1;
-    const addCeilingFiller = () => {
+    const addCeilingFiller = (ceilingFillerConstruction: string, ceilingFillerHeight: number) => {
       const ceilingFiller = this.addOD_M_mc_CeilingFiller01();
       ceilingFiller.mod_CeilingFillerId = `CeilingFiller_${ceilingFillerIndex++}`;
       ceilingFiller.mod_CeilingFillerThk = this.mod_CeilingFillerThk ?? 99;
       ceilingFiller.mod_CeilingFillerConstruction = ceilingFillerConstruction;
-      ceilingFiller.mod_CeilingFillerHeight = this.mod_CeilingFillerHeight ?? 99;
+      ceilingFiller.mod_CeilingFillerHeight = this.mod_CeilingFillerHeight;//ceilingFillerHeight;
       return ceilingFiller;
     };
 
     startingSegments.forEach(start => {
       // fixed error: If you put the instantiation here and not after the return of the lone upright,
       // it will break at lonely contour uprights and they will walk away. I'm not kidding.
-      // const paneltop = addPanelTop(); 
+      // const paneltop = addPanelTop();
+
+      // Evaluate the ceiling filler construction and height. It might be that there are segments that do not define the properties.
+      // In that case, crawl to the right through the matched neighbours until a defining segment is found.
+      // If no segment is found, emit error message and quit.
 
       let length = 0;
       let current: LongPartSegmentTypeAlias | null = start;
@@ -234,7 +266,7 @@ export function mr_CeilingFiller_afterDataCompletion(this: adc_mr_CeilingFiller)
         // do not add paneltop if it is an upright and it is only an upright
         return;
       }
-      const filler = addCeilingFiller();
+      const filler = addCeilingFiller(ceilingFillerConstruction, ceilingFillerHeight);
 
       const BL = start.getCornerPoint(CKind.Left, CKind.Back)!;
       const FR = start.getCornerPoint(CKind.Right, CKind.Front)!;
@@ -253,27 +285,47 @@ export function mr_CeilingFiller_afterDataCompletion(this: adc_mr_CeilingFiller)
 
       const frontCeilingFillerIsLong = (this.mod_CeilingFillerTransitionType ?? 'FrontLong') === 'FrontLong';
 
-      if (canHaveSideFillers) {
-        if (
+      if (canHaveSideFillers(ceilingFillerConstruction)) {
+        const forceLeftReturnByFlag =
+          start.getAttributeOrDefault('mod_ReturnCeilingFillerLeft', 0) === 1;
+
+        const forceRightReturnByFlag =
+          lastSegment.getAttributeOrDefault('mod_ReturnCeilingFillerRight', 0) === 1;
+
+        const forceLeftReturnByUpright =
+          !forceLeftReturnByFlag
+          && start.getAttributeOrDefault(CONTOUR_ATTRIBUTE_OWNER_TYPE, '') === mr_Upright;
+
+        const forceRightReturnByUpright =
+          !forceRightReturnByFlag
+          && lastSegment.getAttributeOrDefault(CONTOUR_ATTRIBUTE_OWNER_TYPE, '') === mr_Upright;
+
+        const drawLeftReturn =
           start.getAttributeOrDefault('mod_CeilingAreaVisLeft', 0) === 1
-          || start.getAttributeOrDefault(CONTOUR_ATTRIBUTE_OWNER_TYPE, '') === mr_Upright
-        ) {
-          offsetStartPoint = fillerRecessLeft; //Left side recess has it's own attribute (might be diferent from front and right)
+          || forceLeftReturnByFlag
+          || forceLeftReturnByUpright;
+
+        const drawRightReturn =
+          lastSegment.getAttributeOrDefault('mod_CeilingAreaVisRight', 0) === 1
+          || forceRightReturnByFlag
+          || forceRightReturnByUpright;
+
+        if (drawLeftReturn) {
+          offsetStartPoint = fillerRecessLeft;
           drawLeftFiller = true;
+
           if (frontCeilingFillerIsLong) {
             leftFillerEndTransitionOffset += this.mod_CeilingFillerThk ?? 0;
           }
           else {
             frontFillerStartTransitionOffset += this.mod_CeilingFillerThk ?? 0;
           }
-
         }
-        if (
-          lastSegment.getAttributeOrDefault('mod_CeilingAreaVisRight', 0) === 1
-          || lastSegment.getAttributeOrDefault(CONTOUR_ATTRIBUTE_OWNER_TYPE, '') === mr_Upright
-        ) {
-          offsetEndPoint = fillerRecessRight; //Right side recess has it's own attribute (might be diferent from front and right)
+
+        if (drawRightReturn) {
+          offsetEndPoint = fillerRecessRight;
           drawRightFiller = true;
+
           if (frontCeilingFillerIsLong) {
             rightFillerStartTransitionOffset += this.mod_CeilingFillerThk ?? 0;
           }
@@ -305,7 +357,7 @@ export function mr_CeilingFiller_afterDataCompletion(this: adc_mr_CeilingFiller)
       this.mod_LengthList.push(filler.mod_Width);
 
       if (drawLeftFiller) {
-        const leftFiller = addCeilingFiller();
+        const leftFiller = addCeilingFiller(ceilingFillerConstruction, ceilingFillerHeight);
         start.getOrAddSide(CKind.Back, undefined);
         start.getOrAddSide(CKind.Front, undefined);
         const startSegmentDepth = start.getLengthBetweenParallelSides(CKind.Front, CKind.Back) ?? 1000;
@@ -318,7 +370,7 @@ export function mr_CeilingFiller_afterDataCompletion(this: adc_mr_CeilingFiller)
         this.mod_LengthList.push(leftFiller.mod_Width);
       }
       if (drawRightFiller) {
-        const rightFiller = addCeilingFiller();
+        const rightFiller = addCeilingFiller(ceilingFillerConstruction, ceilingFillerHeight);
         lastSegment.getOrAddSide(CKind.Back, undefined);
         lastSegment.getOrAddSide(CKind.Front, undefined);
         const lastSegmentDepth = lastSegment.getLengthBetweenParallelSides(CKind.Front, CKind.Back) ?? 1000;
@@ -326,10 +378,7 @@ export function mr_CeilingFiller_afterDataCompletion(this: adc_mr_CeilingFiller)
         rightFiller.mod_CeilingFillerRecess = fillerRecessRight;
         const eBR = lastSegment.getCornerPoint(CKind.Right, CKind.Back)!.toVector3Extended();
         const eFR = lastSegment.getCornerPoint(CKind.Right, CKind.Front)!.toVector3Extended();
-        const rightSide =
-          new LineSegmentEquation(eFR, eBR)
-            .translate({ start: forward.scale(-fillerRecessFront - rightFillerStartTransitionOffset) })
-          ;
+        const rightSide = new LineSegmentEquation(eFR, eBR).translate({ start: forward.scale(-fillerRecessFront - rightFillerStartTransitionOffset) });
         rightFiller.setOrigin(rightSide.getTransformationMatrixToStartPoint());
 
         // for pricing

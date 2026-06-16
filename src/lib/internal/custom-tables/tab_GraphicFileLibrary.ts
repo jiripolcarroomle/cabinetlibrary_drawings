@@ -112,15 +112,17 @@ import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01, 
 import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01, cbp_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
 import { dc_mc_SegmentFront01, adc_mc_SegmentFront01, cbp_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
 import { dc_me_HoodInsert, adc_me_HoodInsert, cbp_me_HoodInsert } from '../modules/me_HoodInsert'
-import { dc_mc_HoodInsert01, adc_mc_HoodInsert01, cbp_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
 import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, cbp_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
 import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder, cbp_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
 import { dc_mr_CeilingFiller, adc_mr_CeilingFiller, cbp_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
 import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01, cbp_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
 import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder, cbp_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
 import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder, cbp_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
-import { dc_mr_Filler, adc_mr_Filler, cbp_mr_Filler } from '../modules/mr_Filler'
-import { dc_mc_Filler01, adc_mc_Filler01, cbp_mc_Filler01 } from '../modules/mc_Filler01'
+import { dc_mr_FillerStraight, adc_mr_FillerStraight, cbp_mr_FillerStraight } from '../modules/mr_FillerStraight'
+import { dc_mc_FillerStraight01, adc_mc_FillerStraight01, cbp_mc_FillerStraight01 } from '../modules/mc_FillerStraight01'
+import { dc_mc_FillerHardware01, adc_mc_FillerHardware01, cbp_mc_FillerHardware01 } from '../modules/mc_FillerHardware01'
+import { dc_mc_FillerSupportPanels01, adc_mc_FillerSupportPanels01, cbp_mc_FillerSupportPanels01 } from '../modules/mc_FillerSupportPanels01'
+import { dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, cbp_mc_HoodCarcaseParts01 } from '../modules/mc_HoodCarcaseParts01'
 import { IThreeDModelData } from '../models-3d'
 
 export interface cti_tab_GraphicFileLibrary {
@@ -165,10 +167,10 @@ export class ct2_tab_GraphicFileLibrary {
 
 export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
   {
-    _id: 8372,
+    _id: 9464,
     in_GraphicFileId: "Dowel",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d2509f2a-d3f3-4d78-a4c0-bb92f805b1ea_dowel.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=fOrncCdvHyfJU1BaNKyPiAODHdWobhHk4ushQ64kb9U%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDI1MDlmMmEtZDNmMy00ZDc4LWE0YzAtYmI5MmY4MDViMWVhX2Rvd2VsLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ec6ac0fd-ae43-4ceb-8d45-dafa8d1c9501_dowel.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Dk06Flhtsb560wyUGbaKpkXrB4LoXyFzo0WnEpOKqjQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWM2YWMwZmQtYWU0My00Y2ViLThkNDUtZGFmYThkMWM5NTAxX2Rvd2VsLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -182,10 +184,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8373,
+    _id: 9465,
     in_GraphicFileId: "DowelMiddleSide",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d2509f2a-d3f3-4d78-a4c0-bb92f805b1ea_dowel.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=fOrncCdvHyfJU1BaNKyPiAODHdWobhHk4ushQ64kb9U%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDI1MDlmMmEtZDNmMy00ZDc4LWE0YzAtYmI5MmY4MDViMWVhX2Rvd2VsLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ec6ac0fd-ae43-4ceb-8d45-dafa8d1c9501_dowel.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Dk06Flhtsb560wyUGbaKpkXrB4LoXyFzo0WnEpOKqjQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWM2YWMwZmQtYWU0My00Y2ViLThkNDUtZGFmYThkMWM5NTAxX2Rvd2VsLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -199,10 +201,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8374,
+    _id: 9466,
     in_GraphicFileId: "DropDown_Front",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c93d6962-c54e-4d45-9983-c0ab1e4354d0_bar_front.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=W1BhFnwmtzM%2Bh8k3%2F9Q9YbuMHBp1qfLzGUaT88RPjd4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzkzZDY5NjItYzU0ZS00ZDQ1LTk5ODMtYzBhYjFlNDM1NGQwX2Jhcl9mcm9udC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a88909dd-a6e5-4e82-8ffc-9f2e301c9bc1_bar_front.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=v6SF9NfUMf7Hg0YKvuOR%2BHDiw7iKl6ZyLjp9l29aMxc%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTg4OTA5ZGQtYTZlNS00ZTgyLThmZmMtOWYyZTMwMWM5YmMxX2Jhcl9mcm9udC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -216,10 +218,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8375,
+    _id: 9467,
     in_GraphicFileId: "DropDown_L",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ae7baa46-e8b9-487b-82ec-1a76bfbd79c9_bar_l.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=MHNiMn%2FHvok4hfGqNJ9%2Fxqf4DbEMGtyyKJcKqsL%2BLGQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYWU3YmFhNDYtZThiOS00ODdiLTgyZWMtMWE3NmJmYmQ3OWM5X2Jhcl9sLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c6e02f13-9ae4-4ae2-9b81-e1bd4224f35a_bar_l.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=OqN6QmgzbJPPKrtk0j0xQhTYLsHutXoOgY0M8LMEQgM%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzZlMDJmMTMtOWFlNC00YWUyLTliODEtZTFiZDQyMjRmMzVhX2Jhcl9sLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -233,10 +235,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8376,
+    _id: 9468,
     in_GraphicFileId: "DropDown_R",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/219fa3bf-e48a-46fb-b13b-38797a1a73ca_bar_r.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=r6EVh%2BR7B%2FEezmh2kBEITAuGBBr%2BniBWzcqj83B5irY%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjE5ZmEzYmYtZTQ4YS00NmZiLWIxM2ItMzg3OTdhMWE3M2NhX2Jhcl9yLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9f0692fe-9ce7-4a76-8789-a0c4d2c9f2e2_bar_r.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=fo74fH%2BEh1iWiuz4iYTQnWtFk3dSxqcHwFs%2FRZv10RU%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOWYwNjkyZmUtOWNlNy00YTc2LTg3ODktYTBjNGQyYzlmMmUyX2Jhcl9yLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -250,10 +252,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8377,
+    _id: 9469,
     in_GraphicFileId: "Graphic_Legra_Syncro",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a30464c0-1b29-413b-9078-da2213cc6547_snchro_legra_2.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=EnF1JVnrWLM%2FFQRTdShJoIN%2BMfEnIOGNNZoViejbFLk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTMwNDY0YzAtMWIyOS00MTNiLTkwNzgtZGEyMjEzY2M2NTQ3X3NuY2hyb19sZWdyYV8yLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ad995a98-8fef-4afd-a80a-26602e73f757_snchro_legra_2.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=UDOHOix%2FnSbvvTfOEneccYMuvDM%2Bepc41%2FEewyw1jbY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYWQ5OTVhOTgtOGZlZi00YWZkLWE4MGEtMjY2MDJlNzNmNzU3X3NuY2hyb19sZWdyYV8yLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -267,10 +269,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8378,
+    _id: 9470,
     in_GraphicFileId: "Legra_Box_C_270_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/fb75e9e3-5076-4ec5-bb5a-f9274b4f41df_legra_box_c_270_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=P7l8DdYk3iPZLNrXjoXY%2FwibchDItox9v6YIG41yRPg%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmI3NWU5ZTMtNTA3Ni00ZWM1LWJiNWEtZjkyNzRiNGY0MWRmX2xlZ3JhX2JveF9jXzI3MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/21bef297-43cc-4f1f-b9af-0e64e1b46ef5_legra_box_c_270_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=zNqEnm8PjvMtmPqYYcOcltaafMUQTMwrRVs62emVDw0%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjFiZWYyOTctNDNjYy00ZjFmLWI5YWYtMGU2NGUxYjQ2ZWY1X2xlZ3JhX2JveF9jXzI3MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -284,10 +286,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8379,
+    _id: 9471,
     in_GraphicFileId: "Legra_Box_C_270_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7ab432b2-6f2e-48f1-835f-6ec30640bdf1_legra_box_c_270_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=BW0MUK3dttME%2FguG%2FBEvqyh9FmOvbuLnRcVUmkIbEvg%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvN2FiNDMyYjItNmYyZS00OGYxLTgzNWYtNmVjMzA2NDBiZGYxX2xlZ3JhX2JveF9jXzI3MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/69e4512a-7b41-481a-ab43-4ef6188123cd_legra_box_c_270_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=a6CIEO6fsalI3T1Oe6v9n8CX33PN%2F9TbLjWqhcsvdSs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjllNDUxMmEtN2I0MS00ODFhLWFiNDMtNGVmNjE4ODEyM2NkX2xlZ3JhX2JveF9jXzI3MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -301,10 +303,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8380,
+    _id: 9472,
     in_GraphicFileId: "Legra_Box_C_300_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/cae670de-2e5b-44f9-95b3-80a5c5de3c29_legra_box_c_300_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=X%2BXWvu3yRhC7zakypGRS0W8blZ0j%2FOCc0kLS%2FFyo6jw%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvY2FlNjcwZGUtMmU1Yi00NGY5LTk1YjMtODBhNWM1ZGUzYzI5X2xlZ3JhX2JveF9jXzMwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/83e06037-14a4-45d3-9372-9bab1f9e0d69_legra_box_c_300_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=rQExrRmkvW07qH8cUwuAJbV%2B1rLZmGMpIBGDZZOt%2B3s%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODNlMDYwMzctMTRhNC00NWQzLTkzNzItOWJhYjFmOWUwZDY5X2xlZ3JhX2JveF9jXzMwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -318,10 +320,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8381,
+    _id: 9473,
     in_GraphicFileId: "Legra_Box_C_300_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ecf64119-d6e4-4a06-9997-28541c963a18_legra_box_c_300_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=28QrEvRfmHLh7L4ImeoABDh1VO8Mot117%2FpVF0XucqI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWNmNjQxMTktZDZlNC00YTA2LTk5OTctMjg1NDFjOTYzYTE4X2xlZ3JhX2JveF9jXzMwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/11ae72da-8ae1-466a-988c-ea564b7b0781_legra_box_c_300_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=zSXC%2FsXIaZPQSnlbbpigXO9WVm3UsVMlrwYmMZad2wA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTFhZTcyZGEtOGFlMS00NjZhLTk4OGMtZWE1NjRiN2IwNzgxX2xlZ3JhX2JveF9jXzMwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -335,10 +337,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8382,
+    _id: 9474,
     in_GraphicFileId: "Legra_Box_C_350_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/4706f34e-eab4-47af-937e-2f0a34c5a16b_legra_box_c_350_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=2Xb2Aw5CtJbvcPW%2FGUBQAsOAJVY2tAuhmQNI0hh5DAw%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDcwNmYzNGUtZWFiNC00N2FmLTkzN2UtMmYwYTM0YzVhMTZiX2xlZ3JhX2JveF9jXzM1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/32e5a3f4-a4c3-4ee0-a16a-8d68732ca8ea_legra_box_c_350_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ZJgEJb0ZeGxlBs%2FgSjv4jly42vShuUr%2FWpRO9xO78u8%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzJlNWEzZjQtYTRjMy00ZWUwLWExNmEtOGQ2ODczMmNhOGVhX2xlZ3JhX2JveF9jXzM1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -352,10 +354,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8383,
+    _id: 9475,
     in_GraphicFileId: "Legra_Box_C_350_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/2c7b56aa-fb29-4195-96a9-77e0c98864f1_legra_box_c_350_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=i0Fy51wvg5mLIPcCnUW%2BIEUGvmUKnDF6RT%2FDlphtPbM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMmM3YjU2YWEtZmIyOS00MTk1LTk2YTktNzdlMGM5ODg2NGYxX2xlZ3JhX2JveF9jXzM1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5b564dfb-54d8-451b-ae35-4b12e979fc1e_legra_box_c_350_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=RfwiYIGE7XZONsDnXB0B4N1Ya1sLCGl8LO48qXLMvsY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNWI1NjRkZmItNTRkOC00NTFiLWFlMzUtNGIxMmU5NzlmYzFlX2xlZ3JhX2JveF9jXzM1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -369,10 +371,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8384,
+    _id: 9476,
     in_GraphicFileId: "Legra_Box_C_400_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/eb6d2ab9-7cdc-4647-b424-aade6ca3a0da_legra_box_c_400_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=H8Ojf3kgg8NhjjH86hH7WKfpBVPDQF2xCO%2FUedGSSVA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWI2ZDJhYjktN2NkYy00NjQ3LWI0MjQtYWFkZTZjYTNhMGRhX2xlZ3JhX2JveF9jXzQwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/fce88b9f-66db-464e-a3ba-fbdbd398d43e_legra_box_c_400_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=4yEIHFp4bF%2BQCss%2FJ4%2B9bMfgcCep%2BWWSQmpnTyFqrw4%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmNlODhiOWYtNjZkYi00NjRlLWEzYmEtZmJkYmQzOThkNDNlX2xlZ3JhX2JveF9jXzQwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -386,10 +388,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8385,
+    _id: 9477,
     in_GraphicFileId: "Legra_Box_C_400_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/2c929d7d-32be-4be1-97fb-a21c23e96cf9_legra_box_c_400_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=%2BOCG7uBTwE9QQw9GdDs3tOQCEUpbUGQTWnwvALkAP4M%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMmM5MjlkN2QtMzJiZS00YmUxLTk3ZmItYTIxYzIzZTk2Y2Y5X2xlZ3JhX2JveF9jXzQwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bbace5c5-442a-4658-92cd-e4181b0def0a_legra_box_c_400_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=cwBH%2FhdYq%2FgxOVJsBnz1%2BhpvZXKAX8D7a8CqC04%2BVaU%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmJhY2U1YzUtNDQyYS00NjU4LTkyY2QtZTQxODFiMGRlZjBhX2xlZ3JhX2JveF9jXzQwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -403,10 +405,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8386,
+    _id: 9478,
     in_GraphicFileId: "Legra_Box_C_450_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/31db4b27-274a-481a-86d8-4600057b6438_legra_box_c_450_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=icWSaaXmUXedKlL7hXFIuMfhdeqk11t%2F1bYo6J2AGLI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzFkYjRiMjctMjc0YS00ODFhLTg2ZDgtNDYwMDA1N2I2NDM4X2xlZ3JhX2JveF9jXzQ1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9e395ac2-405f-4596-b954-e340999fdc76_legra_box_c_450_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=kwYJNykDWzVX%2FVHSWI009f61B89yBm1BLFjakWXqJ0E%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOWUzOTVhYzItNDA1Zi00NTk2LWI5NTQtZTM0MDk5OWZkYzc2X2xlZ3JhX2JveF9jXzQ1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -420,10 +422,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8387,
+    _id: 9479,
     in_GraphicFileId: "Legra_Box_C_450_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e2580f1a-1d00-46de-b148-37d6458ab16f_legra_box_c_450_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=iLjRAxeRcw9zPVp9J9h63xb5VzkNesOhncCKcxEAAvM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTI1ODBmMWEtMWQwMC00NmRlLWIxNDgtMzdkNjQ1OGFiMTZmX2xlZ3JhX2JveF9jXzQ1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d81b16af-6366-4898-b847-f3194e09098c_legra_box_c_450_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=94qJWWcMWyUDUyZ0EkHDeACzXuZuk196E%2BPiVEn9VA4%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDgxYjE2YWYtNjM2Ni00ODk4LWI4NDctZjMxOTRlMDkwOThjX2xlZ3JhX2JveF9jXzQ1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -437,10 +439,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8388,
+    _id: 9480,
     in_GraphicFileId: "Legra_Box_C_500_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/dd376991-b8b9-4256-b4aa-948e36ff30db_legra_box_c_500_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=lHxBf9ivuB7Az2Ok07ExOVRl0zlN2UDHvSH6ieyzKQg%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZGQzNzY5OTEtYjhiOS00MjU2LWI0YWEtOTQ4ZTM2ZmYzMGRiX2xlZ3JhX2JveF9jXzUwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e6e7fa8d-fcb0-4300-bd88-eed7ec1975a5_legra_box_c_500_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=VY1faPhtMoy1O%2BOWmeAMSfN24pQUI8Hf%2BQC12RYcxLQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTZlN2ZhOGQtZmNiMC00MzAwLWJkODgtZWVkN2VjMTk3NWE1X2xlZ3JhX2JveF9jXzUwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -454,10 +456,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8389,
+    _id: 9481,
     in_GraphicFileId: "Legra_Box_C_500_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/1d6c2c94-d877-41fa-9d27-e901f981164b_legra_box_c_500_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=SiKaMgIXdeMKkKDvEuiOQJnLIQ3OjfQvxqcrSSCvgEQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMWQ2YzJjOTQtZDg3Ny00MWZhLTlkMjctZTkwMWY5ODExNjRiX2xlZ3JhX2JveF9jXzUwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c4313c00-b27e-479c-b834-177a5f1e3671_legra_box_c_500_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=S9sux%2FnaZEIoCvhWGOWx2WikfpocC9Eu7rYSFU45A10%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzQzMTNjMDAtYjI3ZS00NzljLWI4MzQtMTc3YTVmMWUzNjcxX2xlZ3JhX2JveF9jXzUwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -471,10 +473,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8390,
+    _id: 9482,
     in_GraphicFileId: "Legra_Box_C_550_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b6e45577-a713-4dda-9bc0-625acfd59083_legra_box_c_550_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=7zYmRWE8sN41hlv%2FWTbL8kf2oMH9%2BCnwiZPW4zckc4Q%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjZlNDU1NzctYTcxMy00ZGRhLTliYzAtNjI1YWNmZDU5MDgzX2xlZ3JhX2JveF9jXzU1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8036494a-06e2-4560-b8bd-d8ad431aa91e_legra_box_c_550_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=4dAxWI8PfT%2BYu6AHZHQYZ3FaMKmFY51zfhEUqaxxzwI%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODAzNjQ5NGEtMDZlMi00NTYwLWI4YmQtZDhhZDQzMWFhOTFlX2xlZ3JhX2JveF9jXzU1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -488,10 +490,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8391,
+    _id: 9483,
     in_GraphicFileId: "Legra_Box_C_550_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a4867ffb-215c-4309-b26d-c9ef6c1737a5_legra_box_c_550_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=cr%2BKkUk0toMDJi0%2BeU8Y2nj%2B7IGpxPY4vRV9ZlfqlWc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTQ4NjdmZmItMjE1Yy00MzA5LWIyNmQtYzllZjZjMTczN2E1X2xlZ3JhX2JveF9jXzU1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ee5d72e3-2a2e-45d1-99e4-95c342c93220_legra_box_c_550_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Z5%2Fn9xeFLXivwMyO%2BvbRQTAwATXBLrylr81ac9CK5Bk%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWU1ZDcyZTMtMmEyZS00NWQxLTk5ZTQtOTVjMzQyYzkzMjIwX2xlZ3JhX2JveF9jXzU1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -505,10 +507,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8392,
+    _id: 9484,
     in_GraphicFileId: "Legra_Box_C_600_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/22ccfca4-7fef-41b4-aada-fa40fa0abeaa_legra_box_c_600_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=FoKV%2BIGQCldaxLMrOfq8e3DOuwxpTUb7yv%2BGFei0pik%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjJjY2ZjYTQtN2ZlZi00MWI0LWFhZGEtZmE0MGZhMGFiZWFhX2xlZ3JhX2JveF9jXzYwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/0e879bc4-7353-4a62-8817-725bfe11e50f_legra_box_c_600_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Qq525ZFQkkp8mn9k%2B9ncSeX9ZhUsVzYiTYWocXA27cI%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMGU4NzliYzQtNzM1My00YTYyLTg4MTctNzI1YmZlMTFlNTBmX2xlZ3JhX2JveF9jXzYwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -522,10 +524,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8393,
+    _id: 9485,
     in_GraphicFileId: "Legra_Box_C_600_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/2a2fc109-405a-4cd5-b350-fe3bd7bafab3_legra_box_c_600_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=HYu0KuxnZytwznwrk17hAvSkk6DrVBrgWDjrZdOoXI0%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMmEyZmMxMDktNDA1YS00Y2Q1LWIzNTAtZmUzYmQ3YmFmYWIzX2xlZ3JhX2JveF9jXzYwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/79365c86-cc2e-40c3-80be-667e35109c8a_legra_box_c_600_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=dluLVtc%2BfLDvlhY2hQJEHDQ%2FvIU%2Bc8ycdiDlN9ERHnw%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzkzNjVjODYtY2MyZS00MGMzLTgwYmUtNjY3ZTM1MTA5YzhhX2xlZ3JhX2JveF9jXzYwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -539,10 +541,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8394,
+    _id: 9486,
     in_GraphicFileId: "Legra_Box_C_650_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b1b676fd-4683-476d-aa7a-e3e0ba5eb042_legra_box_c_650_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=LkQzH8cRBqxfnhF8RaAgdMW%2F9MW488cSM9gqJgptKK8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjFiNjc2ZmQtNDY4My00NzZkLWFhN2EtZTNlMGJhNWViMDQyX2xlZ3JhX2JveF9jXzY1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ba18c13e-0cf8-49c7-867b-5edc48243902_legra_box_c_650_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ZagJzlBw2sQRYnFRJdj9QVngfqXwt5%2Fe%2BjQqY6WggkI%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmExOGMxM2UtMGNmOC00OWM3LTg2N2ItNWVkYzQ4MjQzOTAyX2xlZ3JhX2JveF9jXzY1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -556,10 +558,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8395,
+    _id: 9487,
     in_GraphicFileId: "Legra_Box_C_650_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7b378971-8a87-407c-bac2-bd41f5a0e817_legra_box_c_650_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=VhwnwtqCxCgl8%2BQIp8AIoTYsAXf2sXIXP76RcYzOexE%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvN2IzNzg5NzEtOGE4Ny00MDdjLWJhYzItYmQ0MWY1YTBlODE3X2xlZ3JhX2JveF9jXzY1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bbfa1830-aeff-4dee-8ff3-1cdb1c32ffe7_legra_box_c_650_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=OneMSwUotXj4udAyJFiNCDsS4u3fKdhHKJVbl%2FLaY4k%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmJmYTE4MzAtYWVmZi00ZGVlLThmZjMtMWNkYjFjMzJmZmU3X2xlZ3JhX2JveF9jXzY1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -573,10 +575,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8396,
+    _id: 9488,
     in_GraphicFileId: "Legra_Box_F_400_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/2c73b1a4-8bce-4d4b-ac05-992edfb66eb0_legra_box_f_400_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=D5Ysq4Tid7muHcfsWIEinb8jQcdVUJxvtW4RJYQa6aU%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMmM3M2IxYTQtOGJjZS00ZDRiLWFjMDUtOTkyZWRmYjY2ZWIwX2xlZ3JhX2JveF9mXzQwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/286025ec-263e-427e-b6d4-90ae5c2d756b_legra_box_f_400_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=p8zdt%2F67WJM7zYpJrZCOQQ%2B6pgP35SSL57HcgBiIaC0%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjg2MDI1ZWMtMjYzZS00MjdlLWI2ZDQtOTBhZTVjMmQ3NTZiX2xlZ3JhX2JveF9mXzQwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -590,10 +592,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8397,
+    _id: 9489,
     in_GraphicFileId: "Legra_Box_F_400_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a7438b18-b844-46f9-b1e1-5d69826f21a1_legra_box_f_400_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=r2%2BrI8GSHZTz%2BcOfao7aM%2FaadTLWVPNEHd6rhH7ufGk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTc0MzhiMTgtYjg0NC00NmY5LWIxZTEtNWQ2OTgyNmYyMWExX2xlZ3JhX2JveF9mXzQwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/10594d21-9975-4aba-9866-e15c072f267b_legra_box_f_400_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=uFs8SXMvX93Wh6wt%2Fvb9qvPwoPkxlfaO0p6yOOn2c2Q%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTA1OTRkMjEtOTk3NS00YWJhLTk4NjYtZTE1YzA3MmYyNjdiX2xlZ3JhX2JveF9mXzQwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -607,10 +609,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8398,
+    _id: 9490,
     in_GraphicFileId: "Legra_Box_F_450_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/faff435a-b3f8-4a46-b407-7cab2a392a21_legra_box_f_450_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=32nWK1FBZd0V5Q0OXYjQofYo0K2drAmpdXBD5PcFvNo%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmFmZjQzNWEtYjNmOC00YTQ2LWI0MDctN2NhYjJhMzkyYTIxX2xlZ3JhX2JveF9mXzQ1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/69834345-8156-43bf-a454-0adc9e328d04_legra_box_f_450_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=tm8IPneZSkjKwarsHMOTOYx9dIJ8yNDRlfnstwX5e0E%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjk4MzQzNDUtODE1Ni00M2JmLWE0NTQtMGFkYzllMzI4ZDA0X2xlZ3JhX2JveF9mXzQ1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -624,10 +626,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8399,
+    _id: 9491,
     in_GraphicFileId: "Legra_Box_F_450_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/421e2bb9-817d-4e24-bc3d-7ea696c838e5_legra_box_f_450_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=DwH5%2FcZAipM8YTaq1PB2c1SFUcs3sS%2Fx4AVuozvXam8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDIxZTJiYjktODE3ZC00ZTI0LWJjM2QtN2VhNjk2YzgzOGU1X2xlZ3JhX2JveF9mXzQ1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c5ea8a63-dead-4ec4-a017-7fe169167752_legra_box_f_450_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=da2vnjMcnyz5RVsWojGAzhhz0PLaOLKpYmHzBQTMJ1Y%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzVlYThhNjMtZGVhZC00ZWM0LWEwMTctN2ZlMTY5MTY3NzUyX2xlZ3JhX2JveF9mXzQ1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -641,10 +643,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8400,
+    _id: 9492,
     in_GraphicFileId: "Legra_Box_F_500_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9d2934e2-7924-4e7f-a387-3025d5033888_legra_box_f_500_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=3UfJAPpHo2BaCCr0Ysuo%2FT8ctIyUAd68Drov%2FyL9oSI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOWQyOTM0ZTItNzkyNC00ZTdmLWEzODctMzAyNWQ1MDMzODg4X2xlZ3JhX2JveF9mXzUwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f84324ef-362e-4af2-a638-fb1bda301e87_legra_box_f_500_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=HiP0DsP7tGaQs9HIuzWxCK7yu9yv4q8b%2Fhfw3gqjm0o%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjg0MzI0ZWYtMzYyZS00YWYyLWE2MzgtZmIxYmRhMzAxZTg3X2xlZ3JhX2JveF9mXzUwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -658,10 +660,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8401,
+    _id: 9493,
     in_GraphicFileId: "Legra_Box_F_500_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/778abe02-f40d-4dac-8f90-713c196487c3_legra_box_f_500_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=O7LPpr2jbxgGPq6XI14E31IJKQ1NFN%2FYbesc8c6Akpo%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzc4YWJlMDItZjQwZC00ZGFjLThmOTAtNzEzYzE5NjQ4N2MzX2xlZ3JhX2JveF9mXzUwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f7de5b85-58eb-44ab-838f-0992188f7006_legra_box_f_500_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=8Z3XnjY9Cb5I3RxI47NCo3NdZe1Ql%2BEOxU5QOg6T0UI%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjdkZTViODUtNThlYi00NGFiLTgzOGYtMDk5MjE4OGY3MDA2X2xlZ3JhX2JveF9mXzUwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -675,10 +677,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8402,
+    _id: 9494,
     in_GraphicFileId: "Legra_Box_F_550_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/1dfe9cff-8646-4c85-b171-4ecc334034ba_legra_box_f_550_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=GWR%2BEYx2eRTpiEZM%2BmqMLIb8O2H79LI%2Ft5jdVSgaZbo%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMWRmZTljZmYtODY0Ni00Yzg1LWIxNzEtNGVjYzMzNDAzNGJhX2xlZ3JhX2JveF9mXzU1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f1e5ed73-5da7-4e93-b95b-3d3769b865fd_legra_box_f_550_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Z2tWihNXx47hFrueKOyCeNyjDjlbE6EafahcFv%2BGFyA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjFlNWVkNzMtNWRhNy00ZTkzLWI5NWItM2QzNzY5Yjg2NWZkX2xlZ3JhX2JveF9mXzU1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -692,10 +694,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8403,
+    _id: 9495,
     in_GraphicFileId: "Legra_Box_F_550_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/4be64bc1-9519-4d4c-826b-3e42ae96cf2f_legra_box_f_550_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=EGb%2BsPbElZ8sW4jW3LHMS4Zadvofz5MfCPPKyMn0UnY%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNGJlNjRiYzEtOTUxOS00ZDRjLTgyNmItM2U0MmFlOTZjZjJmX2xlZ3JhX2JveF9mXzU1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f3d06abc-5a37-4f78-b180-da094044bc9a_legra_box_f_550_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ntVhREhxsWeDbXm4XPGn7Dq4SIVc8Jx8BMSmdrdqvEI%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjNkMDZhYmMtNWEzNy00Zjc4LWIxODAtZGEwOTQwNDRiYzlhX2xlZ3JhX2JveF9mXzU1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -709,10 +711,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8404,
+    _id: 9496,
     in_GraphicFileId: "Legra_Box_F_600_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f673da5b-90e4-45ef-a9ef-841df49037ef_legra_box_f_600_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=Np%2BQwZJoo4ceuoOv%2F20VzTgGQ9GIzsHBeg8ICWih2ig%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjY3M2RhNWItOTBlNC00NWVmLWE5ZWYtODQxZGY0OTAzN2VmX2xlZ3JhX2JveF9mXzYwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ce2a835b-b46d-4646-b47c-4436dc057b61_legra_box_f_600_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Natx8B3Z1MuGxSfA%2BcAMgPHqK1UVp2IPiJHxdMmlfkc%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvY2UyYTgzNWItYjQ2ZC00NjQ2LWI0N2MtNDQzNmRjMDU3YjYxX2xlZ3JhX2JveF9mXzYwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -726,10 +728,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8405,
+    _id: 9497,
     in_GraphicFileId: "Legra_Box_F_600_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ccae48df-76e9-418a-8bbb-dfb2e9ec0cd3_legra_box_f_600_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=VNYVcIlF02mOol5iTOlv183gPQbeg%2Bt1wXHs3g19nB8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvY2NhZTQ4ZGYtNzZlOS00MThhLThiYmItZGZiMmU5ZWMwY2QzX2xlZ3JhX2JveF9mXzYwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c1125374-8cc5-4f05-aca6-63f23fe2bff4_legra_box_f_600_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=3Djn%2FRpbvLQLsZRt0RenCFrNdI4Z0VWy8ps6rhb9OHY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzExMjUzNzQtOGNjNS00ZjA1LWFjYTYtNjNmMjNmZTJiZmY0X2xlZ3JhX2JveF9mXzYwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -743,10 +745,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8406,
+    _id: 9498,
     in_GraphicFileId: "Legra_Box_F_650_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/eee98e62-c939-435b-86c9-14f7a3dc9605_legra_box_f_650_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=2a%2BJpYvWcj2QgetwfdJhsjfJthA3NcNWMCUI4sdVOVM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWVlOThlNjItYzkzOS00MzViLTg2YzktMTRmN2EzZGM5NjA1X2xlZ3JhX2JveF9mXzY1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5fb8e994-466b-4f0c-9d14-f33e4a5a89b1_legra_box_f_650_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=tOt93bRkgBLLnU8g2RNHme7cKTPOKK7yfQOI4l%2BBZ%2Bk%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNWZiOGU5OTQtNDY2Yi00ZjBjLTlkMTQtZjMzZTRhNWE4OWIxX2xlZ3JhX2JveF9mXzY1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -760,10 +762,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8407,
+    _id: 9499,
     in_GraphicFileId: "Legra_Box_F_650_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a70f6cc6-e90b-4195-b770-f40e3b233b70_legra_box_f_650_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=%2FfJfA6TcOTJmkPwLp2DziYzGSCsJG4874k53z1mTUco%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTcwZjZjYzYtZTkwYi00MTk1LWI3NzAtZjQwZTNiMjMzYjcwX2xlZ3JhX2JveF9mXzY1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/17af4f80-9802-4829-8e69-cd4da7b31af0_legra_box_f_650_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=aN4tyFbqAkcrOyTc8OEZuxIIiqT9HfQW1doL0Z6OeY4%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTdhZjRmODAtOTgwMi00ODI5LThlNjktY2Q0ZGE3YjMxYWYwX2xlZ3JhX2JveF9mXzY1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -777,10 +779,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8408,
+    _id: 9500,
     in_GraphicFileId: "Legra_Box_K_300_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/de640040-c397-4094-a9a4-757a49e18683_legra_box_k_300_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=v%2FeLnWXXrOeAMbSeR8yUoGin9VWLX%2BApmJHXt3BY4Wc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZGU2NDAwNDAtYzM5Ny00MDk0LWE5YTQtNzU3YTQ5ZTE4NjgzX2xlZ3JhX2JveF9rXzMwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5253da2d-caa8-4a74-901f-e6d75b208834_legra_box_k_300_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=RNgHMy7aoJJsM%2Fq2lhx47iLvVJLQ1HpAhEtA9EtMjjo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTI1M2RhMmQtY2FhOC00YTc0LTkwMWYtZTZkNzViMjA4ODM0X2xlZ3JhX2JveF9rXzMwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -794,10 +796,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8409,
+    _id: 9501,
     in_GraphicFileId: "Legra_Box_K_300_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/941d462b-ec82-49a9-b4bd-2bf5c1678328_legra_box_k_300_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=uitGCjmpBgcmX%2B7VVZBQyuBAY62NU032SdJZ4vf%2F2C8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTQxZDQ2MmItZWM4Mi00OWE5LWI0YmQtMmJmNWMxNjc4MzI4X2xlZ3JhX2JveF9rXzMwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/02469486-be1e-4519-946a-53d0e8b37798_legra_box_k_300_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Z5cCq%2FYMJXLWw3ksWbJWQEuoqCOtNL3yIg6VNA6%2BRIQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDI0Njk0ODYtYmUxZS00NTE5LTk0NmEtNTNkMGU4YjM3Nzk4X2xlZ3JhX2JveF9rXzMwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -811,10 +813,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8410,
+    _id: 9502,
     in_GraphicFileId: "Legra_Box_K_350_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/77dcf3ec-ef9b-4835-994b-f10366b11da0_legra_box_k_350_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=daCf%2Fy8AsneMYOvy6zz%2FUiyh86QB4g4uuOMTj7mW9qQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzdkY2YzZWMtZWY5Yi00ODM1LTk5NGItZjEwMzY2YjExZGEwX2xlZ3JhX2JveF9rXzM1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/34be24df-a701-4149-a7ab-68938fc91bc2_legra_box_k_350_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=kn5AOm%2BwnJ%2BVM4cLUTbmF6Mdvtr76UAJXGP6b2%2FvuFM%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzRiZTI0ZGYtYTcwMS00MTQ5LWE3YWItNjg5MzhmYzkxYmMyX2xlZ3JhX2JveF9rXzM1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -828,10 +830,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8411,
+    _id: 9503,
     in_GraphicFileId: "Legra_Box_K_350_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5fc87eb6-6225-46e2-8479-3b4015f16127_legra_box_k_350_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=%2FkaDWb28fRtIuH0BZ9%2B1XOeCJkV3b8EZgJHiEXWlzVo%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNWZjODdlYjYtNjIyNS00NmUyLTg0NzktM2I0MDE1ZjE2MTI3X2xlZ3JhX2JveF9rXzM1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b6c4e93d-f284-4723-96c4-c6e967f8f80d_legra_box_k_350_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=uc18nlD%2FqyY1e9S4V0u%2F7tgmIqj9K6Ybx1loeU3A5oA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjZjNGU5M2QtZjI4NC00NzIzLTk2YzQtYzZlOTY3ZjhmODBkX2xlZ3JhX2JveF9rXzM1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -845,10 +847,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8412,
+    _id: 9504,
     in_GraphicFileId: "Legra_Box_K_400_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e7215d1f-8111-423c-8c3d-622da9eff933_legra_box_k_400_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=X2pkKlL00Xdmez6jhVgrXgZduAjxoMSqhO9ldqjOZCI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTcyMTVkMWYtODExMS00MjNjLThjM2QtNjIyZGE5ZWZmOTMzX2xlZ3JhX2JveF9rXzQwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b34602ab-0174-4edf-b479-2f93be67c838_legra_box_k_400_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=pJHgT1tVcBdLKEkfJAvCTiRuzGdlc6KUwmITkM3KiJo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjM0NjAyYWItMDE3NC00ZWRmLWI0NzktMmY5M2JlNjdjODM4X2xlZ3JhX2JveF9rXzQwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -862,10 +864,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8413,
+    _id: 9505,
     in_GraphicFileId: "Legra_Box_K_400_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/3d54df0b-ef36-4795-ab9a-a50ab68b4b6e_legra_box_k_400_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=mStcyaQ0ByARJeH5WcVQZsQQ31qcE7vDuyZ8ymGApRk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvM2Q1NGRmMGItZWYzNi00Nzk1LWFiOWEtYTUwYWI2OGI0YjZlX2xlZ3JhX2JveF9rXzQwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/42be1e17-5ec8-42c5-b182-e637e613200a_legra_box_k_400_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=zu%2B4rgI3JEWV4ypGGuj7S3mX5Nlm3wJ41rJiWDuNBy4%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDJiZTFlMTctNWVjOC00MmM1LWIxODItZTYzN2U2MTMyMDBhX2xlZ3JhX2JveF9rXzQwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -879,10 +881,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8414,
+    _id: 9506,
     in_GraphicFileId: "Legra_Box_K_450_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/68de1970-abd2-495f-b4e5-f735c064ad0d_legra_box_k_450_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=fxagOG7rvyQA4U3ejs6zPIH65yaa9IBByL79WvDJFJw%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjhkZTE5NzAtYWJkMi00OTVmLWI0ZTUtZjczNWMwNjRhZDBkX2xlZ3JhX2JveF9rXzQ1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b51fed18-6327-4ee3-a145-3e7f4be4023b_legra_box_k_450_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=IWWgmDBWGFaN3Jcu5nyG%2BwE1gV4tagpNMKQH1FwUMF4%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjUxZmVkMTgtNjMyNy00ZWUzLWExNDUtM2U3ZjRiZTQwMjNiX2xlZ3JhX2JveF9rXzQ1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -896,10 +898,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8415,
+    _id: 9507,
     in_GraphicFileId: "Legra_Box_K_450_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/44d60850-025c-43a3-9794-d1ed0117a787_legra_box_k_450_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=UUL6npWALEh05fupgMR35u9a4301lMo4%2FBVlrfcYuuY%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDRkNjA4NTAtMDI1Yy00M2EzLTk3OTQtZDFlZDAxMTdhNzg3X2xlZ3JhX2JveF9rXzQ1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b66529d1-b4e5-455c-b46d-c07d1f79ef3c_legra_box_k_450_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=vgEBcX1D4YcnAYwr6nU843kHoBsqq1m3mOzKKPp7aNk%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjY2NTI5ZDEtYjRlNS00NTVjLWI0NmQtYzA3ZDFmNzllZjNjX2xlZ3JhX2JveF9rXzQ1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -913,10 +915,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8416,
+    _id: 9508,
     in_GraphicFileId: "Legra_Box_K_500_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/49443dd8-85d0-41b5-8745-8d104ed1d3bb_legra_box_k_500_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=SCD0Zfx6ewmIK5zsivYKhvGZmAa3n6djSAS62iBaTac%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDk0NDNkZDgtODVkMC00MWI1LTg3NDUtOGQxMDRlZDFkM2JiX2xlZ3JhX2JveF9rXzUwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/25b5ed47-3199-4204-b789-c596dd0370d6_legra_box_k_500_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ZxTw%2F4scFGwgKqbXyQG2Uxb4bkerrpyjFwnQHTedfhU%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjViNWVkNDctMzE5OS00MjA0LWI3ODktYzU5NmRkMDM3MGQ2X2xlZ3JhX2JveF9rXzUwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -930,10 +932,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8417,
+    _id: 9509,
     in_GraphicFileId: "Legra_Box_K_500_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/91c121a4-6860-4175-a43b-035e6bb4e718_legra_box_k_500_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=M8JN1AifJdY8AjhnaRV2yvTbK%2Fo8E8RM5B7ScJ%2B3kbM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTFjMTIxYTQtNjg2MC00MTc1LWE0M2ItMDM1ZTZiYjRlNzE4X2xlZ3JhX2JveF9rXzUwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bdbba657-9bee-4b5e-8e88-ff3b1dc2aff9_legra_box_k_500_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=uuSuToUcu7MBmbayn8s3o%2FPagokrN8bzrgXlaxuktJo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmRiYmE2NTctOWJlZS00YjVlLThlODgtZmYzYjFkYzJhZmY5X2xlZ3JhX2JveF9rXzUwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -947,10 +949,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8418,
+    _id: 9510,
     in_GraphicFileId: "Legra_Box_K_550_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/26fbab76-537c-4690-8053-4eacb549ecc2_legra_box_k_550_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=f97sxHhGdjytHUmWomc%2B3%2FXojRa4FmcveYPzHwUGFMM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjZmYmFiNzYtNTM3Yy00NjkwLTgwNTMtNGVhY2I1NDllY2MyX2xlZ3JhX2JveF9rXzU1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f7f0a6d7-d480-4323-9c9f-a28fa14e725e_legra_box_k_550_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=%2BPuEC%2BovoCEtjzz2CL7jsmpnSB0pZLc4sHGlRgIxTr8%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjdmMGE2ZDctZDQ4MC00MzIzLTljOWYtYTI4ZmExNGU3MjVlX2xlZ3JhX2JveF9rXzU1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -964,10 +966,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8419,
+    _id: 9511,
     in_GraphicFileId: "Legra_Box_K_550_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c856f6f7-23bf-4149-92e3-af1b97a33050_legra_box_k_550_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=oMNE40%2FuemVQHJKkQosLzUJhqaFhwlBhr30rMzo8XtQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzg1NmY2ZjctMjNiZi00MTQ5LTkyZTMtYWYxYjk3YTMzMDUwX2xlZ3JhX2JveF9rXzU1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f1cfa35c-9bd6-45f5-93c6-ac596befd2f6_legra_box_k_550_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=5imEX4FrU1TBW2h6KcoC0AlYut5yvxNoTbBJWzJCgPA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjFjZmEzNWMtOWJkNi00NWY1LTkzYzYtYWM1OTZiZWZkMmY2X2xlZ3JhX2JveF9rXzU1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -981,10 +983,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8420,
+    _id: 9512,
     in_GraphicFileId: "Legra_Box_K_600_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8066b892-8d76-4124-9c1f-df3c7e3b5dec_legra_box_k_600_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=mbwiU%2B8yQlILuAKMxRPRtyQf9Csiunj12gSdpDBMRPk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODA2NmI4OTItOGQ3Ni00MTI0LTljMWYtZGYzYzdlM2I1ZGVjX2xlZ3JhX2JveF9rXzYwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5fd4ef89-ea78-4915-96ab-052a13a99c5e_legra_box_k_600_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=BDm6spbgg7zJqx9S1PbBXJnkYTNXnP8m4UXO0aJ6oUA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNWZkNGVmODktZWE3OC00OTE1LTk2YWItMDUyYTEzYTk5YzVlX2xlZ3JhX2JveF9rXzYwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -998,10 +1000,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8421,
+    _id: 9513,
     in_GraphicFileId: "Legra_Box_K_600_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/74081df7-b31e-4f14-ba08-1dd8708d8e79_legra_box_k_600_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=nuzcsuWLLjJvK5%2Bg5Zosir%2FEe6Q1kiFbz3N6a0dncXc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzQwODFkZjctYjMxZS00ZjE0LWJhMDgtMWRkODcwOGQ4ZTc5X2xlZ3JhX2JveF9rXzYwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b07ab715-a508-4e51-bf0b-792bafaedd8e_legra_box_k_600_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=8m0JB6VIfWgeNxFW2Uzt0WKTsjHAvZJ0vKB6W8dDU5s%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjA3YWI3MTUtYTUwOC00ZTUxLWJmMGItNzkyYmFmYWVkZDhlX2xlZ3JhX2JveF9rXzYwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1015,10 +1017,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8422,
+    _id: 9514,
     in_GraphicFileId: "Legra_Box_M_270_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/98901d3b-c5d5-4c9b-a30d-b14c5ce79dd1_legra_box_m_270_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=XObctMxL12hK1pqR1OW%2FHo6HHPUgT9b6E9CQc8GcX%2Fk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTg5MDFkM2ItYzVkNS00YzliLWEzMGQtYjE0YzVjZTc5ZGQxX2xlZ3JhX2JveF9tXzI3MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/09aeb87e-cddb-4946-8d15-f4de39f6c93a_legra_box_m_270_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=FleDJIevpFsBvK4v6JsG%2BC2glFlED8MBK62ru%2FadWBs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDlhZWI4N2UtY2RkYi00OTQ2LThkMTUtZjRkZTM5ZjZjOTNhX2xlZ3JhX2JveF9tXzI3MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1032,10 +1034,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8423,
+    _id: 9515,
     in_GraphicFileId: "Legra_Box_M_270_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e5721c9e-a804-44c9-b8a3-7dcd7911e6d5_legra_box_m_270_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=zwvs%2BQsSHk0rCTvowDTt9OqMZiOcIcl2JmUjxAoxo8Q%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTU3MjFjOWUtYTgwNC00NGM5LWI4YTMtN2RjZDc5MTFlNmQ1X2xlZ3JhX2JveF9tXzI3MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/4c3f8af3-b0e9-4ac6-bb7d-dc3517119dee_legra_box_m_270_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Iat23OdH4HjjSK%2BhWiWBoZbQEkssV3aJBWlMk30Vw1U%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNGMzZjhhZjMtYjBlOS00YWM2LWJiN2QtZGMzNTE3MTE5ZGVlX2xlZ3JhX2JveF9tXzI3MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1049,10 +1051,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8424,
+    _id: 9516,
     in_GraphicFileId: "Legra_Box_M_300_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/29ba900b-25eb-4328-b65b-13fc3dcd89f3_legra_box_m_300_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=nlahctT4nkn8LEyzxkxHvCcWFsyQ5TLdDmIt6KOhg2s%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjliYTkwMGItMjVlYi00MzI4LWI2NWItMTNmYzNkY2Q4OWYzX2xlZ3JhX2JveF9tXzMwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/0d4426ba-e7da-4c5b-a552-5fe97e3a016a_legra_box_m_300_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=rRUfTaD3JRpy9SsOOKhrtxoZMNNIEg%2FBYfVr4Z5JAWE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMGQ0NDI2YmEtZTdkYS00YzViLWE1NTItNWZlOTdlM2EwMTZhX2xlZ3JhX2JveF9tXzMwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1066,10 +1068,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8425,
+    _id: 9517,
     in_GraphicFileId: "Legra_Box_M_300_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e0f86cda-6e70-4162-aff5-8eef0893d431_legra_box_m_300_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=cCOxIRJobKUj2e27AR4KfUN9Y8AkgRBQMc1zfuNxxKM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTBmODZjZGEtNmU3MC00MTYyLWFmZjUtOGVlZjA4OTNkNDMxX2xlZ3JhX2JveF9tXzMwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c802dd1c-75db-4d28-91ea-44f4e93f0af3_legra_box_m_300_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ZL7FsSev6%2FW%2BrRBnsVAzWlaokYX0S6D9tQIbAjiPtaM%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzgwMmRkMWMtNzVkYi00ZDI4LTkxZWEtNDRmNGU5M2YwYWYzX2xlZ3JhX2JveF9tXzMwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1083,10 +1085,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8426,
+    _id: 9518,
     in_GraphicFileId: "Legra_Box_M_350_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a6cb5d77-a597-42a1-8a49-6cce0405317d_legra_box_m_350_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=uJnVRUbz7GJ5iuHgH4H5xRUVhzPgtOHqmkFP%2BTDAd%2BA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTZjYjVkNzctYTU5Ny00MmExLThhNDktNmNjZTA0MDUzMTdkX2xlZ3JhX2JveF9tXzM1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/38b987f7-58cc-40de-90d5-723838c04188_legra_box_m_350_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Eoro6aEQOrwb40%2BJmD3uPZmqh2XA%2F5hJ48VYNJ4BaJQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzhiOTg3ZjctNThjYy00MGRlLTkwZDUtNzIzODM4YzA0MTg4X2xlZ3JhX2JveF9tXzM1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1100,10 +1102,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8427,
+    _id: 9519,
     in_GraphicFileId: "Legra_Box_M_350_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/333a92ba-42eb-466d-a42b-f70d408edfd6_legra_box_m_350_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=kHRWy0fRDxmMwfBkjd4X3UhgZkd8v2M%2BCQiRMKNXkxc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzMzYTkyYmEtNDJlYi00NjZkLWE0MmItZjcwZDQwOGVkZmQ2X2xlZ3JhX2JveF9tXzM1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/507be629-1987-4e4b-98f2-1e46acf8df2e_legra_box_m_350_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=1e4ckxpj00hrA%2BqK4orznNVmrU5VmEpH7sneeD2k%2Fks%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTA3YmU2MjktMTk4Ny00ZTRiLTk4ZjItMWU0NmFjZjhkZjJlX2xlZ3JhX2JveF9tXzM1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1117,10 +1119,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8428,
+    _id: 9520,
     in_GraphicFileId: "Legra_Box_M_400_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/74a4aa94-9bea-475d-8ffa-a70f5da94522_legra_box_m_400_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=37GGvJ1Oxwd8PGHgejFFMT0w%2BszLGH82YQ8lU%2BctV0g%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzRhNGFhOTQtOWJlYS00NzVkLThmZmEtYTcwZjVkYTk0NTIyX2xlZ3JhX2JveF9tXzQwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/04636b3c-80ed-451d-b912-06813f65f39a_legra_box_m_400_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=RsqbciDCbyG6XxQsYyK%2B5D4f6O1v0I4xyVLF4Fk3ft8%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDQ2MzZiM2MtODBlZC00NTFkLWI5MTItMDY4MTNmNjVmMzlhX2xlZ3JhX2JveF9tXzQwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1134,10 +1136,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8429,
+    _id: 9521,
     in_GraphicFileId: "Legra_Box_M_400_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/92506594-a5b1-4b5a-a6f4-95fc60d9fa58_legra_box_m_400_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=xjWWGY6wYWvuBkqx%2B5uZTs4v4RJXkadkcEIBdfVPSO8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTI1MDY1OTQtYTViMS00YjVhLWE2ZjQtOTVmYzYwZDlmYTU4X2xlZ3JhX2JveF9tXzQwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/47810e9a-fc5d-4f04-8650-2e4b754702c1_legra_box_m_400_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=H0SiyM2f1PrGOV1MJiX15vxCZiiFt8sn7enINgU2T40%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDc4MTBlOWEtZmM1ZC00ZjA0LTg2NTAtMmU0Yjc1NDcwMmMxX2xlZ3JhX2JveF9tXzQwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1151,10 +1153,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8430,
+    _id: 9522,
     in_GraphicFileId: "Legra_Box_M_450_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/60f5e660-fa6c-42b9-96cb-81ad2d6de1e5_legra_box_m_450_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=NRRxHgn5vNNTTlvCAgVIEu%2Fc5Oecx25GCymhpoKfQ3E%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjBmNWU2NjAtZmE2Yy00MmI5LTk2Y2ItODFhZDJkNmRlMWU1X2xlZ3JhX2JveF9tXzQ1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d23d9b7f-bf2f-4d93-8224-120d5f8b9f1f_legra_box_m_450_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=bBYCwXfoZ33GHWB1OIyaNrQVrYciKJa6h4pSXK8%2BIks%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDIzZDliN2YtYmYyZi00ZDkzLTgyMjQtMTIwZDVmOGI5ZjFmX2xlZ3JhX2JveF9tXzQ1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1168,10 +1170,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8431,
+    _id: 9523,
     in_GraphicFileId: "Legra_Box_M_450_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/597f265a-4119-4636-b8dd-0e4b8391a497_legra_box_m_450_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=6lDdyYESw6a6QzBrWdgw%2FVM%2BVAjUuJQXcsY8XcwZ7x0%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTk3ZjI2NWEtNDExOS00NjM2LWI4ZGQtMGU0YjgzOTFhNDk3X2xlZ3JhX2JveF9tXzQ1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e1cd8258-5126-45e4-a049-b483803ce563_legra_box_m_450_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=4ochoqtgQlF6aSFRvJEkyvG%2BZvANZLvEwBS3bnjW3zo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTFjZDgyNTgtNTEyNi00NWU0LWEwNDktYjQ4MzgwM2NlNTYzX2xlZ3JhX2JveF9tXzQ1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1185,10 +1187,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8432,
+    _id: 9524,
     in_GraphicFileId: "Legra_Box_M_500_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/249d924f-b30b-4998-a521-5df152863658_legra_box_m_500_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=1XY93Wzzv29usBNOGh2ocPRZgq3ga3y%2BjgnzgDty97E%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjQ5ZDkyNGYtYjMwYi00OTk4LWE1MjEtNWRmMTUyODYzNjU4X2xlZ3JhX2JveF9tXzUwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/65cd8e7d-38bc-4465-9132-1891f403f981_legra_box_m_500_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=iZN4qh9MXPDuw46Wn976b%2Bah1%2BZW%2BQna1yVLrmep8XQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjVjZDhlN2QtMzhiYy00NDY1LTkxMzItMTg5MWY0MDNmOTgxX2xlZ3JhX2JveF9tXzUwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1202,10 +1204,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8433,
+    _id: 9525,
     in_GraphicFileId: "Legra_Box_M_500_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/33ef57ce-2141-45ea-9924-1622b8884f52_legra_box_m_500_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=DRcGp56y4oPSfLRKtZzrkz9wXEbzJxRtc%2FHWMbVRZBQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzNlZjU3Y2UtMjE0MS00NWVhLTk5MjQtMTYyMmI4ODg0ZjUyX2xlZ3JhX2JveF9tXzUwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ac9f6ece-c262-4ad7-9e13-50221c2073bb_legra_box_m_500_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=or5lSTDSQ%2FMfJNUXcYtZA7ZCGBso%2BLgmXE9Osa2FRYQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYWM5ZjZlY2UtYzI2Mi00YWQ3LTllMTMtNTAyMjFjMjA3M2JiX2xlZ3JhX2JveF9tXzUwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1219,10 +1221,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8434,
+    _id: 9526,
     in_GraphicFileId: "Legra_Box_M_550_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c43478c0-ffd9-45f4-b8d2-65f19550cefa_legra_box_m_550_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=AcH0zsysXwZFMr8TkfLpzQK7YUh36NCKvEwRFRn5ZwM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzQzNDc4YzAtZmZkOS00NWY0LWI4ZDItNjVmMTk1NTBjZWZhX2xlZ3JhX2JveF9tXzU1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d729863c-3284-42b1-98c6-8e63de24c8e2_legra_box_m_550_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=V68dqJzkloTLrVcZOQKYOpZ1Fy%2BPz0fl%2ByjslEY0Zuk%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDcyOTg2M2MtMzI4NC00MmIxLTk4YzYtOGU2M2RlMjRjOGUyX2xlZ3JhX2JveF9tXzU1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1236,10 +1238,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8435,
+    _id: 9527,
     in_GraphicFileId: "Legra_Box_M_550_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/73de90ac-f51f-4451-aaa0-b37fdf6208f0_legra_box_m_550_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=mMMEjVajz8cLcokhaB30ml%2FI9sR44MX63Gs1j1aVEhU%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzNkZTkwYWMtZjUxZi00NDUxLWFhYTAtYjM3ZmRmNjIwOGYwX2xlZ3JhX2JveF9tXzU1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/153a6ee8-a441-45ec-a6fa-05c6c1daea9a_legra_box_m_550_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=w%2FcBeah8AaDXSfvPVhL4c%2BLf0PzmQzQu2kNMPxpKB3c%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTUzYTZlZTgtYTQ0MS00NWVjLWE2ZmEtMDVjNmMxZGFlYTlhX2xlZ3JhX2JveF9tXzU1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1253,10 +1255,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8436,
+    _id: 9528,
     in_GraphicFileId: "Legra_Box_M_600_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/2b04e5a9-c957-4d2d-b83d-3391ad52faa7_legra_box_m_600_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=1i2ILy8mOaE4zvDQpAGYmorr1gf7SeQbwkx2aJ%2BrfNE%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMmIwNGU1YTktYzk1Ny00ZDJkLWI4M2QtMzM5MWFkNTJmYWE3X2xlZ3JhX2JveF9tXzYwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/1c3203e4-e50b-446d-a982-d617e0dd6ffe_legra_box_m_600_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=%2BkYAvBkZGrqZXRwP3Vy4gPCllKWit8C8eRh0SLLtWvo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMWMzMjAzZTQtZTUwYi00NDZkLWE5ODItZDYxN2UwZGQ2ZmZlX2xlZ3JhX2JveF9tXzYwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1270,10 +1272,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8437,
+    _id: 9529,
     in_GraphicFileId: "Legra_Box_M_600_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bb07a8ff-afe8-47d2-b752-637744db05d9_legra_box_m_600_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=Ysf9Jara0BmZJM0K%2Bv2N6NUaBrlhZ8ZBUFVAUWkhEA8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmIwN2E4ZmYtYWZlOC00N2QyLWI3NTItNjM3NzQ0ZGIwNWQ5X2xlZ3JhX2JveF9tXzYwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7fd798c7-0075-4514-aa1e-e6a5977c7272_legra_box_m_600_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=QL%2BrcCw%2BYHi546MdNXDPCkogj%2FiKPGM9RLv%2F%2FybAqDc%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvN2ZkNzk4YzctMDA3NS00NTE0LWFhMWUtZTZhNTk3N2M3MjcyX2xlZ3JhX2JveF9tXzYwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1287,10 +1289,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8438,
+    _id: 9530,
     in_GraphicFileId: "Legra_Box_M_650_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/25f06d96-ea39-43e0-bd04-2888f414612c_legra_box_m_650_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=zkbQzCVU%2FcjAQWnBeFhkn%2BWR%2FhfAOnsEG7D7pf%2FLv%2F4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjVmMDZkOTYtZWEzOS00M2UwLWJkMDQtMjg4OGY0MTQ2MTJjX2xlZ3JhX2JveF9tXzY1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/4ae16f79-9205-4aed-8550-96fa1a7b6154_legra_box_m_650_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=e3kfWLNJzKMNKzPOQzBgUpAGi4OoHiBX707EwBu%2BC8Y%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNGFlMTZmNzktOTIwNS00YWVkLTg1NTAtOTZmYTFhN2I2MTU0X2xlZ3JhX2JveF9tXzY1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1304,10 +1306,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8439,
+    _id: 9531,
     in_GraphicFileId: "Legra_Box_M_650_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/42435017-de87-4e42-9616-96312e214f16_legra_box_m_650_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=502eyQovEk9xzU81BmL01oz4tFOszXUqntbvbAz9QmM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDI0MzUwMTctZGU4Ny00ZTQyLTk2MTYtOTYzMTJlMjE0ZjE2X2xlZ3JhX2JveF9tXzY1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/69f1e534-198d-4c3d-8155-50eaa5e60091_legra_box_m_650_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=dBFm3NtmryqegwDdhHCg37dIuTjrDkYh32jwYvRMA18%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjlmMWU1MzQtMTk4ZC00YzNkLTgxNTUtNTBlYWE1ZTYwMDkxX2xlZ3JhX2JveF9tXzY1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1321,10 +1323,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8440,
+    _id: 9532,
     in_GraphicFileId: "Legra_Box_N_400_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b616f012-60ff-4f9a-a86d-ce67cf694aa1_legra_box_n_400_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=7Z8HLFQtTRvmSreULsMi1QmSfThjijfprGKLdgFv470%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjYxNmYwMTItNjBmZi00ZjlhLWE4NmQtY2U2N2NmNjk0YWExX2xlZ3JhX2JveF9uXzQwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a6b9e78e-df85-4dd1-999d-9d8567cc5049_legra_box_n_400_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=wL7%2BoJW47hpWpU3z8kU%2B5Mv3r4tJmbWe6brUSUd3yeE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTZiOWU3OGUtZGY4NS00ZGQxLTk5OWQtOWQ4NTY3Y2M1MDQ5X2xlZ3JhX2JveF9uXzQwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1338,10 +1340,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8441,
+    _id: 9533,
     in_GraphicFileId: "Legra_Box_N_400_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6c837831-c67b-4758-bbc8-843b2f2d3a24_legra_box_n_400_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=KkKIXe5ZKGjhvKuoRVk9K7M%2F0WZ1WWekx3D2KGcd5eU%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNmM4Mzc4MzEtYzY3Yi00NzU4LWJiYzgtODQzYjJmMmQzYTI0X2xlZ3JhX2JveF9uXzQwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a9a97913-7c17-462e-8360-28ca3165f5ed_legra_box_n_400_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=xpfAOKq3hJ0HSFKQdvLITYz5lLpUiZMn863Tk2GtemA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTlhOTc5MTMtN2MxNy00NjJlLTgzNjAtMjhjYTMxNjVmNWVkX2xlZ3JhX2JveF9uXzQwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1355,10 +1357,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8442,
+    _id: 9534,
     in_GraphicFileId: "Legra_Box_N_450_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/3846d8ba-0fcf-418d-aa37-643c589fa19a_legra_box_n_450_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=Md5ucqHtRe3U6O3sDgHsQjN4K%2FDB1r9XIFlX8oPeDNQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzg0NmQ4YmEtMGZjZi00MThkLWFhMzctNjQzYzU4OWZhMTlhX2xlZ3JhX2JveF9uXzQ1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a1a2302a-cb82-4104-9222-4932b711f1a0_legra_box_n_450_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=CBY5cuioN6UI54T9C2IHd3v22T%2BHo7NWzdo5m0nUU3Q%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTFhMjMwMmEtY2I4Mi00MTA0LTkyMjItNDkzMmI3MTFmMWEwX2xlZ3JhX2JveF9uXzQ1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1372,10 +1374,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8443,
+    _id: 9535,
     in_GraphicFileId: "Legra_Box_N_450_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a9c9e85b-8c02-4631-ae31-f8e6adb6671e_legra_box_n_450_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=MxBu%2Fc%2BX6FUYo6%2FKprV%2BhGliSoHIR5H1DsVcQuiqu74%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTljOWU4NWItOGMwMi00NjMxLWFlMzEtZjhlNmFkYjY2NzFlX2xlZ3JhX2JveF9uXzQ1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/38d35753-6cb0-4071-9eed-89ca26dd3e26_legra_box_n_450_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=YpfURdnU9gNVHNNLGXKbr7hS4CHsAiN1yfcGkL%2BIZng%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzhkMzU3NTMtNmNiMC00MDcxLTllZWQtODljYTI2ZGQzZTI2X2xlZ3JhX2JveF9uXzQ1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1389,10 +1391,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8444,
+    _id: 9536,
     in_GraphicFileId: "Legra_Box_N_500_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d8ae8dbd-beff-49d8-84a2-1724db4c3c1c_legra_box_n_500_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=WxjrQIQg4qn%2F6SNHjZBXsstnt2xZJFGoAv5dx3adfpA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDhhZThkYmQtYmVmZi00OWQ4LTg0YTItMTcyNGRiNGMzYzFjX2xlZ3JhX2JveF9uXzUwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/3357d1a2-e4b3-475b-908c-3b1074aaca25_legra_box_n_500_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=%2BHbSDlS1UgqdfqIw594XCP1RLdKryXMK%2FK0BIIOfI0o%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzM1N2QxYTItZTRiMy00NzViLTkwOGMtM2IxMDc0YWFjYTI1X2xlZ3JhX2JveF9uXzUwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1406,10 +1408,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8445,
+    _id: 9537,
     in_GraphicFileId: "Legra_Box_N_500_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/aa44607a-46b7-4191-835c-b1f980da1148_legra_box_n_500_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=ya3b8UYjYUAq%2FHCJ%2BhZzAQuMlXvYlaNXpzIbzypIlaM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYWE0NDYwN2EtNDZiNy00MTkxLTgzNWMtYjFmOTgwZGExMTQ4X2xlZ3JhX2JveF9uXzUwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/18da3a38-d227-479f-9881-71f4d48e6abe_legra_box_n_500_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=RLfS0ALltLO8FDurHkVOvYopdJPh7g6smulmCxJYBdE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMThkYTNhMzgtZDIyNy00NzlmLTk4ODEtNzFmNGQ0OGU2YWJlX2xlZ3JhX2JveF9uXzUwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1423,10 +1425,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8446,
+    _id: 9538,
     in_GraphicFileId: "Legra_Box_N_550_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/894371ab-d349-460c-8414-af15f5bd7e77_legra_box_n_550_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=fctkYHZ%2F7Nh5gFYO%2FY1NoBaGfD39kyp61G3A4%2Bvsdg4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODk0MzcxYWItZDM0OS00NjBjLTg0MTQtYWYxNWY1YmQ3ZTc3X2xlZ3JhX2JveF9uXzU1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a08cbde8-ab4d-4b4a-a171-2fd226db6c3a_legra_box_n_550_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=wlBTmRjnTU7lFZVwhy0EOZAmjaLYAdSLLyxm7Jfzevc%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTA4Y2JkZTgtYWI0ZC00YjRhLWExNzEtMmZkMjI2ZGI2YzNhX2xlZ3JhX2JveF9uXzU1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1440,10 +1442,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8447,
+    _id: 9539,
     in_GraphicFileId: "Legra_Box_N_550_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/0c5eeb9e-de6b-4d48-a931-3251ccecd67f_legra_box_n_550_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=FFKZerbiDpMfcKl0rGWPrefkKM5jPkuUSFQBq0MVyAY%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMGM1ZWViOWUtZGU2Yi00ZDQ4LWE5MzEtMzI1MWNjZWNkNjdmX2xlZ3JhX2JveF9uXzU1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/67d7974e-08d0-4ebb-a6b0-a0aeab951ee5_legra_box_n_550_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=kIqR2wm44Evf%2BXnSKp1S2g9y8HWmuHvw80Mq8UnYCUw%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjdkNzk3NGUtMDhkMC00ZWJiLWE2YjAtYTBhZWFiOTUxZWU1X2xlZ3JhX2JveF9uXzU1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1457,10 +1459,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8448,
+    _id: 9540,
     in_GraphicFileId: "Legra_Pure_C",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/4446268c-942e-4150-99c9-8def82e38e2a_legra_c_low.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=ajdraYo1Nsnsu4%2FSGArEVJnqILo4RXVHRBG5jLnsGCQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDQ0NjI2OGMtOTQyZS00MTUwLTk5YzktOGRlZjgyZTM4ZTJhX2xlZ3JhX2NfbG93Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/557041f7-a69e-48b4-883e-6e37c98107f5_legra_c_low.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ZUG4jkU%2FX4al3VetztJzNknI1U0vfmw77MOIxPAAZz4%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTU3MDQxZjctYTY5ZS00OGI0LTg4M2UtNmUzN2M5ODEwN2Y1X2xlZ3JhX2NfbG93Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1474,10 +1476,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8449,
+    _id: 9541,
     in_GraphicFileId: "Legra_Pure_F",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/dfce1f22-28bc-460c-b8d6-bd2d68f61825_legra_f_low.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=K5KSHqK8Z12I%2BX3Dln%2Bpr83iSPNtp3VAwL8JKc58NGs%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZGZjZTFmMjItMjhiYy00NjBjLWI4ZDYtYmQyZDY4ZjYxODI1X2xlZ3JhX2ZfbG93Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5899fec4-7635-4bce-94bf-1e399df74e68_legra_f_low.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=lVmK1op384jmJwwHvF%2FL50kdCIMUUCk5G0QWVR%2FQUBE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTg5OWZlYzQtNzYzNS00YmNlLTk0YmYtMWUzOTlkZjc0ZTY4X2xlZ3JhX2ZfbG93Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1491,10 +1493,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8450,
+    _id: 9542,
     in_GraphicFileId: "Legra_Pure_K",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ea8e9685-a208-466d-920c-9486b7e6ec90_legra_k_low.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=Q18KimlcbDXGaNNriJImBTrr98xD0%2B%2B7iPz4SlZ9bUM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWE4ZTk2ODUtYTIwOC00NjZkLTkyMGMtOTQ4NmI3ZTZlYzkwX2xlZ3JhX2tfbG93Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/0baec70a-f8e1-4662-88eb-0ff6a3662890_legra_k_low.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=m5Z%2BU7QGa%2FKuRR7ZNnmyotQLIlyT74H9deleOFzl36Q%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMGJhZWM3MGEtZjhlMS00NjYyLTg4ZWItMGZmNmEzNjYyODkwX2xlZ3JhX2tfbG93Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1508,10 +1510,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8451,
+    _id: 9543,
     in_GraphicFileId: "Legra_Pure_M",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/2b9675f5-c494-4920-ba2d-b996cd052f9d_legra_m_low.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=j3%2FPuu%2FRmFijMiylUvgVYMiDKPrU%2FinKrhk6MHPZE5w%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMmI5Njc1ZjUtYzQ5NC00OTIwLWJhMmQtYjk5NmNkMDUyZjlkX2xlZ3JhX21fbG93Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a2b95503-a6da-4313-942e-de9f68e00433_legra_m_low.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=YXoTwyvUJ5MZ1P78eV5x6DCOY%2FVO%2FuTp1OaxUkaIE0M%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTJiOTU1MDMtYTZkYS00MzEzLTk0MmUtZGU5ZjY4ZTAwNDMzX2xlZ3JhX21fbG93Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1525,10 +1527,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8452,
+    _id: 9544,
     in_GraphicFileId: "Legra_Pure_N",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a1be99f5-c33f-4971-b92f-8c6b66da84a6_legra_n_low.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=EYZSnMsdYDeph9W1EoI%2Fn%2BzIpRhByDpsdOuR8Cmwvq4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTFiZTk5ZjUtYzMzZi00OTcxLWI5MmYtOGM2YjY2ZGE4NGE2X2xlZ3JhX25fbG93Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/623826c0-8399-461c-b17e-903f87deb2e6_legra_n_low.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=AHUqnx%2BH1PMOSznzX6Q7A6iDum5PKwooAMEk%2B05LLQ0%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjIzODI2YzAtODM5OS00NjFjLWIxN2UtOTAzZjg3ZGViMmU2X2xlZ3JhX25fbG93Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1542,10 +1544,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8453,
+    _id: 9545,
     in_GraphicFileId: "Legra_Slide_270_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9e4af5ad-9459-47b2-8bec-a26496835b94_legra_glide_270_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=Y%2FXfMmz%2BTpV53dzFXhCN6TziW6TSQ9JtiFvkNmP5RTI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOWU0YWY1YWQtOTQ1OS00N2IyLThiZWMtYTI2NDk2ODM1Yjk0X2xlZ3JhX2dsaWRlXzI3MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5559c8d1-277d-4b43-8823-6710fd058b9f_legra_glide_270_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=TKe3QOCCa3LxfYP8FJ7CraWxCzsrUnLyndOPyMSC8kc%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTU1OWM4ZDEtMjc3ZC00YjQzLTg4MjMtNjcxMGZkMDU4YjlmX2xlZ3JhX2dsaWRlXzI3MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1559,10 +1561,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8454,
+    _id: 9546,
     in_GraphicFileId: "Legra_Slide_270_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a10ac2b4-1832-4d6d-a198-7b0a8a10e60b_legra_glide_270_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=Dgu9yqoNL1fhJkkpt3WRF1Iqv6Q6f9WVOFJtoGyJcAQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTEwYWMyYjQtMTgzMi00ZDZkLWExOTgtN2IwYThhMTBlNjBiX2xlZ3JhX2dsaWRlXzI3MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e1a02cb8-14ac-4965-bf8f-a44ed2793d3e_legra_glide_270_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=F1Aq1nTLT1DCNavvlze6O9eTMUM7QTcU2qyuInF1FHg%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTFhMDJjYjgtMTRhYy00OTY1LWJmOGYtYTQ0ZWQyNzkzZDNlX2xlZ3JhX2dsaWRlXzI3MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1576,10 +1578,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8455,
+    _id: 9547,
     in_GraphicFileId: "Legra_Slide_300_350_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5a383f3c-2f1f-43a0-848b-f039ca551119_legra_glide_300_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=OwohsORh%2FQ2Fao0IddqOC8KJm9tXuAIyGyJXXIpMDKY%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNWEzODNmM2MtMmYxZi00M2EwLTg0OGItZjAzOWNhNTUxMTE5X2xlZ3JhX2dsaWRlXzMwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/84e650f5-cf16-48cb-828e-d4accf0757ae_legra_glide_300_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=32vUiLA1IDI2Se%2FnjeHswGZILA4U5Ec3tfH5gB%2BJSgA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODRlNjUwZjUtY2YxNi00OGNiLTgyOGUtZDRhY2NmMDc1N2FlX2xlZ3JhX2dsaWRlXzMwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1593,10 +1595,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8456,
+    _id: 9548,
     in_GraphicFileId: "Legra_Slide_300_350_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6a74b1f7-0eda-44ee-b407-0d8abaf5a20d_legra_glide_300_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=Q2BNBPlukw3b8DVRFl4CvBeW8Wq1XjONBUQmHnmusf4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNmE3NGIxZjctMGVkYS00NGVlLWI0MDctMGQ4YWJhZjVhMjBkX2xlZ3JhX2dsaWRlXzMwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/1965c1da-fcf5-4578-baa6-1f6635a1e1ec_legra_glide_300_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=nB91RU5JcApl6E7qZWZ%2BT02srnGlADcusj%2BKgspjb%2Fs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTk2NWMxZGEtZmNmNS00NTc4LWJhYTYtMWY2NjM1YTFlMWVjX2xlZ3JhX2dsaWRlXzMwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1610,10 +1612,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8457,
+    _id: 9549,
     in_GraphicFileId: "Legra_Slide_400_450_500_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/14b651d8-4e4e-49b9-b060-12b7b72f6c74_legra_glide_400_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=nxFV%2F2l3dLxVxsI0cAj5jA2mMZHrvyhitUvxvWBAvD0%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTRiNjUxZDgtNGU0ZS00OWI5LWIwNjAtMTJiN2I3MmY2Yzc0X2xlZ3JhX2dsaWRlXzQwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c5fbbf74-3b5b-4f44-a1e1-d05ae0c1ee02_legra_glide_400_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=H4IxrbQx5vpbu0EmzCPrZkVL7nvlIb%2Fc%2BsZFSU3wZOw%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzVmYmJmNzQtM2I1Yi00ZjQ0LWExZTEtZDA1YWUwYzFlZTAyX2xlZ3JhX2dsaWRlXzQwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1627,10 +1629,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8458,
+    _id: 9550,
     in_GraphicFileId: "Legra_Slide_400_450_500_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7760fbad-036f-4872-b351-1304d02fbd20_legra_glide_400_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=N9H4kEHy2maJrtWDfQ5SzdvTmOWtuIfmUWCEHj4ClOc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzc2MGZiYWQtMDM2Zi00ODcyLWIzNTEtMTMwNGQwMmZiZDIwX2xlZ3JhX2dsaWRlXzQwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/be7bc78b-f844-47b6-ac26-1c659404eed5_legra_glide_400_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Q9ck26NKO%2FW7W2muDWiZOLtVjAnJVwXgskPNG0XBzxQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmU3YmM3OGItZjg0NC00N2I2LWFjMjYtMWM2NTk0MDRlZWQ1X2xlZ3JhX2dsaWRlXzQwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1644,10 +1646,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8459,
+    _id: 9551,
     in_GraphicFileId: "Legra_Slide_450_H_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/14b651d8-4e4e-49b9-b060-12b7b72f6c74_legra_glide_400_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=nxFV%2F2l3dLxVxsI0cAj5jA2mMZHrvyhitUvxvWBAvD0%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTRiNjUxZDgtNGU0ZS00OWI5LWIwNjAtMTJiN2I3MmY2Yzc0X2xlZ3JhX2dsaWRlXzQwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c5fbbf74-3b5b-4f44-a1e1-d05ae0c1ee02_legra_glide_400_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=H4IxrbQx5vpbu0EmzCPrZkVL7nvlIb%2Fc%2BsZFSU3wZOw%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzVmYmJmNzQtM2I1Yi00ZjQ0LWExZTEtZDA1YWUwYzFlZTAyX2xlZ3JhX2dsaWRlXzQwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1661,10 +1663,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8460,
+    _id: 9552,
     in_GraphicFileId: "Legra_Slide_450_H_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7760fbad-036f-4872-b351-1304d02fbd20_legra_glide_400_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=N9H4kEHy2maJrtWDfQ5SzdvTmOWtuIfmUWCEHj4ClOc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzc2MGZiYWQtMDM2Zi00ODcyLWIzNTEtMTMwNGQwMmZiZDIwX2xlZ3JhX2dsaWRlXzQwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/be7bc78b-f844-47b6-ac26-1c659404eed5_legra_glide_400_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Q9ck26NKO%2FW7W2muDWiZOLtVjAnJVwXgskPNG0XBzxQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmU3YmM3OGItZjg0NC00N2I2LWFjMjYtMWM2NTk0MDRlZWQ1X2xlZ3JhX2dsaWRlXzQwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1678,10 +1680,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8461,
+    _id: 9553,
     in_GraphicFileId: "Legra_Slide_500_550_600_H_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a4b34074-7363-4545-afc9-7fb5dee8d004_legra_glide_600_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=52MJlL%2FAY7OEe4o3V2oNBmgHkuOOIx2yws2EFGGHumc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTRiMzQwNzQtNzM2My00NTQ1LWFmYzktN2ZiNWRlZThkMDA0X2xlZ3JhX2dsaWRlXzYwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a312867c-71f3-4d00-9f35-a6666f17ed63_legra_glide_600_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Y75%2BEBgpVToiABsGUMIV4BQZX%2FgU5NwGQ4iMDIV4dLo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTMxMjg2N2MtNzFmMy00ZDAwLTlmMzUtYTY2NjZmMTdlZDYzX2xlZ3JhX2dsaWRlXzYwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1695,10 +1697,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8462,
+    _id: 9554,
     in_GraphicFileId: "Legra_Slide_500_550_600_H_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/880e15b8-ba1f-446c-bee7-a64b26035c29_legra_glide_600_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=PHyaJOeMwBs0TXjB0GknZv7RYMLmXs0aeGHcJGohVjw%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODgwZTE1YjgtYmExZi00NDZjLWJlZTctYTY0YjI2MDM1YzI5X2xlZ3JhX2dsaWRlXzYwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a031af9c-100f-450a-b859-b7986f3f4114_legra_glide_600_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=rjfFoztvP9B8lzSbrHEWzRtpgsdXaiuv0cdbefy%2Bg0U%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTAzMWFmOWMtMTAwZi00NTBhLWI4NTktYjc5ODZmM2Y0MTE0X2xlZ3JhX2dsaWRlXzYwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1712,10 +1714,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8463,
+    _id: 9555,
     in_GraphicFileId: "Legra_Slide_550_600_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a4b34074-7363-4545-afc9-7fb5dee8d004_legra_glide_600_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=52MJlL%2FAY7OEe4o3V2oNBmgHkuOOIx2yws2EFGGHumc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTRiMzQwNzQtNzM2My00NTQ1LWFmYzktN2ZiNWRlZThkMDA0X2xlZ3JhX2dsaWRlXzYwMF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a312867c-71f3-4d00-9f35-a6666f17ed63_legra_glide_600_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Y75%2BEBgpVToiABsGUMIV4BQZX%2FgU5NwGQ4iMDIV4dLo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTMxMjg2N2MtNzFmMy00ZDAwLTlmMzUtYTY2NjZmMTdlZDYzX2xlZ3JhX2dsaWRlXzYwMF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1729,10 +1731,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8464,
+    _id: 9556,
     in_GraphicFileId: "Legra_Slide_550_600_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/880e15b8-ba1f-446c-bee7-a64b26035c29_legra_glide_600_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=PHyaJOeMwBs0TXjB0GknZv7RYMLmXs0aeGHcJGohVjw%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODgwZTE1YjgtYmExZi00NDZjLWJlZTctYTY0YjI2MDM1YzI5X2xlZ3JhX2dsaWRlXzYwMF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a031af9c-100f-450a-b859-b7986f3f4114_legra_glide_600_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=rjfFoztvP9B8lzSbrHEWzRtpgsdXaiuv0cdbefy%2Bg0U%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTAzMWFmOWMtMTAwZi00NTBhLWI4NTktYjc5ODZmM2Y0MTE0X2xlZ3JhX2dsaWRlXzYwMF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1746,10 +1748,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8465,
+    _id: 9557,
     in_GraphicFileId: "Legra_Slide_650_H_Left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/1922a251-e4cf-4700-9dff-322f64a7db14_slide_650_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=4ZSLF290ApAi0tg%2BfvnMTD6E%2BXetndL6dfZVT%2FsuiCM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTkyMmEyNTEtZTRjZi00NzAwLTlkZmYtMzIyZjY0YTdkYjE0X3NsaWRlXzY1MF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ff2a90ba-a0ed-4636-9800-bb4d15e43e99_slide_650_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=9rfJ9QFWypLXD4FcbrOMGNbNabpbWsefTq28ZDPZCEU%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmYyYTkwYmEtYTBlZC00NjM2LTk4MDAtYmI0ZDE1ZTQzZTk5X3NsaWRlXzY1MF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1763,10 +1765,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8466,
+    _id: 9558,
     in_GraphicFileId: "Legra_Slide_650_H_Right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9da34152-8bac-424b-8059-fd12b0db3df5_slide_650_right.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=wuVpaG64yTw2Py8jo5zJuNiBzI7ppYckxnHy1Uuyp3M%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOWRhMzQxNTItOGJhYy00MjRiLTgwNTktZmQxMmIwZGIzZGY1X3NsaWRlXzY1MF9yaWdodC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/3d512dc2-af80-45f2-8ed4-96184b282ec5_slide_650_right.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=%2B7O9pTAzfgYbwtFXNAYrkn7AaeOxIJZ6EEnrXVsVHSU%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvM2Q1MTJkYzItYWY4MC00NWYyLThlZDQtOTYxODRiMjgyZWM1X3NsaWRlXzY1MF9yaWdodC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1780,10 +1782,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8467,
+    _id: 9559,
     in_GraphicFileId: "MinifixConnectionBolt01",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/76514408-0465-49de-b514-42b8f4e94b3b_262_28_920_details_low.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=3uOQISsfFwE9L7Gxgp1OtawiCMzP3mRJAlYBhGgLwyU%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzY1MTQ0MDgtMDQ2NS00OWRlLWI1MTQtNDJiOGY0ZTk0YjNiXzI2Ml8yOF85MjBfZGV0YWlsc19sb3cub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e2017afc-654a-4d8b-8426-f1d5aa3d110c_262_28_920_details_low.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=dSwF%2FZx7luzV2p8IBwLJ6Rxh9QrKpQ53M7aImhW6EZI%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTIwMTdhZmMtNjU0YS00ZDhiLTg0MjYtZjFkNWFhM2QxMTBjXzI2Ml8yOF85MjBfZGV0YWlsc19sb3cub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1797,10 +1799,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8468,
+    _id: 9560,
     in_GraphicFileId: "MinifixConnectionCover",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/56ec455a-b3f1-4db1-badc-fb720ef93070_262_24_751_details_low.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=fbZ6t2sFPqk7a2g8rZG5SKpYJohA2qssxgnp7i%2FrfAg%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTZlYzQ1NWEtYjNmMS00ZGIxLWJhZGMtZmI3MjBlZjkzMDcwXzI2Ml8yNF83NTFfZGV0YWlsc19sb3cub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/93d43825-3030-46b4-b839-1a22c03152a5_262_24_751_details_low.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=xVW%2Bkygg5x6meLJwNpy7hJSLAtL36L5z0DAf70HNC5o%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTNkNDM4MjUtMzAzMC00NmI0LWI4MzktMWEyMmMwMzE1MmE1XzI2Ml8yNF83NTFfZGV0YWlsc19sb3cub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1814,10 +1816,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8469,
+    _id: 9561,
     in_GraphicFileId: "MinifixConnectionHousing01",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bf96292d-0374-4505-b4ad-a9fb6ef1416c_262_26_533_details_low.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=a%2Fr%2FhA6KhJVcFMEF1CD1WjeJ4ooGdszYWM85y04V%2FSA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmY5NjI5MmQtMDM3NC00NTA1LWI0YWQtYTlmYjZlZjE0MTZjXzI2Ml8yNl81MzNfZGV0YWlsc19sb3cub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/af50cb8a-e74e-440a-b71e-17dc1673c078_262_26_533_details_low.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=dNCyzUKwMYKbHlkivNFaMjJiMOldd1ALAYb%2FmoQw1CY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYWY1MGNiOGEtZTc0ZS00NDBhLWI3MWUtMTdkYzE2NzNjMDc4XzI2Ml8yNl81MzNfZGV0YWlsc19sb3cub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1831,10 +1833,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8470,
+    _id: 9562,
     in_GraphicFileId: "Model3D_Aventos_HF_Connector",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d16394bf-5a4e-42c6-b141-b90ca910d303_connector.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=yPjHYpS%2FN7l9uSOS3PFP7okSO4D1tsH6%2FFIYwQD1CVo%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDE2Mzk0YmYtNWE0ZS00MmM2LWIxNDEtYjkwY2E5MTBkMzAzX2Nvbm5lY3Rvci5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/df6d93aa-d341-462e-8247-ec8c5e4a1e26_connector.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=8fi2SdaiUtwcSNfQiWgnEhriXEotFLyCeT%2BsevRGrdk%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZGY2ZDkzYWEtZDM0MS00NjJlLTgyNDctZWM4YzVlNGExZTI2X2Nvbm5lY3Rvci5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1848,10 +1850,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8471,
+    _id: 9563,
     in_GraphicFileId: "Model3D_Aventos_HF_Mech",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8d548ec6-c98d-4e6b-8b9c-299830cc4fa6_mech_480_610.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=xsBuipoMsWpYmPLVapgAvXgL4FeofKhYQM2kXleCj8k%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOGQ1NDhlYzYtYzk4ZC00ZTZiLThiOWMtMjk5ODMwY2M0ZmE2X21lY2hfNDgwXzYxMC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ebcfdc4d-c97b-4c53-b018-a6fc0d0be5a0_mech_480_610.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=qB9OgS5tjnSzI%2B8H9daUivjddulryPkj1rOtcXlY3aM%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWJjZmRjNGQtYzk3Yi00YzUzLWIwMTgtYTZmYzBkMGJlNWEwX21lY2hfNDgwXzYxMC5vYmo=',
     Model3DParameters: {
       "regions": {
         "x": [
@@ -1877,7 +1879,7 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
           }
         ]
       },
-      "attachmentId": "bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTQzMjRhMGUtODZkNy00YmQ1LWEwNzYtZGY4ZDc5M2Q3YzhkX2RhdGEuYmlu"
+      "attachmentId": "bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTFkM2EyMjgtZWQ1My00MDQ0LTgwZDctYTBmOTM1YjEyYmYwX2RhdGEuYmlu"
     },
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1891,10 +1893,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8472,
+    _id: 9564,
     in_GraphicFileId: "Model3D_Aventos_HF_Mech_480",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/92223c78-5b6d-4573-bacf-23167529999b_aventos_hf_arm_480.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=CIfR9X219xlGo199QD6B%2BrrNJCFjHyUZNpgHWZzRs%2Fc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTIyMjNjNzgtNWI2ZC00NTczLWJhY2YtMjMxNjc1Mjk5OTliX2F2ZW50b3NfaGZfYXJtXzQ4MC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/eafd42a3-bded-4bba-ac41-0d842375300a_aventos_hf_arm_480.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=fgeUnHMeol208xM0L%2BJ2gt2lIeXBjaAvIIFzwz6ugvs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWFmZDQyYTMtYmRlZC00YmJhLWFjNDEtMGQ4NDIzNzUzMDBhX2F2ZW50b3NfaGZfYXJtXzQ4MC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1908,10 +1910,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8473,
+    _id: 9565,
     in_GraphicFileId: "Model3D_Aventos_HF_Mech_600",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b39d9cb1-929a-4802-9c18-9847d815ecdd_aventos_hf_arm_600.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=VewlACxpKyM%2BFw%2B3ZjQisOwUU5VpjL8Y%2BC7sfjTHqxI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjM5ZDljYjEtOTI5YS00ODAyLTljMTgtOTg0N2Q4MTVlY2RkX2F2ZW50b3NfaGZfYXJtXzYwMC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/64308ec8-b17a-410f-a76a-5543715c3c18_aventos_hf_arm_600.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=T4DqxSVHgwuWUskoW0v8tUfEY67X5%2BK6CkUYR4CDc2k%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjQzMDhlYzgtYjE3YS00MTBmLWE3NmEtNTU0MzcxNWMzYzE4X2F2ZW50b3NfaGZfYXJtXzYwMC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1925,10 +1927,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8474,
+    _id: 9566,
     in_GraphicFileId: "Model3D_Aventos_HF_Mech_840",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f600c709-506c-41bc-8a2e-153f767d3a3f_aventos_hf_arm_840.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=%2Fv0YJ6kYWU7MyMLoBLb8W8SN64p2YomiLzVaODfRtsg%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjYwMGM3MDktNTA2Yy00MWJjLThhMmUtMTUzZjc2N2QzYTNmX2F2ZW50b3NfaGZfYXJtXzg0MC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ad95c3e2-3d7e-4310-8f6c-6745e578848e_aventos_hf_arm_840.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=B49mKpXnHTzT2OYGQZwbb9tjrfDlowcrnKB7I8plgb8%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYWQ5NWMzZTItM2Q3ZS00MzEwLThmNmMtNjc0NWU1Nzg4NDhlX2F2ZW50b3NfaGZfYXJtXzg0MC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1942,10 +1944,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8475,
+    _id: 9567,
     in_GraphicFileId: "Model3D_Aventos_HF_PSL",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/46536603-54ba-44d0-bfde-ea9c46f4f4e5_aventos_psl.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=kYXO65anv5ta5G6riS8du2RAbmzLXoyDL7pd4VQ5dmA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDY1MzY2MDMtNTRiYS00NGQwLWJmZGUtZWE5YzQ2ZjRmNGU1X2F2ZW50b3NfcHNsLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/fa55b49e-5a9c-468a-9c55-7d47b916e6d1_aventos_psl.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ndwzshfKfk9kbIxnVSZSZkkGHQhz7VNpSjCw9dBJ5tY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmE1NWI0OWUtNWE5Yy00NjhhLTljNTUtN2Q0N2I5MTZlNmQxX2F2ZW50b3NfcHNsLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1959,10 +1961,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8476,
+    _id: 9568,
     in_GraphicFileId: "Model3D_Aventos_HF_PSR",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/14abd29e-e596-44e6-b825-e1c3f06ad8f4_aventos_psr.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=dcjKILPG32OROZsdxY%2FkjUNl9xjf9mhtPANzl62uL8Q%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTRhYmQyOWUtZTU5Ni00NGU2LWI4MjUtZTFjM2YwNmFkOGY0X2F2ZW50b3NfcHNyLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ed6c1f2e-9c75-4aeb-b5c5-ac69d02ef178_aventos_psr.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=NRp89gPPMbQzGPzDnEyyiPwkKoR3Z7sGEVcrE%2Fc1qiY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWQ2YzFmMmUtOWM3NS00YWViLWI1YzUtYWM2OWQwMmVmMTc4X2F2ZW50b3NfcHNyLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1976,10 +1978,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8477,
+    _id: 9569,
     in_GraphicFileId: "Model3D_Aventos_HK_Connector",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/41566bd9-420f-41a0-bd42-dc0ee7829f90_aventos_hk_connector.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=j45QBoL0UbbOaf0tGrI53xleqZcgkM%2FYlTB%2BzIIXJ8k%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDE1NjZiZDktNDIwZi00MWEwLWJkNDItZGMwZWU3ODI5ZjkwX2F2ZW50b3NfaGtfY29ubmVjdG9yLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9cada489-54d6-4d82-8f02-d1c9bc4d6b8d_aventos_hk_connector.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=xRTdCduMvjLvAD5UTmdQXf%2BzH%2B1EP5tFUR6iyRhx%2Bnk%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOWNhZGE0ODktNTRkNi00ZDgyLThmMDItZDFjOWJjNGQ2YjhkX2F2ZW50b3NfaGtfY29ubmVjdG9yLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -1993,10 +1995,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8478,
+    _id: 9570,
     in_GraphicFileId: "Model3D_Aventos_HK_PSL",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/acb6cac6-25cb-4c61-b06a-5f7e2896b4d9_aventos_hk_l.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=sw4NT%2BFmf4VA0djHHEoGRCCFQzaI1vsEYoXmaIupVZw%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYWNiNmNhYzYtMjVjYi00YzYxLWIwNmEtNWY3ZTI4OTZiNGQ5X2F2ZW50b3NfaGtfbC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d09ebdc2-9df5-450b-bd9c-5240c01f9d05_aventos_hk_l.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=wilaX1RQ06essh7pGoRooRxvgxaHDDe6B0NA3UcEBZY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDA5ZWJkYzItOWRmNS00NTBiLWJkOWMtNTI0MGMwMWY5ZDA1X2F2ZW50b3NfaGtfbC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2010,10 +2012,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8479,
+    _id: 9571,
     in_GraphicFileId: "Model3D_Aventos_HK_PSR",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e738cc7b-46af-40fc-9c3a-cb14b98764e4_aventos_hk_r.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=amBj09VGOszOH%2BIMNYjgfMFADWEDxEmOdOD%2Bq6aUwUQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTczOGNjN2ItNDZhZi00MGZjLTljM2EtY2IxNGI5ODc2NGU0X2F2ZW50b3NfaGtfci5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/fa7cd538-824e-4254-9bfe-ed73b1597910_aventos_hk_r.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=tYV6hQPe9JWfcq2LPstKY8cRf97ke%2BDOHtbz5i%2BZWfE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmE3Y2Q1MzgtODI0ZS00MjU0LTliZmUtZWQ3M2IxNTk3OTEwX2F2ZW50b3NfaGtfci5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2027,10 +2029,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8480,
+    _id: 9572,
     in_GraphicFileId: "Model3D_Aventos_HKXS_Carcase_L",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/144190e3-9511-4273-9de5-28e1e8a1e13d_hkxs_cl.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=IkUYx2I7lXOIBeG12TxQ4S3s4%2FmEDfwCVemdSpzYZ1Q%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTQ0MTkwZTMtOTUxMS00MjczLTlkZTUtMjhlMWU4YTFlMTNkX2hreHNfY2wub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e43e4574-101a-4d01-be91-02476b374dc8_hkxs_cl.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=EkMamVGOtrcyFOh6XNbFnIc4VqEnjcfwetIy3Rk1s3Y%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTQzZTQ1NzQtMTAxYS00ZDAxLWJlOTEtMDI0NzZiMzc0ZGM4X2hreHNfY2wub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2044,10 +2046,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8481,
+    _id: 9573,
     in_GraphicFileId: "Model3D_Aventos_HKXS_Carcase_R",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9d7a6ba9-cdd7-48a0-bae4-34be22775979_hkxs_cr.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=CA%2FNMMSsgxvnCRn6W%2FVWcbEx7zDPYMnIxEB2vP1MXWk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOWQ3YTZiYTktY2RkNy00OGEwLWJhZTQtMzRiZTIyNzc1OTc5X2hreHNfY3Iub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ad3dfd91-1828-45f2-9315-ea3409611a34_hkxs_cr.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=mBsxYE8wbmsMwRY7NChvv6LNIMpkAXPNCVI0XBvhk8o%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYWQzZGZkOTEtMTgyOC00NWYyLTkzMTUtZWEzNDA5NjExYTM0X2hreHNfY3Iub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2061,10 +2063,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8482,
+    _id: 9574,
     in_GraphicFileId: "Model3D_Aventos_HKXS_Front",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/dd5fa04f-e982-4775-9e41-f3c29a307451_hkxs_connector.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=tDrGE6z5Bh5ng71gUQNCRj4QgtVg%2FxHxzxnNprV9IvI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZGQ1ZmEwNGYtZTk4Mi00Nzc1LTllNDEtZjNjMjlhMzA3NDUxX2hreHNfY29ubmVjdG9yLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/944357e4-060b-4aa7-a9d7-98e745443786_hkxs_connector.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=n5IEVdd2PycdmON8EbjOlw3VXMufueeUm2TYZR%2F9PB8%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTQ0MzU3ZTQtMDYwYi00YWE3LWE5ZDctOThlNzQ1NDQzNzg2X2hreHNfY29ubmVjdG9yLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2078,10 +2080,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8483,
+    _id: 9575,
     in_GraphicFileId: "Model3D_Aventos_HKXS_Mech",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d2a05661-7bb3-46f9-aba7-e466878fd9cb_hkxs_mech.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=cg1luTXy1Ku2LBiT1cai51Y0olpmJL4wE3rdn5c%2FnUs%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDJhMDU2NjEtN2JiMy00NmY5LWFiYTctZTQ2Njg3OGZkOWNiX2hreHNfbWVjaC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d7370768-7e5c-4d79-a7f5-939472ee5d34_hkxs_mech.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=sH5LiqJT1vDTwNAlvflCtsbVBXmJ80WTB922j7sG0X0%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDczNzA3NjgtN2U1Yy00ZDc5LWE3ZjUtOTM5NDcyZWU1ZDM0X2hreHNfbWVjaC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2095,10 +2097,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8484,
+    _id: 9576,
     in_GraphicFileId: "Model3D_Aventos_HL_Mech1",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7b3c9518-4f27-47a8-9c24-728758a491ee_aventos_hl_mech1.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=UWGWuxgJnDi%2FABwiQ2eFE8HiYST5f6BeRtOVkvjg1XI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvN2IzYzk1MTgtNGYyNy00N2E4LTljMjQtNzI4NzU4YTQ5MWVlX2F2ZW50b3NfaGxfbWVjaDEub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/3ab70a41-8be6-41e3-a270-b3fad60e8437_aventos_hl_mech1.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=DUW1sel7CyXi8xGtkBv%2FmOkhhaLQu8Md4KN7to6MUoU%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvM2FiNzBhNDEtOGJlNi00MWUzLWEyNzAtYjNmYWQ2MGU4NDM3X2F2ZW50b3NfaGxfbWVjaDEub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2112,10 +2114,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8485,
+    _id: 9577,
     in_GraphicFileId: "Model3D_Aventos_HL_Mech2",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/26a87f9e-cbc1-4e12-869d-31a3a19b455f_aventos_hl_mech2.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=SO5Y042vww3p%2Fwxukk4ShzKPGRPZiYgAzERN9Pup%2BOc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjZhODdmOWUtY2JjMS00ZTEyLTg2OWQtMzFhM2ExOWI0NTVmX2F2ZW50b3NfaGxfbWVjaDIub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/52efcd62-4870-4a86-9fe1-fdba5cdf3189_aventos_hl_mech2.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=8nMrXRDuR0t0NTLXSZdRZX5IDpgE2Aqa1iXUmZyDiMg%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTJlZmNkNjItNDg3MC00YTg2LTlmZTEtZmRiYTVjZGYzMTg5X2F2ZW50b3NfaGxfbWVjaDIub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2129,10 +2131,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8486,
+    _id: 9578,
     in_GraphicFileId: "Model3D_Aventos_HL_Mech3",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/38ff35da-ad07-4178-bedf-24fdd00ddd5e_aventos_hl_mech3.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=CXZ4osiGQvQEt0RP8B1L3n%2BfPiXDJqF8AQ81SlebII0%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzhmZjM1ZGEtYWQwNy00MTc4LWJlZGYtMjRmZGQwMGRkZDVlX2F2ZW50b3NfaGxfbWVjaDMub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c76f1568-17ad-46fd-ad96-1c4da58ed0bc_aventos_hl_mech3.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=C%2FjT%2Fef2X1hJKY3Xl3a2qeemVfm%2FrGV3FL8x6tH6M%2FQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzc2ZjE1NjgtMTdhZC00NmZkLWFkOTYtMWM0ZGE1OGVkMGJjX2F2ZW50b3NfaGxfbWVjaDMub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2146,10 +2148,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8487,
+    _id: 9579,
     in_GraphicFileId: "Model3D_Aventos_HL_Mech4",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/126a557a-baca-49ce-87f7-c68f13ca07da_aventos_hl_mech4.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=ZpzRimZrWe8XgE1ZRRd765Lef7RsB2p%2FbqOf3iWHMJc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTI2YTU1N2EtYmFjYS00OWNlLTg3ZjctYzY4ZjEzY2EwN2RhX2F2ZW50b3NfaGxfbWVjaDQub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/1ceb7e1d-ad90-4695-8e5d-85c1f83ce47c_aventos_hl_mech4.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=3dQFrMG0cVvnuqvWKN%2FbJpMJzJHwS%2FmrOgZXf2CIXaA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMWNlYjdlMWQtYWQ5MC00Njk1LThlNWQtODVjMWY4M2NlNDdjX2F2ZW50b3NfaGxfbWVjaDQub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2163,10 +2165,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8488,
+    _id: 9580,
     in_GraphicFileId: "Model3D_Aventos_HL_PSL",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bd7bd1f6-1b5e-43da-813b-3cf1f95a2c29_aventos_hl_psl.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=S4tCcqsFloTs6UzlOkcX%2FNgbp%2FygRaFGtaOZI5BnZRc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmQ3YmQxZjYtMWI1ZS00M2RhLTgxM2ItM2NmMWY5NWEyYzI5X2F2ZW50b3NfaGxfcHNsLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/3caebc3c-6e95-49f5-a7fd-4ead387beb7d_aventos_hl_psl.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ueGRakC1SjgtdeXtha2uv%2B3s%2B7fULlgcca1F9g1y8fM%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvM2NhZWJjM2MtNmU5NS00OWY1LWE3ZmQtNGVhZDM4N2JlYjdkX2F2ZW50b3NfaGxfcHNsLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2180,10 +2182,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8489,
+    _id: 9581,
     in_GraphicFileId: "Model3D_Aventos_HL_PSR",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/646a38ed-8a5c-4d1c-acb0-7325d7388b43_aventos_hl_psr.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=Ph4%2BS0QpcBAIOnUG5SiAXGLM%2Bn1D81rdI3ScknrEhSw%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjQ2YTM4ZWQtOGE1Yy00ZDFjLWFjYjAtNzMyNWQ3Mzg4YjQzX2F2ZW50b3NfaGxfcHNyLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8ed8559d-bf76-4b33-bf8b-8b8f7fdfeaf9_aventos_hl_psr.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=cUxI5JvXPawFmSOZTRP4TGsV1s9gjXi%2Fm4palHcoYWA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOGVkODU1OWQtYmY3Ni00YjMzLWJmOGItOGI4ZjdmZGZlYWY5X2F2ZW50b3NfaGxfcHNyLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2197,10 +2199,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8490,
+    _id: 9582,
     in_GraphicFileId: "Model3D_Aventos_HS_PSL",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bd4ea9a2-7a60-41b4-915f-b395d6de7e6b_aventos_hs_psl.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=jL1wQ9hdoeRgsA%2FWpGqk6FlYneV2IY7YZga7iUcR5yI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmQ0ZWE5YTItN2E2MC00MWI0LTkxNWYtYjM5NWQ2ZGU3ZTZiX2F2ZW50b3NfaHNfcHNsLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/945596c3-8594-4960-88d8-3e842b652a8d_aventos_hs_psl.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=2Sl0kYRLjQvC6cOLsBh5uqC3ugFuVr32doveyy0EGrY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTQ1NTk2YzMtODU5NC00OTYwLTg4ZDgtM2U4NDJiNjUyYThkX2F2ZW50b3NfaHNfcHNsLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2214,10 +2216,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8491,
+    _id: 9583,
     in_GraphicFileId: "Model3D_Aventos_HS_PSR",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/69462de6-360f-4a6d-896b-7496fcb14ff8_aventos_hs_psr.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=BSKLtrKpYSHNbYPvcevaJ5r0WSx1Q8y98J4%2FCkHhgg4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjk0NjJkZTYtMzYwZi00YTZkLTg5NmItNzQ5NmZjYjE0ZmY4X2F2ZW50b3NfaHNfcHNyLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/86c321d4-1cd6-49e2-8d2d-d0a81263ca4e_aventos_hs_psr.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=W63ANs7TTDR7nPcLrUk5px0x1SyDq4%2FZb6HGK1hvwuw%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODZjMzIxZDQtMWNkNi00OWUyLThkMmQtZDBhODEyNjNjYTRlX2F2ZW50b3NfaHNfcHNyLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2231,10 +2233,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8492,
+    _id: 9584,
     in_GraphicFileId: "Model3D_Legra_FrontBotCon",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/89a88529-ace9-473c-8479-584a2c71d5b8_legra_bottofrontcon.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=kpfiOQVRN%2Fp5QRpd1%2FHh3qp5MaEUg8SJ09fXi5cNktM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODlhODg1MjktYWNlOS00NzNjLTg0NzktNTg0YTJjNzFkNWI4X2xlZ3JhX2JvdHRvZnJvbnRjb24ub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/22d3bca9-cb0d-49cf-8810-54ad5ee1f252_legra_bottofrontcon.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=9cYwaw%2FGDVu8aW79drDzbUyvxwG%2BCgNbshNlzdBvGYY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjJkM2JjYTktY2IwZC00OWNmLTg4MTAtNTRhZDVlZTFmMjUyX2xlZ3JhX2JvdHRvZnJvbnRjb24ub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2248,10 +2250,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8493,
+    _id: 9585,
     in_GraphicFileId: "Model3DAdapterHousingLong",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5fa058d7-bbb8-4b17-80bb-9d9753be073c_adapterhousinglongblack_356_04_362.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=mgoPaxWKub5pfx97UxK%2FCdDe%2BuWGPq%2B2B6xKjCHPGpA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNWZhMDU4ZDctYmJiOC00YjE3LTgwYmItOWQ5NzUzYmUwNzNjX2FkYXB0ZXJob3VzaW5nbG9uZ2JsYWNrXzM1Nl8wNF8zNjIub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9f1ac3bc-ca2d-40f6-8994-480c5074412d_adapterhousinglongblack_356_04_362.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=GsLwKWYcSV6Hv4WkcMdxfqtcFS33MaDrwusPr9MHeNY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOWYxYWMzYmMtY2EyZC00MGY2LTg5OTQtNDgwYzUwNzQ0MTJkX2FkYXB0ZXJob3VzaW5nbG9uZ2JsYWNrXzM1Nl8wNF8zNjIub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2265,10 +2267,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8494,
+    _id: 9586,
     in_GraphicFileId: "Model3DAdapterHousingShort",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d74d7aa8-798c-4d4c-a273-d586669c4960_adapterhousingshortblack_356_04_363.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=oGG63sKjPaFvEdiNaiQKPTc5lk5JpWcnHxq49jkWr9A%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDc0ZDdhYTgtNzk4Yy00ZDRjLWEyNzMtZDU4NjY2OWM0OTYwX2FkYXB0ZXJob3VzaW5nc2hvcnRibGFja18zNTZfMDRfMzYzLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/01c89764-66ee-4cd3-82e1-48b630f15049_adapterhousingshortblack_356_04_363.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=4vhSpfSd0vvtW273eYwdRw03nOW%2FWbqDW%2BfX4qrvD7M%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDFjODk3NjQtNjZlZS00Y2QzLTgyZTEtNDhiNjMwZjE1MDQ5X2FkYXB0ZXJob3VzaW5nc2hvcnRibGFja18zNTZfMDRfMzYzLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2282,10 +2284,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8495,
+    _id: 9587,
     in_GraphicFileId: "Model3DBracket01",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a8c68c97-9628-47a8-8329-fb789349787d_bracket%20-%20260_28_004.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=0TiiH1XsW12XJQCOqzbFHt88gTwuyTYvtkU0wrS5kz4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYThjNjhjOTctOTYyOC00N2E4LTgzMjktZmI3ODkzNDk3ODdkX2JyYWNrZXQgLSAyNjBfMjhfMDA0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a9765b6c-9723-4039-8dd1-051ea6908cdf_bracket%20-%20260_28_004.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=PXZrAkzYOz1xQEPAZslCidsfdhooHe6Vmy2Uc5t14nM%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTk3NjViNmMtOTcyMy00MDM5LThkZDEtMDUxZWE2OTA4Y2RmX2JyYWNrZXQgLSAyNjBfMjhfMDA0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2299,10 +2301,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8496,
+    _id: 9588,
     in_GraphicFileId: "Model3DBracketHandle128",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7f4fdddb-5b57-4031-b69c-b277c2c30e70_155_01_251_2.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=qZy782YtzCqSd7m4DQfbeQAnUZoHdTEUS2o%2BmmrJSqE%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvN2Y0ZmRkZGItNWI1Ny00MDMxLWI2OWMtYjI3N2MyYzMwZTcwXzE1NV8wMV8yNTFfMi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/fdce53ea-dd19-44cc-9e93-6385fed78204_155_01_251_2.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=VP0fHhITg4ES99TtwL2ZhopHxut7A%2FdR0EbryVA3XCs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmRjZTUzZWEtZGQxOS00NGNjLTllOTMtNjM4NWZlZDc4MjA0XzE1NV8wMV8yNTFfMi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2316,10 +2318,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8497,
+    _id: 9589,
     in_GraphicFileId: "Model3DBracketHandle160",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/34818add-50ed-41ad-bb16-b855e0468519_155_01_252_3.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=gsEMBJofwc4SE9XodCp4uWuFoGa7LISl7JA%2BXfJmhHs%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzQ4MThhZGQtNTBlZC00MWFkLWJiMTYtYjg1NWUwNDY4NTE5XzE1NV8wMV8yNTJfMy5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/731d1eeb-137b-4561-a92c-d6c92709f15a_155_01_252_3.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Gyx9WDPM52G5fcwa%2F5mDMEA66lhe7Nzb2AK9kT%2BxKV4%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzMxZDFlZWItMTM3Yi00NTYxLWE5MmMtZDZjOTI3MDlmMTVhXzE1NV8wMV8yNTJfMy5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2333,10 +2335,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8498,
+    _id: 9590,
     in_GraphicFileId: "Model3DBracketHandle192",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/559b995a-85ac-4119-aeff-06e91d3c3d8d_155_01_253_4.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=O9%2FFVY1URtIf%2FJhvJSLR1tYsqmRI1nMcsBTvK4H7XSI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTU5Yjk5NWEtODVhYy00MTE5LWFlZmYtMDZlOTFkM2MzZDhkXzE1NV8wMV8yNTNfNC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/13254fd6-796f-4b16-8b96-fafe5cddd14a_155_01_253_4.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=VmT09WA8SOx0Eh9OP%2B2pnP9YAmY%2FnKrEoD04rXAn%2F%2FM%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTMyNTRmZDYtNzk2Zi00YjE2LThiOTYtZmFmZTVjZGRkMTRhXzE1NV8wMV8yNTNfNC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2350,10 +2352,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8499,
+    _id: 9591,
     in_GraphicFileId: "Model3DBracketHandle224",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/94a3f8ce-2a3c-4324-af95-fe3c4c169033_155_01_254_5.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=nZ9OlU%2BorD3bEotrmvjzmPWsJjXq8xqlgR9oCIDwLJ4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTRhM2Y4Y2UtMmEzYy00MzI0LWFmOTUtZmUzYzRjMTY5MDMzXzE1NV8wMV8yNTRfNS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ca280a82-a744-4411-9604-920175664a6a_155_01_254_5.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=crW8rtgOq5ug5rplBH9l2XEpMZB1BHgOVrkcTbhDq3g%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvY2EyODBhODItYTc0NC00NDExLTk2MDQtOTIwMTc1NjY0YTZhXzE1NV8wMV8yNTRfNS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2367,10 +2369,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8500,
+    _id: 9592,
     in_GraphicFileId: "Model3DBracketHandle288",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/03f5351c-4b55-4197-8f48-aecb9c525181_155_01_255_6.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=IWBj6Suv%2FAiTt8usVNq%2F37%2FF82TK6ZcaN6fPxp5oq%2B8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDNmNTM1MWMtNGI1NS00MTk3LThmNDgtYWVjYjljNTI1MTgxXzE1NV8wMV8yNTVfNi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bbe48421-7dc3-49b4-bcb5-4f162c5aecc4_155_01_255_6.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=w9m7ZSsMyoLoh%2BZ0t86C9CldDj4iD0%2F2BUnCbJn3bmI%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmJlNDg0MjEtN2RjMy00OWI0LWJjYjUtNGYxNjJjNWFlY2M0XzE1NV8wMV8yNTVfNi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2384,10 +2386,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8501,
+    _id: 9593,
     in_GraphicFileId: "Model3DBracketHandle320",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/184d9d1f-4e16-4487-9d08-c6afdfcfb703_155_01_256_7.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=vtSVb6PylsKGXUYIQ7%2FHKxdnoGJei%2BWC9FP%2FBhoOWZ0%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTg0ZDlkMWYtNGUxNi00NDg3LTlkMDgtYzZhZmRmY2ZiNzAzXzE1NV8wMV8yNTZfNy5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/1a5f2247-667e-4bb2-9e7f-82578c8aabb8_155_01_256_7.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=cJFWak1QhukBXE5L12uQy4b0h8zQjZfqEj5vXWvwfpY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMWE1ZjIyNDctNjY3ZS00YmIyLTllN2YtODI1NzhjOGFhYmI4XzE1NV8wMV8yNTZfNy5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2401,10 +2403,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8502,
+    _id: 9594,
     in_GraphicFileId: "Model3DBracketHandle352",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c50052e4-27a6-4a30-b5c2-6269e9d2b589_155_01_257_8.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=b8mVIKE2n%2BcvYXeEQYK2iEO2WZn2FmpqJV9in%2BlT%2FCM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzUwMDUyZTQtMjdhNi00YTMwLWI1YzItNjI2OWU5ZDJiNTg5XzE1NV8wMV8yNTdfOC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/1fc65395-e0cb-4507-86ec-0813cb37b0ca_155_01_257_8.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=X2SWf5fakFC6TME3Hep3Q5%2FSj%2FrdjXVF159A4RABjlE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMWZjNjUzOTUtZTBjYi00NTA3LTg2ZWMtMDgxM2NiMzdiMGNhXzE1NV8wMV8yNTdfOC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2418,10 +2420,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8503,
+    _id: 9595,
     in_GraphicFileId: "Model3DBracketHandle448",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9e3238b6-9ee6-4678-ab83-01bae1e98f99_155_01_258_9.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=JKL4lxqj32pDFuMd1wP6EC%2BxrE1jvL8Wo3OfggigOxM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOWUzMjM4YjYtOWVlNi00Njc4LWFiODMtMDFiYWUxZTk4Zjk5XzE1NV8wMV8yNThfOS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7154fe66-02df-4a00-9c8a-fbf353b5d5e8_155_01_258_9.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=3X%2FequB0ZK6DFaAK1mupfr%2Bva9Sv2nPPajtEB1taDAQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzE1NGZlNjYtMDJkZi00YTAwLTljOGEtZmJmMzUzYjVkNWU4XzE1NV8wMV8yNThfOS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2435,10 +2437,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8504,
+    _id: 9596,
     in_GraphicFileId: "Model3DBracketHandle480",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/de0b184f-a89f-473b-82cb-681baedc6541_155_01_259_10.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=%2FW7SkeyWbG138OjN8rxPSFyvVPsE39NTrIK3huUuERY%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZGUwYjE4NGYtYTg5Zi00NzNiLTgyY2ItNjgxYmFlZGM2NTQxXzE1NV8wMV8yNTlfMTAub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/21251a6b-0520-4339-a45d-71977d214eca_155_01_259_10.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=sPERV9EzuGM6L1nSMU4IDkK%2Fo3byeL0Hy8R43c3WVeQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjEyNTFhNmItMDUyMC00MzM5LWE0NWQtNzE5NzdkMjE0ZWNhXzE1NV8wMV8yNTlfMTAub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2452,10 +2454,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8505,
+    _id: 9597,
     in_GraphicFileId: "Model3DBracketHandle560",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/57a6aecc-83a0-422a-8fe0-5faa77976188_155_01_260_11.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=SRawvcRYIoWPRvUcXJH6WTnqEsvvCJbWL4OxNmk9UZE%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTdhNmFlY2MtODNhMC00MjJhLThmZTAtNWZhYTc3OTc2MTg4XzE1NV8wMV8yNjBfMTEub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/796800ba-d275-44be-a1d1-5708fa68734a_155_01_260_11.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=fLS1AE2sRJpsBO3GA8SiTBoj2fQuMXRkLIlrlRujr3g%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzk2ODAwYmEtZDI3NS00NGJlLWExZDEtNTcwOGZhNjg3MzRhXzE1NV8wMV8yNjBfMTEub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2469,10 +2471,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8506,
+    _id: 9598,
     in_GraphicFileId: "Model3DBracketHandle640",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a87da037-a7a0-41ff-92e1-2eb2b52c4984_155_01_261_12.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=UTog2xhfkMIHVT6cIjufAVQzVLFsVjgH2DCxYNaTx6E%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTg3ZGEwMzctYTdhMC00MWZmLTkyZTEtMmViMmI1MmM0OTg0XzE1NV8wMV8yNjFfMTIub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a09f7e53-861d-46f9-9808-404636e68e14_155_01_261_12.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=CvkaQTE4J7ylnizznPe9vshbhKZ%2FtZ2jR1wqVk6zdbk%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTA5ZjdlNTMtODYxZC00NmY5LTk4MDgtNDA0NjM2ZTY4ZTE0XzE1NV8wMV8yNjFfMTIub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2486,10 +2488,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8507,
+    _id: 9599,
     in_GraphicFileId: "Model3DBracketHandle96",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/70b8d3dd-8d51-4a66-9387-bd6195dfedf7_155_01_250_1.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=CgJ%2FZA%2FwEzkCb2iMO7xFbER1qIqpTtcLPpvD4Iwjms0%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzBiOGQzZGQtOGQ1MS00YTY2LTkzODctYmQ2MTk1ZGZlZGY3XzE1NV8wMV8yNTBfMS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6e1e305f-72e5-410f-afda-e5f4c162fb56_155_01_250_1.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=tovlDS5BOGMA2ayoVm5n90z%2FevljGCP7S2fi1Igrsxk%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNmUxZTMwNWYtNzJlNS00MTBmLWFmZGEtZTVmNGMxNjJmYjU2XzE1NV8wMV8yNTBfMS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2503,10 +2505,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8508,
+    _id: 9600,
     in_GraphicFileId: "Model3DBracketHandle960",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c59e5722-6ad8-4c23-80dd-dc9694228c24_155_01_262_13.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=lUEKU3hFmecw99K%2BmrEyfdyGk%2F1rMeg3JYsgw3XnaOE%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzU5ZTU3MjItNmFkOC00YzIzLTgwZGQtZGM5Njk0MjI4YzI0XzE1NV8wMV8yNjJfMTMub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8c4d8419-6e97-4215-aba7-c4ac762f851a_155_01_262_13.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=%2BymOZ4D8FsQp76y0l2U9NvaNn7GF2Bas2BT%2F3Q490qE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOGM0ZDg0MTktNmU5Ny00MjE1LWFiYTctYzRhYzc2MmY4NTFhXzE1NV8wMV8yNjJfMTMub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2520,10 +2522,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8509,
+    _id: 9601,
     in_GraphicFileId: "Model3DbrARRAS5",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/56891ebb-18f8-4367-8139-f1bef4553c6d_support2.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=OASfRFWIY3xXrcV%2BUb0x5X30BhNrkxmqCt7A4hsTJQU%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTY4OTFlYmItMThmOC00MzY3LTgxMzktZjFiZWY0NTUzYzZkX3N1cHBvcnQyLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/cb80c49b-ee43-4f68-a762-fe5043e8ec52_support2.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=CWwZYiyE21M1%2Bf3HyAqKgbGf9stKiwM80hHVfk%2F2FeA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvY2I4MGM0OWItZWU0My00ZjY4LWE3NjItZmU1MDQzZThlYzUyX3N1cHBvcnQyLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2537,10 +2539,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8510,
+    _id: 9602,
     in_GraphicFileId: "Model3DbrTucano",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a66f37c8-724d-4893-9aa9-8fd34985eebc_support1.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=M%2FN%2Fasrg6XjRBaPRwv6lZdGOoIzgAACCcC00r6phYqM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTY2ZjM3YzgtNzI0ZC00ODkzLTlhYTktOGZkMzQ5ODVlZWJjX3N1cHBvcnQxLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c5753fb8-9974-4886-817c-a3ae36b667f2_support1.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=9lBtYLgC36LdaOfKuYMdW0%2B4E89dl5th39TgKPicEes%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzU3NTNmYjgtOTk3NC00ODg2LTgxN2MtYTNhZTM2YjY2N2YyX3N1cHBvcnQxLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2554,10 +2556,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8511,
+    _id: 9603,
     in_GraphicFileId: "Model3DCoverCap290.40.701",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/506ecbb3-f1d6-446d-9cdd-4db314d57830_cover%20cap%20right%20-%20290_40_701.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=SN%2FQE0bkuT8%2BYkoNfR%2FuW70f6RZvg0qtI8jT6ADDNCA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTA2ZWNiYjMtZjFkNi00NDZkLTljZGQtNGRiMzE0ZDU3ODMwX2NvdmVyIGNhcCByaWdodCAtIDI5MF80MF83MDEub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9c050326-c6b3-452b-a056-55e678c46df6_cover%20cap%20right%20-%20290_40_701.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=VvkE4N7Mvf3hU5jtvUpH2YQg7Uow3jcymA3ipcz41cs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOWMwNTAzMjYtYzZiMy00NTJiLWEwNTYtNTVlNjc4YzQ2ZGY2X2NvdmVyIGNhcCByaWdodCAtIDI5MF80MF83MDEub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2571,10 +2573,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8512,
+    _id: 9604,
     in_GraphicFileId: "Model3DCoverCap290.40.702",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/295acc2c-2b3b-4f4d-b56f-fb7b9c37bcbe_cover%20cap%20left%20-%20290_40_702.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=uYg9zr53WZ1pT%2BRhKqsM74e%2BDKFAMbSthYtt7s1EeiY%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjk1YWNjMmMtMmIzYi00ZjRkLWI1NmYtZmI3YjljMzdiY2JlX2NvdmVyIGNhcCBsZWZ0IC0gMjkwXzQwXzcwMi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b1373eb8-0bf3-4e14-bfeb-1815808c67e0_cover%20cap%20left%20-%20290_40_702.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ZqKBfHXo6WqjEgREKp675UsYPvyFRyNz0yxBST1ywlc%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjEzNzNlYjgtMGJmMy00ZTE0LWJmZWItMTgxNTgwOGM2N2UwX2NvdmVyIGNhcCBsZWZ0IC0gMjkwXzQwXzcwMi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2588,10 +2590,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8513,
+    _id: 9605,
     in_GraphicFileId: "Model3DDesignLegRectangular001H100",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/64bba922-a12a-49be-82f8-ecd12f2214cf_model3ddesignlegrectangular001h100.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=VWJFi0iMEhEp6OKbJATCuJhiM5LnVtVdC1XARfL628o%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjRiYmE5MjItYTEyYS00OWJlLTgyZjgtZWNkMTJmMjIxNGNmX21vZGVsM2RkZXNpZ25sZWdyZWN0YW5ndWxhcjAwMWgxMDAub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8aed7f75-8579-47bf-be45-5246dc7d66cb_model3ddesignlegrectangular001h100.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=yloFovvRhd8Hwg5hl6mbbxWGWTpJ6ld6I6%2FzGvtlNmo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOGFlZDdmNzUtODU3OS00N2JmLWJlNDUtNTI0NmRjN2Q2NmNiX21vZGVsM2RkZXNpZ25sZWdyZWN0YW5ndWxhcjAwMWgxMDAub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2605,10 +2607,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8514,
+    _id: 9606,
     in_GraphicFileId: "Model3DDesignLegRectangular001H150",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8e54269b-3ba5-40dc-9aa8-648d2ae7abd2_model3ddesignlegrectangular001h150.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=cERkxz1OEXsjgFoCCvfRun5JLfuBHP74r%2Fu%2BXyo6kxQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOGU1NDI2OWItM2JhNS00MGRjLTlhYTgtNjQ4ZDJhZTdhYmQyX21vZGVsM2RkZXNpZ25sZWdyZWN0YW5ndWxhcjAwMWgxNTAub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/3a8f1933-3c40-4b64-906f-f2504ee868c7_model3ddesignlegrectangular001h150.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=BrNt8RpNxrPwfwVEBlK95qVs0KlOOdThL7og3F7H%2BfE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvM2E4ZjE5MzMtM2M0MC00YjY0LTkwNmYtZjI1MDRlZTg2OGM3X21vZGVsM2RkZXNpZ25sZWdyZWN0YW5ndWxhcjAwMWgxNTAub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2622,10 +2624,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8515,
+    _id: 9607,
     in_GraphicFileId: "Model3DDesignLegRectangular001H200",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/be7967b6-62ff-4730-a959-39ae920a6cd8_model3ddesignlegrectangular001h200.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=eGcwpSonE%2B14KXJjjBvLk9ij8SD58ZCg7NRF8mZkwmk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmU3OTY3YjYtNjJmZi00NzMwLWE5NTktMzlhZTkyMGE2Y2Q4X21vZGVsM2RkZXNpZ25sZWdyZWN0YW5ndWxhcjAwMWgyMDAub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/82bc051a-66b4-46da-bf4d-d9a730843434_model3ddesignlegrectangular001h200.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=QNK8zqZzPklsrSacLwWtIezRG%2BFSkANxB9MhrtKMt3s%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODJiYzA1MWEtNjZiNC00NmRhLWJmNGQtZDlhNzMwODQzNDM0X21vZGVsM2RkZXNpZ25sZWdyZWN0YW5ndWxhcjAwMWgyMDAub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2639,10 +2641,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8516,
+    _id: 9608,
     in_GraphicFileId: "Model3DDesignLegRectangular001H50",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/98299312-b113-46d2-a86b-ca47694bc5d4_model3ddesignlegrectangular001h50.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=1u6ZbO0uTwWYRVVt3tInm5BKThV0za50bH4mu3cUTtE%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTgyOTkzMTItYjExMy00NmQyLWE4NmItY2E0NzY5NGJjNWQ0X21vZGVsM2RkZXNpZ25sZWdyZWN0YW5ndWxhcjAwMWg1MC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ca222a66-2e3b-4f6f-a9c2-cd4bd6ac2d37_model3ddesignlegrectangular001h50.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=jd3%2F3MV52OrLniOUDVO9AghhMYlENi%2Fa1ZUtc%2BL%2BmJk%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvY2EyMjJhNjYtMmUzYi00ZjZmLWE5YzItY2Q0YmQ2YWMyZDM3X21vZGVsM2RkZXNpZ25sZWdyZWN0YW5ndWxhcjAwMWg1MC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2656,10 +2658,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8517,
+    _id: 9609,
     in_GraphicFileId: "Model3DDesignLegRectangular001H80",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/2e5b6da0-0176-4e6d-9c43-568721b1ed5c_model3ddesignlegrectangular001h80.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=ZatGPfwjMwUxaaqQCtIpnLuep2H7s4Kp9ttIgSgbtWE%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMmU1YjZkYTAtMDE3Ni00ZTZkLTljNDMtNTY4NzIxYjFlZDVjX21vZGVsM2RkZXNpZ25sZWdyZWN0YW5ndWxhcjAwMWg4MC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/0fee7f2d-5533-4d59-a255-f2893dba1b1b_model3ddesignlegrectangular001h80.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=d7jfEhrXCN7nc%2B9%2BVHCLqwm%2FhA9005CFB%2Fz%2BIQVgr9A%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMGZlZTdmMmQtNTUzMy00ZDU5LWEyNTUtZjI4OTNkYmExYjFiX21vZGVsM2RkZXNpZ25sZWdyZWN0YW5ndWxhcjAwMWg4MC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2673,10 +2675,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8518,
+    _id: 9610,
     in_GraphicFileId: "Model3DDesignLegSlanted001H250",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/66e55b0c-9868-40c1-ae5a-c3e1d962cfd8_634_48_050_6.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=ozQJJOYDmE8dDZ6SqSeDfhDjmSfSwUPmJ2MkD9T%2Fv6w%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjZlNTViMGMtOTg2OC00MGMxLWFlNWEtYzNlMWQ5NjJjZmQ4XzYzNF80OF8wNTBfNi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bacd9b78-d630-4540-8cd0-cd35a2e32799_634_48_050_6.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Mg7N%2Ff3XwSIbZLd8fKtB87hluiJzpbog8pZd3Uf9%2Frw%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmFjZDliNzgtZDYzMC00NTQwLThjZDAtY2QzNWEyZTMyNzk5XzYzNF80OF8wNTBfNi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2690,10 +2692,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8519,
+    _id: 9611,
     in_GraphicFileId: "Model3DGlueDuststrip",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/91ac37d0-b24e-4730-a9f1-1f9dd72e280e_glueduststrip.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=PGZyOyqCOYACyqEOX2OhbdYFZCHbO9%2FV0xICW1PMoSk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTFhYzM3ZDAtYjI0ZS00NzMwLWE5ZjEtMWY5ZGQ3MmUyODBlX2dsdWVkdXN0c3RyaXAub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/4eae5edb-e920-4d92-81bd-8c02e7a8701f_glueduststrip.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=6kThHoIm5YoWgAoJcqpXsKA8b%2FCP9nafQaVsPXgouFg%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNGVhZTVlZGItZTkyMC00ZDkyLTgxYmQtOGMwMmU3YTg3MDFmX2dsdWVkdXN0c3RyaXAub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2707,10 +2709,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8520,
+    _id: 9612,
     in_GraphicFileId: "Model3DHandle100_160",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6fa1ce9e-e198-4988-a357-80a673c0f50f_106_69_321_2.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=xuz6zuH9aClgeCk9I1lEh%2FHxhyHVYkFnCk7Dyxnvg8A%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNmZhMWNlOWUtZTE5OC00OTg4LWEzNTctODBhNjczYzBmNTBmXzEwNl82OV8zMjFfMi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/04de1e9e-82e5-46cd-82e3-2b39d4ac1b7b_106_69_321_2.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=JJkv8Q0Dph8X%2BI%2Fl1TJErybxQS7F%2BIB8wT7Bb9JiICs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDRkZTFlOWUtODJlNS00NmNkLTgyZTMtMmIzOWQ0YWMxYjdiXzEwNl82OV8zMjFfMi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2724,10 +2726,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8521,
+    _id: 9613,
     in_GraphicFileId: "Model3DHandle100_320",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c67fc32a-a253-4e0d-acd9-539ab97b79e7_106_69_322_3.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=ZUMQnxbSJrnfUihN9kezGfyV6HMFbdLF%2Bzoi1SIhjbk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzY3ZmMzMmEtYTI1My00ZTBkLWFjZDktNTM5YWI5N2I3OWU3XzEwNl82OV8zMjJfMy5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/13bb0c35-9e79-4c1c-8e2d-ae1bc9705f00_106_69_322_3.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Ca9Xhe4rvZqQ5%2BiMja%2BLcxjGBoU6n6bSjL0%2BUSES61U%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTNiYjBjMzUtOWU3OS00YzFjLThlMmQtYWUxYmM5NzA1ZjAwXzEwNl82OV8zMjJfMy5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2741,10 +2743,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8522,
+    _id: 9614,
     in_GraphicFileId: "Model3DHandle100_64",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e5478695-6e02-4edc-9ff9-166b56acf54d_106_69_320_1.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=9MPbOb95zkiyw9%2FGlXQxDY0KOT%2FSmISjOBRYFCgFGT8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTU0Nzg2OTUtNmUwMi00ZWRjLTlmZjktMTY2YjU2YWNmNTRkXzEwNl82OV8zMjBfMS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bb1f44c3-b573-46ee-bcc3-2d0a23cc5983_106_69_320_1.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=4Do6%2BBQE1M3JUdUxpZaWxtA8AxP7%2BBdRFl2mGDbxIdE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmIxZjQ0YzMtYjU3My00NmVlLWJjYzMtMmQwYTIzY2M1OTgzXzEwNl82OV8zMjBfMS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2758,10 +2760,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8523,
+    _id: 9615,
     in_GraphicFileId: "Model3DHandle110_1060",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/01964128-abff-48cd-9bea-430366e10884_117_66_101_19.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=bC%2F21jPhpMnE7Y2Rd8bXj%2FvGUn4edj%2BAkNnwsNCdGy4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDE5NjQxMjgtYWJmZi00OGNkLTliZWEtNDMwMzY2ZTEwODg0XzExN182Nl8xMDFfMTkub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/95e6ff12-ccbb-4221-9cd4-56cefd1188d1_117_66_101_19.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=HAbgjbHdBfS%2B%2BRPzBMAHnIbZlELGnftg1QHIUxlpjRc%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTVlNmZmMTItY2NiYi00MjIxLTljZDQtNTZjZWZkMTE4OGQxXzExN182Nl8xMDFfMTkub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2775,10 +2777,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8524,
+    _id: 9616,
     in_GraphicFileId: "Model3DHandle110_1160",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e356f0f5-2d38-41a7-a8c9-03d598af07f7_117_66_102_20.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=YyDbqFv7JSQBJGAYjQ%2Br1YZXjKzXg0RSMOH9pmfAKQs%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTM1NmYwZjUtMmQzOC00MWE3LWE4YzktMDNkNTk4YWYwN2Y3XzExN182Nl8xMDJfMjAub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/33070cd1-4a37-4c38-84e5-1e6476eee473_117_66_102_20.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=t%2Bujb4VjuPMJKuVP7qeHvAL2QwpMPClMQTITAIG545E%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzMwNzBjZDEtNGEzNy00YzM4LTg0ZTUtMWU2NDc2ZWVlNDczXzExN182Nl8xMDJfMjAub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2792,10 +2794,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8525,
+    _id: 9617,
     in_GraphicFileId: "Model3DHandle110_1260",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6063c25e-ef98-4433-a1f3-de8442f883ab_117_66_103_21.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=FXRbfncYmQwjJ2QnZd%2Bmowr%2F1QpmvYyi8gOxXZOhKds%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjA2M2MyNWUtZWY5OC00NDMzLWExZjMtZGU4NDQyZjg4M2FiXzExN182Nl8xMDNfMjEub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/76282ffa-d082-415a-94d4-887b5e5110df_117_66_103_21.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=RRo70KthX%2F2tKK3LlXLpDT0H2TWErYc%2BeTf1LHeYlhk%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzYyODJmZmEtZDA4Mi00MTVhLTk0ZDQtODg3YjVlNTExMGRmXzExN182Nl8xMDNfMjEub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2809,10 +2811,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8526,
+    _id: 9618,
     in_GraphicFileId: "Model3DHandle110_128",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ac0723a6-e362-4542-b7b4-dd5592364e45_117_66_026_2.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=fgopjvEBlWyBYdqwZB1qC%2B%2BFYth1IwExKm3fIRcPKdA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYWMwNzIzYTYtZTM2Mi00NTQyLWI3YjQtZGQ1NTkyMzY0ZTQ1XzExN182Nl8wMjZfMi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d86a752a-5f68-4462-826e-3fe0953715a2_117_66_026_2.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=vELLTCCIYLTKVulJD8plmVtQIS7vJ0Ad0rqWOPgLevs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDg2YTc1MmEtNWY2OC00NDYyLTgyNmUtM2ZlMDk1MzcxNWEyXzExN182Nl8wMjZfMi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2826,10 +2828,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8527,
+    _id: 9619,
     in_GraphicFileId: "Model3DHandle110_1360",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8991bf49-206e-4138-87ec-0efd318cdc93_117_66_104_22.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=zVnH6jPP%2BH84sHmObPb%2BVf7wZ%2Fy7N%2FDcbUT0vA%2FxGSM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODk5MWJmNDktMjA2ZS00MTM4LTg3ZWMtMGVmZDMxOGNkYzkzXzExN182Nl8xMDRfMjIub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/42c394a7-92a7-4e7e-97bd-9936b985653a_117_66_104_22.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Uc%2FElXkc%2BvkzJV8wPdgoHFe%2Bn1UOfXHkaEADaZCadh8%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDJjMzk0YTctOTJhNy00ZTdlLTk3YmQtOTkzNmI5ODU2NTNhXzExN182Nl8xMDRfMjIub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2843,10 +2845,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8528,
+    _id: 9620,
     in_GraphicFileId: "Model3DHandle110_1460",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/85ea0439-9c93-4a84-a6ce-05d013ec9b46_117_66_106_23.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=5ebYFuJTHiMFmKHJxI3t2OPV71iFT0Nv0gIE0DY6bmA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODVlYTA0MzktOWM5My00YTg0LWE2Y2UtMDVkMDEzZWM5YjQ2XzExN182Nl8xMDZfMjMub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/449845a0-bc56-4497-800c-cc8e5a17cb16_117_66_106_23.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ikjLfRxNljRkLgTRHsA2q4fJNKP4DwrTxqTmPnQxjAQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDQ5ODQ1YTAtYmM1Ni00NDk3LTgwMGMtY2M4ZTVhMTdjYjE2XzExN182Nl8xMDZfMjMub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2860,10 +2862,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8529,
+    _id: 9621,
     in_GraphicFileId: "Model3DHandle110_1560",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/97bad642-7661-4a7c-82fc-e4e9fa24aa33_117_66_107_24.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=hvDz2bLpWKV%2F0fxsfG44rlpDMvUHCwwc9gIQv2B9i4c%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTdiYWQ2NDItNzY2MS00YTdjLTgyZmMtZTRlOWZhMjRhYTMzXzExN182Nl8xMDdfMjQub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c4949ab7-ebaf-4400-b758-f4267a5be514_117_66_107_24.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=pxvDa5aCtsso9Gh1JP1oo0qdMgHSxC4dVIgae7b8P1s%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzQ5NDlhYjctZWJhZi00NDAwLWI3NTgtZjQyNjdhNWJlNTE0XzExN182Nl8xMDdfMjQub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2877,10 +2879,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8530,
+    _id: 9622,
     in_GraphicFileId: "Model3DHandle110_160",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/90616b53-178b-4aef-ae8e-ad9a55d491eb_117_66_035_3.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=JCuzgg6vQCBzxIyw7NTQmehO5ToXa1kqFxgbezoB5CQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTA2MTZiNTMtMTc4Yi00YWVmLWFlOGUtYWQ5YTU1ZDQ5MWViXzExN182Nl8wMzVfMy5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8727e8c4-3ee5-4b63-8a62-d083ea08f028_117_66_035_3.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=IoUbN9W64Pag0KzeUrhYfQhYOKVNDF7ifp9X6LTaLas%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODcyN2U4YzQtM2VlNS00YjYzLThhNjItZDA4M2VhMDhmMDI4XzExN182Nl8wMzVfMy5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2894,10 +2896,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8531,
+    _id: 9623,
     in_GraphicFileId: "Model3DHandle110_1760",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a2bf762d-ec77-4b8c-ac33-967d67b2d53d_117_66_108_25.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=jq%2B%2BcTVg7RCcEJL9xFwm4B8E8e%2F3iN0QpHTvrYK7LYI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTJiZjc2MmQtZWM3Ny00YjhjLWFjMzMtOTY3ZDY3YjJkNTNkXzExN182Nl8xMDhfMjUub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/3a912b5e-b187-417a-b2c0-3d59fa33bb27_117_66_108_25.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=yWgUJBgw4ihZ9h7smcwxPVt1ZDsm3V1t%2BaiV3VNYsQQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvM2E5MTJiNWUtYjE4Ny00MTdhLWIyYzAtM2Q1OWZhMzNiYjI3XzExN182Nl8xMDhfMjUub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2911,10 +2913,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8532,
+    _id: 9624,
     in_GraphicFileId: "Model3DHandle110_1960",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/3d3963b6-489f-4e8a-8e66-4d69687b99cb_117_66_109_26.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=kbnIvhwW4IIYD1YHc5FdaU7uqa1gglv%2FUm5J6dyeGSY%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvM2QzOTYzYjYtNDg5Zi00ZThhLThlNjYtNGQ2OTY4N2I5OWNiXzExN182Nl8xMDlfMjYub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8c51e5ba-4040-4be7-b105-4cd7660d65a9_117_66_109_26.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=I34zT8uVKYxSyxVgT1BZJwC1rcQerttVtnz2XmEbOSY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOGM1MWU1YmEtNDA0MC00YmU3LWIxMDUtNGNkNzY2MGQ2NWE5XzExN182Nl8xMDlfMjYub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2928,10 +2930,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8533,
+    _id: 9625,
     in_GraphicFileId: "Model3DHandle110_210",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/171703e8-9640-4076-afcc-5ca3185b899c_117_66_045_5.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=4sda2ALHfapO5FlWuEflMwlg3NKM%2BvLRvaZZl0v%2FlZE%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTcxNzAzZTgtOTY0MC00MDc2LWFmY2MtNWNhMzE4NWI4OTljXzExN182Nl8wNDVfNS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/0ee898a6-7e1f-4869-ad30-98177260444f_117_66_045_5.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=4UYBQkW1K9FWycJ%2FAC7XofudvAWElDtRPkUUfw76Rb8%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMGVlODk4YTYtN2UxZi00ODY5LWFkMzAtOTgxNzcyNjA0NDRmXzExN182Nl8wNDVfNS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2945,10 +2947,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8534,
+    _id: 9626,
     in_GraphicFileId: "Model3DHandle110_260",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c9ab3f6c-076e-4eab-bbee-05c83dfb3a96_117_66_050_6.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=d6JOzeOvVF1UemA2NFdQbs%2FBLk5qTPKCerPr8gNiSEU%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzlhYjNmNmMtMDc2ZS00ZWFiLWJiZWUtMDVjODNkZmIzYTk2XzExN182Nl8wNTBfNi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6b688ba2-8499-45b5-a839-d19de7b0f28e_117_66_050_6.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=%2FBcI1N1L4Fuj7SW31BbMyZ%2F7IKlDoZ8aJZx8%2FCWCpwo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNmI2ODhiYTItODQ5OS00NWI1LWE4MzktZDE5ZGU3YjBmMjhlXzExN182Nl8wNTBfNi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2962,10 +2964,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8535,
+    _id: 9627,
     in_GraphicFileId: "Model3DHandle110_310",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e734c0ff-099d-4824-92d5-4701046ce603_117_66_055_8.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=rRD1K6Zo0gjGrDfyrHHF9tSnG6niro5qIzH7jWWniK4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTczNGMwZmYtMDk5ZC00ODI0LTkyZDUtNDcwMTA0NmNlNjAzXzExN182Nl8wNTVfOC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/4c113995-fa32-4896-b4f2-e352dd581662_117_66_055_8.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=za%2BWXVnCVxSjxFOt3oyT5ansUNfSNR%2BOCIUcFxc6BZI%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNGMxMTM5OTUtZmEzMi00ODk2LWI0ZjItZTM1MmRkNTgxNjYyXzExN182Nl8wNTVfOC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2979,10 +2981,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8536,
+    _id: 9628,
     in_GraphicFileId: "Model3DHandle110_360",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a4bf9332-98fc-4d53-ba24-348189d5632b_117_66_064_10.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=BhSnmqHG1gwKy86Z36yRvOC1LtZJKogIZ2PdmAv8nBQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTRiZjkzMzItOThmYy00ZDUzLWJhMjQtMzQ4MTg5ZDU2MzJiXzExN182Nl8wNjRfMTAub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c50d71b6-f184-475e-8fa7-af86cc4b0ee0_117_66_064_10.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=fn5YAZU%2FW3Co5BCeyWkk6IiFLxTHjqXKcRvneazb5Y8%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzUwZDcxYjYtZjE4NC00NzVlLThmYTctYWY4NmNjNGIwZWUwXzExN182Nl8wNjRfMTAub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -2996,10 +2998,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8537,
+    _id: 9629,
     in_GraphicFileId: "Model3DHandle110_410",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/eb55fec3-b587-4812-afed-f791ea3475e9_117_66_065_11.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=vABF0T8ATNbnB2nBlSyAc4X7GgyEAIU9YyTL2FMrMgI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWI1NWZlYzMtYjU4Ny00ODEyLWFmZWQtZjc5MWVhMzQ3NWU5XzExN182Nl8wNjVfMTEub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f99ab36a-88f2-44d1-a472-5220b9c08e48_117_66_065_11.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=8jwo0Q7dzdUf3GaFBn2pqwMu4feU%2BdgRJFQvj%2BX3LAs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjk5YWIzNmEtODhmMi00NGQxLWE0NzItNTIyMGI5YzA4ZTQ4XzExN182Nl8wNjVfMTEub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3013,10 +3015,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8538,
+    _id: 9630,
     in_GraphicFileId: "Model3DHandle110_460",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/42384b07-f203-4b66-9247-5dfb083060fc_117_66_075_13.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=CSWJLqaQWcNY13CaiocAhpu%2Fwr61IdioGUrUNMezn7c%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDIzODRiMDctZjIwMy00YjY2LTkyNDctNWRmYjA4MzA2MGZjXzExN182Nl8wNzVfMTMub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b6ffe2e9-7914-450b-ad7d-a2591a951d8e_117_66_075_13.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Btf78PBXCztNaabFbG%2BN4ClcDLWpT%2BZ9Uh2mjarpAdQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjZmZmUyZTktNzkxNC00NTBiLWFkN2QtYTI1OTFhOTUxZDhlXzExN182Nl8wNzVfMTMub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3030,10 +3032,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8539,
+    _id: 9631,
     in_GraphicFileId: "Model3DHandle110_560",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/befe38af-ca98-4c4a-8581-51401345cbad_117_66_080_14.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=nu5w2%2Fl1ad8NRoE1QRRiNOfg8gwtT7SSZX27dQuq1Qs%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmVmZTM4YWYtY2E5OC00YzRhLTg1ODEtNTE0MDEzNDVjYmFkXzExN182Nl8wODBfMTQub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b83d9a59-f7c6-4f3f-bd4b-486028624fd0_117_66_080_14.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=MvzSdoCWVLcVEveZbSLqiIY5jnLAkYjSAhhQ6qSoFPw%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjgzZDlhNTktZjdjNi00ZjNmLWJkNGItNDg2MDI4NjI0ZmQwXzExN182Nl8wODBfMTQub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3047,10 +3049,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8540,
+    _id: 9632,
     in_GraphicFileId: "Model3DHandle110_660",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/eef3196d-bb87-4710-bffe-45419fc99fa7_117_66_085_15.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=0OcnS57s2SaRcHaUvoNXp7i8NQB2JhJt45RWPrT77nE%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWVmMzE5NmQtYmI4Ny00NzEwLWJmZmUtNDU0MTlmYzk5ZmE3XzExN182Nl8wODVfMTUub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e3fe572e-deaf-4a8a-8367-0dedf59e60c6_117_66_085_15.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=IWHtYhvTtIoPY51eDO38XDxc7sjgjcdaJia4PHelPew%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTNmZTU3MmUtZGVhZi00YThhLTgzNjctMGRlZGY1OWU2MGM2XzExN182Nl8wODVfMTUub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3064,10 +3066,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8541,
+    _id: 9633,
     in_GraphicFileId: "Model3DHandle110_760",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/2de7fbad-00ed-4740-bbfa-c666723f5567_117_66_090_16.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=mmks7gfYgsfDcu3QDsJ9yF7riBuq8Rs5vzU89BwBWl0%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMmRlN2ZiYWQtMDBlZC00NzQwLWJiZmEtYzY2NjcyM2Y1NTY3XzExN182Nl8wOTBfMTYub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/52f97587-b753-4fed-bf5c-95e05fa60564_117_66_090_16.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=dhZRARU2glbrLBV51cCfNMapfOFSnSCD7rSQYLphbUY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTJmOTc1ODctYjc1My00ZmVkLWJmNWMtOTVlMDVmYTYwNTY0XzExN182Nl8wOTBfMTYub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3081,10 +3083,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8542,
+    _id: 9634,
     in_GraphicFileId: "Model3DHandle110_860",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/fb2458c4-9b5c-4933-917e-4af9ceae2dbc_117_66_095_17.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=sUm5cVIeFn9b8JzQIrKHOIjC4T5DW%2BQREEQB6jolpTs%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmIyNDU4YzQtOWI1Yy00OTMzLTkxN2UtNGFmOWNlYWUyZGJjXzExN182Nl8wOTVfMTcub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bd2664f7-f44f-4635-96f9-502a5b8f1d8f_117_66_095_17.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=eiaUFC9bvVoYbZanDMhqTSxe5dgftKfws%2FKo90k4iQ8%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmQyNjY0ZjctZjQ0Zi00NjM1LTk2ZjktNTAyYTViOGYxZDhmXzExN182Nl8wOTVfMTcub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3098,10 +3100,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8543,
+    _id: 9635,
     in_GraphicFileId: "Model3DHandle110_96",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e74f48f3-d74d-499a-a0ce-8bd71eb1df24_117_66_017_1.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=Y33rlUZ2E33%2FbZBTSVpYlgvW6Li7RGZwVegpy825Jhs%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTc0ZjQ4ZjMtZDc0ZC00OTlhLWEwY2UtOGJkNzFlYjFkZjI0XzExN182Nl8wMTdfMS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/0877bd6c-032b-4fba-a078-2a8fee256bdd_117_66_017_1.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ZmgN1ZazYFAKP3%2BgRnejLog8qsCU3PICasX6JSEB1GE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDg3N2JkNmMtMDMyYi00ZmJhLWEwNzgtMmE4ZmVlMjU2YmRkXzExN182Nl8wMTdfMS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3115,10 +3117,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8544,
+    _id: 9636,
     in_GraphicFileId: "Model3DHandle110_960",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/367fe884-56e2-4bce-b8e2-d8bbf042db39_117_66_100_18.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=t0X0nH73KH6yQrpO6n5si5t0%2FU5sAXCa5yHo%2FyykpO4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzY3ZmU4ODQtNTZlMi00YmNlLWI4ZTItZDhiYmYwNDJkYjM5XzExN182Nl8xMDBfMTgub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7ca78686-6bc1-4c3f-a173-dc7931b53492_117_66_100_18.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=nIBwgIghBxfJkbQThjep2oN3yOfptVUI2Tzx3eppAog%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvN2NhNzg2ODYtNmJjMS00YzNmLWExNzMtZGM3OTMxYjUzNDkyXzExN182Nl8xMDBfMTgub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3132,10 +3134,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8545,
+    _id: 9637,
     in_GraphicFileId: "Model3DHandle120",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e55f4d23-7205-4878-8d02-4356f5d26b75_mod3d_120.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=4P3M8JXAXVFV5N3KBpkINBMLdT7%2Fq%2F25Hrx6C%2F4bRQ4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTU1ZjRkMjMtNzIwNS00ODc4LThkMDItNDM1NmY1ZDI2Yjc1X21vZDNkXzEyMC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/33978398-643f-41d1-aeaa-a182e19eb04c_mod3d_120.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=RCUmHNzgCI7%2Fk0tkuQ%2FImaM2AndBlN7%2BqSyNsiyIGyM%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzM5NzgzOTgtNjQzZi00MWQxLWFlYWEtYTE4MmUxOWViMDRjX21vZDNkXzEyMC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3149,10 +3151,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8546,
+    _id: 9638,
     in_GraphicFileId: "Model3DHandle130",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/db69bd0e-e309-419d-b5c7-52be60c96bc2_110_35_393_1.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=Vi4%2BIOB8feczxiDacrR6%2Bb5J%2FH%2FG6QyLwosyr2CMyR0%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZGI2OWJkMGUtZTMwOS00MTlkLWI1YzctNTJiZTYwYzk2YmMyXzExMF8zNV8zOTNfMS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/62522f5a-cae3-40c9-b79e-8dedd4335a1e_110_35_393_1.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=uW2v5zzLtzIfkruTaJWKkEdRZGsLZ26JAF%2B%2Fr99C0dA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjI1MjJmNWEtY2FlMy00MGM5LWI3OWUtOGRlZGQ0MzM1YTFlXzExMF8zNV8zOTNfMS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3166,10 +3168,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8547,
+    _id: 9639,
     in_GraphicFileId: "Model3DHandleDesign20_128",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/24f02da1-1381-4c13-99ad-b09850daa7e1_155_01_381_2.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=SwiA4z6ZrCX01ObuBI9EubSdr6JBK4BSUnyK0u0OPpY%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjRmMDJkYTEtMTM4MS00YzEzLTk5YWQtYjA5ODUwZGFhN2UxXzE1NV8wMV8zODFfMi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/1da4bb51-a570-4239-86fd-aa4a05f22cf0_155_01_381_2.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=8JwwMmTaSLAaV3laZWge3i2ZFJQjW%2BJVnuHC1EXgRqU%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMWRhNGJiNTEtYTU3MC00MjM5LTg2ZmQtYWE0YTA1ZjIyY2YwXzE1NV8wMV8zODFfMi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3183,10 +3185,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8548,
+    _id: 9640,
     in_GraphicFileId: "Model3DHandleDesign20_160",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/0dd4d4c2-fecd-44d7-976c-d5d7ab2c43ff_155_01_382_3.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=hWlf77vhHsX8bob5bwheeQIXP2gWKWe%2BC6IEwVyG8y8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMGRkNGQ0YzItZmVjZC00NGQ3LTk3NmMtZDVkN2FiMmM0M2ZmXzE1NV8wMV8zODJfMy5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c4f4c69f-c68b-495f-b49c-4b88c577a742_155_01_382_3.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=3dkPJNPw%2F7Aetko6SUI9EG3g7s6bq3%2F%2FLYTKU5wnCPg%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzRmNGM2OWYtYzY4Yi00OTVmLWI0OWMtNGI4OGM1NzdhNzQyXzE1NV8wMV8zODJfMy5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3200,10 +3202,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8549,
+    _id: 9641,
     in_GraphicFileId: "Model3DHandleDesign20_192",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/080fe660-11f8-4f16-aebb-abef4bd6b540_155_01_383_4.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=KaOaFwC5AdPXr9W3ONKcApTrMulm9rdJQhko4leUCQw%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDgwZmU2NjAtMTFmOC00ZjE2LWFlYmItYWJlZjRiZDZiNTQwXzE1NV8wMV8zODNfNC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/dedb0655-cb61-478a-bc63-e348139ef994_155_01_383_4.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=cu%2FOwTwDWX6yBi1p7ltAh5n28gwZySRPbdUNXFR7idc%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZGVkYjA2NTUtY2I2MS00NzhhLWJjNjMtZTM0ODEzOWVmOTk0XzE1NV8wMV8zODNfNC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3217,10 +3219,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8550,
+    _id: 9642,
     in_GraphicFileId: "Model3DHandleDesign20_224",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d4476768-71c9-4f49-a50e-5f6d01f94982_155_01_384_5.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=KfdMWsKWeA3H23sc%2BT9bzL%2BG%2FUby2LtK%2FwLw5v7e0Io%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDQ0NzY3NjgtNzFjOS00ZjQ5LWE1MGUtNWY2ZDAxZjk0OTgyXzE1NV8wMV8zODRfNS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a8ee0371-e03c-489c-974e-3ad318dd83bb_155_01_384_5.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=cf1TS6XX2zbmZ2Iaj1UbB%2FD2EgYldG%2BWuSkvjlmgr5c%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYThlZTAzNzEtZTAzYy00ODljLTk3NGUtM2FkMzE4ZGQ4M2JiXzE1NV8wMV8zODRfNS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3234,10 +3236,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8551,
+    _id: 9643,
     in_GraphicFileId: "Model3DHandleDesign20_288",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/0618e41f-8623-4384-8596-37ef042888c4_155_01_385_6.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=oknUM0B%2FoL2wyGAVZBqlyivAU57DKMJktNzcbcxGslg%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDYxOGU0MWYtODYyMy00Mzg0LTg1OTYtMzdlZjA0Mjg4OGM0XzE1NV8wMV8zODVfNi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6beef8ab-6049-4ac8-b9e6-70a19ffb8c29_155_01_385_6.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ACam2f6QZ%2BzIX1VEyg%2BH1Ty1TgFZtxnsNtotXp88wc0%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNmJlZWY4YWItNjA0OS00YWM4LWI5ZTYtNzBhMTlmZmI4YzI5XzE1NV8wMV8zODVfNi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3251,10 +3253,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8552,
+    _id: 9644,
     in_GraphicFileId: "Model3DHandleDesign20_320",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b9a07800-41c6-43c4-8304-63efe0173927_155_01_386_7.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=SQ0lSPYBCrF83RrpYzFfkwBAKvs7anwiLqfQLGJhotc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjlhMDc4MDAtNDFjNi00M2M0LTgzMDQtNjNlZmUwMTczOTI3XzE1NV8wMV8zODZfNy5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a9e24f1b-182f-4b8c-9478-e301b3f67f61_155_01_386_7.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=f3FGSi9NkXngiA1Ih%2B2fubU1WYFjX9Jfdw0BfDAqNHU%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTllMjRmMWItMTgyZi00YjhjLTk0NzgtZTMwMWIzZjY3ZjYxXzE1NV8wMV8zODZfNy5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3268,10 +3270,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8553,
+    _id: 9645,
     in_GraphicFileId: "Model3DHandleDesign20_352",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8478f1e0-b317-47bf-8a48-b201fea600c9_155_01_387_8.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=sc4aHavGEcldCVVwkBwA7tC7PnWi1ZKqd8VJRwUGYGA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODQ3OGYxZTAtYjMxNy00N2JmLThhNDgtYjIwMWZlYTYwMGM5XzE1NV8wMV8zODdfOC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/682dc8b1-ef4f-4eaa-b866-019ac752f8a3_155_01_387_8.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=%2BWa9JBPaZtH2kauFkqaxk%2Bw9SYh1ENCMA164IB0iVkQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjgyZGM4YjEtZWY0Zi00ZWFhLWI4NjYtMDE5YWM3NTJmOGEzXzE1NV8wMV8zODdfOC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3285,10 +3287,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8554,
+    _id: 9646,
     in_GraphicFileId: "Model3DHandleDesign20_448",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bab85f96-5c82-4f2c-9475-7aa8fcb8ca56_155_01_388_9.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=15csKbHJvXnfcRdaP27E8RHXYsW0GOcXbniClKRSOPo%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmFiODVmOTYtNWM4Mi00ZjJjLTk0NzUtN2FhOGZjYjhjYTU2XzE1NV8wMV8zODhfOS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a81fa60f-f01f-4e58-a9f6-ce20fa1a91ed_155_01_388_9.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=M6paX7Jd75yqpBuHExSZGdRGbZ0DJdGA1y0fDBhSm90%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTgxZmE2MGYtZjAxZi00ZTU4LWE5ZjYtY2UyMGZhMWE5MWVkXzE1NV8wMV8zODhfOS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3302,10 +3304,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8555,
+    _id: 9647,
     in_GraphicFileId: "Model3DHandleDesign20_560",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/066b70f6-2921-4a8d-abc1-14f6695400cd_155_01_389_10.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=R0CzKQ8btR94s8a9C9JwvLZ1XKdp5i%2Fmjv6MZ1zHkIk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDY2YjcwZjYtMjkyMS00YThkLWFiYzEtMTRmNjY5NTQwMGNkXzE1NV8wMV8zODlfMTAub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bed2f69f-6f70-4a86-8bad-a199d3359962_155_01_389_10.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=CnIwp1jWQMih6Bx1dFMEDUgc43UKFpSF1Rt8a%2B1LQAQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmVkMmY2OWYtNmY3MC00YTg2LThiYWQtYTE5OWQzMzU5OTYyXzE1NV8wMV8zODlfMTAub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3319,10 +3321,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8556,
+    _id: 9648,
     in_GraphicFileId: "Model3DHandleDesign20_660",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9753d796-1c0c-4125-aa9f-e7759a6ccad1_155_01_390_11.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=dMJrkPsgJBoLjOYFwOxVQhKdvG4WTs9%2Fq45K7wLRWsA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTc1M2Q3OTYtMWMwYy00MTI1LWFhOWYtZTc3NTlhNmNjYWQxXzE1NV8wMV8zOTBfMTEub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8103567d-148a-48bb-9808-79828d0883c9_155_01_390_11.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=B%2BoUKiko99m%2FuWZKi8qYL0kTC5MlUJFgWvhu1CPGg4g%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODEwMzU2N2QtMTQ4YS00OGJiLTk4MDgtNzk4MjhkMDg4M2M5XzE1NV8wMV8zOTBfMTEub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3336,10 +3338,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8557,
+    _id: 9649,
     in_GraphicFileId: "Model3DHandleDesign20_760",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/69a08fb6-8adc-4643-81c0-4836da371166_155_01_391_12.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=ixbcFe9J78v8EXgx6e2AyWnZvET7FLmvbfy3ijDicvk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjlhMDhmYjYtOGFkYy00NjQzLTgxYzAtNDgzNmRhMzcxMTY2XzE1NV8wMV8zOTFfMTIub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/97f760ae-9812-47ee-a6f5-997855f5bd24_155_01_391_12.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=%2BhFbUTc%2FRzIqn8h9JJ5E9W%2BTx%2BK5Di9WPHqoxgaitJo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTdmNzYwYWUtOTgxMi00N2VlLWE2ZjUtOTk3ODU1ZjViZDI0XzE1NV8wMV8zOTFfMTIub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3353,10 +3355,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8558,
+    _id: 9650,
     in_GraphicFileId: "Model3DHandleDesign20_96",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c8d038d7-ac10-407f-92f8-7d156d1890cb_155_01_380_1.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=JQlFd4VtbwtT6mLgoqW6EoepU9oVCPkVI0zrfPe8Z0w%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzhkMDM4ZDctYWMxMC00MDdmLTkyZjgtN2QxNTZkMTg5MGNiXzE1NV8wMV8zODBfMS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/481f300f-bdd9-4b68-a9db-499321093a26_155_01_380_1.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Df5gY7vTkZlXhegR5lX0nBbUEBuQZTcAGOdT7TUolZ4%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDgxZjMwMGYtYmRkOS00YjY4LWE5ZGItNDk5MzIxMDkzYTI2XzE1NV8wMV8zODBfMS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3370,10 +3372,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8559,
+    _id: 9651,
     in_GraphicFileId: "Model3DHandleDesign60_128",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/98709201-983c-4cce-8104-70c071388b83_106_62_425_1.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=hVafu52tDIfklRREoiOATrFYPH98fQAazQcfpsecpzU%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTg3MDkyMDEtOTgzYy00Y2NlLTgxMDQtNzBjMDcxMzg4YjgzXzEwNl82Ml80MjVfMS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5d399eb2-14c9-4cf9-8751-ac615a47b771_106_62_425_1.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=SV6f3y3mPEEE0tJzY9iYK36DtrpPJfEheHbyFqHDLnQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNWQzOTllYjItMTRjOS00Y2Y5LTg3NTEtYWM2MTVhNDdiNzcxXzEwNl82Ml80MjVfMS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3387,10 +3389,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8560,
+    _id: 9652,
     in_GraphicFileId: "Model3DHandleDesign60_160",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/248b8aa0-5468-4423-8a8b-ad405c7ee07a_106_62_426_2.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=WY3KMtx71erquSLPB2utK1tbuK7cYAG9ENzpPOfKJ3o%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjQ4YjhhYTAtNTQ2OC00NDIzLThhOGItYWQ0MDVjN2VlMDdhXzEwNl82Ml80MjZfMi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bc89492f-7612-4b84-864b-094a186b0f89_106_62_426_2.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Ozv3nu%2Fu4xrjDMUUzyAbQNpwp%2B8ltt2dEuSdvce9hFI%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmM4OTQ5MmYtNzYxMi00Yjg0LTg2NGItMDk0YTE4NmIwZjg5XzEwNl82Ml80MjZfMi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3404,10 +3406,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8561,
+    _id: 9653,
     in_GraphicFileId: "Model3DHandleDesign80_212",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/3616e1a0-ab6a-46e6-afb0-b54117a850e7_106_61_214_1.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=%2BL5DxsJlwKaMbV2ef1NWVoqGgv609ch%2FcfOC6HFQxNA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzYxNmUxYTAtYWI2YS00NmU2LWFmYjAtYjU0MTE3YTg1MGU3XzEwNl82MV8yMTRfMS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d8ce4db3-1a8d-4b77-9448-81f32a9b0de8_106_61_214_1.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=q3Ogbdo9RskOidNif9Tcxzpz7gNy0ypD4l6xwBl3LVo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDhjZTRkYjMtMWE4ZC00Yjc3LTk0NDgtODFmMzJhOWIwZGU4XzEwNl82MV8yMTRfMS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3421,10 +3423,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8562,
+    _id: 9654,
     in_GraphicFileId: "Model3DHandleDesign80_340",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/00b2702d-177e-47ca-b254-7d8eacd3fddb_106_61_217_2.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=%2F2diyHixvQeHQGTI2Pr8MSQm9k4LCgllu396BJJNhsk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDBiMjcwMmQtMTc3ZS00N2NhLWIyNTQtN2Q4ZWFjZDNmZGRiXzEwNl82MV8yMTdfMi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9e1ce052-5b6f-422e-8b58-6acf5e5dc975_106_61_217_2.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=nlS84KbZIyX3zPALlt5eYwTexMltuLZuiC%2FevA%2BKVD0%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOWUxY2UwNTItNWI2Zi00MjJlLThiNTgtNmFjZjVlNWRjOTc1XzEwNl82MV8yMTdfMi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3438,10 +3440,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8563,
+    _id: 9655,
     in_GraphicFileId: "Model3DHanger290.02.702",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e9096a02-80d7-4f96-9376-f5ed15b70403_hanger%20left%20-%20290_02_702.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=E8uxRtbnVlNPlSHw9s486FCeDgXRe178DWoiUP9BctU%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTkwOTZhMDItODBkNy00Zjk2LTkzNzYtZjVlZDE1YjcwNDAzX2hhbmdlciBsZWZ0IC0gMjkwXzAyXzcwMi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e65615d5-483a-4fea-94f1-59e4a7703bcf_hanger%20left%20-%20290_02_702.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=0aCGRuv9s6Zs8V5LpkiQobTPzZ5oPac4XSPEofvZB94%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTY1NjE1ZDUtNDgzYS00ZmVhLTk0ZjEtNTllNGE3NzAzYmNmX2hhbmdlciBsZWZ0IC0gMjkwXzAyXzcwMi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3455,10 +3457,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8564,
+    _id: 9656,
     in_GraphicFileId: "Model3DHanger290.02.703",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/57be0c73-06ca-4a66-a754-41dca61f048a_hanger%20right%20-%20290_02_703.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=ESRcZ5eiTtDFAuW1egPuYMKdM3jkiLjrN%2BwVRTnD%2Ffg%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTdiZTBjNzMtMDZjYS00YTY2LWE3NTQtNDFkY2E2MWYwNDhhX2hhbmdlciByaWdodCAtIDI5MF8wMl83MDMub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a4ffd723-5b53-4b0f-a215-314a851bfe69_hanger%20right%20-%20290_02_703.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=HKYmE24ErADtPHv9A5z2HKvzCiFD49GbfGPGGEwLtqU%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTRmZmQ3MjMtNWI1My00YjBmLWEyMTUtMzE0YTg1MWJmZTY5X2hhbmdlciByaWdodCAtIDI5MF8wMl83MDMub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3472,10 +3474,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8565,
+    _id: 9657,
     in_GraphicFileId: "Model3DHanger290.02.710",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8fc80198-243e-467f-adb5-6c2285d23b42_hanger%20left%20-%20290_02_710.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=F5Fuyoo3bpEDgpM%2Fj8EcK9jULyDpYQTuFfjo8CkSNp8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOGZjODAxOTgtMjQzZS00NjdmLWFkYjUtNmMyMjg1ZDIzYjQyX2hhbmdlciBsZWZ0IC0gMjkwXzAyXzcxMC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/91826164-2709-4829-b9ad-bf176c9721d6_hanger%20left%20-%20290_02_710.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=%2BZoAaErpE1QgfnlCB0%2B7%2BvTKH0VeX%2BGG95UiE2EKE4E%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTE4MjYxNjQtMjcwOS00ODI5LWI5YWQtYmYxNzZjOTcyMWQ2X2hhbmdlciBsZWZ0IC0gMjkwXzAyXzcxMC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3489,10 +3491,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8566,
+    _id: 9658,
     in_GraphicFileId: "Model3DHanger290.02.711",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8d2f7ab3-b9e9-4c24-ab71-9b42bc7f2d3c_hanger%20right%20-%20290_02_711.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=GJptwNhTdPlbYBFJGEAMeK%2BmpVxMDwb0%2BJyZJBYxkUk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOGQyZjdhYjMtYjllOS00YzI0LWFiNzEtOWI0MmJjN2YyZDNjX2hhbmdlciByaWdodCAtIDI5MF8wMl83MTEub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/4c4edb66-bcc7-4595-8b77-525071d49fdd_hanger%20right%20-%20290_02_711.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=m8jHMUfWmdYDtLLNHB%2FAeaiMBJFDvD9iuahd%2FJigDBs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNGM0ZWRiNjYtYmNjNy00NTk1LThiNzctNTI1MDcxZDQ5ZmRkX2hhbmdlciByaWdodCAtIDI5MF8wMl83MTEub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3506,10 +3508,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8567,
+    _id: 9659,
     in_GraphicFileId: "Model3DHanger290.03.937",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f97e46d6-9253-4fc7-a5d9-e4bd8b98c029_hanger%20right%20-%20290_03_937.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=HrGtETwNqzwAz2ghgKXjCv4Zcj6Nx7aB23u4UbwaCXQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjk3ZTQ2ZDYtOTI1My00ZmM3LWE1ZDktZTRiZDhiOThjMDI5X2hhbmdlciByaWdodCAtIDI5MF8wM185Mzcub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/be8ad984-782d-40b0-b5fe-142ea4d89df2_hanger%20right%20-%20290_03_937.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=fyOO8LIsOgXJ%2F4REu7inL0iFg%2FATPG4WRO2ADT8c56E%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmU4YWQ5ODQtNzgyZC00MGIwLWI1ZmUtMTQyZWE0ZDg5ZGYyX2hhbmdlciByaWdodCAtIDI5MF8wM185Mzcub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3523,10 +3525,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8568,
+    _id: 9660,
     in_GraphicFileId: "Model3DHanger290.03.938",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d0a088a4-768b-4be2-9935-167f7661f116_hanger%20left%20-%20290_03_938.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=US0RQVrQuxhYRUQa%2FD%2Fam5bzJLcrOASu1G9LcsIDwzg%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDBhMDg4YTQtNzY4Yi00YmUyLTk5MzUtMTY3Zjc2NjFmMTE2X2hhbmdlciBsZWZ0IC0gMjkwXzAzXzkzOC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/162de782-5888-429a-a3b8-38c3b6333210_hanger%20left%20-%20290_03_938.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=TlkzSLFc4puEmnXrwJP1epxbxkfhJjaEx8roNoUGgHY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTYyZGU3ODItNTg4OC00MjlhLWEzYjgtMzhjM2I2MzMzMjEwX2hhbmdlciBsZWZ0IC0gMjkwXzAzXzkzOC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3540,10 +3542,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8569,
+    _id: 9661,
     in_GraphicFileId: "Model3DHanger290.40.901",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/148c2d01-365f-450c-bcc0-134e9b76cc5c_hanger%20right%20-%20290_40_901.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=%2BEfFtpgdbWxyY%2FxEO9ksARhVSvICMUbhfmjLSpUsUY8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTQ4YzJkMDEtMzY1Zi00NTBjLWJjYzAtMTM0ZTliNzZjYzVjX2hhbmdlciByaWdodCAtIDI5MF80MF85MDEub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/336d714b-8ceb-428a-b2c4-2d995078186c_hanger%20right%20-%20290_40_901.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ENC%2BPFM6naeAKl6pi%2FQJCjUjbS%2BMXaNgXrtCv0ykLdU%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzM2ZDcxNGItOGNlYi00MjhhLWIyYzQtMmQ5OTUwNzgxODZjX2hhbmdlciByaWdodCAtIDI5MF80MF85MDEub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3557,10 +3559,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8570,
+    _id: 9662,
     in_GraphicFileId: "Model3DHanger290.40.902",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/1d3bb1ab-b107-4aa2-9ad5-8f6bad1be633_hanger%20left%20-%20290_40_902.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=f23QsfikzsodNHCFuDjtwDOPxgRfBZqTHGZDtaZBl0s%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMWQzYmIxYWItYjEwNy00YWEyLTlhZDUtOGY2YmFkMWJlNjMzX2hhbmdlciBsZWZ0IC0gMjkwXzQwXzkwMi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ee5c9778-cc17-4a63-8c93-d656f23003f7_hanger%20left%20-%20290_40_902.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ugAdLPoGX8snmzPlS7ms%2B1QH1R42%2F6v4dwCS5tx9aqc%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWU1Yzk3NzgtY2MxNy00YTYzLThjOTMtZDY1NmYyMzAwM2Y3X2hhbmdlciBsZWZ0IC0gMjkwXzQwXzkwMi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3574,10 +3576,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8571,
+    _id: 9663,
     in_GraphicFileId: "Model3DHanger290.40.980",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/0d629006-6f5f-48bf-b504-5e16c7ad0e86_hanger%20right%20-%20290_40_980.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=%2BBIfNMeKECc1d%2F0Ksi5b57Me3UafWqdCA%2F81MqIpr%2BM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMGQ2MjkwMDYtNmY1Zi00OGJmLWI1MDQtNWUxNmM3YWQwZTg2X2hhbmdlciByaWdodCAtIDI5MF80MF85ODAub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/3f7f97b8-d3a1-487a-aa00-4708ae9b8858_hanger%20right%20-%20290_40_980.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=dY4JzRybqJYC2TeoC%2FijltODaEm2T%2Ba4VHXXQthcqzg%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvM2Y3Zjk3YjgtZDNhMS00ODdhLWFhMDAtNDcwOGFlOWI4ODU4X2hhbmdlciByaWdodCAtIDI5MF80MF85ODAub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3591,10 +3593,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8572,
+    _id: 9664,
     in_GraphicFileId: "Model3DHanger290.40.981",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6219be30-1da8-45b7-8681-f63c5d08ef24_hanger%20left%20-%20290_40_981.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=89sN66w4lqDUsuZPolaWRSbNhPmnKLrM8LIptELo25g%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjIxOWJlMzAtMWRhOC00NWI3LTg2ODEtZjYzYzVkMDhlZjI0X2hhbmdlciBsZWZ0IC0gMjkwXzQwXzk4MS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7cd7abf3-3ca4-479a-9a72-8847e2f4a7f4_hanger%20left%20-%20290_40_981.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=JR2p9WdIcf5OQznsNHxdYt4oWXN9w51y2XYgwwq9MhM%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvN2NkN2FiZjMtM2NhNC00NzlhLTlhNzItODg0N2UyZjRhN2Y0X2hhbmdlciBsZWZ0IC0gMjkwXzQwXzk4MS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3608,10 +3610,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8573,
+    _id: 9665,
     in_GraphicFileId: "Model3DHinge110HalfSpringSS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/669e4b3c-aad4-4ab3-a4f3-088c38a0c375_hinge110halfspringss%20-%20329_17_602.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=SwhqZlPvQrER3swo%2FIjlRR8VKAAB1nCLQsSupqFVtfM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjY5ZTRiM2MtYWFkNC00YWIzLWE0ZjMtMDg4YzM4YTBjMzc1X2hpbmdlMTEwaGFsZnNwcmluZ3NzIC0gMzI5XzE3XzYwMi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b7aa8ae9-c919-47ab-a56b-7856927de6dc_hinge110halfspringss%20-%20329_17_602.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=o0HX0E1NNsFmE3Rs8HCpiArdzYqJu%2BrdxQGVXEzF3fM%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjdhYThhZTktYzkxOS00N2FiLWE1NmItNzg1NjkyN2RlNmRjX2hpbmdlMTEwaGFsZnNwcmluZ3NzIC0gMzI5XzE3XzYwMi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3625,10 +3627,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8574,
+    _id: 9666,
     in_GraphicFileId: "Model3DHinge110InsetSpringSS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8d2f0394-0971-4bb9-9931-2821d6bbd35b_hinge110insetspringss%20-%20329_17_603.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=f7fl7yLqPWHtukaqHBRcgBxWrRAxK4Rn5YW0Oehhq%2BA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOGQyZjAzOTQtMDk3MS00YmI5LTk5MzEtMjgyMWQ2YmJkMzViX2hpbmdlMTEwaW5zZXRzcHJpbmdzcyAtIDMyOV8xN182MDMub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/23018fbb-ec74-456a-a31b-a93c303bc5f7_hinge110insetspringss%20-%20329_17_603.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=KvbC7qqVkCwjrW%2BLPiHu6t%2FpsdsCmat7gaebaTeW5NE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjMwMThmYmItZWM3NC00NTZhLWEzMWItYTkzYzMwM2JjNWY3X2hpbmdlMTEwaW5zZXRzcHJpbmdzcyAtIDMyOV8xN182MDMub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3642,10 +3644,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8575,
+    _id: 9667,
     in_GraphicFileId: "Model3DHinge110OverlaySpringSS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/feb23668-6ed2-45c1-868d-5b502150c992_hinge110overlayspringss%20-%20329_17_600.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=eKjHqFAkXn6PAUruaHFVWMHNF2gMWJLjhubvQa7YJWw%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmViMjM2NjgtNmVkMi00NWMxLTg2OGQtNWI1MDIxNTBjOTkyX2hpbmdlMTEwb3ZlcmxheXNwcmluZ3NzIC0gMzI5XzE3XzYwMC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c16d0d50-c9a1-492b-b489-e341ac534d77_hinge110overlayspringss%20-%20329_17_600.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=St0YdlFWraYn79lr3OgcThnKQKzfvr1rHa%2BCmp3CfnE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzE2ZDBkNTAtYzlhMS00OTJiLWI0ODktZTM0MWFjNTM0ZDc3X2hpbmdlMTEwb3ZlcmxheXNwcmluZ3NzIC0gMzI5XzE3XzYwMC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3659,10 +3661,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8576,
+    _id: 9668,
     in_GraphicFileId: "Model3DHinge110SoftClHalfSpringSS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7d7f8471-a6b7-48b7-8fe8-10dc725b5b35_hinge110softclhalfspringss%20-%20329_15_403.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=IH3IcLuQ4rt4h4gs6ZkNCjEWKvGXKkmJmlXB3UBjLUw%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvN2Q3Zjg0NzEtYTZiNy00OGI3LThmZTgtMTBkYzcyNWI1YjM1X2hpbmdlMTEwc29mdGNsaGFsZnNwcmluZ3NzIC0gMzI5XzE1XzQwMy5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/834eb748-74b9-4c19-811a-a33a9065c613_hinge110softclhalfspringss%20-%20329_15_403.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=N10yYjq5xfrVBsxDIoV8qQen7E3ot4tdZRlnKXde9h8%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODM0ZWI3NDgtNzRiOS00YzE5LTgxMWEtYTMzYTkwNjVjNjEzX2hpbmdlMTEwc29mdGNsaGFsZnNwcmluZ3NzIC0gMzI5XzE1XzQwMy5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3676,10 +3678,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8577,
+    _id: 9669,
     in_GraphicFileId: "Model3DHinge110SoftClInsetSpringSS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/53f46fac-f30a-47a1-b585-b0c0a005930f_hinge110softclinsetspringss%20-%20329_15_405.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=NlBm1b40uYuK4be3OIRVXmCQ7yFOWD2ZgFy94kARZz4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTNmNDZmYWMtZjMwYS00N2ExLWI1ODUtYjBjMGEwMDU5MzBmX2hpbmdlMTEwc29mdGNsaW5zZXRzcHJpbmdzcyAtIDMyOV8xNV80MDUub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8897d066-09f7-4099-9dc9-757b05439a2f_hinge110softclinsetspringss%20-%20329_15_405.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=NnVpjX46m%2FJn0uz4m6nbJAgoLJESjoyLqMRYePC81Ps%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODg5N2QwNjYtMDlmNy00MDk5LTlkYzktNzU3YjA1NDM5YTJmX2hpbmdlMTEwc29mdGNsaW5zZXRzcHJpbmdzcyAtIDMyOV8xNV80MDUub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3693,10 +3695,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8578,
+    _id: 9670,
     in_GraphicFileId: "Model3DHinge110SoftClOverlaySpringSS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a0b98755-ca42-4a34-8ed1-ea758d059819_hinge110softcloverlayspringss%20-%20329_15_401.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=Y2ohKjilx8rDiMa%2FoXZM0nFMolBru%2FhJiYT27liXRMk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTBiOTg3NTUtY2E0Mi00YTM0LThlZDEtZWE3NThkMDU5ODE5X2hpbmdlMTEwc29mdGNsb3ZlcmxheXNwcmluZ3NzIC0gMzI5XzE1XzQwMS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/587ad33e-28f9-479b-8f84-9c42859b3adb_hinge110softcloverlayspringss%20-%20329_15_401.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=urwej%2BVfKBxaPl7%2Fx1aUDkivxNIfe6%2FqfnDU2%2Bp%2BZGs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTg3YWQzM2UtMjhmOS00NzliLThmODQtOWM0Mjg1OWIzYWRiX2hpbmdlMTEwc29mdGNsb3ZlcmxheXNwcmluZ3NzIC0gMzI5XzE1XzQwMS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3710,10 +3712,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8579,
+    _id: 9671,
     in_GraphicFileId: "Model3DHinge120OverlayNoSpringSSForFHF",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/40f14163-7cec-4505-b5a4-2d444f076ff3_hingeflipliftfhftop%20-%20342_81_400.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=8fvPqc6MeDWuCL7bqPScGRIAPnBprQ%2BoW3FE3PTt5LI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDBmMTQxNjMtN2NlYy00NTA1LWI1YTQtMmQ0NDRmMDc2ZmYzX2hpbmdlZmxpcGxpZnRmaGZ0b3AgLSAzNDJfODFfNDAwLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b6dc09ba-8fd0-4f85-b1b9-97cc45f75626_hingeflipliftfhftop%20-%20342_81_400.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=cL0jEkBafsUk3A6NlwntXdEizLyTzbeYvEKN9ozF2ew%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjZkYzA5YmEtOGZkMC00Zjg1LWIxYjktOTdjYzQ1Zjc1NjI2X2hpbmdlZmxpcGxpZnRmaGZ0b3AgLSAzNDJfODFfNDAwLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3727,10 +3729,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8580,
+    _id: 9672,
     in_GraphicFileId: "Model3DHinge155SoftClHalfSpringSS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/cf033ed5-76ee-40f3-9b54-cbfae894c742_hinge155softclhalfspringss%20-%20329_29_221.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=TaU1vgUPLBzn3Zod6LjmTJxEzyik4qes4MOFminnBbc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvY2YwMzNlZDUtNzZlZS00MGYzLTliNTQtY2JmYWU4OTRjNzQyX2hpbmdlMTU1c29mdGNsaGFsZnNwcmluZ3NzIC0gMzI5XzI5XzIyMS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/58fe3eac-b31d-4b6a-bedd-35b3b6284aef_hinge155softclhalfspringss%20-%20329_29_221.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ZIJ9Ww4b5L819by5%2FomiOuw2kRM28%2B9rukGcSW7XDPo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNThmZTNlYWMtYjMxZC00YjZhLWJlZGQtMzViM2I2Mjg0YWVmX2hpbmdlMTU1c29mdGNsaGFsZnNwcmluZ3NzIC0gMzI5XzI5XzIyMS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3744,10 +3746,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8581,
+    _id: 9673,
     in_GraphicFileId: "Model3DHinge155SoftClOverlaySpringSS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/fd8d3c4e-f9d6-42a4-a0bf-6d44d8bfa0d2_hinge155softcloverlayspringss%20-%20329_29_217.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=fGFY0zmctttyit3IHrBLNVZOJS4I0EdrG%2BiBuQY8T9I%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmQ4ZDNjNGUtZjlkNi00MmE0LWEwYmYtNmQ0NGQ4YmZhMGQyX2hpbmdlMTU1c29mdGNsb3ZlcmxheXNwcmluZ3NzIC0gMzI5XzI5XzIxNy5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f6856aa9-3352-4d6f-b2f8-b647e0d73e56_hinge155softcloverlayspringss%20-%20329_29_217.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=uzDaCeiv6Kes7uAX4Ag1YrbqogMe9KBrg%2BFsDygusKA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjY4NTZhYTktMzM1Mi00ZDZmLWIyZjgtYjY0N2UwZDczZTU2X2hpbmdlMTU1c29mdGNsb3ZlcmxheXNwcmluZ3NzIC0gMzI5XzI5XzIxNy5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3761,10 +3763,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8582,
+    _id: 9674,
     in_GraphicFileId: "Model3DHinge165HalfSpringSS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/cff9d906-8198-4053-8b69-e1f751b5e693_hinge165halfspringss%20-%20329_07_702.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=bNnyQMEgDLHoJhVe%2BW0gbMafVcjDOdGNCDeWkmequrY%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvY2ZmOWQ5MDYtODE5OC00MDUzLThiNjktZTFmNzUxYjVlNjkzX2hpbmdlMTY1aGFsZnNwcmluZ3NzIC0gMzI5XzA3XzcwMi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/835de0fe-5d74-4e98-b011-f200855241ae_hinge165halfspringss%20-%20329_07_702.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=YijgvFzDebbaiVz0CdFliJ6Gq35Ttkrqov1vEq4LH58%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODM1ZGUwZmUtNWQ3NC00ZTk4LWIwMTEtZjIwMDg1NTI0MWFlX2hpbmdlMTY1aGFsZnNwcmluZ3NzIC0gMzI5XzA3XzcwMi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3778,10 +3780,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8583,
+    _id: 9675,
     in_GraphicFileId: "Model3DHinge165InsetSpringSS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6d6b511c-4c82-42be-ba85-f7acf6248a30_hinge165insetspringss%20-%20329_07_703.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=oE%2BZKP8McXO8Q2nrjbZUPgPsQp6zC0VNCBbdC3ii9p8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNmQ2YjUxMWMtNGM4Mi00MmJlLWJhODUtZjdhY2Y2MjQ4YTMwX2hpbmdlMTY1aW5zZXRzcHJpbmdzcyAtIDMyOV8wN183MDMub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/365ebe96-cb9c-4645-aafc-9300f6ef9b33_hinge165insetspringss%20-%20329_07_703.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=0El5yDjDc%2B9s5Kz%2FPU4KgVDJVibI8ZwnLkJgZHiZuVs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzY1ZWJlOTYtY2I5Yy00NjQ1LWFhZmMtOTMwMGY2ZWY5YjMzX2hpbmdlMTY1aW5zZXRzcHJpbmdzcyAtIDMyOV8wN183MDMub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3795,10 +3797,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8584,
+    _id: 9676,
     in_GraphicFileId: "Model3DHinge165OverlaySpringSS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8f24d33b-3d2d-4934-883e-59abc21d728c_hinge165overlayspringss%20-%20329_07_700.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=LRHbVnuji4bDPwfX9y9ElkNGOX9f%2Faf8KIx2NiuPH8g%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOGYyNGQzM2ItM2QyZC00OTM0LTg4M2UtNTlhYmMyMWQ3MjhjX2hpbmdlMTY1b3ZlcmxheXNwcmluZ3NzIC0gMzI5XzA3XzcwMC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d770cef5-f565-4dee-8e1a-fda7cdb4550e_hinge165overlayspringss%20-%20329_07_700.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=EsKo4sRFbarzJvv2mH9GAZ%2BCmY3OGTrOep93KQjNhYE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDc3MGNlZjUtZjU2NS00ZGVlLThlMWEtZmRhN2NkYjQ1NTBlX2hpbmdlMTY1b3ZlcmxheXNwcmluZ3NzIC0gMzI5XzA3XzcwMC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3812,10 +3814,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8585,
+    _id: 9677,
     in_GraphicFileId: "Model3DHingeBlindCornerInset110SoftClNP",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7a873b43-30e8-4fc4-b445-f562d3713ff4_hinge110blindcornerinset%20-%20329_11_705.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=dgeFTdYePEzecYh2E0ca52Uu6D1UJl1J1Ii9vxYpwd4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvN2E4NzNiNDMtMzBlOC00ZmM0LWI0NDUtZjU2MmQzNzEzZmY0X2hpbmdlMTEwYmxpbmRjb3JuZXJpbnNldCAtIDMyOV8xMV83MDUub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/cd866081-88f5-4ced-ae4e-0f26104a4f3b_hinge110blindcornerinset%20-%20329_11_705.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=I09a3hSrxGxeMEpj9hkkxBaP3EH2zz2yyF20grLl8eA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvY2Q4NjYwODEtODhmNS00Y2VkLWFlNGUtMGYyNjEwNGE0ZjNiX2hpbmdlMTEwYmxpbmRjb3JuZXJpbnNldCAtIDMyOV8xMV83MDUub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3829,10 +3831,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8586,
+    _id: 9678,
     in_GraphicFileId: "Model3DHingeCenterForFHF",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/cc93b3d6-1ed0-43bb-ae97-2cf46978782e_hingeforcenterfhf%20-%20372_74_990.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=c0uhwJzelC9m7a62VNKbfnGeh5iV1DeqHPmukspYzbk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvY2M5M2IzZDYtMWVkMC00M2JiLWFlOTctMmNmNDY5Nzg3ODJlX2hpbmdlZm9yY2VudGVyZmhmIC0gMzcyXzc0Xzk5MC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/fd1fb855-2d2f-4c89-b911-3057488487d2_hingeforcenterfhf%20-%20372_74_990.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=L44kLkNR5ytlbX2ZFlpXxcSHdQSzt6CDOy4vEJmw59M%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmQxZmI4NTUtMmQyZi00Yzg5LWI5MTEtMzA1NzQ4ODQ4N2QyX2hpbmdlZm9yY2VudGVyZmhmIC0gMzcyXzc0Xzk5MC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3846,10 +3848,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8587,
+    _id: 9679,
     in_GraphicFileId: "Model3DHingeFlipLiftDF",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ae5abe1d-6545-4e3c-a766-ddc3f64aeef7_hingeflipliftdf%20-%20342_78_700_1.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=9NN16IW%2FViRFMbFNBG1VeCaPfWbGmLO%2FqrEseNo3Km0%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYWU1YWJlMWQtNjU0NS00ZTNjLWE3NjYtZGRjM2Y2NGFlZWY3X2hpbmdlZmxpcGxpZnRkZiAtIDM0Ml83OF83MDBfMS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/74c67dc2-3157-4ab5-8fe5-ef251ffb2cc8_hingeflipliftdf%20-%20342_78_700_1.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=0iE9UaeU50c7dzzdyGfAb5crSdnDxncxQ0n%2F1Cnr3cQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzRjNjdkYzItMzE1Ny00YWI1LThmZTUtZWYyNTFmZmIyY2M4X2hpbmdlZmxpcGxpZnRkZiAtIDM0Ml83OF83MDBfMS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3863,10 +3865,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8588,
+    _id: 9680,
     in_GraphicFileId: "Model3DKeku_Front_262_50_359",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/28680d97-8c3b-4439-b801-f43f0e3f08ed_keku_front_262_50_359.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=E7jK0XDe6KMhnHF%2FsDe58Y7yUg25562ezjB%2BTiBnwyI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjg2ODBkOTctOGMzYi00NDM5LWI4MDEtZjQzZjBlM2YwOGVkX2tla3VfZnJvbnRfMjYyXzUwXzM1OS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/1b799995-4e02-4e0b-a10b-f4786921ea00_keku_front_262_50_359.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ChChmfOuFw0Zs6Bpa7vwt6TL15oD4fIw6%2BDygaEb468%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMWI3OTk5OTUtNGUwMi00ZTBiLWExMGItZjQ3ODY5MjFlYTAwX2tla3VfZnJvbnRfMjYyXzUwXzM1OS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3880,10 +3882,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8589,
+    _id: 9681,
     in_GraphicFileId: "Model3DKeku_Side_262_50_368",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e8f671c4-dda6-46a4-a70e-8ca210b1ef1f_keku_side_262_50_368.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=85Ze%2BDsm021bkK3M0QgPEu%2BkJNhH5FW8wlwBO5YQ5Dc%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZThmNjcxYzQtZGRhNi00NmE0LWE3MGUtOGNhMjEwYjFlZjFmX2tla3Vfc2lkZV8yNjJfNTBfMzY4Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/508b1c3c-09b1-45a6-b0d2-f2e037f92d43_keku_side_262_50_368.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=B5UR%2B%2F%2BnKfZMlytK308GMLkEG642P8Pd5uoKjnjwMck%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTA4YjFjM2MtMDliMS00NWE2LWIwZDItZjJlMDM3ZjkyZDQzX2tla3Vfc2lkZV8yNjJfNTBfMzY4Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3897,10 +3899,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8590,
+    _id: 9682,
     in_GraphicFileId: "Model3DMpCruciformA0SS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bf9c197e-c8c6-486d-ae09-bb821e4303f9_mpcruciforma0ss%20-%20329_80_528.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=PUdPhQK9Qg1p5xe%2Fmj9yv%2FLAR9ERTzJd5G42%2B6leGjU%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmY5YzE5N2UtYzhjNi00ODZkLWFlMDktYmI4MjFlNDMwM2Y5X21wY3J1Y2lmb3JtYTBzcyAtIDMyOV84MF81Mjgub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d3a1fbfd-4599-4980-b9bd-9f3f1788cf60_mpcruciforma0ss%20-%20329_80_528.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=uv5%2BrE0K7EO6Q%2BJ0T4oQrL8hHZYAHnGS77naVErJv%2Fk%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDNhMWZiZmQtNDU5OS00OTgwLWI5YmQtOWYzZjE3ODhjZjYwX21wY3J1Y2lmb3JtYTBzcyAtIDMyOV84MF81Mjgub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3914,10 +3916,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8591,
+    _id: 9683,
     in_GraphicFileId: "Model3DMpCruciformA3SS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/2b73d758-0fec-434e-93e0-9265d8e260af_mpcruciforma3ss%20-%20329_80_555.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=hUa7hzPNw%2Fgb6PTweGubWeVwQ8D8lQSrR7m3hajv1I4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMmI3M2Q3NTgtMGZlYy00MzRlLTkzZTAtOTI2NWQ4ZTI2MGFmX21wY3J1Y2lmb3JtYTNzcyAtIDMyOV84MF81NTUub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9337b663-4e97-478b-a09f-0672c9601e74_mpcruciforma3ss%20-%20329_80_555.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=HoPqQAL4SyIxtlk7Y%2FyqCgxSUOdfTMuEXSJI%2BiHFz5c%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTMzN2I2NjMtNGU5Ny00NzhiLWEwOWYtMDY3MmM5NjAxZTc0X21wY3J1Y2lmb3JtYTNzcyAtIDMyOV84MF81NTUub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3931,10 +3933,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8592,
+    _id: 9684,
     in_GraphicFileId: "Model3DMpCruciformA6SS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/51b5091a-9c3f-47dc-b92d-17b1dacfe9d1_mpcruciforma6ss%20-%20329_80_582.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=Pc6zWmWE4014GxPN1Ft4jlBwDFgv5OazNTWemnMZ6xA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTFiNTA5MWEtOWMzZi00N2RjLWI5MmQtMTdiMWRhY2ZlOWQxX21wY3J1Y2lmb3JtYTZzcyAtIDMyOV84MF81ODIub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/73b39064-6c81-4743-b767-12866a160c88_mpcruciforma6ss%20-%20329_80_582.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=FHSXDASfAvhoMI44CfEXGd3mVSHMyhYNazbpqvv92tk%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzNiMzkwNjQtNmM4MS00NzQzLWI3NjctMTI4NjZhMTYwYzg4X21wY3J1Y2lmb3JtYTZzcyAtIDMyOV84MF81ODIub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3948,10 +3950,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8593,
+    _id: 9685,
     in_GraphicFileId: "Model3DMpCruciformSM0SS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/70d8e67f-e115-43ba-aafc-da7fd53da538_mpcruciformsm0ss%20-%20329_71_500.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=a7dBUiSsdkXd7N9j%2B%2Fq4U%2Bf9%2FAzEAKc4fZBkRU4JhlQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzBkOGU2N2YtZTExNS00M2JhLWFhZmMtZGE3ZmQ1M2RhNTM4X21wY3J1Y2lmb3Jtc20wc3MgLSAzMjlfNzFfNTAwLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c53964e8-ea08-4c0e-84bf-0e21867c6b9b_mpcruciformsm0ss%20-%20329_71_500.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=19FvUvy0sfqtgwyfXViZAY0y7txCdPqAq5J6uWdDCQQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzUzOTY0ZTgtZWEwOC00YzBlLTg0YmYtMGUyMTg2N2M2YjliX21wY3J1Y2lmb3Jtc20wc3MgLSAzMjlfNzFfNTAwLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3965,10 +3967,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8594,
+    _id: 9686,
     in_GraphicFileId: "Model3DMpCruciformSM3SS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7bc832c2-5087-4efe-add1-86d2342b752e_mpcruciformsm3ss%20-%20329_71_503.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=OIFZmkRX0oSyoWKGxJ9epXZQ2W4Qm3e4GwXLzgj8iYs%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvN2JjODMyYzItNTA4Ny00ZWZlLWFkZDEtODZkMjM0MmI3NTJlX21wY3J1Y2lmb3Jtc20zc3MgLSAzMjlfNzFfNTAzLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/2cbc7db2-d099-4f2a-a2d3-c07fc58d7b83_mpcruciformsm3ss%20-%20329_71_503.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=WwmXmxbH29U%2Fm0AJo6CW7ZapBPze3w0TUIfJvjbsIbg%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMmNiYzdkYjItZDA5OS00ZjJhLWEyZDMtYzA3ZmM1OGQ3YjgzX21wY3J1Y2lmb3Jtc20zc3MgLSAzMjlfNzFfNTAzLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3982,10 +3984,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8595,
+    _id: 9687,
     in_GraphicFileId: "Model3DMpCruciformSM6SS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e4f6ba07-8ef7-4670-b2dc-8c5bf8e75547_mphorizontalsm6ss%20-%20329_67_006.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=W4lfsOz2ThyxZQiQaln%2FQnWs5QZQ1Dr%2B0%2BuY8C%2BgXdQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTRmNmJhMDctOGVmNy00NjcwLWIyZGMtOGM1YmY4ZTc1NTQ3X21waG9yaXpvbnRhbHNtNnNzIC0gMzI5XzY3XzAwNi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5466c9e5-366a-4c0c-8e47-61f39c5204ba_mphorizontalsm6ss%20-%20329_67_006.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=%2FSBen8PkbDCvkBVicDbk8yeTL9cBERmU4SuqW6PcMm4%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTQ2NmM5ZTUtMzY2YS00YzBjLThlNDctNjFmMzljNTIwNGJhX21waG9yaXpvbnRhbHNtNnNzIC0gMzI5XzY3XzAwNi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -3999,10 +4001,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8596,
+    _id: 9688,
     in_GraphicFileId: "Model3DMPHorizontalBL0SS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e3376851-d729-4a08-8e24-4283349072f0_mphorizontal175h3100%20-%20342_22_060.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=qBVD9WoG8vxXp90KNxfH%2FyW%2Bx3Jbts5EGpxEUymYexo%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTMzNzY4NTEtZDcyOS00YTA4LThlMjQtNDI4MzM0OTA3MmYwX21waG9yaXpvbnRhbDE3NWgzMTAwIC0gMzQyXzIyXzA2MC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d79c1440-82bf-4269-a5a3-ab64bda838d4_mphorizontal175h3100%20-%20342_22_060.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=DexnmkLLFacpD3NXStgkQwNB6F1QmQs5T0iTBMtq6Cc%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDc5YzE0NDAtODJiZi00MjY5LWE1YTMtYWI2NGJkYTgzOGQ0X21waG9yaXpvbnRhbDE3NWgzMTAwIC0gMzQyXzIyXzA2MC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4016,10 +4018,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8597,
+    _id: 9689,
     in_GraphicFileId: "Model3DMPHorizontalBL3SS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/51280f74-88c9-462d-af7c-bd3d1a707ec6_mphorizontal175h3130%20-%20342_22_063.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=DGRRg7T2EFR2%2FwXZWsvSdPOvY37BeQ8Gd%2FKNUY9Kfw0%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTEyODBmNzQtODhjOS00NjJkLWFmN2MtYmQzZDFhNzA3ZWM2X21waG9yaXpvbnRhbDE3NWgzMTMwIC0gMzQyXzIyXzA2My5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/45272bee-0cb5-4bac-a2ba-4399ac664c44_mphorizontal175h3130%20-%20342_22_063.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=W67CvBu9jUqKBD%2FVKT01zZ8R7NTEBiT2wqtq4j49u3o%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDUyNzJiZWUtMGNiNS00YmFjLWEyYmEtNDM5OWFjNjY0YzQ0X21waG9yaXpvbnRhbDE3NWgzMTMwIC0gMzQyXzIyXzA2My5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4033,10 +4035,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8598,
+    _id: 9690,
     in_GraphicFileId: "Model3DMpHorizontalSM0SS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/1638d177-4dd3-4989-bb83-6c56628022d9_mphorizontalsm0ss%20-%20329_67_000.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=kGe6fFXh5ow1mj8xkUJe86lr6Pjg4H6zKd8FQdfpie8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTYzOGQxNzctNGRkMy00OTg5LWJiODMtNmM1NjYyODAyMmQ5X21waG9yaXpvbnRhbHNtMHNzIC0gMzI5XzY3XzAwMC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f7b95fc8-50ab-4a3d-8e37-ed09796b8b1f_mphorizontalsm0ss%20-%20329_67_000.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=gYaG6GUKv4J3Aav4WLi196xlHHOW1nbWUzSxnXkZwOE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjdiOTVmYzgtNTBhYi00YTNkLThlMzctZWQwOTc5NmI4YjFmX21waG9yaXpvbnRhbHNtMHNzIC0gMzI5XzY3XzAwMC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4050,10 +4052,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8599,
+    _id: 9691,
     in_GraphicFileId: "Model3DMpHorizontalSM3SS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/065f35ae-83d2-4371-9817-0578e30bf5f7_mphorizontalsm3ss%20-%20329_67_003.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=IeP9wXCJhlYaLebP3qI%2B6%2FCIPE8Zom3fH2dZOUs8Iqs%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDY1ZjM1YWUtODNkMi00MzcxLTk4MTctMDU3OGUzMGJmNWY3X21waG9yaXpvbnRhbHNtM3NzIC0gMzI5XzY3XzAwMy5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7bb6e80f-7cba-4130-a253-b6df658d3b40_mphorizontalsm3ss%20-%20329_67_003.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=db%2Bk56WnVEyiwNufJNo3yIxtRpoe%2BAJl2KkiEbR6Jxo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvN2JiNmU4MGYtN2NiYS00MTMwLWEyNTMtYjZkZjY1OGQzYjQwX21waG9yaXpvbnRhbHNtM3NzIC0gMzI5XzY3XzAwMy5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4067,10 +4069,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8600,
+    _id: 9692,
     in_GraphicFileId: "Model3DMpHorizontalSM6SS",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e4f6ba07-8ef7-4670-b2dc-8c5bf8e75547_mphorizontalsm6ss%20-%20329_67_006.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=W4lfsOz2ThyxZQiQaln%2FQnWs5QZQ1Dr%2B0%2BuY8C%2BgXdQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTRmNmJhMDctOGVmNy00NjcwLWIyZGMtOGM1YmY4ZTc1NTQ3X21waG9yaXpvbnRhbHNtNnNzIC0gMzI5XzY3XzAwNi5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5466c9e5-366a-4c0c-8e47-61f39c5204ba_mphorizontalsm6ss%20-%20329_67_006.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=%2FSBen8PkbDCvkBVicDbk8yeTL9cBERmU4SuqW6PcMm4%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTQ2NmM5ZTUtMzY2YS00YzBjLThlNDctNjFmMzljNTIwNGJhX21waG9yaXpvbnRhbHNtNnNzIC0gMzI5XzY3XzAwNi5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4084,10 +4086,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8601,
+    _id: 9693,
     in_GraphicFileId: "Model3DPlinthLegRectangularScrewH100",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8c21197f-6452-49fc-a3c7-b8bf57666daa_plinthlegrectangularscrewh100.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=OB8tsao%2B7jcTIDPL0J9UaNu%2FfolB2gLUr9MoFxjJB%2F8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOGMyMTE5N2YtNjQ1Mi00OWZjLWEzYzctYjhiZjU3NjY2ZGFhX3BsaW50aGxlZ3JlY3Rhbmd1bGFyc2NyZXdoMTAwLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/2f4ce4f7-e93c-4d68-a1e3-d29beef62f4d_plinthlegrectangularscrewh100.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=fP9dQUtRMmdn8MoI%2FWq5Lqon4%2FmywUTwQzy%2FNMUxkz0%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMmY0Y2U0ZjctZTkzYy00ZDY4LWExZTMtZDI5YmVlZjYyZjRkX3BsaW50aGxlZ3JlY3Rhbmd1bGFyc2NyZXdoMTAwLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4101,10 +4103,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8602,
+    _id: 9694,
     in_GraphicFileId: "Model3DPlinthLegRectangularScrewH120",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/12fab1b5-a29d-46c8-9fb4-401dc7bac1dd_plinthlegrectangularscrewh120.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=1wFO%2F%2BZfBL5a3cUKg%2F7ht4%2BXFMhz%2FCXO7SlXy92DCDU%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTJmYWIxYjUtYTI5ZC00NmM4LTlmYjQtNDAxZGM3YmFjMWRkX3BsaW50aGxlZ3JlY3Rhbmd1bGFyc2NyZXdoMTIwLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8fe3aba1-086a-4f88-8b5b-4c88de10378a_plinthlegrectangularscrewh120.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=RjIbnHfA7OHDP%2FZ7VAOanEp5RBTzT3yfp6JPEbQ7yyQ%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOGZlM2FiYTEtMDg2YS00Zjg4LThiNWItNGM4OGRlMTAzNzhhX3BsaW50aGxlZ3JlY3Rhbmd1bGFyc2NyZXdoMTIwLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4118,10 +4120,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8603,
+    _id: 9695,
     in_GraphicFileId: "Model3DPlinthLegRectangularScrewH150",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/eec9359b-28e7-475d-ac5b-c0b1b332453c_plinthlegrectangularscrewh150.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=fe6AiATnv85%2FIyIKu8X1UhYuBDVluvsmiPhC6QOpph0%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWVjOTM1OWItMjhlNy00NzVkLWFjNWItYzBiMWIzMzI0NTNjX3BsaW50aGxlZ3JlY3Rhbmd1bGFyc2NyZXdoMTUwLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e54cc58f-53ee-4ec5-bb54-868da27f9de0_plinthlegrectangularscrewh150.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=6WG9JacYIcUJYlNt3zffK2syDbwR0N%2F%2FXqA94P72iag%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTU0Y2M1OGYtNTNlZS00ZWM1LWJiNTQtODY4ZGEyN2Y5ZGUwX3BsaW50aGxlZ3JlY3Rhbmd1bGFyc2NyZXdoMTUwLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4135,10 +4137,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8604,
+    _id: 9696,
     in_GraphicFileId: "Model3DPlinthLegTriangularPressH100",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d672a6b6-256e-40ee-9ad6-24ab446bc6bc_plinthlegtriangularpressh100.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=F0uboCkgXAKirmdZYe5CBmyyXkZ5KwIbAaZFtGjRCBo%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDY3MmE2YjYtMjU2ZS00MGVlLTlhZDYtMjRhYjQ0NmJjNmJjX3BsaW50aGxlZ3RyaWFuZ3VsYXJwcmVzc2gxMDAub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/0dac5ca5-92d6-4f0b-ab91-6e3d9d82ba47_plinthlegtriangularpressh100.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=69PLCRRgYYJHdW7wL3QnYG6tFYRFXtNgjneDdxPVGOo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMGRhYzVjYTUtOTJkNi00ZjBiLWFiOTEtNmUzZDlkODJiYTQ3X3BsaW50aGxlZ3RyaWFuZ3VsYXJwcmVzc2gxMDAub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4152,10 +4154,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8605,
+    _id: 9697,
     in_GraphicFileId: "Model3DPlinthLegTriangularPressH120",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bc8e211e-57ae-48b1-95e5-c018c85c9ee7_plinthlegtriangularpressh120.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=kcNxSDQlgK1%2B1ZJY7qpB3Apmdz79Ok33bjmiTPAIP5o%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmM4ZTIxMWUtNTdhZS00OGIxLTk1ZTUtYzAxOGM4NWM5ZWU3X3BsaW50aGxlZ3RyaWFuZ3VsYXJwcmVzc2gxMjAub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/86d7665e-4d2f-434a-9fd6-c69acaa2b0d5_plinthlegtriangularpressh120.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=puthx6m7OkmI3wBd3VfkkE%2BRVj40pml4um%2FG4NvxYbA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODZkNzY2NWUtNGQyZi00MzRhLTlmZDYtYzY5YWNhYTJiMGQ1X3BsaW50aGxlZ3RyaWFuZ3VsYXJwcmVzc2gxMjAub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4169,10 +4171,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8606,
+    _id: 9698,
     in_GraphicFileId: "Model3DPlinthLegTriangularPressH150",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/675ec935-5f72-43bd-9be2-b4fdc08a0b61_plinthlegtriangularpressh150.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=u9Xx92Gcdyy%2FnXjE8mzUXYfZ%2BqwB0oapiwgEe0Dy0oI%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjc1ZWM5MzUtNWY3Mi00M2JkLTliZTItYjRmZGMwOGEwYjYxX3BsaW50aGxlZ3RyaWFuZ3VsYXJwcmVzc2gxNTAub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a0bcaba9-5f36-4074-93ad-f1148d67fc33_plinthlegtriangularpressh150.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=F5n1VzXiQx1guy0oxZ5XSiPw%2FQhnOupxZKRzVtPyUMA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTBiY2FiYTktNWYzNi00MDc0LTkzYWQtZjExNDhkNjdmYzMzX3BsaW50aGxlZ3RyaWFuZ3VsYXJwcmVzc2gxNTAub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4186,10 +4188,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8607,
+    _id: 9699,
     in_GraphicFileId: "Model3DPlinthLegTriangularPressNoise",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6afde4ae-fa14-42bd-9020-09e574fda2b8_plinthareadesign2007.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=BMQqO21zDYjtM9fUa3S07S3XDXNt%2BZ02osGbicUtWt8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNmFmZGU0YWUtZmExNC00MmJkLTkwMjAtMDllNTc0ZmRhMmI4X3BsaW50aGFyZWFkZXNpZ24yMDA3Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/0d9b5a1b-bec3-440a-8754-24bffbd61d6e_plinthareadesign2007.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=iq6lr0vxL33f0TJbJgrXddbj%2BJZQBIJJkfbcEzGqfTk%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMGQ5YjVhMWItYmVjMy00NDBhLTg3NTQtMjRiZmZiZDYxZDZlX3BsaW50aGFyZWFkZXNpZ24yMDA3Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4203,10 +4205,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8608,
+    _id: 9700,
     in_GraphicFileId: "Model3DPlinthLegTriangularPressSensitive",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/56cc35f9-80c9-43ea-a478-d26075e8796b_plinthareadesign2008.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=AAKJNSy8T%2BW5VuQwBLGWTuz0ZPl1cSxqEBvGaspXHbQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTZjYzM1ZjktODBjOS00M2VhLWE0NzgtZDI2MDc1ZTg3OTZiX3BsaW50aGFyZWFkZXNpZ24yMDA4Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e8d4481b-ed94-4b6c-96fc-e01537293545_plinthareadesign2008.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=fdE0FSFzAWEl7AtTG4xNPGW%2F2joF6esSdw4gNX3VsUA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZThkNDQ4MWItZWQ5NC00YjZjLTk2ZmMtZTAxNTM3MjkzNTQ1X3BsaW50aGFyZWFkZXNpZ24yMDA4Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4220,10 +4222,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8609,
+    _id: 9701,
     in_GraphicFileId: "Model3DPushToOpenLong",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/1da24959-a8a2-453e-a3e5-b4c7cea41fce_pushtoopenlongblack_356_04_754.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=CwH41jwBe0WbE%2BHuR29nIiqjCc%2FAQ%2BAK9zZrIobBWaY%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMWRhMjQ5NTktYThhMi00NTNlLWEzZTUtYjRjN2NlYTQxZmNlX3B1c2h0b29wZW5sb25nYmxhY2tfMzU2XzA0Xzc1NC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/d46fe77e-6968-4997-9ed4-a5d793b39578_pushtoopenlongblack_356_04_754.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=0%2BEaK6y9PLBYpPRtJIg%2FN%2F9hZzrP0SvXfOtRha0exSM%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZDQ2ZmU3N2UtNjk2OC00OTk3LTllZDQtYTVkNzkzYjM5NTc4X3B1c2h0b29wZW5sb25nYmxhY2tfMzU2XzA0Xzc1NC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4237,10 +4239,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8610,
+    _id: 9702,
     in_GraphicFileId: "Model3DPushToOpenShort",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/254b54d7-bc42-42f5-b240-bd0cdbab42ba_pushtoopenshortblack_356_04_353.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=MBjcEkLfB1d8U2TcMdg26QxRgJtbBThjh%2FwRtX34%2BEg%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMjU0YjU0ZDctYmM0Mi00MmY1LWIyNDAtYmQwY2RiYWI0MmJhX3B1c2h0b29wZW5zaG9ydGJsYWNrXzM1Nl8wNF8zNTMub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/fdbcb21f-5734-4a8e-b5ba-5ab1a9c4cb9d_pushtoopenshortblack_356_04_353.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=qQA2600P8%2F%2B2XklOT1wi9hG3LrIs6RlAlVODaB%2B%2BZP0%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmRiY2IyMWYtNTczNC00YThlLWI1YmEtNWFiMWE5YzRjYjlkX3B1c2h0b29wZW5zaG9ydGJsYWNrXzM1Nl8wNF8zNTMub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4254,10 +4256,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8611,
+    _id: 9703,
     in_GraphicFileId: "Model3DShelfadjGlassDesign01",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bd84b561-3d0e-4133-b673-8a54857a61c7_281_41_907_4.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=8Mb8%2BFWMkU6QqnlLKJXKKDJ%2BXwNQiPpzDB3pACUi6IU%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmQ4NGI1NjEtM2QwZS00MTMzLWI2NzMtOGE1NDg1N2E2MWM3XzI4MV80MV85MDdfNC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a00540c6-69bb-4e48-95b3-771f158b8a8c_281_41_907_4.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=hebI2CD5AUMJ1lEgOVkWBTEpzffAHGeNM3niGSIz%2Flc%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTAwNTQwYzYtNjliYi00ZTQ4LTk1YjMtNzcxZjE1OGI4YThjXzI4MV80MV85MDdfNC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4271,10 +4273,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8612,
+    _id: 9704,
     in_GraphicFileId: "Model3DShelfadjWoodDesign01",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6509fae7-7d0a-4386-8df6-e46fb62936d1_ft_stift.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=mjmnr8lnG6zZf6dOg2L5ljM5jl4YvfodsvpBR8XROQk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjUwOWZhZTctN2QwYS00Mzg2LThkZjYtZTQ2ZmI2MjkzNmQxX2Z0X3N0aWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5d443bad-539a-4598-a0ea-00325145ad55_ft_stift.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=SBGDF6LhYhRDtGKk2udeLUFo2stAEhkIOvxdRe2fUQU%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNWQ0NDNiYWQtNTM5YS00NTk4LWEwZWEtMDAzMjUxNDVhZDU1X2Z0X3N0aWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4288,10 +4290,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8613,
+    _id: 9705,
     in_GraphicFileId: "Model3DShelfadjWoodDesign02",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/c213b6e2-c054-4a71-879c-c90de0236904_717_24.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=z66Ugw0QBvBkcD8d4KDrxKqnKPsqWUCYYzZgjIeftIM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYzIxM2I2ZTItYzA1NC00YTcxLTg3OWMtYzkwZGUwMjM2OTA0XzcxN18yNC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/68a82cd1-b653-43f9-a1cf-3ebc91d73f3d_717_24.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=fwePmJuV4tcDUDg3lXYDCHBFXfuWwVv3b8Zy3%2B2Qk7E%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjhhODJjZDEtYjY1My00M2Y5LWExY2YtM2ViYzkxZDczZjNkXzcxN18yNC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4305,10 +4307,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8614,
+    _id: 9706,
     in_GraphicFileId: "Model3DShelfadjWoodDesign03",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/93df0e8d-1f5e-467e-838f-a69b0c04be21_717_25.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=ETuP2aaAk67AIFQkYc%2BSpyT1bRjWbbr1AB9jffzQaVo%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTNkZjBlOGQtMWY1ZS00NjdlLTgzOGYtYTY5YjBjMDRiZTIxXzcxN18yNS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/febdb2ee-1921-400a-ba69-eac95ba00f08_717_25.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=kHqKh4f2WvZkyd%2BH5zSEfuZ%2F9TrT%2FC%2FPQyuC7p%2FEkOE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmViZGIyZWUtMTkyMS00MDBhLWJhNjktZWFjOTViYTAwZjA4XzcxN18yNS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4322,10 +4324,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8615,
+    _id: 9707,
     in_GraphicFileId: "Model3DWallPlate290.09.910",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/3514dd3d-2841-4cfb-8a11-c20b6acf6c4d_wall%20plate%20cuttable%20-%20290_09_910.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=Q2GcawTSZvqrgih6jdJpHjJZuJlxcJJ6zMVETL8e1Ls%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzUxNGRkM2QtMjg0MS00Y2ZiLThhMTEtYzIwYjZhY2Y2YzRkX3dhbGwgcGxhdGUgY3V0dGFibGUgLSAyOTBfMDlfOTEwLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ba35990c-b5e2-41c0-a0b9-3fe4a5b7de4f_wall%20plate%20cuttable%20-%20290_09_910.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=SlcGCrWHwEMDC%2B%2B%2FiUfwr%2F4j6xlTbIiyyaRk8s0%2Bar4%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmEzNTk5MGMtYjVlMi00MWMwLWEwYjktM2ZlNGE1YjdkZTRmX3dhbGwgcGxhdGUgY3V0dGFibGUgLSAyOTBfMDlfOTEwLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4339,10 +4341,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8616,
+    _id: 9708,
     in_GraphicFileId: "Model3DWallPlate290.40.989",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/cd349475-2ddf-4141-8bc5-4b6f99ae976e_wall%20plate%20-%20290_40_989.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=l38b%2FQm3X4EQUchW4hTlIW%2B15WMzovOKuGslPryqsrk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvY2QzNDk0NzUtMmRkZi00MTQxLThiYzUtNGI2Zjk5YWU5NzZlX3dhbGwgcGxhdGUgLSAyOTBfNDBfOTg5Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/354d1e61-d117-4576-a3fa-e815bcb1788b_wall%20plate%20-%20290_40_989.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=cQpopRg3SAvKmeNw1q669rcvbrgwBtWgdccBQ%2FOeEVg%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzU0ZDFlNjEtZDExNy00NTc2LWEzZmEtZTgxNWJjYjE3ODhiX3dhbGwgcGxhdGUgLSAyOTBfNDBfOTg5Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4356,10 +4358,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8617,
+    _id: 9709,
     in_GraphicFileId: "Model3DWallPlate290.40.991",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/18c4c9b5-9c91-4800-9042-ffc40f824cf9_wall%20plate%20-%20290_40_991.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=B8g3cmDutCN7%2Bzqe2%2Bzx52fbA4apwIy6669sdSuMUeM%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMThjNGM5YjUtOWM5MS00ODAwLTkwNDItZmZjNDBmODI0Y2Y5X3dhbGwgcGxhdGUgLSAyOTBfNDBfOTkxLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/01ad7aaf-f318-4f9f-bebb-bae139ffa54a_wall%20plate%20-%20290_40_991.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=CGgMLRRT1U%2FkdRAOb32Sgv7Pa6JUxda1eDU0e4QxVAs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDFhZDdhYWYtZjMxOC00ZjlmLWJlYmItYmFlMTM5ZmZhNTRhX3dhbGwgcGxhdGUgLSAyOTBfNDBfOTkxLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4373,7 +4375,7 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8618,
+    _id: 9710,
     in_GraphicFileId: "NoGraphic",
     Model3D_Value: undefined,
     Model3D_Id: undefined,
@@ -4390,10 +4392,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8619,
+    _id: 9711,
     in_GraphicFileId: "Rafix20Housing19mmNickelPlated",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8c719ab1-1e95-4958-9d72-901e5a29b273_rafixhousing_263_15_705.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=5HPNXg8OwcJ2wRIQUWgKRPBn7BH4knp%2BS3ts8MXN%2FP8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOGM3MTlhYjEtMWU5NS00OTU4LTlkNzItOTAxZTVhMjliMjczX3JhZml4aG91c2luZ18yNjNfMTVfNzA1Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/77852679-a47c-46d9-aa9b-e221fcb2b686_rafixhousing_263_15_705.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=vQ5sXJhy%2BnjoNp%2B%2FCjQkckoXwD1iqnNvII5ppYRDbZs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzc4NTI2NzktYTQ3Yy00NmQ5LWFhOWItZTIyMWZjYjJiNjg2X3JhZml4aG91c2luZ18yNjNfMTVfNzA1Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4407,10 +4409,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8620,
+    _id: 9712,
     in_GraphicFileId: "RafixConnectionBolt11x5mm",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/885faca7-3ac7-4eec-b5db-f64f655a666e_rafixconnectingbolt_263_20_847_1.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=BfQe4ctmdBdSrGt9ZXvV6dJrJGbse7wE1MjcpoCsGHo%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODg1ZmFjYTctM2FjNy00ZWVjLWI1ZGItZjY0ZjY1NWE2NjZlX3JhZml4Y29ubmVjdGluZ2JvbHRfMjYzXzIwXzg0N18xLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ed07dde7-670a-4c7a-9ce5-6c0cbd370d58_rafixconnectingbolt_263_20_847_1.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=YO8kJL6jKfUxnLPNdPqgF1rSJNK49KxHPwRglL6IJAA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWQwN2RkZTctNjcwYS00YzdhLTljZTUtNmMwY2JkMzcwZDU4X3JhZml4Y29ubmVjdGluZ2JvbHRfMjYzXzIwXzg0N18xLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4424,10 +4426,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8621,
+    _id: 9713,
     in_GraphicFileId: "SquareBracket",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/4c457ede-5355-41f3-bf88-afd301b013e1_cornerbrace1.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=twgQVvX0ViUlZdc%2BEJOPZxGDhnmH3PInQITxfTlavRA%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNGM0NTdlZGUtNTM1NS00MWYzLWJmODgtYWZkMzAxYjAxM2UxX2Nvcm5lcmJyYWNlMS5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/852eb7e6-a124-4669-97b5-f5df4934f5a1_cornerbrace1.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=%2FWW2rJi2Bf96gr5Lqvcv0d5JN4T0s53XDqUh24Yzsyo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODUyZWI3ZTYtYTEyNC00NjY5LTk3YjUtZjVkZjQ5MzRmNWExX2Nvcm5lcmJyYWNlMS5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4441,10 +4443,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8622,
+    _id: 9714,
     in_GraphicFileId: "DispensaSlideBtm",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/0b4446c2-c5a0-40e3-b02f-e23705bba8ea_slidebtm.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=akLFcs%2B77%2BB0jkpZaaBy9Vq0Gp9RbKgz8PjB6W2N5yk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMGI0NDQ2YzItYzVhMC00MGUzLWIwMmYtZTIzNzA1YmJhOGVhX3NsaWRlYnRtLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/10f7b19a-5d33-4af0-b31e-a9e5242b9a86_slidebtm.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=ZnOqffFC8Dzur%2FT%2FJ0q%2BqkMrTxJRqDPplEKFQJzM%2F%2Fo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTBmN2IxOWEtNWQzMy00YWYwLWIzMWUtYTllNTI0MmI5YTg2X3NsaWRlYnRtLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4458,10 +4460,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8623,
+    _id: 9715,
     in_GraphicFileId: "DispensaSlideTop",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/74bdbf0c-f3df-402e-9755-c2acab7491e6_slidetop.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=N7g9W6QoHoEvVYLFeZxBkzqWl62oCBgonqWwp09qlx4%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNzRiZGJmMGMtZjNkZi00MDJlLTk3NTUtYzJhY2FiNzQ5MWU2X3NsaWRldG9wLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5a647c45-24c6-4545-bc89-3002924ab7fd_slidetop.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=JznGXBnVMqorii8%2Bxy%2BAO8M1s%2FfH06%2Bt0O5sbUaTono%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNWE2NDdjNDUtMjRjNi00NTQ1LWJjODktMzAwMjkyNGFiN2ZkX3NsaWRldG9wLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4475,10 +4477,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8624,
+    _id: 9716,
     in_GraphicFileId: "Dispensa160",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b1fed9cf-4638-4841-97e3-45c64169a2ec_dispensa160.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=l0CV8Uj5uOtMk1SJL8gTD4daQWUs1OUJM968TzgWsQg%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjFmZWQ5Y2YtNDYzOC00ODQxLTk3ZTMtNDVjNjQxNjlhMmVjX2Rpc3BlbnNhMTYwLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/afdeecc0-4904-4120-adb8-66c262f0c99b_dispensa160.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=wVERp%2F2eN2bZvbn054eID2xJDhwEIQ6eIpWpgTh4xaE%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYWZkZWVjYzAtNDkwNC00MTIwLWFkYjgtNjZjMjYyZjBjOTliX2Rpc3BlbnNhMTYwLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4492,10 +4494,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8625,
+    _id: 9717,
     in_GraphicFileId: "Dispensa190",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/de80649e-b388-433e-9480-83a8c15c5543_dispensa190.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=gXHDlRaWroVNzrINLZseg93nNZdh6n2k9uRAu58I1q8%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZGU4MDY0OWUtYjM4OC00MzNlLTk0ODAtODNhOGMxNWM1NTQzX2Rpc3BlbnNhMTkwLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/fd086e87-e4c0-4f4c-b143-1db657adc735_dispensa190.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=7mYRldoBtX4hJGgSg3qLXL49b4lRgOGCi%2FQKkmB21t0%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmQwODZlODctZTRjMC00ZjRjLWIxNDMtMWRiNjU3YWRjNzM1X2Rpc3BlbnNhMTkwLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4509,10 +4511,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8626,
+    _id: 9718,
     in_GraphicFileId: "Dispensa230",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/1802596f-8cbe-412f-bc17-852cb5f16cd5_dispensa230.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=fudlvSCFxep4APMihutLy7NKKOdwjLw7KuaqhiOP0tw%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMTgwMjU5NmYtOGNiZS00MTJmLWJjMTctODUyY2I1ZjE2Y2Q1X2Rpc3BlbnNhMjMwLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7ae7ff1c-e5b3-4b3a-b0fd-c80916975658_dispensa230.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=Jl2RfTMP8NcjLp33cmcRFPkmN%2BbkUIYT2jGPrmHicTo%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvN2FlN2ZmMWMtZTViMy00YjNhLWIwZmQtYzgwOTE2OTc1NjU4X2Rpc3BlbnNhMjMwLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4526,10 +4528,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8627,
+    _id: 9719,
     in_GraphicFileId: "Dispensa30ConTop",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9ad3504a-4ea7-4569-94bd-594e28443c3d_connectortop300.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=5C9X44xuRiLY0UTyaISDyPL7Tbc6VqgFzVrsEMe2RPQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOWFkMzUwNGEtNGVhNy00NTY5LTk0YmQtNTk0ZTI4NDQzYzNkX2Nvbm5lY3RvcnRvcDMwMC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6693ba49-f036-4298-8362-9556cadc6f69_connectortop300.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=0B9Z9XRmNXe%2BsNXKepmnWGS%2Fm3T93wmbitefuaK%2BB3E%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjY5M2JhNDktZjAzNi00Mjk4LTgzNjItOTU1NmNhZGM2ZjY5X2Nvbm5lY3RvcnRvcDMwMC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4543,10 +4545,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8628,
+    _id: 9720,
     in_GraphicFileId: "Dispensa30ConBtm",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/94b83513-b0c9-43c8-b461-e77bc07baadc_connectorbtm300.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=m7pYE%2F2E3zasvbescLIchI7OjLL%2BovERtxWEYU7lfzw%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTRiODM1MTMtYjBjOS00M2M4LWI0NjEtZTc3YmMwN2JhYWRjX2Nvbm5lY3RvcmJ0bTMwMC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/445777e6-b276-45ba-96c6-e97309108b1c_connectorbtm300.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=8OxJTbyIrbZyJtqBEdaPX5GVYBJtx4PB6%2BEGXKIBCYI%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDQ1Nzc3ZTYtYjI3Ni00NWJhLTk2YzYtZTk3MzA5MTA4YjFjX2Nvbm5lY3RvcmJ0bTMwMC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4560,10 +4562,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8629,
+    _id: 9721,
     in_GraphicFileId: "Dispensa40ConTop",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ef22bf91-7b93-406e-968f-22e83e0b02e8_connectortop400.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=6tCQ4Ahnn554wWhd2eAWmFnn2QLQoty3%2FISRrU2PJTU%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZWYyMmJmOTEtN2I5My00MDZlLTk2OGYtMjJlODNlMGIwMmU4X2Nvbm5lY3RvcnRvcDQwMC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/36c29773-8d85-4dc7-8085-9f3d67a18e5b_connectortop400.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=AzAhUCSteDcX1BY9l42uroJ6vS2EfIrrI8CdPCvgIQc%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMzZjMjk3NzMtOGQ4NS00ZGM3LTgwODUtOWYzZDY3YTE4ZTViX2Nvbm5lY3RvcnRvcDQwMC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4577,10 +4579,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8630,
+    _id: 9722,
     in_GraphicFileId: "Dispensa40ConBtm",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/a52d7201-dc5f-4f77-9e69-ddbba15a6aa2_connectorbtm400.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=mfyIEsyBVe1XVnBk68JiRNUuvhgJjTVPOJUrP%2FQMras%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYTUyZDcyMDEtZGM1Zi00Zjc3LTllNjktZGRiYmExNWE2YWEyX2Nvbm5lY3RvcmJ0bTQwMC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/4cb573bf-444f-476f-9f27-0619a1dcd131_connectorbtm400.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=4e6yJyDxY8EP2w5fF5JhLISwIgtNHnpGPsESvfUOOYs%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNGNiNTczYmYtNDQ0Zi00NzZmLTlmMjctMDYxOWExZGNkMTMxX2Nvbm5lY3RvcmJ0bTQwMC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4594,10 +4596,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8631,
+    _id: 9723,
     in_GraphicFileId: "DispensaClassic30",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ffe5e3b8-4dfb-40e6-a46d-55594e609c00_classic300.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=dwlCuu7yGNxkR%2BvT1DTMhgqnkO3SLcTAJFNYTVa5P6Q%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZmZlNWUzYjgtNGRmYi00MGU2LWE0NmQtNTU1OTRlNjA5YzAwX2NsYXNzaWMzMDAub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/54890a0d-88f2-418e-b24b-80d96b008cdd_classic300.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=5lQlqHAZgmckYIvDakqcw%2BMUL5QIfAYjITTd%2BW1g4bg%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNTQ4OTBhMGQtODhmMi00MThlLWIyNGItODBkOTZiMDA4Y2RkX2NsYXNzaWMzMDAub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4611,10 +4613,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8632,
+    _id: 9724,
     in_GraphicFileId: "DispensaClassic40",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/8e609c5a-c153-4974-8439-35c75c466422_classic400.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=nRMQFJta41LP2PCkyuyiTJrFzDEQ9wpVhojOfMpItgk%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOGU2MDljNWEtYzE1My00OTc0LTg0MzktMzVjNzVjNDY2NDIyX2NsYXNzaWM0MDAub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/4918667d-00a5-409a-aba6-6727938a4b95_classic400.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=dwdKHaIB3YoYGXXefrisBUjJTwbCqa63hgXDHEEGvas%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDkxODY2N2QtMDBhNS00MDlhLWFiYTYtNjcyNzkzOGE0Yjk1X2NsYXNzaWM0MDAub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4628,10 +4630,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8633,
+    _id: 9725,
     in_GraphicFileId: "DispensaStyle30",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/da7fe0e0-85f7-464c-ae55-f5b4186a8345_style300.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=guXh5Wtw52xloSsT%2FbPagLMey90drqaLLb9%2FOtAYcDs%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZGE3ZmUwZTAtODVmNy00NjRjLWFlNTUtZjViNDE4NmE4MzQ1X3N0eWxlMzAwLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/7cfe9bec-058c-4666-b419-6e72a03cd0ac_style300.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=bAptVENzeUTejnHj%2BTXfDyFKjQQ8E61iMo5DtapX6oU%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvN2NmZTliZWMtMDU4Yy00NjY2LWI0MTktNmU3MmEwM2NkMGFjX3N0eWxlMzAwLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4645,10 +4647,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8634,
+    _id: 9726,
     in_GraphicFileId: "DispensaStyle40",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e2a104d2-fc82-4208-b774-bf829c88f70a_style400.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=ODIZ5XS7w6Mzu9la%2FWFE2N1UYQjiVGz%2Fx1nH%2FoB0M00%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTJhMTA0ZDItZmM4Mi00MjA4LWI3NzQtYmY4MjljODhmNzBhX3N0eWxlNDAwLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f1a941de-ee4f-422f-8a6b-359743fe1ed4_style400.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=K19vI9%2BSqiv2UsV0QMbue6tOvH6d6uMKgTkm7bfNIaw%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjFhOTQxZGUtZWU0Zi00MjJmLThhNmItMzU5NzQzZmUxZWQ0X3N0eWxlNDAwLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4662,10 +4664,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8635,
+    _id: 9727,
     in_GraphicFileId: "No15_Classic_right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/65c87bd0-de74-45bf-a3be-d558e5586c41_no15_auszu%CC%88ge_rechts.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=qMCsDHTxeWpKvq4Xm%2FbnRv%2FmxK8mnk5V1oc1XhuMBRw%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjVjODdiZDAtZGU3NC00NWJmLWEzYmUtZDU1OGU1NTg2YzQxX25vMTVfYXVzenXMiGdlX3JlY2h0cy5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6d0b9538-c8bd-4192-a25d-1352dfb06d03_no15_auszu%CC%88ge_rechts.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=u0X5KBJM3AxBsc%2BjkCHkroQ2jqH%2FarU7p0Z9gJtqwFg%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNmQwYjk1MzgtYzhiZC00MTkyLWEyNWQtMTM1MmRmYjA2ZDAzX25vMTVfYXVzenXMiGdlX3JlY2h0cy5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4679,10 +4681,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8636,
+    _id: 9728,
     in_GraphicFileId: "No15_Classic_left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6ec1105e-abea-4fda-9ad0-49640cc5c15d_no15_auszu%CC%88ge_links.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=8jG8kwysC0a2wFLFq%2B%2BAW4a06xs8CaKwyjGc2yXzXrU%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNmVjMTEwNWUtYWJlYS00ZmRhLTlhZDAtNDk2NDBjYzVjMTVkX25vMTVfYXVzenXMiGdlX2xpbmtzLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/5a35f6fa-47a3-4251-bd4c-e60d8578a2be_no15_auszu%CC%88ge_links.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=dXE%2F%2BasO%2Bdj%2B4FL64OZzJ2UCFU5sQ1xwLL%2F4o%2BsnAk4%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNWEzNWY2ZmEtNDdhMy00MjUxLWJkNGMtZTYwZDg1NzhhMmJlX25vMTVfYXVzenXMiGdlX2xpbmtzLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4696,10 +4698,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8637,
+    _id: 9729,
     in_GraphicFileId: "No15_Style_right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f5e242e7-ec53-438c-8576-1e1fa9102746_no15_rotated.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=sL2NJZEZe0VPQtMW7rTrP4kSdkF3UBDIX3HEJvavi7k%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjVlMjQyZTctZWM1My00MzhjLTg1NzYtMWUxZmE5MTAyNzQ2X25vMTVfcm90YXRlZC5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/876efc34-29e1-4fe0-b7dc-a29d92ac9aa6_no15_rotated.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=wDbmAGwr%2B40qpmroZivvJAAWHztqE3wyYrpd87Ynqfw%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvODc2ZWZjMzQtMjllMS00ZmUwLWI3ZGMtYTI5ZDkyYWM5YWE2X25vMTVfcm90YXRlZC5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4713,10 +4715,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8638,
+    _id: 9730,
     in_GraphicFileId: "No15_Style_left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e86631e4-7588-40ab-ba08-120443aa37b1_no15_rotated_left.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=Wc8FAioWBpewr8Z4rGKzPUPsrZnH0of9Kb%2FMnfmwFVQ%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTg2NjMxZTQtNzU4OC00MGFiLWJhMDgtMTIwNDQzYWEzN2IxX25vMTVfcm90YXRlZF9sZWZ0Lm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/bb0fc99b-9e42-4318-9475-830974171606_no15_rotated_left.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=C%2FhFOr8uxPq4gMeTC9J3vgUsCxoaikyNiUCwyk5Sjj0%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYmIwZmM5OWItOWU0Mi00MzE4LTk0NzUtODMwOTc0MTcxNjA2X25vMTVfcm90YXRlZF9sZWZ0Lm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4730,10 +4732,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8639,
+    _id: 9731,
     in_GraphicFileId: "No15_Slides_right",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/6bb1d385-4cfa-46c1-bc57-3194cb32bdcb_no15_beschla%CC%88ge_rechts.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=iMDJ%2BOODgcESYp1TKGzPptsTU%2F2wlsNSDEzZfNJ9xxo%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNmJiMWQzODUtNGNmYS00NmMxLWJjNTctMzE5NGNiMzJiZGNiX25vMTVfYmVzY2hsYcyIZ2VfcmVjaHRzLm9iag==',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/b1950271-b1a5-420f-8e3b-eaf95a80a2de_no15_beschla%CC%88ge_rechts.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=2I6CFkZ3i4zyMGPLj6e0GXIX2WQIFLFhX3HSO0JRDoY%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvYjE5NTAyNzEtYjFhNS00MjBmLThlM2ItZWFmOTVhODBhMmRlX25vMTVfYmVzY2hsYcyIZ2VfcmVjaHRzLm9iag==',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4747,10 +4749,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8640,
+    _id: 9732,
     in_GraphicFileId: "No15_Slides_left",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/2b44c14d-89ba-4c4f-9390-f2064784d13d_no15_beschla%CC%88ge_links.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=QaoXZrsORqh0HMzWHnJEbYHIQBRy50b1sDDGALnkj9M%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMmI0NGMxNGQtODliYS00YzRmLTkzOTAtZjIwNjQ3ODRkMTNkX25vMTVfYmVzY2hsYcyIZ2VfbGlua3Mub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/e05e8cbb-874e-455c-a224-c471bf3ce401_no15_beschla%CC%88ge_links.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=9e%2FZBNGcoLRZlC7WX%2F8PCjbE%2FlunWkTwA06ZhnQ3vHU%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZTA1ZThjYmItODc0ZS00NTVjLWEyMjQtYzQ3MWJmM2NlNDAxX25vMTVfYmVzY2hsYcyIZ2VfbGlua3Mub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4764,10 +4766,10 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8641,
+    _id: 9733,
     in_GraphicFileId: "FrontTuscanMilling",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/98571eff-4f35-4461-b5dd-2832c288bf44_fronttuscanmilling.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=wlD34J4FRTUwx83tnk%2Fhg95K4keZR3OfeGOMEYAgHcU%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTg1NzFlZmYtNGYzNS00NDYxLWI1ZGQtMjgzMmMyODhiZjQ0X2Zyb250dHVzY2FubWlsbGluZy5vYmo=',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/08c6bd8f-979c-4e76-8f07-9b9dd849b5c3_fronttuscanmilling.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=YAeNZY9LarQem%2BrZNp%2FY7%2Bt2700KaVmTk%2B1lx6UARy8%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMDhjNmJkOGYtOTc5Yy00ZTc2LThmMDctOWI5ZGQ4NDliNWMzX2Zyb250dHVzY2FubWlsbGluZy5vYmo=',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {
@@ -4781,10 +4783,78 @@ export var ct_tab_GraphicFileLibrary: ICT_tab_GraphicFileLibrary[] = [
     }
   }
   , {
-    _id: 8642,
+    _id: 9734,
     in_GraphicFileId: "Model3DConero625",
-    Model3D_Value: 'https://tecconfig.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/60d93e04-ecc5-4d9b-80a6-abd39bc3f1cd_coneron.obj?sv=2023-11-03&st=2026-04-29T00%3A00%3A00Z&se=2026-06-01T00%3A00%3A00Z&sr=b&sp=r&sig=%2FtcmvN0sg1iyP5sP3DucJAIjBbK2KR7%2BkXqpMAlzA5s%3D',
-    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNjBkOTNlMDQtZWNjNS00ZDliLTgwYTYtYWJkMzliYzNmMWNkX2NvbmVyb24ub2Jq',
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/ce39c1e8-cff8-49b3-a453-b50cc07e3646_coneron.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=UwXsA1HAL28DK869GXwwjKVrc3Z8yHmgCAtHIbPDROc%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvY2UzOWMxZTgtY2ZmOC00OWIzLWE0NTMtYjUwY2MwN2UzNjQ2X2NvbmVyb24ub2Jq',
+    Model3DParameters: undefined,
+    get Model3D(): IThreeDModelData | undefined {
+      if (this.Model3D_Value === undefined) {
+        return undefined;
+      }
+      return {
+        _3dUrl: this.Model3D_Value!,
+        _3dObjectId: this.Model3D_Id!,
+        _3dParameters: this.Model3DParameters
+      }
+    }
+  }
+  , {
+    _id: 9735,
+    in_GraphicFileId: "Model3DConero72H",
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/9729b5fa-e6ba-4c82-842e-52e17666b2c5_conerotrousers.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=iInxjSlAZxdEG43IfpPzyj9ekPOC9EqyEz1y1jGwtD0%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvOTcyOWI1ZmEtZTZiYS00YzgyLTg0MmUtNTJlMTc2NjZiMmM1X2NvbmVyb3Ryb3VzZXJzLm9iag==',
+    Model3DParameters: undefined,
+    get Model3D(): IThreeDModelData | undefined {
+      if (this.Model3D_Value === undefined) {
+        return undefined;
+      }
+      return {
+        _3dUrl: this.Model3D_Value!,
+        _3dObjectId: this.Model3D_Id!,
+        _3dParameters: this.Model3DParameters
+      }
+    }
+  }
+  , {
+    _id: 9736,
+    in_GraphicFileId: "Model3DConeroRigid_Right",
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/45dc5849-f5d7-4604-af40-07b12538a473_tierackright.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=CqgNKlS1xDCIW7PY3JChulRLLnmhpkMerle7fbydfg8%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvNDVkYzU4NDktZjVkNy00NjA0LWFmNDAtMDdiMTI1MzhhNDczX3RpZXJhY2tyaWdodC5vYmo=',
+    Model3DParameters: undefined,
+    get Model3D(): IThreeDModelData | undefined {
+      if (this.Model3D_Value === undefined) {
+        return undefined;
+      }
+      return {
+        _3dUrl: this.Model3D_Value!,
+        _3dObjectId: this.Model3D_Id!,
+        _3dParameters: this.Model3DParameters
+      }
+    }
+  }
+  , {
+    _id: 9737,
+    in_GraphicFileId: "Model3DConeroRigid_Left",
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/0a92a116-6a43-4ed0-a4c4-01c2702c1f95_tierackleft.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=bcALFQ9VLS2xxyGpc8mHUlI%2BLME3yJuLPQ2UO3EaNAU%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvMGE5MmExMTYtNmE0My00ZWQwLWE0YzQtMDFjMjcwMmMxZjk1X3RpZXJhY2tsZWZ0Lm9iag==',
+    Model3DParameters: undefined,
+    get Model3D(): IThreeDModelData | undefined {
+      if (this.Model3D_Value === undefined) {
+        return undefined;
+      }
+      return {
+        _3dUrl: this.Model3D_Value!,
+        _3dObjectId: this.Model3D_Id!,
+        _3dParameters: this.Model3DParameters
+      }
+    }
+  }
+  , {
+    _id: 9738,
+    in_GraphicFileId: "Handle_140",
+    Model3D_Value: 'https://tecconfig-preview.homag.cloud/cdn/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/library/cabinetlibrary/images/f18eee57-f7e9-406a-9bc3-573361b8a127_151_38_111.obj?sv=2023-11-03&st=2026-05-30T00%3A00%3A00Z&se=2026-07-02T00%3A00%3A00Z&sr=b&sp=r&sig=%2FwW%2BU0U0jNPn9IduOR876jwlpdhqFvXWa2lbnMdXJiA%3D',
+    Model3D_Id: 'bGlicmFyeS9jYWJpbmV0bGlicmFyeS9pbWFnZXMvZjE4ZWVlNTctZjdlOS00MDZhLTliYzMtNTczMzYxYjhhMTI3XzE1MV8zOF8xMTEub2Jq',
     Model3DParameters: undefined,
     get Model3D(): IThreeDModelData | undefined {
       if (this.Model3D_Value === undefined) {

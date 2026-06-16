@@ -685,8 +685,10 @@ export abstract class OD_Base {
 
   _articleId?: string; // article id (if available)
   _id: string;  // unique id
+  _forcedInputAttributes?: string[];
   generationContours: GenerationContour[] = [];
   roomContours?: RoomContour[];
+  getRoomContours(): RoomContour[] { return this.roomContours ?? [] }
   _posData: Map<string, string | number> = new Map<string, string | number>(); // Optional data which is used only for OM data (height/width/depth / color / carcaseColor / doorDirection)
   modId: string;  // module id
   parentBase?: IModBase;  // parent module
@@ -928,6 +930,12 @@ export abstract class OD_Base {
     return v3;
   }
 
+  #getPositionRelativeToRoot(): number[] {
+    let v3 = new Vector3();
+    v3.setFromMatrixPosition(this.getFullMatrix(FullMatrixMode.NoPosOrRotation));
+    return [v3._x, v3._y, v3._z];
+  }
+
   setPartModuleMatrix() {
     let m = this.getFullMatrix(FullMatrixMode.Full);
     let m2 = this.getFullMatrix(FullMatrixMode.NoRotation);
@@ -1022,6 +1030,10 @@ export abstract class OD_Base {
     if (this._contextData) {
       json.contextData = this._contextData;
     }
+    if (this._forcedInputAttributes) {
+      json.forcedInputAttributes = this._forcedInputAttributes;
+    }
+    json.positionRelativeToRoot = this.#getPositionRelativeToRoot();
 
     return json;
   }

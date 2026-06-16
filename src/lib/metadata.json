@@ -1,10 +1,10 @@
 {
   "LibraryId": "CabinetLibrary",
   "SubscriptionId": "5ebb30e7-78fb-4155-be66-20fb7a8cacbe",
-  "BaseUrl": "https://tecconfig.homag.cloud/#/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/",
-  "LibraryBaseUrl": "https://tecconfig.homag.cloud/#/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/constructionLibraries/CabinetLibrary/",
+  "BaseUrl": "https://tecconfig-preview.homag.cloud/#/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/",
+  "LibraryBaseUrl": "https://tecconfig-preview.homag.cloud/#/5ebb30e7-78fb-4155-be66-20fb7a8cacbe/constructionLibraries/CabinetLibrary/",
   "SubscriptionName": "HOMAG tecConfig Library Development",
   "LibraryDescription": "Automatism in the Planner and Sub-Articles",
   "LibraryVersion": "2.6",
-  "LibraryRevision": "9"
+  "LibraryRevision": "669"
 }

@@ -9,7 +9,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping, ct2_tab_BracketMapping }
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction, ct2_tab_CarcaseBackwallConstruction } from '../custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings, ct2_tab_CarcaseBackwallSettings } from '../custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction, ct2_tab_CarcaseCornerunitConstruction } from '../custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction, ct2_tab_CarcaseHoodConstruction } from '../custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection, ct2_tab_CarcasePanelSelection } from '../custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations, ct2_tab_CarcasePartConnectionCalculations } from '../custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping, ct2_tab_CarcasePartConnectionMapping } from '../custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape, ct2_tab_CarcasePartsShape } from '../custom-tables/tab_CarcasePartsShape'
@@ -19,9 +19,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings, ct2_
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension, ct2_tab_CarcaseSlopedCeilingDimension } from '../custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction, ct2_tab_CarcaseStorageunitConstruction } from '../custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping, ct2_tab_ClothingOrganizerColorMapping } from '../custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition, ct2_tab_ClothingOrganizerDepthPosition } from '../custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping, ct2_tab_ClothingOrganizerExtraItemMapping } from '../custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions, ct2_tab_ClothingOrganizerInstallationDimensions } from '../custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping, ct2_tab_ClothingOrganizerMapping } from '../custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings, ct2_tab_ClothingOrganizerPositionZSettings } from '../custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary, ct2_tab_ComponentLibrary } from '../custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables, ct2_tab_ComponentVariables } from '../custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction, ct2_tab_CornerFillerFrontpanelConstruction } from '../custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -47,7 +48,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping, ct2_tab_EdgeMapping } from '..
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings, ct2_tab_EdgeNumberSettings } from '../custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings, ct2_tab_EdgeSettings } from '../custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList, ct2_tab_ErrorList } from '../custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction, ct2_tab_FillerConstruction } from '../custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings, ct2_tab_FillerHardwareSettings } from '../custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction, ct2_tab_FillerPartConstruction } from '../custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings, ct2_tab_FillerSettings } from '../custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping, ct2_tab_FlipliftColorMapping } from '../custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction, ct2_tab_FlipliftConstruction } from '../custom-tables/tab_FlipliftConstruction'
@@ -62,6 +65,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction, ct2_ta
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction, ct2_tab_FrontConstruction } from '../custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping, ct2_tab_FrontEdgeColorMapping } from '../custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction, ct2_tab_FrontPanelConstruction } from '../custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection, ct2_tab_FrontPanelSelection } from '../custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings, ct2_tab_GrainDirectionSettings } from '../custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary, ct2_tab_GraphicFileLibrary } from '../custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary, ct2_tab_GraphicLibrary } from '../custom-tables/tab_GraphicLibrary'
@@ -128,17 +132,17 @@ import { OD_Base, PartGroup, OpenGroup, Matrix4, Vector3, GenerationContour, Con
 import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IContextData, IDockingInfo, Dock, IInsertLevelInfo } from '../mod-base'
 import { loadOrderData } from '../loader'
 import { GlobalFunc } from '../global-func'
-import { OD_M_mc_Filler01, dc_mc_Filler01 } from './mc_Filler01'
-import { IModuleNonNull_mr_Filler, IModParents_mr_Filler_mr_StorageunitSingle, IPartParentsNonNull_mr_Filler_mr_StorageunitSingle } from '../mod-interfaces'
-import { IModVar_mod_CarcaseColor, IModVarNonNull_mod_CarcaseColor, IModVar_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseEdgeColor, IModVar_mod_CarcaseFrontConstruction, IModVarNonNull_mod_CarcaseFrontConstruction, IModVar_mod_FrontColor, IModVarNonNull_mod_FrontColor, IModVar_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVar_mod_CarcaseProgram, IModVarNonNull_mod_CarcaseProgram, IModVar_mod_CountertopInfo, IModVarNonNull_mod_CountertopInfo, IModVar_mod_CountertopThk, IModVarNonNull_mod_CountertopThk, IModVar_mod_CreateCountertop, IModVarNonNull_mod_CreateCountertop, IModVar_mod_CreatePaneltop, IModVarNonNull_mod_CreatePaneltop, IModVar_mod_CreateFingergrip, IModVarNonNull_mod_CreateFingergrip, IModVar_mod_CreateToekick, IModVarNonNull_mod_CreateToekick, IModVar_mod_Depth, IModVarNonNull_mod_Depth, IModVar_mod_FingergripType, IModVarNonNull_mod_FingergripType, IModVar_mod_FrontDesign, IModVarNonNull_mod_FrontDesign, IModVar_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVarNonNull_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapCarcase, IModVar_mod_FrontGapHor, IModVarNonNull_mod_FrontGapHor, IModVar_mod_FrontGapHorTop, IModVarNonNull_mod_FrontGapHorTop, IModVar_mod_FrontGapVert, IModVarNonNull_mod_FrontGapVert, IModVar_mod_FrontPosStart, IModVarNonNull_mod_FrontPosStart, IModVar_mod_FrontProgram, IModVarNonNull_mod_FrontProgram, IModVar_mod_Height, IModVarNonNull_mod_Height, IModVar_mod_HeightPosInsertion, IModVarNonNull_mod_HeightPosInsertion, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_PlinthAreaDesign, IModVarNonNull_mod_PlinthAreaDesign, IModVar_mod_PlinthAreaElementColor, IModVarNonNull_mod_PlinthAreaElementColor, IModVar_mod_PlinthAreaExtraItem, IModVarNonNull_mod_PlinthAreaExtraItem, IModVar_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaHeight, IModVar_mod_PlinthAreaPosBackMatrix, IModVarNonNull_mod_PlinthAreaPosBackMatrix, IModVar_mod_PlinthAreaPosFrontMatrix, IModVarNonNull_mod_PlinthAreaPosFrontMatrix, IModVar_mod_PlinthAreaPositionInfo, IModVarNonNull_mod_PlinthAreaPositionInfo, IModVar_mod_PlinthAreaPosLeftMatrix, IModVarNonNull_mod_PlinthAreaPosLeftMatrix, IModVar_mod_PlinthAreaPosRightMatrix, IModVarNonNull_mod_PlinthAreaPosRightMatrix, IModVar_mod_PlinthAreaVisLeft, IModVarNonNull_mod_PlinthAreaVisLeft, IModVar_mod_PlinthAreaVisRight, IModVarNonNull_mod_PlinthAreaVisRight, IModVar_mod_ShelfbtmThk, IModVarNonNull_mod_ShelfbtmThk, IModVar_mod_ShelftopThk, IModVarNonNull_mod_ShelftopThk, IModVar_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVarNonNull_mod_SidepanelrightThk, IModVar_mod_TypeElement, IModVarNonNull_mod_TypeElement, IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_CarcaseDistanceWall, IModVarNonNull_mod_CarcaseDistanceWall, IModVar_mod_HardwareColor, IModVarNonNull_mod_HardwareColor, IModVar_mod_Direction, IModVarNonNull_mod_Direction, IModVar_mod_FillerType, IModVarNonNull_mod_FillerType, IModVar_mod_FillerHardware, IModVarNonNull_mod_FillerHardware, IModVar_mod_CreateBacksplash, IModVarNonNull_mod_CreateBacksplash, IModVar_mod_GlobalFrontOversizeBtm, IModVarNonNull_mod_GlobalFrontOversizeBtm, IModVar_mod_GlobalFrontOversizeLeft, IModVarNonNull_mod_GlobalFrontOversizeLeft, IModVar_mod_GlobalFrontOversizeRight, IModVarNonNull_mod_GlobalFrontOversizeRight, IModVar_mod_GlobalFrontOversizeTop, IModVarNonNull_mod_GlobalFrontOversizeTop, IModVar_mod_CreateCeilingFiller, IModVarNonNull_mod_CreateCeilingFiller } from '../var-interfaces'
-import { VariantValidation, IMatrix_mod_CarcaseColor, IMatrix_mod_CarcaseEdgeColor, IMatrix_mod_CarcaseFrontConstruction, IMatrix_mod_FrontColor, IMatrix_mod_CarcaseEdgeFrontColor, IMatrix_mod_CarcaseProgram, IMatrix_mod_CountertopThk, IMatrix_mod_CreateCountertop, IMatrix_mod_CreatePaneltop, IMatrix_mod_CreateFingergrip, IMatrix_mod_CreateToekick, IMatrix_mod_Depth, IMatrix_mod_FingergripType, IMatrix_mod_FrontDesign, IMatrix_mod_FrontEdgeColor, IMatrix_mod_FrontEdgeThk, IMatrix_mod_FrontGapCarcase, IMatrix_mod_FrontGapHor, IMatrix_mod_FrontGapHorTop, IMatrix_mod_FrontGapVert, IMatrix_mod_FrontPosStart, IMatrix_mod_FrontProgram, IMatrix_mod_Height, IMatrix_mod_HeightPosInsertion, IMatrix_mod_ModuleName, IMatrix_mod_PlinthAreaDesign, IMatrix_mod_PlinthAreaElementColor, IMatrix_mod_PlinthAreaExtraItem, IMatrix_mod_PlinthAreaHeight, IMatrix_mod_PlinthAreaPosBackMatrix, IMatrix_mod_PlinthAreaPosFrontMatrix, IMatrix_mod_PlinthAreaPosLeftMatrix, IMatrix_mod_PlinthAreaPosRightMatrix, IMatrix_mod_PlinthAreaVisLeft, IMatrix_mod_PlinthAreaVisRight, IMatrix_mod_ShelfbtmThk, IMatrix_mod_ShelftopThk, IMatrix_mod_SidepanelleftThk, IMatrix_mod_SidepanelrightThk, IMatrix_mod_TypeElement, IMatrix_mod_Width, IMatrix_mod_CarcaseDistanceWall, IMatrix_mod_HardwareColor, IMatrix_mod_Direction, IMatrix_mod_FillerType, IMatrix_mod_FillerHardware, IMatrix_mod_CreateBacksplash, IMatrix_mod_GlobalFrontOversizeBtm, IMatrix_mod_GlobalFrontOversizeLeft, IMatrix_mod_GlobalFrontOversizeRight, IMatrix_mod_GlobalFrontOversizeTop, IMatrix_mod_CreateCeilingFiller } from '../selections'
+import { OD_M_mc_FillerStraight01, dc_mc_FillerStraight01 } from './mc_FillerStraight01'
+import { IModuleNonNull_mr_FillerStraight, IModParents_mr_FillerStraight_mr_StorageunitSingle, IPartParentsNonNull_mr_FillerStraight_mr_StorageunitSingle } from '../mod-interfaces'
+import { IModVar_mod_CarcaseColor, IModVarNonNull_mod_CarcaseColor, IModVar_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseEdgeColor, IModVar_mod_CarcaseFrontConstruction, IModVarNonNull_mod_CarcaseFrontConstruction, IModVar_mod_FrontColor, IModVarNonNull_mod_FrontColor, IModVar_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVar_mod_CarcaseProgram, IModVarNonNull_mod_CarcaseProgram, IModVar_mod_CountertopInfo, IModVarNonNull_mod_CountertopInfo, IModVar_mod_CountertopThk, IModVarNonNull_mod_CountertopThk, IModVar_mod_CreateCountertop, IModVarNonNull_mod_CreateCountertop, IModVar_mod_CreatePaneltop, IModVarNonNull_mod_CreatePaneltop, IModVar_mod_CreateFingergrip, IModVarNonNull_mod_CreateFingergrip, IModVar_mod_CreateToekick, IModVarNonNull_mod_CreateToekick, IModVar_mod_Depth, IModVarNonNull_mod_Depth, IModVar_mod_FingergripType, IModVarNonNull_mod_FingergripType, IModVar_mod_FrontDesign, IModVarNonNull_mod_FrontDesign, IModVar_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVarNonNull_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapCarcase, IModVar_mod_FrontGapHor, IModVarNonNull_mod_FrontGapHor, IModVar_mod_FrontGapHorTop, IModVarNonNull_mod_FrontGapHorTop, IModVar_mod_FrontGapVert, IModVarNonNull_mod_FrontGapVert, IModVar_mod_FrontPosStart, IModVarNonNull_mod_FrontPosStart, IModVar_mod_FrontProgram, IModVarNonNull_mod_FrontProgram, IModVar_mod_Height, IModVarNonNull_mod_Height, IModVar_mod_HeightPosInsertion, IModVarNonNull_mod_HeightPosInsertion, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_PlinthAreaDesign, IModVarNonNull_mod_PlinthAreaDesign, IModVar_mod_PlinthAreaElementColor, IModVarNonNull_mod_PlinthAreaElementColor, IModVar_mod_PlinthAreaExtraItem, IModVarNonNull_mod_PlinthAreaExtraItem, IModVar_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaHeight, IModVar_mod_PlinthAreaPosBackMatrix, IModVarNonNull_mod_PlinthAreaPosBackMatrix, IModVar_mod_PlinthAreaPosFrontMatrix, IModVarNonNull_mod_PlinthAreaPosFrontMatrix, IModVar_mod_PlinthAreaPositionInfo, IModVarNonNull_mod_PlinthAreaPositionInfo, IModVar_mod_PlinthAreaPosLeftMatrix, IModVarNonNull_mod_PlinthAreaPosLeftMatrix, IModVar_mod_PlinthAreaPosRightMatrix, IModVarNonNull_mod_PlinthAreaPosRightMatrix, IModVar_mod_PlinthAreaVisLeft, IModVarNonNull_mod_PlinthAreaVisLeft, IModVar_mod_PlinthAreaVisRight, IModVarNonNull_mod_PlinthAreaVisRight, IModVar_mod_ShelfbtmThk, IModVarNonNull_mod_ShelfbtmThk, IModVar_mod_ShelftopThk, IModVarNonNull_mod_ShelftopThk, IModVar_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVarNonNull_mod_SidepanelrightThk, IModVar_mod_TypeElement, IModVarNonNull_mod_TypeElement, IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_CarcaseDistanceWall, IModVarNonNull_mod_CarcaseDistanceWall, IModVar_mod_Direction, IModVarNonNull_mod_Direction, IModVar_mod_FillerType, IModVarNonNull_mod_FillerType, IModVar_mod_CreateBacksplash, IModVarNonNull_mod_CreateBacksplash, IModVar_mod_GlobalFrontOversizeBtm, IModVarNonNull_mod_GlobalFrontOversizeBtm, IModVar_mod_GlobalFrontOversizeLeft, IModVarNonNull_mod_GlobalFrontOversizeLeft, IModVar_mod_GlobalFrontOversizeRight, IModVarNonNull_mod_GlobalFrontOversizeRight, IModVar_mod_GlobalFrontOversizeTop, IModVarNonNull_mod_GlobalFrontOversizeTop, IModVar_mod_CreateCeilingFiller, IModVarNonNull_mod_CreateCeilingFiller, IModVar_mod_CeilingFillerHeight, IModVarNonNull_mod_CeilingFillerHeight, IModVar_mod_CeilingFillerConstruction, IModVarNonNull_mod_CeilingFillerConstruction } from '../var-interfaces'
+import { VariantValidation, IMatrix_mod_CarcaseColor, IMatrix_mod_CarcaseEdgeColor, IMatrix_mod_CarcaseFrontConstruction, IMatrix_mod_FrontColor, IMatrix_mod_CarcaseEdgeFrontColor, IMatrix_mod_CarcaseProgram, IMatrix_mod_CountertopThk, IMatrix_mod_CreateCountertop, IMatrix_mod_CreatePaneltop, IMatrix_mod_CreateFingergrip, IMatrix_mod_CreateToekick, IMatrix_mod_Depth, IMatrix_mod_FingergripType, IMatrix_mod_FrontDesign, IMatrix_mod_FrontEdgeColor, IMatrix_mod_FrontEdgeThk, IMatrix_mod_FrontGapCarcase, IMatrix_mod_FrontGapHor, IMatrix_mod_FrontGapHorTop, IMatrix_mod_FrontGapVert, IMatrix_mod_FrontPosStart, IMatrix_mod_FrontProgram, IMatrix_mod_Height, IMatrix_mod_HeightPosInsertion, IMatrix_mod_ModuleName, IMatrix_mod_PlinthAreaDesign, IMatrix_mod_PlinthAreaElementColor, IMatrix_mod_PlinthAreaExtraItem, IMatrix_mod_PlinthAreaHeight, IMatrix_mod_PlinthAreaPosBackMatrix, IMatrix_mod_PlinthAreaPosFrontMatrix, IMatrix_mod_PlinthAreaPosLeftMatrix, IMatrix_mod_PlinthAreaPosRightMatrix, IMatrix_mod_PlinthAreaVisLeft, IMatrix_mod_PlinthAreaVisRight, IMatrix_mod_ShelfbtmThk, IMatrix_mod_ShelftopThk, IMatrix_mod_SidepanelleftThk, IMatrix_mod_SidepanelrightThk, IMatrix_mod_TypeElement, IMatrix_mod_Width, IMatrix_mod_CarcaseDistanceWall, IMatrix_mod_Direction, IMatrix_mod_FillerType, IMatrix_mod_CreateBacksplash, IMatrix_mod_GlobalFrontOversizeBtm, IMatrix_mod_GlobalFrontOversizeLeft, IMatrix_mod_GlobalFrontOversizeRight, IMatrix_mod_GlobalFrontOversizeTop, IMatrix_mod_CreateCeilingFiller, IMatrix_mod_CeilingFillerHeight, IMatrix_mod_CeilingFillerConstruction } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 import { IGlobalVarsParent } from '../global-vars-parent'
 
-import { mr_Filler_createBuildPlan, mr_Filler_afterDataCompletion, mr_Filler_manufacturerDataCompletion, mr_Filler_calculateContainerModules, mr_Filler_prepareContext } from '../../modules/mr_Filler';
+import { mr_FillerStraight_createBuildPlan, mr_FillerStraight_afterDataCompletion, mr_FillerStraight_manufacturerDataCompletion, mr_FillerStraight_calculateContainerModules, mr_FillerStraight_prepareContext } from '../../modules/mr_FillerStraight';
 
-export interface cbp_mr_Filler extends IModBaseProp
-  , IModVarNonNull_mod_CarcaseColor, IModVarNonNull_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseFrontConstruction, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseProgram, IModVarNonNull_mod_CountertopInfo, IModVarNonNull_mod_CountertopThk, IModVarNonNull_mod_CreateCountertop, IModVarNonNull_mod_CreatePaneltop, IModVarNonNull_mod_CreateFingergrip, IModVarNonNull_mod_CreateToekick, IModVarNonNull_mod_Depth, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapHorTop, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_Height, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PlinthAreaDesign, IModVarNonNull_mod_PlinthAreaElementColor, IModVarNonNull_mod_PlinthAreaExtraItem, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaPosBackMatrix, IModVarNonNull_mod_PlinthAreaPosFrontMatrix, IModVarNonNull_mod_PlinthAreaPositionInfo, IModVarNonNull_mod_PlinthAreaPosLeftMatrix, IModVarNonNull_mod_PlinthAreaPosRightMatrix, IModVarNonNull_mod_PlinthAreaVisLeft, IModVarNonNull_mod_PlinthAreaVisRight, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_ShelftopThk, IModVarNonNull_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelrightThk, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_Width, IModVarNonNull_mod_CarcaseDistanceWall, IModVarNonNull_mod_HardwareColor, IModVarNonNull_mod_Direction, IModVarNonNull_mod_FillerType, IModVarNonNull_mod_FillerHardware, IModVarNonNull_mod_CreateBacksplash, IModVarNonNull_mod_GlobalFrontOversizeBtm, IModVarNonNull_mod_GlobalFrontOversizeLeft, IModVarNonNull_mod_GlobalFrontOversizeRight, IModVarNonNull_mod_GlobalFrontOversizeTop, IModVarNonNull_mod_CreateCeilingFiller {
+export interface cbp_mr_FillerStraight extends IModBaseProp
+  , IModVarNonNull_mod_CarcaseColor, IModVarNonNull_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseFrontConstruction, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseProgram, IModVarNonNull_mod_CountertopInfo, IModVarNonNull_mod_CountertopThk, IModVarNonNull_mod_CreateCountertop, IModVarNonNull_mod_CreatePaneltop, IModVarNonNull_mod_CreateFingergrip, IModVarNonNull_mod_CreateToekick, IModVarNonNull_mod_Depth, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapHorTop, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_Height, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PlinthAreaDesign, IModVarNonNull_mod_PlinthAreaElementColor, IModVarNonNull_mod_PlinthAreaExtraItem, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaPosBackMatrix, IModVarNonNull_mod_PlinthAreaPosFrontMatrix, IModVarNonNull_mod_PlinthAreaPositionInfo, IModVarNonNull_mod_PlinthAreaPosLeftMatrix, IModVarNonNull_mod_PlinthAreaPosRightMatrix, IModVarNonNull_mod_PlinthAreaVisLeft, IModVarNonNull_mod_PlinthAreaVisRight, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_ShelftopThk, IModVarNonNull_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelrightThk, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_Width, IModVarNonNull_mod_CarcaseDistanceWall, IModVarNonNull_mod_Direction, IModVarNonNull_mod_FillerType, IModVarNonNull_mod_CreateBacksplash, IModVarNonNull_mod_GlobalFrontOversizeBtm, IModVarNonNull_mod_GlobalFrontOversizeLeft, IModVarNonNull_mod_GlobalFrontOversizeRight, IModVarNonNull_mod_GlobalFrontOversizeTop, IModVarNonNull_mod_CreateCeilingFiller, IModVarNonNull_mod_CeilingFillerHeight, IModVarNonNull_mod_CeilingFillerConstruction {
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
   createOpenGroup(groupName: string, part: IPartBase): OpenGroup;
@@ -150,21 +154,23 @@ export interface cbp_mr_Filler extends IModBaseProp
   get m(): OD_Base[];
 }
 
-export interface dc_mr_Filler extends IModBaseProp
-  , IModVar_mod_CarcaseColor, IModVar_mod_CarcaseEdgeColor, IModVar_mod_CarcaseFrontConstruction, IModVar_mod_FrontColor, IModVar_mod_CarcaseEdgeFrontColor, IModVar_mod_CarcaseProgram, IModVar_mod_CountertopInfo, IModVar_mod_CountertopThk, IModVar_mod_CreateCountertop, IModVar_mod_CreatePaneltop, IModVar_mod_CreateFingergrip, IModVar_mod_CreateToekick, IModVar_mod_Depth, IModVar_mod_FingergripType, IModVar_mod_FrontDesign, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapHorTop, IModVar_mod_FrontGapVert, IModVar_mod_FrontPosStart, IModVar_mod_FrontProgram, IModVar_mod_Height, IModVar_mod_HeightPosInsertion, IModVar_mod_ModuleName, IModVar_mod_PlinthAreaDesign, IModVar_mod_PlinthAreaElementColor, IModVar_mod_PlinthAreaExtraItem, IModVar_mod_PlinthAreaHeight, IModVar_mod_PlinthAreaPosBackMatrix, IModVar_mod_PlinthAreaPosFrontMatrix, IModVar_mod_PlinthAreaPositionInfo, IModVar_mod_PlinthAreaPosLeftMatrix, IModVar_mod_PlinthAreaPosRightMatrix, IModVar_mod_PlinthAreaVisLeft, IModVar_mod_PlinthAreaVisRight, IModVar_mod_ShelfbtmThk, IModVar_mod_ShelftopThk, IModVar_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVar_mod_TypeElement, IModVar_mod_Width, IModVar_mod_CarcaseDistanceWall, IModVar_mod_HardwareColor, IModVar_mod_Direction, IModVar_mod_FillerType, IModVar_mod_FillerHardware, IModVar_mod_CreateBacksplash, IModVar_mod_GlobalFrontOversizeBtm, IModVar_mod_GlobalFrontOversizeLeft, IModVar_mod_GlobalFrontOversizeRight, IModVar_mod_GlobalFrontOversizeTop, IModVar_mod_CreateCeilingFiller {
+export interface dc_mr_FillerStraight extends IModBaseProp
+  , IModVar_mod_CarcaseColor, IModVar_mod_CarcaseEdgeColor, IModVar_mod_CarcaseFrontConstruction, IModVar_mod_FrontColor, IModVar_mod_CarcaseEdgeFrontColor, IModVar_mod_CarcaseProgram, IModVar_mod_CountertopInfo, IModVar_mod_CountertopThk, IModVar_mod_CreateCountertop, IModVar_mod_CreatePaneltop, IModVar_mod_CreateFingergrip, IModVar_mod_CreateToekick, IModVar_mod_Depth, IModVar_mod_FingergripType, IModVar_mod_FrontDesign, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapHorTop, IModVar_mod_FrontGapVert, IModVar_mod_FrontPosStart, IModVar_mod_FrontProgram, IModVar_mod_Height, IModVar_mod_HeightPosInsertion, IModVar_mod_ModuleName, IModVar_mod_PlinthAreaDesign, IModVar_mod_PlinthAreaElementColor, IModVar_mod_PlinthAreaExtraItem, IModVar_mod_PlinthAreaHeight, IModVar_mod_PlinthAreaPosBackMatrix, IModVar_mod_PlinthAreaPosFrontMatrix, IModVar_mod_PlinthAreaPositionInfo, IModVar_mod_PlinthAreaPosLeftMatrix, IModVar_mod_PlinthAreaPosRightMatrix, IModVar_mod_PlinthAreaVisLeft, IModVar_mod_PlinthAreaVisRight, IModVar_mod_ShelfbtmThk, IModVar_mod_ShelftopThk, IModVar_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVar_mod_TypeElement, IModVar_mod_Width, IModVar_mod_CarcaseDistanceWall, IModVar_mod_Direction, IModVar_mod_FillerType, IModVar_mod_CreateBacksplash, IModVar_mod_GlobalFrontOversizeBtm, IModVar_mod_GlobalFrontOversizeLeft, IModVar_mod_GlobalFrontOversizeRight, IModVar_mod_GlobalFrontOversizeTop, IModVar_mod_CreateCeilingFiller, IModVar_mod_CeilingFillerHeight, IModVar_mod_CeilingFillerConstruction {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
-  seal(): IModuleNonNull_mr_Filler;
-  addOD_M_mc_Filler01(index?: number): dc_mc_Filler01;
+  seal(): IModuleNonNull_mr_FillerStraight;
+  addOD_M_mc_FillerStraight01(index?: number): dc_mc_FillerStraight01;
 }
 
-export interface pc_mr_Filler extends dc_mr_Filler {
+export interface pc_mr_FillerStraight extends dc_mr_FillerStraight {
+  _forcedInputAttributes?: string[];
   getContextData(): IContextData | undefined;
   getContextModule(id: string): OD_Base | undefined;
+  getRoomContours(): RoomContour[];
 }
 
-export interface adc_base_mr_Filler extends IModBaseProp
-  , IModVarNonNull_mod_CarcaseColor, IModVarNonNull_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseFrontConstruction, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseProgram, IModVarNonNull_mod_CountertopInfo, IModVarNonNull_mod_CountertopThk, IModVarNonNull_mod_CreateCountertop, IModVarNonNull_mod_CreatePaneltop, IModVarNonNull_mod_CreateFingergrip, IModVarNonNull_mod_CreateToekick, IModVarNonNull_mod_Depth, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapHorTop, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_Height, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PlinthAreaDesign, IModVarNonNull_mod_PlinthAreaElementColor, IModVarNonNull_mod_PlinthAreaExtraItem, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaPosBackMatrix, IModVarNonNull_mod_PlinthAreaPosFrontMatrix, IModVarNonNull_mod_PlinthAreaPositionInfo, IModVarNonNull_mod_PlinthAreaPosLeftMatrix, IModVarNonNull_mod_PlinthAreaPosRightMatrix, IModVarNonNull_mod_PlinthAreaVisLeft, IModVarNonNull_mod_PlinthAreaVisRight, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_ShelftopThk, IModVarNonNull_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelrightThk, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_Width, IModVarNonNull_mod_CarcaseDistanceWall, IModVarNonNull_mod_HardwareColor, IModVarNonNull_mod_Direction, IModVarNonNull_mod_FillerType, IModVarNonNull_mod_FillerHardware, IModVarNonNull_mod_CreateBacksplash, IModVarNonNull_mod_GlobalFrontOversizeBtm, IModVarNonNull_mod_GlobalFrontOversizeLeft, IModVarNonNull_mod_GlobalFrontOversizeRight, IModVarNonNull_mod_GlobalFrontOversizeTop, IModVarNonNull_mod_CreateCeilingFiller {
+export interface adc_base_mr_FillerStraight extends IModBaseProp
+  , IModVarNonNull_mod_CarcaseColor, IModVarNonNull_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseFrontConstruction, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseProgram, IModVarNonNull_mod_CountertopInfo, IModVarNonNull_mod_CountertopThk, IModVarNonNull_mod_CreateCountertop, IModVarNonNull_mod_CreatePaneltop, IModVarNonNull_mod_CreateFingergrip, IModVarNonNull_mod_CreateToekick, IModVarNonNull_mod_Depth, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapHorTop, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_Height, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PlinthAreaDesign, IModVarNonNull_mod_PlinthAreaElementColor, IModVarNonNull_mod_PlinthAreaExtraItem, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaPosBackMatrix, IModVarNonNull_mod_PlinthAreaPosFrontMatrix, IModVarNonNull_mod_PlinthAreaPositionInfo, IModVarNonNull_mod_PlinthAreaPosLeftMatrix, IModVarNonNull_mod_PlinthAreaPosRightMatrix, IModVarNonNull_mod_PlinthAreaVisLeft, IModVarNonNull_mod_PlinthAreaVisRight, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_ShelftopThk, IModVarNonNull_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelrightThk, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_Width, IModVarNonNull_mod_CarcaseDistanceWall, IModVarNonNull_mod_Direction, IModVarNonNull_mod_FillerType, IModVarNonNull_mod_CreateBacksplash, IModVarNonNull_mod_GlobalFrontOversizeBtm, IModVarNonNull_mod_GlobalFrontOversizeLeft, IModVarNonNull_mod_GlobalFrontOversizeRight, IModVarNonNull_mod_GlobalFrontOversizeTop, IModVarNonNull_mod_CreateCeilingFiller, IModVarNonNull_mod_CeilingFillerHeight, IModVarNonNull_mod_CeilingFillerConstruction {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   get dockingInfo(): IDockingInfo[];
@@ -178,25 +184,25 @@ export interface adc_base_mr_Filler extends IModBaseProp
   get _posData(): Map<string, string | number>;
 }
 
-export interface adc_mr_Filler extends adc_base_mr_Filler {
-  addOD_M_mc_Filler01(index?: number): dc_mc_Filler01;
+export interface adc_mr_FillerStraight extends adc_base_mr_FillerStraight {
+  addOD_M_mc_FillerStraight01(index?: number): dc_mc_FillerStraight01;
 }
 
-export interface ccm_mr_Filler extends adc_base_mr_Filler {
+export interface ccm_mr_FillerStraight extends adc_base_mr_FillerStraight {
 }
 
 
-export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Filler
-  , IModParents_mr_Filler_mr_StorageunitSingle
-  , IModVar_mod_CarcaseColor, IModVar_mod_CarcaseEdgeColor, IModVar_mod_CarcaseFrontConstruction, IModVar_mod_FrontColor, IModVar_mod_CarcaseEdgeFrontColor, IModVar_mod_CarcaseProgram, IModVar_mod_CountertopInfo, IModVar_mod_CountertopThk, IModVar_mod_CreateCountertop, IModVar_mod_CreatePaneltop, IModVar_mod_CreateFingergrip, IModVar_mod_CreateToekick, IModVar_mod_Depth, IModVar_mod_FingergripType, IModVar_mod_FrontDesign, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapHorTop, IModVar_mod_FrontGapVert, IModVar_mod_FrontPosStart, IModVar_mod_FrontProgram, IModVar_mod_Height, IModVar_mod_HeightPosInsertion, IModVar_mod_ModuleName, IModVar_mod_PlinthAreaDesign, IModVar_mod_PlinthAreaElementColor, IModVar_mod_PlinthAreaExtraItem, IModVar_mod_PlinthAreaHeight, IModVar_mod_PlinthAreaPosBackMatrix, IModVar_mod_PlinthAreaPosFrontMatrix, IModVar_mod_PlinthAreaPositionInfo, IModVar_mod_PlinthAreaPosLeftMatrix, IModVar_mod_PlinthAreaPosRightMatrix, IModVar_mod_PlinthAreaVisLeft, IModVar_mod_PlinthAreaVisRight, IModVar_mod_ShelfbtmThk, IModVar_mod_ShelftopThk, IModVar_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVar_mod_TypeElement, IModVar_mod_Width, IModVar_mod_CarcaseDistanceWall, IModVar_mod_HardwareColor, IModVar_mod_Direction, IModVar_mod_FillerType, IModVar_mod_FillerHardware, IModVar_mod_CreateBacksplash, IModVar_mod_GlobalFrontOversizeBtm, IModVar_mod_GlobalFrontOversizeLeft, IModVar_mod_GlobalFrontOversizeRight, IModVar_mod_GlobalFrontOversizeTop, IModVar_mod_CreateCeilingFiller {
+export class OD_M_mr_FillerStraight extends OD_Base implements pc_mr_FillerStraight, dc_mr_FillerStraight
+  , IModParents_mr_FillerStraight_mr_StorageunitSingle
+  , IModVar_mod_CarcaseColor, IModVar_mod_CarcaseEdgeColor, IModVar_mod_CarcaseFrontConstruction, IModVar_mod_FrontColor, IModVar_mod_CarcaseEdgeFrontColor, IModVar_mod_CarcaseProgram, IModVar_mod_CountertopInfo, IModVar_mod_CountertopThk, IModVar_mod_CreateCountertop, IModVar_mod_CreatePaneltop, IModVar_mod_CreateFingergrip, IModVar_mod_CreateToekick, IModVar_mod_Depth, IModVar_mod_FingergripType, IModVar_mod_FrontDesign, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapHorTop, IModVar_mod_FrontGapVert, IModVar_mod_FrontPosStart, IModVar_mod_FrontProgram, IModVar_mod_Height, IModVar_mod_HeightPosInsertion, IModVar_mod_ModuleName, IModVar_mod_PlinthAreaDesign, IModVar_mod_PlinthAreaElementColor, IModVar_mod_PlinthAreaExtraItem, IModVar_mod_PlinthAreaHeight, IModVar_mod_PlinthAreaPosBackMatrix, IModVar_mod_PlinthAreaPosFrontMatrix, IModVar_mod_PlinthAreaPositionInfo, IModVar_mod_PlinthAreaPosLeftMatrix, IModVar_mod_PlinthAreaPosRightMatrix, IModVar_mod_PlinthAreaVisLeft, IModVar_mod_PlinthAreaVisRight, IModVar_mod_ShelfbtmThk, IModVar_mod_ShelftopThk, IModVar_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVar_mod_TypeElement, IModVar_mod_Width, IModVar_mod_CarcaseDistanceWall, IModVar_mod_Direction, IModVar_mod_FillerType, IModVar_mod_CreateBacksplash, IModVar_mod_GlobalFrontOversizeBtm, IModVar_mod_GlobalFrontOversizeLeft, IModVar_mod_GlobalFrontOversizeRight, IModVar_mod_GlobalFrontOversizeTop, IModVar_mod_CreateCeilingFiller, IModVar_mod_CeilingFillerHeight, IModVar_mod_CeilingFillerConstruction {
   constructor(parent?: OD_Base, manufacturerMode?: boolean) {
-    super('mr_Filler', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
+    super('mr_FillerStraight', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this._g = new GlobalVars();
     this._openGroups = new Map<string, OpenGroup>();
     this._partGroups = new Map<string, PartGroup>();
-    this._selfNonNull = new OD_M_mr_Filler_NonNull(this);
+    this._selfNonNull = new OD_M_mr_FillerStraight_NonNull(this);
   }
-  _selfNonNull: OD_M_mr_Filler_NonNull;
+  _selfNonNull: OD_M_mr_FillerStraight_NonNull;
 
   addGenerationContour(generationMethod: GenerationMethod, height: number, contour: Contour): void {
     this.generationContours.push({
@@ -207,7 +213,7 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
     });
   }
 
-  override variants: string[] = ['mod_CarcaseColor', 'mod_CarcaseEdgeColor', 'mod_CarcaseFrontConstruction', 'mod_FrontColor', 'mod_CarcaseEdgeFrontColor', 'mod_CarcaseProgram', 'mod_CountertopInfo', 'mod_CountertopThk', 'mod_CreateCountertop', 'mod_CreatePaneltop', 'mod_CreateFingergrip', 'mod_CreateToekick', 'mod_Depth', 'mod_FingergripType', 'mod_FrontDesign', 'mod_FrontEdgeColor', 'mod_FrontEdgeThk', 'mod_FrontGapCarcase', 'mod_FrontGapHor', 'mod_FrontGapHorTop', 'mod_FrontGapVert', 'mod_FrontPosStart', 'mod_FrontProgram', 'mod_Height', 'mod_HeightPosInsertion', 'mod_ModuleName', 'mod_PlinthAreaDesign', 'mod_PlinthAreaElementColor', 'mod_PlinthAreaExtraItem', 'mod_PlinthAreaHeight', 'mod_PlinthAreaPosBackMatrix', 'mod_PlinthAreaPosFrontMatrix', 'mod_PlinthAreaPositionInfo', 'mod_PlinthAreaPosLeftMatrix', 'mod_PlinthAreaPosRightMatrix', 'mod_PlinthAreaVisLeft', 'mod_PlinthAreaVisRight', 'mod_ShelfbtmThk', 'mod_ShelftopThk', 'mod_SidepanelleftThk', 'mod_SidepanelrightThk', 'mod_TypeElement', 'mod_Width', 'mod_CarcaseDistanceWall', 'mod_HardwareColor', 'mod_Direction', 'mod_FillerType', 'mod_FillerHardware', 'mod_CreateBacksplash', 'mod_GlobalFrontOversizeBtm', 'mod_GlobalFrontOversizeLeft', 'mod_GlobalFrontOversizeRight', 'mod_GlobalFrontOversizeTop', 'mod_CreateCeilingFiller',];
+  override variants: string[] = ['mod_CarcaseColor', 'mod_CarcaseEdgeColor', 'mod_CarcaseFrontConstruction', 'mod_FrontColor', 'mod_CarcaseEdgeFrontColor', 'mod_CarcaseProgram', 'mod_CountertopInfo', 'mod_CountertopThk', 'mod_CreateCountertop', 'mod_CreatePaneltop', 'mod_CreateFingergrip', 'mod_CreateToekick', 'mod_Depth', 'mod_FingergripType', 'mod_FrontDesign', 'mod_FrontEdgeColor', 'mod_FrontEdgeThk', 'mod_FrontGapCarcase', 'mod_FrontGapHor', 'mod_FrontGapHorTop', 'mod_FrontGapVert', 'mod_FrontPosStart', 'mod_FrontProgram', 'mod_Height', 'mod_HeightPosInsertion', 'mod_ModuleName', 'mod_PlinthAreaDesign', 'mod_PlinthAreaElementColor', 'mod_PlinthAreaExtraItem', 'mod_PlinthAreaHeight', 'mod_PlinthAreaPosBackMatrix', 'mod_PlinthAreaPosFrontMatrix', 'mod_PlinthAreaPositionInfo', 'mod_PlinthAreaPosLeftMatrix', 'mod_PlinthAreaPosRightMatrix', 'mod_PlinthAreaVisLeft', 'mod_PlinthAreaVisRight', 'mod_ShelfbtmThk', 'mod_ShelftopThk', 'mod_SidepanelleftThk', 'mod_SidepanelrightThk', 'mod_TypeElement', 'mod_Width', 'mod_CarcaseDistanceWall', 'mod_Direction', 'mod_FillerType', 'mod_CreateBacksplash', 'mod_GlobalFrontOversizeBtm', 'mod_GlobalFrontOversizeLeft', 'mod_GlobalFrontOversizeRight', 'mod_GlobalFrontOversizeTop', 'mod_CreateCeilingFiller', 'mod_CeilingFillerHeight', 'mod_CeilingFillerConstruction',];
   #mod_CarcaseColor?: string;
   get mod_CarcaseColor(): string | undefined { return this.#mod_CarcaseColor }
   set mod_CarcaseColor(value: string | undefined) {
@@ -716,18 +722,6 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
   }
 
   mod_CarcaseDistanceWall_matrix?: IMatrix_mod_CarcaseDistanceWall;
-  #mod_HardwareColor?: string;
-  get mod_HardwareColor(): string | undefined { return this.#mod_HardwareColor }
-  set mod_HardwareColor(value: string | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_HardwareColor' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_HardwareColor === value) return;
-    this.#mod_HardwareColor = value;
-  }
-
-  mod_HardwareColor_matrix?: IMatrix_mod_HardwareColor;
   #mod_Direction?: string;
   get mod_Direction(): string | undefined { return this.#mod_Direction }
   set mod_Direction(value: string | undefined) {
@@ -752,18 +746,6 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
   }
 
   mod_FillerType_matrix?: IMatrix_mod_FillerType;
-  #mod_FillerHardware?: string;
-  get mod_FillerHardware(): string | undefined { return this.#mod_FillerHardware }
-  set mod_FillerHardware(value: string | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_FillerHardware' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_FillerHardware === value) return;
-    this.#mod_FillerHardware = value;
-  }
-
-  mod_FillerHardware_matrix?: IMatrix_mod_FillerHardware;
   #mod_CreateBacksplash?: boolean;
   get mod_CreateBacksplash(): boolean | undefined { return this.#mod_CreateBacksplash }
   set mod_CreateBacksplash(value: boolean | undefined) {
@@ -836,6 +818,30 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
   }
 
   mod_CreateCeilingFiller_matrix?: IMatrix_mod_CreateCeilingFiller;
+  #mod_CeilingFillerHeight?: number;
+  get mod_CeilingFillerHeight(): number | undefined { return this.#mod_CeilingFillerHeight }
+  set mod_CeilingFillerHeight(value: number | undefined) {
+    if (this._adcFinished) {
+      logError("The property 'mod_CeilingFillerHeight' must not be changed after the module was completed with 'afterDataCompletion'");
+      return;
+    }
+    if (this.#mod_CeilingFillerHeight === value) return;
+    this.#mod_CeilingFillerHeight = value;
+  }
+
+  mod_CeilingFillerHeight_matrix?: IMatrix_mod_CeilingFillerHeight;
+  #mod_CeilingFillerConstruction?: string;
+  get mod_CeilingFillerConstruction(): string | undefined { return this.#mod_CeilingFillerConstruction }
+  set mod_CeilingFillerConstruction(value: string | undefined) {
+    if (this._adcFinished) {
+      logError("The property 'mod_CeilingFillerConstruction' must not be changed after the module was completed with 'afterDataCompletion'");
+      return;
+    }
+    if (this.#mod_CeilingFillerConstruction === value) return;
+    this.#mod_CeilingFillerConstruction = value;
+  }
+
+  mod_CeilingFillerConstruction_matrix?: IMatrix_mod_CeilingFillerConstruction;
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
     res.set('mod_CarcaseColor', this.mod_CarcaseColor);
@@ -882,32 +888,16 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
     res.set('mod_TypeElement', this.mod_TypeElement);
     res.set('mod_Width', this.mod_Width);
     res.set('mod_CarcaseDistanceWall', this.mod_CarcaseDistanceWall);
-    res.set('mod_HardwareColor', this.mod_HardwareColor);
     res.set('mod_Direction', this.mod_Direction);
     res.set('mod_FillerType', this.mod_FillerType);
-    res.set('mod_FillerHardware', this.mod_FillerHardware);
     res.set('mod_CreateBacksplash', this.mod_CreateBacksplash);
     res.set('mod_GlobalFrontOversizeBtm', this.mod_GlobalFrontOversizeBtm);
     res.set('mod_GlobalFrontOversizeLeft', this.mod_GlobalFrontOversizeLeft);
     res.set('mod_GlobalFrontOversizeRight', this.mod_GlobalFrontOversizeRight);
     res.set('mod_GlobalFrontOversizeTop', this.mod_GlobalFrontOversizeTop);
     res.set('mod_CreateCeilingFiller', this.mod_CreateCeilingFiller);
-    return res;
-  }
-  override getCheckAttributes(): Map<string, number | string | boolean | undefined> | undefined {
-    const res = new Map<string, number | string | boolean | undefined>();
-    res.set('mod_CarcaseColor:GrainGroupId', this.mod_CarcaseColor_matrix?.GrainGroupId);
-    res.set('mod_CarcaseColor', this.mod_CarcaseColor);
-    res.set('mod_FrontColor', this.mod_FrontColor);
-    res.set('mod_CarcaseEdgeFrontColor', this.mod_CarcaseEdgeFrontColor);
-    res.set('mod_CarcaseProgram:GrainGroupId', this.mod_CarcaseProgram_matrix?.GrainGroupId);
-    res.set('mod_CarcaseProgram', this.mod_CarcaseProgram);
-    res.set('mod_FrontDesign', this.mod_FrontDesign);
-    res.set('mod_FrontProgram', this.mod_FrontProgram);
-    res.set('mod_PlinthAreaDesign', this.mod_PlinthAreaDesign);
-    res.set('mod_PlinthAreaHeight', this.mod_PlinthAreaHeight);
-    res.set('mod_HardwareColor', this.mod_HardwareColor);
-    res.set('_moduleId', this.modId);
+    res.set('mod_CeilingFillerHeight', this.mod_CeilingFillerHeight);
+    res.set('mod_CeilingFillerConstruction', this.mod_CeilingFillerConstruction);
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -1216,12 +1206,6 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
       this.mod_CarcaseDistanceWall = val;
     }
     {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_HardwareColor');
-      const val = _toString(json['attributes']['mod_HardwareColor'], 'mod_HardwareColor');
-      internal_leaveValidateVariant();
-      this.mod_HardwareColor = val;
-    }
-    {
       internal_enterValidateVariant(this.modId, this._id, 'mod_Direction');
       const val = _toString(json['attributes']['mod_Direction'], 'mod_Direction');
       internal_leaveValidateVariant();
@@ -1232,12 +1216,6 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
       const val = _toString(json['attributes']['mod_FillerType'], 'mod_FillerType');
       internal_leaveValidateVariant();
       this.mod_FillerType = val;
-    }
-    {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_FillerHardware');
-      const val = _toString(json['attributes']['mod_FillerHardware'], 'mod_FillerHardware');
-      internal_leaveValidateVariant();
-      this.mod_FillerHardware = val;
     }
     {
       internal_enterValidateVariant(this.modId, this._id, 'mod_CreateBacksplash');
@@ -1275,33 +1253,22 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
       internal_leaveValidateVariant();
       this.mod_CreateCeilingFiller = val;
     }
+    {
+      internal_enterValidateVariant(this.modId, this._id, 'mod_CeilingFillerHeight');
+      const val = _toFloat(json['attributes']['mod_CeilingFillerHeight'], 'mod_CeilingFillerHeight');
+      internal_leaveValidateVariant();
+      this.mod_CeilingFillerHeight = val;
+    }
+    {
+      internal_enterValidateVariant(this.modId, this._id, 'mod_CeilingFillerConstruction');
+      const val = _toString(json['attributes']['mod_CeilingFillerConstruction'], 'mod_CeilingFillerConstruction');
+      internal_leaveValidateVariant();
+      this.mod_CeilingFillerConstruction = val;
+    }
     if (withSubModules && json['modules']) {
       json['modules'].forEach((subMod: any) => { this.m.push(loadOrderData(subMod, this, manufacturerMode)) });
     }
     internal_leaveLoadJson();
-  }
-  override checkPosRelevantRequiredAttributes(): void {
-    if (this.#mod_Depth === undefined) {
-      logWarning('The required attribute "mod_Depth" was not set in the order data');
-    }
-    if (this.#mod_Height === undefined) {
-      logWarning('The required attribute "mod_Height" was not set in the order data');
-    }
-    if (this.#mod_ModuleName !== undefined) {
-      this.#mod_ModuleName = undefined;
-      logWarning('The attribute "mod_ModuleName" was set in the order data but is not marked as "pos relevant" - the value is ignored');
-    }
-    if (this.#mod_SidepanelleftThk !== undefined) {
-      this.#mod_SidepanelleftThk = undefined;
-      logWarning('The attribute "mod_SidepanelleftThk" was set in the order data but is not marked as "pos relevant" - the value is ignored');
-    }
-    if (this.#mod_SidepanelrightThk !== undefined) {
-      this.#mod_SidepanelrightThk = undefined;
-      logWarning('The attribute "mod_SidepanelrightThk" was set in the order data but is not marked as "pos relevant" - the value is ignored');
-    }
-    if (this.#mod_Width === undefined) {
-      logWarning('The required attribute "mod_Width" was not set in the order data');
-    }
   }
   #dataCompletionAssignDerivedData() {
     internal_enterDataCompletionAssignDerivedData(this.modId, this._id);
@@ -1377,9 +1344,6 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
     if (this.mod_FillerType === undefined) {
       this.mod_FillerType = "LShape";
     }
-    if (this.mod_FillerHardware === undefined) {
-      this.mod_FillerHardware = "Bracket01";
-    }
     if (this.mod_CreateBacksplash === undefined) {
       this.mod_CreateBacksplash = false;
     }
@@ -1408,7 +1372,7 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
         // ###############################################################
         // ####################### CUSTOM SCRIPTS ########################
         // ###############################################################
-        // CUSTOMSCRIPT_mr_Filler_mod_CarcaseEdgeColor_SETDEFAULT
+        // CUSTOMSCRIPT_mr_FillerStraight_mod_CarcaseEdgeColor_SETDEFAULT
         this.mod_CarcaseEdgeColor = this.mod_CarcaseColor;
         // ###############################################################
         // ################### END CUSTOM SCRIPTS ########################
@@ -1418,7 +1382,7 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
         // ###############################################################
         // ####################### CUSTOM SCRIPTS ########################
         // ###############################################################
-        // CUSTOMSCRIPT_mr_Filler_mod_CarcaseEdgeFrontColor_SETDEFAULT
+        // CUSTOMSCRIPT_mr_FillerStraight_mod_CarcaseEdgeFrontColor_SETDEFAULT
         this.mod_CarcaseEdgeFrontColor = this.mod_FrontColor;
         // ###############################################################
         // ################### END CUSTOM SCRIPTS ########################
@@ -1492,8 +1456,11 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
     if (this.mod_SidepanelrightThk === undefined) {
       this.mod_SidepanelrightThk = this.g.basic_SidePanelThk;
     }
-    if (this.mod_HardwareColor === undefined) {
-      this.mod_HardwareColor = this.g.basic_HardwareColor;
+    if (this.mod_CeilingFillerHeight === undefined) {
+      this.mod_CeilingFillerHeight = this.g.basic_CeilingFillerHeight;
+    }
+    if (this.mod_CeilingFillerConstruction === undefined) {
+      this.mod_CeilingFillerConstruction = this.g.basic_CeilingFillerConstruction;
     }
     internal_leaveDataCompletionSetDefaultScripts_globalVars();
   }
@@ -1519,12 +1486,12 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
     this.#manufacturerDataCompletionInternal();
     this.m.forEach(subMod => subMod.manufacturerDataCompletion());
   }
-  #manufacturerDataCompletionInternal = mr_Filler_manufacturerDataCompletion;
+  #manufacturerDataCompletionInternal = mr_FillerStraight_manufacturerDataCompletion;
   override afterDataCompletion(): void {
     if (this._adcFinished) return;
     this._adcFinished = true;
     this.validateSelections();
-    var adc = new OD_M_mr_Filler_NonNull(this);
+    var adc = new OD_M_mr_FillerStraight_NonNull(this);
     adc.afterDataCompletion();
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
@@ -1532,19 +1499,20 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
   override prepareContext(contextRoots: OD_Base[]): void {
     super.prepareContext(contextRoots);
     this.internallyPrepareContext();
+    this.m.forEach(subMod => subMod.prepareContext(contextRoots));
   }
   internallyPrepareContext(): void {
     this.#prepareContextInternal();
   }
-  #prepareContextInternal = mr_Filler_prepareContext;
-  seal(): IModuleNonNull_mr_Filler {
+  #prepareContextInternal = mr_FillerStraight_prepareContext;
+  seal(): IModuleNonNull_mr_FillerStraight {
     this.afterDataCompletion();
-    const adc = new OD_M_mr_Filler_NonNull(this);
+    const adc = new OD_M_mr_FillerStraight_NonNull(this);
     return adc;
   }
 
-  addOD_M_mc_Filler01(index?: number): dc_mc_Filler01 {
-    var m = new OD_M_mc_Filler01(this);
+  addOD_M_mc_FillerStraight01(index?: number): dc_mc_FillerStraight01 {
+    var m = new OD_M_mc_FillerStraight01(this);
     m.dataCompletion();
     if (this._manufacturerMode) {
       m.manufacturerDataCompletion();
@@ -1599,38 +1567,38 @@ export class OD_M_mr_Filler extends OD_Base implements pc_mr_Filler, dc_mr_Fille
     this.mod_TypeElement_matrix = VariantValidation.mod_TypeElement(this, this.mod_TypeElement);
     this.mod_Width_matrix = VariantValidation.mod_Width(this, this.mod_Width);
     this.mod_CarcaseDistanceWall_matrix = VariantValidation.mod_CarcaseDistanceWall(this, this.mod_CarcaseDistanceWall);
-    this.mod_HardwareColor_matrix = VariantValidation.mod_HardwareColor(this, this.mod_HardwareColor);
     this.mod_Direction_matrix = VariantValidation.mod_Direction(this, this.mod_Direction);
     this.mod_FillerType_matrix = VariantValidation.mod_FillerType(this, this.mod_FillerType);
-    this.mod_FillerHardware_matrix = VariantValidation.mod_FillerHardware(this, this.mod_FillerHardware);
     this.mod_CreateBacksplash_matrix = VariantValidation.mod_CreateBacksplash(this, this.mod_CreateBacksplash);
     this.mod_GlobalFrontOversizeBtm_matrix = VariantValidation.mod_GlobalFrontOversizeBtm(this, this.mod_GlobalFrontOversizeBtm);
     this.mod_GlobalFrontOversizeLeft_matrix = VariantValidation.mod_GlobalFrontOversizeLeft(this, this.mod_GlobalFrontOversizeLeft);
     this.mod_GlobalFrontOversizeRight_matrix = VariantValidation.mod_GlobalFrontOversizeRight(this, this.mod_GlobalFrontOversizeRight);
     this.mod_GlobalFrontOversizeTop_matrix = VariantValidation.mod_GlobalFrontOversizeTop(this, this.mod_GlobalFrontOversizeTop);
     this.mod_CreateCeilingFiller_matrix = VariantValidation.mod_CreateCeilingFiller(this, this.mod_CreateCeilingFiller);
+    this.mod_CeilingFillerHeight_matrix = VariantValidation.mod_CeilingFillerHeight(this, this.mod_CeilingFillerHeight);
+    this.mod_CeilingFillerConstruction_matrix = VariantValidation.mod_CeilingFillerConstruction(this, this.mod_CeilingFillerConstruction);
   }
 
   override calculateContainerModules(): void {
-    let ccm = new OD_M_mr_Filler_NonNull(this);
+    let ccm = new OD_M_mr_FillerStraight_NonNull(this);
     ccm.calculateContainerModules();
     this.m.forEach(subMod => subMod.calculateContainerModules());
   }
 
 
   override createBuildPlan(): void {
-    var cbp = new OD_M_mr_Filler_NonNull(this);
+    var cbp = new OD_M_mr_FillerStraight_NonNull(this);
     cbp.createBuildPlan();
     this.m.forEach(subMod => subMod.createBuildPlan());
   }
 
 }
 
-class OD_M_mr_Filler_NonNull implements cbp_mr_Filler, adc_mr_Filler, ccm_mr_Filler, IPartParentsNonNull_mr_Filler_mr_StorageunitSingle {
-  constructor(parent: OD_M_mr_Filler) {
+class OD_M_mr_FillerStraight_NonNull implements cbp_mr_FillerStraight, adc_mr_FillerStraight, ccm_mr_FillerStraight, IPartParentsNonNull_mr_FillerStraight_mr_StorageunitSingle {
+  constructor(parent: OD_M_mr_FillerStraight) {
     this.#internalParent = parent;
   }
-  #internalParent: OD_M_mr_Filler;
+  #internalParent: OD_M_mr_FillerStraight;
 
   addGenerationContour(generationMethod: GenerationMethod, height: number, contour: Contour): void {
     this.#internalParent.addGenerationContour(
@@ -1639,7 +1607,7 @@ class OD_M_mr_Filler_NonNull implements cbp_mr_Filler, adc_mr_Filler, ccm_mr_Fil
       contour
     );
   }
-  getRoomContours(): RoomContour[] { return this.#internalParent.roomContours ?? []; }
+  getRoomContours(): RoomContour[] { return this.#internalParent.getRoomContours(); }
   getContextData(): IContextData | undefined { return this.#internalParent.getContextData(); }
   getContextModule(id: string): OD_Base | undefined {
     return this.#internalParent.getContextModule(id);
@@ -1660,15 +1628,15 @@ class OD_M_mr_Filler_NonNull implements cbp_mr_Filler, adc_mr_Filler, ccm_mr_Fil
   createBuildPlan(): void {
     this.#createBuildPlanInternal();
   }
-  #createBuildPlanInternal = mr_Filler_createBuildPlan;
+  #createBuildPlanInternal = mr_FillerStraight_createBuildPlan;
   afterDataCompletion(): void {
     this.#afterDataCompletionInternal();
   }
-  #afterDataCompletionInternal = mr_Filler_afterDataCompletion;
+  #afterDataCompletionInternal = mr_FillerStraight_afterDataCompletion;
   calculateContainerModules(): void {
     this.#calculateContainerModulesInternal();
   }
-  #calculateContainerModulesInternal = mr_Filler_calculateContainerModules;
+  #calculateContainerModulesInternal = mr_FillerStraight_calculateContainerModules;
   createPartGroup(groupName: string, part: PartBase): PartGroup {
     return this.#internalParent.createPartGroup(groupName, part);
   }
@@ -1851,17 +1819,11 @@ class OD_M_mr_Filler_NonNull implements cbp_mr_Filler, adc_mr_Filler, ccm_mr_Fil
   get mod_CarcaseDistanceWall(): number {
     return this.#internalParent.mod_CarcaseDistanceWall!;
   }
-  get mod_HardwareColor(): string {
-    return this.#internalParent.mod_HardwareColor!;
-  }
   get mod_Direction(): string {
     return this.#internalParent.mod_Direction!;
   }
   get mod_FillerType(): string {
     return this.#internalParent.mod_FillerType!;
-  }
-  get mod_FillerHardware(): string {
-    return this.#internalParent.mod_FillerHardware!;
   }
   get mod_CreateBacksplash(): boolean {
     return this.#internalParent.mod_CreateBacksplash!;
@@ -1881,8 +1843,14 @@ class OD_M_mr_Filler_NonNull implements cbp_mr_Filler, adc_mr_Filler, ccm_mr_Fil
   get mod_CreateCeilingFiller(): boolean {
     return this.#internalParent.mod_CreateCeilingFiller!;
   }
-  addOD_M_mc_Filler01(index?: number): dc_mc_Filler01 {
-    return this.#internalParent.addOD_M_mc_Filler01(index);
+  get mod_CeilingFillerHeight(): number {
+    return this.#internalParent.mod_CeilingFillerHeight!;
+  }
+  get mod_CeilingFillerConstruction(): string {
+    return this.#internalParent.mod_CeilingFillerConstruction!;
+  }
+  addOD_M_mc_FillerStraight01(index?: number): dc_mc_FillerStraight01 {
+    return this.#internalParent.addOD_M_mc_FillerStraight01(index);
   }
 }
 

@@ -9,7 +9,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping, ct2_tab_BracketMapping }
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction, ct2_tab_CarcaseBackwallConstruction } from '../custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings, ct2_tab_CarcaseBackwallSettings } from '../custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction, ct2_tab_CarcaseCornerunitConstruction } from '../custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction, ct2_tab_CarcaseHoodConstruction } from '../custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection, ct2_tab_CarcasePanelSelection } from '../custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations, ct2_tab_CarcasePartConnectionCalculations } from '../custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping, ct2_tab_CarcasePartConnectionMapping } from '../custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape, ct2_tab_CarcasePartsShape } from '../custom-tables/tab_CarcasePartsShape'
@@ -19,9 +19,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings, ct2_
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension, ct2_tab_CarcaseSlopedCeilingDimension } from '../custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction, ct2_tab_CarcaseStorageunitConstruction } from '../custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping, ct2_tab_ClothingOrganizerColorMapping } from '../custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition, ct2_tab_ClothingOrganizerDepthPosition } from '../custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping, ct2_tab_ClothingOrganizerExtraItemMapping } from '../custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions, ct2_tab_ClothingOrganizerInstallationDimensions } from '../custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping, ct2_tab_ClothingOrganizerMapping } from '../custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings, ct2_tab_ClothingOrganizerPositionZSettings } from '../custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary, ct2_tab_ComponentLibrary } from '../custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables, ct2_tab_ComponentVariables } from '../custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction, ct2_tab_CornerFillerFrontpanelConstruction } from '../custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -47,7 +48,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping, ct2_tab_EdgeMapping } from '..
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings, ct2_tab_EdgeNumberSettings } from '../custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings, ct2_tab_EdgeSettings } from '../custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList, ct2_tab_ErrorList } from '../custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction, ct2_tab_FillerConstruction } from '../custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings, ct2_tab_FillerHardwareSettings } from '../custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction, ct2_tab_FillerPartConstruction } from '../custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings, ct2_tab_FillerSettings } from '../custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping, ct2_tab_FlipliftColorMapping } from '../custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction, ct2_tab_FlipliftConstruction } from '../custom-tables/tab_FlipliftConstruction'
@@ -62,6 +65,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction, ct2_ta
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction, ct2_tab_FrontConstruction } from '../custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping, ct2_tab_FrontEdgeColorMapping } from '../custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction, ct2_tab_FrontPanelConstruction } from '../custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection, ct2_tab_FrontPanelSelection } from '../custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings, ct2_tab_GrainDirectionSettings } from '../custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary, ct2_tab_GraphicFileLibrary } from '../custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary, ct2_tab_GraphicLibrary } from '../custom-tables/tab_GraphicLibrary'
@@ -135,7 +139,7 @@ import { IModVar_mod_CarcaseId, IModVarNonNull_mod_CarcaseId, IModVar_mod_Carcas
 import { VariantValidation, IMatrix_mod_CarcaseId, IMatrix_mod_CarcaseDepth, IMatrix_mod_CarcaseHeight, IMatrix_mod_CarcaseWidth, IMatrix_mod_ParentName, IMatrix_mod_ShelffixedThk, IMatrix_mod_SidepanelleftThk, IMatrix_mod_SidepanelrightThk, IMatrix_mod_FrontPosStart, IMatrix_mod_TypeElement, IMatrix_mod_FrontId, IMatrix_mod_ModuleName, IMatrix_mod_OvenSupplier1, IMatrix_mod_OvenGap1, IMatrix_mod_OvenId1, IMatrix_mod_OvenSupplier3, IMatrix_mod_OvenSupplier2, IMatrix_mod_OvenGap2, IMatrix_mod_OvenId2, IMatrix_mod_OvenGap3, IMatrix_mod_OvenId3, IMatrix_mod_OvenShelffixedOverhangTop, IMatrix_mod_OvenGap4, IMatrix_mod_FrontGapHor, IMatrix_mod_ShelfbtmThk, IMatrix_mod_Information } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
-import { mf_Oven_createBuildPlan, mf_Oven_afterDataCompletion, mf_Oven_manufacturerDataCompletion, mf_Oven_calculateContainerModules } from '../../modules/mf_Oven';
+import { mf_Oven_createBuildPlan, mf_Oven_afterDataCompletion, mf_Oven_manufacturerDataCompletion, mf_Oven_calculateContainerModules, mf_Oven_prepareContext } from '../../modules/mf_Oven';
 
 export interface cbp_mf_Oven extends IModBaseProp
   , IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_CarcaseDepth, IModVarNonNull_mod_CarcaseHeight, IModVarNonNull_mod_CarcaseWidth, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_ShelffixedThk, IModVarNonNull_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelrightThk, IModVarNonNull_mod_Originpos, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_ShelffixedInfoList, IModVarNonNull_mod_OvenSupplier1, IModVarNonNull_mod_OvenGap1, IModVarNonNull_mod_OvenId1, IModVarNonNull_mod_OvenSupplier3, IModVarNonNull_mod_OvenSupplier2, IModVarNonNull_mod_OvenGap2, IModVarNonNull_mod_OvenId2, IModVarNonNull_mod_OvenGap3, IModVarNonNull_mod_OvenId3, IModVarNonNull_mod_OvenShelffixedOverhangTop, IModVarNonNull_mod_OvenGap4, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_CarcaseSpaceDimension, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_Information {
@@ -158,6 +162,13 @@ export interface dc_mf_Oven extends IModBaseProp
   addOD_M_mc_Oven01(index?: number): dc_mc_Oven01;
 }
 
+export interface pc_mf_Oven extends dc_mf_Oven {
+  _forcedInputAttributes?: string[];
+  getContextData(): IContextData | undefined;
+  getContextModule(id: string): OD_Base | undefined;
+  getRoomContours(): RoomContour[];
+}
+
 export interface adc_base_mf_Oven extends IModBaseProp
   , IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_CarcaseDepth, IModVarNonNull_mod_CarcaseHeight, IModVarNonNull_mod_CarcaseWidth, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_ShelffixedThk, IModVarNonNull_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelrightThk, IModVarNonNull_mod_Originpos, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_ShelffixedInfoList, IModVarNonNull_mod_OvenSupplier1, IModVarNonNull_mod_OvenGap1, IModVarNonNull_mod_OvenId1, IModVarNonNull_mod_OvenSupplier3, IModVarNonNull_mod_OvenSupplier2, IModVarNonNull_mod_OvenGap2, IModVarNonNull_mod_OvenId2, IModVarNonNull_mod_OvenGap3, IModVarNonNull_mod_OvenId3, IModVarNonNull_mod_OvenShelffixedOverhangTop, IModVarNonNull_mod_OvenGap4, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_CarcaseSpaceDimension, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_Information {
   get m(): OD_Base[];
@@ -172,7 +183,7 @@ export interface ccm_mf_Oven extends adc_base_mf_Oven {
 }
 
 
-export class OD_M_mf_Oven extends OD_Base implements dc_mf_Oven
+export class OD_M_mf_Oven extends OD_Base implements pc_mf_Oven, dc_mf_Oven
   , IModParents_mf_Oven
   , IModVar_mod_CarcaseId, IModVar_mod_CarcaseDepth, IModVar_mod_CarcaseHeight, IModVar_mod_CarcaseWidth, IModVar_mod_ParentName, IModVar_mod_ShelffixedThk, IModVar_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVar_mod_Originpos, IModVar_mod_FrontPosStart, IModVar_mod_TypeElement, IModVar_mod_FrontId, IModVar_mod_ModuleName, IModVar_mod_ShelffixedInfoList, IModVar_mod_OvenSupplier1, IModVar_mod_OvenGap1, IModVar_mod_OvenId1, IModVar_mod_OvenSupplier3, IModVar_mod_OvenSupplier2, IModVar_mod_OvenGap2, IModVar_mod_OvenId2, IModVar_mod_OvenGap3, IModVar_mod_OvenId3, IModVar_mod_OvenShelffixedOverhangTop, IModVar_mod_OvenGap4, IModVar_mod_FrontGapHor, IModVar_mod_CarcaseSpaceDimension, IModVar_mod_ShelfbtmThk, IModVar_mod_Information {
   constructor(parent: IModParents_md_FrontArticleBuilder_md_FrontPlaceholder_mr_StorageunitSingle, manufacturerMode?: boolean) {
@@ -996,6 +1007,15 @@ export class OD_M_mf_Oven extends OD_Base implements dc_mf_Oven
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
   }
+  override prepareContext(contextRoots: OD_Base[]): void {
+    super.prepareContext(contextRoots);
+    this.internallyPrepareContext();
+    this.m.forEach(subMod => subMod.prepareContext(contextRoots));
+  }
+  internallyPrepareContext(): void {
+    this.#prepareContextInternal();
+  }
+  #prepareContextInternal = mf_Oven_prepareContext;
   seal(): IModuleNonNull_mf_Oven {
     this.afterDataCompletion();
     const adc = new OD_M_mf_Oven_NonNull(this);

@@ -112,15 +112,17 @@ import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01, 
 import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01, cbp_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
 import { dc_mc_SegmentFront01, adc_mc_SegmentFront01, cbp_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
 import { dc_me_HoodInsert, adc_me_HoodInsert, cbp_me_HoodInsert } from '../modules/me_HoodInsert'
-import { dc_mc_HoodInsert01, adc_mc_HoodInsert01, cbp_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
 import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, cbp_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
 import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder, cbp_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
 import { dc_mr_CeilingFiller, adc_mr_CeilingFiller, cbp_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
 import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01, cbp_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
 import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder, cbp_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
 import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder, cbp_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
-import { dc_mr_Filler, adc_mr_Filler, cbp_mr_Filler } from '../modules/mr_Filler'
-import { dc_mc_Filler01, adc_mc_Filler01, cbp_mc_Filler01 } from '../modules/mc_Filler01'
+import { dc_mr_FillerStraight, adc_mr_FillerStraight, cbp_mr_FillerStraight } from '../modules/mr_FillerStraight'
+import { dc_mc_FillerStraight01, adc_mc_FillerStraight01, cbp_mc_FillerStraight01 } from '../modules/mc_FillerStraight01'
+import { dc_mc_FillerHardware01, adc_mc_FillerHardware01, cbp_mc_FillerHardware01 } from '../modules/mc_FillerHardware01'
+import { dc_mc_FillerSupportPanels01, adc_mc_FillerSupportPanels01, cbp_mc_FillerSupportPanels01 } from '../modules/mc_FillerSupportPanels01'
+import { dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, cbp_mc_HoodCarcaseParts01 } from '../modules/mc_HoodCarcaseParts01'
 
 export interface cti_tab_HardwareLibrary {
   readonly in_Supplier?: string;
@@ -172,7 +174,7 @@ export class ct2_tab_HardwareLibrary {
 
 export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
   {
-    _id: 2253,
+    _id: 5313,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N4002S-TS",
     Description: "Zargenset Legrabox N 400",
@@ -186,7 +188,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2254,
+    _id: 5314,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N4002S-OG",
     Description: "Zargenset Legrabox N 400",
@@ -200,7 +202,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2255,
+    _id: 5315,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N4002S-PS",
     Description: "Zargenset Legrabox N 400",
@@ -214,7 +216,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2256,
+    _id: 5316,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N4002S-SW",
     Description: "Zargenset Legrabox N 400",
@@ -228,7 +230,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2257,
+    _id: 5317,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N4502S-TS",
     Description: "Zargenset Legrabox N 450",
@@ -242,7 +244,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2258,
+    _id: 5318,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N4502S-OG",
     Description: "Zargenset Legrabox N 450",
@@ -256,7 +258,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2259,
+    _id: 5319,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N4502S-PS",
     Description: "Zargenset Legrabox N 450",
@@ -270,7 +272,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2260,
+    _id: 5320,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N4502S-SW",
     Description: "Zargenset Legrabox N 450",
@@ -284,7 +286,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2261,
+    _id: 5321,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N5002S-TS",
     Description: "Zargenset Legrabox N 500",
@@ -298,7 +300,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2262,
+    _id: 5322,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N5002S-OG",
     Description: "Zargenset Legrabox N 500",
@@ -312,7 +314,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2263,
+    _id: 5323,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N5002S-PS",
     Description: "Zargenset Legrabox N 500",
@@ -326,7 +328,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2264,
+    _id: 5324,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N5002S-SW",
     Description: "Zargenset Legrabox N 500",
@@ -340,7 +342,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2265,
+    _id: 5325,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N5502S-TS",
     Description: "Zargenset Legrabox N 550",
@@ -354,7 +356,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2266,
+    _id: 5326,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N5502S-OG",
     Description: "Zargenset Legrabox N 550",
@@ -368,7 +370,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2267,
+    _id: 5327,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N5502S-PS",
     Description: "Zargenset Legrabox N 550",
@@ -382,7 +384,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2268,
+    _id: 5328,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770N5502S-SW",
     Description: "Zargenset Legrabox N 550",
@@ -396,7 +398,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2269,
+    _id: 5329,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M3002S-TS",
     Description: "Zargenset Legrabox M 300",
@@ -410,7 +412,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2270,
+    _id: 5330,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M3002S-OG",
     Description: "Zargenset Legrabox M 300",
@@ -424,7 +426,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2271,
+    _id: 5331,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M3002S-PS",
     Description: "Zargenset Legrabox M 300",
@@ -438,7 +440,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2272,
+    _id: 5332,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M3002S-SW",
     Description: "Zargenset Legrabox M 300",
@@ -452,7 +454,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2273,
+    _id: 5333,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M4002S-TS",
     Description: "Zargenset Legrabox M 400",
@@ -466,7 +468,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2274,
+    _id: 5334,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M4002S-OG",
     Description: "Zargenset Legrabox M 400",
@@ -480,7 +482,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2275,
+    _id: 5335,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M4002S-PS",
     Description: "Zargenset Legrabox M 400",
@@ -494,7 +496,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2276,
+    _id: 5336,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M4002S-SW",
     Description: "Zargenset Legrabox M 400",
@@ -508,7 +510,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2277,
+    _id: 5337,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M4502S-TS",
     Description: "Zargenset Legrabox M 450",
@@ -522,7 +524,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2278,
+    _id: 5338,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M4502S-OG",
     Description: "Zargenset Legrabox M 450",
@@ -536,7 +538,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2279,
+    _id: 5339,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M4502S-PS",
     Description: "Zargenset Legrabox M 450",
@@ -550,7 +552,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2280,
+    _id: 5340,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M4502S-SW",
     Description: "Zargenset Legrabox M 450",
@@ -564,7 +566,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2281,
+    _id: 5341,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M5002S-TS",
     Description: "Zargenset Legrabox M 500",
@@ -578,7 +580,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2282,
+    _id: 5342,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M5002S-OG",
     Description: "Zargenset Legrabox M 500",
@@ -592,7 +594,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2283,
+    _id: 5343,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M5002S-PS",
     Description: "Zargenset Legrabox M 500",
@@ -606,7 +608,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2284,
+    _id: 5344,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M5002S-SW",
     Description: "Zargenset Legrabox M 500",
@@ -620,7 +622,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2285,
+    _id: 5345,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M5502S-TS",
     Description: "Zargenset Legrabox M 550",
@@ -634,7 +636,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2286,
+    _id: 5346,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M5502S-OG",
     Description: "Zargenset Legrabox M 550",
@@ -648,7 +650,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2287,
+    _id: 5347,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M5502S-PS",
     Description: "Zargenset Legrabox M 550",
@@ -662,7 +664,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2288,
+    _id: 5348,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770M5502S-SW",
     Description: "Zargenset Legrabox M 550",
@@ -676,7 +678,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2289,
+    _id: 5349,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C3002S-TS",
     Description: "Zargenset Legrabox C 300",
@@ -690,7 +692,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2290,
+    _id: 5350,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C3002S-OG",
     Description: "Zargenset Legrabox C 300",
@@ -704,7 +706,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2291,
+    _id: 5351,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C3002S-PS",
     Description: "Zargenset Legrabox C 300",
@@ -718,7 +720,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2292,
+    _id: 5352,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C3002S-SW",
     Description: "Zargenset Legrabox C 300",
@@ -732,7 +734,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2293,
+    _id: 5353,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C4002S-TS",
     Description: "Zargenset Legrabox C 400",
@@ -746,7 +748,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2294,
+    _id: 5354,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C4002S-OG",
     Description: "Zargenset Legrabox C 400",
@@ -760,7 +762,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2295,
+    _id: 5355,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C4002S-PS",
     Description: "Zargenset Legrabox C 400",
@@ -774,7 +776,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2296,
+    _id: 5356,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C4002S-SW",
     Description: "Zargenset Legrabox C 400",
@@ -788,7 +790,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2297,
+    _id: 5357,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770F4002S-TS",
     Description: "Zargenset Legrabox F 400",
@@ -802,7 +804,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2298,
+    _id: 5358,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770F4002S-OG",
     Description: "Zargenset Legrabox F 400",
@@ -816,7 +818,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2299,
+    _id: 5359,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770F4002S-PS",
     Description: "Zargenset Legrabox F 400",
@@ -830,7 +832,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2300,
+    _id: 5360,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770F4002S-SW",
     Description: "Zargenset Legrabox F 400",
@@ -844,7 +846,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2301,
+    _id: 5361,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C4502S-TS",
     Description: "Zargenset Legrabox F 450",
@@ -858,7 +860,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2302,
+    _id: 5362,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C4502S-OG",
     Description: "Zargenset Legrabox F 450",
@@ -872,7 +874,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2303,
+    _id: 5363,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C4502S-PS",
     Description: "Zargenset Legrabox F 450",
@@ -886,7 +888,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2304,
+    _id: 5364,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C4502S-SW",
     Description: "Zargenset Legrabox F 450",
@@ -900,7 +902,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2305,
+    _id: 5365,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C5002S-TS",
     Description: "Zargenset Legrabox F 500",
@@ -914,7 +916,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2306,
+    _id: 5366,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C5002S-OG",
     Description: "Zargenset Legrabox F 500",
@@ -928,7 +930,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2307,
+    _id: 5367,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C5002S-PS",
     Description: "Zargenset Legrabox F 500",
@@ -942,7 +944,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2308,
+    _id: 5368,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C5002S-SW",
     Description: "Zargenset Legrabox F 500",
@@ -956,7 +958,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2309,
+    _id: 5369,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C5502S-TS",
     Description: "Zargenset Legrabox F 550",
@@ -970,7 +972,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2310,
+    _id: 5370,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C5502S-OG",
     Description: "Zargenset Legrabox F 550",
@@ -984,7 +986,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2311,
+    _id: 5371,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C5502S-PS",
     Description: "Zargenset Legrabox F 550",
@@ -998,7 +1000,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2312,
+    _id: 5372,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "770C5502S-SW",
     Description: "Zargenset Legrabox F 550",
@@ -1012,7 +1014,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2313,
+    _id: 5373,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "750.3001S",
     Description: "Fuehrung 300 40kg",
@@ -1026,7 +1028,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2314,
+    _id: 5374,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "750.4001S",
     Description: "Fuehrung 400 40kg",
@@ -1040,7 +1042,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2315,
+    _id: 5375,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "750.4501S",
     Description: "Fuehrung 450 40kg",
@@ -1054,7 +1056,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2316,
+    _id: 5376,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "750.5001S",
     Description: "Fuehrung 500 40kg",
@@ -1068,7 +1070,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2317,
+    _id: 5377,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "750.5501S",
     Description: "Fuehrung 550 40kg",
@@ -1082,7 +1084,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2318,
+    _id: 5378,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "753.4501S",
     Description: "Fuehrung 450 70kg",
@@ -1096,7 +1098,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2319,
+    _id: 5379,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "753.5001S",
     Description: "Fuehrung 500 70kg",
@@ -1110,7 +1112,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2320,
+    _id: 5380,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "753.5501S",
     Description: "Fuehrung 550 70kg",
@@ -1124,7 +1126,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2321,
+    _id: 5381,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "ZF7N000S",
     Description: "Rueckwandhalter N",
@@ -1138,7 +1140,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2322,
+    _id: 5382,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "ZF7M000S",
     Description: "Rueckwandhalter M",
@@ -1152,7 +1154,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2323,
+    _id: 5383,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "ZF7C000S",
     Description: "Rueckwandhalter C",
@@ -1166,7 +1168,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2324,
+    _id: 5384,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "ZF7F000S",
     Description: "Rueckwandhalter F",
@@ -1180,7 +1182,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2325,
+    _id: 5385,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "ZF7N7002",
     Description: "Frontbefestigung N",
@@ -1194,7 +1196,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2326,
+    _id: 5386,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "ZF7M70E2",
     Description: "Frontbefestigung M",
@@ -1208,7 +1210,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2327,
+    _id: 5387,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "ZF7C70E2",
     Description: "Frontbefestigung C",
@@ -1222,7 +1224,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2328,
+    _id: 5388,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "ZF7F70E2",
     Description: "Frontbefestigung F",
@@ -1236,7 +1238,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2329,
+    _id: 5389,
     in_Supplier: "Blum",
     in_SupplierArticleNumber: "4711",
     Description: "",
@@ -1250,7 +1252,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2330,
+    _id: 5390,
     in_Supplier: "Camar",
     in_SupplierArticleNumber: "80702E1RV",
     Description: "Hanger system",
@@ -1264,7 +1266,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2331,
+    _id: 5391,
     in_Supplier: "Homag",
     in_SupplierArticleNumber: "DemoHandle50Upper",
     Description: "Upper Handlestrip 50",
@@ -1278,7 +1280,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2332,
+    _id: 5392,
     in_Supplier: "Homag",
     in_SupplierArticleNumber: "DemoHandle50Bottom",
     Description: "BottomHandlestrip 50",
@@ -1292,7 +1294,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2333,
+    _id: 5393,
     in_Supplier: "Homag",
     in_SupplierArticleNumber: "DemoHandle60Bottom",
     Description: "Bottom Handlestrip 60",
@@ -1306,7 +1308,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2334,
+    _id: 5394,
     in_Supplier: "Homag",
     in_SupplierArticleNumber: "DemoHandle60Upper",
     Description: "Right Handlestrip 60",
@@ -1320,7 +1322,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2335,
+    _id: 5395,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.380",
     Description: "Relining handle",
@@ -1334,7 +1336,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2336,
+    _id: 5396,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.381",
     Description: "Relining handle",
@@ -1348,7 +1350,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2337,
+    _id: 5397,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.382",
     Description: "Relining handle",
@@ -1362,7 +1364,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2338,
+    _id: 5398,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.383",
     Description: "Relining handle",
@@ -1376,7 +1378,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2339,
+    _id: 5399,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.384",
     Description: "Relining handle",
@@ -1390,7 +1392,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2340,
+    _id: 5400,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.385",
     Description: "Relining handle",
@@ -1404,7 +1406,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2341,
+    _id: 5401,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.386",
     Description: "Relining handle",
@@ -1418,7 +1420,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2342,
+    _id: 5402,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.387",
     Description: "Relining handle",
@@ -1432,7 +1434,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2343,
+    _id: 5403,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.388",
     Description: "Relining handle",
@@ -1446,7 +1448,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2344,
+    _id: 5404,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.389",
     Description: "Relining handle",
@@ -1460,7 +1462,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2345,
+    _id: 5405,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.390",
     Description: "Relining handle",
@@ -1474,7 +1476,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2346,
+    _id: 5406,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.391",
     Description: "Relining handle",
@@ -1488,7 +1490,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2347,
+    _id: 5407,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.250",
     Description: "Bracket handle",
@@ -1502,7 +1504,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2348,
+    _id: 5408,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.251",
     Description: "Bracket handle",
@@ -1516,7 +1518,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2349,
+    _id: 5409,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.252",
     Description: "Bracket handle",
@@ -1530,7 +1532,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2350,
+    _id: 5410,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.253",
     Description: "Bracket handle",
@@ -1544,7 +1546,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2351,
+    _id: 5411,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.254",
     Description: "Bracket handle",
@@ -1558,7 +1560,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2352,
+    _id: 5412,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.255",
     Description: "Bracket handle",
@@ -1572,7 +1574,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2353,
+    _id: 5413,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.256",
     Description: "Bracket handle",
@@ -1586,7 +1588,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2354,
+    _id: 5414,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.257",
     Description: "Bracket handle",
@@ -1600,7 +1602,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2355,
+    _id: 5415,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.258",
     Description: "Bracket handle",
@@ -1614,7 +1616,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2356,
+    _id: 5416,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.259",
     Description: "Bracket handle",
@@ -1628,7 +1630,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2357,
+    _id: 5417,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.260",
     Description: "Bracket handle",
@@ -1642,7 +1644,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2358,
+    _id: 5418,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.261",
     Description: "Bracket handle",
@@ -1656,7 +1658,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2359,
+    _id: 5419,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.262",
     Description: "Bracket handle",
@@ -1670,7 +1672,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2360,
+    _id: 5420,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.001",
     Description: "Stripe1",
@@ -1684,7 +1686,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2361,
+    _id: 5421,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.002",
     Description: "Stripe1",
@@ -1698,7 +1700,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2362,
+    _id: 5422,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.003",
     Description: "Stripe1",
@@ -1712,7 +1714,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2363,
+    _id: 5423,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.004",
     Description: "Stripe1",
@@ -1726,7 +1728,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2364,
+    _id: 5424,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.005",
     Description: "Stripe1",
@@ -1740,7 +1742,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2365,
+    _id: 5425,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.006",
     Description: "Stripe1",
@@ -1754,7 +1756,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2366,
+    _id: 5426,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.007",
     Description: "Stripe1",
@@ -1768,7 +1770,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2367,
+    _id: 5427,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.008",
     Description: "Stripe1",
@@ -1782,7 +1784,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2368,
+    _id: 5428,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.009",
     Description: "Stripe1",
@@ -1796,7 +1798,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2369,
+    _id: 5429,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.012",
     Description: "Stripe1",
@@ -1810,7 +1812,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2370,
+    _id: 5430,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.38.925_B",
     Description: "Stripe 2",
@@ -1824,7 +1826,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2371,
+    _id: 5431,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.38.925",
     Description: "Stripe with 30° angle",
@@ -1838,11 +1840,11 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2372,
+    _id: 5432,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "155.01.632",
     Description: "Stripe with c -profil",
-    Description2: "Stainless steel coloured, anodised ",
+    Description2: "Stainless steel coloured, anodised",
     Length: 2500,
     Width: 35,
     Thickness: 20.5,
@@ -1852,11 +1854,11 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2373,
+    _id: 5433,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.001_Ang",
     Description: "Stripe amgular",
-    Description2: "Stainless steel coloured, anodised ",
+    Description2: "Stainless steel coloured, anodised",
     Length: 295,
     Width: 3,
     Thickness: 37,
@@ -1866,11 +1868,11 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2374,
+    _id: 5434,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.002_Ang",
     Description: "Stripe amgular",
-    Description2: "Stainless steel coloured, anodised ",
+    Description2: "Stainless steel coloured, anodised",
     Length: 395,
     Width: 3,
     Thickness: 37,
@@ -1880,11 +1882,11 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2375,
+    _id: 5435,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.003_Ang",
     Description: "Stripe amgular",
-    Description2: "Stainless steel coloured, anodised ",
+    Description2: "Stainless steel coloured, anodised",
     Length: 445,
     Width: 3,
     Thickness: 37,
@@ -1894,11 +1896,11 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2376,
+    _id: 5436,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.004_Ang",
     Description: "Stripe amgular",
-    Description2: "Stainless steel coloured, anodised ",
+    Description2: "Stainless steel coloured, anodised",
     Length: 495,
     Width: 3,
     Thickness: 37,
@@ -1908,11 +1910,11 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2377,
+    _id: 5437,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.005_Ang",
     Description: "Stripe amgular",
-    Description2: "Stainless steel coloured, anodised ",
+    Description2: "Stainless steel coloured, anodised",
     Length: 595,
     Width: 3,
     Thickness: 37,
@@ -1922,11 +1924,11 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2378,
+    _id: 5438,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.006_Ang",
     Description: "Stripe amgular",
-    Description2: "Stainless steel coloured, anodised ",
+    Description2: "Stainless steel coloured, anodised",
     Length: 795,
     Width: 3,
     Thickness: 37,
@@ -1936,11 +1938,11 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2379,
+    _id: 5439,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.007_Ang",
     Description: "Stripe amgular",
-    Description2: "Stainless steel coloured, anodised ",
+    Description2: "Stainless steel coloured, anodised",
     Length: 895,
     Width: 3,
     Thickness: 37,
@@ -1950,11 +1952,11 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2380,
+    _id: 5440,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.008_Ang",
     Description: "Stripe amgular",
-    Description2: "Stainless steel coloured, anodised ",
+    Description2: "Stainless steel coloured, anodised",
     Length: 995,
     Width: 3,
     Thickness: 37,
@@ -1964,11 +1966,11 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2381,
+    _id: 5441,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.009_Ang",
     Description: "Stripe amgular",
-    Description2: "Stainless steel coloured, anodised ",
+    Description2: "Stainless steel coloured, anodised",
     Length: 1195,
     Width: 3,
     Thickness: 37,
@@ -1978,11 +1980,11 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2382,
+    _id: 5442,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "126.26.012_Ang",
     Description: "Stripe amgular",
-    Description2: "Stainless steel coloured, anodised ",
+    Description2: "Stainless steel coloured, anodised",
     Length: 2500,
     Width: 3,
     Thickness: 37,
@@ -1992,7 +1994,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2383,
+    _id: 5443,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "637.81.302",
     Description: "PlinthLegMountingPlate",
@@ -2006,7 +2008,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2384,
+    _id: 5444,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "637.81.311",
     Description: "PlinthLegLengthAdapter",
@@ -2020,7 +2022,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2385,
+    _id: 5445,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "637.81.321",
     Description: "PlinthLegADjustableLeg",
@@ -2034,7 +2036,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2386,
+    _id: 5446,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "637.76.333",
     Description: "Bef.Platte Axilo 78 schw.viereck.schrb.",
@@ -2048,7 +2050,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2387,
+    _id: 5447,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "637.76.352",
     Description: "Rohr Axilo 78 Kst.schw.m.Verstellt. 80mm",
@@ -2062,7 +2064,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2388,
+    _id: 5448,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "637.76.424",
     Description: "Schallentkopplung Axilo 78 hellgrau",
@@ -2076,7 +2078,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2389,
+    _id: 5449,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "637.38.340",
     Description: "Dreieckgleit.Kst.schw.95x95x25 EP",
@@ -2090,7 +2092,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2390,
+    _id: 5450,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "637.76.422",
     Description: "Distanzring Axilo 78 schwarz",
@@ -2104,7 +2106,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2391,
+    _id: 5451,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "637.76.423",
     Description: "Kappe D 38 Axilo 78 hellgrau",
@@ -2118,7 +2120,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2392,
+    _id: 5452,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "637.76.351",
     Description: "Rohr Axilo 78 Kst.schw.m.Verstellt. 60mm",
@@ -2132,7 +2134,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2393,
+    _id: 5453,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "637.76.353",
     Description: "Rohr Axilo 78 Kst.schw.m.Verstellt.100mm",
@@ -2146,7 +2148,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2394,
+    _id: 5454,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "637.76.354",
     Description: "Rohr Axilo 78 Kst.schw.m.Verstellt.125mm",
@@ -2160,7 +2162,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2395,
+    _id: 5455,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "634.74.400",
     Description: "Furniture leg, without height adjustment",
@@ -2174,7 +2176,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2396,
+    _id: 5456,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "634.74.401",
     Description: "Furniture leg, without height adjustment",
@@ -2188,7 +2190,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2397,
+    _id: 5457,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "634.74.402",
     Description: "Furniture leg, without height adjustment",
@@ -2202,7 +2204,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2398,
+    _id: 5458,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "634.74.403",
     Description: "Furniture leg, without height adjustment",
@@ -2216,7 +2218,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2399,
+    _id: 5459,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "634.74.404",
     Description: "Furniture leg, without height adjustment",
@@ -2230,7 +2232,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2400,
+    _id: 5460,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "634.48.055",
     Description: "Möbelfuß, ohne Höheneinstellung, mit Platte",
@@ -2244,10 +2246,10 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2401,
+    _id: 5461,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "281.41.907",
-    Description: "Bodenträger zum Einstecken für Holz- und Glasböden ",
+    Description: "Bodenträger zum Einstecken für Holz- und Glasböden",
     Description2: "Stahl mit Kunststoffkappe",
     Length: 8,
     Width: 7,
@@ -2258,10 +2260,10 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Shelf support"
   }
   , {
-    _id: 2402,
+    _id: 5462,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "282.43.905",
-    Description: "Bodenträger zum Einstecken für Holzböden ",
+    Description: "Bodenträger zum Einstecken für Holzböden",
     Description2: "for drill diameter 5 mm",
     Length: 8,
     Width: 7,
@@ -2272,10 +2274,10 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Shelf support"
   }
   , {
-    _id: 2403,
+    _id: 5463,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "282.24.720",
-    Description: "Bodenträger zum Einstecken für Holzböden ",
+    Description: "Bodenträger zum Einstecken für Holzböden",
     Description2: "for drill diameter 5 mm with plug-in spigot",
     Length: 14,
     Width: 9,
@@ -2286,10 +2288,10 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Shelf support"
   }
   , {
-    _id: 2404,
+    _id: 5464,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "282.24.710",
-    Description: "Bodenträger zum Einstecken für Holzböden ",
+    Description: "Bodenträger zum Einstecken für Holzböden",
     Description2: "for drill diameter 5 mm",
     Length: 14,
     Width: 9,
@@ -2300,7 +2302,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Shelf support"
   }
   , {
-    _id: 2405,
+    _id: 5465,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "262.27.920",
     Description: "Bolz.Minifix S100 verz.B24/5/8",
@@ -2314,7 +2316,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MiniFix"
   }
   , {
-    _id: 2406,
+    _id: 5466,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "262.26.533",
     Description: "Geh.Minifix 15/16 Zi.nick.",
@@ -2328,7 +2330,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MiniFix"
   }
   , {
-    _id: 2407,
+    _id: 5467,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "262.24.751",
     Description: "Abdeckkappe Minifix 15 weiss",
@@ -2342,7 +2344,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MiniFix"
   }
   , {
-    _id: 2408,
+    _id: 5468,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "262.24.359",
     Description: "Abdeckkappe Minifix 15 schwarz",
@@ -2356,7 +2358,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MiniFix"
   }
   , {
-    _id: 2409,
+    _id: 5469,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "262.24.555",
     Description: "Abdeckkappe Minifix 15 hgrau",
@@ -2370,7 +2372,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MiniFix"
   }
   , {
-    _id: 2410,
+    _id: 5470,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "262.24.550",
     Description: "Abdeckkappe Minifix 15 dgrau",
@@ -2384,7 +2386,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MiniFix"
   }
   , {
-    _id: 2411,
+    _id: 5471,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "267.82.227",
     Description: "Holzduebel Buche        8x27mm",
@@ -2398,7 +2400,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Dowel"
   }
   , {
-    _id: 2412,
+    _id: 5472,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "267.82.240",
     Description: "Holzduebel Buche        8x40mm",
@@ -2412,7 +2414,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Dowel"
   }
   , {
-    _id: 2413,
+    _id: 5473,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.69.320",
     Description: "Griff Zi.vern.schw.geb. 74x32mm",
@@ -2426,7 +2428,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2414,
+    _id: 5474,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.69.100",
     Description: "Griff Zi.vern.geb. 74x32mm",
@@ -2440,7 +2442,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2415,
+    _id: 5475,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.69.310",
     Description: "Griff verz.antik 74x32mm",
@@ -2454,7 +2456,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2416,
+    _id: 5476,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.69.321",
     Description: "Griff Zi.vern.schw.geb. 170x32mm",
@@ -2468,7 +2470,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2417,
+    _id: 5477,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.69.101",
     Description: "Griff Zi.vern.geb. 170x32mm",
@@ -2482,7 +2484,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2418,
+    _id: 5478,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.69.311",
     Description: "Griff verz.antik 170x32mm",
@@ -2496,7 +2498,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2419,
+    _id: 5479,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.69.322",
     Description: "Griff Zi.vern.schw.geb. 329x32mm",
@@ -2510,7 +2512,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2420,
+    _id: 5480,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.69.102",
     Description: "Griff Zi.vern.geb. 329x32mm",
@@ -2524,7 +2526,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2421,
+    _id: 5481,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.69.312",
     Description: "Griff verz.antik 329x32mm",
@@ -2538,7 +2540,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2422,
+    _id: 5482,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "155.01.486",
     Description: "Knopf Edelst.matt      20x30mm",
@@ -2552,7 +2554,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2423,
+    _id: 5483,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.017",
     Description: "Griff Edelst.matt  12/136x35mm",
@@ -2566,7 +2568,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2424,
+    _id: 5484,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.026",
     Description: "Griff Edelst.matt  12/168x35mm",
@@ -2580,7 +2582,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2425,
+    _id: 5485,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.035",
     Description: "Griff Edelst.matt  12/200x35mm",
@@ -2594,7 +2596,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2426,
+    _id: 5486,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.044",
     Description: "Griff Edelst.matt  12/232x35mm",
@@ -2608,7 +2610,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2427,
+    _id: 5487,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.045",
     Description: "Griff Edelst.matt  12/250x35mm",
@@ -2622,7 +2624,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2428,
+    _id: 5488,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.050",
     Description: "Griff Edelst.matt  12/300x35mm",
@@ -2636,7 +2638,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2429,
+    _id: 5489,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.053",
     Description: "Griff Edelst.matt  12/328x35mm",
@@ -2650,7 +2652,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2430,
+    _id: 5490,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.055",
     Description: "Griff Edelst.matt  12/350x35mm",
@@ -2664,7 +2666,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2431,
+    _id: 5491,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.062",
     Description: "Griff Edelst.matt  12/392x35mm",
@@ -2678,7 +2680,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2432,
+    _id: 5492,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.064",
     Description: "Griff Edelst.matt  12/400x35mm",
@@ -2692,7 +2694,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2433,
+    _id: 5493,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.065",
     Description: "Griff Edelst.matt  12/450x35mm",
@@ -2706,7 +2708,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2434,
+    _id: 5494,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.071",
     Description: "Griff Edelst.matt  12/488x35mm",
@@ -2720,7 +2722,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2435,
+    _id: 5495,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.075",
     Description: "Griff Edelst.matt  12/500x35mm",
@@ -2734,7 +2736,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2436,
+    _id: 5496,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.080",
     Description: "Griff Edelst.matt  12/600x35mm",
@@ -2748,7 +2750,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2437,
+    _id: 5497,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.085",
     Description: "Griff Edelst.matt  12/700x35mm",
@@ -2762,7 +2764,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2438,
+    _id: 5498,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.090",
     Description: "Griff Edelst.matt  12/800x35mm",
@@ -2776,7 +2778,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2439,
+    _id: 5499,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.095",
     Description: "Griff Edelst.matt  12/900x35mm",
@@ -2790,7 +2792,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2440,
+    _id: 5500,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "282.24.728",
     Description: "Bodentraeger Zi.vern. 5/5/6mm",
@@ -2804,7 +2806,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Shelf support"
   }
   , {
-    _id: 2441,
+    _id: 5501,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "282.24.717",
     Description: "Bodentraeger Zi.vern. 5/1mm",
@@ -2818,7 +2820,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Shelf support"
   }
   , {
-    _id: 2442,
+    _id: 5502,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "282.25.717",
     Description: "Bodentraeger Zi.vern. 3/1,5mm",
@@ -2832,7 +2834,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Shelf support"
   }
   , {
-    _id: 2443,
+    _id: 5503,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.17.602",
     Description: "Concealed hinge, Häfele Metalla 510 A/SM 110°, half overlay mounting/twin mounting",
@@ -2846,7 +2848,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2444,
+    _id: 5504,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "017.91.043",
     Description: "Chipboard screw, Hospa Jet, countersunk head, TS T-star drive, fully threaded",
@@ -2860,7 +2862,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Screws"
   }
   , {
-    _id: 2445,
+    _id: 5505,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.17.603",
     Description: "Concealed hinge, Häfele Metalla 510 A/SM 110°, inset mounting",
@@ -2874,7 +2876,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2446,
+    _id: 5506,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.17.600",
     Description: "Concealed hinge, Häfele Metalla 510 A/SM 110°, full overlay mounting",
@@ -2888,7 +2890,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2447,
+    _id: 5507,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.15.403",
     Description: "Concealed hinge, Häfele Metalla 510 A/SM 110°, half overlay/twin mounting",
@@ -2902,7 +2904,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2448,
+    _id: 5508,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.15.405",
     Description: "Concealed hinge, Häfele Metalla 510 A/SM 110°, inset mounting",
@@ -2916,7 +2918,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2449,
+    _id: 5509,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.15.401",
     Description: "Concealed hinge, Häfele Metalla 510 A/SM 110°, full overlay mounting",
@@ -2930,7 +2932,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2450,
+    _id: 5510,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.29.221",
     Description: "Concealed hinge, Häfele Metalla 510 A/SM 155°, half overlay mounting/twin mounting",
@@ -2944,7 +2946,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2451,
+    _id: 5511,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.29.217",
     Description: "Concealed hinge, Häfele Metalla 510 A/SM 155°, full overlay mounting",
@@ -2958,7 +2960,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2452,
+    _id: 5512,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.07.702",
     Description: "Concealed hinge, Häfele Metalla 510 A/SM 165°, half overlay mounting/twin mounting",
@@ -2972,7 +2974,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2453,
+    _id: 5513,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.07.703",
     Description: "Concealed hinge, Häfele Metalla 510 A/SM 165°, inset mounting",
@@ -2986,7 +2988,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2454,
+    _id: 5514,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.07.700",
     Description: "Concealed hinge, Häfele Metalla 510 A/SM 165°, full overlay mounting",
@@ -3000,7 +3002,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2455,
+    _id: 5515,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.80.528",
     Description: "Cruciform mounting plate, Häfele Metalla 510 A, steel, with chipboard screws, edge distance 37 mm",
@@ -3014,7 +3016,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MountingPlate"
   }
   , {
-    _id: 2456,
+    _id: 5516,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.80.555",
     Description: "Cruciform mounting plate, Häfele Metalla 510 A, steel, with chipboard screws, edge distance 37 mm",
@@ -3028,7 +3030,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MountingPlate"
   }
   , {
-    _id: 2457,
+    _id: 5517,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.80.582",
     Description: "Cruciform mounting plate, Häfele Metalla 510 A, steel, with chipboard screws, edge distance 37 mm",
@@ -3042,7 +3044,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MountingPlate"
   }
   , {
-    _id: 2458,
+    _id: 5518,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.71.500",
     Description: "Cruciform mounting plate, Häfele Metalla 510 SM, zinc alloy, with chipboard screws",
@@ -3056,7 +3058,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MountingPlate"
   }
   , {
-    _id: 2459,
+    _id: 5519,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.71.503",
     Description: "Cruciform mounting plate, Häfele Metalla 510 SM, zinc alloy, with chipboard screws",
@@ -3070,7 +3072,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MountingPlate"
   }
   , {
-    _id: 2460,
+    _id: 5520,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.71.506",
     Description: "Cruciform mounting plate, Häfele Metalla 510 SM, zinc alloy, with chipboard screws",
@@ -3084,7 +3086,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MountingPlate"
   }
   , {
-    _id: 2461,
+    _id: 5521,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.67.000",
     Description: "Mounting plate, Häfele Metalla 510 SM, zinc alloy, height adjustable via eccentric",
@@ -3098,7 +3100,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MountingPlate"
   }
   , {
-    _id: 2462,
+    _id: 5522,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.67.003",
     Description: "Mounting plate, Häfele Metalla 510 SM, zinc alloy, height adjustable via eccentric",
@@ -3112,7 +3114,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MountingPlate"
   }
   , {
-    _id: 2463,
+    _id: 5523,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.67.006",
     Description: "Mounting plate, Häfele Metalla 510 SM, zinc alloy, height adjustable via eccentric",
@@ -3126,7 +3128,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MountingPlate"
   }
   , {
-    _id: 2464,
+    _id: 5524,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "329.11.705",
     Description: "Concealed hinge, Häfele Metalla 510 A/SM 110°, for blind corner applications",
@@ -3140,7 +3142,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2465,
+    _id: 5525,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.40.701",
     Description: "Cover cap, For cabinet hanger for base unit",
@@ -3154,7 +3156,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "CoverCap"
   }
   , {
-    _id: 2466,
+    _id: 5526,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.40.702",
     Description: "Cover cap, For cabinet hanger for base unit",
@@ -3168,7 +3170,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "CoverCap"
   }
   , {
-    _id: 2467,
+    _id: 5527,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.40.770",
     Description: "Cover cap, For cabinet hanger, for wall unit",
@@ -3182,7 +3184,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "CoverCap"
   }
   , {
-    _id: 2468,
+    _id: 5528,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.40.771",
     Description: "Cover cap, For cabinet hanger, for wall unit",
@@ -3196,7 +3198,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "CoverCap"
   }
   , {
-    _id: 2469,
+    _id: 5529,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.02.702",
     Description: "Cabinet hanger, Wall unit, for screw fixing",
@@ -3210,7 +3212,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hanger"
   }
   , {
-    _id: 2470,
+    _id: 5530,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.02.703",
     Description: "Cabinet hanger, Wall unit, for screw fixing",
@@ -3224,7 +3226,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hanger"
   }
   , {
-    _id: 2471,
+    _id: 5531,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.03.937",
     Description: "Cabinet hanger for wall unit, For screw fixing and press fitting",
@@ -3238,7 +3240,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hanger"
   }
   , {
-    _id: 2472,
+    _id: 5532,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.03.938",
     Description: "Cabinet hanger for wall unit, For screw fixing and press fitting",
@@ -3252,7 +3254,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hanger"
   }
   , {
-    _id: 2473,
+    _id: 5533,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.40.901",
     Description: "Cabinet hanger for base unit, For press fitting",
@@ -3266,7 +3268,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hanger"
   }
   , {
-    _id: 2474,
+    _id: 5534,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.40.902",
     Description: "Cabinet hanger for base unit, For press fitting",
@@ -3280,7 +3282,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hanger"
   }
   , {
-    _id: 2475,
+    _id: 5535,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.40.980",
     Description: "Cabinet hanger, Wall unit, for press fitting",
@@ -3294,7 +3296,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hanger"
   }
   , {
-    _id: 2476,
+    _id: 5536,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.40.981",
     Description: "Cabinet hanger, Wall unit, for press fitting",
@@ -3308,7 +3310,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hanger"
   }
   , {
-    _id: 2477,
+    _id: 5537,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.09.910",
     Description: "Wall rail, Steel, length 1,250 mm",
@@ -3322,7 +3324,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "WallPlate"
   }
   , {
-    _id: 2478,
+    _id: 5538,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "051.48.001",
     Description: "Wall plug, fischer Duopower, plastic",
@@ -3336,7 +3338,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "WallPlug"
   }
   , {
-    _id: 2479,
+    _id: 5539,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "017.91.143",
     Description: "Chipboard screw, Hospa Jet, countersunk head, TS T-star drive, fully threaded",
@@ -3350,7 +3352,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Screws"
   }
   , {
-    _id: 2480,
+    _id: 5540,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.40.989",
     Description: "Wall plate, For cabinet hanger with hook-off protection, for wall unit",
@@ -3364,7 +3366,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "WallPlate"
   }
   , {
-    _id: 2481,
+    _id: 5541,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.40.991",
     Description: "Wall plate, With hook-off protection, for cabinet hanger for base unit",
@@ -3378,7 +3380,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "WallPlate"
   }
   , {
-    _id: 2482,
+    _id: 5542,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.703",
     Description: "Zargenset Legrabox pure N 400 mm",
@@ -3392,7 +3394,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2483,
+    _id: 5543,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.704",
     Description: "Zargenset Legrabox pure N 450 mm",
@@ -3406,7 +3408,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2484,
+    _id: 5544,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.705",
     Description: "Zargenset Legrabox pure N 500 mm",
@@ -3420,7 +3422,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2485,
+    _id: 5545,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.706",
     Description: "Zargenset Legrabox pure N 550 mm",
@@ -3434,7 +3436,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2486,
+    _id: 5546,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.803",
     Description: "Zargenset Legrabox pure N 400 mm",
@@ -3448,7 +3450,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2487,
+    _id: 5547,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.804",
     Description: "Zargenset Legrabox pure N 450 mm",
@@ -3462,7 +3464,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2488,
+    _id: 5548,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.805",
     Description: "Zargenset Legrabox pure N 500 mm",
@@ -3476,7 +3478,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2489,
+    _id: 5549,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.806",
     Description: "Zargenset Legrabox pure N 550 mm",
@@ -3490,7 +3492,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2490,
+    _id: 5550,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.503",
     Description: "Zargenset Legrabox pure N 400 mm",
@@ -3504,7 +3506,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2491,
+    _id: 5551,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.504",
     Description: "Zargenset Legrabox pure N 450 mm",
@@ -3518,7 +3520,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2492,
+    _id: 5552,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.505",
     Description: "Zargenset Legrabox pure N 500 mm",
@@ -3532,7 +3534,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2493,
+    _id: 5553,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.506",
     Description: "Zargenset Legrabox pure N 550 mm",
@@ -3546,7 +3548,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2494,
+    _id: 5554,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.004",
     Description: "Zargenset Legrabox pure N 450 mm",
@@ -3560,7 +3562,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2495,
+    _id: 5555,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.005",
     Description: "Zargenset Legrabox pure N 500 mm",
@@ -3574,7 +3576,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2496,
+    _id: 5556,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.713",
     Description: "Zargenset Legrabox pure N 400 mm",
@@ -3588,7 +3590,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2497,
+    _id: 5557,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.714",
     Description: "Zargenset Legrabox pure N 450 mm",
@@ -3602,7 +3604,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2498,
+    _id: 5558,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.715",
     Description: "Zargenset Legrabox pure N 500 mm",
@@ -3616,7 +3618,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2499,
+    _id: 5559,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.716",
     Description: "Zargenset Legrabox pure N 550 mm",
@@ -3630,7 +3632,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2500,
+    _id: 5560,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.813",
     Description: "Zargenset Legrabox pure N 400 mm",
@@ -3644,7 +3646,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2501,
+    _id: 5561,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.814",
     Description: "Zargenset Legrabox pure N 450 mm",
@@ -3658,7 +3660,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2502,
+    _id: 5562,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.815",
     Description: "Zargenset Legrabox pure N 500 mm",
@@ -3672,7 +3674,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2503,
+    _id: 5563,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.816",
     Description: "Zargenset Legrabox pure N 550 mm",
@@ -3686,7 +3688,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2504,
+    _id: 5564,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.513",
     Description: "Zargenset Legrabox pure N 400 mm",
@@ -3700,7 +3702,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2505,
+    _id: 5565,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.514",
     Description: "Zargenset Legrabox pure N 450 mm",
@@ -3714,7 +3716,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2506,
+    _id: 5566,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.515",
     Description: "Zargenset Legrabox pure N 500 mm",
@@ -3728,7 +3730,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2507,
+    _id: 5567,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.516",
     Description: "Zargenset Legrabox pure N 550 mm",
@@ -3742,7 +3744,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2508,
+    _id: 5568,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.014",
     Description: "Zargenset Legrabox pure N 450 mm",
@@ -3756,7 +3758,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2509,
+    _id: 5569,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.015",
     Description: "Zargenset Legrabox pure N 500 mm",
@@ -3770,7 +3772,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2510,
+    _id: 5570,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.720",
     Description: "Zargenset Legrabox pure M 270 mm",
@@ -3784,7 +3786,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2511,
+    _id: 5571,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.721",
     Description: "Zargenset Legrabox pure M 300 mm",
@@ -3798,7 +3800,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2512,
+    _id: 5572,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.722",
     Description: "Zargenset Legrabox pure M 350 mm",
@@ -3812,7 +3814,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2513,
+    _id: 5573,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.723",
     Description: "Zargenset Legrabox pure M 400 mm",
@@ -3826,7 +3828,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2514,
+    _id: 5574,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.724",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -3840,7 +3842,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2515,
+    _id: 5575,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.725",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -3854,7 +3856,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2516,
+    _id: 5576,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.726",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -3868,7 +3870,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2517,
+    _id: 5577,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.727",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -3882,7 +3884,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2518,
+    _id: 5578,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.734",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -3896,7 +3898,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2519,
+    _id: 5579,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.735",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -3910,7 +3912,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2520,
+    _id: 5580,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.736",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -3924,7 +3926,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2521,
+    _id: 5581,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.737",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -3938,7 +3940,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2522,
+    _id: 5582,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.738",
     Description: "Zargenset Legrabox pure M 650 mm",
@@ -3952,7 +3954,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2523,
+    _id: 5583,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.820",
     Description: "Zargenset Legrabox pure M 270 mm",
@@ -3966,7 +3968,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2524,
+    _id: 5584,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.821",
     Description: "Zargenset Legrabox pure M 300 mm",
@@ -3980,7 +3982,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2525,
+    _id: 5585,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.822",
     Description: "Zargenset Legrabox pure M 350 mm",
@@ -3994,7 +3996,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2526,
+    _id: 5586,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.823",
     Description: "Zargenset Legrabox pure M 400 mm",
@@ -4008,7 +4010,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2527,
+    _id: 5587,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.824",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -4022,7 +4024,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2528,
+    _id: 5588,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.825",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -4036,7 +4038,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2529,
+    _id: 5589,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.826",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -4050,7 +4052,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2530,
+    _id: 5590,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.827",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -4064,7 +4066,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2531,
+    _id: 5591,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.834",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -4078,7 +4080,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2532,
+    _id: 5592,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.835",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -4092,7 +4094,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2533,
+    _id: 5593,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.836",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -4106,7 +4108,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2534,
+    _id: 5594,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.837",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -4120,7 +4122,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2535,
+    _id: 5595,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.838",
     Description: "Zargenset Legrabox pure M 650 mm",
@@ -4134,7 +4136,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2536,
+    _id: 5596,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.520",
     Description: "Zargenset Legrabox pure M 270 mm",
@@ -4148,7 +4150,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2537,
+    _id: 5597,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.521",
     Description: "Zargenset Legrabox pure M 300 mm",
@@ -4162,7 +4164,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2538,
+    _id: 5598,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.522",
     Description: "Zargenset Legrabox pure M 350 mm",
@@ -4176,7 +4178,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2539,
+    _id: 5599,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.523",
     Description: "Zargenset Legrabox pure M 400 mm",
@@ -4190,7 +4192,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2540,
+    _id: 5600,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.524",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -4204,7 +4206,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2541,
+    _id: 5601,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.525",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -4218,7 +4220,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2542,
+    _id: 5602,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.526",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -4232,7 +4234,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2543,
+    _id: 5603,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.527",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -4246,7 +4248,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2544,
+    _id: 5604,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.534",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -4260,7 +4262,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2545,
+    _id: 5605,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.535",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -4274,7 +4276,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2546,
+    _id: 5606,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.536",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -4288,7 +4290,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2547,
+    _id: 5607,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.537",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -4302,7 +4304,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2548,
+    _id: 5608,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.538",
     Description: "Zargenset Legrabox pure M 650 mm",
@@ -4316,7 +4318,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2549,
+    _id: 5609,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.020",
     Description: "Zargenset Legrabox pure M 270 mm",
@@ -4330,7 +4332,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2550,
+    _id: 5610,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.021",
     Description: "Zargenset Legrabox pure M 300 mm",
@@ -4344,7 +4346,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2551,
+    _id: 5611,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.022",
     Description: "Zargenset Legrabox pure M 350 mm",
@@ -4358,7 +4360,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2552,
+    _id: 5612,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.023",
     Description: "Zargenset Legrabox pure M 400 mm",
@@ -4372,7 +4374,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2553,
+    _id: 5613,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.024",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -4386,7 +4388,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2554,
+    _id: 5614,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.025",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -4400,7 +4402,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2555,
+    _id: 5615,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.026",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -4414,7 +4416,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2556,
+    _id: 5616,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.027",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -4428,7 +4430,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2557,
+    _id: 5617,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.034",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -4442,7 +4444,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2558,
+    _id: 5618,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.035",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -4456,7 +4458,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2559,
+    _id: 5619,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.036",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -4470,7 +4472,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2560,
+    _id: 5620,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.037",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -4484,7 +4486,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2561,
+    _id: 5621,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.038",
     Description: "Zargenset Legrabox pure M 650 mm",
@@ -4498,7 +4500,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2562,
+    _id: 5622,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.720",
     Description: "Zargenset Legrabox pure M 270 mm",
@@ -4512,7 +4514,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2563,
+    _id: 5623,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.721",
     Description: "Zargenset Legrabox pure M 300 mm",
@@ -4526,7 +4528,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2564,
+    _id: 5624,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.722",
     Description: "Zargenset Legrabox pure M 350 mm",
@@ -4540,7 +4542,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2565,
+    _id: 5625,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.723",
     Description: "Zargenset Legrabox pure M 400 mm",
@@ -4554,7 +4556,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2566,
+    _id: 5626,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.724",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -4568,7 +4570,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2567,
+    _id: 5627,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.725",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -4582,7 +4584,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2568,
+    _id: 5628,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.726",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -4596,7 +4598,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2569,
+    _id: 5629,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.727",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -4610,7 +4612,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2570,
+    _id: 5630,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.734",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -4624,7 +4626,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2571,
+    _id: 5631,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.735",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -4638,7 +4640,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2572,
+    _id: 5632,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.736",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -4652,7 +4654,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2573,
+    _id: 5633,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.737",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -4666,7 +4668,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2574,
+    _id: 5634,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.738",
     Description: "Zargenset Legrabox pure M 650 mm",
@@ -4680,7 +4682,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2575,
+    _id: 5635,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.820",
     Description: "Zargenset Legrabox pure M 270 mm",
@@ -4694,7 +4696,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2576,
+    _id: 5636,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.821",
     Description: "Zargenset Legrabox pure M 300 mm",
@@ -4708,7 +4710,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2577,
+    _id: 5637,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.822",
     Description: "Zargenset Legrabox pure M 350 mm",
@@ -4722,7 +4724,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2578,
+    _id: 5638,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.823",
     Description: "Zargenset Legrabox pure M 400 mm",
@@ -4736,7 +4738,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2579,
+    _id: 5639,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.824",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -4750,7 +4752,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2580,
+    _id: 5640,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.825",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -4764,7 +4766,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2581,
+    _id: 5641,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.826",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -4778,7 +4780,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2582,
+    _id: 5642,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.827",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -4792,7 +4794,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2583,
+    _id: 5643,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.834",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -4806,7 +4808,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2584,
+    _id: 5644,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.835",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -4820,7 +4822,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2585,
+    _id: 5645,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.836",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -4834,7 +4836,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2586,
+    _id: 5646,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.837",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -4848,7 +4850,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2587,
+    _id: 5647,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.838",
     Description: "Zargenset Legrabox pure M 650 mm",
@@ -4862,7 +4864,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2588,
+    _id: 5648,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.520",
     Description: "Zargenset Legrabox pure M 270 mm",
@@ -4876,7 +4878,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2589,
+    _id: 5649,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.521",
     Description: "Zargenset Legrabox pure M 300 mm",
@@ -4890,7 +4892,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2590,
+    _id: 5650,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.522",
     Description: "Zargenset Legrabox pure M 350 mm",
@@ -4904,7 +4906,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2591,
+    _id: 5651,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.523",
     Description: "Zargenset Legrabox pure M 400 mm",
@@ -4918,7 +4920,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2592,
+    _id: 5652,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.524",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -4932,7 +4934,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2593,
+    _id: 5653,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.525",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -4946,7 +4948,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2594,
+    _id: 5654,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.526",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -4960,7 +4962,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2595,
+    _id: 5655,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.527",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -4974,7 +4976,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2596,
+    _id: 5656,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.534",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -4988,7 +4990,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2597,
+    _id: 5657,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.535",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -5002,7 +5004,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2598,
+    _id: 5658,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.536",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -5016,7 +5018,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2599,
+    _id: 5659,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.537",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -5030,7 +5032,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2600,
+    _id: 5660,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.538",
     Description: "Zargenset Legrabox pure M 650 mm",
@@ -5044,7 +5046,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2601,
+    _id: 5661,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.020",
     Description: "Zargenset Legrabox pure M 270 mm",
@@ -5058,7 +5060,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2602,
+    _id: 5662,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.021",
     Description: "Zargenset Legrabox pure M 300 mm",
@@ -5072,7 +5074,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2603,
+    _id: 5663,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.022",
     Description: "Zargenset Legrabox pure M 350 mm",
@@ -5086,7 +5088,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2604,
+    _id: 5664,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.023",
     Description: "Zargenset Legrabox pure M 400 mm",
@@ -5100,7 +5102,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2605,
+    _id: 5665,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.024",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -5114,7 +5116,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2606,
+    _id: 5666,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.025",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -5128,7 +5130,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2607,
+    _id: 5667,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.026",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -5142,7 +5144,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2608,
+    _id: 5668,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.027",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -5156,7 +5158,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2609,
+    _id: 5669,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.034",
     Description: "Zargenset Legrabox pure M 450 mm",
@@ -5170,7 +5172,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2610,
+    _id: 5670,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.035",
     Description: "Zargenset Legrabox pure M 500 mm",
@@ -5184,7 +5186,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2611,
+    _id: 5671,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.036",
     Description: "Zargenset Legrabox pure M 550 mm",
@@ -5198,7 +5200,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2612,
+    _id: 5672,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.037",
     Description: "Zargenset Legrabox pure M 600 mm",
@@ -5212,7 +5214,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2613,
+    _id: 5673,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.038",
     Description: "Zargenset Legrabox pure M 650 mm",
@@ -5226,7 +5228,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2614,
+    _id: 5674,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.741",
     Description: "Zargenset Legrabox pure K 300 mm",
@@ -5240,7 +5242,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2615,
+    _id: 5675,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.742",
     Description: "Zargenset Legrabox pure K 350 mm",
@@ -5254,7 +5256,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2616,
+    _id: 5676,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.743",
     Description: "Zargenset Legrabox pure K 400 mm",
@@ -5268,7 +5270,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2617,
+    _id: 5677,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.744",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -5282,7 +5284,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2618,
+    _id: 5678,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.745",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -5296,7 +5298,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2619,
+    _id: 5679,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.746",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -5310,7 +5312,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2620,
+    _id: 5680,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.747",
     Description: "Zargenset Legrabox pure K 600 mm",
@@ -5324,7 +5326,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2621,
+    _id: 5681,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.754",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -5338,7 +5340,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2622,
+    _id: 5682,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.755",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -5352,7 +5354,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2623,
+    _id: 5683,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.756",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -5366,7 +5368,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2624,
+    _id: 5684,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.757",
     Description: "Zargenset Legrabox pure K 600 mm",
@@ -5380,7 +5382,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2625,
+    _id: 5685,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.841",
     Description: "Zargenset Legrabox pure K 300 mm",
@@ -5394,7 +5396,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2626,
+    _id: 5686,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.842",
     Description: "Zargenset Legrabox pure K 350 mm",
@@ -5408,7 +5410,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2627,
+    _id: 5687,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.843",
     Description: "Zargenset Legrabox pure K 400 mm",
@@ -5422,7 +5424,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2628,
+    _id: 5688,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.844",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -5436,7 +5438,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2629,
+    _id: 5689,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.845",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -5450,7 +5452,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2630,
+    _id: 5690,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.846",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -5464,7 +5466,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2631,
+    _id: 5691,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.847",
     Description: "Zargenset Legrabox pure K 600 mm",
@@ -5478,7 +5480,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2632,
+    _id: 5692,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.854",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -5492,7 +5494,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2633,
+    _id: 5693,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.855",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -5506,7 +5508,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2634,
+    _id: 5694,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.856",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -5520,7 +5522,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2635,
+    _id: 5695,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.857",
     Description: "Zargenset Legrabox pure K 600 mm",
@@ -5534,7 +5536,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2636,
+    _id: 5696,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.541",
     Description: "Zargenset Legrabox pure K 300 mm",
@@ -5548,7 +5550,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2637,
+    _id: 5697,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.542",
     Description: "Zargenset Legrabox pure K 350 mm",
@@ -5562,7 +5564,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2638,
+    _id: 5698,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.543",
     Description: "Zargenset Legrabox pure K 400 mm",
@@ -5576,7 +5578,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2639,
+    _id: 5699,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.544",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -5590,7 +5592,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2640,
+    _id: 5700,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.545",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -5604,7 +5606,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2641,
+    _id: 5701,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.546",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -5618,7 +5620,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2642,
+    _id: 5702,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.547",
     Description: "Zargenset Legrabox pure K 600 mm",
@@ -5632,7 +5634,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2643,
+    _id: 5703,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.554",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -5646,7 +5648,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2644,
+    _id: 5704,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.555",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -5660,7 +5662,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2645,
+    _id: 5705,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.556",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -5674,7 +5676,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2646,
+    _id: 5706,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.557",
     Description: "Zargenset Legrabox pure K 600 mm",
@@ -5688,7 +5690,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2647,
+    _id: 5707,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.042",
     Description: "Zargenset Legrabox pure K 350 mm",
@@ -5702,7 +5704,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2648,
+    _id: 5708,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.043",
     Description: "Zargenset Legrabox pure K 400 mm",
@@ -5716,7 +5718,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2649,
+    _id: 5709,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.044",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -5730,7 +5732,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2650,
+    _id: 5710,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.045",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -5744,7 +5746,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2651,
+    _id: 5711,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.046",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -5758,7 +5760,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2652,
+    _id: 5712,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.054",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -5772,7 +5774,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2653,
+    _id: 5713,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.055",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -5786,7 +5788,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2654,
+    _id: 5714,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.26.056",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -5800,7 +5802,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2655,
+    _id: 5715,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.741",
     Description: "Zargenset Legrabox pure K 300 mm",
@@ -5814,7 +5816,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2656,
+    _id: 5716,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.742",
     Description: "Zargenset Legrabox pure K 350 mm",
@@ -5828,7 +5830,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2657,
+    _id: 5717,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.743",
     Description: "Zargenset Legrabox pure K 400 mm",
@@ -5842,7 +5844,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2658,
+    _id: 5718,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.744",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -5856,7 +5858,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2659,
+    _id: 5719,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.745",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -5870,7 +5872,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2660,
+    _id: 5720,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.746",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -5884,7 +5886,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2661,
+    _id: 5721,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.747",
     Description: "Zargenset Legrabox pure K 600 mm",
@@ -5898,7 +5900,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2662,
+    _id: 5722,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.754",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -5912,7 +5914,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2663,
+    _id: 5723,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.755",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -5926,7 +5928,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2664,
+    _id: 5724,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.756",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -5940,7 +5942,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2665,
+    _id: 5725,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.757",
     Description: "Zargenset Legrabox pure K 600 mm",
@@ -5954,7 +5956,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2666,
+    _id: 5726,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.841",
     Description: "Zargenset Legrabox pure K 300 mm",
@@ -5968,7 +5970,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2667,
+    _id: 5727,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.842",
     Description: "Zargenset Legrabox pure K 350 mm",
@@ -5982,7 +5984,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2668,
+    _id: 5728,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.843",
     Description: "Zargenset Legrabox pure K 400 mm",
@@ -5996,7 +5998,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2669,
+    _id: 5729,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.844",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -6010,7 +6012,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2670,
+    _id: 5730,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.845",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -6024,7 +6026,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2671,
+    _id: 5731,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.846",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -6038,7 +6040,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2672,
+    _id: 5732,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.847",
     Description: "Zargenset Legrabox pure K 600 mm",
@@ -6052,7 +6054,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2673,
+    _id: 5733,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.854",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -6066,7 +6068,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2674,
+    _id: 5734,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.855",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -6080,7 +6082,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2675,
+    _id: 5735,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.856",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -6094,7 +6096,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2676,
+    _id: 5736,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.857",
     Description: "Zargenset Legrabox pure K 600 mm",
@@ -6108,7 +6110,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2677,
+    _id: 5737,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.541",
     Description: "Zargenset Legrabox pure K 300 mm",
@@ -6122,7 +6124,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2678,
+    _id: 5738,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.542",
     Description: "Zargenset Legrabox pure K 350 mm",
@@ -6136,7 +6138,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2679,
+    _id: 5739,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.543",
     Description: "Zargenset Legrabox pure K 400 mm",
@@ -6150,7 +6152,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2680,
+    _id: 5740,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.544",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -6164,7 +6166,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2681,
+    _id: 5741,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.545",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -6178,7 +6180,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2682,
+    _id: 5742,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.546",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -6192,7 +6194,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2683,
+    _id: 5743,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.547",
     Description: "Zargenset Legrabox pure K 600 mm",
@@ -6206,7 +6208,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2684,
+    _id: 5744,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.554",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -6220,7 +6222,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2685,
+    _id: 5745,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.555",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -6234,7 +6236,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2686,
+    _id: 5746,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.556",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -6248,7 +6250,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2687,
+    _id: 5747,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.557",
     Description: "Zargenset Legrabox pure K 600 mm",
@@ -6262,7 +6264,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2688,
+    _id: 5748,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.042",
     Description: "Zargenset Legrabox pure K 350 mm",
@@ -6276,7 +6278,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2689,
+    _id: 5749,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.043",
     Description: "Zargenset Legrabox pure K 400 mm",
@@ -6290,7 +6292,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2690,
+    _id: 5750,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.044",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -6304,7 +6306,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2691,
+    _id: 5751,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.045",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -6318,7 +6320,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2692,
+    _id: 5752,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.046",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -6332,7 +6334,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2693,
+    _id: 5753,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.054",
     Description: "Zargenset Legrabox pure K 450 mm",
@@ -6346,7 +6348,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2694,
+    _id: 5754,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.055",
     Description: "Zargenset Legrabox pure K 500 mm",
@@ -6360,7 +6362,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2695,
+    _id: 5755,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.72.056",
     Description: "Zargenset Legrabox pure K 550 mm",
@@ -6374,7 +6376,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2696,
+    _id: 5756,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.700",
     Description: "Zargenset Legrabox pure C 270 mm",
@@ -6388,7 +6390,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2697,
+    _id: 5757,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.701",
     Description: "Zargenset Legrabox pure C 300 mm",
@@ -6402,7 +6404,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2698,
+    _id: 5758,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.702",
     Description: "Zargenset Legrabox pure C 350 mm",
@@ -6416,7 +6418,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2699,
+    _id: 5759,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.703",
     Description: "Zargenset Legrabox pure C 400 mm",
@@ -6430,7 +6432,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2700,
+    _id: 5760,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.704",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -6444,7 +6446,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2701,
+    _id: 5761,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.705",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -6458,7 +6460,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2702,
+    _id: 5762,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.706",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -6472,7 +6474,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2703,
+    _id: 5763,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.707",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -6486,7 +6488,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2704,
+    _id: 5764,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.714",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -6500,7 +6502,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2705,
+    _id: 5765,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.715",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -6514,7 +6516,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2706,
+    _id: 5766,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.716",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -6528,7 +6530,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2707,
+    _id: 5767,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.717",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -6542,7 +6544,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2708,
+    _id: 5768,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.718",
     Description: "Zargenset Legrabox pure C 650 mm",
@@ -6556,7 +6558,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2709,
+    _id: 5769,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.800",
     Description: "Zargenset Legrabox pure C 270 mm",
@@ -6570,7 +6572,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2710,
+    _id: 5770,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.801",
     Description: "Zargenset Legrabox pure C 300 mm",
@@ -6584,7 +6586,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2711,
+    _id: 5771,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.802",
     Description: "Zargenset Legrabox pure C 350 mm",
@@ -6598,7 +6600,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2712,
+    _id: 5772,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.803",
     Description: "Zargenset Legrabox pure C 400 mm",
@@ -6612,7 +6614,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2713,
+    _id: 5773,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.804",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -6626,7 +6628,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2714,
+    _id: 5774,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.805",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -6640,7 +6642,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2715,
+    _id: 5775,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.806",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -6654,7 +6656,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2716,
+    _id: 5776,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.807",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -6668,7 +6670,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2717,
+    _id: 5777,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.814",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -6682,7 +6684,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2718,
+    _id: 5778,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.815",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -6696,7 +6698,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2719,
+    _id: 5779,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.816",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -6710,7 +6712,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2720,
+    _id: 5780,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.817",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -6724,7 +6726,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2721,
+    _id: 5781,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.818",
     Description: "Zargenset Legrabox pure C 650 mm",
@@ -6738,7 +6740,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2722,
+    _id: 5782,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.500",
     Description: "Zargenset Legrabox pure C 270 mm",
@@ -6752,7 +6754,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2723,
+    _id: 5783,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.501",
     Description: "Zargenset Legrabox pure C 300 mm",
@@ -6766,7 +6768,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2724,
+    _id: 5784,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.502",
     Description: "Zargenset Legrabox pure C 350 mm",
@@ -6780,7 +6782,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2725,
+    _id: 5785,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.503",
     Description: "Zargenset Legrabox pure C 400 mm",
@@ -6794,7 +6796,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2726,
+    _id: 5786,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.504",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -6808,7 +6810,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2727,
+    _id: 5787,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.505",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -6822,7 +6824,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2728,
+    _id: 5788,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.506",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -6836,7 +6838,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2729,
+    _id: 5789,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.507",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -6850,7 +6852,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2730,
+    _id: 5790,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.514",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -6864,7 +6866,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2731,
+    _id: 5791,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.515",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -6878,7 +6880,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2732,
+    _id: 5792,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.516",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -6892,7 +6894,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2733,
+    _id: 5793,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.517",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -6906,7 +6908,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2734,
+    _id: 5794,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.518",
     Description: "Zargenset Legrabox pure C 650 mm",
@@ -6920,7 +6922,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2735,
+    _id: 5795,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.000",
     Description: "Zargenset Legrabox pure C 270 mm",
@@ -6934,7 +6936,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2736,
+    _id: 5796,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.001",
     Description: "Zargenset Legrabox pure C 300 mm",
@@ -6948,7 +6950,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2737,
+    _id: 5797,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.002",
     Description: "Zargenset Legrabox pure C 350 mm",
@@ -6962,7 +6964,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2738,
+    _id: 5798,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.003",
     Description: "Zargenset Legrabox pure C 400 mm",
@@ -6976,7 +6978,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2739,
+    _id: 5799,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.004",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -6990,7 +6992,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2740,
+    _id: 5800,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.005",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -7004,7 +7006,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2741,
+    _id: 5801,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.006",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -7018,7 +7020,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2742,
+    _id: 5802,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.007",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -7032,7 +7034,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2743,
+    _id: 5803,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.014",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -7046,7 +7048,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2744,
+    _id: 5804,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.015",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -7060,7 +7062,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2745,
+    _id: 5805,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.016",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -7074,7 +7076,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2746,
+    _id: 5806,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.017",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -7088,7 +7090,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2747,
+    _id: 5807,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.018",
     Description: "Zargenset Legrabox pure C 650 mm",
@@ -7102,7 +7104,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2748,
+    _id: 5808,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.700",
     Description: "Zargenset Legrabox pure C 270 mm",
@@ -7116,7 +7118,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2749,
+    _id: 5809,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.701",
     Description: "Zargenset Legrabox pure C 300 mm",
@@ -7130,7 +7132,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2750,
+    _id: 5810,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.702",
     Description: "Zargenset Legrabox pure C 350 mm",
@@ -7144,7 +7146,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2751,
+    _id: 5811,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.703",
     Description: "Zargenset Legrabox pure C 400 mm",
@@ -7158,7 +7160,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2752,
+    _id: 5812,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.704",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -7172,7 +7174,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2753,
+    _id: 5813,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.705",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -7186,7 +7188,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2754,
+    _id: 5814,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.706",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -7200,7 +7202,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2755,
+    _id: 5815,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.707",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -7214,7 +7216,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2756,
+    _id: 5816,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.714",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -7228,7 +7230,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2757,
+    _id: 5817,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.715",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -7242,7 +7244,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2758,
+    _id: 5818,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.716",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -7256,7 +7258,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2759,
+    _id: 5819,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.717",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -7270,7 +7272,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2760,
+    _id: 5820,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.718",
     Description: "Zargenset Legrabox pure C 650 mm",
@@ -7284,7 +7286,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2761,
+    _id: 5821,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.800",
     Description: "Zargenset Legrabox pure C 270 mm",
@@ -7298,7 +7300,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2762,
+    _id: 5822,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.801",
     Description: "Zargenset Legrabox pure C 300 mm",
@@ -7312,7 +7314,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2763,
+    _id: 5823,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.802",
     Description: "Zargenset Legrabox pure C 350 mm",
@@ -7326,7 +7328,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2764,
+    _id: 5824,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.803",
     Description: "Zargenset Legrabox pure C 400 mm",
@@ -7340,7 +7342,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2765,
+    _id: 5825,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.804",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -7354,7 +7356,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2766,
+    _id: 5826,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.805",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -7368,7 +7370,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2767,
+    _id: 5827,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.806",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -7382,7 +7384,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2768,
+    _id: 5828,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.807",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -7396,7 +7398,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2769,
+    _id: 5829,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.814",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -7410,7 +7412,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2770,
+    _id: 5830,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.815",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -7424,7 +7426,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2771,
+    _id: 5831,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.816",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -7438,7 +7440,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2772,
+    _id: 5832,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.817",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -7452,7 +7454,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2773,
+    _id: 5833,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.818",
     Description: "Zargenset Legrabox pure C 650 mm",
@@ -7466,7 +7468,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2774,
+    _id: 5834,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.500",
     Description: "Zargenset Legrabox pure C 270 mm",
@@ -7480,7 +7482,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2775,
+    _id: 5835,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.501",
     Description: "Zargenset Legrabox pure C 300 mm",
@@ -7494,7 +7496,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2776,
+    _id: 5836,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.502",
     Description: "Zargenset Legrabox pure C 350 mm",
@@ -7508,7 +7510,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2777,
+    _id: 5837,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.503",
     Description: "Zargenset Legrabox pure C 400 mm",
@@ -7522,7 +7524,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2778,
+    _id: 5838,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.504",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -7536,7 +7538,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2779,
+    _id: 5839,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.505",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -7550,7 +7552,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2780,
+    _id: 5840,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.506",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -7564,7 +7566,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2781,
+    _id: 5841,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.507",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -7578,7 +7580,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2782,
+    _id: 5842,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.514",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -7592,7 +7594,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2783,
+    _id: 5843,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.515",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -7606,7 +7608,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2784,
+    _id: 5844,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.516",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -7620,7 +7622,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2785,
+    _id: 5845,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.517",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -7634,7 +7636,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2786,
+    _id: 5846,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.518",
     Description: "Zargenset Legrabox pure C 650 mm",
@@ -7648,7 +7650,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2787,
+    _id: 5847,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.000",
     Description: "Zargenset Legrabox pure C 270 mm",
@@ -7662,7 +7664,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2788,
+    _id: 5848,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.001",
     Description: "Zargenset Legrabox pure C 300 mm",
@@ -7676,7 +7678,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2789,
+    _id: 5849,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.002",
     Description: "Zargenset Legrabox pure C 350 mm",
@@ -7690,7 +7692,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2790,
+    _id: 5850,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.003",
     Description: "Zargenset Legrabox pure C 400 mm",
@@ -7704,7 +7706,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2791,
+    _id: 5851,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.004",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -7718,7 +7720,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2792,
+    _id: 5852,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.005",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -7732,7 +7734,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2793,
+    _id: 5853,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.006",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -7746,7 +7748,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2794,
+    _id: 5854,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.007",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -7760,7 +7762,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2795,
+    _id: 5855,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.014",
     Description: "Zargenset Legrabox pure C 450 mm",
@@ -7774,7 +7776,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2796,
+    _id: 5856,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.015",
     Description: "Zargenset Legrabox pure C 500 mm",
@@ -7788,7 +7790,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2797,
+    _id: 5857,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.016",
     Description: "Zargenset Legrabox pure C 550 mm",
@@ -7802,7 +7804,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2798,
+    _id: 5858,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.017",
     Description: "Zargenset Legrabox pure C 600 mm",
@@ -7816,7 +7818,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2799,
+    _id: 5859,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.018",
     Description: "Zargenset Legrabox pure C 650 mm",
@@ -7830,7 +7832,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2800,
+    _id: 5860,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.723",
     Description: "Zargenset Legrabox pure F 400 mm",
@@ -7844,7 +7846,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2801,
+    _id: 5861,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.724",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -7858,7 +7860,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2802,
+    _id: 5862,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.725",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -7872,7 +7874,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2803,
+    _id: 5863,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.726",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -7886,7 +7888,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2804,
+    _id: 5864,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.727",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -7900,7 +7902,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2805,
+    _id: 5865,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.734",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -7914,7 +7916,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2806,
+    _id: 5866,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.735",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -7928,7 +7930,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2807,
+    _id: 5867,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.736",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -7942,7 +7944,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2808,
+    _id: 5868,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.737",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -7956,7 +7958,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2809,
+    _id: 5869,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.738",
     Description: "Zargenset Legrabox pure F 650 mm",
@@ -7970,7 +7972,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2810,
+    _id: 5870,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.823",
     Description: "Zargenset Legrabox pure F 400 mm",
@@ -7984,7 +7986,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2811,
+    _id: 5871,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.824",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -7998,7 +8000,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2812,
+    _id: 5872,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.825",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -8012,7 +8014,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2813,
+    _id: 5873,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.826",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -8026,7 +8028,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2814,
+    _id: 5874,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.827",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -8040,7 +8042,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2815,
+    _id: 5875,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.834",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -8054,7 +8056,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2816,
+    _id: 5876,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.835",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -8068,7 +8070,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2817,
+    _id: 5877,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.836",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -8082,7 +8084,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2818,
+    _id: 5878,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.837",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -8096,7 +8098,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2819,
+    _id: 5879,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.838",
     Description: "Zargenset Legrabox pure F 650 mm",
@@ -8110,7 +8112,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2820,
+    _id: 5880,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.523",
     Description: "Zargenset Legrabox pure F 400 mm",
@@ -8124,7 +8126,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2821,
+    _id: 5881,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.524",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -8138,7 +8140,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2822,
+    _id: 5882,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.525",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -8152,7 +8154,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2823,
+    _id: 5883,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.526",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -8166,7 +8168,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2824,
+    _id: 5884,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.527",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -8180,7 +8182,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2825,
+    _id: 5885,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.534",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -8194,7 +8196,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2826,
+    _id: 5886,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.535",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -8208,7 +8210,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2827,
+    _id: 5887,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.536",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -8222,7 +8224,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2828,
+    _id: 5888,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.537",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -8236,7 +8238,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2829,
+    _id: 5889,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.538",
     Description: "Zargenset Legrabox pure F 650 mm",
@@ -8250,7 +8252,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2830,
+    _id: 5890,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.023",
     Description: "Zargenset Legrabox pure F 400 mm",
@@ -8264,7 +8266,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2831,
+    _id: 5891,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.024",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -8278,7 +8280,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2832,
+    _id: 5892,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.025",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -8292,7 +8294,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2833,
+    _id: 5893,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.026",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -8306,7 +8308,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2834,
+    _id: 5894,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.027",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -8320,7 +8322,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2835,
+    _id: 5895,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.034",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -8334,7 +8336,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2836,
+    _id: 5896,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.035",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -8348,7 +8350,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2837,
+    _id: 5897,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.036",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -8362,7 +8364,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2838,
+    _id: 5898,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.037",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -8376,7 +8378,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2839,
+    _id: 5899,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "551.27.038",
     Description: "Zargenset Legrabox pure F 650 mm",
@@ -8390,7 +8392,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2840,
+    _id: 5900,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.723",
     Description: "Zargenset Legrabox pure F 400 mm",
@@ -8404,7 +8406,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2841,
+    _id: 5901,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.724",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -8418,7 +8420,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2842,
+    _id: 5902,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.725",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -8432,7 +8434,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2843,
+    _id: 5903,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.726",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -8446,7 +8448,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2844,
+    _id: 5904,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.727",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -8460,7 +8462,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2845,
+    _id: 5905,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.734",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -8474,7 +8476,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2846,
+    _id: 5906,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.735",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -8488,7 +8490,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2847,
+    _id: 5907,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.736",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -8502,7 +8504,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2848,
+    _id: 5908,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.737",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -8516,7 +8518,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2849,
+    _id: 5909,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.738",
     Description: "Zargenset Legrabox pure F 650 mm",
@@ -8530,7 +8532,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2850,
+    _id: 5910,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.823",
     Description: "Zargenset Legrabox pure F 400 mm",
@@ -8544,7 +8546,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2851,
+    _id: 5911,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.824",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -8558,7 +8560,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2852,
+    _id: 5912,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.825",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -8572,7 +8574,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2853,
+    _id: 5913,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.826",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -8586,7 +8588,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2854,
+    _id: 5914,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.827",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -8600,7 +8602,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2855,
+    _id: 5915,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.834",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -8614,7 +8616,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2856,
+    _id: 5916,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.835",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -8628,7 +8630,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2857,
+    _id: 5917,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.836",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -8642,7 +8644,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2858,
+    _id: 5918,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.837",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -8656,7 +8658,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2859,
+    _id: 5919,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.838",
     Description: "Zargenset Legrabox pure F 650 mm",
@@ -8670,7 +8672,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2860,
+    _id: 5920,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.523",
     Description: "Zargenset Legrabox pure F 400 mm",
@@ -8684,7 +8686,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2861,
+    _id: 5921,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.524",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -8698,7 +8700,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2862,
+    _id: 5922,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.525",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -8712,7 +8714,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2863,
+    _id: 5923,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.526",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -8726,7 +8728,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2864,
+    _id: 5924,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.527",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -8740,7 +8742,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2865,
+    _id: 5925,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.534",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -8754,7 +8756,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2866,
+    _id: 5926,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.535",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -8768,7 +8770,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2867,
+    _id: 5927,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.536",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -8782,7 +8784,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2868,
+    _id: 5928,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.537",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -8796,7 +8798,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2869,
+    _id: 5929,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.538",
     Description: "Zargenset Legrabox pure F 650 mm",
@@ -8810,7 +8812,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2870,
+    _id: 5930,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.023",
     Description: "Zargenset Legrabox pure F 400 mm",
@@ -8824,7 +8826,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2871,
+    _id: 5931,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.024",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -8838,7 +8840,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2872,
+    _id: 5932,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.025",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -8852,7 +8854,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2873,
+    _id: 5933,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.026",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -8866,7 +8868,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2874,
+    _id: 5934,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.027",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -8880,7 +8882,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2875,
+    _id: 5935,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.034",
     Description: "Zargenset Legrabox pure F 450 mm",
@@ -8894,7 +8896,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2876,
+    _id: 5936,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.035",
     Description: "Zargenset Legrabox pure F 500 mm",
@@ -8908,7 +8910,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2877,
+    _id: 5937,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.036",
     Description: "Zargenset Legrabox pure F 550 mm",
@@ -8922,7 +8924,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2878,
+    _id: 5938,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.037",
     Description: "Zargenset Legrabox pure F 600 mm",
@@ -8936,7 +8938,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2879,
+    _id: 5939,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.73.038",
     Description: "Zargenset Legrabox pure F 650 mm",
@@ -8950,7 +8952,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2880,
+    _id: 5940,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.75.054",
     Description: "Frontbefestigung Legrabox",
@@ -8964,7 +8966,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2881,
+    _id: 5941,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.75.051",
     Description: "Frontbefestigung Legrabox",
@@ -8978,7 +8980,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2882,
+    _id: 5942,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.75.064",
     Description: "Frontbefestigung Legrabox",
@@ -8992,7 +8994,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2883,
+    _id: 5943,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.75.061",
     Description: "Frontbefestigung Legrabox",
@@ -9006,7 +9008,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2884,
+    _id: 5944,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.75.074",
     Description: "Frontbefestigung Legrabox",
@@ -9020,7 +9022,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2885,
+    _id: 5945,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.75.071",
     Description: "Frontbefestigung Legrabox",
@@ -9034,7 +9036,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2886,
+    _id: 5946,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.75.084",
     Description: "Frontbefestigung Legrabox",
@@ -9048,7 +9050,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2887,
+    _id: 5947,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.75.081",
     Description: "Frontbefestigung Legrabox",
@@ -9062,7 +9064,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2888,
+    _id: 5948,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.75.590",
     Description: "Front- und Bodenbefestigung",
@@ -9076,7 +9078,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2889,
+    _id: 5949,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.02.710",
     Description: "Cabinet hanger, Wall unit, for screw fixing",
@@ -9090,7 +9092,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hanger"
   }
   , {
-    _id: 2890,
+    _id: 5950,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.02.711",
     Description: "Cabinet hanger, Wall unit, for screw fixing",
@@ -9104,7 +9106,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hanger"
   }
   , {
-    _id: 2891,
+    _id: 5951,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.02.781",
     Description: "Cover cap, Clip on, For cabinet hanger for wall unit",
@@ -9118,7 +9120,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "CoverCap"
   }
   , {
-    _id: 2892,
+    _id: 5952,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.02.780",
     Description: "Cover cap, Clip on, For cabinet hanger for wall unit",
@@ -9132,7 +9134,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "CoverCap"
   }
   , {
-    _id: 2893,
+    _id: 5953,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.02.521",
     Description: "Cover cap, Clip on, For cabinet hanger for wall unit",
@@ -9146,7 +9148,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "CoverCap"
   }
   , {
-    _id: 2894,
+    _id: 5954,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "290.02.520",
     Description: "Cover cap, Clip on, For cabinet hanger for wall unit",
@@ -9160,7 +9162,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "CoverCap"
   }
   , {
-    _id: 2895,
+    _id: 5955,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.80.183",
     Description: "Seitenstabilisierung Legrabox",
@@ -9174,7 +9176,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2896,
+    _id: 5956,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.80.187",
     Description: "Seitenstabilisierung Legrabox",
@@ -9188,7 +9190,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2897,
+    _id: 5957,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "550.60.119",
     Description: "Synchronisierungsstange",
@@ -9202,7 +9204,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Drawerbox"
   }
   , {
-    _id: 2898,
+    _id: 5958,
     in_Supplier: "DemoSupplier",
     in_SupplierArticleNumber: "267.82.020",
     Description: "Holzduebel Buche        5x20mm",
@@ -9216,7 +9218,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Dowel"
   }
   , {
-    _id: 2899,
+    _id: 5959,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "239.91.105",
     Description: "Strike moulding, sealing profile, for gluing",
@@ -9230,7 +9232,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Duststrip"
   }
   , {
-    _id: 2900,
+    _id: 5960,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "356.04.353",
     Description: "Push Catch",
@@ -9244,7 +9246,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PushToOpen"
   }
   , {
-    _id: 2901,
+    _id: 5961,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "356.04.553",
     Description: "Push Catch",
@@ -9258,7 +9260,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PushToOpen"
   }
   , {
-    _id: 2902,
+    _id: 5962,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "356.04.753",
     Description: "Push Catch",
@@ -9272,7 +9274,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PushToOpen"
   }
   , {
-    _id: 2903,
+    _id: 5963,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "356.04.354",
     Description: "Push Catch",
@@ -9286,7 +9288,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PushToOpen"
   }
   , {
-    _id: 2904,
+    _id: 5964,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "356.04.554",
     Description: "Push Catch",
@@ -9300,7 +9302,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PushToOpen"
   }
   , {
-    _id: 2905,
+    _id: 5965,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "356.04.754",
     Description: "Push Catch",
@@ -9314,7 +9316,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PushToOpen"
   }
   , {
-    _id: 2906,
+    _id: 5966,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "356.04.363",
     Description: "Adapter Plate",
@@ -9328,7 +9330,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PushToOpen"
   }
   , {
-    _id: 2907,
+    _id: 5967,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "356.04.563",
     Description: "Adapter Plate",
@@ -9342,7 +9344,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PushToOpen"
   }
   , {
-    _id: 2908,
+    _id: 5968,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "356.04.763",
     Description: "Adapter Plate",
@@ -9356,7 +9358,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PushToOpen"
   }
   , {
-    _id: 2909,
+    _id: 5969,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "356.04.362",
     Description: "Adapter Plate",
@@ -9370,7 +9372,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PushToOpen"
   }
   , {
-    _id: 2910,
+    _id: 5970,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "356.04.562",
     Description: "Adapter Plate",
@@ -9384,7 +9386,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PushToOpen"
   }
   , {
-    _id: 2911,
+    _id: 5971,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "356.04.762",
     Description: "Adapter Plate",
@@ -9398,7 +9400,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PushToOpen"
   }
   , {
-    _id: 2912,
+    _id: 5972,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "263.15.705",
     Description: "Rafix20Housing19mmNickelPlated",
@@ -9412,7 +9414,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Rafix"
   }
   , {
-    _id: 2913,
+    _id: 5973,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "263.20.847",
     Description: "RafixConnectionBolt11x5mm",
@@ -9426,7 +9428,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Rafix"
   }
   , {
-    _id: 2914,
+    _id: 5974,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.74.517",
     Description: "Aventos HF Set Euroschrauben 2700",
@@ -9440,7 +9442,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2915,
+    _id: 5975,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.74.518",
     Description: "Aventos HF Set Euroschrauben 10000",
@@ -9454,7 +9456,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2916,
+    _id: 5976,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.74.717",
     Description: "Aventos HF Set Euroschrauben 2700",
@@ -9468,7 +9470,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2917,
+    _id: 5977,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.74.718",
     Description: "Aventos HF Set Euroschrauben 10000",
@@ -9482,7 +9484,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2918,
+    _id: 5978,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.74.537",
     Description: "Aventos HF Set Euroschrauben 2700",
@@ -9496,7 +9498,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2919,
+    _id: 5979,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.74.538",
     Description: "Aventos HF Set Euroschrauben 10000",
@@ -9510,7 +9512,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2920,
+    _id: 5980,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "342.22.070",
     Description: "Montageplatte Aventos",
@@ -9524,7 +9526,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2921,
+    _id: 5981,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.74.655",
     Description: "Aventos HF Hebelarm",
@@ -9538,7 +9540,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2922,
+    _id: 5982,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.74.657",
     Description: "Aventos HF Hebelarm",
@@ -9552,7 +9554,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2923,
+    _id: 5983,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.74.658",
     Description: "Aventos HF Hebelarm",
@@ -9566,7 +9568,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2924,
+    _id: 5984,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.85.553",
     Description: "Aventos HK Set Euroschrauben 3200",
@@ -9580,7 +9582,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2925,
+    _id: 5985,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.85.552",
     Description: "Aventos HK Set Euroschrauben 1730",
@@ -9594,7 +9596,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2926,
+    _id: 5986,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.85.551",
     Description: "Aventos HK Set Euroschrauben 980",
@@ -9608,7 +9610,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2927,
+    _id: 5987,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.85.550",
     Description: "Aventos HK Set Euroschrauben 420",
@@ -9622,7 +9624,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2928,
+    _id: 5988,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.85.548",
     Description: "Aventos HK Set Euroschrauben 3200",
@@ -9636,7 +9638,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2929,
+    _id: 5989,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.85.547",
     Description: "Aventos HK Set Euroschrauben 1730",
@@ -9650,7 +9652,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2930,
+    _id: 5990,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.85.546",
     Description: "Aventos HK Set Euroschrauben 980",
@@ -9664,7 +9666,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2931,
+    _id: 5991,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.85.545",
     Description: "Aventos HK Set Euroschrauben 420",
@@ -9678,7 +9680,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2932,
+    _id: 5992,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.85.578",
     Description: "Aventos HK Set Euroschrauben 3200",
@@ -9692,7 +9694,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2933,
+    _id: 5993,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.85.577",
     Description: "Aventos HK Set Euroschrauben 1730",
@@ -9706,7 +9708,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2934,
+    _id: 5994,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.85.576",
     Description: "Aventos HK Set Euroschrauben 980",
@@ -9720,7 +9722,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2935,
+    _id: 5995,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.85.575",
     Description: "Aventos HK Set Euroschrauben 420",
@@ -9734,7 +9736,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2936,
+    _id: 5996,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.84.790",
     Description: "Montageplatte Aventos HK / HS / HL",
@@ -9748,7 +9750,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2937,
+    _id: 5997,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "342.81.400",
     Description: "Concealed hinge, Blum Clip Top 120°, full overlay mounting, without automatic closing spring",
@@ -9762,7 +9764,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2938,
+    _id: 5998,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.84.727",
     Description: "Aventos HS Set Euroschrauben 350",
@@ -9776,7 +9778,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2939,
+    _id: 5999,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.84.728",
     Description: "Aventos HS Set Euroschrauben 480",
@@ -9790,7 +9792,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2940,
+    _id: 6000,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.84.729",
     Description: "Aventos HS Set Euroschrauben 800",
@@ -9804,7 +9806,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2941,
+    _id: 6001,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.84.527",
     Description: "Aventos HS Set Euroschrauben 350",
@@ -9818,7 +9820,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2942,
+    _id: 6002,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.84.528",
     Description: "Aventos HS Set Euroschrauben 480",
@@ -9832,7 +9834,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2943,
+    _id: 6003,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.84.529",
     Description: "Aventos HS Set Euroschrauben 800",
@@ -9846,7 +9848,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2944,
+    _id: 6004,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.84.587",
     Description: "Aventos HS Set Euroschrauben 350",
@@ -9860,7 +9862,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2945,
+    _id: 6005,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.84.588",
     Description: "Aventos HS Set Euroschrauben 480",
@@ -9874,7 +9876,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2946,
+    _id: 6006,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.84.589",
     Description: "Aventos HS Set Euroschrauben 800",
@@ -9888,7 +9890,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2947,
+    _id: 6007,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.86.757",
     Description: "Aventos HL Set Euroschrauben 300",
@@ -9902,7 +9904,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2948,
+    _id: 6008,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.86.758",
     Description: "Aventos HL Set Euroschrauben 390",
@@ -9916,7 +9918,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2949,
+    _id: 6009,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.86.557",
     Description: "Aventos HL Set Euroschrauben 300",
@@ -9930,7 +9932,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2950,
+    _id: 6010,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.86.558",
     Description: "Aventos HL Set Euroschrauben 390",
@@ -9944,7 +9946,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2951,
+    _id: 6011,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.86.567",
     Description: "Aventos HL Set Euroschrauben 300",
@@ -9958,7 +9960,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2952,
+    _id: 6012,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.86.568",
     Description: "Aventos HL Set Euroschrauben 390",
@@ -9972,7 +9974,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2953,
+    _id: 6013,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.86.681",
     Description: "Hebelarm Set for Aventos HL",
@@ -9986,7 +9988,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2954,
+    _id: 6014,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.86.682",
     Description: "Hebelarm Set for Aventos HL",
@@ -10000,7 +10002,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2955,
+    _id: 6015,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.86.683",
     Description: "Hebelarm Set for Aventos HL",
@@ -10014,7 +10016,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2956,
+    _id: 6016,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.86.684",
     Description: "Hebelarm Set for Aventos HL",
@@ -10028,7 +10030,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2957,
+    _id: 6017,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "365.46.061",
     Description: "Seilzugklappenhalter für Barklappen",
@@ -10042,7 +10044,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2958,
+    _id: 6018,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "365.46.060",
     Description: "Seilzugklappenhalter für Barklappen",
@@ -10056,7 +10058,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2959,
+    _id: 6019,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.95.703",
     Description: "Aventos HK XS für kleinere einteilige Klappen",
@@ -10070,7 +10072,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2960,
+    _id: 6020,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.95.702",
     Description: "Aventos HK XS für kleinere einteilige Klappen",
@@ -10084,7 +10086,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2961,
+    _id: 6021,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.95.701",
     Description: "Aventos HK XS für kleinere einteilige Klappen",
@@ -10098,7 +10100,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2962,
+    _id: 6022,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.95.780",
     Description: "Frontbefestigung Aventos HK XS",
@@ -10112,7 +10114,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2963,
+    _id: 6023,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.95.790",
     Description: "Korpusbefestigung Aventos HK XS",
@@ -10126,7 +10128,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Fliplift"
   }
   , {
-    _id: 2964,
+    _id: 6024,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "342.22.060",
     Description: "Mounting plate, steel, for screw fixing with chipboard screws",
@@ -10140,7 +10142,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MountingPlate"
   }
   , {
-    _id: 2965,
+    _id: 6025,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "342.22.063",
     Description: "Mounting plate, steel, for screw fixing with chipboard screws",
@@ -10154,7 +10156,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "MountingPlate"
   }
   , {
-    _id: 2966,
+    _id: 6026,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "372.74.990",
     Description: "Concealed hinge, Clip Top, for Blum Aventos HF top and HF top Servo-Drive",
@@ -10168,7 +10170,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2967,
+    _id: 6027,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.62.425",
     Description: "Furniture handle, mitre handle made of die-cast zinc",
@@ -10182,7 +10184,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2968,
+    _id: 6028,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.62.426",
     Description: "Furniture handle, mitre handle made of die-cast zinc",
@@ -10196,7 +10198,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2969,
+    _id: 6029,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.62.225",
     Description: "Furniture handle, mitre handle made of die-cast zinc",
@@ -10210,7 +10212,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2970,
+    _id: 6030,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.62.226",
     Description: "Furniture handle, mitre handle made of die-cast zinc",
@@ -10224,7 +10226,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2971,
+    _id: 6031,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.62.525",
     Description: "Furniture handle, mitre handle made of die-cast zinc",
@@ -10238,7 +10240,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2972,
+    _id: 6032,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.62.526",
     Description: "Furniture handle, mitre handle made of die-cast zinc",
@@ -10252,7 +10254,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2973,
+    _id: 6033,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.62.625",
     Description: "Furniture handle, mitre handle made of die-cast zinc",
@@ -10266,7 +10268,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2974,
+    _id: 6034,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.62.626",
     Description: "Furniture handle, mitre handle made of die-cast zinc",
@@ -10280,7 +10282,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2975,
+    _id: 6035,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.61.214",
     Description: "Furniture handle, bow handle made of die-cast zinc",
@@ -10294,7 +10296,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2976,
+    _id: 6036,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.61.217",
     Description: "Furniture handle, bow handle made of die-cast zinc",
@@ -10308,7 +10310,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2977,
+    _id: 6037,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.61.014",
     Description: "Furniture handle, bow handle made of die-cast zinc",
@@ -10322,7 +10324,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2978,
+    _id: 6038,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "106.61.017",
     Description: "Furniture handle, bow handle made of die-cast zinc",
@@ -10336,7 +10338,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2979,
+    _id: 6039,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.100",
     Description: "Griff Edelst.matt  12/1000x35mm",
@@ -10350,7 +10352,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2980,
+    _id: 6040,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.101",
     Description: "Griff Edelst.matt  12/1100x35mm",
@@ -10364,7 +10366,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2981,
+    _id: 6041,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.102",
     Description: "Griff Edelst.matt  12/1200x35mm",
@@ -10378,7 +10380,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2982,
+    _id: 6042,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.103",
     Description: "Griff Edelst.matt  12/1300x35mm",
@@ -10392,7 +10394,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2983,
+    _id: 6043,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.104",
     Description: "Griff Edelst.matt  12/1400x35mm",
@@ -10406,7 +10408,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2984,
+    _id: 6044,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.106",
     Description: "Griff Edelst.matt  12/1500x35mm",
@@ -10420,7 +10422,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2985,
+    _id: 6045,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.107",
     Description: "Griff Edelst.matt  12/1600x35mm",
@@ -10434,7 +10436,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2986,
+    _id: 6046,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.108",
     Description: "Griff Edelst.matt  12/1800x35mm",
@@ -10448,7 +10450,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2987,
+    _id: 6047,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "117.66.109",
     Description: "Griff Edelst.matt  12/2000x35mm",
@@ -10462,7 +10464,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2988,
+    _id: 6048,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "112.02.105",
     Description: "Knopf Schwarz.matt      20x30mm",
@@ -10476,7 +10478,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2989,
+    _id: 6049,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "110.35.393",
     Description: "Möbelknopf, traditionell",
@@ -10490,7 +10492,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2990,
+    _id: 6050,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "110.35.392",
     Description: "Möbelknopf, traditionell",
@@ -10504,7 +10506,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2991,
+    _id: 6051,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "110.35.394",
     Description: "Möbelknopf, traditionell",
@@ -10518,7 +10520,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Handle"
   }
   , {
-    _id: 2992,
+    _id: 6052,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "342.78.700",
     Description: "Flap hinge, 90°, 3D adjustable, for wooden flaps",
@@ -10532,7 +10534,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Hinge"
   }
   , {
-    _id: 2993,
+    _id: 6053,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "260.28.004",
     Description: "Chair bracket, With 4 screw holes",
@@ -10546,7 +10548,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "Bracket"
   }
   , {
-    _id: 2994,
+    _id: 6054,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "637.76.355",
     Description: "Rohr Axilo 78 Kst.schw.m.Verstellt.150mm",
@@ -10560,7 +10562,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PlinthAndLeg"
   }
   , {
-    _id: 2995,
+    _id: 6055,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "262.50.368",
     Description: "Frame part, Häfele Pacofix PF-L, with mounting lug",
@@ -10574,7 +10576,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2996,
+    _id: 6056,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "262.50.359",
     Description: "Panel component, Häfele Pacofix PF",
@@ -10588,11 +10590,11 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2997,
+    _id: 6057,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "595.18.260",
     Description: "No.15 Classic Silver",
-    Description2: "Unterschran-Frontauszug  2-etagig ",
+    Description2: "Unterschran-Frontauszug  2-etagig",
     Length: 533,
     Width: 37,
     Thickness: 288,
@@ -10602,7 +10604,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: ""
   }
   , {
-    _id: 2998,
+    _id: 6058,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.59.911",
     Description: "Hochschrank Frontauszug Dispensa",
@@ -10616,7 +10618,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 2999,
+    _id: 6059,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.59.921",
     Description: "Hochschrank Frontauszug Dispensa",
@@ -10630,7 +10632,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3000,
+    _id: 6060,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.59.931",
     Description: "Hochschrank Frontauszug Dispensa",
@@ -10644,7 +10646,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3001,
+    _id: 6061,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.59.913",
     Description: "Hochschrank Frontauszug Dispensa",
@@ -10658,7 +10660,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3002,
+    _id: 6062,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.59.923",
     Description: "Hochschrank Frontauszug Dispensa",
@@ -10672,7 +10674,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3003,
+    _id: 6063,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.59.933",
     Description: "Hochschrank Frontauszug Dispensa",
@@ -10686,7 +10688,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3004,
+    _id: 6064,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.59.711",
     Description: "Hochschrank Frontauszug Dispensa",
@@ -10700,7 +10702,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3005,
+    _id: 6065,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.59.721",
     Description: "Hochschrank Frontauszug Dispensa",
@@ -10714,7 +10716,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3006,
+    _id: 6066,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.59.731",
     Description: "Hochschrank Frontauszug Dispensa",
@@ -10728,7 +10730,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3007,
+    _id: 6067,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.59.713",
     Description: "Hochschrank Frontauszug Dispensa",
@@ -10742,7 +10744,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3008,
+    _id: 6068,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.59.723",
     Description: "Hochschrank Frontauszug Dispensa",
@@ -10756,7 +10758,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3009,
+    _id: 6069,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.59.733",
     Description: "Hochschrank Frontauszug Dispensa",
@@ -10770,7 +10772,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3010,
+    _id: 6070,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.75.243",
     Description: "Einhängetablar mit Anti-Rutsch-Effekt",
@@ -10784,7 +10786,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3011,
+    _id: 6071,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.75.244",
     Description: "Einhängetablar mit Anti-Rutsch-Effekt",
@@ -10798,7 +10800,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3012,
+    _id: 6072,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.75.253",
     Description: "Einhängetablar mit Anti-Rutsch-Effekt",
@@ -10812,7 +10814,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3013,
+    _id: 6073,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.75.254",
     Description: "Einhängetablar mit Anti-Rutsch-Effekt",
@@ -10826,7 +10828,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3014,
+    _id: 6074,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.75.453",
     Description: "Einhängetablar mit Anti-Rutsch-Effekt",
@@ -10840,7 +10842,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3015,
+    _id: 6075,
     in_Supplier: "Haefele",
     in_SupplierArticleNumber: "546.75.459",
     Description: "Einhängetablar mit Anti-Rutsch-Effekt",
@@ -10854,7 +10856,7 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     Category: "PantryPullout"
   }
   , {
-    _id: 3016,
+    _id: 6076,
     in_Supplier: "Kesseboehmer",
     in_SupplierArticleNumber: "Conero625",
     Description: "Kessseböhmer Conero 625",
@@ -10866,5 +10868,47 @@ export var ct_tab_HardwareLibrary: ICT_tab_HardwareLibrary[] = [
     UnitOfWeight: "kg",
     Color: "schwarz",
     Category: "ClothingOrganizer"
+  }
+  , {
+    _id: 6077,
+    in_Supplier: "Haefele",
+    in_SupplierArticleNumber: "811.67.303",
+    Description: "Hosenauszug, Kesseböhmer Conero, 72 H",
+    Description2: "Hosenauszug, Kesseböhmer Conero, 72 H lichte Schrankbreite 534–594 mm, 7 Hosenbügel",
+    Length: 482,
+    Width: 594,
+    Thickness: 72,
+    Weight: 1,
+    UnitOfWeight: "kg",
+    Color: "schwarz",
+    Category: "ClothingOrganizer"
+  }
+  , {
+    _id: 6078,
+    in_Supplier: "Haefele",
+    in_SupplierArticleNumber: "151.38.111",
+    Description: "Inset handle, Häfele Déco, stainless steel",
+    Description2: "Oval, for wooden sliding doors, Matt black, PVD coated",
+    Length: 130,
+    Width: 30,
+    Thickness: 13,
+    Weight: 100,
+    UnitOfWeight: "kg",
+    Color: "Black",
+    Category: "Handle"
+  }
+  , {
+    _id: 6079,
+    in_Supplier: "Haefele",
+    in_SupplierArticleNumber: "151.01.505",
+    Description: "Inset handle, Häfele Déco, stainless steel",
+    Description2: "Oval, for wooden sliding doors, satin brushed",
+    Length: 130,
+    Width: 30,
+    Thickness: 13,
+    Weight: 100,
+    UnitOfWeight: "kg",
+    Color: "StainlessSteel",
+    Category: "Handle"
   }
 ];

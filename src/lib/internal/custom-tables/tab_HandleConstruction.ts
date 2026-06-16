@@ -112,15 +112,17 @@ import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01, 
 import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01, cbp_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
 import { dc_mc_SegmentFront01, adc_mc_SegmentFront01, cbp_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
 import { dc_me_HoodInsert, adc_me_HoodInsert, cbp_me_HoodInsert } from '../modules/me_HoodInsert'
-import { dc_mc_HoodInsert01, adc_mc_HoodInsert01, cbp_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
 import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, cbp_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
 import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder, cbp_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
 import { dc_mr_CeilingFiller, adc_mr_CeilingFiller, cbp_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
 import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01, cbp_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
 import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder, cbp_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
 import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder, cbp_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
-import { dc_mr_Filler, adc_mr_Filler, cbp_mr_Filler } from '../modules/mr_Filler'
-import { dc_mc_Filler01, adc_mc_Filler01, cbp_mc_Filler01 } from '../modules/mc_Filler01'
+import { dc_mr_FillerStraight, adc_mr_FillerStraight, cbp_mr_FillerStraight } from '../modules/mr_FillerStraight'
+import { dc_mc_FillerStraight01, adc_mc_FillerStraight01, cbp_mc_FillerStraight01 } from '../modules/mc_FillerStraight01'
+import { dc_mc_FillerHardware01, adc_mc_FillerHardware01, cbp_mc_FillerHardware01 } from '../modules/mc_FillerHardware01'
+import { dc_mc_FillerSupportPanels01, adc_mc_FillerSupportPanels01, cbp_mc_FillerSupportPanels01 } from '../modules/mc_FillerSupportPanels01'
+import { dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, cbp_mc_HoodCarcaseParts01 } from '../modules/mc_HoodCarcaseParts01'
 import { ITableParents_mc_Handle01_mc_Handlestrip01 } from '../var-interfaces';
 
 export interface cti_tab_HandleConstruction {
@@ -179,7 +181,7 @@ export class ct2_tab_HandleConstruction {
 
 export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
   {
-    _id: 2497,
+    _id: 5989,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Up",
@@ -197,7 +199,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2498,
+    _id: 5990,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Up",
@@ -215,7 +217,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2499,
+    _id: 5991,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Up",
@@ -233,7 +235,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2500,
+    _id: 5992,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Up",
@@ -251,7 +253,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2501,
+    _id: 5993,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Up",
@@ -269,7 +271,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2502,
+    _id: 5994,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Up",
@@ -287,7 +289,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2503,
+    _id: 5995,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Up",
@@ -305,7 +307,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2504,
+    _id: 5996,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Up",
@@ -323,7 +325,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2505,
+    _id: 5997,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Center",
@@ -341,7 +343,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2506,
+    _id: 5998,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Center",
@@ -359,7 +361,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2507,
+    _id: 5999,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Center",
@@ -377,7 +379,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2508,
+    _id: 6000,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Center",
@@ -395,7 +397,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2509,
+    _id: 6001,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Center",
@@ -413,7 +415,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2510,
+    _id: 6002,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Center",
@@ -431,7 +433,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2511,
+    _id: 6003,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Center",
@@ -449,7 +451,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2512,
+    _id: 6004,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Center",
@@ -467,7 +469,7 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2513,
+    _id: 6005,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Down",
@@ -480,12 +482,12 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
     }
     ,
     PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
     }
 
   }
   , {
-    _id: 2514,
+    _id: 6006,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Down",
@@ -498,12 +500,12 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
     }
     ,
     PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
     }
 
   }
   , {
-    _id: 2515,
+    _id: 6007,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Down",
@@ -516,12 +518,12 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
     }
     ,
     PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
     }
 
   }
   , {
-    _id: 2516,
+    _id: 6008,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Down",
@@ -534,16 +536,9880 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
     }
     ,
     PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
     }
 
   }
   , {
-    _id: 2517,
+    _id: 6009,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Down",
     in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6010,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6011,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6012,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6013,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6014,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6015,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6016,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6017,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6018,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6019,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6020,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6021,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6022,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6023,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6024,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6025,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6026,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6027,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6028,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6029,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6030,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6031,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6032,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6033,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6034,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6035,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6036,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6037,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6038,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6039,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6040,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6041,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6042,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6043,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6044,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6045,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6046,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6047,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6048,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6049,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6050,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6051,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6052,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6053,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6054,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6055,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6056,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6057,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6058,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6059,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6060,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6061,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6062,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6063,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6064,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6065,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6066,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6067,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6068,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6069,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6070,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6071,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6072,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6073,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6074,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6075,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6076,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6077,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6078,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6079,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6080,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6081,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6082,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6083,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6084,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6085,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6086,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6087,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6088,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6089,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6090,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6091,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6092,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6093,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6094,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6095,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6096,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6097,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6098,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6099,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6100,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6101,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6102,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6103,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6104,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6105,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6106,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6107,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6108,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6109,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6110,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6111,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6112,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6113,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6114,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6115,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6116,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6117,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6118,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6119,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6120,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6121,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6122,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6123,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6124,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6125,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6126,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6127,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6128,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6129,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6130,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6131,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6132,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6133,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6134,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6135,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6136,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6137,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6138,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6139,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6140,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6141,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6142,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6143,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6144,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6145,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6146,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6147,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6148,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6149,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6150,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6151,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6152,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6153,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6154,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6155,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6156,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6157,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6158,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6159,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6160,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6161,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6162,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6163,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6164,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6165,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6166,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6167,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6168,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6169,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6170,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6171,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6172,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6173,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6174,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6175,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6176,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6177,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6178,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6179,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6180,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6181,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6182,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6183,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6184,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6185,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6186,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6187,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6188,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6189,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6190,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6191,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6192,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6193,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6194,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6195,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6196,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6197,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6198,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6199,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6200,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6201,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6202,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6203,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6204,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6205,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6206,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6207,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6208,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6209,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6210,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6211,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6212,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6213,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6214,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6215,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6216,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6217,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6218,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6219,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6220,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6221,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6222,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6223,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6224,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6225,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6226,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6227,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6228,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6229,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6230,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6231,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6232,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6233,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6234,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6235,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6236,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6237,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6238,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6239,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6240,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6241,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6242,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6243,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6244,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6245,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6246,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6247,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6248,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6249,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6250,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6251,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6252,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6253,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6254,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6255,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6256,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6257,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6258,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6259,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6260,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6261,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6262,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6263,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6264,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6265,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6266,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6267,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6268,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6269,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6270,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6271,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6272,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6273,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6274,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6275,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6276,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6277,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6278,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6279,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6280,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6281,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6282,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6283,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6284,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6285,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6286,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6287,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6288,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6289,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6290,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6291,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6292,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6293,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6294,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6295,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6296,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6297,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6298,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6299,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6300,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6301,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6302,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6303,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6304,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6305,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6306,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6307,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6308,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6309,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6310,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6311,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6312,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6313,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6314,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6315,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6316,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6317,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6318,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6319,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6320,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6321,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6322,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6323,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6324,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6325,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6326,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6327,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6328,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6329,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6330,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6331,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6332,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6333,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6334,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6335,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6336,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6337,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6338,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6339,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6340,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6341,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6342,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6343,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6344,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6345,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6346,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6347,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6348,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6349,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6350,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6351,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6352,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6353,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6354,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6355,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6356,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6357,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6358,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6359,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6360,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6361,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6362,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6363,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6364,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6365,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6366,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6367,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6368,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6369,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6370,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6371,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6372,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6373,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6374,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6375,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6376,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6377,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6378,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6379,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6380,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6381,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6382,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6383,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6384,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6385,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6386,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6387,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6388,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6389,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6390,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6391,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6392,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6393,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6394,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6395,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6396,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6397,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6398,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6399,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6400,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6401,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6402,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6403,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6404,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6405,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6406,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6407,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6408,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6409,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6410,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6411,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6412,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6413,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6414,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6415,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6416,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6417,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6418,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6419,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6420,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6421,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6422,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6423,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6424,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6425,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6426,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6427,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6428,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6429,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6430,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6431,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6432,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6433,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6434,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6435,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6436,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6437,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6438,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6439,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6440,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6441,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6442,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6443,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6444,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6445,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6446,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6447,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6448,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6449,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6450,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6451,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6452,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6453,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6454,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6455,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6456,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6457,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6458,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6459,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6460,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6461,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6462,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6463,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6464,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6465,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6466,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6467,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6468,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6469,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6470,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6471,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6472,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6473,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6474,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6475,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6476,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6477,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6478,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6479,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6480,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6481,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6482,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6483,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6484,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY - (m.mod_HandlePosFrontOversize == "IncludeFrontOversizeBottom" ? m.mod_FrontOversizeBtm : 0);
+    }
+
+  }
+  , {
+    _id: 6485,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6486,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6487,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6488,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6489,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6490,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6491,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6492,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSide",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6493,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6494,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6495,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6496,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 0,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6497,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6498,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6499,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6500,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddle",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6501,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6502,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6503,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6504,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6505,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6506,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6507,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6508,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6509,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6510,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6511,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6512,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleHorMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 180,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6513,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6514,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6515,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6516,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverse",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6517,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6518,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6519,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6520,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6521,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6522,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6523,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6524,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6525,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6526,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6527,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6528,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6529,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6530,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6531,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6532,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6533,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6534,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6535,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6536,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6537,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6538,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6539,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6540,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6541,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6542,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6543,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6544,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6545,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6546,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6547,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6548,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6549,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6550,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6551,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6552,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6553,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6554,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6555,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6556,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6557,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideTopAligned",
     in_HandlePosHorizontal: "Border",
     in_HandlePosVertical: "Border",
     Rotation: 270,
@@ -557,11 +10423,11 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2518,
+    _id: 6558,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
+    in_PosType: "HandleVertSideTopAligned",
     in_HandlePosHorizontal: "Border",
     in_HandlePosVertical: "Center",
     Rotation: 270,
@@ -575,11 +10441,11 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2519,
+    _id: 6559,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
+    in_PosType: "HandleVertSideTopAligned",
     in_HandlePosHorizontal: "Center",
     in_HandlePosVertical: "Border",
     Rotation: 270,
@@ -593,7247 +10459,11 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2520,
+    _id: 6560,
     in_FrontType: "Door",
     in_PosHorizontal: "Left",
     in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2521,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2522,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2523,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2524,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2525,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2526,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2527,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2528,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2529,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2530,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2531,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2532,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2533,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2534,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2535,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2536,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2537,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2538,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2539,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2540,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2541,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2542,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2543,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2544,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2545,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2546,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2547,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2548,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2549,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2550,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2551,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2552,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2553,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2554,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2555,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2556,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2557,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2558,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2559,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2560,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2561,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2562,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2563,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2564,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2565,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2566,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2567,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2568,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2569,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2570,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2571,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2572,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2573,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2574,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2575,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2576,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2577,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2578,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2579,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2580,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2581,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2582,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2583,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2584,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2585,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2586,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2587,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2588,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2589,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2590,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2591,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2592,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2593,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2594,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2595,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2596,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2597,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2598,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2599,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2600,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2601,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2602,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2603,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2604,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2605,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2606,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2607,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2608,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2609,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2610,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2611,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2612,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2613,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2614,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2615,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2616,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2617,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2618,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2619,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2620,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2621,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2622,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2623,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2624,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2625,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2626,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2627,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2628,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2629,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2630,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2631,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2632,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2633,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2634,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2635,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2636,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2637,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2638,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2639,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2640,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2641,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2642,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2643,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2644,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2645,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2646,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2647,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2648,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2649,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2650,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2651,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2652,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2653,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2654,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2655,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2656,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2657,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2658,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2659,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2660,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2661,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2662,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2663,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2664,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2665,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2666,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2667,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2668,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2669,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2670,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2671,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2672,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2673,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2674,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2675,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2676,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2677,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2678,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2679,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2680,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2681,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2682,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2683,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2684,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2685,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2686,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2687,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2688,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2689,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2690,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2691,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2692,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2693,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2694,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2695,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2696,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2697,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2698,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2699,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2700,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2701,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2702,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2703,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2704,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2705,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2706,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2707,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2708,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2709,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2710,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2711,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2712,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2713,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2714,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2715,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2716,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2717,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2718,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2719,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2720,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2721,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2722,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2723,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2724,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2725,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2726,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2727,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2728,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2729,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2730,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2731,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2732,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2733,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2734,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2735,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2736,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2737,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2738,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2739,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2740,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2741,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2742,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2743,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2744,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2745,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2746,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2747,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2748,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2749,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2750,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2751,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2752,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2753,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2754,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2755,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2756,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2757,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2758,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2759,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2760,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2761,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2762,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2763,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2764,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2765,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2766,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2767,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2768,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2769,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2770,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2771,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2772,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2773,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2774,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2775,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2776,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2777,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2778,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2779,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2780,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2781,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2782,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2783,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2784,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2785,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2786,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2787,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2788,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2789,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2790,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2791,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2792,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2793,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2794,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2795,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2796,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2797,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2798,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2799,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2800,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2801,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2802,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2803,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2804,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2805,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2806,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2807,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2808,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2809,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2810,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2811,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2812,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2813,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2814,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2815,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2816,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2817,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2818,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2819,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2820,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2821,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2822,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2823,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2824,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2825,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2826,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2827,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2828,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2829,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2830,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2831,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2832,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2833,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2834,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2835,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2836,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2837,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2838,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2839,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2840,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2841,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2842,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2843,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2844,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2845,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2846,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2847,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2848,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2849,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2850,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2851,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2852,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2853,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2854,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2855,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2856,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2857,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2858,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2859,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2860,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2861,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2862,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2863,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2864,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2865,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2866,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2867,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2868,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2869,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2870,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2871,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2872,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2873,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2874,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2875,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2876,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2877,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2878,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2879,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2880,
-    in_FrontType: "Drawer",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2881,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2882,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2883,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2884,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2885,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2886,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2887,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2888,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2889,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2890,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2891,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2892,
-    in_FrontType: "Fliplift",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2893,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2894,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2895,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2896,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2897,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2898,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2899,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2900,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2901,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2902,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2903,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2904,
-    in_FrontType: "Dishwasher",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2905,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2906,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2907,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2908,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2909,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2910,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2911,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2912,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2913,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2914,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2915,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2916,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Right",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2917,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2918,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2919,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2920,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2921,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleXDistance + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2922,
-    in_FrontType: "Door",
-    in_PosHorizontal: "Left",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
+    in_PosType: "HandleVertSideTopAligned",
     in_HandlePosHorizontal: "Center",
     in_HandlePosVertical: "Center",
     Rotation: 270,
@@ -7847,11 +10477,3647 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2923,
+    _id: 6561,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6562,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6563,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6564,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6565,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6566,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6567,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6568,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6569,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6570,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6571,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6572,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6573,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6574,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6575,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6576,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6577,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6578,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6579,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6580,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6581,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6582,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6583,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6584,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6585,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6586,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6587,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6588,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6589,
     in_FrontType: "Door",
     in_PosHorizontal: "Right",
     in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6590,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6591,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6592,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6593,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6594,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6595,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6596,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6597,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6598,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6599,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6600,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6601,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6602,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6603,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6604,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6605,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6606,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6607,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6608,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6609,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6610,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6611,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6612,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertSideInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6613,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6614,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6615,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6616,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6617,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6618,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6619,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6620,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6621,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6622,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6623,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6624,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6625,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6626,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6627,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6628,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6629,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6630,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6631,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6632,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6633,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6634,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6635,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6636,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6637,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6638,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6639,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6640,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6641,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6642,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6643,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6644,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6645,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6646,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6647,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6648,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6649,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6650,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6651,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6652,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6653,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6654,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6655,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6656,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6657,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6658,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6659,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6660,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6661,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6662,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6663,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6664,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6665,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6666,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6667,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6668,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6669,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6670,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6671,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6672,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6673,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6674,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6675,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6676,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6677,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6678,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6679,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6680,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6681,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6682,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6683,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6684,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6685,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6686,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6687,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6688,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6689,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6690,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6691,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6692,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6693,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6694,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6695,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6696,
+    in_FrontType: "Pullout",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6697,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6698,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6699,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6700,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6701,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6702,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6703,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6704,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6705,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6706,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6707,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6708,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6709,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6710,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6711,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6712,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6713,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6714,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6715,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6716,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6717,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6718,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6719,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6720,
+    in_FrontType: "Drawer",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6721,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6722,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6723,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6724,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6725,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6726,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6727,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6728,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6729,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6730,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6731,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6732,
+    in_FrontType: "Fliplift",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6733,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6734,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6735,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6736,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6737,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6738,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6739,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6740,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6741,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6742,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6743,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6744,
+    in_FrontType: "Dishwasher",
+    in_PosHorizontal: "Center",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width / 2 + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6745,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6746,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6747,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6748,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6749,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6750,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + (HandleHeight / 2) + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6751,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6752,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6753,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6754,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6755,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Border",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6756,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Border",
+    in_HandlePosVertical: "Center",
+    Rotation: 90,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Width - HandleXDistance - (HandleHeight / 2) - m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6757,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6758,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6759,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6760,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Center",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
+    }
+
+  }
+  , {
+    _id: 6761,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Border",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6762,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Left",
+    in_PosVertical: "Down",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
+    in_HandlePosHorizontal: "Center",
+    in_HandlePosVertical: "Center",
+    Rotation: 270,
+    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleXDistance + m.mod_HandleOffsetX;
+    }
+    ,
+    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
+      return HandleYDistance + (HandleHeight / 2) - ((HandleHeight - DrillDistance) / 2) + m.mod_HandleOffsetY;
+    }
+
+  }
+  , {
+    _id: 6763,
+    in_FrontType: "Door",
+    in_PosHorizontal: "Right",
+    in_PosVertical: "Up",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Center",
     in_HandlePosVertical: "Border",
     Rotation: 90,
@@ -7865,11 +14131,11 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2924,
+    _id: 6764,
     in_FrontType: "Door",
     in_PosHorizontal: "Right",
     in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Center",
     in_HandlePosVertical: "Center",
     Rotation: 90,
@@ -7883,11 +14149,11 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2925,
+    _id: 6765,
     in_FrontType: "Door",
     in_PosHorizontal: "Right",
     in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Center",
     in_HandlePosVertical: "Border",
     Rotation: 90,
@@ -7896,16 +14162,16 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
     }
     ,
     PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
     }
 
   }
   , {
-    _id: 2926,
+    _id: 6766,
     in_FrontType: "Door",
     in_PosHorizontal: "Right",
     in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Center",
     in_HandlePosVertical: "Center",
     Rotation: 90,
@@ -7914,16 +14180,16 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
     }
     ,
     PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
     }
 
   }
   , {
-    _id: 2927,
+    _id: 6767,
     in_FrontType: "Door",
     in_PosHorizontal: "Right",
     in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Center",
     in_HandlePosVertical: "Border",
     Rotation: 90,
@@ -7937,11 +14203,11 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2928,
+    _id: 6768,
     in_FrontType: "Door",
     in_PosHorizontal: "Right",
     in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Center",
     in_HandlePosVertical: "Center",
     Rotation: 90,
@@ -7955,83 +14221,11 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2929,
+    _id: 6769,
     in_FrontType: "Pullout",
     in_PosHorizontal: "Center",
     in_PosVertical: "Center",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2930,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2931,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2932,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2933,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSide",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Border",
     in_HandlePosVertical: "Border",
     Rotation: 90,
@@ -8040,16 +14234,16 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
     }
     ,
     PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
     }
 
   }
   , {
-    _id: 2934,
+    _id: 6770,
     in_FrontType: "Pullout",
     in_PosHorizontal: "Center",
     in_PosVertical: "Center",
-    in_PosType: "HandleVertSide",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Border",
     in_HandlePosVertical: "Center",
     Rotation: 90,
@@ -8058,16 +14252,16 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
     }
     ,
     PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
     }
 
   }
   , {
-    _id: 2935,
+    _id: 6771,
     in_FrontType: "Pullout",
     in_PosHorizontal: "Center",
     in_PosVertical: "Center",
-    in_PosType: "HandleVertSide",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Center",
     in_HandlePosVertical: "Border",
     Rotation: 90,
@@ -8076,16 +14270,16 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
     }
     ,
     PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
     }
 
   }
   , {
-    _id: 2936,
+    _id: 6772,
     in_FrontType: "Pullout",
     in_PosHorizontal: "Center",
     in_PosVertical: "Center",
-    in_PosType: "HandleVertSide",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Center",
     in_HandlePosVertical: "Center",
     Rotation: 90,
@@ -8094,520 +14288,16 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
     }
     ,
     PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
+      return HandleLine + m.mod_HandleOffsetY - (HandleLength / 2);
     }
 
   }
   , {
-    _id: 2937,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2938,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2939,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2940,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2941,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2942,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2943,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2944,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2945,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2946,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2947,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2948,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2949,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2950,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2951,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2952,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2953,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2954,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2955,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2956,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2957,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2958,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2959,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2960,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Center",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleLine + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2961,
+    _id: 6773,
     in_FrontType: "Pullout",
     in_PosHorizontal: "Center",
     in_PosVertical: "Down",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2962,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2963,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2964,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2965,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Border",
     in_HandlePosVertical: "Border",
     Rotation: 90,
@@ -8621,11 +14311,11 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2966,
+    _id: 6774,
     in_FrontType: "Pullout",
     in_PosHorizontal: "Center",
     in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Border",
     in_HandlePosVertical: "Center",
     Rotation: 90,
@@ -8639,11 +14329,11 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2967,
+    _id: 6775,
     in_FrontType: "Pullout",
     in_PosHorizontal: "Center",
     in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Center",
     in_HandlePosVertical: "Border",
     Rotation: 90,
@@ -8657,11 +14347,11 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2968,
+    _id: 6776,
     in_FrontType: "Pullout",
     in_PosHorizontal: "Center",
     in_PosVertical: "Down",
-    in_PosType: "HandleVertSide",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Center",
     in_HandlePosVertical: "Center",
     Rotation: 90,
@@ -8675,515 +14365,11 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2969,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2970,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2971,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2972,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2973,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2974,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2975,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2976,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2977,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2978,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2979,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2980,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2981,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2982,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2983,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2984,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2985,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2986,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2987,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleHeight / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2988,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2989,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2990,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2991,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2992,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Down",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return HandleYDistance + (HandleLength / 2) - ((HandleLength - DrillDistance) / 2) + m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2993,
+    _id: 6777,
     in_FrontType: "Pullout",
     in_PosHorizontal: "Center",
     in_PosVertical: "Up",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2994,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2995,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2996,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 2997,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSide",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Border",
     in_HandlePosVertical: "Border",
     Rotation: 90,
@@ -9197,11 +14383,11 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2998,
+    _id: 6778,
     in_FrontType: "Pullout",
     in_PosHorizontal: "Center",
     in_PosVertical: "Up",
-    in_PosType: "HandleVertSide",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Border",
     in_HandlePosVertical: "Center",
     Rotation: 90,
@@ -9215,11 +14401,11 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 2999,
+    _id: 6779,
     in_FrontType: "Pullout",
     in_PosHorizontal: "Center",
     in_PosVertical: "Up",
-    in_PosType: "HandleVertSide",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Center",
     in_HandlePosVertical: "Border",
     Rotation: 90,
@@ -9233,443 +14419,11 @@ export var ct_tab_HandleConstruction: ICT_tab_HandleConstruction[] = [
 
   }
   , {
-    _id: 3000,
+    _id: 6780,
     in_FrontType: "Pullout",
     in_PosHorizontal: "Center",
     in_PosVertical: "Up",
-    in_PosType: "HandleVertSide",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3001,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3002,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3003,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3004,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 0,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3005,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3006,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3007,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3008,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddle",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3009,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3010,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3011,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3012,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3013,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3014,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3015,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3016,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertSideInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 270,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3017,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3018,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3019,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleHeight / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3020,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleHorMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Center",
-    Rotation: 180,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3021,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3022,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Border",
-    in_HandlePosVertical: "Center",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) + ((HandleLength - DrillDistance) / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3023,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
-    in_HandlePosHorizontal: "Center",
-    in_HandlePosVertical: "Border",
-    Rotation: 90,
-    PosX1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleXDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Width / 2 + m.mod_HandleOffsetX;
-    }
-    ,
-    PosY1(m: ITableParents_mc_Handle01_mc_Handlestrip01, HandleYDistance: number, HandleLength: number, HandleHeight: number, DrillDistance: number, HandleLine: number): number {
-      return m.mod_Height - HandleYDistance - (HandleLength / 2) - m.mod_HandleOffsetY;
-    }
-
-  }
-  , {
-    _id: 3024,
-    in_FrontType: "Pullout",
-    in_PosHorizontal: "Center",
-    in_PosVertical: "Up",
-    in_PosType: "HandleVertMiddleInverse",
+    in_PosType: "HandleVertMiddleInverseTopAligned",
     in_HandlePosHorizontal: "Center",
     in_HandlePosVertical: "Center",
     Rotation: 90,

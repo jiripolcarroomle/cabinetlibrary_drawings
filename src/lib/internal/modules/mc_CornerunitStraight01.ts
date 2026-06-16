@@ -9,7 +9,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping, ct2_tab_BracketMapping }
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction, ct2_tab_CarcaseBackwallConstruction } from '../custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings, ct2_tab_CarcaseBackwallSettings } from '../custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction, ct2_tab_CarcaseCornerunitConstruction } from '../custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction, ct2_tab_CarcaseHoodConstruction } from '../custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection, ct2_tab_CarcasePanelSelection } from '../custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations, ct2_tab_CarcasePartConnectionCalculations } from '../custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping, ct2_tab_CarcasePartConnectionMapping } from '../custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape, ct2_tab_CarcasePartsShape } from '../custom-tables/tab_CarcasePartsShape'
@@ -19,9 +19,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings, ct2_
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension, ct2_tab_CarcaseSlopedCeilingDimension } from '../custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction, ct2_tab_CarcaseStorageunitConstruction } from '../custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping, ct2_tab_ClothingOrganizerColorMapping } from '../custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition, ct2_tab_ClothingOrganizerDepthPosition } from '../custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping, ct2_tab_ClothingOrganizerExtraItemMapping } from '../custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions, ct2_tab_ClothingOrganizerInstallationDimensions } from '../custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping, ct2_tab_ClothingOrganizerMapping } from '../custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings, ct2_tab_ClothingOrganizerPositionZSettings } from '../custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary, ct2_tab_ComponentLibrary } from '../custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables, ct2_tab_ComponentVariables } from '../custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction, ct2_tab_CornerFillerFrontpanelConstruction } from '../custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -47,7 +48,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping, ct2_tab_EdgeMapping } from '..
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings, ct2_tab_EdgeNumberSettings } from '../custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings, ct2_tab_EdgeSettings } from '../custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList, ct2_tab_ErrorList } from '../custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction, ct2_tab_FillerConstruction } from '../custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings, ct2_tab_FillerHardwareSettings } from '../custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction, ct2_tab_FillerPartConstruction } from '../custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings, ct2_tab_FillerSettings } from '../custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping, ct2_tab_FlipliftColorMapping } from '../custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction, ct2_tab_FlipliftConstruction } from '../custom-tables/tab_FlipliftConstruction'
@@ -62,6 +65,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction, ct2_ta
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction, ct2_tab_FrontConstruction } from '../custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping, ct2_tab_FrontEdgeColorMapping } from '../custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction, ct2_tab_FrontPanelConstruction } from '../custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection, ct2_tab_FrontPanelSelection } from '../custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings, ct2_tab_GrainDirectionSettings } from '../custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary, ct2_tab_GraphicFileLibrary } from '../custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary, ct2_tab_GraphicLibrary } from '../custom-tables/tab_GraphicLibrary'
@@ -136,7 +140,7 @@ import { IModVar_mod_CarcaseColor, IModVarNonNull_mod_CarcaseColor, IModVar_mod_
 import { VariantValidation, IMatrix_mod_CarcaseColor, IMatrix_mod_CarcaseDepth, IMatrix_mod_CarcaseHeight, IMatrix_mod_CarcaseId, IMatrix_mod_CarcaseOutsideColor, IMatrix_mod_CarcaseOutsideProgram, IMatrix_mod_CarcaseProgram, IMatrix_mod_CarcaseWidth, IMatrix_mod_ShelfbtmThk, IMatrix_mod_ShelftopThk, IMatrix_mod_SidepanelleftThk, IMatrix_mod_SidepanelrightThk, IMatrix_mod_CornerunitStraightConstruction, IMatrix_mod_CornerunitFrontWidth, IMatrix_mod_PanelblindThk, IMatrix_mod_FingergripTop, IMatrix_mod_FingergripType, IMatrix_mod_CarcaseDirection, IMatrix_mod_ModuleName, IMatrix_mod_CarcaseConnectionLeftBtm, IMatrix_mod_CarcaseConnectionLeftTop, IMatrix_mod_CarcaseConnectionRightBtm, IMatrix_mod_CarcaseConnectionRightTop, IMatrix_mod_CarcasePartConnectionBackHor, IMatrix_mod_CarcasePartConnectionBackVert, IMatrix_mod_CarcasePartConnectionBtmVert, IMatrix_mod_CarcasePartConnectionLeftHor, IMatrix_mod_CarcasePartConnectionRightHor, IMatrix_mod_CarcasePartConnectionTopVert, IMatrix_mod_FingergripPos1, IMatrix_mod_FingergripPos2, IMatrix_mod_FingergripPos3, IMatrix_mod_FingergripPos4, IMatrix_mod_FingergripPos5, IMatrix_mod_FingergripQtyMiddle, IMatrix_mod_SidepanelmiddleShortWidth, IMatrix_mod_SidepanelmiddleThk, IMatrix_mod_CleatThk, IMatrix_mod_CleatWidth } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
-import { mc_CornerunitStraight01_createBuildPlan, mc_CornerunitStraight01_afterDataCompletion, mc_CornerunitStraight01_manufacturerDataCompletion, mc_CornerunitStraight01_calculateContainerModules } from '../../modules/mc_CornerunitStraight01';
+import { mc_CornerunitStraight01_createBuildPlan, mc_CornerunitStraight01_afterDataCompletion, mc_CornerunitStraight01_manufacturerDataCompletion, mc_CornerunitStraight01_calculateContainerModules, mc_CornerunitStraight01_prepareContext } from '../../modules/mc_CornerunitStraight01';
 
 export interface cbp_mc_CornerunitStraight01 extends IModBaseProp
   , IModVarNonNull_mod_CarcaseColor, IModVarNonNull_mod_CarcaseDepth, IModVarNonNull_mod_CarcaseHeight, IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_CarcaseOutsideColor, IModVarNonNull_mod_CarcaseOutsideProgram, IModVarNonNull_mod_CarcaseProgram, IModVarNonNull_mod_CarcaseWidth, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_ShelftopThk, IModVarNonNull_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelrightThk, IModVarNonNull_mod_CornerunitStraightConstruction, IModVarNonNull_mod_CornerunitFrontWidth, IModVarNonNull_mod_PanelblindThk, IModVarNonNull_mod_FingergripTop, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_CarcaseDirection, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_CarcaseConnectionLeftBtm, IModVarNonNull_mod_CarcaseConnectionLeftTop, IModVarNonNull_mod_CarcaseConnectionRightBtm, IModVarNonNull_mod_CarcaseConnectionRightTop, IModVarNonNull_mod_CarcasePartConnectionBackHor, IModVarNonNull_mod_CarcasePartConnectionBackVert, IModVarNonNull_mod_CarcasePartConnectionBtmVert, IModVarNonNull_mod_CarcasePartConnectionLeftHor, IModVarNonNull_mod_CarcasePartConnectionRightHor, IModVarNonNull_mod_CarcasePartConnectionTopVert, IModVarNonNull_mod_CornerunitInfo, IModVarNonNull_mod_FingergripPos1, IModVarNonNull_mod_FingergripPos2, IModVarNonNull_mod_FingergripPos3, IModVarNonNull_mod_FingergripPos4, IModVarNonNull_mod_FingergripPos5, IModVarNonNull_mod_FingergripQtyMiddle, IModVarNonNull_mod_SidepanelmiddleShortWidth, IModVarNonNull_mod_SidepanelmiddleThk, IModVarNonNull_mod_CleatThk, IModVarNonNull_mod_CleatWidth, IModVarNonNull_mod_CarcaseSpaceDimension {
@@ -161,6 +165,13 @@ export interface dc_mc_CornerunitStraight01 extends IModBaseProp
   addOD_M_mc_VertDivider01(index?: number): dc_mc_VertDivider01;
 }
 
+export interface pc_mc_CornerunitStraight01 extends dc_mc_CornerunitStraight01 {
+  _forcedInputAttributes?: string[];
+  getContextData(): IContextData | undefined;
+  getContextModule(id: string): OD_Base | undefined;
+  getRoomContours(): RoomContour[];
+}
+
 export interface adc_base_mc_CornerunitStraight01 extends IModBaseProp
   , IModVarNonNull_mod_CarcaseColor, IModVarNonNull_mod_CarcaseDepth, IModVarNonNull_mod_CarcaseHeight, IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_CarcaseOutsideColor, IModVarNonNull_mod_CarcaseOutsideProgram, IModVarNonNull_mod_CarcaseProgram, IModVarNonNull_mod_CarcaseWidth, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_ShelftopThk, IModVarNonNull_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelrightThk, IModVarNonNull_mod_CornerunitStraightConstruction, IModVarNonNull_mod_CornerunitFrontWidth, IModVarNonNull_mod_PanelblindThk, IModVarNonNull_mod_FingergripTop, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_CarcaseDirection, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_CarcaseConnectionLeftBtm, IModVarNonNull_mod_CarcaseConnectionLeftTop, IModVarNonNull_mod_CarcaseConnectionRightBtm, IModVarNonNull_mod_CarcaseConnectionRightTop, IModVarNonNull_mod_CarcasePartConnectionBackHor, IModVarNonNull_mod_CarcasePartConnectionBackVert, IModVarNonNull_mod_CarcasePartConnectionBtmVert, IModVarNonNull_mod_CarcasePartConnectionLeftHor, IModVarNonNull_mod_CarcasePartConnectionRightHor, IModVarNonNull_mod_CarcasePartConnectionTopVert, IModVarNonNull_mod_CornerunitInfo, IModVarNonNull_mod_FingergripPos1, IModVarNonNull_mod_FingergripPos2, IModVarNonNull_mod_FingergripPos3, IModVarNonNull_mod_FingergripPos4, IModVarNonNull_mod_FingergripPos5, IModVarNonNull_mod_FingergripQtyMiddle, IModVarNonNull_mod_SidepanelmiddleShortWidth, IModVarNonNull_mod_SidepanelmiddleThk, IModVarNonNull_mod_CleatThk, IModVarNonNull_mod_CleatWidth, IModVarNonNull_mod_CarcaseSpaceDimension {
   get m(): OD_Base[];
@@ -177,7 +188,7 @@ export interface ccm_mc_CornerunitStraight01 extends adc_base_mc_CornerunitStrai
 }
 
 
-export class OD_M_mc_CornerunitStraight01 extends OD_Base implements dc_mc_CornerunitStraight01
+export class OD_M_mc_CornerunitStraight01 extends OD_Base implements pc_mc_CornerunitStraight01, dc_mc_CornerunitStraight01
   , IModParents_mc_CornerunitStraight01, IModParents_mc_CornerunitStraight01_mc_Storageunit01
   , IModVar_mod_CarcaseColor, IModVar_mod_CarcaseDepth, IModVar_mod_CarcaseHeight, IModVar_mod_CarcaseId, IModVar_mod_CarcaseOutsideColor, IModVar_mod_CarcaseOutsideProgram, IModVar_mod_CarcaseProgram, IModVar_mod_CarcaseWidth, IModVar_mod_ShelfbtmThk, IModVar_mod_ShelftopThk, IModVar_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVar_mod_CornerunitStraightConstruction, IModVar_mod_CornerunitFrontWidth, IModVar_mod_PanelblindThk, IModVar_mod_FingergripTop, IModVar_mod_FingergripType, IModVar_mod_CarcaseDirection, IModVar_mod_ModuleName, IModVar_mod_CarcaseConnectionLeftBtm, IModVar_mod_CarcaseConnectionLeftTop, IModVar_mod_CarcaseConnectionRightBtm, IModVar_mod_CarcaseConnectionRightTop, IModVar_mod_CarcasePartConnectionBackHor, IModVar_mod_CarcasePartConnectionBackVert, IModVar_mod_CarcasePartConnectionBtmVert, IModVar_mod_CarcasePartConnectionLeftHor, IModVar_mod_CarcasePartConnectionRightHor, IModVar_mod_CarcasePartConnectionTopVert, IModVar_mod_CornerunitInfo, IModVar_mod_FingergripPos1, IModVar_mod_FingergripPos2, IModVar_mod_FingergripPos3, IModVar_mod_FingergripPos4, IModVar_mod_FingergripPos5, IModVar_mod_FingergripQtyMiddle, IModVar_mod_SidepanelmiddleShortWidth, IModVar_mod_SidepanelmiddleThk, IModVar_mod_CleatThk, IModVar_mod_CleatWidth, IModVar_mod_CarcaseSpaceDimension {
   constructor(parent: IModParents_mr_CornerunitStraight, manufacturerMode?: boolean) {
@@ -1508,6 +1519,15 @@ export class OD_M_mc_CornerunitStraight01 extends OD_Base implements dc_mc_Corne
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
   }
+  override prepareContext(contextRoots: OD_Base[]): void {
+    super.prepareContext(contextRoots);
+    this.internallyPrepareContext();
+    this.m.forEach(subMod => subMod.prepareContext(contextRoots));
+  }
+  internallyPrepareContext(): void {
+    this.#prepareContextInternal();
+  }
+  #prepareContextInternal = mc_CornerunitStraight01_prepareContext;
   seal(): IModuleNonNull_mc_CornerunitStraight01 {
     this.afterDataCompletion();
     const adc = new OD_M_mc_CornerunitStraight01_NonNull(this);

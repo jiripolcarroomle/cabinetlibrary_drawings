@@ -9,7 +9,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping, ct2_tab_BracketMapping }
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction, ct2_tab_CarcaseBackwallConstruction } from '../custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings, ct2_tab_CarcaseBackwallSettings } from '../custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction, ct2_tab_CarcaseCornerunitConstruction } from '../custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction, ct2_tab_CarcaseHoodConstruction } from '../custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection, ct2_tab_CarcasePanelSelection } from '../custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations, ct2_tab_CarcasePartConnectionCalculations } from '../custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping, ct2_tab_CarcasePartConnectionMapping } from '../custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape, ct2_tab_CarcasePartsShape } from '../custom-tables/tab_CarcasePartsShape'
@@ -19,9 +19,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings, ct2_
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension, ct2_tab_CarcaseSlopedCeilingDimension } from '../custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction, ct2_tab_CarcaseStorageunitConstruction } from '../custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping, ct2_tab_ClothingOrganizerColorMapping } from '../custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition, ct2_tab_ClothingOrganizerDepthPosition } from '../custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping, ct2_tab_ClothingOrganizerExtraItemMapping } from '../custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions, ct2_tab_ClothingOrganizerInstallationDimensions } from '../custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping, ct2_tab_ClothingOrganizerMapping } from '../custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings, ct2_tab_ClothingOrganizerPositionZSettings } from '../custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary, ct2_tab_ComponentLibrary } from '../custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables, ct2_tab_ComponentVariables } from '../custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction, ct2_tab_CornerFillerFrontpanelConstruction } from '../custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -47,7 +48,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping, ct2_tab_EdgeMapping } from '..
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings, ct2_tab_EdgeNumberSettings } from '../custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings, ct2_tab_EdgeSettings } from '../custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList, ct2_tab_ErrorList } from '../custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction, ct2_tab_FillerConstruction } from '../custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings, ct2_tab_FillerHardwareSettings } from '../custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction, ct2_tab_FillerPartConstruction } from '../custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings, ct2_tab_FillerSettings } from '../custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping, ct2_tab_FlipliftColorMapping } from '../custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction, ct2_tab_FlipliftConstruction } from '../custom-tables/tab_FlipliftConstruction'
@@ -62,6 +65,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction, ct2_ta
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction, ct2_tab_FrontConstruction } from '../custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping, ct2_tab_FrontEdgeColorMapping } from '../custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction, ct2_tab_FrontPanelConstruction } from '../custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection, ct2_tab_FrontPanelSelection } from '../custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings, ct2_tab_GrainDirectionSettings } from '../custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary, ct2_tab_GraphicFileLibrary } from '../custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary, ct2_tab_GraphicLibrary } from '../custom-tables/tab_GraphicLibrary'
@@ -146,7 +150,7 @@ import { VariantValidation, IMatrix_mod_CarcaseDepth, IMatrix_mod_CarcaseHeight,
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
 import { IPartAdd_part_FlipliftUnit } from '../part-add-interfaces';
-import { mc_Fliplift01_createBuildPlan, mc_Fliplift01_afterDataCompletion, mc_Fliplift01_manufacturerDataCompletion, mc_Fliplift01_calculateContainerModules } from '../../modules/mc_Fliplift01';
+import { mc_Fliplift01_createBuildPlan, mc_Fliplift01_afterDataCompletion, mc_Fliplift01_manufacturerDataCompletion, mc_Fliplift01_calculateContainerModules, mc_Fliplift01_prepareContext } from '../../modules/mc_Fliplift01';
 
 export interface cbp_mc_Fliplift01 extends IModBaseProp
   , IPartAdd_part_FlipliftUnit, IModVarNonNull_mod_CarcaseDepth, IModVarNonNull_mod_CarcaseHeight, IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_CarcaseWidth, IModVarNonNull_mod_FlipliftType, IModVarNonNull_mod_FrontHeight, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontThk, IModVarNonNull_mod_FrontWidth, IModVarNonNull_mod_HandleDrill, IModVarNonNull_mod_HandleLine, IModVarNonNull_mod_HandlePosLogic, IModVarNonNull_mod_FrontQtyElements, IModVarNonNull_mod_ShelffixedType, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_HardwareColor, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_FrontOversizeBtm, IModVarNonNull_mod_FrontOversizeLeft, IModVarNonNull_mod_FrontOversizeRight, IModVarNonNull_mod_FrontOversizeTop, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_HandleColor, IModVarNonNull_mod_HandleLength, IModVarNonNull_mod_HandleOffsetX, IModVarNonNull_mod_HandleOffsetY, IModVarNonNull_mod_HandlePosMatrix, IModVarNonNull_mod_HandlePosType, IModVarNonNull_mod_HandlestripPos, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_HingeType, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_ShelffixedBtm, IModVarNonNull_mod_ShelffixedPos, IModVarNonNull_mod_HandleDesign, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_CarcaseSpaceDimension, IModVarNonNull_mod_FrontSplitDescriptor, IModVarNonNull_mod_Originpos, IModVarNonNull_mod_OpeningType, IModVarNonNull_mod_CarcasePartInfo, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_PushtoopenColor, IModVarNonNull_mod_PushtoopenLine, IModVarNonNull_mod_PushtoopenOffset, IModVarNonNull_mod_PushtoopenPosition, IModVarNonNull_mod_PushtoopenType, IModVarNonNull_mod_OpeningAngle, IModVarNonNull_mod_FlipliftFrontHeightList, IModVarNonNull_mod_FlipliftFrontNumber, IModVarNonNull_mod_FlipliftHardwareColor, IModVarNonNull_mod_FlipliftHardwareType, IModVarNonNull_mod_HandleWeightCalculations, IModVarNonNull_mod_FrameFillingColor, IModVarNonNull_mod_FirstFront, IModVarNonNull_mod_LastFront, IModVarNonNull_mod_FrontGapHorTop, IModVarNonNull_mod_InteriorEquipmentHinge, IModVarNonNull_mod_FrontSegmentType, IModVarNonNull_mod_FrontSegmentColor, IModVarNonNull_mod_FrontSegmentDescriptor {
@@ -181,6 +185,13 @@ export interface dc_mc_Fliplift01 extends IModBaseProp
   addOD_M_mc_FlipliftHardware01(index?: number): dc_mc_FlipliftHardware01;
 }
 
+export interface pc_mc_Fliplift01 extends dc_mc_Fliplift01 {
+  _forcedInputAttributes?: string[];
+  getContextData(): IContextData | undefined;
+  getContextModule(id: string): OD_Base | undefined;
+  getRoomContours(): RoomContour[];
+}
+
 export interface adc_base_mc_Fliplift01 extends IModBaseProp
   , IModVarNonNull_mod_CarcaseDepth, IModVarNonNull_mod_CarcaseHeight, IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_CarcaseWidth, IModVarNonNull_mod_FlipliftType, IModVarNonNull_mod_FrontHeight, IModVarNonNull_mod_FrontId, IModVarNonNull_mod_FrontThk, IModVarNonNull_mod_FrontWidth, IModVarNonNull_mod_HandleDrill, IModVarNonNull_mod_HandleLine, IModVarNonNull_mod_HandlePosLogic, IModVarNonNull_mod_FrontQtyElements, IModVarNonNull_mod_ShelffixedType, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_HardwareColor, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_FrontOversizeBtm, IModVarNonNull_mod_FrontOversizeLeft, IModVarNonNull_mod_FrontOversizeRight, IModVarNonNull_mod_FrontOversizeTop, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_HandleColor, IModVarNonNull_mod_HandleLength, IModVarNonNull_mod_HandleOffsetX, IModVarNonNull_mod_HandleOffsetY, IModVarNonNull_mod_HandlePosMatrix, IModVarNonNull_mod_HandlePosType, IModVarNonNull_mod_HandlestripPos, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_HingeType, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_ShelffixedBtm, IModVarNonNull_mod_ShelffixedPos, IModVarNonNull_mod_HandleDesign, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_CarcaseSpaceDimension, IModVarNonNull_mod_FrontSplitDescriptor, IModVarNonNull_mod_Originpos, IModVarNonNull_mod_OpeningType, IModVarNonNull_mod_CarcasePartInfo, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_PushtoopenColor, IModVarNonNull_mod_PushtoopenLine, IModVarNonNull_mod_PushtoopenOffset, IModVarNonNull_mod_PushtoopenPosition, IModVarNonNull_mod_PushtoopenType, IModVarNonNull_mod_OpeningAngle, IModVarNonNull_mod_FlipliftFrontHeightList, IModVarNonNull_mod_FlipliftFrontNumber, IModVarNonNull_mod_FlipliftHardwareColor, IModVarNonNull_mod_FlipliftHardwareType, IModVarNonNull_mod_HandleWeightCalculations, IModVarNonNull_mod_FrameFillingColor, IModVarNonNull_mod_FirstFront, IModVarNonNull_mod_LastFront, IModVarNonNull_mod_FrontGapHorTop, IModVarNonNull_mod_InteriorEquipmentHinge, IModVarNonNull_mod_FrontSegmentType, IModVarNonNull_mod_FrontSegmentColor, IModVarNonNull_mod_FrontSegmentDescriptor {
   get m(): OD_Base[];
@@ -207,7 +218,7 @@ export interface ccm_mc_Fliplift01 extends adc_base_mc_Fliplift01 {
 }
 
 
-export class OD_M_mc_Fliplift01 extends OD_Base implements dc_mc_Fliplift01
+export class OD_M_mc_Fliplift01 extends OD_Base implements pc_mc_Fliplift01, dc_mc_Fliplift01
   , IModParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01, IModParents_mc_BaseunitFridge01_mc_CornerFillerFront01_mc_Dishwasher01_mc_Door01_mc_Drawer01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01, IModParents_mc_Door01_mc_Drawer01_mc_Fliplift01, IModParents_mc_Fliplift01, IModParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_FillerFront01_mc_Fixedfront01_mc_Fliplift01, IModParents_mc_CornerFillerFront01_mc_Door01_mc_Drawer01_mc_Fixedfront01_mc_Fliplift01_mc_PantryPullout01_mc_Pullout01, IModParents_mc_Door01_mc_Fliplift01
   , IModVar_mod_CarcaseDepth, IModVar_mod_CarcaseHeight, IModVar_mod_CarcaseId, IModVar_mod_CarcaseWidth, IModVar_mod_FlipliftType, IModVar_mod_FrontHeight, IModVar_mod_FrontId, IModVar_mod_FrontThk, IModVar_mod_FrontWidth, IModVar_mod_HandleDrill, IModVar_mod_HandleLine, IModVar_mod_HandlePosLogic, IModVar_mod_FrontQtyElements, IModVar_mod_ShelffixedType, IModVar_mod_FrontPosStart, IModVar_mod_HardwareColor, IModVar_mod_FrontColor, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapVert, IModVar_mod_FrontOversizeBtm, IModVar_mod_FrontOversizeLeft, IModVar_mod_FrontOversizeRight, IModVar_mod_FrontOversizeTop, IModVar_mod_FrontProgram, IModVar_mod_HandleColor, IModVar_mod_HandleLength, IModVar_mod_HandleOffsetX, IModVar_mod_HandleOffsetY, IModVar_mod_HandlePosMatrix, IModVar_mod_HandlePosType, IModVar_mod_HandlestripPos, IModVar_mod_HeightPosInsertion, IModVar_mod_HingeType, IModVar_mod_PlinthAreaHeight, IModVar_mod_ShelffixedBtm, IModVar_mod_ShelffixedPos, IModVar_mod_HandleDesign, IModVar_mod_ModuleName, IModVar_mod_FrontDesign, IModVar_mod_CarcaseSpaceDimension, IModVar_mod_FrontSplitDescriptor, IModVar_mod_Originpos, IModVar_mod_OpeningType, IModVar_mod_CarcasePartInfo, IModVar_mod_TypeElement, IModVar_mod_PushtoopenColor, IModVar_mod_PushtoopenLine, IModVar_mod_PushtoopenOffset, IModVar_mod_PushtoopenPosition, IModVar_mod_PushtoopenType, IModVar_mod_OpeningAngle, IModVar_mod_FlipliftFrontHeightList, IModVar_mod_FlipliftFrontNumber, IModVar_mod_FlipliftHardwareColor, IModVar_mod_FlipliftHardwareType, IModVar_mod_HandleWeightCalculations, IModVar_mod_FrameFillingColor, IModVar_mod_FirstFront, IModVar_mod_LastFront, IModVar_mod_FrontGapHorTop, IModVar_mod_InteriorEquipmentHinge, IModVar_mod_FrontSegmentType, IModVar_mod_FrontSegmentColor, IModVar_mod_FrontSegmentDescriptor {
   constructor(parent: IModParents_mf_Fliplift, manufacturerMode?: boolean) {
@@ -2287,6 +2298,15 @@ export class OD_M_mc_Fliplift01 extends OD_Base implements dc_mc_Fliplift01
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
   }
+  override prepareContext(contextRoots: OD_Base[]): void {
+    super.prepareContext(contextRoots);
+    this.internallyPrepareContext();
+    this.m.forEach(subMod => subMod.prepareContext(contextRoots));
+  }
+  internallyPrepareContext(): void {
+    this.#prepareContextInternal();
+  }
+  #prepareContextInternal = mc_Fliplift01_prepareContext;
   seal(): IModuleNonNull_mc_Fliplift01 {
     this.afterDataCompletion();
     const adc = new OD_M_mc_Fliplift01_NonNull(this);

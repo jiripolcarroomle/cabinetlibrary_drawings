@@ -112,15 +112,17 @@ import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01, 
 import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01, cbp_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
 import { dc_mc_SegmentFront01, adc_mc_SegmentFront01, cbp_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
 import { dc_me_HoodInsert, adc_me_HoodInsert, cbp_me_HoodInsert } from '../modules/me_HoodInsert'
-import { dc_mc_HoodInsert01, adc_mc_HoodInsert01, cbp_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
 import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, cbp_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
 import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder, cbp_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
 import { dc_mr_CeilingFiller, adc_mr_CeilingFiller, cbp_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
 import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01, cbp_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
 import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder, cbp_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
 import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder, cbp_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
-import { dc_mr_Filler, adc_mr_Filler, cbp_mr_Filler } from '../modules/mr_Filler'
-import { dc_mc_Filler01, adc_mc_Filler01, cbp_mc_Filler01 } from '../modules/mc_Filler01'
+import { dc_mr_FillerStraight, adc_mr_FillerStraight, cbp_mr_FillerStraight } from '../modules/mr_FillerStraight'
+import { dc_mc_FillerStraight01, adc_mc_FillerStraight01, cbp_mc_FillerStraight01 } from '../modules/mc_FillerStraight01'
+import { dc_mc_FillerHardware01, adc_mc_FillerHardware01, cbp_mc_FillerHardware01 } from '../modules/mc_FillerHardware01'
+import { dc_mc_FillerSupportPanels01, adc_mc_FillerSupportPanels01, cbp_mc_FillerSupportPanels01 } from '../modules/mc_FillerSupportPanels01'
+import { dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, cbp_mc_HoodCarcaseParts01 } from '../modules/mc_HoodCarcaseParts01'
 
 export interface cti_tab_ClothingOrganizerColorMapping {
   readonly in_HardwareColor?: string;
@@ -169,39 +171,147 @@ export class ct2_tab_ClothingOrganizerColorMapping {
 
 export var ct_tab_ClothingOrganizerColorMapping: ICT_tab_ClothingOrganizerColorMapping[] = [
   {
-    _id: 5,
+    _id: 61,
     in_HardwareColor: "DarkColor",
-    in_Type: "LiftRail",
-    in_Design: "CONERO",
-    MappedColor: "Black",
-    BoardColor: "LikeHardwareColor",
-    GrainGroupID: "N/A"
-  }
-  , {
-    _id: 6,
-    in_HardwareColor: "LightColor",
-    in_Type: "LiftRail",
-    in_Design: "CONERO",
+    in_Type: "WardrobeLift",
+    in_Design: "ConeroLift_445–628mm",
     MappedColor: "Black",
     BoardColor: "LikeCarcaseColor",
     GrainGroupID: "N/A"
   }
   , {
-    _id: 7,
-    in_HardwareColor: "WhiteColor",
-    in_Type: "LiftRail",
-    in_Design: "CONERO",
+    _id: 62,
+    in_HardwareColor: "DarkColor",
+    in_Type: "WardrobeLift",
+    in_Design: "ConeroLift",
     MappedColor: "Black",
-    BoardColor: "190",
-    GrainGroupID: "NoGrain"
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
   }
   , {
-    _id: 8,
-    in_HardwareColor: "BlackColor",
-    in_Type: "LiftRail",
-    in_Design: "CONERO",
+    _id: 63,
+    in_HardwareColor: "DarkColor",
+    in_Type: "TrouserRack",
+    in_Design: "ConeroTrouser",
     MappedColor: "Black",
-    BoardColor: "199",
-    GrainGroupID: "NoGrain"
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
+  }
+  , {
+    _id: 64,
+    in_HardwareColor: "DarkColor",
+    in_Type: "TieRack",
+    in_Design: "ConeroTie",
+    MappedColor: "Black",
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
+  }
+  , {
+    _id: 65,
+    in_HardwareColor: "LightColor",
+    in_Type: "WardrobeLift",
+    in_Design: "ConeroLift_445–628mm",
+    MappedColor: "Black",
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
+  }
+  , {
+    _id: 66,
+    in_HardwareColor: "LightColor",
+    in_Type: "WardrobeLift",
+    in_Design: "ConeroLift",
+    MappedColor: "Black",
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
+  }
+  , {
+    _id: 67,
+    in_HardwareColor: "LightColor",
+    in_Type: "TrouserRack",
+    in_Design: "ConeroTrouser",
+    MappedColor: "Black",
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
+  }
+  , {
+    _id: 68,
+    in_HardwareColor: "LightColor",
+    in_Type: "TieRack",
+    in_Design: "ConeroTie",
+    MappedColor: "Black",
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
+  }
+  , {
+    _id: 69,
+    in_HardwareColor: "WhiteColor",
+    in_Type: "WardrobeLift",
+    in_Design: "ConeroLift_445–628mm",
+    MappedColor: "Black",
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
+  }
+  , {
+    _id: 70,
+    in_HardwareColor: "WhiteColor",
+    in_Type: "WardrobeLift",
+    in_Design: "ConeroLift",
+    MappedColor: "Black",
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
+  }
+  , {
+    _id: 71,
+    in_HardwareColor: "WhiteColor",
+    in_Type: "TrouserRack",
+    in_Design: "ConeroTrouser",
+    MappedColor: "Black",
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
+  }
+  , {
+    _id: 72,
+    in_HardwareColor: "WhiteColor",
+    in_Type: "TieRack",
+    in_Design: "ConeroTie",
+    MappedColor: "Black",
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
+  }
+  , {
+    _id: 73,
+    in_HardwareColor: "BlackColor",
+    in_Type: "WardrobeLift",
+    in_Design: "ConeroLift_445–628mm",
+    MappedColor: "Black",
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
+  }
+  , {
+    _id: 74,
+    in_HardwareColor: "BlackColor",
+    in_Type: "WardrobeLift",
+    in_Design: "ConeroLift",
+    MappedColor: "Black",
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
+  }
+  , {
+    _id: 75,
+    in_HardwareColor: "BlackColor",
+    in_Type: "TrouserRack",
+    in_Design: "ConeroTrouser",
+    MappedColor: "Black",
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
+  }
+  , {
+    _id: 76,
+    in_HardwareColor: "BlackColor",
+    in_Type: "TieRack",
+    in_Design: "ConeroTie",
+    MappedColor: "Black",
+    BoardColor: "LikeCarcaseColor",
+    GrainGroupID: "N/A"
   }
 ];

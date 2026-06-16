@@ -1,12 +1,8 @@
 import { internal_enterBomOutput, internal_leaveBomOutput, internal_enterBomPartMasterDataElements, internal_leaveBomPartMasterDataElements, internal_enterBomPartMasterDataTouches, internal_leaveBomPartMasterDataTouches, internal_enterFunction, internal_leaveFunction, internal_enterModuleManufacturerDataCompletion, internal_leaveModuleManufacturerDataCompletion, internal_enterModuleAfterDataCompletion, internal_leaveModuleAfterDataCompletion, internal_enterModuleCreateBuildPlan, internal_leaveModuleCreateBuildPlan, internal_enterCollectParts, internal_leaveCollectParts, internal_enterCheckPartAttributes, internal_leaveCheckPartAttributes, internal_enterValidateVariant, internal_leaveValidateVariant, logFatal, logError, logWarning, logInfo, logDebug, getLogMessages, clearLogMessages, internal_enterBomOrderOutput, internal_leaveBomOrderOutput, getAttrChangeLogs, internal_enterLoadJson, internal_leaveLoadJson, internal_enterDataCompletionAssignDerivedData, internal_leaveDataCompletionAssignDerivedData, internal_enterDataCompletionSetDefault, internal_leaveDataCompletionSetDefault, logAttrChange, internal_enterDataCompletionSetGlobalVars, internal_leaveDataCompletionSetGlobalVars, internal_enterBomPartMasterDataTouchesStart, internal_enterBomPartMasterDataTouchesEnd, internal_enterCalculateContainerModules, internal_leaveCalculateContainerModules, internal_enterDataCompletionSetDefaultScripts_globalVars, internal_leaveDataCompletionSetDefaultScripts_globalVars, internal_enterModulePrepareContext, internal_leaveModulePrepareContext } from '../internal/logging'
 
 //#region Imports
-import { cbp_mc_Filler01, dc_mc_Filler01, adc_mc_Filler01, ccm_mc_Filler01 } from '../internal/modules/mc_Filler01'
+import { cbp_mc_FillerHardware01, dc_mc_FillerHardware01, adc_mc_FillerHardware01, ccm_mc_FillerHardware01, pc_mc_FillerHardware01 } from '../internal/modules/mc_FillerHardware01'
 import { GlobalFunc } from '../internal/global-func'
-import { dc_mc_StorageunitSidepanel01, OD_M_mc_StorageunitSidepanel01 } from '../internal/modules/mc_StorageunitSidepanel01'
-import { dc_mc_StorageunitShelfbtm01, OD_M_mc_StorageunitShelfbtm01 } from '../internal/modules/mc_StorageunitShelfbtm01'
-import { dc_mc_StorageunitShelftop01, OD_M_mc_StorageunitShelftop01 } from '../internal/modules/mc_StorageunitShelftop01'
-import { dc_mc_FillerFront01, OD_M_mc_FillerFront01 } from '../internal/modules/mc_FillerFront01'
 import { ct_tab_ApplianceGraphicLibrary, ICT_tab_ApplianceGraphicLibrary } from '../internal/custom-tables/tab_ApplianceGraphicLibrary'
 import { ct_tab_BaseunitFridgeConstruction, ICT_tab_BaseunitFridgeConstruction } from '../internal/custom-tables/tab_BaseunitFridgeConstruction'
 import { ct_tab_BaseunitFridgeMapping, ICT_tab_BaseunitFridgeMapping } from '../internal/custom-tables/tab_BaseunitFridgeMapping'
@@ -17,7 +13,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping } from '../internal/custo
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction } from '../internal/custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings } from '../internal/custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction } from '../internal/custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction } from '../internal/custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection } from '../internal/custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations } from '../internal/custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping } from '../internal/custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape } from '../internal/custom-tables/tab_CarcasePartsShape'
@@ -27,9 +23,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings } fro
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension } from '../internal/custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction } from '../internal/custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping } from '../internal/custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition } from '../internal/custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping } from '../internal/custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions } from '../internal/custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping } from '../internal/custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings } from '../internal/custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary } from '../internal/custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables } from '../internal/custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction } from '../internal/custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -55,7 +52,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping } from '../internal/custom-tabl
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings } from '../internal/custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings } from '../internal/custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList } from '../internal/custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction } from '../internal/custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings } from '../internal/custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction } from '../internal/custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings } from '../internal/custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping } from '../internal/custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction } from '../internal/custom-tables/tab_FlipliftConstruction'
@@ -70,6 +69,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction } from 
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction } from '../internal/custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping } from '../internal/custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction } from '../internal/custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection } from '../internal/custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings } from '../internal/custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary } from '../internal/custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary } from '../internal/custom-tables/tab_GraphicLibrary'
@@ -136,13 +136,13 @@ import { Dock, IDockingInfo, FaceKey, IPartBase, MatrixHelper, ModuleHelper, Par
 declare function uuidv4(): string;
 //#endregion Imports
 
-export function mc_Filler01_createBuildPlan(this: cbp_mc_Filler01): void {
-  internal_enterModuleCreateBuildPlan('mc_Filler01', this._id);
+export function mc_FillerHardware01_createBuildPlan(this: cbp_mc_FillerHardware01): void {
+  internal_enterModuleCreateBuildPlan('mc_FillerHardware01', this._id);
   try {
     // ###############################################################
     // ####################### CUSTOM SCRIPTS ########################
     // ###############################################################
-    // CUSTOMSCRIPT_mc_Filler01_CREATEBUILDPLAN
+    // CUSTOMSCRIPT_mc_FillerHardware01_CREATEBUILDPLAN
 
     // ###############################################################
     // ################### END CUSTOM SCRIPTS ########################
@@ -160,119 +160,13 @@ export function mc_Filler01_createBuildPlan(this: cbp_mc_Filler01): void {
   }
 }
 // ---------------------------------------------------------------
-export function mc_Filler01_afterDataCompletion(this: adc_mc_Filler01): void {
-  internal_enterModuleAfterDataCompletion('mc_Filler01', this._id);
+export function mc_FillerHardware01_afterDataCompletion(this: adc_mc_FillerHardware01): void {
+  internal_enterModuleAfterDataCompletion('mc_FillerHardware01', this._id);
   try {
     // ###############################################################
     // ####################### CUSTOM SCRIPTS ########################
     // ###############################################################
-    // CUSTOMSCRIPT_mc_Filler01_AFTERDATACOMPLETION
-
-    // Schuler Consulting
-    // Create: April 2025
-    // By Ludwig Weber
-    // Purpose: CabinetLibrary
-    //
-    // Description:
-    // Add the main module mc_Filler01
-    //
-    // Revisions:
-    //
-    //======================================================================
-
-    //======================================================================
-    //          Add the main module mc_Filler01
-    //======================================================================
-
-    // Add the module
-    //----------------------------------------------------
-
-    const filler = this.addOD_M_mc_FillerFront01();
-
-    // Set the attributes of the child
-    //----------------------------------------------------
-
-    filler.mod_CarcaseId = "Carcase01";
-    filler.mod_FingergripBtmType = "NoFingergrip";
-    filler.mod_FingergripTop = false;
-    filler.mod_FingergripTopType = "NoFingergrip";
-    filler.mod_FrontHeight = this.mod_Height;
-    filler.mod_FrontId = "front01";
-    filler.mod_FrontOversizeTop = this.mod_GlobalFrontOversizeTop;
-    filler.mod_FrontOversizeLeft = this.mod_GlobalFrontOversizeLeft;
-    filler.mod_FrontOversizeRight = this.mod_GlobalFrontOversizeRight;
-    filler.mod_FrontOversizeBtm = this.mod_GlobalFrontOversizeBtm;
-    filler.mod_FrontThk = 19;
-    filler.mod_DoorDirection = this.mod_Direction;
-    filler.mod_FirstFront = true;
-    filler.mod_LastFront = true;
-
-    // setOrigin
-    //----------------------------------------------------
-
-    filler.setOrigin(0, this.mod_FrontPosStart, this.mod_Depth + this.mod_FrontGapCarcase);
-
-    //======================================================================
-    //          Add the connectors
-    //======================================================================
-
-    // Add the module
-    //----------------------------------------------------
-
-    const side = this.addOD_M_mc_StorageunitSidepanel01();
-
-    // Set the attributes of the child
-    //----------------------------------------------------
-
-    side.mod_CarcaseId = "Carcase01";
-    side.mod_FingergripTop = false;
-    side.mod_FingergripQtyMiddle = 0;
-    side.mod_FingergripPos1 = 0;
-    side.mod_FingergripPos2 = 0;
-    side.mod_FingergripPos3 = 0;
-    side.mod_FingergripPos4 = 0;
-    side.mod_FingergripPos5 = 0;
-    side.mod_CarcaseOutsideColor = this.mod_CarcaseColor;
-    side.mod_CarcaseEdgeBackColor = this.mod_CarcaseEdgeColor;
-    side.mod_CarcaseOutsideProgram = this.mod_CarcaseProgram;
-
-    side.mod_CarcaseConnectionLeftBtm = "SideCShelf";
-    side.mod_CarcaseConnectionLeftTop = "SideCShelf";
-    side.mod_CarcaseConnectionRightBtm = "SideCShelf";
-    side.mod_CarcaseConnectionRightTop = "SideCShelf";
-    side.mod_CarcasePartConnectionBackHor = "BackwallCShelf";
-    side.mod_CarcasePartConnectionLeftHor = "SideCShelf";
-    side.mod_CarcasePartConnectionRightHor = "SideCShelf";
-    side.mod_CarcasePartConnectionTopVert = "ShelfCSide";
-    side.mod_CarcasePartConnectionBtmVert = "ShelfCSide";
-
-    side.mod_FittingConnectionBtmVert = "Dowel";
-    side.mod_FittingConnectionTopVert = "Dowel";
-    side.mod_FittingConnectionLeftBtm = "Dowel";
-    side.mod_FittingConnectionLeftTop = "Dowel";
-    side.mod_FittingConnectionLeftHor = "Dowel";
-    side.mod_FittingConnectionRightBtm = "Dowel";
-    side.mod_FittingConnectionRightHor = "Dowel";
-    side.mod_FittingConnectionRightTop = "Dowel";
-
-    side.mod_BackHeight = 0;
-    side.mod_TopDepth = 0;
-    side.mod_SlopeAngle = 0;
-    side.mod_SlopedCeilingConstruction = "Construction01";
-    side.mod_CarcaseDirection = "Left";
-    side.mod_CarcaseVisTop = false;
-    side.mod_CarcaseVisBtm = false;
-    side.mod_CarcaseVisBack = false;
-
-    side.mod_SidepanelType = "Left";
-    side.mod_Width = this.mod_SidepanelleftThk;
-    side.mod_Height = this.mod_Height;
-    side.mod_Depth = this.mod_Depth - 300;
-
-    // setOrigin
-    //----------------------------------------------------
-
-    side.setOrigin(0, this.mod_FrontPosStart, 300);
+    // CUSTOMSCRIPT_mc_FillerHardware01_AFTERDATACOMPLETION
 
     // ###############################################################
     // ################### END CUSTOM SCRIPTS ########################
@@ -290,13 +184,37 @@ export function mc_Filler01_afterDataCompletion(this: adc_mc_Filler01): void {
   }
 }
 // ---------------------------------------------------------------
-export function mc_Filler01_calculateContainerModules(this: ccm_mc_Filler01): void {
-  internal_enterCalculateContainerModules('mc_Filler01', this._id);
+export function mc_FillerHardware01_prepareContext(this: pc_mc_FillerHardware01): void {
+  internal_enterModulePrepareContext('mc_FillerHardware01', this._id);
   try {
     // ###############################################################
     // ####################### CUSTOM SCRIPTS ########################
     // ###############################################################
-    // CUSTOMSCRIPT_mc_Filler01_CALCULATECONTAINERMODULES
+    // CUSTOMSCRIPT_mc_FillerHardware01_PREPARECONTEXT
+
+    // ###############################################################
+    // ################### END CUSTOM SCRIPTS ########################
+    // ###############################################################
+  }
+  catch (error) {
+    if (error instanceof Error) {
+      logError(error.message + "\n" + error.stack);
+    } else {
+      logError(JSON.stringify(error, null, 4));
+    }
+  }
+  finally {
+    internal_leaveModulePrepareContext();
+  }
+}
+// ---------------------------------------------------------------
+export function mc_FillerHardware01_calculateContainerModules(this: ccm_mc_FillerHardware01): void {
+  internal_enterCalculateContainerModules('mc_FillerHardware01', this._id);
+  try {
+    // ###############################################################
+    // ####################### CUSTOM SCRIPTS ########################
+    // ###############################################################
+    // CUSTOMSCRIPT_mc_FillerHardware01_CALCULATECONTAINERMODULES
 
     // ###############################################################
     // ################### END CUSTOM SCRIPTS ########################
@@ -314,13 +232,13 @@ export function mc_Filler01_calculateContainerModules(this: ccm_mc_Filler01): vo
   }
 }
 // ---------------------------------------------------------------
-export function mc_Filler01_manufacturerDataCompletion(this: dc_mc_Filler01): void {
-  internal_enterModuleManufacturerDataCompletion('mc_Filler01', this._id);
+export function mc_FillerHardware01_manufacturerDataCompletion(this: dc_mc_FillerHardware01): void {
+  internal_enterModuleManufacturerDataCompletion('mc_FillerHardware01', this._id);
   try {
     // ###############################################################
     // ####################### CUSTOM SCRIPTS ########################
     // ###############################################################
-    // CUSTOMSCRIPT_mc_Filler01_MANUFACTURERDATACOMPLETION
+    // CUSTOMSCRIPT_mc_FillerHardware01_MANUFACTURERDATACOMPLETION
 
     // ###############################################################
     // ################### END CUSTOM SCRIPTS ########################

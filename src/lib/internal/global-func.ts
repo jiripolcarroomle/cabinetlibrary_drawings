@@ -10,7 +10,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping } from './custom-tables/t
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction } from './custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings } from './custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction } from './custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction } from './custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection } from './custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations } from './custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping } from './custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape } from './custom-tables/tab_CarcasePartsShape'
@@ -20,9 +20,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings } fro
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension } from './custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction } from './custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping } from './custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition } from './custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping } from './custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions } from './custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping } from './custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings } from './custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary } from './custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables } from './custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction } from './custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -48,7 +49,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping } from './custom-tables/tab_Edg
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings } from './custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings } from './custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList } from './custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction } from './custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings } from './custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction } from './custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings } from './custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping } from './custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction } from './custom-tables/tab_FlipliftConstruction'
@@ -63,6 +66,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction } from 
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction } from './custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping } from './custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction } from './custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection } from './custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings } from './custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary } from './custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary } from './custom-tables/tab_GraphicLibrary'
@@ -236,18 +240,20 @@ import { OD_M_mc_ClothingOrganizerHardware01 } from './modules/mc_ClothingOrgani
 import { OD_M_mc_ClothingOrganizerBoard01 } from './modules/mc_ClothingOrganizerBoard01'
 import { OD_M_mc_SegmentFront01 } from './modules/mc_SegmentFront01'
 import { OD_M_me_HoodInsert } from './modules/me_HoodInsert'
-import { OD_M_mc_HoodInsert01 } from './modules/mc_HoodInsert01'
 import { OD_M_md_EquipmentArticleBuilder } from './modules/md_EquipmentArticleBuilder'
 import { OD_M_md_EquipmentPlaceholder } from './modules/md_EquipmentPlaceholder'
 import { OD_M_mr_CeilingFiller } from './modules/mr_CeilingFiller'
 import { OD_M_mc_CeilingFiller01 } from './modules/mc_CeilingFiller01'
 import { OD_M_md_FrontPlaceholder } from './modules/md_FrontPlaceholder'
 import { OD_M_md_FrontArticleBuilder } from './modules/md_FrontArticleBuilder'
-import { OD_M_mr_Filler } from './modules/mr_Filler'
-import { OD_M_mc_Filler01 } from './modules/mc_Filler01'
+import { OD_M_mr_FillerStraight } from './modules/mr_FillerStraight'
+import { OD_M_mc_FillerStraight01 } from './modules/mc_FillerStraight01'
+import { OD_M_mc_FillerHardware01 } from './modules/mc_FillerHardware01'
+import { OD_M_mc_FillerSupportPanels01 } from './modules/mc_FillerSupportPanels01'
+import { OD_M_mc_HoodCarcaseParts01 } from './modules/mc_HoodCarcaseParts01'
 import { IGlobalVars } from './global-vars'
 import { CKind, Contour, ContourEntry, GenerationContour, Matrix4, Vector3 } from './base'
-import { FaceKey, IFaceMaterial, ModuleHelper, PartHelper, IPartBase } from './mod-base'
+import { FaceKey, IFaceMaterial, ModuleHelper, PartHelper, IPartBase, Dock } from './mod-base'
 import { IP_part_ApplianceFront_PartVarsReadOnly, IP_part_ApplianceFront_PartVarsWritable } from './parts/part_ApplianceFront'
 import { IP_part_ApplianceGraphic_PartVarsReadOnly, IP_part_ApplianceGraphic_PartVarsWritable } from './parts/part_ApplianceGraphic'
 import { IP_part_ApplianceUnit_PartVarsReadOnly, IP_part_ApplianceUnit_PartVarsWritable } from './parts/part_ApplianceUnit'
@@ -336,6 +342,12 @@ import { IP_part_HingeCarcase_PartVarsReadOnly, IP_part_HingeCarcase_PartVarsWri
 import { IP_part_HingeDoor_PartVarsReadOnly, IP_part_HingeDoor_PartVarsWritable } from './parts/part_HingeDoor'
 import { IP_part_HingeDrill_PartVarsReadOnly, IP_part_HingeDrill_PartVarsWritable } from './parts/part_HingeDrill'
 import { IP_part_HingeDrillFHF_PartVarsReadOnly, IP_part_HingeDrillFHF_PartVarsWritable } from './parts/part_HingeDrillFHF'
+import { IP_part_HoodBackwall_PartVarsReadOnly, IP_part_HoodBackwall_PartVarsWritable } from './parts/part_HoodBackwall'
+import { IP_part_HoodRail_PartVarsReadOnly, IP_part_HoodRail_PartVarsWritable } from './parts/part_HoodRail'
+import { IP_part_HoodShelfbtm_PartVarsReadOnly, IP_part_HoodShelfbtm_PartVarsWritable } from './parts/part_HoodShelfbtm'
+import { IP_part_HoodShelftop_PartVarsReadOnly, IP_part_HoodShelftop_PartVarsWritable } from './parts/part_HoodShelftop'
+import { IP_part_HoodSidepanelleft_PartVarsReadOnly, IP_part_HoodSidepanelleft_PartVarsWritable } from './parts/part_HoodSidepanelleft'
+import { IP_part_HoodSidepanelright_PartVarsReadOnly, IP_part_HoodSidepanelright_PartVarsWritable } from './parts/part_HoodSidepanelright'
 import { IP_part_Leg_PartVarsReadOnly, IP_part_Leg_PartVarsWritable } from './parts/part_Leg'
 import { IP_part_LegDrill_PartVarsReadOnly, IP_part_LegDrill_PartVarsWritable } from './parts/part_LegDrill'
 import { IP_part_LightSystem_PartVarsReadOnly, IP_part_LightSystem_PartVarsWritable } from './parts/part_LightSystem'
@@ -393,6 +405,7 @@ import { IP_part_Storageunit_PartVarsReadOnly, IP_part_Storageunit_PartVarsWrita
 import { IP_part_Toekick_PartVarsReadOnly, IP_part_Toekick_PartVarsWritable } from './parts/part_Toekick'
 import { IP_part_ToekickGroup_PartVarsReadOnly, IP_part_ToekickGroup_PartVarsWritable } from './parts/part_ToekickGroup'
 import { IP_part_UprightGroup_PartVarsReadOnly, IP_part_UprightGroup_PartVarsWritable } from './parts/part_UprightGroup'
+import { IP_part_VirtualFront_PartVarsReadOnly, IP_part_VirtualFront_PartVarsWritable } from './parts/part_VirtualFront'
 //#endregion Imports
 
 export class GlobalFunc {
@@ -1077,14 +1090,14 @@ export class GlobalFunc {
 
 
 	// Find the proper values in the FrontConstruction Table to reconize the info regarding the front panel\n//##################################################################
-	static find_FrontConstruction(FrontProgram: string, HStrip: string, HPos: string, Width: number, Height: number, PartGroup: string, FrontDesign: string, FrontColor: string = "All"): ICT_tab_FrontConstruction {
+	static find_FrontConstruction(FrontProgram: string, HandleDesignGroup: string, HPos: string, Width: number, Height: number, PartGroup: string, FrontDesign: string, FrontColor: string = "All"): ICT_tab_FrontConstruction {
 
 		// Wildcard parameters
 		let WildcardParams: any = {
 			in_FrontProgram: FrontProgram,
 			in_FrontDesign: FrontDesign,
 			in_FrontColor: FrontColor,
-			in_HandleStrip: HStrip,
+			in_HandleDesignGroup: HandleDesignGroup,
 			in_HandlePosType: HPos
 		};
 
@@ -1113,7 +1126,7 @@ export class GlobalFunc {
 		// Call the function and retrieve the value
 		let retVal = GlobalFunc.process_BasicTableQuery(ct_tab_FrontConstruction, WildcardParams, FixedParams, RangeParams, UniqueOutput);
 		if (retVal == undefined) {
-			let Text = PartGroup + ' - ' + FrontProgram + ' - ' + FrontDesign + ' - ' + Width + ' - ' + Height + ' - ' + HStrip + ' - ' + HPos;
+			let Text = PartGroup + ' - ' + FrontProgram + ' - ' + FrontDesign + ' - ' + Width + ' - ' + Height + ' - ' + HandleDesignGroup + ' - ' + HPos;
 			let ErrorMessage = GlobalFunc.find_ErrorList('Error 11006', 1);
 			logError(ErrorMessage.Message(Text));
 		}
@@ -1700,21 +1713,23 @@ export class GlobalFunc {
 		parentModule._posData.set('carcaseColor', parentModule.mod_CarcaseColor);
 		parentModule._posData.set('doorDirection', parentModule.mod_DoorDirection);
 
-		//===================================================
+		//==========================================================================================================
 		//          Manage the insertion level
-		//===================================================
+		//==========================================================================================================
 
-		/*
-		if (parentModule.mod_HeightPosInsertion > 0) {
-			let InsertionHeight = parentModule.mod_HeightPosInsertion + parentModule.mod_PlinthAreaHeight;
-			parentModule.addInsertLevelHeight(InsertionHeight, true);
-			parentModule.insertLevelFixed = false;
-		}
-		else {
+		const levels = parentModule.mod_PlacementLevels;
+		if (levels === 'OnFloor') {
 			parentModule.addInsertLevelHeight(0, true);
 			parentModule.insertLevelFixed = true;
 		}
-		*/
+		else {
+			const heightLevels = levels.split('_').map((x: string) => Number(x)).filter((x: number) => !isNaN(x));
+			heightLevels.forEach((height: number, index: number) => {
+				const insertionHeight = height + parentModule.mod_PlinthAreaHeight;
+				parentModule.addInsertLevelHeight(insertionHeight, index === 0);
+			});
+			parentModule.insertLevelFixed = false;
+		}
 
 	}
 
@@ -3188,143 +3203,190 @@ export class GlobalFunc {
 	}
 
 
-	// Process the bomout_Board\n//########################################################
+	// Generates BOM entries for panels, including cutting optimization and label information
 	static process_BoardBom(Elem: any, Part: any, ElementType: string, ElementCategory: string, ParentId: string) {
 
 		try {
 
-			//====================================================================
-			// MANUAL STUFF (TO BE DEVELOPED)
-			//====================================================================
+			//========================================================
+			// Guards
+			//========================================================
+			if (!Elem || !Part) {
+				return;
+			}
 
+			if (!Part._id || !Part._partId) {
+				return;
+			}
+
+			//========================================================
+			// Constants / manual defaults
+			//========================================================
 			const route = 'ProductionRoute';
 			const extraInfo1 = 'ExtraInfo1';
 			const extraInfo2 = 'ExtraInfo2';
 			const extraInfo3 = 'ExtraInfo3';
 
-			//====================================================================
-			// Get data from tables
-			//====================================================================
+			//========================================================
+			// Helper
+			//========================================================
+			const round2 = (value: number): number => Math.round(value * 100) / 100;
 
-			// Get part data
-			const PartSettings = GlobalFunc.find_PartSettings(Part._partId, Part.pa_AdditionalInfo1);
-			const bomName = PartSettings ? PartSettings.BomPartDescription : Part._partId;
-			const bomArticleGroup = PartSettings?.BomArticleGroup ?? 'None';
+			//========================================================
+			// Part settings
+			//========================================================
+			const partSettings = GlobalFunc.find_PartSettings(Part._partId, Part.pa_AdditionalInfo1);
+			const bomName = partSettings?.BomPartDescription ?? Part._partId;
+			const bomArticleGroup = partSettings?.BomArticleGroup ?? 'None';
 
-			// Get grain direction
-			let GrainDirection = 'None';
-			const validGroups = ['Carcase', 'Toekick', 'Countertop', 'AdditionalParts'];  // , 'AdditionalParts'
+			//========================================================
+			// Grain direction
+			//========================================================
+			let grainDirection = 'None';
+			const grainRelevantGroups = ['Carcase', 'Toekick', 'Countertop', 'AdditionalParts'];
 
-			if (validGroups.includes(bomArticleGroup)) {
-				const GrainDirectionSettings = GlobalFunc.find_GrainDirectionSettings(Part._partId, Part.pa_TypeElement, Part.pa_ProgramGrainGroup, Part.pa_ColorGrainGroup, Part._width, Part._depth);
-				GrainDirection = GrainDirectionSettings?.GrainDirection ?? 'None';
+			if (grainRelevantGroups.includes(bomArticleGroup)) {
+				const grainDirectionSettings = GlobalFunc.find_GrainDirectionSettings(
+					Part._partId,
+					Part.pa_TypeElement,
+					Part.pa_ProgramGrainGroup,
+					Part.pa_ColorGrainGroup,
+					Part._width,
+					Part._depth
+				);
+
+				grainDirection = grainDirectionSettings?.GrainDirection ?? 'None';
+			} else {
+				grainDirection = Part.pa_GrainDirection ?? 'None';
 			}
-			else {
-				GrainDirection = Part.pa_GrainDirection;
+
+			//========================================================
+			// Board data
+			//========================================================
+			const boardMapping = GlobalFunc.find_BoardMapping(Part.pa_TopColor, Part._thickness);
+			if (!boardMapping?.BoardId) {
+				return;
 			}
 
-			// Get board data
-			const BoardMappingTop = GlobalFunc.find_BoardMapping(Part.pa_TopColor, Part._thickness)!;
-			const board = GlobalFunc.find_BoardLibrary(BoardMappingTop.BoardId!);
+			const board = GlobalFunc.find_BoardLibrary(boardMapping.BoardId);
 			const material = board?.MaterialCode ?? '';
 			const boardType = board?.BoardType ?? '';
 			const boardGrain = board?.Grain ?? 'N';
 
-			// Check grain direction valid for board grain
-			const isBoardGrainLC = ['L', 'C'].includes(boardGrain);
-			const isGrainDirValid = ['Lengthwise', 'Crosswise'].includes(GrainDirection);
 
-			if (isBoardGrainLC && !isGrainDirValid) {
+			//========================================================
+			// Validate grain direction
+			//========================================================
+			const boardHasDirectionalGrain = ['L', 'C'].includes(boardGrain);
+			const grainDirectionIsValid = ['Lengthwise', 'Crosswise'].includes(grainDirection);
+
+			if (boardHasDirectionalGrain && !grainDirectionIsValid) {
 				const errorList = GlobalFunc.find_ErrorList('Error 40007', 1);
-				let messageText = errorList.Message("");
+				let messageText = errorList.Message('');
 
-				// Define the place holders
 				const values = {
 					part: Part._partId,
 					grainColor: Part.pa_ColorGrainGroup,
 					grainProgram: Part.pa_ProgramGrainGroup
 				};
 
-				// Replace the place holders in the text
 				messageText = messageText.replace(/@(\w+)/g, (_, key) => {
 					return values[key as keyof typeof values] ?? '';
 				});
 
-				// Throw the error
 				logError(messageText);
+				return;
 			}
 
-			// Get edge data
-			const EdgeData = GlobalFunc.process_EdgeInfo(Part._partId, Part._thickness, Part.pa_EdgeFrontColor, Part.pa_EdgeLeftColor, Part.pa_EdgeBackColor, Part.pa_EdgeRightColor, Part.pa_EdgeFrontType, Part.pa_EdgeLeftType, Part.pa_EdgeBackType, Part.pa_EdgeRightType, Part.pa_EdgeJointType, Part.pa_AdditionalInfo1)!;
-			const EdgeFrontThk = EdgeData.EdgeFrontData ? EdgeData.EdgeFrontData.Thickness || 0 : 0;
-			const EdgeLeftThk = EdgeData.EdgeLeftData ? EdgeData.EdgeLeftData.Thickness || 0 : 0;
-			const EdgeBackThk = EdgeData.EdgeBackData ? EdgeData.EdgeBackData.Thickness || 0 : 0;
-			const EdgeRightThk = EdgeData.EdgeRightData ? EdgeData.EdgeRightData.Thickness || 0 : 0;
+			//========================================================
+			// Edge data
+			//========================================================
+			const edgeData = GlobalFunc.process_EdgeInfo(
+				Part._partId,
+				Part._thickness,
+				Part.pa_EdgeFrontColor,
+				Part.pa_EdgeLeftColor,
+				Part.pa_EdgeBackColor,
+				Part.pa_EdgeRightColor,
+				Part.pa_EdgeFrontType,
+				Part.pa_EdgeLeftType,
+				Part.pa_EdgeBackType,
+				Part.pa_EdgeRightType,
+				Part.pa_EdgeJointType,
+				Part.pa_AdditionalInfo1
+			);
 
-			//====================================================================
-			// Define Output
-			//====================================================================
-
-			// Helper function for rounding
-			function round2(value: number): number {
-				return Math.round(value * 100) / 100;
+			if (!edgeData) {
+				return;
 			}
+
+			const edgeFrontThk = edgeData.EdgeFrontData?.Thickness ?? 0;
+			const edgeLeftThk = edgeData.EdgeLeftData?.Thickness ?? 0;
+			const edgeBackThk = edgeData.EdgeBackData?.Thickness ?? 0;
+			const edgeRightThk = edgeData.EdgeRightData?.Thickness ?? 0;
+
+			//========================================================
+			// Create output
+			//========================================================
+			const Board = Elem.addbomout_Board();
 
 			// Part data
-			Elem.bom_Type = Part._partId;
-			Elem.bom_Name = bomName;
-			Elem.bom_ArticleGroup = bomArticleGroup;
-			Elem.bom_PartId = Part._id;
-			Elem.bom_ElementCategory = ElementCategory;
-			Elem.bom_ElementId = Part._id;
-			Elem.bom_ParentId = ParentId;
-			Elem.bom_ElementType = ElementType;
+			Board.bom_Type = Part._partId;
+			Board.bom_Name = bomName;
+			Board.bom_ArticleGroup = bomArticleGroup;
+			Board.bom_PartId = Part._id;
+			Board.bom_ElementCategory = ElementCategory;
+			Board.bom_ElementId = Part._id;
+			Board.bom_ParentId = ParentId;
+			Board.bom_ElementType = ElementType;
 
 			// Dimensions
-			Elem.bom_Length = round2(Part._width);
-			Elem.bom_Width = round2(Part._depth);
-			Elem.bom_Finalthk = round2(Part._thickness);
-			Elem.bom_CutDimLength1 = round2(Part._width - EdgeLeftThk + EdgeData.OverdimensionLeft - EdgeRightThk + EdgeData.OverdimensionRight);
-			Elem.bom_CutDimWidth1 = round2(Part._depth - EdgeFrontThk + EdgeData.OverdimensionFront - EdgeBackThk + EdgeData.OverdimensionBack);
-
-			// No need for the cutting dimension 2 at the moment
-			// Elem.bom_CutDimLength2 = round2(Part._width - EdgeLeftThk - EdgeRightThk);
-			// Elem.bom_CutDimWidth2  = round2(Part._depth - EdgeFrontThk - EdgeBackThk);
+			Board.bom_Length = round2(Part._width ?? 0);
+			Board.bom_Width = round2(Part._depth ?? 0);
+			Board.bom_Finalthk = round2(Part._thickness ?? 0);
+			Board.bom_CutDimLength1 = round2(
+				(Part._width ?? 0)
+				- edgeLeftThk
+				+ (edgeData.OverdimensionLeft ?? 0)
+				- edgeRightThk
+				+ (edgeData.OverdimensionRight ?? 0)
+			);
+			Board.bom_CutDimWidth1 = round2(
+				(Part._depth ?? 0)
+				- edgeFrontThk
+				+ (edgeData.OverdimensionFront ?? 0)
+				- edgeBackThk
+				+ (edgeData.OverdimensionBack ?? 0)
+			);
 
 			// Material data
-			Elem.bom_Material = material;
-			Elem.bom_BoardType = boardType;
-			Elem.bom_GrainOrientation = Part.pa_GrainDirection;
-			Elem.bom_GrainOrientation = GrainDirection;
-			Elem.bom_Weight = round2(Part.pa_Weight ?? 0);
+			Board.bom_Material = material;
+			Board.bom_BoardType = boardType;
+			Board.bom_GrainOrientation = grainDirection;
+			Board.bom_Weight = round2(Part.pa_Weight ?? 0);
 
 			// Edge data
-			Elem.bom_EdgeFront = EdgeData.EdgeFrontCode;
-			Elem.bom_EdgeLeft = EdgeData.EdgeLeftCode;
-			Elem.bom_EdgeBack = EdgeData.EdgeBackCode;
-			Elem.bom_EdgeRight = EdgeData.EdgeRightCode;
-			Elem.bom_EdgeJointFrontLeft = EdgeData.EdgeJointFrontLeft;
-			Elem.bom_EdgeJointLeftBack = EdgeData.EdgeJointLeftBack;
-			Elem.bom_EdgeJointBackRight = EdgeData.EdgeJointBackRight;
-			Elem.bom_EdgeJointRightFront = EdgeData.EdgeJointRightFront;
-			Elem.bom_EdgeTransition = EdgeData.EdgeTransition;
-			Elem.bom_EdgeShape = EdgeData.EdgeShape;
-			Elem.bom_Program = Part.pa_Program ?? "";
+			Board.bom_EdgeFront = edgeData.EdgeFrontCode ?? '';
+			Board.bom_EdgeLeft = edgeData.EdgeLeftCode ?? '';
+			Board.bom_EdgeBack = edgeData.EdgeBackCode ?? '';
+			Board.bom_EdgeRight = edgeData.EdgeRightCode ?? '';
+			Board.bom_EdgeJointFrontLeft = edgeData.EdgeJointFrontLeft ?? '';
+			Board.bom_EdgeJointLeftBack = edgeData.EdgeJointLeftBack ?? '';
+			Board.bom_EdgeJointBackRight = edgeData.EdgeJointBackRight ?? '';
+			Board.bom_EdgeJointRightFront = edgeData.EdgeJointRightFront ?? '';
+			Board.bom_EdgeTransition = edgeData.EdgeTransition ?? '';
+			Board.bom_EdgeShape = edgeData.EdgeShape ?? '';
+			Board.bom_Program = Part.pa_Program ?? '';
 
 			// Additional data
-			Elem.bom_ExtraInfo1 = extraInfo1;
-			Elem.bom_ExtraInfo2 = extraInfo2;
-			Elem.bom_ExtraInfo3 = extraInfo3;
-			Elem.bom_Route = route;
+			Board.bom_ExtraInfo1 = extraInfo1;
+			Board.bom_ExtraInfo2 = extraInfo2;
+			Board.bom_ExtraInfo3 = extraInfo3;
+			Board.bom_Route = route;
 		}
-
-		//====================================================================
-		// Handle the errors
-		//====================================================================
-
 		catch (error: any) {
-			let ErrorMessage = GlobalFunc.find_ErrorList('Error 40003', 1);
-			logError(ErrorMessage.Message(error.message));
+			const errorMessage = GlobalFunc.find_ErrorList('Error 40003', 1);
+			logError(errorMessage.Message(error.message));
 		}
 	}
 
@@ -5003,13 +5065,11 @@ export class GlobalFunc {
 			if (HandleRotation == 0 || HandleRotation == 180) {
 				if (m.mod_Width <= HandleLength) {
 					logError('The handle dimension is bigger than the front dimension!')
-					return retHandle;
 				}
 			}
 			else {
 				if (m.mod_Height <= HandleLength) {
 					logError('The handle dimension is bigger than the front dimension!')
-					return retHandle;
 				}
 			}
 
@@ -5285,13 +5345,11 @@ export class GlobalFunc {
 		if (HandleRotation == 0 || HandleRotation == 180) {
 			if (m.mod_Width <= HandleLength) {
 				logError('The handle dimension is bigger than the front dimension!')
-				return retHandle;
 			}
 		}
 		else {
 			if (m.mod_Height <= HandleLength) {
 				logError('The handle dimension is bigger than the front dimension!')
-				return retHandle;
 			}
 		}
 
@@ -6701,6 +6759,7 @@ export class GlobalFunc {
 
 	// Mathematical support for long parts generation
 	static process_MathLongparts() {
+
 		/*
 				 * Provide mathematical functions required for long parts generation.
 				 * Some of those functions should make it to the API.
@@ -6733,14 +6792,14 @@ export class GlobalFunc {
 		const mr_Filler01 = 'mr_Filler01';
 
 		/** 
-			 * Extends the base Vector3 with some vector math 
-			 * CHANGED April 2026
-			 * Vector3Extended is not inherited from Vector3 anymore, is a new class
-			 * because we need to extend the original base.ts/Vector3 with more vector math.
-			 * However, this has to be done in industry standard, where the Vector3Extended is not.
-			 * Difference is that standard Vector3 math mutates the original instance,
-			 * whereas the Vector3Extended math returns a new instance with the result, leaving the original instance unchanged.
-			 * */
+		 * Extends the base Vector3 with some vector math 
+		 * CHANGED April 2026
+		 * Vector3Extended is not inherited from Vector3 anymore, is a new class
+		 * because we need to extend the original base.ts/Vector3 with more vector math.
+		 * However, this has to be done in industry standard, where the Vector3Extended is not.
+		 * Difference is that standard Vector3 math mutates the original instance,
+		 * whereas the Vector3Extended math returns a new instance with the result, leaving the original instance unchanged.
+		 * */
 		class Vector3Extended {
 
 			_x: number;
@@ -7000,7 +7059,6 @@ export class GlobalFunc {
 				return new LineSegmentEquation(this.getPointAt(start), this.getPointAt(this.length + end));
 			}
 		}
-
 
 		class MatchingOptions {
 			match3D: boolean = true;
@@ -11173,6 +11231,7 @@ export class GlobalFunc {
 	}
 
 
+	// Return the data from the HoodMapping table.
 	static find_HoodMapping(Supplier: string, HoodId: string): ICT_tab_HoodMapping {
 
 		let retEntry = ct_tab_HoodMapping.find(p => p.in_Supplier == Supplier && p.in_HoodId == HoodId)!;
@@ -15048,7 +15107,7 @@ export class GlobalFunc {
 
 
 	// Collect the needed data for front panels
-	static process_FrontPanelConstruction(Module: any, Partgroup: string, Program: string, Width: number, Height: number, Handlestrip: string, HandlePosType: string, FrontGrain: string, OverlayBtm = 0): { retFrontConstruction: any, retSpecificConstruction: any, width: number, height: number, thickness: number, posX: number, posY: number, posZ: number, weight: number, fillingColor: string, fillingGrain: string, fillingType: string, frontSegmentType: string, frontSegmentColor: string, frontSegmentGrainId: string } {
+	static process_FrontPanelConstruction(Module: any, Partgroup: string, Program: string, Width: number, Height: number, HandleDesignGroup: string, HandlePosType: string, FrontGrain: string, OverlayBtm = 0): { retFrontConstruction: any, retSpecificConstruction: any, width: number, height: number, thickness: number, posX: number, posY: number, posZ: number, weight: number, fillingColor: string, fillingGrain: string, fillingType: string, frontSegmentType: string, frontSegmentColor: string, frontSegmentGrainId: string } {
 
 		// Interface
 		let retFrontConstruction: any;
@@ -15076,7 +15135,7 @@ export class GlobalFunc {
 			// Retrieve data from table FrontConstruction
 			//===================================================
 
-			retFrontConstruction = GlobalFunc.find_FrontConstruction(Program, Handlestrip, HandlePosType, Width, Height, Partgroup, FrontDesign, frontColor);
+			retFrontConstruction = GlobalFunc.find_FrontConstruction(Program, HandleDesignGroup, HandlePosType, Width, Height, Partgroup, FrontDesign, frontColor);
 
 			// Safety check: If we got no value we stop the evaluation.
 			if (!retFrontConstruction?.FrontConstructionId) {
@@ -15170,7 +15229,7 @@ export class GlobalFunc {
 			//---------------------------------------------------
 			if (Module.g.basic_FrontpanelWeightLogic === 'Custom') {
 
-				weight = GlobalFunc.ue_FrontpanelWeightCalculations(Module, Partgroup, Program, Width, Height, Handlestrip, HandlePosType, FrontGrain)
+				weight = GlobalFunc.ue_FrontpanelWeightCalculations(Module, Partgroup, Program, Width, Height, HandleDesignGroup, HandlePosType, FrontGrain)
 
 				if (!weight || weight === undefined) {
 					weight = 0;
@@ -15277,6 +15336,7 @@ export class GlobalFunc {
 
 				// Add the colors
 				addAllColors(EdgeMaterialId, 90, EdgeMaterialId, 90, MainMaterialId, Rotation, MainMaterialId, Rotation, EdgeMaterialId, 0, EdgeMaterialId, 0);
+
 
 			}
 
@@ -16140,17 +16200,15 @@ export class GlobalFunc {
 		//          Manage the insertion level
 		//==========================================================================================================
 
-		/*
 		if (parentModule.mod_HeightPosInsertion > 0) {
-		  let InsertionHeight = parentModule.mod_HeightPosInsertion + parentModule.mod_PlinthAreaHeight;
-		  parentModule.addInsertLevelHeight(InsertionHeight, true);
-		  parentModule.insertLevelFixed = false;
+			const InsertionHeight = parentModule.mod_HeightPosInsertion + parentModule.mod_PlinthAreaHeight;
+			parentModule.addInsertLevelHeight(InsertionHeight, true);
+			parentModule.insertLevelFixed = false;
 		}
 		else {
-		  parentModule.addInsertLevelHeight(0, true);
-		  parentModule.insertLevelFixed = true;
+			parentModule.addInsertLevelHeight(0, true);
+			parentModule.insertLevelFixed = true;
 		}
-		*/
 
 	}
 
@@ -16173,17 +16231,15 @@ export class GlobalFunc {
 		//          Manage the insertion level
 		//===================================================
 
-		/*
-		if (this.mod_HeightPosInsertion > 0) {
-			let InsertionHeight = this.mod_HeightPosInsertion + this.mod_PlinthAreaHeight;
-			this.addInsertLevelHeight(InsertionHeight, true);
-			this.insertLevelFixed = false;
+		if (parentModule.mod_HeightPosInsertion > 0) {
+			const InsertionHeight = parentModule.mod_HeightPosInsertion + parentModule.mod_PlinthAreaHeight;
+			parentModule.addInsertLevelHeight(InsertionHeight, true);
+			parentModule.insertLevelFixed = false;
 		}
 		else {
-			this.addInsertLevelHeight(0, true);
-			this.insertLevelFixed = true;
+			parentModule.addInsertLevelHeight(0, true);
+			parentModule.insertLevelFixed = true;
 		}
-		*/
 
 	}
 
@@ -16941,6 +16997,7 @@ export class GlobalFunc {
 			in_Design: Design,
 			in_Color: Color,
 			in_ConnectionPosition: Position,
+
 		};
 
 		// Fixed parameters
@@ -16962,25 +17019,6 @@ export class GlobalFunc {
 
 		// Return the value
 		return retVal;
-	}
-
-
-	static find_ClothingOrganizerPositionZSettings(Type: string, Design: string): ICT_tab_ClothingOrganizerPositionZSettings {
-		// Call the function and return the value
-		let retEntry = ct_tab_ClothingOrganizerPositionZSettings.find(p =>
-			p.in_ClothesOrganizerType == Type &&
-			p.in_ClothesOrganizerDesign == Design
-		);
-
-		// ErrorMessage
-		if (retEntry == undefined) {
-			let Text = Type + ' - ' + Design;
-			let ErrorMessage = GlobalFunc.find_ErrorList('Error 13040', 1)
-			logError(ErrorMessage.Message(Text));
-		}
-
-		// Return Value
-		return retEntry!;
 	}
 
 
@@ -17007,7 +17045,7 @@ export class GlobalFunc {
 				PosX: number;
 				PosY: number;
 				PosZ: number;
-				Color: string;
+				Color: string | null;
 				Model3D: unknown | null;
 			}[];
 		};
@@ -17046,7 +17084,7 @@ export class GlobalFunc {
 					PosX: number;
 					PosY: number;
 					PosZ: number;
-					Color: string;
+					Color: string | null;
 					Model3D: unknown | null;
 				}[],
 			},
@@ -17062,8 +17100,40 @@ export class GlobalFunc {
 
 		const clothingOrganizerInfo = createDefaultResult();
 
-		try {
 
+		//--------------- Early return to exit the function if type or Design are None ---------------
+		if (m.mod_ClothingOrganizerType === "None" || m.mod_ClothingOrganizerDesign === "None") {
+			return clothingOrganizerInfo;
+		}
+
+		//--------------- Check if carcase clear dimensions fit to lift dimensions ---------------
+		//--------------- Implementation missing using the right insertation point in height for checking if there is enough space------------ 
+		const carcaseClearWidth = m.mod_Width;
+		const carcaseClearDepth = m.mod_Depth;
+		const carcaseClearHeight = m.mod_Height;
+
+		const clothingOrganizerDimensions = GlobalFunc.find_ClothingOrganizerInstallationDimensions(m.mod_ClothingOrganizerDesign);
+
+		if (!clothingOrganizerDimensions) {
+			return clothingOrganizerInfo;
+		}
+
+		const organizerMinWidth = clothingOrganizerDimensions?.ClothingOrganizerInstallationMinWidth ?? 0;
+		const organizerMaxWidth = clothingOrganizerDimensions?.ClothingOrganizerInstallationMaxWidth ?? 0;
+		const organizerMinDepth = clothingOrganizerDimensions?.ClothingOrganizerInstallationMinDepth ?? 0;
+		const organizerMinHeight = clothingOrganizerDimensions?.ClothingOrganizerInstallationMinHeight ?? 0;
+
+
+		if (organizerMinWidth > carcaseClearWidth ||
+			organizerMaxWidth < carcaseClearWidth ||
+			organizerMinDepth > carcaseClearDepth ||
+			organizerMinHeight > carcaseClearHeight) {
+			return clothingOrganizerInfo;
+		}
+
+
+
+		try {
 			//--------------- Manage the colors -----------------------------------
 
 			// Default we take the color from the attribute
@@ -17079,13 +17149,16 @@ export class GlobalFunc {
 
 			let positionZ = 0;
 			const descriptorAttribute = m.mod_ClothingOrganizerDepthPosition;
-			const positionSettings = GlobalFunc.find_ClothingOrganizerPositionZSettings(m.mod_ClothingOrganizerType, m.mod_ClothingOrganizerDesign);
-			const descriptor = descriptorAttribute && descriptorAttribute !== '' ? descriptorAttribute : positionSettings?.DescriptorPositionZ;
+			const positionSettings = GlobalFunc.find_ClothingOrganizerDepthPosition(m.mod_ClothingOrganizerType, m.mod_ClothingOrganizerDesign);
+
+			const descriptor = descriptorAttribute && descriptorAttribute !== '' ? descriptorAttribute : positionSettings?.DescriptorDepthPosition;
 
 			if (descriptor) {
 				const descriptorResult = GlobalFunc.process_Descriptor(descriptor, m.mod_Depth);
 				positionZ = descriptorResult?.[0] ?? 0;
 			}
+
+
 
 			//--------------- 3D data for hardware -----------------------------------
 
@@ -17094,6 +17167,7 @@ export class GlobalFunc {
 			if (!hardwareMapping) {
 				throw new Error('No clothing organizer mapping found.');
 			}
+
 
 			// Retrieve the Id's for BOM / Processing / Graphic
 			const objectMapping = GlobalFunc.find_ObjectMapping(hardwareMapping.Object!);
@@ -17116,17 +17190,43 @@ export class GlobalFunc {
 					throw new Error('No graphic data found for clothing organizer.');
 				}
 
+				// Check if DimX of 3DModel is bigger then the clearWidthMax, then Downscale the Model
+				let model3DWidth = 0
+				const model3DGraphicDimensionX = graphicInfo.DimensionX
+
+				if (model3DGraphicDimensionX > m.mod_Width) {
+					model3DWidth = m.mod_Width - ((graphicInfo.PartOffsetX ?? 0) * 2);
+				} else if (model3DGraphicDimensionX < 0) {
+					model3DWidth = 0;
+				} else if (model3DGraphicDimensionX >= 0 && model3DGraphicDimensionX <= m.mod_Width) {
+					model3DWidth = graphicInfo.DimensionX;
+				}
+
+				// Set Position of 3DModel based on Clothing Organizer Connection Position
+
+				let model3D_XPos = 0;
+
+				if (m.mod_ClothingOrganizerConnectionPosition === 'Right') {
+					model3D_XPos = (m.mod_Width - model3DWidth - (graphicInfo.PartOffsetX ?? 0))
+				} else if (m.mod_ClothingOrganizerConnectionPosition === 'Left') {
+					model3D_XPos = (graphicInfo.PartOffsetX ?? 0)
+				} else if (m.mod_ClothingOrganizerConnectionPosition === 'Left&Right') {
+					model3D_XPos = ((graphicInfo.PartOffsetX ?? 0) * 2)
+				}
+
+
 				// Set the valid data to the returned object
 				clothingOrganizerInfo.Hardware.Graphics.push({
 					Model3D: fileInfo.Model3D ?? null,
-					DimX: m.mod_Width - ((graphicInfo.PartOffsetX ?? 0) * 2),
+					DimX: model3DWidth,
 					DimY: graphicInfo.DimensionY ?? 0,
 					DimZ: graphicInfo.DimensionZ ?? 0,
-					PosX: graphicInfo.PartOffsetX ?? 0,
+					PosX: model3D_XPos,
 					PosY: m.mod_ClothingOrganizerHeightPosition,
 					PosZ: positionZ,
 					Color: graphicInfo.ColorId ?? '',
 				});
+
 
 				//--------------- Processings and BOM ----------------------------------
 
@@ -17181,7 +17281,6 @@ export class GlobalFunc {
 
 			// Read the connection side
 			const drillSide = m.mod_ClothingOrganizerConnectionPosition;
-
 			// Hardware which touches left and right sidepanel
 			if (drillSide === 'Left&Right' && graphicInfo.Identifier === 'ClothingOrganizer_LR') {
 				result.push({
@@ -17192,6 +17291,22 @@ export class GlobalFunc {
 					ProcessingId: processingId,
 				});
 
+				result.push({
+					Side: 'Right',
+					RefPosX: m.mod_Width,
+					RefPosY: (graphicInfo.InsertionPointY ?? 0) + heightPos,
+					RefPosZ: (graphicInfo.InsertionPointZ ?? 0) + depthPos,
+					ProcessingId: processingId,
+				});
+			} else if (drillSide === 'Left' && graphicInfo.Identifier === 'ClothingOrganizer_L') {
+				result.push({
+					Side: 'Left',
+					RefPosX: 0,
+					RefPosY: (graphicInfo.InsertionPointY ?? 0) + heightPos,
+					RefPosZ: (graphicInfo.InsertionPointZ ?? 0) + depthPos,
+					ProcessingId: processingId,
+				});
+			} else if (drillSide === 'Right' && graphicInfo.Identifier === 'ClothingOrganizer_R') {
 				result.push({
 					Side: 'Right',
 					RefPosX: m.mod_Width,
@@ -17449,6 +17564,8 @@ export class GlobalFunc {
 		const x = articlePosition.x ?? 0;
 		const y = articlePosition.y ?? 0;
 		const z = articlePosition.z ?? 0;
+		const ryRaw = articleDimension.ry ?? 0;
+		const ry = ((Math.round(ryRaw / 90) * 90) % 360 + 360) % 360;
 
 		// Find the lowest level
 		const lowestLevel = Math.min(...validLevels);
@@ -17461,7 +17578,8 @@ export class GlobalFunc {
 		if (validLevels.length >= 2) {
 			const highestLevel = Math.max(...validLevels);
 			result.distanceCeiling = round2(highestLevel - y - dimY);
-		} else {
+		}
+		else {
 			result.distanceCeiling = 0;
 		}
 
@@ -17470,9 +17588,30 @@ export class GlobalFunc {
 		//======================================================================
 
 		// Calculate the distance to the wall
-		const disLeft = x - minX;
-		const disRight = maxX - x - dimX;
-		const disBack = z - minY;
+		let disLeft = 0;
+		let disRight = 0;
+		let disBack = 0;
+
+		if (ry === 0) {
+			disLeft = x - minX;
+			disRight = maxX - x - dimX;
+			disBack = z - minY;
+		}
+		else if (ry === 90) {
+			disLeft = maxY - z;
+			disRight = z - minY - dimX;
+			disBack = minX - x;
+		}
+		else if (ry === 180) {
+			disLeft = maxX - x;
+			disRight = x - minX - dimX;
+			disBack = maxY - z;
+		}
+		else if (ry === 270) {
+			disLeft = z - minY - dimX;
+			disRight = maxY - z;
+			disBack = maxX - x - dimZ;
+		}
 
 		// Return the distance to the wall
 		result.distanceWallLeft = round2(disLeft);
@@ -17533,17 +17672,30 @@ export class GlobalFunc {
 
 				// Left side
 				if (Math.abs(prev.x - minX) < EPS && Math.abs(curr.x - minX) < EPS) {
-					direction = "toLeft";
+					if (ry === 0) direction = "toLeft";
+					else if (ry === 90) direction = "toBack";
+					else if (ry === 180) direction = "toRight";
 				}
 
 				// Right side
 				else if (Math.abs(prev.x - maxX) < EPS && Math.abs(curr.x - maxX) < EPS) {
-					direction = "toRight";
+					if (ry === 0) direction = "toRight";
+					else if (ry === 180) direction = "toLeft";
+					else if (ry === 270) direction = "toBack";
 				}
 
 				// Back side
 				else if (Math.abs(prev.y - minY) < EPS && Math.abs(curr.y - minY) < EPS) {
-					direction = "toBack";
+					if (ry === 0) direction = "toBack";
+					else if (ry === 90) direction = "toRight";
+					else if (ry === 270) direction = "toLeft";
+				}
+
+				// Front side
+				else if (Math.abs(prev.y - maxY) < EPS && Math.abs(curr.y - maxY) < EPS) {
+					if (ry === 90) direction = "toLeft";
+					else if (ry === 180) direction = "toBack";
+					else if (ry === 270) direction = "toRight";
 				}
 
 				// Guard for direction => no sloped ceiling found for this segment
@@ -17722,6 +17874,1074 @@ export class GlobalFunc {
 
 		return result;
 	}
+
+
+	// Orchestrates the generation of the BOM by executing the selected solution mode
+	static process_BomGeneration(Elem: any, Part: any, ElementType: string, ElementCategory: string, ParentId: string, Mode: string, PanelCategory: string) {
+
+		//========================================================
+		// StockParts
+		//========================================================
+		if (Mode === 'StockParts') {
+
+			const stockPartFound = GlobalFunc.process_StockPanelSelection(Elem, Part, ElementType, ElementCategory, ParentId, PanelCategory);
+
+			// If a suitable stock part was found, BOM generation is complete
+			if (stockPartFound === true) {
+				return;
+			}
+
+			// If no suitable stock part was found, continue with BoardAndEdges
+			GlobalFunc.process_BoardBom(Elem, Part, ElementType, ElementCategory, ParentId);
+			GlobalFunc.process_EdgebandBom(Elem, Part, ParentId, 'EdgeFront');
+			GlobalFunc.process_EdgebandBom(Elem, Part, ParentId, 'EdgeRight');
+			GlobalFunc.process_EdgebandBom(Elem, Part, ParentId, 'EdgeBack');
+			GlobalFunc.process_EdgebandBom(Elem, Part, ParentId, 'EdgeLeft');
+			return;
+		}
+
+		//========================================================
+		// BoardAndEdges
+		//========================================================
+		if (Mode === 'BoardAndEdges') {
+
+			GlobalFunc.process_BoardBom(Elem, Part, ElementType, ElementCategory, ParentId);
+			GlobalFunc.process_EdgebandBom(Elem, Part, ParentId, 'EdgeFront');
+			GlobalFunc.process_EdgebandBom(Elem, Part, ParentId, 'EdgeRight');
+			GlobalFunc.process_EdgebandBom(Elem, Part, ParentId, 'EdgeBack');
+			GlobalFunc.process_EdgebandBom(Elem, Part, ParentId, 'EdgeLeft');
+			return;
+		}
+
+		//========================================================
+		// SimpleBoard
+		//========================================================
+		if (Mode === 'SimpleBoard') {
+
+			GlobalFunc.process_BoardBom(Elem, Part, ElementType, ElementCategory, ParentId);
+			return;
+		}
+	}
+
+
+	// Generates BOM entries for edgebands based on panel geometry and edge requirements.
+	static process_EdgebandBom(Elem: any, Part: any, ParentId: string, EdgeName: string) {
+
+		//========================================================
+		// Constants
+		//========================================================
+		const edgeName = EdgeName;
+		const bomElementType = 'Edge';
+
+		//========================================================
+		// Guards
+		//========================================================
+		if (!Elem || !Part) {
+			return;
+		}
+
+		if (!Part._partId || !Part._id) {
+			return;
+		}
+
+		//========================================================
+		// Load master data
+		//========================================================
+		const edgeNumber = GlobalFunc.find_EdgeNumberSettings(Part._partId, edgeName);
+		if (!edgeNumber) {
+			return;
+		}
+
+		const edgeInfo = GlobalFunc.process_EdgeInfo(
+			Part._partId,
+			Part._thickness,
+			Part.pa_EdgeFrontColor,
+			Part.pa_EdgeLeftColor,
+			Part.pa_EdgeBackColor,
+			Part.pa_EdgeRightColor,
+			Part.pa_EdgeFrontType,
+			Part.pa_EdgeLeftType,
+			Part.pa_EdgeBackType,
+			Part.pa_EdgeRightType,
+			Part.pa_EdgeJointType
+		);
+		if (!edgeInfo || !edgeInfo.EdgeLeftData) {
+			return;
+		}
+
+		//========================================================
+		// Read edge data
+		//========================================================
+		const edgeLeftData = edgeInfo.EdgeLeftData;
+
+		const height = edgeLeftData.Height ?? 0;
+		const thickness = edgeLeftData.Thickness ?? 0;
+		const glueType = edgeLeftData.GlueType ?? '';
+		const supplierArticleCode = edgeLeftData.SupplierArticleNumber ?? '';
+
+		//========================================================
+		// Output data
+		//========================================================
+		const Edge = Elem.addbomout_Edge();
+
+		Edge.bom_Type = edgeNumber.BomEdgeType ?? '';
+		Edge.bom_Name = edgeNumber.BomEdgeDescription ?? '';
+		Edge.bom_EdgeId = edgeInfo.EdgeLeftCode ?? '';
+		Edge.bom_PartId = Part._id;
+		Edge.bom_Length = Part._depth ?? 0;
+		Edge.bom_Width = height;
+		Edge.bom_Thk = thickness;
+		Edge.bom_EdgeJoint = edgeInfo.EdgeJointLeftBack ?? '';
+		Edge.bom_GlueType = glueType;
+		Edge.bom_EdgeNumber = edgeNumber.BomEdgeNumber ?? '';
+		Edge.bom_Color = Part.pa_EdgeLeftColor ?? '';
+		Edge.bom_SupplierArticle = supplierArticleCode;
+		Edge.bom_ElementId = `${Part._id}_${edgeNumber.BomEdgeNumber ?? ''}`;
+		Edge.bom_ParentId = ParentId;
+		Edge.bom_ElementType = bomElementType;
+	}
+
+
+	// Selects suitable pre-processed panels from stock based on material and dimensions and adds them to the BOM
+	static process_StockPanelSelection(Elem: any, Part: any, ElementType: string, ElementCategory: string, ParentId: string, PanelCategory: string): boolean {
+
+		//========================================================
+		// Local variables
+		//========================================================
+		const partId = Part._partId;
+		const length = Part._width;
+		const width = Part._depth;
+		const thk = Part._thickness;
+
+		//========================================================
+		// Try to get a board
+		//========================================================
+
+		const boardMapping = GlobalFunc.find_BoardMapping(Part.pa_TopColor, thk);
+
+		// Guard: nothing found
+		if (!boardMapping?.BoardId) {
+			return false;
+		}
+		const board = GlobalFunc.find_BoardLibrary(boardMapping.BoardId);
+		const boardId = board?.MaterialCode ?? '';
+
+		// Guard: no valid boardId
+		if (!boardId) {
+			return false;
+		}
+
+		//========================================================
+		// Try to get the stock part
+		//========================================================
+		const stockPart = ct_tab_CarcasePanelSelection.find(p =>
+			p.in_PartId === partId &&
+			p.in_BoardId === boardId &&
+			length >= p.in_LengthMin &&
+			length <= p.in_LengthMax &&
+			width >= p.in_WidthMin &&
+			width <= p.in_WidthMax
+		);
+
+		// Guard: nothing found
+		if (!stockPart) {
+			return false;
+		}
+
+		//========================================================
+		// Continue with found stock part
+		//========================================================
+
+		const stockPanel = Elem.addbomout_StockPanel();
+
+		stockPanel.bom_Material = stockPart.StockPartId;
+		stockPanel.bom_Length = stockPart.Length;
+		stockPanel.bom_Width = stockPart.Width;
+		stockPanel.bom_Finalthk = stockPart.Thickness;
+		stockPanel.bom_Route = stockPart.Rework;
+
+		return true;
+	}
+
+
+	// Find descriptor for depth settings of the ClothingOrganizer
+	static find_ClothingOrganizerDepthPosition(Type: string, Design: string): ICT_tab_ClothingOrganizerDepthPosition {
+		// Call the function and return the value
+		let retEntry = ct_tab_ClothingOrganizerDepthPosition.find(p =>
+			p.in_ClothingOrganizerType == Type &&
+			p.in_ClothingOrganizerDesign == Design
+		);
+
+		// ErrorMessage
+		if (retEntry == undefined) {
+			let Text = Type + ' - ' + Design;
+			let ErrorMessage = GlobalFunc.find_ErrorList('Error 13040', 1)
+			logError(ErrorMessage.Message(Text));
+		}
+
+		// Return Value
+		return retEntry!;
+	}
+
+
+	// Describes the minimum and maximum need space insed the cabinet to install the clothing organizer
+	static find_ClothingOrganizerInstallationDimensions(Design: string): ICT_tab_ClothingOrganizerInstallationDimensions {
+
+		// Wildcard parameters
+		let WildcardParams: any = {
+			in_ClothingOrganizerDesign: Design,
+		};
+
+		// Fixed parameters
+		let FixedParams: any = {};
+
+		// Range parameters
+		let RangeParams: any = {};
+
+		// Return multiple rows or a single row (UniqueOutput = true returns a single row)
+		let UniqueOutput = true;
+
+		// Call the function and retrieve the value
+		let retVal = GlobalFunc.process_BasicTableQuery(ct_tab_ClothingOrganizerInstallationDimensions, WildcardParams, FixedParams, RangeParams, UniqueOutput);
+		if (retVal == undefined) {
+			let Text = Design;
+			let ErrorMessage = GlobalFunc.find_ErrorList('Error 13041', 1)
+			logError(ErrorMessage.Message(Text));
+		}
+
+		// Return the value
+		return retVal;
+	}
+
+
+	// Zentrale Auswertungslogik für den Dunstabzug.
+	static process_HoodInsert(HoodSupplier: string, HoodId: string, IntegrationType: string, ConstructionType: string, CabinetWidth: number, CabinetHeight: number, CabinetDepth: number): {
+		DatasetComplete: boolean;
+		GraphicId: string;
+		ConstructionId: string;
+		CarcaseConstructionId: string;
+		RearOffset: number;
+		BottomShortening: number;
+	} {
+		const result = {
+			DatasetComplete: false,
+			GraphicId: "",
+			ConstructionId: "",
+			CarcaseConstructionId: "",
+			RearOffset: 0,
+			BottomShortening: 0
+		};
+
+		// ----------------------------------------
+		// Guard 1 – Pflichtparameter prüfen
+		// ----------------------------------------
+		//const isStringOrNumber = (v: unknown): v is string | number =>
+		//  typeof v === 'string' || typeof v === 'number';
+		const isString = (v: unknown): v is string =>
+			typeof v === 'string';
+
+
+		const isNumber = (v: unknown): v is number =>
+			typeof v === 'number';
+
+		if (
+			!isString(HoodSupplier) ||
+			!isString(HoodId) ||
+			!isString(IntegrationType) ||
+			!isString(ConstructionType) ||
+			!isNumber(CabinetWidth) ||
+			!isNumber(CabinetHeight) ||
+			!isNumber(CabinetDepth)
+		) {
+			return result;
+		}
+		// ----------------------------------------
+		// Schritt 1 – Mapping auswerten
+		// ----------------------------------------
+		const hoodmapping = GlobalFunc.find_HoodMapping(HoodSupplier, HoodId);
+
+		if (!hoodmapping) {
+			return result;
+		}
+
+		result.ConstructionId = hoodmapping.ConstructionId ? hoodmapping.ConstructionId : "";
+		//result.GraphicId = hoodmapping.GraphicId ? hoodmapping.GraphicId:"";
+		result.GraphicId = hoodmapping.GraphicId ?? "";
+
+		const hoodconstruction = GlobalFunc.find_HoodConstruction(HoodSupplier, HoodId);
+		if (!hoodconstruction) {
+			return result;
+		}
+
+		let hoodHeight = hoodconstruction.Height ?? 0;
+		let hoodWidth = hoodconstruction.Width ?? 0;
+		let hoodDepth = hoodconstruction.Depth ?? 0;
+
+		// wenn alles richtig ist im fehlerfall sind wir vorher ausgestiegen.
+		result.DatasetComplete = true;
+		return result;
+	}
+
+
+	// find hood construction
+	static find_HoodConstruction(Supplier: string, HoodId: string): ICT_tab_HoodConstruction {
+
+		let retEntry = ct_tab_HoodConstruction.find(p => p.in_HoodId)!;
+
+		if (retEntry == undefined) {
+			let Text = HoodId;
+			let ErrorMessage = GlobalFunc.find_ErrorList('Error 13024', 1);
+			logError(ErrorMessage.Message(Text));
+		}
+		return retEntry!;
+	}
+
+
+	// Read the dockings and room contours, provide the needed data to the module context information list
+	static process_GetModuleContextInformation(module: any): {
+		NeedsVisibleSideLeft: boolean;
+		NeedsVisibleSideRight: boolean;
+		ReturnPlinthLeft: boolean;
+		ReturnPlinthRight: boolean;
+		ReturnCeilingFillerLeft: boolean;
+		ReturnCeilingFillerRight: boolean;
+
+		DistanceWallLeft: number;
+		DistanceWallRight: number;
+		DistanceWallBack: number;
+		DistanceCeiling: number;
+
+		FirstElement: boolean;
+		LastElement: boolean;
+		HasDockingLeft: boolean;
+		HasDockingRight: boolean;
+		HeightPosition: number;
+
+		SlopedCeiling: boolean;
+		SlopedCeilingDirection: "toLeft" | "toRight" | "toBack" | null;
+		SlopedCeilingAngle: number;
+		SlopedCeilingLevel: number;
+
+		DataComplete: boolean;
+	} {
+		//======================================================================
+		// Create the default return object
+		//======================================================================
+
+		const result = {
+			NeedsVisibleSideLeft: true,
+			NeedsVisibleSideRight: true,
+			ReturnPlinthLeft: true,
+			ReturnPlinthRight: true,
+			ReturnCeilingFillerLeft: true,
+			ReturnCeilingFillerRight: true,
+
+			DistanceWallLeft: 0,
+			DistanceWallRight: 0,
+			DistanceWallBack: 0,
+			DistanceCeiling: 0,
+
+			FirstElement: false,
+			LastElement: false,
+			HasDockingLeft: false,
+			HasDockingRight: false,
+			HeightPosition: 0,
+
+			SlopedCeiling: false,
+			SlopedCeilingDirection: null as "toLeft" | "toRight" | "toBack" | null,
+			SlopedCeilingAngle: 0,
+			SlopedCeilingLevel: 0,
+
+			DataComplete: false
+		};
+
+		//======================================================================
+		// Guard
+		//======================================================================
+
+		if (!module || !(module instanceof OD_M_mr_StorageunitSingle)) {
+			return result;
+		}
+
+		//======================================================================
+		// Read all required data from the module
+		//======================================================================
+
+		const EPS = 0.001;
+		const WALL_DISTANCE_MAX = 300;
+		const moduleContext = module.getContextModule(module._id);
+		const surroundingContours = module.getRoomContours() ?? [];
+		const articlePos = module.getArticlePos();
+
+		const articleDimension = {
+			x: module.mod_Width ?? 0,
+			y: module.mod_Height ?? 0,
+			z: module.mod_Depth ?? 0,
+			ry: moduleContext?._articlePos?.rotationY ?? 0
+		};
+
+		//======================================================================
+		// Analyze neighboring modules and dockings
+		//======================================================================
+
+		const dockingInfo = analyzeDocking(module, moduleContext, articleDimension.y, articleDimension.z, articleDimension.ry);
+
+		result.NeedsVisibleSideLeft = dockingInfo.needsVisibleSideLeft;
+		result.NeedsVisibleSideRight = dockingInfo.needsVisibleSideRight;
+		result.ReturnPlinthLeft = dockingInfo.returnPlinthLeft;
+		result.ReturnPlinthRight = dockingInfo.returnPlinthRight;
+		result.ReturnCeilingFillerLeft = dockingInfo.returnCeilingFillerLeft;
+		result.ReturnCeilingFillerRight = dockingInfo.returnCeilingFillerRight;
+		result.HasDockingLeft = dockingInfo.hasDockingLeft;
+		result.HasDockingRight = dockingInfo.hasDockingRight;
+
+		//======================================================================
+		// Analyze room contours, wall distances and ceiling information
+		//======================================================================
+
+		const surroundingInfo = analyzeSurroundings(
+			surroundingContours,
+			articlePos,
+			articleDimension
+		);
+
+		result.DistanceWallLeft = surroundingInfo.distanceWallLeft;
+		result.DistanceWallRight = surroundingInfo.distanceWallRight;
+		result.DistanceWallBack = surroundingInfo.distanceWallBack;
+		result.DistanceCeiling = surroundingInfo.distanceCeiling;
+
+		result.HeightPosition = surroundingInfo.heightPosition;
+
+		result.SlopedCeiling = surroundingInfo.slopedCeiling;
+		result.SlopedCeilingDirection = surroundingInfo.slopedCeilingDirection;
+		result.SlopedCeilingAngle = surroundingInfo.slopedCeilingAngle;
+		result.SlopedCeilingLevel = surroundingInfo.slopedCeilingLevel;
+
+		//======================================================================
+		// Determine first and last element
+		//======================================================================
+
+		result.FirstElement = surroundingInfo.firstElement && !dockingInfo.hasDockingLeft;
+		result.LastElement = surroundingInfo.lastElement && !dockingInfo.hasDockingRight;
+
+		//======================================================================
+		// Data set completed
+		//======================================================================
+
+		result.DataComplete = dockingInfo.dataComplete && surroundingInfo.dataComplete;
+		return result;
+
+
+		//======================================================================
+		// Helper functions
+		//======================================================================
+
+		/** Analyze Docking
+		 * Analyzes all neighboring modules and determines
+		 * visible sides, plinth returns and ceiling fillers.
+		 */
+		//--------------------------------------------------------------------
+
+		function analyzeDocking(module: any, moduleContext: any, myHeight: number, myDepth: number, myRotationY: number): {
+			hasDockingLeft: boolean;
+			hasDockingRight: boolean;
+
+			returnPlinthLeft: boolean;
+			returnPlinthRight: boolean;
+			returnCeilingFillerLeft: boolean;
+			returnCeilingFillerRight: boolean;
+
+			needsVisibleSideLeft: boolean;
+			needsVisibleSideRight: boolean;
+
+			dataComplete: boolean;
+		} {
+			const coveredLeft: { from: number; to: number }[] = [];
+			const coveredRight: { from: number; to: number }[] = [];
+			const leftNeighborPositions: any[] = [];
+			const rightNeighborPositions: any[] = [];
+			const leftNeighborDepths: number[] = [];
+			const rightNeighborDepths: number[] = [];
+			const leftNeighborRotationYs: number[] = [];
+			const rightNeighborRotationYs: number[] = [];
+
+			let dockLeftTop = false;
+			let dockRightTop = false;
+			let dockLeftBtm = false;
+			let dockRightBtm = false;
+			let returnPlinthLeftByFrontOffset = false;
+			let returnPlinthRightByFrontOffset = false;
+			let returnCeilingFillerLeftByFrontOffset = false;
+			let returnCeilingFillerRightByFrontOffset = false;
+
+			if (!moduleContext) {
+				return {
+					hasDockingLeft: false,
+					hasDockingRight: false,
+
+					returnPlinthLeft: true,
+					returnPlinthRight: true,
+					returnCeilingFillerLeft: true,
+					returnCeilingFillerRight: true,
+
+					needsVisibleSideLeft: true,
+					needsVisibleSideRight: true,
+
+					dataComplete: true
+				};
+			}
+
+			const neighborModules = moduleContext._contextData?.dockedRoots || [];
+
+			neighborModules.forEach((neighbor: any) => {
+				const ownDock = neighbor.ownDockingVector;
+
+				switch (ownDock) {
+					case Dock.LeftTop:
+						dockLeftTop = true;
+						break;
+
+					case Dock.LeftBottom:
+						dockLeftBtm = true;
+						break;
+
+					case Dock.RightTop:
+						dockRightTop = true;
+						break;
+
+					case Dock.RightBottom:
+						dockRightBtm = true;
+						break;
+				}
+
+				const neighborContext = module.getContextModule(neighbor.dockedRoots?.[0]?.id);
+				const neighborAttributes = neighborContext?.getAttributes();
+
+				if (!neighborAttributes) {
+					return;
+				}
+
+				const neighborHeight = Number(neighborAttributes.get("mod_Height") ?? 0);
+				const coveredInterval = getCoveredInterval(ownDock, myHeight, neighborHeight);
+				const neighborDepth = Number(neighborAttributes.get("mod_Depth") ?? 0);
+				const neighborRotationY = neighborContext?._articlePos?.rotationY ?? 0;
+
+				const myFront = getFrontPosition(moduleContext?._articlePos, myDepth, myRotationY);
+				const neighborFront = getFrontPosition(neighborContext?._articlePos, neighborDepth, neighborRotationY);
+				const myProtrudesAtFront = myFront > neighborFront + EPS;
+
+				if (myProtrudesAtFront) {
+					switch (ownDock) {
+						case Dock.LeftBottom:
+							returnPlinthLeftByFrontOffset = true;
+							break;
+
+						case Dock.RightBottom:
+							returnPlinthRightByFrontOffset = true;
+							break;
+
+						case Dock.LeftTop:
+							returnCeilingFillerLeftByFrontOffset = true;
+							break;
+
+						case Dock.RightTop:
+							returnCeilingFillerRightByFrontOffset = true;
+							break;
+					}
+				}
+
+				if (!coveredInterval) {
+					return;
+				}
+
+				if (ownDock === Dock.LeftBottom || ownDock === Dock.LeftTop) {
+					coveredLeft.push(coveredInterval);
+					leftNeighborPositions.push(neighborContext?._articlePos);
+					leftNeighborDepths.push(neighborDepth);
+					leftNeighborRotationYs.push(neighborRotationY);
+				}
+
+				if (ownDock === Dock.RightBottom || ownDock === Dock.RightTop) {
+					coveredRight.push(coveredInterval);
+					rightNeighborPositions.push(neighborContext?._articlePos);
+					rightNeighborDepths.push(neighborDepth);
+					rightNeighborRotationYs.push(neighborRotationY);
+				}
+			});
+
+			return {
+				hasDockingLeft: dockLeftTop || dockLeftBtm,
+				hasDockingRight: dockRightTop || dockRightBtm,
+
+				returnPlinthLeft: !dockLeftBtm || returnPlinthLeftByFrontOffset,
+				returnPlinthRight: !dockRightBtm || returnPlinthRightByFrontOffset,
+				returnCeilingFillerLeft: !dockLeftTop || returnCeilingFillerLeftByFrontOffset,
+				returnCeilingFillerRight: !dockRightTop || returnCeilingFillerRightByFrontOffset,
+
+				needsVisibleSideLeft: needsVisibleSide(coveredLeft, myHeight, moduleContext?._articlePos, leftNeighborPositions, myDepth, leftNeighborDepths, myRotationY, leftNeighborRotationYs),
+				needsVisibleSideRight: needsVisibleSide(coveredRight, myHeight, moduleContext?._articlePos, rightNeighborPositions, myDepth, rightNeighborDepths, myRotationY, rightNeighborRotationYs),
+
+				dataComplete: true
+			};
+		}
+
+		/** Get Front Position
+		 * Calculates the absolute front edge coordinate of a module in room space.
+		 * Used to detect front offsets between docked modules
+		 * for plinth and ceiling filler return decisions.
+		 */
+		//--------------------------------------------------------------------
+		function getFrontPosition(articlePos: any, depth: number, rotationY: number): number {
+			const x = articlePos?.x ?? 0;
+			const z = articlePos?.z ?? 0;
+			const ry = ((Math.round((rotationY ?? 0) / 90) * 90) % 360 + 360) % 360;
+
+			if (ry === 0) { return z + depth; }
+			if (ry === 90) { return x + depth; }
+			if (ry === 180) { return z - depth; }
+			if (ry === 270) { return x - depth; }
+
+			return z + depth;
+		}
+
+		/** Get Back Position
+		 * Calculates the absolute back edge coordinate of a module in room space.
+		 * Used together with the front position to detect depth coverage.
+		 */
+		//--------------------------------------------------------------------
+		function getBackPosition(articlePos: any, rotationY: number): number {
+			const x = articlePos?.x ?? 0;
+			const z = articlePos?.z ?? 0;
+			const ry = ((Math.round((rotationY ?? 0) / 90) * 90) % 360 + 360) % 360;
+
+			if (ry === 0) { return z; }
+			if (ry === 90) { return x; }
+			if (ry === 180) { return z; }
+			if (ry === 270) { return x; }
+
+			return z;
+		}
+
+		/** Get Covered Interval
+		 * Calculates the covered height range created by a neighboring module.
+		 */
+		//--------------------------------------------------------------------
+
+		function getCoveredInterval(
+			ownDock: Dock,
+			myHeight: number,
+			neighborHeight: number
+		): { from: number; to: number } | null {
+			let coveredFrom = 0;
+			let coveredTo = 0;
+
+			switch (ownDock) {
+				case Dock.LeftBottom:
+				case Dock.RightBottom:
+					coveredFrom = 0;
+					coveredTo = neighborHeight;
+					break;
+
+				case Dock.LeftTop:
+				case Dock.RightTop:
+					coveredFrom = myHeight - neighborHeight;
+					coveredTo = myHeight;
+					break;
+
+				default:
+					return null;
+			}
+
+			// Clamp values
+			coveredFrom = Math.max(0, coveredFrom);
+			coveredTo = Math.min(myHeight, coveredTo);
+
+			if (coveredTo <= coveredFrom) {
+				return null;
+			}
+
+			return {
+				from: coveredFrom,
+				to: coveredTo
+			};
+		}
+
+		/** Is Fully Covered Height
+		 * Checks whether the complete side of the module
+		 * is covered in height by neighboring modules.
+		 */
+		//--------------------------------------------------------------------
+
+		function isFullyCoveredHeight(intervals: { from: number; to: number }[], totalLength: number): boolean {
+
+			if (totalLength <= 0 || intervals.length === 0) {
+				return false;
+			}
+
+			const sorted = intervals.slice().sort((a, b) => a.from - b.from);
+			let coveredTo = 0;
+
+			for (const interval of sorted) {
+				if (interval.from > coveredTo) {
+					return false;
+				}
+
+				coveredTo = Math.max(coveredTo, interval.to);
+				if (coveredTo >= totalLength) {
+					return true;
+				}
+			}
+
+			return false;
+		}
+
+		/** Is Fully Covered Depth
+		 * Checks whether the complete depth of the module
+		 * is covered in depth by neighboring modules.
+		 */
+		//--------------------------------------------------------------------
+		function isFullyCoveredDepth(
+			myArticlePos: any,
+			neighborArticlePos: any,
+			myDepth: number,
+			neighborDepth: number,
+			myRotationY: number,
+			neighborRotationY: number
+		): boolean {
+			if (!myArticlePos || !neighborArticlePos || myDepth <= 0 || neighborDepth <= 0) {
+				return false;
+			}
+
+			const myBack = getBackPosition(myArticlePos, myRotationY);
+			const myFront = getFrontPosition(myArticlePos, myDepth, myRotationY);
+			const neighborBack = getBackPosition(neighborArticlePos, neighborRotationY);
+			const neighborFront = getFrontPosition(neighborArticlePos, neighborDepth, neighborRotationY);
+
+			const myTo = Math.max(myBack, myFront);
+			const neighborTo = Math.max(neighborBack, neighborFront);
+
+			return neighborTo >= myTo - EPS;
+		}
+
+		/** Needs Visible Side
+		 * Determines whether a visible side is required.
+		 *
+		 * The height intervals describe which height ranges are covered by docked neighbors.
+		 * A height interval only counts as valid coverage when the same neighbor also covers
+		 * the complete depth of the current module.
+		 *
+		 * Result:
+		 * - true  = visible side is required
+		 * - false = side is fully covered in height and depth
+		 */
+		//--------------------------------------------------------------------
+		function needsVisibleSide(
+			coveredHeightIntervals: { from: number; to: number }[],
+			totalHeight: number,
+			myArticlePos: any,
+			neighborArticlePositions: any[],
+			myDepth: number,
+			neighborDepths: number[],
+			myRotationY: number,
+			neighborRotationYs: number[]
+		): boolean {
+			const validCoveredHeightIntervals: { from: number; to: number }[] = [];
+
+			for (let i = 0; i < coveredHeightIntervals.length; i++) {
+				const neighborCoversDepth = isFullyCoveredDepth(
+					myArticlePos,
+					neighborArticlePositions[i],
+					myDepth,
+					neighborDepths[i] ?? 0,
+					myRotationY,
+					neighborRotationYs[i] ?? 0
+				);
+
+				if (neighborCoversDepth) {
+					validCoveredHeightIntervals.push(coveredHeightIntervals[i]);
+				}
+			}
+
+			return !isFullyCoveredHeight(validCoveredHeightIntervals, totalHeight);
+		}
+
+		/** Analyze Surroundings
+		 * Analyzes the room contours and calculates
+		 * wall distances, ceiling distance and sloped ceiling information.
+		 *
+		 * This is the former process_AnalyzeArticleSurroundings logic,
+		 * moved into this function as local helper.
+		 */
+		//--------------------------------------------------------------------
+
+		function analyzeSurroundings(surroundingContours: any, articlePosition: any, articleDimension: any): {
+			distanceWallLeft: number;
+			distanceWallRight: number;
+			distanceWallBack: number;
+			distanceCeiling: number;
+			firstElement: boolean;
+			lastElement: boolean;
+			heightPosition: number;
+			slopedCeiling: boolean;
+			slopedCeilingDirection: "toLeft" | "toRight" | "toBack" | null;
+			slopedCeilingAngle: number;
+			slopedCeilingLevel: number;
+			dataComplete: boolean;
+		} {
+			const result = {
+				distanceWallLeft: 0,
+				distanceWallRight: 0,
+				distanceWallBack: 0,
+				distanceCeiling: 0,
+				firstElement: false,
+				lastElement: false,
+				heightPosition: 0,
+				slopedCeiling: false,
+				slopedCeilingDirection: null as "toLeft" | "toRight" | "toBack" | null,
+				slopedCeilingAngle: 0,
+				slopedCeilingLevel: 0,
+				dataComplete: false
+			};
+
+			// Rounding
+			function round2(value: number): number {
+				return Math.round(value * 100) / 100;
+			}
+
+			// Guards
+			if (!surroundingContours || !surroundingContours.length) {
+				return result;
+			}
+
+			if (!articlePosition) {
+				return result;
+			}
+
+			if (!articleDimension) {
+				return result;
+			}
+
+			// Get all valid contours
+			const validContours = surroundingContours.filter((c: any) =>
+				c &&
+				typeof c.level === "number" &&
+				!isNaN(c.level) &&
+				c.segments?.length
+			);
+
+			if (validContours.length === 0) {
+				return result;
+			}
+
+			// Get all levels
+			const validLevels = validContours.map((c: any) => c.level);
+
+			// Get the contour-element with the lowest level
+			const baseLevel = validContours.reduce((lowest: any, current: any) => {
+				return current.level < lowest.level ? current : lowest;
+			});
+
+			// Extract coordinates
+			const xs = baseLevel.segments.map((s: any) => s.x);
+			const ys = baseLevel.segments.map((s: any) => s.y);
+
+			// Get the min and max values
+			const minX = Math.min(...xs);
+			const maxX = Math.max(...xs);
+			const minY = Math.min(...ys);
+			const maxY = Math.max(...ys);
+
+			// Article dimensions
+			const dimX = articleDimension.x ?? 0;
+			const dimY = articleDimension.y ?? 0;
+			const dimZ = articleDimension.z ?? 0;
+
+			// Article position
+			const x = articlePosition.x ?? 0;
+			const y = articlePosition.y ?? 0;
+			const z = articlePosition.z ?? 0;
+
+			// Normalize rotation
+			const ryRaw = articleDimension.ry ?? 0;
+			const ry = ((Math.round(ryRaw / 90) * 90) % 360 + 360) % 360;
+
+			// Find the lowest level
+			const lowestLevel = Math.min(...validLevels);
+			const groupHeightFromFloor = lowestLevel * (-1);
+
+			// Return the distance to the floor
+			result.heightPosition = round2(groupHeightFromFloor + y);
+
+			// Calculate the distance to the ceiling
+			if (validLevels.length >= 2) {
+				const highestLevel = Math.max(...validLevels);
+				result.distanceCeiling = round2(highestLevel - y - dimY);
+			}
+			else {
+				result.distanceCeiling = 0;
+			}
+
+			// Distance to the wall
+			//--------------------------------------------------------------
+
+			let disLeft = 0;
+			let disRight = 0;
+			let disBack = 0;
+
+			if (ry === 0) {
+				disLeft = x - minX;
+				disRight = maxX - x - dimX;
+				disBack = z - minY;
+			}
+			else if (ry === 90) {
+				disLeft = maxY - z;
+				disRight = z - minY - dimX;
+				disBack = minX - x;
+			}
+			else if (ry === 180) {
+				disLeft = maxX - x;
+				disRight = x - minX - dimX;
+				disBack = maxY - z;
+			}
+			else if (ry === 270) {
+				disLeft = z - minY - dimX;
+				disRight = maxY - z;
+				disBack = maxX - x - dimZ;
+			}
+
+			result.distanceWallLeft = round2(disLeft);
+			result.distanceWallRight = round2(disRight);
+			result.distanceWallBack = round2(disBack);
+
+			// First or last element in the group
+			//--------------------------------------------------------------
+
+			function isNearWall(distance: number): boolean {
+				return distance >= -EPS && distance <= WALL_DISTANCE_MAX + EPS;
+			}
+
+			result.firstElement = isNearWall(result.distanceWallLeft);
+			result.lastElement = isNearWall(result.distanceWallRight);
+
+			// Sloped ceiling
+			//--------------------------------------------------------------
+
+			let slopedSegmentFound = false;
+
+			for (const contour of validContours) {
+				const xs = contour.segments.map((s: any) => s.x);
+				const ys = contour.segments.map((s: any) => s.y);
+
+				const minX = Math.min(...xs);
+				const maxX = Math.max(...xs);
+				const minY = Math.min(...ys);
+				const maxY = Math.max(...ys);
+
+				for (let i = 1; i < contour.segments.length; i++) {
+					const prev = contour.segments[i - 1];
+					const curr = contour.segments[i];
+
+					if (typeof curr.angle !== "number" || curr.angle === 0) {
+						continue;
+					}
+
+					let direction: "toLeft" | "toRight" | "toBack" | null = null;
+
+					// Left side
+					if (Math.abs(prev.x - minX) < EPS && Math.abs(curr.x - minX) < EPS) {
+						if (ry === 0) direction = "toLeft";
+						else if (ry === 90) direction = "toBack";
+						else if (ry === 180) direction = "toRight";
+					}
+
+					// Right side
+					else if (Math.abs(prev.x - maxX) < EPS && Math.abs(curr.x - maxX) < EPS) {
+						if (ry === 0) direction = "toRight";
+						else if (ry === 180) direction = "toLeft";
+						else if (ry === 270) direction = "toBack";
+					}
+
+					// Back side
+					else if (Math.abs(prev.y - minY) < EPS && Math.abs(curr.y - minY) < EPS) {
+						if (ry === 0) direction = "toBack";
+						else if (ry === 90) direction = "toRight";
+						else if (ry === 270) direction = "toLeft";
+					}
+
+					// Front side
+					else if (Math.abs(prev.y - maxY) < EPS && Math.abs(curr.y - maxY) < EPS) {
+						if (ry === 90) direction = "toLeft";
+						else if (ry === 180) direction = "toBack";
+						else if (ry === 270) direction = "toRight";
+					}
+
+					if (!direction) {
+						continue;
+					}
+
+					result.slopedCeiling = true;
+					result.slopedCeilingDirection = direction;
+					result.slopedCeilingAngle = round2(180 - curr.angle);
+
+					let correctedLevel = contour.level;
+
+					// Correction only if the sloped ceiling falls to the back side of the cabinet
+					if (direction === "toBack" && disBack > 0) {
+						const slopeAngle = 90 - curr.angle;
+						const angleRad = slopeAngle * Math.PI / 180;
+						const deltaHeight = Math.tan(angleRad) * disBack;
+
+						correctedLevel = contour.level + deltaHeight;
+					}
+
+					result.slopedCeilingLevel = round2(correctedLevel);
+
+					slopedSegmentFound = true;
+					break;
+				}
+
+				if (slopedSegmentFound) {
+					break;
+				}
+			}
+
+			// Return the room data
+			//--------------------------------------------------------------
+			result.dataComplete = true;
+			return result;
+		}
+	}
+
+
+	// find hood assembly parts
+	static find_HoddAssemblyParts(ConstructionId: string): ICT_tab_HoodAssemblyParts[] {
+
+		let WildcardParams: any = {
+			in_CarcaseConstructionID: ConstructionId
+		};
+
+		// Fixed parameters
+		let FixedParams: any = {};
+
+		// Range parameters
+		let RangeParams: any = {
+		};
+
+		// Return multiple rows or a single row (UniqueOutput = true returns a single row)
+		let UniqueOutput = false;
+
+		// Call the function and return the value
+		let retVal = GlobalFunc.process_BasicTableQuery(ct_tab_HoodAssemblyParts, WildcardParams, FixedParams, RangeParams, UniqueOutput);
+		if (retVal == undefined) {
+
+			let Text = "No Parts found for " + ConstructionId
+			let ErrorMessage = GlobalFunc.find_ErrorList('Error 13024', 1);
+			logError(ErrorMessage.Message(Text));
+		}
+		return retVal;
+
+	}
+
 
 
 	// ###############################################################

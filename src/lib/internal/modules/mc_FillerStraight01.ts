@@ -9,7 +9,7 @@ import { ct_tab_BracketMapping, ICT_tab_BracketMapping, ct2_tab_BracketMapping }
 import { ct_tab_CarcaseBackwallConstruction, ICT_tab_CarcaseBackwallConstruction, ct2_tab_CarcaseBackwallConstruction } from '../custom-tables/tab_CarcaseBackwallConstruction'
 import { ct_tab_CarcaseBackwallSettings, ICT_tab_CarcaseBackwallSettings, ct2_tab_CarcaseBackwallSettings } from '../custom-tables/tab_CarcaseBackwallSettings'
 import { ct_tab_CarcaseCornerunitConstruction, ICT_tab_CarcaseCornerunitConstruction, ct2_tab_CarcaseCornerunitConstruction } from '../custom-tables/tab_CarcaseCornerunitConstruction'
-import { ct_tab_CarcaseHoodConstruction, ICT_tab_CarcaseHoodConstruction, ct2_tab_CarcaseHoodConstruction } from '../custom-tables/tab_CarcaseHoodConstruction'
+import { ct_tab_CarcasePanelSelection, ICT_tab_CarcasePanelSelection, ct2_tab_CarcasePanelSelection } from '../custom-tables/tab_CarcasePanelSelection'
 import { ct_tab_CarcasePartConnectionCalculations, ICT_tab_CarcasePartConnectionCalculations, ct2_tab_CarcasePartConnectionCalculations } from '../custom-tables/tab_CarcasePartConnectionCalculations'
 import { ct_tab_CarcasePartConnectionMapping, ICT_tab_CarcasePartConnectionMapping, ct2_tab_CarcasePartConnectionMapping } from '../custom-tables/tab_CarcasePartConnectionMapping'
 import { ct_tab_CarcasePartsShape, ICT_tab_CarcasePartsShape, ct2_tab_CarcasePartsShape } from '../custom-tables/tab_CarcasePartsShape'
@@ -19,9 +19,10 @@ import { ct_tab_CarcaseSidepanelSettings, ICT_tab_CarcaseSidepanelSettings, ct2_
 import { ct_tab_CarcaseSlopedCeilingDimension, ICT_tab_CarcaseSlopedCeilingDimension, ct2_tab_CarcaseSlopedCeilingDimension } from '../custom-tables/tab_CarcaseSlopedCeilingDimension'
 import { ct_tab_CarcaseStorageunitConstruction, ICT_tab_CarcaseStorageunitConstruction, ct2_tab_CarcaseStorageunitConstruction } from '../custom-tables/tab_CarcaseStorageunitConstruction'
 import { ct_tab_ClothingOrganizerColorMapping, ICT_tab_ClothingOrganizerColorMapping, ct2_tab_ClothingOrganizerColorMapping } from '../custom-tables/tab_ClothingOrganizerColorMapping'
+import { ct_tab_ClothingOrganizerDepthPosition, ICT_tab_ClothingOrganizerDepthPosition, ct2_tab_ClothingOrganizerDepthPosition } from '../custom-tables/tab_ClothingOrganizerDepthPosition'
 import { ct_tab_ClothingOrganizerExtraItemMapping, ICT_tab_ClothingOrganizerExtraItemMapping, ct2_tab_ClothingOrganizerExtraItemMapping } from '../custom-tables/tab_ClothingOrganizerExtraItemMapping'
+import { ct_tab_ClothingOrganizerInstallationDimensions, ICT_tab_ClothingOrganizerInstallationDimensions, ct2_tab_ClothingOrganizerInstallationDimensions } from '../custom-tables/tab_ClothingOrganizerInstallationDimensions'
 import { ct_tab_ClothingOrganizerMapping, ICT_tab_ClothingOrganizerMapping, ct2_tab_ClothingOrganizerMapping } from '../custom-tables/tab_ClothingOrganizerMapping'
-import { ct_tab_ClothingOrganizerPositionZSettings, ICT_tab_ClothingOrganizerPositionZSettings, ct2_tab_ClothingOrganizerPositionZSettings } from '../custom-tables/tab_ClothingOrganizerPositionZSettings'
 import { ct_tab_ComponentLibrary, ICT_tab_ComponentLibrary, ct2_tab_ComponentLibrary } from '../custom-tables/tab_ComponentLibrary'
 import { ct_tab_ComponentVariables, ICT_tab_ComponentVariables, ct2_tab_ComponentVariables } from '../custom-tables/tab_ComponentVariables'
 import { ct_tab_CornerFillerFrontpanelConstruction, ICT_tab_CornerFillerFrontpanelConstruction, ct2_tab_CornerFillerFrontpanelConstruction } from '../custom-tables/tab_CornerFillerFrontpanelConstruction'
@@ -47,7 +48,9 @@ import { ct_tab_EdgeMapping, ICT_tab_EdgeMapping, ct2_tab_EdgeMapping } from '..
 import { ct_tab_EdgeNumberSettings, ICT_tab_EdgeNumberSettings, ct2_tab_EdgeNumberSettings } from '../custom-tables/tab_EdgeNumberSettings'
 import { ct_tab_EdgeSettings, ICT_tab_EdgeSettings, ct2_tab_EdgeSettings } from '../custom-tables/tab_EdgeSettings'
 import { ct_tab_ErrorList, ICT_tab_ErrorList, ct2_tab_ErrorList } from '../custom-tables/tab_ErrorList'
+import { ct_tab_FillerConstruction, ICT_tab_FillerConstruction, ct2_tab_FillerConstruction } from '../custom-tables/tab_FillerConstruction'
 import { ct_tab_FillerHardwareSettings, ICT_tab_FillerHardwareSettings, ct2_tab_FillerHardwareSettings } from '../custom-tables/tab_FillerHardwareSettings'
+import { ct_tab_FillerPartConstruction, ICT_tab_FillerPartConstruction, ct2_tab_FillerPartConstruction } from '../custom-tables/tab_FillerPartConstruction'
 import { ct_tab_FillerSettings, ICT_tab_FillerSettings, ct2_tab_FillerSettings } from '../custom-tables/tab_FillerSettings'
 import { ct_tab_FlipliftColorMapping, ICT_tab_FlipliftColorMapping, ct2_tab_FlipliftColorMapping } from '../custom-tables/tab_FlipliftColorMapping'
 import { ct_tab_FlipliftConstruction, ICT_tab_FlipliftConstruction, ct2_tab_FlipliftConstruction } from '../custom-tables/tab_FlipliftConstruction'
@@ -62,6 +65,7 @@ import { ct_tab_FridgeNicheConstruction, ICT_tab_FridgeNicheConstruction, ct2_ta
 import { ct_tab_FrontConstruction, ICT_tab_FrontConstruction, ct2_tab_FrontConstruction } from '../custom-tables/tab_FrontConstruction'
 import { ct_tab_FrontEdgeColorMapping, ICT_tab_FrontEdgeColorMapping, ct2_tab_FrontEdgeColorMapping } from '../custom-tables/tab_FrontEdgeColorMapping'
 import { ct_tab_FrontPanelConstruction, ICT_tab_FrontPanelConstruction, ct2_tab_FrontPanelConstruction } from '../custom-tables/tab_FrontPanelConstruction'
+import { ct_tab_FrontPanelSelection, ICT_tab_FrontPanelSelection, ct2_tab_FrontPanelSelection } from '../custom-tables/tab_FrontPanelSelection'
 import { ct_tab_GrainDirectionSettings, ICT_tab_GrainDirectionSettings, ct2_tab_GrainDirectionSettings } from '../custom-tables/tab_GrainDirectionSettings'
 import { ct_tab_GraphicFileLibrary, ICT_tab_GraphicFileLibrary, ct2_tab_GraphicFileLibrary } from '../custom-tables/tab_GraphicFileLibrary'
 import { ct_tab_GraphicLibrary, ICT_tab_GraphicLibrary, ct2_tab_GraphicLibrary } from '../custom-tables/tab_GraphicLibrary'
@@ -128,21 +132,22 @@ import { OD_Base, PartGroup, OpenGroup, Matrix4, Vector3, GenerationContour, Con
 import { IPartBase, PartBase, _toFloat, _toInt, _toString, _toBoolean, IModBaseProp, IContextData } from '../mod-base'
 import { loadOrderData } from '../loader'
 import { GlobalFunc } from '../global-func'
-import { IModParents_mr_Filler_mr_StorageunitSingle } from '../mod-interfaces'
+import { IModParents_mr_FillerStraight_mr_StorageunitSingle } from '../mod-interfaces'
 import { OD_M_mc_StorageunitSidepanel01, dc_mc_StorageunitSidepanel01 } from './mc_StorageunitSidepanel01'
 import { OD_M_mc_StorageunitShelfbtm01, dc_mc_StorageunitShelfbtm01 } from './mc_StorageunitShelfbtm01'
 import { OD_M_mc_StorageunitShelftop01, dc_mc_StorageunitShelftop01 } from './mc_StorageunitShelftop01'
 import { OD_M_mc_FillerFront01, dc_mc_FillerFront01 } from './mc_FillerFront01'
-import { IModuleNonNull_mc_Filler01, IModParents_mc_Cornerunit01_mc_Filler01_mc_Storageunit01_mc_VertDivider01, IModParents_mc_Filler01_mc_Storageunit01, IModParents_mc_Filler01_mf_FillerFront, IPartParentsNonNull_mc_Cornerunit01_mc_Filler01_mc_Storageunit01_mc_VertDivider01, IPartParentsNonNull_mc_Filler01_mc_Storageunit01, IPartParentsNonNull_mc_Filler01_mf_FillerFront } from '../mod-interfaces'
-import { IModVar_mod_CarcaseColor, IModVarNonNull_mod_CarcaseColor, IModVar_mod_CarcaseDistanceWall, IModVarNonNull_mod_CarcaseDistanceWall, IModVar_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseEdgeColor, IModVar_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVar_mod_CarcaseFrontConstruction, IModVarNonNull_mod_CarcaseFrontConstruction, IModVar_mod_CarcaseProgram, IModVarNonNull_mod_CarcaseProgram, IModVar_mod_CountertopInfo, IModVarNonNull_mod_CountertopInfo, IModVar_mod_CountertopThk, IModVarNonNull_mod_CountertopThk, IModVar_mod_CreateBacksplash, IModVarNonNull_mod_CreateBacksplash, IModVar_mod_CreateCountertop, IModVarNonNull_mod_CreateCountertop, IModVar_mod_CreateFingergrip, IModVarNonNull_mod_CreateFingergrip, IModVar_mod_CreatePaneltop, IModVarNonNull_mod_CreatePaneltop, IModVar_mod_CreateToekick, IModVarNonNull_mod_CreateToekick, IModVar_mod_Depth, IModVarNonNull_mod_Depth, IModVar_mod_Direction, IModVarNonNull_mod_Direction, IModVar_mod_FillerHardware, IModVarNonNull_mod_FillerHardware, IModVar_mod_FillerType, IModVarNonNull_mod_FillerType, IModVar_mod_FingergripType, IModVarNonNull_mod_FingergripType, IModVar_mod_FrontColor, IModVarNonNull_mod_FrontColor, IModVar_mod_FrontDesign, IModVarNonNull_mod_FrontDesign, IModVar_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVarNonNull_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapCarcase, IModVar_mod_FrontGapHorTop, IModVarNonNull_mod_FrontGapHorTop, IModVar_mod_FrontGapHor, IModVarNonNull_mod_FrontGapHor, IModVar_mod_FrontPosStart, IModVarNonNull_mod_FrontPosStart, IModVar_mod_FrontGapVert, IModVarNonNull_mod_FrontGapVert, IModVar_mod_GlobalFrontOversizeBtm, IModVarNonNull_mod_GlobalFrontOversizeBtm, IModVar_mod_FrontProgram, IModVarNonNull_mod_FrontProgram, IModVar_mod_GlobalFrontOversizeRight, IModVarNonNull_mod_GlobalFrontOversizeRight, IModVar_mod_GlobalFrontOversizeLeft, IModVarNonNull_mod_GlobalFrontOversizeLeft, IModVar_mod_GlobalFrontOversizeTop, IModVarNonNull_mod_GlobalFrontOversizeTop, IModVar_mod_HardwareColor, IModVarNonNull_mod_HardwareColor, IModVar_mod_Height, IModVarNonNull_mod_Height, IModVar_mod_HeightPosInsertion, IModVarNonNull_mod_HeightPosInsertion, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_ParentName, IModVarNonNull_mod_ParentName, IModVar_mod_ShelfbtmThk, IModVarNonNull_mod_ShelfbtmThk, IModVar_mod_ShelftopThk, IModVarNonNull_mod_ShelftopThk, IModVar_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVarNonNull_mod_SidepanelrightThk, IModVar_mod_TypeElement, IModVarNonNull_mod_TypeElement, IModVar_mod_Width, IModVarNonNull_mod_Width } from '../var-interfaces'
-import { VariantValidation, IMatrix_mod_CarcaseColor, IMatrix_mod_CarcaseDistanceWall, IMatrix_mod_CarcaseEdgeColor, IMatrix_mod_CarcaseEdgeFrontColor, IMatrix_mod_CarcaseFrontConstruction, IMatrix_mod_CarcaseProgram, IMatrix_mod_CountertopThk, IMatrix_mod_CreateBacksplash, IMatrix_mod_CreateCountertop, IMatrix_mod_CreateFingergrip, IMatrix_mod_CreatePaneltop, IMatrix_mod_CreateToekick, IMatrix_mod_Depth, IMatrix_mod_Direction, IMatrix_mod_FillerHardware, IMatrix_mod_FillerType, IMatrix_mod_FingergripType, IMatrix_mod_FrontColor, IMatrix_mod_FrontDesign, IMatrix_mod_FrontEdgeColor, IMatrix_mod_FrontEdgeThk, IMatrix_mod_FrontGapCarcase, IMatrix_mod_FrontGapHorTop, IMatrix_mod_FrontGapHor, IMatrix_mod_FrontPosStart, IMatrix_mod_FrontGapVert, IMatrix_mod_GlobalFrontOversizeBtm, IMatrix_mod_FrontProgram, IMatrix_mod_GlobalFrontOversizeRight, IMatrix_mod_GlobalFrontOversizeLeft, IMatrix_mod_GlobalFrontOversizeTop, IMatrix_mod_HardwareColor, IMatrix_mod_Height, IMatrix_mod_HeightPosInsertion, IMatrix_mod_ModuleName, IMatrix_mod_ParentName, IMatrix_mod_ShelfbtmThk, IMatrix_mod_ShelftopThk, IMatrix_mod_SidepanelleftThk, IMatrix_mod_SidepanelrightThk, IMatrix_mod_TypeElement, IMatrix_mod_Width } from '../selections'
+import { OD_M_mc_FillerSupportPanels01, dc_mc_FillerSupportPanels01 } from './mc_FillerSupportPanels01'
+import { IModuleNonNull_mc_FillerStraight01, IModParents_mc_Cornerunit01_mc_FillerStraight01_mc_Storageunit01_mc_VertDivider01, IModParents_mc_FillerStraight01_mc_Storageunit01, IModParents_mc_FillerStraight01_mf_FillerFront, IModParents_mc_FillerStraight01, IPartParentsNonNull_mc_Cornerunit01_mc_FillerStraight01_mc_Storageunit01_mc_VertDivider01, IPartParentsNonNull_mc_FillerStraight01_mc_Storageunit01, IPartParentsNonNull_mc_FillerStraight01_mf_FillerFront, IPartParentsNonNull_mc_FillerStraight01 } from '../mod-interfaces'
+import { IModVar_mod_CarcaseColor, IModVarNonNull_mod_CarcaseColor, IModVar_mod_CarcaseDistanceWall, IModVarNonNull_mod_CarcaseDistanceWall, IModVar_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseEdgeColor, IModVar_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVar_mod_CarcaseFrontConstruction, IModVarNonNull_mod_CarcaseFrontConstruction, IModVar_mod_CarcaseProgram, IModVarNonNull_mod_CarcaseProgram, IModVar_mod_Depth, IModVarNonNull_mod_Depth, IModVar_mod_Direction, IModVarNonNull_mod_Direction, IModVar_mod_FillerType, IModVarNonNull_mod_FillerType, IModVar_mod_FingergripType, IModVarNonNull_mod_FingergripType, IModVar_mod_FrontColor, IModVarNonNull_mod_FrontColor, IModVar_mod_FrontDesign, IModVarNonNull_mod_FrontDesign, IModVar_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVarNonNull_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapCarcase, IModVar_mod_FrontGapHorTop, IModVarNonNull_mod_FrontGapHorTop, IModVar_mod_FrontGapHor, IModVarNonNull_mod_FrontGapHor, IModVar_mod_FrontPosStart, IModVarNonNull_mod_FrontPosStart, IModVar_mod_FrontGapVert, IModVarNonNull_mod_FrontGapVert, IModVar_mod_GlobalFrontOversizeBtm, IModVarNonNull_mod_GlobalFrontOversizeBtm, IModVar_mod_FrontProgram, IModVarNonNull_mod_FrontProgram, IModVar_mod_GlobalFrontOversizeRight, IModVarNonNull_mod_GlobalFrontOversizeRight, IModVar_mod_GlobalFrontOversizeLeft, IModVarNonNull_mod_GlobalFrontOversizeLeft, IModVar_mod_GlobalFrontOversizeTop, IModVarNonNull_mod_GlobalFrontOversizeTop, IModVar_mod_HardwareColor, IModVarNonNull_mod_HardwareColor, IModVar_mod_Height, IModVarNonNull_mod_Height, IModVar_mod_HeightPosInsertion, IModVarNonNull_mod_HeightPosInsertion, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_ParentName, IModVarNonNull_mod_ParentName, IModVar_mod_ShelfbtmThk, IModVarNonNull_mod_ShelfbtmThk, IModVar_mod_ShelftopThk, IModVarNonNull_mod_ShelftopThk, IModVar_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVarNonNull_mod_SidepanelrightThk, IModVar_mod_TypeElement, IModVarNonNull_mod_TypeElement, IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_FillerHardware, IModVarNonNull_mod_FillerHardware, IModVar_mod_CarcaseId, IModVarNonNull_mod_CarcaseId } from '../var-interfaces'
+import { VariantValidation, IMatrix_mod_CarcaseColor, IMatrix_mod_CarcaseDistanceWall, IMatrix_mod_CarcaseEdgeColor, IMatrix_mod_CarcaseEdgeFrontColor, IMatrix_mod_CarcaseFrontConstruction, IMatrix_mod_CarcaseProgram, IMatrix_mod_Depth, IMatrix_mod_Direction, IMatrix_mod_FillerType, IMatrix_mod_FingergripType, IMatrix_mod_FrontColor, IMatrix_mod_FrontDesign, IMatrix_mod_FrontEdgeColor, IMatrix_mod_FrontEdgeThk, IMatrix_mod_FrontGapCarcase, IMatrix_mod_FrontGapHorTop, IMatrix_mod_FrontGapHor, IMatrix_mod_FrontPosStart, IMatrix_mod_FrontGapVert, IMatrix_mod_GlobalFrontOversizeBtm, IMatrix_mod_FrontProgram, IMatrix_mod_GlobalFrontOversizeRight, IMatrix_mod_GlobalFrontOversizeLeft, IMatrix_mod_GlobalFrontOversizeTop, IMatrix_mod_HardwareColor, IMatrix_mod_Height, IMatrix_mod_HeightPosInsertion, IMatrix_mod_ModuleName, IMatrix_mod_ParentName, IMatrix_mod_ShelfbtmThk, IMatrix_mod_ShelftopThk, IMatrix_mod_SidepanelleftThk, IMatrix_mod_SidepanelrightThk, IMatrix_mod_TypeElement, IMatrix_mod_Width, IMatrix_mod_FillerHardware, IMatrix_mod_CarcaseId } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
-import { mc_Filler01_createBuildPlan, mc_Filler01_afterDataCompletion, mc_Filler01_manufacturerDataCompletion, mc_Filler01_calculateContainerModules } from '../../modules/mc_Filler01';
+import { mc_FillerStraight01_createBuildPlan, mc_FillerStraight01_afterDataCompletion, mc_FillerStraight01_manufacturerDataCompletion, mc_FillerStraight01_calculateContainerModules, mc_FillerStraight01_prepareContext } from '../../modules/mc_FillerStraight01';
 
-export interface cbp_mc_Filler01 extends IModBaseProp
-  , IModVarNonNull_mod_CarcaseColor, IModVarNonNull_mod_CarcaseDistanceWall, IModVarNonNull_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseFrontConstruction, IModVarNonNull_mod_CarcaseProgram, IModVarNonNull_mod_CountertopInfo, IModVarNonNull_mod_CountertopThk, IModVarNonNull_mod_CreateBacksplash, IModVarNonNull_mod_CreateCountertop, IModVarNonNull_mod_CreateFingergrip, IModVarNonNull_mod_CreatePaneltop, IModVarNonNull_mod_CreateToekick, IModVarNonNull_mod_Depth, IModVarNonNull_mod_Direction, IModVarNonNull_mod_FillerHardware, IModVarNonNull_mod_FillerType, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapHorTop, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_GlobalFrontOversizeBtm, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_GlobalFrontOversizeRight, IModVarNonNull_mod_GlobalFrontOversizeLeft, IModVarNonNull_mod_GlobalFrontOversizeTop, IModVarNonNull_mod_HardwareColor, IModVarNonNull_mod_Height, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_ShelftopThk, IModVarNonNull_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelrightThk, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_Width {
-  parent: IModParents_mr_Filler_mr_StorageunitSingle;
+export interface cbp_mc_FillerStraight01 extends IModBaseProp
+  , IModVarNonNull_mod_CarcaseColor, IModVarNonNull_mod_CarcaseDistanceWall, IModVarNonNull_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseFrontConstruction, IModVarNonNull_mod_CarcaseProgram, IModVarNonNull_mod_Depth, IModVarNonNull_mod_Direction, IModVarNonNull_mod_FillerType, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapHorTop, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_GlobalFrontOversizeBtm, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_GlobalFrontOversizeRight, IModVarNonNull_mod_GlobalFrontOversizeLeft, IModVarNonNull_mod_GlobalFrontOversizeTop, IModVarNonNull_mod_HardwareColor, IModVarNonNull_mod_Height, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_ShelftopThk, IModVarNonNull_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelrightThk, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_Width, IModVarNonNull_mod_FillerHardware, IModVarNonNull_mod_CarcaseId {
+  parent: IModParents_mr_FillerStraight_mr_StorageunitSingle;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
   createOpenGroup(groupName: string, part: IPartBase): OpenGroup;
@@ -152,47 +157,56 @@ export interface cbp_mc_Filler01 extends IModBaseProp
   get m(): OD_Base[];
 }
 
-export interface dc_mc_Filler01 extends IModBaseProp
-  , IModVar_mod_CarcaseColor, IModVar_mod_CarcaseDistanceWall, IModVar_mod_CarcaseEdgeColor, IModVar_mod_CarcaseEdgeFrontColor, IModVar_mod_CarcaseFrontConstruction, IModVar_mod_CarcaseProgram, IModVar_mod_CountertopInfo, IModVar_mod_CountertopThk, IModVar_mod_CreateBacksplash, IModVar_mod_CreateCountertop, IModVar_mod_CreateFingergrip, IModVar_mod_CreatePaneltop, IModVar_mod_CreateToekick, IModVar_mod_Depth, IModVar_mod_Direction, IModVar_mod_FillerHardware, IModVar_mod_FillerType, IModVar_mod_FingergripType, IModVar_mod_FrontColor, IModVar_mod_FrontDesign, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVar_mod_FrontGapHorTop, IModVar_mod_FrontGapHor, IModVar_mod_FrontPosStart, IModVar_mod_FrontGapVert, IModVar_mod_GlobalFrontOversizeBtm, IModVar_mod_FrontProgram, IModVar_mod_GlobalFrontOversizeRight, IModVar_mod_GlobalFrontOversizeLeft, IModVar_mod_GlobalFrontOversizeTop, IModVar_mod_HardwareColor, IModVar_mod_Height, IModVar_mod_HeightPosInsertion, IModVar_mod_ModuleName, IModVar_mod_ParentName, IModVar_mod_ShelfbtmThk, IModVar_mod_ShelftopThk, IModVar_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVar_mod_TypeElement, IModVar_mod_Width {
+export interface dc_mc_FillerStraight01 extends IModBaseProp
+  , IModVar_mod_CarcaseColor, IModVar_mod_CarcaseDistanceWall, IModVar_mod_CarcaseEdgeColor, IModVar_mod_CarcaseEdgeFrontColor, IModVar_mod_CarcaseFrontConstruction, IModVar_mod_CarcaseProgram, IModVar_mod_Depth, IModVar_mod_Direction, IModVar_mod_FillerType, IModVar_mod_FingergripType, IModVar_mod_FrontColor, IModVar_mod_FrontDesign, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVar_mod_FrontGapHorTop, IModVar_mod_FrontGapHor, IModVar_mod_FrontPosStart, IModVar_mod_FrontGapVert, IModVar_mod_GlobalFrontOversizeBtm, IModVar_mod_FrontProgram, IModVar_mod_GlobalFrontOversizeRight, IModVar_mod_GlobalFrontOversizeLeft, IModVar_mod_GlobalFrontOversizeTop, IModVar_mod_HardwareColor, IModVar_mod_Height, IModVar_mod_HeightPosInsertion, IModVar_mod_ModuleName, IModVar_mod_ParentName, IModVar_mod_ShelfbtmThk, IModVar_mod_ShelftopThk, IModVar_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVar_mod_TypeElement, IModVar_mod_Width, IModVar_mod_FillerHardware, IModVar_mod_CarcaseId {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
-  seal(): IModuleNonNull_mc_Filler01;
-  parent: IModParents_mr_Filler_mr_StorageunitSingle;
+  seal(): IModuleNonNull_mc_FillerStraight01;
+  parent: IModParents_mr_FillerStraight_mr_StorageunitSingle;
   addOD_M_mc_StorageunitSidepanel01(index?: number): dc_mc_StorageunitSidepanel01;
   addOD_M_mc_StorageunitShelfbtm01(index?: number): dc_mc_StorageunitShelfbtm01;
   addOD_M_mc_StorageunitShelftop01(index?: number): dc_mc_StorageunitShelftop01;
   addOD_M_mc_FillerFront01(index?: number): dc_mc_FillerFront01;
+  addOD_M_mc_FillerSupportPanels01(index?: number): dc_mc_FillerSupportPanels01;
 }
 
-export interface adc_base_mc_Filler01 extends IModBaseProp
-  , IModVarNonNull_mod_CarcaseColor, IModVarNonNull_mod_CarcaseDistanceWall, IModVarNonNull_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseFrontConstruction, IModVarNonNull_mod_CarcaseProgram, IModVarNonNull_mod_CountertopInfo, IModVarNonNull_mod_CountertopThk, IModVarNonNull_mod_CreateBacksplash, IModVarNonNull_mod_CreateCountertop, IModVarNonNull_mod_CreateFingergrip, IModVarNonNull_mod_CreatePaneltop, IModVarNonNull_mod_CreateToekick, IModVarNonNull_mod_Depth, IModVarNonNull_mod_Direction, IModVarNonNull_mod_FillerHardware, IModVarNonNull_mod_FillerType, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapHorTop, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_GlobalFrontOversizeBtm, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_GlobalFrontOversizeRight, IModVarNonNull_mod_GlobalFrontOversizeLeft, IModVarNonNull_mod_GlobalFrontOversizeTop, IModVarNonNull_mod_HardwareColor, IModVarNonNull_mod_Height, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_ShelftopThk, IModVarNonNull_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelrightThk, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_Width {
+export interface pc_mc_FillerStraight01 extends dc_mc_FillerStraight01 {
+  _forcedInputAttributes?: string[];
+  getContextData(): IContextData | undefined;
+  getContextModule(id: string): OD_Base | undefined;
+  getRoomContours(): RoomContour[];
+}
+
+export interface adc_base_mc_FillerStraight01 extends IModBaseProp
+  , IModVarNonNull_mod_CarcaseColor, IModVarNonNull_mod_CarcaseDistanceWall, IModVarNonNull_mod_CarcaseEdgeColor, IModVarNonNull_mod_CarcaseEdgeFrontColor, IModVarNonNull_mod_CarcaseFrontConstruction, IModVarNonNull_mod_CarcaseProgram, IModVarNonNull_mod_Depth, IModVarNonNull_mod_Direction, IModVarNonNull_mod_FillerType, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_FrontColor, IModVarNonNull_mod_FrontDesign, IModVarNonNull_mod_FrontEdgeColor, IModVarNonNull_mod_FrontEdgeThk, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapHorTop, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontPosStart, IModVarNonNull_mod_FrontGapVert, IModVarNonNull_mod_GlobalFrontOversizeBtm, IModVarNonNull_mod_FrontProgram, IModVarNonNull_mod_GlobalFrontOversizeRight, IModVarNonNull_mod_GlobalFrontOversizeLeft, IModVarNonNull_mod_GlobalFrontOversizeTop, IModVarNonNull_mod_HardwareColor, IModVarNonNull_mod_Height, IModVarNonNull_mod_HeightPosInsertion, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_ShelftopThk, IModVarNonNull_mod_SidepanelleftThk, IModVarNonNull_mod_SidepanelrightThk, IModVarNonNull_mod_TypeElement, IModVarNonNull_mod_Width, IModVarNonNull_mod_FillerHardware, IModVarNonNull_mod_CarcaseId {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
 }
 
-export interface adc_mc_Filler01 extends adc_base_mc_Filler01 {
+export interface adc_mc_FillerStraight01 extends adc_base_mc_FillerStraight01 {
   addOD_M_mc_StorageunitSidepanel01(index?: number): dc_mc_StorageunitSidepanel01;
   addOD_M_mc_StorageunitShelfbtm01(index?: number): dc_mc_StorageunitShelfbtm01;
   addOD_M_mc_StorageunitShelftop01(index?: number): dc_mc_StorageunitShelftop01;
   addOD_M_mc_FillerFront01(index?: number): dc_mc_FillerFront01;
+  addOD_M_mc_FillerSupportPanels01(index?: number): dc_mc_FillerSupportPanels01;
 }
 
-export interface ccm_mc_Filler01 extends adc_base_mc_Filler01 {
+export interface ccm_mc_FillerStraight01 extends adc_base_mc_FillerStraight01 {
 }
 
 
-export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
-  , IModParents_mc_Cornerunit01_mc_Filler01_mc_Storageunit01_mc_VertDivider01, IModParents_mc_Filler01_mc_Storageunit01, IModParents_mc_Filler01_mf_FillerFront
-  , IModVar_mod_CarcaseColor, IModVar_mod_CarcaseDistanceWall, IModVar_mod_CarcaseEdgeColor, IModVar_mod_CarcaseEdgeFrontColor, IModVar_mod_CarcaseFrontConstruction, IModVar_mod_CarcaseProgram, IModVar_mod_CountertopInfo, IModVar_mod_CountertopThk, IModVar_mod_CreateBacksplash, IModVar_mod_CreateCountertop, IModVar_mod_CreateFingergrip, IModVar_mod_CreatePaneltop, IModVar_mod_CreateToekick, IModVar_mod_Depth, IModVar_mod_Direction, IModVar_mod_FillerHardware, IModVar_mod_FillerType, IModVar_mod_FingergripType, IModVar_mod_FrontColor, IModVar_mod_FrontDesign, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVar_mod_FrontGapHorTop, IModVar_mod_FrontGapHor, IModVar_mod_FrontPosStart, IModVar_mod_FrontGapVert, IModVar_mod_GlobalFrontOversizeBtm, IModVar_mod_FrontProgram, IModVar_mod_GlobalFrontOversizeRight, IModVar_mod_GlobalFrontOversizeLeft, IModVar_mod_GlobalFrontOversizeTop, IModVar_mod_HardwareColor, IModVar_mod_Height, IModVar_mod_HeightPosInsertion, IModVar_mod_ModuleName, IModVar_mod_ParentName, IModVar_mod_ShelfbtmThk, IModVar_mod_ShelftopThk, IModVar_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVar_mod_TypeElement, IModVar_mod_Width {
-  constructor(parent: IModParents_mr_Filler_mr_StorageunitSingle, manufacturerMode?: boolean) {
-    super('mc_Filler01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
+export class OD_M_mc_FillerStraight01 extends OD_Base implements pc_mc_FillerStraight01, dc_mc_FillerStraight01
+  , IModParents_mc_Cornerunit01_mc_FillerStraight01_mc_Storageunit01_mc_VertDivider01, IModParents_mc_FillerStraight01_mc_Storageunit01, IModParents_mc_FillerStraight01_mf_FillerFront, IModParents_mc_FillerStraight01
+  , IModVar_mod_CarcaseColor, IModVar_mod_CarcaseDistanceWall, IModVar_mod_CarcaseEdgeColor, IModVar_mod_CarcaseEdgeFrontColor, IModVar_mod_CarcaseFrontConstruction, IModVar_mod_CarcaseProgram, IModVar_mod_Depth, IModVar_mod_Direction, IModVar_mod_FillerType, IModVar_mod_FingergripType, IModVar_mod_FrontColor, IModVar_mod_FrontDesign, IModVar_mod_FrontEdgeColor, IModVar_mod_FrontEdgeThk, IModVar_mod_FrontGapCarcase, IModVar_mod_FrontGapHorTop, IModVar_mod_FrontGapHor, IModVar_mod_FrontPosStart, IModVar_mod_FrontGapVert, IModVar_mod_GlobalFrontOversizeBtm, IModVar_mod_FrontProgram, IModVar_mod_GlobalFrontOversizeRight, IModVar_mod_GlobalFrontOversizeLeft, IModVar_mod_GlobalFrontOversizeTop, IModVar_mod_HardwareColor, IModVar_mod_Height, IModVar_mod_HeightPosInsertion, IModVar_mod_ModuleName, IModVar_mod_ParentName, IModVar_mod_ShelfbtmThk, IModVar_mod_ShelftopThk, IModVar_mod_SidepanelleftThk, IModVar_mod_SidepanelrightThk, IModVar_mod_TypeElement, IModVar_mod_Width, IModVar_mod_FillerHardware, IModVar_mod_CarcaseId {
+  constructor(parent: IModParents_mr_FillerStraight_mr_StorageunitSingle, manufacturerMode?: boolean) {
+    super('mc_FillerStraight01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
-    this._selfNonNull = new OD_M_mc_Filler01_NonNull(this);
+    this._selfNonNull = new OD_M_mc_FillerStraight01_NonNull(this);
   }
-  parent: IModParents_mr_Filler_mr_StorageunitSingle;
-  _selfNonNull: OD_M_mc_Filler01_NonNull;
+  parent: IModParents_mr_FillerStraight_mr_StorageunitSingle;
+  _selfNonNull: OD_M_mc_FillerStraight01_NonNull;
 
-  override variants: string[] = ['mod_CarcaseColor', 'mod_CarcaseDistanceWall', 'mod_CarcaseEdgeColor', 'mod_CarcaseEdgeFrontColor', 'mod_CarcaseFrontConstruction', 'mod_CarcaseProgram', 'mod_CountertopInfo', 'mod_CountertopThk', 'mod_CreateBacksplash', 'mod_CreateCountertop', 'mod_CreateFingergrip', 'mod_CreatePaneltop', 'mod_CreateToekick', 'mod_Depth', 'mod_Direction', 'mod_FillerHardware', 'mod_FillerType', 'mod_FingergripType', 'mod_FrontColor', 'mod_FrontDesign', 'mod_FrontEdgeColor', 'mod_FrontEdgeThk', 'mod_FrontGapCarcase', 'mod_FrontGapHorTop', 'mod_FrontGapHor', 'mod_FrontPosStart', 'mod_FrontGapVert', 'mod_GlobalFrontOversizeBtm', 'mod_FrontProgram', 'mod_GlobalFrontOversizeRight', 'mod_GlobalFrontOversizeLeft', 'mod_GlobalFrontOversizeTop', 'mod_HardwareColor', 'mod_Height', 'mod_HeightPosInsertion', 'mod_ModuleName', 'mod_ParentName', 'mod_ShelfbtmThk', 'mod_ShelftopThk', 'mod_SidepanelleftThk', 'mod_SidepanelrightThk', 'mod_TypeElement', 'mod_Width',];
+  override variants: string[] = ['mod_CarcaseColor', 'mod_CarcaseDistanceWall', 'mod_CarcaseEdgeColor', 'mod_CarcaseEdgeFrontColor', 'mod_CarcaseFrontConstruction', 'mod_CarcaseProgram', 'mod_Depth', 'mod_Direction', 'mod_FillerType', 'mod_FingergripType', 'mod_FrontColor', 'mod_FrontDesign', 'mod_FrontEdgeColor', 'mod_FrontEdgeThk', 'mod_FrontGapCarcase', 'mod_FrontGapHorTop', 'mod_FrontGapHor', 'mod_FrontPosStart', 'mod_FrontGapVert', 'mod_GlobalFrontOversizeBtm', 'mod_FrontProgram', 'mod_GlobalFrontOversizeRight', 'mod_GlobalFrontOversizeLeft', 'mod_GlobalFrontOversizeTop', 'mod_HardwareColor', 'mod_Height', 'mod_HeightPosInsertion', 'mod_ModuleName', 'mod_ParentName', 'mod_ShelfbtmThk', 'mod_ShelftopThk', 'mod_SidepanelleftThk', 'mod_SidepanelrightThk', 'mod_TypeElement', 'mod_Width', 'mod_FillerHardware', 'mod_CarcaseId',];
   #mod_CarcaseColor?: string;
   get mod_CarcaseColor(): string | undefined { return this.#mod_CarcaseColor }
   set mod_CarcaseColor(value: string | undefined) {
@@ -265,80 +279,6 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
   }
 
   mod_CarcaseProgram_matrix?: IMatrix_mod_CarcaseProgram;
-  #mod_CountertopInfo: string[] = [];
-  get mod_CountertopInfo(): string[] { return this.#mod_CountertopInfo; }
-  #mod_CountertopThk?: number;
-  get mod_CountertopThk(): number | undefined { return this.#mod_CountertopThk }
-  set mod_CountertopThk(value: number | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_CountertopThk' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_CountertopThk === value) return;
-    this.#mod_CountertopThk = value;
-  }
-
-  mod_CountertopThk_matrix?: IMatrix_mod_CountertopThk;
-  #mod_CreateBacksplash?: boolean;
-  get mod_CreateBacksplash(): boolean | undefined { return this.#mod_CreateBacksplash }
-  set mod_CreateBacksplash(value: boolean | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_CreateBacksplash' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_CreateBacksplash === value) return;
-    this.#mod_CreateBacksplash = value;
-  }
-
-  mod_CreateBacksplash_matrix?: IMatrix_mod_CreateBacksplash;
-  #mod_CreateCountertop?: boolean;
-  get mod_CreateCountertop(): boolean | undefined { return this.#mod_CreateCountertop }
-  set mod_CreateCountertop(value: boolean | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_CreateCountertop' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_CreateCountertop === value) return;
-    this.#mod_CreateCountertop = value;
-  }
-
-  mod_CreateCountertop_matrix?: IMatrix_mod_CreateCountertop;
-  #mod_CreateFingergrip?: boolean;
-  get mod_CreateFingergrip(): boolean | undefined { return this.#mod_CreateFingergrip }
-  set mod_CreateFingergrip(value: boolean | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_CreateFingergrip' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_CreateFingergrip === value) return;
-    this.#mod_CreateFingergrip = value;
-  }
-
-  mod_CreateFingergrip_matrix?: IMatrix_mod_CreateFingergrip;
-  #mod_CreatePaneltop?: boolean;
-  get mod_CreatePaneltop(): boolean | undefined { return this.#mod_CreatePaneltop }
-  set mod_CreatePaneltop(value: boolean | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_CreatePaneltop' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_CreatePaneltop === value) return;
-    this.#mod_CreatePaneltop = value;
-  }
-
-  mod_CreatePaneltop_matrix?: IMatrix_mod_CreatePaneltop;
-  #mod_CreateToekick?: boolean;
-  get mod_CreateToekick(): boolean | undefined { return this.#mod_CreateToekick }
-  set mod_CreateToekick(value: boolean | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_CreateToekick' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_CreateToekick === value) return;
-    this.#mod_CreateToekick = value;
-  }
-
-  mod_CreateToekick_matrix?: IMatrix_mod_CreateToekick;
   #mod_Depth?: number;
   get mod_Depth(): number | undefined { return this.#mod_Depth }
   set mod_Depth(value: number | undefined) {
@@ -363,18 +303,6 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
   }
 
   mod_Direction_matrix?: IMatrix_mod_Direction;
-  #mod_FillerHardware?: string;
-  get mod_FillerHardware(): string | undefined { return this.#mod_FillerHardware }
-  set mod_FillerHardware(value: string | undefined) {
-    if (this._adcFinished) {
-      logError("The property 'mod_FillerHardware' must not be changed after the module was completed with 'afterDataCompletion'");
-      return;
-    }
-    if (this.#mod_FillerHardware === value) return;
-    this.#mod_FillerHardware = value;
-  }
-
-  mod_FillerHardware_matrix?: IMatrix_mod_FillerHardware;
   #mod_FillerType?: string;
   get mod_FillerType(): string | undefined { return this.#mod_FillerType }
   set mod_FillerType(value: string | undefined) {
@@ -699,6 +627,30 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
   }
 
   mod_Width_matrix?: IMatrix_mod_Width;
+  #mod_FillerHardware?: string;
+  get mod_FillerHardware(): string | undefined { return this.#mod_FillerHardware }
+  set mod_FillerHardware(value: string | undefined) {
+    if (this._adcFinished) {
+      logError("The property 'mod_FillerHardware' must not be changed after the module was completed with 'afterDataCompletion'");
+      return;
+    }
+    if (this.#mod_FillerHardware === value) return;
+    this.#mod_FillerHardware = value;
+  }
+
+  mod_FillerHardware_matrix?: IMatrix_mod_FillerHardware;
+  #mod_CarcaseId?: string;
+  get mod_CarcaseId(): string | undefined { return this.#mod_CarcaseId }
+  set mod_CarcaseId(value: string | undefined) {
+    if (this._adcFinished) {
+      logError("The property 'mod_CarcaseId' must not be changed after the module was completed with 'afterDataCompletion'");
+      return;
+    }
+    if (this.#mod_CarcaseId === value) return;
+    this.#mod_CarcaseId = value;
+  }
+
+  mod_CarcaseId_matrix?: IMatrix_mod_CarcaseId;
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
     res.set('mod_CarcaseColor', this.mod_CarcaseColor);
@@ -707,16 +659,8 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
     res.set('mod_CarcaseEdgeFrontColor', this.mod_CarcaseEdgeFrontColor);
     res.set('mod_CarcaseFrontConstruction', this.mod_CarcaseFrontConstruction);
     res.set('mod_CarcaseProgram', this.mod_CarcaseProgram);
-    res.set('mod_CountertopInfo', JSON.stringify(this.mod_CountertopInfo));
-    res.set('mod_CountertopThk', this.mod_CountertopThk);
-    res.set('mod_CreateBacksplash', this.mod_CreateBacksplash);
-    res.set('mod_CreateCountertop', this.mod_CreateCountertop);
-    res.set('mod_CreateFingergrip', this.mod_CreateFingergrip);
-    res.set('mod_CreatePaneltop', this.mod_CreatePaneltop);
-    res.set('mod_CreateToekick', this.mod_CreateToekick);
     res.set('mod_Depth', this.mod_Depth);
     res.set('mod_Direction', this.mod_Direction);
-    res.set('mod_FillerHardware', this.mod_FillerHardware);
     res.set('mod_FillerType', this.mod_FillerType);
     res.set('mod_FingergripType', this.mod_FingergripType);
     res.set('mod_FrontColor', this.mod_FrontColor);
@@ -744,6 +688,8 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
     res.set('mod_SidepanelrightThk', this.mod_SidepanelrightThk);
     res.set('mod_TypeElement', this.mod_TypeElement);
     res.set('mod_Width', this.mod_Width);
+    res.set('mod_FillerHardware', this.mod_FillerHardware);
+    res.set('mod_CarcaseId', this.mod_CarcaseId);
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -790,42 +736,6 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
       this.mod_CarcaseProgram = val;
     }
     {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_CountertopThk');
-      const val = _toFloat(json['attributes']['mod_CountertopThk'], 'mod_CountertopThk');
-      internal_leaveValidateVariant();
-      this.mod_CountertopThk = val;
-    }
-    {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_CreateBacksplash');
-      const val = _toBoolean(json['attributes']['mod_CreateBacksplash'], 'mod_CreateBacksplash');
-      internal_leaveValidateVariant();
-      this.mod_CreateBacksplash = val;
-    }
-    {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_CreateCountertop');
-      const val = _toBoolean(json['attributes']['mod_CreateCountertop'], 'mod_CreateCountertop');
-      internal_leaveValidateVariant();
-      this.mod_CreateCountertop = val;
-    }
-    {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_CreateFingergrip');
-      const val = _toBoolean(json['attributes']['mod_CreateFingergrip'], 'mod_CreateFingergrip');
-      internal_leaveValidateVariant();
-      this.mod_CreateFingergrip = val;
-    }
-    {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_CreatePaneltop');
-      const val = _toBoolean(json['attributes']['mod_CreatePaneltop'], 'mod_CreatePaneltop');
-      internal_leaveValidateVariant();
-      this.mod_CreatePaneltop = val;
-    }
-    {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_CreateToekick');
-      const val = _toBoolean(json['attributes']['mod_CreateToekick'], 'mod_CreateToekick');
-      internal_leaveValidateVariant();
-      this.mod_CreateToekick = val;
-    }
-    {
       internal_enterValidateVariant(this.modId, this._id, 'mod_Depth');
       const val = _toFloat(json['attributes']['mod_Depth'], 'mod_Depth');
       internal_leaveValidateVariant();
@@ -836,12 +746,6 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
       const val = _toString(json['attributes']['mod_Direction'], 'mod_Direction');
       internal_leaveValidateVariant();
       this.mod_Direction = val;
-    }
-    {
-      internal_enterValidateVariant(this.modId, this._id, 'mod_FillerHardware');
-      const val = _toString(json['attributes']['mod_FillerHardware'], 'mod_FillerHardware');
-      internal_leaveValidateVariant();
-      this.mod_FillerHardware = val;
     }
     {
       internal_enterValidateVariant(this.modId, this._id, 'mod_FillerType');
@@ -1005,6 +909,18 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
       internal_leaveValidateVariant();
       this.mod_Width = val;
     }
+    {
+      internal_enterValidateVariant(this.modId, this._id, 'mod_FillerHardware');
+      const val = _toString(json['attributes']['mod_FillerHardware'], 'mod_FillerHardware');
+      internal_leaveValidateVariant();
+      this.mod_FillerHardware = val;
+    }
+    {
+      internal_enterValidateVariant(this.modId, this._id, 'mod_CarcaseId');
+      const val = _toString(json['attributes']['mod_CarcaseId'], 'mod_CarcaseId');
+      internal_leaveValidateVariant();
+      this.mod_CarcaseId = val;
+    }
     if (withSubModules && json['modules']) {
       json['modules'].forEach((subMod: any) => { this.m.push(loadOrderData(subMod, this, manufacturerMode)) });
     }
@@ -1096,90 +1012,6 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
         s = s.parentBase;
       }
     }
-    if (this.mod_CountertopThk === undefined) {
-      let s = this.parentBase;
-      // try to find a parent with a valid value
-      while (s !== undefined) {
-        if (s.variants.includes('mod_CountertopThk')) {
-          let pv = <IModVar_mod_CountertopThk>s;
-          if (pv.mod_CountertopThk !== undefined) {
-            this.mod_CountertopThk = (<IModVar_mod_CountertopThk>s).mod_CountertopThk;
-            break;
-          };
-        }
-        s = s.parentBase;
-      }
-    }
-    if (this.mod_CreateBacksplash === undefined) {
-      let s = this.parentBase;
-      // try to find a parent with a valid value
-      while (s !== undefined) {
-        if (s.variants.includes('mod_CreateBacksplash')) {
-          let pv = <IModVar_mod_CreateBacksplash>s;
-          if (pv.mod_CreateBacksplash !== undefined) {
-            this.mod_CreateBacksplash = (<IModVar_mod_CreateBacksplash>s).mod_CreateBacksplash;
-            break;
-          };
-        }
-        s = s.parentBase;
-      }
-    }
-    if (this.mod_CreateCountertop === undefined) {
-      let s = this.parentBase;
-      // try to find a parent with a valid value
-      while (s !== undefined) {
-        if (s.variants.includes('mod_CreateCountertop')) {
-          let pv = <IModVar_mod_CreateCountertop>s;
-          if (pv.mod_CreateCountertop !== undefined) {
-            this.mod_CreateCountertop = (<IModVar_mod_CreateCountertop>s).mod_CreateCountertop;
-            break;
-          };
-        }
-        s = s.parentBase;
-      }
-    }
-    if (this.mod_CreateFingergrip === undefined) {
-      let s = this.parentBase;
-      // try to find a parent with a valid value
-      while (s !== undefined) {
-        if (s.variants.includes('mod_CreateFingergrip')) {
-          let pv = <IModVar_mod_CreateFingergrip>s;
-          if (pv.mod_CreateFingergrip !== undefined) {
-            this.mod_CreateFingergrip = (<IModVar_mod_CreateFingergrip>s).mod_CreateFingergrip;
-            break;
-          };
-        }
-        s = s.parentBase;
-      }
-    }
-    if (this.mod_CreatePaneltop === undefined) {
-      let s = this.parentBase;
-      // try to find a parent with a valid value
-      while (s !== undefined) {
-        if (s.variants.includes('mod_CreatePaneltop')) {
-          let pv = <IModVar_mod_CreatePaneltop>s;
-          if (pv.mod_CreatePaneltop !== undefined) {
-            this.mod_CreatePaneltop = (<IModVar_mod_CreatePaneltop>s).mod_CreatePaneltop;
-            break;
-          };
-        }
-        s = s.parentBase;
-      }
-    }
-    if (this.mod_CreateToekick === undefined) {
-      let s = this.parentBase;
-      // try to find a parent with a valid value
-      while (s !== undefined) {
-        if (s.variants.includes('mod_CreateToekick')) {
-          let pv = <IModVar_mod_CreateToekick>s;
-          if (pv.mod_CreateToekick !== undefined) {
-            this.mod_CreateToekick = (<IModVar_mod_CreateToekick>s).mod_CreateToekick;
-            break;
-          };
-        }
-        s = s.parentBase;
-      }
-    }
     if (this.mod_Depth === undefined) {
       let s = this.parentBase;
       // try to find a parent with a valid value
@@ -1202,20 +1034,6 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
           let pv = <IModVar_mod_Direction>s;
           if (pv.mod_Direction !== undefined) {
             this.mod_Direction = (<IModVar_mod_Direction>s).mod_Direction;
-            break;
-          };
-        }
-        s = s.parentBase;
-      }
-    }
-    if (this.mod_FillerHardware === undefined) {
-      let s = this.parentBase;
-      // try to find a parent with a valid value
-      while (s !== undefined) {
-        if (s.variants.includes('mod_FillerHardware')) {
-          let pv = <IModVar_mod_FillerHardware>s;
-          if (pv.mod_FillerHardware !== undefined) {
-            this.mod_FillerHardware = (<IModVar_mod_FillerHardware>s).mod_FillerHardware;
             break;
           };
         }
@@ -1584,6 +1402,12 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
     if (this.mod_ModuleName === undefined) {
       this.mod_ModuleName = "mc_Filler01";
     }
+    if (this.mod_FillerHardware === undefined) {
+      this.mod_FillerHardware = "Bracket01";
+    }
+    if (this.mod_CarcaseId === undefined) {
+      this.mod_CarcaseId = "";
+    }
     internal_leaveDataCompletionSetDefault();
   }
   #dataCompletionSetDefaultScripts() {
@@ -1594,7 +1418,7 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
         // ###############################################################
         // ####################### CUSTOM SCRIPTS ########################
         // ###############################################################
-        // CUSTOMSCRIPT_mc_Filler01_mod_ParentName_SETDEFAULT
+        // CUSTOMSCRIPT_mc_FillerStraight01_mod_ParentName_SETDEFAULT
         this.mod_ParentName = this.parent.mod_ModuleName;
         // ###############################################################
         // ################### END CUSTOM SCRIPTS ########################
@@ -1627,19 +1451,28 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
     this.#manufacturerDataCompletionInternal();
     this.m.forEach(subMod => subMod.manufacturerDataCompletion());
   }
-  #manufacturerDataCompletionInternal = mc_Filler01_manufacturerDataCompletion;
+  #manufacturerDataCompletionInternal = mc_FillerStraight01_manufacturerDataCompletion;
   override afterDataCompletion(): void {
     if (this._adcFinished) return;
     this._adcFinished = true;
     this.validateSelections();
-    var adc = new OD_M_mc_Filler01_NonNull(this);
+    var adc = new OD_M_mc_FillerStraight01_NonNull(this);
     adc.afterDataCompletion();
     this.m.forEach(subMod => subMod.afterDataCompletion());
 
   }
-  seal(): IModuleNonNull_mc_Filler01 {
+  override prepareContext(contextRoots: OD_Base[]): void {
+    super.prepareContext(contextRoots);
+    this.internallyPrepareContext();
+    this.m.forEach(subMod => subMod.prepareContext(contextRoots));
+  }
+  internallyPrepareContext(): void {
+    this.#prepareContextInternal();
+  }
+  #prepareContextInternal = mc_FillerStraight01_prepareContext;
+  seal(): IModuleNonNull_mc_FillerStraight01 {
     this.afterDataCompletion();
-    const adc = new OD_M_mc_Filler01_NonNull(this);
+    const adc = new OD_M_mc_FillerStraight01_NonNull(this);
     return adc;
   }
 
@@ -1695,6 +1528,19 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
     }
     return m;
   }
+  addOD_M_mc_FillerSupportPanels01(index?: number): dc_mc_FillerSupportPanels01 {
+    var m = new OD_M_mc_FillerSupportPanels01(this);
+    m.dataCompletion();
+    if (this._manufacturerMode) {
+      m.manufacturerDataCompletion();
+    }
+    if (index !== undefined) {
+      this.m.splice(index, 0, m);
+    } else {
+      this.m.push(m);
+    }
+    return m;
+  }
   override validateSelections(): void {
     this.mod_CarcaseColor_matrix = VariantValidation.mod_CarcaseColor(this, this.mod_CarcaseColor);
     this.mod_CarcaseDistanceWall_matrix = VariantValidation.mod_CarcaseDistanceWall(this, this.mod_CarcaseDistanceWall);
@@ -1702,15 +1548,8 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
     this.mod_CarcaseEdgeFrontColor_matrix = VariantValidation.mod_CarcaseEdgeFrontColor(this, this.mod_CarcaseEdgeFrontColor);
     this.mod_CarcaseFrontConstruction_matrix = VariantValidation.mod_CarcaseFrontConstruction(this, this.mod_CarcaseFrontConstruction);
     this.mod_CarcaseProgram_matrix = VariantValidation.mod_CarcaseProgram(this, this.mod_CarcaseProgram);
-    this.mod_CountertopThk_matrix = VariantValidation.mod_CountertopThk(this, this.mod_CountertopThk);
-    this.mod_CreateBacksplash_matrix = VariantValidation.mod_CreateBacksplash(this, this.mod_CreateBacksplash);
-    this.mod_CreateCountertop_matrix = VariantValidation.mod_CreateCountertop(this, this.mod_CreateCountertop);
-    this.mod_CreateFingergrip_matrix = VariantValidation.mod_CreateFingergrip(this, this.mod_CreateFingergrip);
-    this.mod_CreatePaneltop_matrix = VariantValidation.mod_CreatePaneltop(this, this.mod_CreatePaneltop);
-    this.mod_CreateToekick_matrix = VariantValidation.mod_CreateToekick(this, this.mod_CreateToekick);
     this.mod_Depth_matrix = VariantValidation.mod_Depth(this, this.mod_Depth);
     this.mod_Direction_matrix = VariantValidation.mod_Direction(this, this.mod_Direction);
-    this.mod_FillerHardware_matrix = VariantValidation.mod_FillerHardware(this, this.mod_FillerHardware);
     this.mod_FillerType_matrix = VariantValidation.mod_FillerType(this, this.mod_FillerType);
     this.mod_FingergripType_matrix = VariantValidation.mod_FingergripType(this, this.mod_FingergripType);
     this.mod_FrontColor_matrix = VariantValidation.mod_FrontColor(this, this.mod_FrontColor);
@@ -1738,29 +1577,31 @@ export class OD_M_mc_Filler01 extends OD_Base implements dc_mc_Filler01
     this.mod_SidepanelrightThk_matrix = VariantValidation.mod_SidepanelrightThk(this, this.mod_SidepanelrightThk);
     this.mod_TypeElement_matrix = VariantValidation.mod_TypeElement(this, this.mod_TypeElement);
     this.mod_Width_matrix = VariantValidation.mod_Width(this, this.mod_Width);
+    this.mod_FillerHardware_matrix = VariantValidation.mod_FillerHardware(this, this.mod_FillerHardware);
+    this.mod_CarcaseId_matrix = VariantValidation.mod_CarcaseId(this, this.mod_CarcaseId);
   }
 
   override calculateContainerModules(): void {
-    let ccm = new OD_M_mc_Filler01_NonNull(this);
+    let ccm = new OD_M_mc_FillerStraight01_NonNull(this);
     ccm.calculateContainerModules();
     this.m.forEach(subMod => subMod.calculateContainerModules());
   }
 
 
   override createBuildPlan(): void {
-    var cbp = new OD_M_mc_Filler01_NonNull(this);
+    var cbp = new OD_M_mc_FillerStraight01_NonNull(this);
     cbp.createBuildPlan();
     this.m.forEach(subMod => subMod.createBuildPlan());
   }
 
 }
 
-class OD_M_mc_Filler01_NonNull implements cbp_mc_Filler01, adc_mc_Filler01, ccm_mc_Filler01, IPartParentsNonNull_mc_Cornerunit01_mc_Filler01_mc_Storageunit01_mc_VertDivider01, IPartParentsNonNull_mc_Filler01_mc_Storageunit01, IPartParentsNonNull_mc_Filler01_mf_FillerFront {
-  constructor(parent: OD_M_mc_Filler01) {
+class OD_M_mc_FillerStraight01_NonNull implements cbp_mc_FillerStraight01, adc_mc_FillerStraight01, ccm_mc_FillerStraight01, IPartParentsNonNull_mc_Cornerunit01_mc_FillerStraight01_mc_Storageunit01_mc_VertDivider01, IPartParentsNonNull_mc_FillerStraight01_mc_Storageunit01, IPartParentsNonNull_mc_FillerStraight01_mf_FillerFront, IPartParentsNonNull_mc_FillerStraight01 {
+  constructor(parent: OD_M_mc_FillerStraight01) {
     this.#internalParent = parent;
     this.parent = parent.parent;
   }
-  #internalParent: OD_M_mc_Filler01;
+  #internalParent: OD_M_mc_FillerStraight01;
 
   get _id(): string { return this.#internalParent._id; }
   get modId(): string { return this.#internalParent.modId; }
@@ -1776,15 +1617,15 @@ class OD_M_mc_Filler01_NonNull implements cbp_mc_Filler01, adc_mc_Filler01, ccm_
   createBuildPlan(): void {
     this.#createBuildPlanInternal();
   }
-  #createBuildPlanInternal = mc_Filler01_createBuildPlan;
+  #createBuildPlanInternal = mc_FillerStraight01_createBuildPlan;
   afterDataCompletion(): void {
     this.#afterDataCompletionInternal();
   }
-  #afterDataCompletionInternal = mc_Filler01_afterDataCompletion;
+  #afterDataCompletionInternal = mc_FillerStraight01_afterDataCompletion;
   calculateContainerModules(): void {
     this.#calculateContainerModulesInternal();
   }
-  #calculateContainerModulesInternal = mc_Filler01_calculateContainerModules;
+  #calculateContainerModulesInternal = mc_FillerStraight01_calculateContainerModules;
   createPartGroup(groupName: string, part: PartBase): PartGroup {
     return this.#internalParent.createPartGroup(groupName, part);
   }
@@ -1805,7 +1646,7 @@ class OD_M_mc_Filler01_NonNull implements cbp_mc_Filler01, adc_mc_Filler01, ccm_
   }
   get m(): OD_Base[] { return this.#internalParent.m; }
   get g(): IGlobalVars { return this.#internalParent.g; }
-  parent: IModParents_mr_Filler_mr_StorageunitSingle;
+  parent: IModParents_mr_FillerStraight_mr_StorageunitSingle;
   get mod_CarcaseColor(): string {
     return this.#internalParent.mod_CarcaseColor!;
   }
@@ -1833,35 +1674,11 @@ class OD_M_mc_Filler01_NonNull implements cbp_mc_Filler01, adc_mc_Filler01, ccm_
   get mod_CarcaseProgram_matrix(): IMatrix_mod_CarcaseProgram {
     return this.#internalParent.mod_CarcaseProgram_matrix!;
   }
-  get mod_CountertopInfo(): string[] {
-    return this.#internalParent.mod_CountertopInfo!;
-  }
-  get mod_CountertopThk(): number {
-    return this.#internalParent.mod_CountertopThk!;
-  }
-  get mod_CreateBacksplash(): boolean {
-    return this.#internalParent.mod_CreateBacksplash!;
-  }
-  get mod_CreateCountertop(): boolean {
-    return this.#internalParent.mod_CreateCountertop!;
-  }
-  get mod_CreateFingergrip(): boolean {
-    return this.#internalParent.mod_CreateFingergrip!;
-  }
-  get mod_CreatePaneltop(): boolean {
-    return this.#internalParent.mod_CreatePaneltop!;
-  }
-  get mod_CreateToekick(): boolean {
-    return this.#internalParent.mod_CreateToekick!;
-  }
   get mod_Depth(): number {
     return this.#internalParent.mod_Depth!;
   }
   get mod_Direction(): string {
     return this.#internalParent.mod_Direction!;
-  }
-  get mod_FillerHardware(): string {
-    return this.#internalParent.mod_FillerHardware!;
   }
   get mod_FillerType(): string {
     return this.#internalParent.mod_FillerType!;
@@ -1953,6 +1770,12 @@ class OD_M_mc_Filler01_NonNull implements cbp_mc_Filler01, adc_mc_Filler01, ccm_
   get mod_Width(): number {
     return this.#internalParent.mod_Width!;
   }
+  get mod_FillerHardware(): string {
+    return this.#internalParent.mod_FillerHardware!;
+  }
+  get mod_CarcaseId(): string {
+    return this.#internalParent.mod_CarcaseId!;
+  }
   addOD_M_mc_StorageunitSidepanel01(index?: number): dc_mc_StorageunitSidepanel01 {
     return this.#internalParent.addOD_M_mc_StorageunitSidepanel01(index);
   }
@@ -1964,6 +1787,9 @@ class OD_M_mc_Filler01_NonNull implements cbp_mc_Filler01, adc_mc_Filler01, ccm_
   }
   addOD_M_mc_FillerFront01(index?: number): dc_mc_FillerFront01 {
     return this.#internalParent.addOD_M_mc_FillerFront01(index);
+  }
+  addOD_M_mc_FillerSupportPanels01(index?: number): dc_mc_FillerSupportPanels01 {
+    return this.#internalParent.addOD_M_mc_FillerSupportPanels01(index);
   }
 }
 

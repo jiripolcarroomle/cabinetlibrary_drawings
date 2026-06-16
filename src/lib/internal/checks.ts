@@ -2,11 +2,21 @@ import { getSelectionsByAttrId } from './selections';
 import { CheckFunc } from './check-func';
 import { clearLogMessages, getLogMessages, logError, LogMessage, logWarning } from './logging';
 
-import { IModVarNonNull_mod_ClothingOrganizerDesign, IModVarNonNull_mod_CarcaseEdgeFrontColor } from './var-interfaces';
-import { VariantValidation, SelectionEntryBase_number, SelectionEntryBase_string, SelectionEntry_mod_CarcaseEdgeFrontColor, SelectionEntry_mod_ClothingOrganizerDesign, IMatrix_mod_ClothingOrganizerDesign } from './selections';
+import { VariantValidation, SelectionEntryBase_number, SelectionEntryBase_string } from './selections';
 export const posScriptChecks: Map<string, string[]> = new Map<string, string[]>([
 ]);
 export namespace Checks {
+    const checksAttrTypesMap: Map<string, string> = new Map<string, string>([
+        ['mod_PlinthAreaHeight', 'n'],
+        ['mod_ShelfadjThk', 'n'],
+    ]);
+    export function isAttributeNumeric(attrId: string): boolean {
+        return checksAttrTypesMap.get(attrId) === "n";
+    }
+    function isAttributeBoolean(attrId: string): boolean {
+        return checksAttrTypesMap.get(attrId) === "b";
+    }
+
     export var checks: CheckDefinition[] = [
         {
             attrIds: [
@@ -108,6 +118,34 @@ export namespace Checks {
                 [{ value: "222" }, { value: "Style" }],
                 [{ value: "215" }, { value: "Style" }],
                 [{ value: "214" }, { value: "Style" }],
+            ] as CheckRow[],
+        } as CheckDefinition,
+        {
+            attrIds: [
+                'mod_HandleColor', 'mod_HandleDesign'],
+            colIds: [
+                undefined, undefined],
+            validEntries: [
+                [{ value: "NoColor" }, { value: "10" }],
+                [{ value: "Black" }, { value: "100" }],
+                [{ value: "Tin" }, { value: "100" }],
+                [{ value: "StainlessSteel" }, { value: "110" }],
+                [{ value: "Black" }, { value: "120" }],
+                [{ value: "StainlessSteel" }, { value: "120" }],
+                [{ value: "Black" }, { value: "130" }],
+                [{ value: "BrassPlatedAntique" }, { value: "130" }],
+                [{ value: "StainlessSteel" }, { value: "130" }],
+                [{ value: "StainlessSteelMattBrushed" }, { value: "20" }],
+                [{ value: "StainlessSteelMattBrushed" }, { value: "30" }],
+                [{ value: "StainlessSteel" }, { value: "40" }],
+                [{ value: "StainlessSteelMattBrushed" }, { value: "40" }],
+                [{ value: "StainlessSteel" }, { value: "50" }],
+                [{ value: "StainlessSteelMattBrushed" }, { value: "50" }],
+                [{ value: "Black" }, { value: "60" }],
+                [{ value: "BrassPlatedAntique" }, { value: "60" }],
+                [{ value: "ChromedPolished" }, { value: "60" }],
+                [{ value: "NickelPlated" }, { value: "40" }],
+                [{ value: "NickelPlated" }, { value: "50" }],
             ] as CheckRow[],
         } as CheckDefinition,
         {
@@ -458,10 +496,203 @@ export namespace Checks {
         } as CheckDefinition,
         {
             attrIds: [
-                'mod_ClothingOrganizerDesign', 'mod_CarcaseEdgeFrontColor'],
+                'mod_HoodSupplier', 'mod_HoodId'],
             colIds: [
                 undefined, undefined],
-            checkName: 'FrontDefenition',
+            validEntries: [
+                [{ value: "Neff" }, { value: "D46ED52X1" }],
+                [{ value: "Siemens" }, { value: "LC65KDK60" }],
+                [{ value: "Siemens" }, { value: "LC66BBM50" }],
+                [{ value: "Siemens" }, { value: "LC85KDK60" }],
+                [{ value: "Siemens" }, { value: "LC96BBM50" }],
+                [{ value: "Siemens" }, { value: "LI99SA684" }],
+                [{ value: "None" }, { value: "None" }],
+            ] as CheckRow[],
+        } as CheckDefinition,
+        {
+            attrIds: [
+                '_articleId', 'mod_HoodId'],
+            colIds: [
+                undefined, undefined],
+            attrTypes: [
+                1, 0,] as CheckAttributeType[],
+            validEntries: [
+                [{ value: "LW_H60T_L" }, { value: "LC96BBM50" }],
+                [{ value: "LW_H60T_L" }, { value: "LC66BBM50" }],
+                [{ value: "LW_H60T_L" }, { value: "LC85KDK60" }],
+                [{ value: "LW_H60T_L" }, { value: "LC65KDK60" }],
+                [{ value: "LW_H60T_L" }, { value: "None" }],
+                [{ value: "LW_H60T_L" }, { value: "LI99SA684" }],
+                [{ value: "LW_H60T_L" }, { value: "D46ED52X1" }],
+                [{ value: "LW_H60T_L1" }, { value: "LC96BBM50" }],
+                [{ value: "LW_H60T_L1" }, { value: "LC66BBM50" }],
+                [{ value: "LW_H60T_L1" }, { value: "LC85KDK60" }],
+                [{ value: "LW_H60T_L1" }, { value: "LC65KDK60" }],
+                [{ value: "LW_H60T_L1" }, { value: "None" }],
+                [{ value: "LW_H60T_L1" }, { value: "LI99SA684" }],
+                [{ value: "LW_H60T_L1" }, { value: "D46ED52X1" }],
+                [{ value: "LW_CornerFiller" }, { value: "LC96BBM50" }],
+                [{ value: "LW_CornerFiller" }, { value: "LC66BBM50" }],
+                [{ value: "LW_CornerFiller" }, { value: "LC85KDK60" }],
+                [{ value: "LW_CornerFiller" }, { value: "LC65KDK60" }],
+                [{ value: "LW_CornerFiller" }, { value: "None" }],
+                [{ value: "LW_CornerFiller" }, { value: "LI99SA684" }],
+                [{ value: "LW_CornerFiller" }, { value: "D46ED52X1" }],
+                [{ value: "LW_CornerUnit" }, { value: "LC96BBM50" }],
+                [{ value: "LW_CornerUnit" }, { value: "LC66BBM50" }],
+                [{ value: "LW_CornerUnit" }, { value: "LC85KDK60" }],
+                [{ value: "LW_CornerUnit" }, { value: "LC65KDK60" }],
+                [{ value: "LW_CornerUnit" }, { value: "None" }],
+                [{ value: "LW_CornerUnit" }, { value: "LI99SA684" }],
+                [{ value: "LW_CornerUnit" }, { value: "D46ED52X1" }],
+                [{ value: "LW_Dishwasher" }, { value: "LC96BBM50" }],
+                [{ value: "LW_Dishwasher" }, { value: "LC66BBM50" }],
+                [{ value: "LW_Dishwasher" }, { value: "LC85KDK60" }],
+                [{ value: "LW_Dishwasher" }, { value: "LC65KDK60" }],
+                [{ value: "LW_Dishwasher" }, { value: "None" }],
+                [{ value: "LW_Dishwasher" }, { value: "LI99SA684" }],
+                [{ value: "LW_Dishwasher" }, { value: "D46ED52X1" }],
+                [{ value: "LW_Filler" }, { value: "LC96BBM50" }],
+                [{ value: "LW_Filler" }, { value: "LC66BBM50" }],
+                [{ value: "LW_Filler" }, { value: "LC85KDK60" }],
+                [{ value: "LW_Filler" }, { value: "LC65KDK60" }],
+                [{ value: "LW_Filler" }, { value: "None" }],
+                [{ value: "LW_Filler" }, { value: "LI99SA684" }],
+                [{ value: "LW_Filler" }, { value: "D46ED52X1" }],
+                [{ value: "LW_Fliplift" }, { value: "LC96BBM50" }],
+                [{ value: "LW_Fliplift" }, { value: "LC66BBM50" }],
+                [{ value: "LW_Fliplift" }, { value: "LC85KDK60" }],
+                [{ value: "LW_Fliplift" }, { value: "LC65KDK60" }],
+                [{ value: "LW_Fliplift" }, { value: "None" }],
+                [{ value: "LW_Fliplift" }, { value: "LI99SA684" }],
+                [{ value: "LW_Fliplift" }, { value: "D46ED52X1" }],
+                [{ value: "LW_Fridge" }, { value: "LC96BBM50" }],
+                [{ value: "LW_Fridge" }, { value: "LC66BBM50" }],
+                [{ value: "LW_Fridge" }, { value: "LC85KDK60" }],
+                [{ value: "LW_Fridge" }, { value: "LC65KDK60" }],
+                [{ value: "LW_Fridge" }, { value: "None" }],
+                [{ value: "LW_Fridge" }, { value: "LI99SA684" }],
+                [{ value: "LW_Fridge" }, { value: "D46ED52X1" }],
+                [{ value: "LW_Mikrowelle" }, { value: "LC96BBM50" }],
+                [{ value: "LW_Mikrowelle" }, { value: "LC66BBM50" }],
+                [{ value: "LW_Mikrowelle" }, { value: "LC85KDK60" }],
+                [{ value: "LW_Mikrowelle" }, { value: "LC65KDK60" }],
+                [{ value: "LW_Mikrowelle" }, { value: "None" }],
+                [{ value: "LW_Mikrowelle" }, { value: "LI99SA684" }],
+                [{ value: "LW_Mikrowelle" }, { value: "D46ED52X1" }],
+                [{ value: "LW_Mirror" }, { value: "LC96BBM50" }],
+                [{ value: "LW_Mirror" }, { value: "LC66BBM50" }],
+                [{ value: "LW_Mirror" }, { value: "LC85KDK60" }],
+                [{ value: "LW_Mirror" }, { value: "LC65KDK60" }],
+                [{ value: "LW_Mirror" }, { value: "None" }],
+                [{ value: "LW_Mirror" }, { value: "LI99SA684" }],
+                [{ value: "LW_Mirror" }, { value: "D46ED52X1" }],
+                [{ value: "LW_Pullout" }, { value: "LC96BBM50" }],
+                [{ value: "LW_Pullout" }, { value: "LC66BBM50" }],
+                [{ value: "LW_Pullout" }, { value: "LC85KDK60" }],
+                [{ value: "LW_Pullout" }, { value: "LC65KDK60" }],
+                [{ value: "LW_Pullout" }, { value: "None" }],
+                [{ value: "LW_Pullout" }, { value: "LI99SA684" }],
+                [{ value: "LW_Pullout" }, { value: "D46ED52X1" }],
+                [{ value: "LW_Sink" }, { value: "LC96BBM50" }],
+                [{ value: "LW_Sink" }, { value: "LC66BBM50" }],
+                [{ value: "LW_Sink" }, { value: "LC85KDK60" }],
+                [{ value: "LW_Sink" }, { value: "LC65KDK60" }],
+                [{ value: "LW_Sink" }, { value: "None" }],
+                [{ value: "LW_Sink" }, { value: "LI99SA684" }],
+                [{ value: "LW_Sink" }, { value: "D46ED52X1" }],
+                [{ value: "LW_U60TS" }, { value: "LC96BBM50" }],
+                [{ value: "LW_U60TS" }, { value: "LC66BBM50" }],
+                [{ value: "LW_U60TS" }, { value: "LC85KDK60" }],
+                [{ value: "LW_U60TS" }, { value: "LC65KDK60" }],
+                [{ value: "LW_U60TS" }, { value: "None" }],
+                [{ value: "LW_U60TS" }, { value: "LI99SA684" }],
+                [{ value: "LW_U60TS" }, { value: "D46ED52X1" }],
+                [{ value: "LW_U60ZZS" }, { value: "LC96BBM50" }],
+                [{ value: "LW_U60ZZS" }, { value: "LC66BBM50" }],
+                [{ value: "LW_U60ZZS" }, { value: "LC85KDK60" }],
+                [{ value: "LW_U60ZZS" }, { value: "LC65KDK60" }],
+                [{ value: "LW_U60ZZS" }, { value: "None" }],
+                [{ value: "LW_U60ZZS" }, { value: "LI99SA684" }],
+                [{ value: "LW_U60ZZS" }, { value: "D46ED52X1" }],
+                [{ value: "LP_Hochschrank" }, { value: "LC96BBM50" }],
+                [{ value: "LP_Hochschrank" }, { value: "LC66BBM50" }],
+                [{ value: "LP_Hochschrank" }, { value: "LC85KDK60" }],
+                [{ value: "LP_Hochschrank" }, { value: "LC65KDK60" }],
+                [{ value: "LP_Hochschrank" }, { value: "None" }],
+                [{ value: "LP_Hochschrank" }, { value: "LI99SA684" }],
+                [{ value: "LP_Hochschrank" }, { value: "D46ED52X1" }],
+                [{ value: "LW_U60" }, { value: "LC96BBM50" }],
+                [{ value: "LW_U60" }, { value: "LC66BBM50" }],
+                [{ value: "LW_U60" }, { value: "LC85KDK60" }],
+                [{ value: "LW_U60" }, { value: "LC65KDK60" }],
+                [{ value: "LW_U60" }, { value: "None" }],
+                [{ value: "LW_U60" }, { value: "LI99SA684" }],
+                [{ value: "LW_U60" }, { value: "D46ED52X1" }],
+                [{ value: "LP_TestClothing" }, { value: "LC96BBM50" }],
+                [{ value: "LP_TestClothing" }, { value: "LC66BBM50" }],
+                [{ value: "LP_TestClothing" }, { value: "LC85KDK60" }],
+                [{ value: "LP_TestClothing" }, { value: "LC65KDK60" }],
+                [{ value: "LP_TestClothing" }, { value: "None" }],
+                [{ value: "LP_TestClothing" }, { value: "LI99SA684" }],
+                [{ value: "LP_TestClothing" }, { value: "D46ED52X1" }],
+                [{ value: "LW_Hood" }, { value: "LC96BBM50" }],
+                [{ value: "LW_Hood" }, { value: "LC66BBM50" }],
+                [{ value: "LW_Hood" }, { value: "LC85KDK60" }],
+                [{ value: "LW_Hood" }, { value: "LC65KDK60" }],
+                [{ value: "LW_Hood" }, { value: "None" }],
+                [{ value: "LW_Hood" }, { value: "LI99SA684" }],
+                [{ value: "LW_Hood" }, { value: "D46ED52X1" }],
+                [{ value: "sr_Hood1" }, { value: "None" }],
+                [{ value: "sr_Hood1" }, { value: "D46ED52X1" }],
+                [{ value: "sr_Hood1" }, { value: "LI99SA684" }],
+            ] as CheckRow[],
+        } as CheckDefinition,
+        {
+            attrIds: [
+                'mod_ClothingOrganizerType', 'mod_ClothingOrganizerDesign'],
+            colIds: [
+                undefined, undefined],
+            validEntries: [
+                [{ value: "WardrobeLift" }, { value: "ConeroLift", default: true }],
+                [{ value: "WardrobeLift" }, { value: "ConeroLift_445–628mm" }],
+                [{ value: "TrouserRack" }, { value: "ConeroTrouser", default: true }],
+                [{ value: "TieRack" }, { value: "ConeroTie", default: true }],
+                [{ value: "None" }, { value: "None", default: true }],
+            ] as CheckRow[],
+        } as CheckDefinition,
+        {
+            attrIds: [
+                'mod_ClothingOrganizerDesign', 'mod_ClothingOrganizerConnectionPosition'],
+            colIds: [
+                undefined, undefined],
+            validEntries: [
+                [{ value: "None" }, { value: "Right" }],
+                [{ value: "None" }, { value: "Left" }],
+                [{ value: "None" }, { value: "Left&Right" }],
+                [{ value: "None" }, { value: "Top" }],
+                [{ value: "ConeroLift" }, { value: "Left&Right" }],
+                [{ value: "ConeroLift_445–628mm" }, { value: "Left&Right" }],
+                [{ value: "ConeroTie" }, { value: "Right" }],
+                [{ value: "ConeroTie" }, { value: "Left" }],
+                [{ value: "ConeroTrouser" }, { value: "Left&Right" }],
+            ] as CheckRow[],
+        } as CheckDefinition,
+        {
+            attrIds: [
+                'mod_ClothingOrganizerType', 'mod_ClothingOrganizerConnectionPosition'],
+            colIds: [
+                undefined, undefined],
+            validEntries: [
+                [{ value: "WardrobeLift" }, { value: "Left&Right" }],
+                [{ value: "TrouserRack" }, { value: "Left&Right" }],
+                [{ value: "TieRack" }, { value: "Right" }],
+                [{ value: "TieRack" }, { value: "Left" }],
+                [{ value: "None" }, { value: "Left" }],
+                [{ value: "None" }, { value: "Left&Right" }],
+                [{ value: "None" }, { value: "Right" }],
+                [{ value: "None" }, { value: "Top" }],
+            ] as CheckRow[],
         } as CheckDefinition,
     ];
 
@@ -640,18 +871,19 @@ export namespace Checks {
             forceCheck: boolean = false
         ): CheckConflictResult {
             let conflictResult = new CheckConflictResult();
-            const attributesWithColumnIds = getUsedAttributesWithColumnIds(leadingAttribute.attrId, checks);
+            const effectiveLeadingAttribute: CheckAttributeValue = { ...leadingAttribute };
+            const attributesWithColumnIds = getUsedAttributesWithColumnIds(effectiveLeadingAttribute.attrId, checks);
 
             if (!checkAttributes) {
                 return conflictResult;
             }
 
-            if (!checkAttributes.get(leadingAttribute.attrId)) {
+            if (checkAttributes.get(effectiveLeadingAttribute.attrId) === undefined) {
                 conflictResult.errorMsg = "Attribute not found in module";
                 return conflictResult;
             }
 
-            if (isVirtualAttribute(leadingAttribute.attrId)) {
+            if (isVirtualAttribute(effectiveLeadingAttribute.attrId)) {
                 conflictResult.errorMsg = "Cannot change virtual attribute";
                 return conflictResult;
             }
@@ -662,15 +894,28 @@ export namespace Checks {
             }
 
             const minCheckAttributes = generateMinimalCheckAttributesMap(checkAttributes, attributesWithColumnIds);
-            const attributeType = getAttributeType(leadingAttribute.attrId);
-            if (!setAttributeValue(minCheckAttributes, leadingAttribute, attributeType, attributesWithColumnIds)) {
-                conflictResult.errorMsg = `Could not set attribute ${leadingAttribute.attrId} to value ${leadingAttribute.value}`;
+            const attributeType = getAttributeType(effectiveLeadingAttribute.attrId);
+            // convert the leading value to the correct type if needed, to ensure the following checks and comparisons work correctly
+            if (effectiveLeadingAttribute.value !== undefined && typeof effectiveLeadingAttribute.value === 'string') {
+                const strVal = effectiveLeadingAttribute.value;
+                if (isAttributeNumeric(effectiveLeadingAttribute.attrId)) {
+                    const valueAsNumber = Number(strVal);
+                    if (!isNaN(valueAsNumber)) {
+                        effectiveLeadingAttribute.value = valueAsNumber;
+                    }
+                } else if (isAttributeBoolean(effectiveLeadingAttribute.attrId)) {
+                    const valueAsBoolean = strVal.toLowerCase() === 'true' || strVal === '1';
+                    effectiveLeadingAttribute.value = valueAsBoolean;
+                }
+            }
+            if (!setAttributeValue(minCheckAttributes, effectiveLeadingAttribute, attributeType, attributesWithColumnIds)) {
+                conflictResult.errorMsg = `Could not set attribute ${effectiveLeadingAttribute.attrId} to value ${effectiveLeadingAttribute.value}`;
                 return conflictResult;
             }
 
             const leadingAttributeConflictResult = attributeType === CheckAttributeType.Ranged
-                ? getRangedLeadingAttributeConflictResult(checkAttributes, leadingAttribute)
-                : getNonRangedLeadingAttributeConflictResult(minCheckAttributes, leadingAttribute);
+                ? getRangedLeadingAttributeConflictResult(checkAttributes, effectiveLeadingAttribute)
+                : getNonRangedLeadingAttributeConflictResult(minCheckAttributes, effectiveLeadingAttribute);
 
             // error conflict results are unsolvable
             if (leadingAttributeConflictResult?.errorMsg !== undefined) {
@@ -682,7 +927,7 @@ export namespace Checks {
                 return leadingAttributeConflictResult;
             }
 
-            conflictResult = solveConflict(minCheckAttributes, leadingAttribute, attributeType, attributesWithColumnIds, forceCheck);
+            conflictResult = solveConflict(minCheckAttributes, effectiveLeadingAttribute, attributeType, attributesWithColumnIds, forceCheck);
 
             return conflictResult;
         }
@@ -989,10 +1234,16 @@ export namespace Checks {
             }
 
             checksCount++;
-            const validValues = c.checkName !== undefined
-                ? calculateValidValues_NonRanged_ScriptCheck(c, checkAttributes, attrId, selections)
-                : calculateValidValues_NonRanged(c, checkAttributes, attrId, selections, allowAllDropdownValues);
 
+            if (c.checkName !== undefined) {
+                const scriptEntries = calculateScriptCheckDropDownEntries(c, checkAttributes, attrId, selections);
+                for (const entry of scriptEntries) {
+                    addDropDownEntry(dropDownEntries, entry.value, entry.kind);
+                }
+                return;
+            }
+
+            const validValues = calculateValidValues_NonRanged(c, checkAttributes, attrId, selections, allowAllDropdownValues);
             if (validValues === undefined) {
                 return;
             }
@@ -1017,20 +1268,22 @@ export namespace Checks {
         return { dropDownEntries, dropDownRange: undefined };
     }
 
-    function calculateValidValues_NonRanged_ScriptCheck(c: CheckDefinition, checkAttributes: CheckAttributesMap, attrId: string, selections: any[]): AttributeValue[] {
+    function calculateScriptCheckDropDownEntries(c: CheckDefinition, checkAttributes: CheckAttributesMap, attrId: string, selections: any[]): CheckDropDownEntry[] {
         const scriptResult = executeScriptGetDropDownValues(checkAttributes, c.checkName!, attrId, selections);
-        const validValues = (scriptResult?.dropDownEntries ?? []).filter(entry => entry.kind === CheckDropDownEntryKind.Normal).map(entry => entry.value);
+        const scriptEntries = scriptResult?.dropDownEntries ?? [];
 
-        const idx = c.attrIds.findIndex((p) => p === attrId);
-        const attributeColumn = c.colIds[idx];
-        if (attributeColumn === undefined) {
-            return validValues;
+        // any selections not mentioned in the script result are treated as Conflicting / Invalid, based on the check type
+        const isConflictSolvable = !isCheckIgnoredOnSolve(c);
+        const unmatchedKind = isConflictSolvable ? CheckDropDownEntryKind.Conflicting : CheckDropDownEntryKind.Invalid;
+
+        const result: CheckDropDownEntry[] = [];
+        for (const selection of selections) {
+            if (selection.value === undefined) continue;
+            const scriptEntry = scriptEntries.find(e => e.value === selection.value);
+            const kind = scriptEntry !== undefined ? scriptEntry.kind : unmatchedKind;
+            result.push({ value: selection.value, kind });
         }
-
-        // identify which selections were marked as valid.
-        const validSelections = selections.filter(s => validValues.includes((s as any).value));
-        // take only the values for the attribute column
-        return validSelections.map(s => ((s as any).matrix as any)[attributeColumn]);
+        return result;
     }
 
     function calculateValidValues_NonRanged(c: CheckDefinition, checkAttributes: CheckAttributesMap, attrId: string, selections: any[], allowAllDropdownValues: boolean): AttributeValue[] | undefined {
@@ -1071,7 +1324,15 @@ export namespace Checks {
         const validValues: AttributeValue[] = [];
         for (const selection of selections) {
             const selectionValue: AttributeValue = attributeColumn ? ((selection as any).matrix as any)[attributeColumn] : (selection as any).value;
-            const selectionEntries = c.validEntries.filter(entry => entry[idx].value === selectionValue);
+            let selectionEntries = c.validEntries.filter(entry => entry[idx].value === selectionValue);
+            // if a selection does not define a range entry, try to use the check's default range
+            if (selectionEntries.length === 0 && otherAttributeType === CheckAttributeType.Ranged && c.defaultRange) {
+                const row: CellEntry[] = [];
+                // only otherIdx is read by findMatchingEntries; idx slot is intentionally left empty
+                row[otherIdx] = { min: c.defaultRange.min, max: c.defaultRange.max, step: c.defaultRange.step } as CellEntry;
+                selectionEntries = [row];
+            }
+
             if (selectionEntries.length === 0) {
                 // there are no entries defined for this selection, which means that by default, we should assume that it is valid.
                 validValues.push(selectionValue);
@@ -1346,7 +1607,7 @@ export namespace Checks {
 
             }
 
-            const conflictSolution = solveConflictRecursively(initialState, attributesWithColumnIds, state, neighbors, forceCheck, validated);
+            const conflictSolution = solveConflictRecursively(initialState, attributesWithColumnIds, state, new Map(neighbors), forceCheck, validated);
             if (conflictSolution.errorMsg === undefined) {
                 return conflictSolution;
             }
@@ -1446,7 +1707,7 @@ export namespace Checks {
             }
 
             // the current state does not make this attribute change its value
-            const conflictSolution = solveConflictRecursively(initialState, attributesWithColumnIds, state, neighbors, forceCheck, validated);
+            const conflictSolution = solveConflictRecursively(initialState, attributesWithColumnIds, state, new Map(neighbors), forceCheck, validated);
             if (conflictSolution.errorMsg === undefined) {
                 return conflictSolution;
             }
@@ -1502,7 +1763,7 @@ export namespace Checks {
         if (check.checkName !== undefined) {
             return attributeSelections;
         }
-        const otherAttributeIndex = check.colIds[0] === attributeId ? 1 : 0;
+        const otherAttributeIndex = check.attrIds[0] === attributeId ? 1 : 0;
         const otherAttributeId = check.attrIds[otherAttributeIndex];
         const otherAttributeColumn = check.colIds[otherAttributeIndex];
         const otherAttributeValue = state.get(getAttributeCheckKey(otherAttributeId, otherAttributeColumn));
@@ -1878,37 +2139,10 @@ export namespace Checks {
         const rightDistance = rightNeighbor - x;
         return leftDistance < rightDistance ? leftNeighbor : rightNeighbor;
     }
-    export interface IFrontDefenition_Attributes extends IModVarNonNull_mod_ClothingOrganizerDesign, IModVarNonNull_mod_CarcaseEdgeFrontColor { }
-
-    class FrontDefenition_Attributes implements IFrontDefenition_Attributes {
-        constructor(attributes: Checks.CheckAttributesMap) {
-            this._mod_CarcaseEdgeFrontColor = (attributes.get('mod_CarcaseEdgeFrontColor') as string);
-            this._mod_ClothingOrganizerDesign = (attributes.get('mod_ClothingOrganizerDesign') as string);
-            this._mod_ClothingOrganizerDesign_matrix = VariantValidation.mod_ClothingOrganizerDesign(undefined, this._mod_ClothingOrganizerDesign);
-        }
-        _mod_CarcaseEdgeFrontColor: string
-        get mod_CarcaseEdgeFrontColor(): string { return this._mod_CarcaseEdgeFrontColor }
-        _mod_ClothingOrganizerDesign: string
-        get mod_ClothingOrganizerDesign(): string { return this._mod_ClothingOrganizerDesign }
-        _mod_ClothingOrganizerDesign_matrix: IMatrix_mod_ClothingOrganizerDesign;
-        get mod_ClothingOrganizerDesign_matrix(): IMatrix_mod_ClothingOrganizerDesign { return this._mod_ClothingOrganizerDesign_matrix }
-    }
-
     export function executeScriptGetDropDownValues(attributes: Checks.CheckAttributesMap, checkName: string, attrId: string, selections: SelectionEntryBase_number[] | SelectionEntryBase_string[] | undefined): Checks.CheckDropDownResult | undefined {
         const checkFunctions = new CheckFunc.CheckFunctions();
+        const result = new Checks.CheckDropDownResult();
         switch (checkName) {
-            case 'FrontDefenition': {
-                const attr = new FrontDefenition_Attributes(attributes);
-                switch (attrId) {
-                    case 'mod_CarcaseEdgeFrontColor':
-                        return checkFunctions.check_FrontDefenition_getDropDownValues_mod_CarcaseEdgeFrontColor(attr, selections as SelectionEntry_mod_CarcaseEdgeFrontColor[]);
-                    case 'mod_ClothingOrganizerDesign':
-                        return checkFunctions.check_FrontDefenition_getDropDownValues_mod_ClothingOrganizerDesign(attr, selections as SelectionEntry_mod_ClothingOrganizerDesign[]);
-                    default:
-                        console.error(`Attribute ID '${attrId}' not found in check '${checkName}'.`);
-                        return undefined;
-                }
-            }
             default:
                 console.error(`Check named '${checkName}' not found.`);
                 return undefined;

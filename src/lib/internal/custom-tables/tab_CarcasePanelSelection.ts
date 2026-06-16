@@ -112,91 +112,164 @@ import { dc_mc_ClothingOrganizerHardware01, adc_mc_ClothingOrganizerHardware01, 
 import { dc_mc_ClothingOrganizerBoard01, adc_mc_ClothingOrganizerBoard01, cbp_mc_ClothingOrganizerBoard01 } from '../modules/mc_ClothingOrganizerBoard01'
 import { dc_mc_SegmentFront01, adc_mc_SegmentFront01, cbp_mc_SegmentFront01 } from '../modules/mc_SegmentFront01'
 import { dc_me_HoodInsert, adc_me_HoodInsert, cbp_me_HoodInsert } from '../modules/me_HoodInsert'
-import { dc_mc_HoodInsert01, adc_mc_HoodInsert01, cbp_mc_HoodInsert01 } from '../modules/mc_HoodInsert01'
 import { dc_md_EquipmentArticleBuilder, adc_md_EquipmentArticleBuilder, cbp_md_EquipmentArticleBuilder } from '../modules/md_EquipmentArticleBuilder'
 import { dc_md_EquipmentPlaceholder, adc_md_EquipmentPlaceholder, cbp_md_EquipmentPlaceholder } from '../modules/md_EquipmentPlaceholder'
 import { dc_mr_CeilingFiller, adc_mr_CeilingFiller, cbp_mr_CeilingFiller } from '../modules/mr_CeilingFiller'
 import { dc_mc_CeilingFiller01, adc_mc_CeilingFiller01, cbp_mc_CeilingFiller01 } from '../modules/mc_CeilingFiller01'
 import { dc_md_FrontPlaceholder, adc_md_FrontPlaceholder, cbp_md_FrontPlaceholder } from '../modules/md_FrontPlaceholder'
 import { dc_md_FrontArticleBuilder, adc_md_FrontArticleBuilder, cbp_md_FrontArticleBuilder } from '../modules/md_FrontArticleBuilder'
-import { dc_mr_Filler, adc_mr_Filler, cbp_mr_Filler } from '../modules/mr_Filler'
-import { dc_mc_Filler01, adc_mc_Filler01, cbp_mc_Filler01 } from '../modules/mc_Filler01'
+import { dc_mr_FillerStraight, adc_mr_FillerStraight, cbp_mr_FillerStraight } from '../modules/mr_FillerStraight'
+import { dc_mc_FillerStraight01, adc_mc_FillerStraight01, cbp_mc_FillerStraight01 } from '../modules/mc_FillerStraight01'
+import { dc_mc_FillerHardware01, adc_mc_FillerHardware01, cbp_mc_FillerHardware01 } from '../modules/mc_FillerHardware01'
+import { dc_mc_FillerSupportPanels01, adc_mc_FillerSupportPanels01, cbp_mc_FillerSupportPanels01 } from '../modules/mc_FillerSupportPanels01'
+import { dc_mc_HoodCarcaseParts01, adc_mc_HoodCarcaseParts01, cbp_mc_HoodCarcaseParts01 } from '../modules/mc_HoodCarcaseParts01'
 
-export interface cti_tab_ClothingOrganizerPositionZSettings {
-  readonly in_ClothesOrganizerType?: string;
-  readonly in_ClothesOrganizerDesign?: string;
+export interface cti_tab_CarcasePanelSelection {
+  readonly in_PartId?: string;
+  readonly in_BoardId?: string;
+  readonly in_LengthMin: number;
+  readonly in_LengthMax: number;
+  readonly in_WidthMin: number;
+  readonly in_WidthMax: number;
 }
 
-export interface ctm_tab_ClothingOrganizerPositionZSettings {
+export interface ctm_tab_CarcasePanelSelection {
 }
 
-export interface cto_tab_ClothingOrganizerPositionZSettings extends ctm_tab_ClothingOrganizerPositionZSettings {
+export interface cto_tab_CarcasePanelSelection extends ctm_tab_CarcasePanelSelection {
   readonly _id: number;
-  readonly DescriptorPositionZ?: string;
+  readonly StockPartId?: string;
+  readonly Length: number;
+  readonly Width: number;
+  readonly Thickness: number;
+  readonly Recut?: string;
+  readonly Rework?: string;
 }
 
-export interface ICT_tab_ClothingOrganizerPositionZSettings
-  extends cti_tab_ClothingOrganizerPositionZSettings, cto_tab_ClothingOrganizerPositionZSettings { }
+export interface ICT_tab_CarcasePanelSelection
+  extends cti_tab_CarcasePanelSelection, cto_tab_CarcasePanelSelection { }
 
-export class ct2_tab_ClothingOrganizerPositionZSettings {
+export class ct2_tab_CarcasePanelSelection {
 
   public findExactly(
-    in_ClothesOrganizerType: string | undefined,
-    in_ClothesOrganizerDesign: string | undefined,
-  ): cto_tab_ClothingOrganizerPositionZSettings | undefined {
-    const res = ct_tab_ClothingOrganizerPositionZSettings.find((p) =>
-      p.in_ClothesOrganizerType === in_ClothesOrganizerType
-      && p.in_ClothesOrganizerDesign === in_ClothesOrganizerDesign
+    in_PartId: string | undefined,
+    in_BoardId: string | undefined,
+    in_LengthMin: number,
+    in_LengthMax: number,
+    in_WidthMin: number,
+    in_WidthMax: number,
+  ): cto_tab_CarcasePanelSelection | undefined {
+    const res = ct_tab_CarcasePanelSelection.find((p) =>
+      p.in_PartId === in_PartId
+      && p.in_BoardId === in_BoardId
+      && p.in_LengthMin === in_LengthMin
+      && p.in_LengthMax === in_LengthMax
+      && p.in_WidthMin === in_WidthMin
+      && p.in_WidthMax === in_WidthMax
     );
     return res;
   }
 
   public find(
-    predicate: (value: cti_tab_ClothingOrganizerPositionZSettings) => boolean
-  ): cto_tab_ClothingOrganizerPositionZSettings | undefined {
-    for (let index = 0; index < ct_tab_ClothingOrganizerPositionZSettings.length; index++) {
-      const element = ct_tab_ClothingOrganizerPositionZSettings[index];
+    predicate: (value: cti_tab_CarcasePanelSelection) => boolean
+  ): cto_tab_CarcasePanelSelection | undefined {
+    for (let index = 0; index < ct_tab_CarcasePanelSelection.length; index++) {
+      const element = ct_tab_CarcasePanelSelection[index];
       if (predicate(element)) return element;
     }
     return undefined;
   }
 }
 
-export var ct_tab_ClothingOrganizerPositionZSettings: ICT_tab_ClothingOrganizerPositionZSettings[] = [
+export var ct_tab_CarcasePanelSelection: ICT_tab_CarcasePanelSelection[] = [
   {
-    _id: 1,
-    in_ClothesOrganizerType: "LiftRail",
-    in_ClothesOrganizerDesign: "CONERO",
-    DescriptorPositionZ: "240mm_1"
+    _id: 13,
+    in_PartId: "part_Sidepanelright",
+    in_BoardId: "P2_Light_grey_19.0",
+    in_LengthMin: 720,
+    in_LengthMax: 720,
+    in_WidthMin: 548,
+    in_WidthMax: 548,
+    StockPartId: "SP_1000118",
+    Length: 720,
+    Width: 548,
+    Thickness: 19,
+    Recut: "None",
+    Rework: "None"
   }
   , {
-    _id: 2,
-    in_ClothesOrganizerType: "LiftRailShelf",
-    in_ClothesOrganizerDesign: "CONEROTOP",
-    DescriptorPositionZ: "240mn_1"
+    _id: 14,
+    in_PartId: "part_Sidepanelright",
+    in_BoardId: "P2_Light_grey_19.0",
+    in_LengthMin: 500,
+    in_LengthMax: 720,
+    in_WidthMin: 548,
+    in_WidthMax: 548,
+    StockPartId: "SP_1000119",
+    Length: 720,
+    Width: 548,
+    Thickness: 19,
+    Recut: "Length",
+    Rework: "Cutting_Edging"
   }
   , {
-    _id: 3,
-    in_ClothesOrganizerType: "SimpleRail",
-    in_ClothesOrganizerDesign: "SideRail",
-    DescriptorPositionZ: "1_1"
+    _id: 15,
+    in_PartId: "part_Sidepanelright",
+    in_BoardId: "P2_Light_grey_19.0",
+    in_LengthMin: 500,
+    in_LengthMax: 720,
+    in_WidthMin: 448,
+    in_WidthMax: 548,
+    StockPartId: "SP_1000119",
+    Length: 720,
+    Width: 548,
+    Thickness: 19,
+    Recut: "Length_Width",
+    Rework: "Cutting_Edging"
   }
   , {
-    _id: 4,
-    in_ClothesOrganizerType: "SimpleRail",
-    in_ClothesOrganizerDesign: "ShelfRail",
-    DescriptorPositionZ: "1_1"
+    _id: 16,
+    in_PartId: "part_Sidepanelleft",
+    in_BoardId: "P2_Light_grey_19.0",
+    in_LengthMin: 720,
+    in_LengthMax: 720,
+    in_WidthMin: 548,
+    in_WidthMax: 548,
+    StockPartId: "SP_1000118",
+    Length: 720,
+    Width: 548,
+    Thickness: 19,
+    Recut: "None",
+    Rework: "None"
   }
   , {
-    _id: 5,
-    in_ClothesOrganizerType: "Functional1Side",
-    in_ClothesOrganizerDesign: "CONERO BASIC TROUSERS",
-    DescriptorPositionZ: "1_1"
+    _id: 17,
+    in_PartId: "part_Sidepanelleft",
+    in_BoardId: "P2_Light_grey_19.0",
+    in_LengthMin: 500,
+    in_LengthMax: 720,
+    in_WidthMin: 548,
+    in_WidthMax: 548,
+    StockPartId: "SP_1000119",
+    Length: 720,
+    Width: 548,
+    Thickness: 19,
+    Recut: "Length",
+    Rework: "Cutting_Edging"
   }
   , {
-    _id: 6,
-    in_ClothesOrganizerType: "Functional2Side",
-    in_ClothesOrganizerDesign: "CONERO BASIC TROUSERS SMALL",
-    DescriptorPositionZ: "1_1"
+    _id: 18,
+    in_PartId: "part_Sidepanelleft",
+    in_BoardId: "P2_Light_grey_19.0",
+    in_LengthMin: 500,
+    in_LengthMax: 720,
+    in_WidthMin: 448,
+    in_WidthMax: 548,
+    StockPartId: "SP_1000119",
+    Length: 720,
+    Width: 548,
+    Thickness: 19,
+    Recut: "Length_Width",
+    Rework: "Cutting_Edging"
   }
 ];

@@ -123,7 +123,7 @@ const onTestOrderCbChanged = async (value: string): Promise<void> => {
 
 const doAll = async (): Promise<void> => {
   firstModule = undefined;
-  showCalculateStatus(true);
+  await showCalculateStatus(true);
   console.log('Calculating...');
   updateDisplaySettingsFlags();
 
@@ -159,7 +159,7 @@ const doAll = async (): Promise<void> => {
   if (!Array.isArray(json)) {
     // Check if we have a BOM order output generation
     if (json.hasOwnProperty('orderData')) {
-      showCalculateStatus(false);
+      await showCalculateStatus(false);
       return;
     }
     // Convert normal object to array
@@ -332,10 +332,10 @@ const doAll = async (): Promise<void> => {
     (document.getElementById('dropdownEntriesResult') as HTMLParagraphElement).innerHTML = '';
   });
 
-  showCalculateStatus(false);
+  await showCalculateStatus(false);
 };
 
-const showCalculateStatus = (isRunning: boolean): void => {
+const showCalculateStatus = async (isRunning: boolean): Promise<void> => {
   const statusLbl = document.getElementById('calculate-status')!;
   if (isRunning) {
     statusLbl.classList.add('lable-visible');
@@ -344,6 +344,15 @@ const showCalculateStatus = (isRunning: boolean): void => {
     statusLbl.classList.remove('lable-visible');
     statusLbl.classList.add('lable-hidden');
   }
+
+  // Yield to the browser so the status label change is actually painted
+  // before any synchronous work after this call blocks the main thread.
+  // A single rAF only schedules a callback *before* the next paint; resolving
+  // its promise still runs as a microtask before paint. Using two nested rAFs
+  // guarantees a paint has happened between them.
+  await new Promise<void>((resolve) =>
+    requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
+  );
 };
 
 const updateDisplaySettingsFlags = (): void => {
@@ -386,8 +395,33 @@ const myHideParent = (key: string, value: any): any => {
 };
 
 const updateErrorInfo = (error: string): void => {
-  const errorInfoElement = document.getElementById('errorInfo')!;
-  errorInfoElement.innerHTML = error;
+  const errorInfoElement = document.getElementById('errorInfo') as HTMLTextAreaElement | HTMLElement | null;
+  if (!errorInfoElement) return;
+  const normalized = (error ?? '').replace(/<br\s*\/?>/gi, '\n').replace(/\r\n/g, '\n');
+  if (errorInfoElement instanceof HTMLTextAreaElement) {
+    errorInfoElement.value = normalized;
+  } else {
+    errorInfoElement.innerHTML = error;
+  }
+  errorInfoElement.classList.toggle('has-error', normalized.trim().length > 0);
+};
+
+const initTabs = (): void => {
+  const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('.tab-btn'));
+  const panes = Array.from(document.querySelectorAll<HTMLElement>('.tab-pane'));
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset['tab'];
+      buttons.forEach(b => b.setAttribute('aria-selected', String(b === btn)));
+      panes.forEach(p => {
+        if (p.dataset['pane'] === target) {
+          p.removeAttribute('hidden');
+        } else {
+          p.setAttribute('hidden', '');
+        }
+      });
+    });
+  });
 };
 
 //#region Ui Actions:
@@ -970,7 +1004,10 @@ const onCalculateDropdownEntries = async (): Promise<void> => {
 const onCalculateConflictingCheck = async (): Promise<void> => {
   const moduleId = (document.getElementById('conflictingChecksModuleList') as HTMLSelectElement).value;
   const attributeId = (document.getElementById('conflictingChecksAttributeList') as HTMLSelectElement).value;
-  const attributeValue = (document.getElementById('conflictingChecksAttributeSelectionsList') as HTMLSelectElement).value;
+  const isNumeric = Checks.isAttributeNumeric(attributeId);
+  const attributeValue = isNumeric
+    ? (document.getElementById('conflictingChecksAttributeValueInput') as HTMLInputElement).value
+    : (document.getElementById('conflictingChecksAttributeSelectionsList') as HTMLSelectElement).value;
   const resultField = (document.getElementById('conflictingChecksResult') as HTMLParagraphElement);
   let articleId = (document.getElementById('testOrderCb') as HTMLSelectElement).value;
   if (moduleId === '' || attributeId == '' || attributeValue == '') {
@@ -1034,6 +1071,10 @@ const populateModuleList = (json: any): void => {
   const moduleList = document.getElementById('conflictingChecksModuleList') as HTMLSelectElement;
   const moduleIdPairs = extractModuleIdPairs(json);
 
+  moduleIdPairs.sort(([nameA, idA], [nameB, idB]) =>
+    `${nameA} - ${idA}`.localeCompare(`${nameB} - ${idB}`, undefined, { sensitivity: 'base' })
+  );
+
   moduleList.innerHTML = '';
   moduleIdPairs.forEach(([moduleName, moduleId]) => {
     const option = document.createElement('option');
@@ -1068,29 +1109,45 @@ const populateAttributeList = (module: OD_Base): void => {
   const attributeIds = module.getAttributes();
 
   attributeList.innerHTML = '';
-  Array.from(attributeIds.keys()).forEach((attributeId: string) => {
-    const option = document.createElement('option');
-    option.value = attributeId;
-    option.textContent = attributeId;
-    attributeList.appendChild(option);
-  });
+  Array.from(attributeIds.keys())
+    .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
+    .forEach((attributeId: string) => {
+      const option = document.createElement('option');
+      option.value = attributeId;
+      option.textContent = attributeId;
+      attributeList.appendChild(option);
+    });
 
   attributeList.selectedIndex = -1;
 }
 
 const populateAttributeSelectionList = (attributeId: string): void => {
   const attributeSelectionsList = document.getElementById('conflictingChecksAttributeSelectionsList') as HTMLSelectElement;
+  const attributeValueInput = document.getElementById('conflictingChecksAttributeValueInput') as HTMLInputElement;
   const attributeSelections = getSelectionsByAttrId(attributeId);
-  console.log(attributeSelections);
+
+  const isNumeric = Checks.isAttributeNumeric(attributeId);
+  attributeValueInput.style.display = isNumeric ? '' : 'none';
+  attributeSelectionsList.style.display = isNumeric ? 'none' : '';
+  if (isNumeric) {
+    attributeValueInput.value = '';
+  }
 
   attributeSelectionsList.innerHTML = '';
   if (attributeSelections !== undefined) {
-    attributeSelections.forEach((attributeSelection) => {
-      const option = document.createElement('option');
-      option.value = attributeSelection.value!.toString();
-      option.textContent = attributeSelection.value?.toString()!;
-      attributeSelectionsList.appendChild(option);
-    });
+    [...attributeSelections]
+      .sort((a, b) =>
+        (a.value?.toString() ?? '').localeCompare(b.value?.toString() ?? '', undefined, {
+          numeric: true,
+          sensitivity: 'base',
+        })
+      )
+      .forEach((attributeSelection) => {
+        const option = document.createElement('option');
+        option.value = attributeSelection.value!.toString();
+        option.textContent = attributeSelection.value?.toString()!;
+        attributeSelectionsList.appendChild(option);
+      });
   }
 
   attributeSelectionsList.selectedIndex = -1;
@@ -1154,6 +1211,16 @@ document.getElementById('calculateDropdownEntries')!.addEventListener('click', (
 });
 
 //#endregion
+
+// Close the Display Settings dropdown when clicking outside of it.
+const displaySettingsListEl = document.getElementById('displaySettingsList')!;
+document.addEventListener('mousedown', (ev) => {
+  if (!displaySettingsListEl.classList.contains('visible')) return;
+  if (displaySettingsListEl.contains(ev.target as Node)) return;
+  void onDisplaySettingsDropdownVisibilityChanged();
+});
+
+initTabs();
 
 loadTestOrder().then(() => {
   console.log('Test order loaded');
