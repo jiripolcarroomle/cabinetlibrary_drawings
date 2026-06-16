@@ -1064,6 +1064,11 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
         edgesGeometryThresholdAngle: 10,
         format: 'png',
       }
+      const defaultLayerSettings: ILayerSettings = {
+        fillAnnotationGaps: false,
+        addWallCornersToAnnotationLines: false,
+        annotationLineSort: 0,
+      }
       const moduleCloseToWallDistanceThreshold = 300; // in mm
       const orthoCameraRenderSettings: IRenderOrthoCameraParams = {
         drawingMaxWidth: 1920 * 2,
@@ -1199,8 +1204,8 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
         const result = await renderScene(orderScene, renderingFilter, sceneSettings, { name: `${wall.id}-${side}-elevation`, ...orthoCameraRenderSettings, direction: cameraDirection });
         orthoCameraRenderResults.push(result);
 
-        const resultWithoutFronts = await renderScene(orderScene, renderingFilterForFronts, sceneSettings, { name: `${wall.id}-${side}-elevation-without-fronts`, ...orthoCameraRenderSettings, direction: cameraDirection });
-        orthoCameraRenderResults.push(resultWithoutFronts);
+        // const resultWithoutFronts = await renderScene(orderScene, renderingFilterForFronts, sceneSettings, { name: `${wall.id}-${side}-elevation-without-fronts`, ...orthoCameraRenderSettings, direction: cameraDirection });
+        // orthoCameraRenderResults.push(resultWithoutFronts);
 
       }
 
@@ -1211,7 +1216,26 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
       const imageFileNames: string[] = [];
 
       orthoCameraRenderResults.forEach((renderResult, index) => {
-        const drawing = new Drawing(renderResult, { drawingDirection: index === 0 ? DrawingDirection.Top : DrawingDirection.Elevation });
+
+        const layerSettings: Map<string, ILayerSettings> = new Map();
+        tab_AnnotationLayerSettings.forEach(setting => {
+          const layerName = setting.in_Layer;
+          const layerSetting = {
+            fillAnnotationGaps: setting.out_FillAnnotationGaps ?? defaultLayerSettings.fillAnnotationGaps,
+            addWallCornersToAnnotationLines: setting.out_AnnotateDistanceFromWallCorners ?? defaultLayerSettings.addWallCornersToAnnotationLines,
+            annotationLineSort: setting.out_AnnotationLineSort ?? defaultLayerSettings.annotationLineSort,
+          }
+          layerSettings.set(layerName, layerSetting);
+        });
+
+
+        const drawing = new Drawing(
+          renderResult,
+          {
+            drawingDirection: index === 0 ? DrawingDirection.Top : DrawingDirection.Elevation,
+            layerSettings: layerSettings,
+          }
+        );
 
         // get the walls in the drawing
         const walls = renderResult.renderedNodes?.filter(node => node.kind === Object3DNodeKind.Wall) ?? [];

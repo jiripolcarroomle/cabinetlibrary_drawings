@@ -76,11 +76,20 @@ export class OrderSceneNode implements IOrderSceneNode {
     }
 
     updateWorldTransform(parentWorldTransform: Matrix4): void {
+        this._allBBoxCornersInWorldCache = null;
         // worldTransform = parentWorldTransform * localTransform
         this._worldTransform = parentWorldTransform.clone().multiply(this.transform);
         // update children
         for (const child of this.children) {
             child.updateWorldTransform(this._worldTransform);
+        }
+    }
+
+    private _invalidateBBoxCacheUpwards(): void {
+        let current: IOrderSceneNode | null = this;
+        while (current) {
+            (current as OrderSceneNode)._allBBoxCornersInWorldCache = null;
+            current = current.parent;
         }
     }
 
@@ -99,6 +108,7 @@ export class OrderSceneNode implements IOrderSceneNode {
         child.parent = this;
         child.updateWorldTransform(parentWorld);
         this.children.push(child);
+        this._invalidateBBoxCacheUpwards();
     }
 
     removeChild(child: IOrderSceneNode): IOrderSceneNode | null {
@@ -110,6 +120,7 @@ export class OrderSceneNode implements IOrderSceneNode {
         child.parent = null;
         this.children.splice(index, 1);
         child.transform = childWorldTransform;
+        this._invalidateBBoxCacheUpwards();
         return child;
     }
 
@@ -120,7 +131,12 @@ export class OrderSceneNode implements IOrderSceneNode {
 
     wallData: IWallSegment | undefined;
 
+    _allBBoxCornersInWorldCache: Vector3[] | null = null;
     getAllBBoxCornersInWorld(): Vector3[] {
+        if (this._allBBoxCornersInWorldCache) {
+            return this._allBBoxCornersInWorldCache;
+        }
+
         const worldCorners: Vector3[] = [];
 
         const size = this._geometry.size;
@@ -147,8 +163,8 @@ export class OrderSceneNode implements IOrderSceneNode {
             worldCorners.push(...childCorners);
         });
 
+        this._allBBoxCornersInWorldCache = worldCorners;
         return worldCorners;
-
     }
 
     private constructor(idsMap: IdsMap, id: string | undefined, kind: Object3DNodeKind) {

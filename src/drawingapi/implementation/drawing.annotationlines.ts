@@ -1,5 +1,5 @@
-import { type AnnotationTransformed } from "./drawing";
 import { Vector3 } from "../../lib/internal/base"
+import { type AnnotationTransformed, type TransformedPoint } from "./drawing";
 import * as SVGHelper from "../utils/svghelper";
 import { optimalAnnotationLinesMerge } from "./drawing.annotationlinesmerge";
 
@@ -10,10 +10,19 @@ interface AnnotationTransformedToDirection extends AnnotationTransformed {
     /** from start point of the annotation line along the line direction */
     distanceStartX: number,
     distanceEndX: number,
+    /** real projected positions along the line direction, aligned with the pixel-space ordering */
+    realDistanceStartX: number,
+    realDistanceEndX: number,
     /** from start point of the annotation line perpendicular to the line direction */
     distanceY: number,
     /** depth in view - useful for sorting annotations */
     distanceZ: number,
+}
+
+export enum AnnotationLineDisqualifyType {
+    OnlyNonperpendicular = 'onlyNonperpendicular',
+    LooseIntervals = 'looseIntervals',
+    WithSingleInterval = 'withSingleInterval',
 }
 
 /**
@@ -33,7 +42,7 @@ export function drawAnnotationsWithAnnotationLines(args: {
     lineNormalDirection: Vector3,
     lineSpacing: number,
     minIntervalsForSummedAnnotationLine?: number,
-    disqualifyLooseAnnotations?: boolean,
+    disqualifyAnnotations?: AnnotationLineDisqualifyType,
     drawingSizeY?: number,
 }) {
     const {
@@ -45,9 +54,12 @@ export function drawAnnotationsWithAnnotationLines(args: {
         lineNormalDirection,
         lineSpacing = 50,
         minIntervalsForSummedAnnotationLine = -1,
-        disqualifyLooseAnnotations = true,
+        disqualifyAnnotations = 'onlyNonperpendicular',
         drawingSizeY = 2000,
     } = args;
+    void annotationsParent;
+    void lineNormalDirection;
+    void lineSpacing;
 
     // 1. sort annotations by their distance from the line, then depth in view and then by their position along the line
     const sortedAnnotations: AnnotationTransformedToDirection[] = annotations
@@ -58,11 +70,30 @@ export function drawAnnotationsWithAnnotationLines(args: {
             const depth = Math.round((annotation.startPoint.cameraSpaceCoordinate._z + annotation.endPoint.cameraSpaceCoordinate._z) / 2);
             const startAlongLine = Math.round(projectPointOnLine(annotation.startPoint.pixelCoordinate, lineStart, lineDirection));
             const endAlongLine = Math.round(projectPointOnLine(annotation.endPoint.pixelCoordinate, lineStart, lineDirection));
+            const realDirection = pixelDirectionToCameraSpaceDirection(lineDirection);
             const backwards = startAlongLine > endAlongLine;
 
             return (backwards
-                ? { ...annotation, distanceY: distanceToLine, distanceZ: depth, distanceStartX: endAlongLine, distanceEndX: startAlongLine, startPoint: annotation.endPoint, endPoint: annotation.startPoint }
-                : { ...annotation, distanceY: distanceToLine, distanceZ: depth, distanceStartX: startAlongLine, distanceEndX: endAlongLine });
+                ? {
+                    ...annotation,
+                    distanceY: distanceToLine,
+                    distanceZ: depth,
+                    distanceStartX: endAlongLine,
+                    distanceEndX: startAlongLine,
+                    realDistanceStartX: projectPointOnLine(annotation.endPoint.cameraSpaceCoordinate, new Vector3(0, 0, 0), realDirection),
+                    realDistanceEndX: projectPointOnLine(annotation.startPoint.cameraSpaceCoordinate, new Vector3(0, 0, 0), realDirection),
+                    startPoint: annotation.endPoint,
+                    endPoint: annotation.startPoint,
+                }
+                : {
+                    ...annotation,
+                    distanceY: distanceToLine,
+                    distanceZ: depth,
+                    distanceStartX: startAlongLine,
+                    distanceEndX: endAlongLine,
+                    realDistanceStartX: projectPointOnLine(annotation.startPoint.cameraSpaceCoordinate, new Vector3(0, 0, 0), realDirection),
+                    realDistanceEndX: projectPointOnLine(annotation.endPoint.cameraSpaceCoordinate, new Vector3(0, 0, 0), realDirection),
+                });
         })
         .sort((a, b) => {
             if (a.distanceY !== b.distanceY) {
@@ -92,8 +123,11 @@ export function drawAnnotationsWithAnnotationLines(args: {
     linesWithAnnotations.splice(0, linesWithAnnotations.length, ...mergedLines);
 
     // 3. optional: if annotations can be drawn in their place without overcomplicating the drawing, draw them at their positions
-    if (disqualifyLooseAnnotations) {
+    if (disqualifyAnnotations === 'looseIntervals') {
         disqualifyLooseAnnotationsFromAnnotationLines(linesWithAnnotations, annotationsAtPosition);
+    }
+    else if (disqualifyAnnotations === 'withSingleInterval') {
+        disqualifyAnnotationLinesWithOneInterval(linesWithAnnotations, annotationsAtPosition);
     }
 
     // 4. sort the annotation lines by the amount of occupied space on them - the smaller will go nearer to the drawing
@@ -175,10 +209,23 @@ function projectPointOnLine(point: Vector3, linePoint: Vector3, lineDirection: V
  * 
  */
 class LineWithAnnotations {
-    usedIntervals: { start: number, end: number, annotations: AnnotationTransformedToDirection[], realLength: number }[] = [];
+    usedIntervals: { start: number, end: number, annotations: AnnotationTransformedToDirection[], realLength: number, realStart: number, realEnd: number }[] = [];
+    annotablePoints: { pixelPosition: number, realProjectedPosition: number }[] = [];
+
+    readonly annotationLayerName: string;
 
     private sortUsedIntervals(): void {
         this.usedIntervals.sort((a, b) => a.start - b.start || a.end - b.end || a.realLength - b.realLength);
+    }
+
+    constructor(annotationLayerName: string = '') {
+        this.annotationLayerName = annotationLayerName;
+    }
+
+    pushAnnotablePoint(point: TransformedPoint, direction: Vector3): void {
+        const pixelPosition = projectPointOnLine(point.pixelCoordinate, new Vector3(0, 0, 0), direction);
+        const realProjectedPosition = projectPointOnLine(point.cameraSpaceCoordinate, new Vector3(0, 0, 0), pixelDirectionToCameraSpaceDirection(direction));
+        this.annotablePoints.push({ pixelPosition, realProjectedPosition });
     }
 
 
@@ -218,11 +265,13 @@ class LineWithAnnotations {
         }
         const intervalStart = annotation.distanceStartX;
         const intervalEnd = annotation.distanceEndX;
-        const availableInterval = this.getOrCreateInterval(intervalStart, intervalEnd, annotation.realLength, true);
+        const availableInterval = this.getOrCreateInterval(intervalStart, intervalEnd, annotation.realLength, annotation.realDistanceStartX, annotation.realDistanceEndX, true);
         if (availableInterval && Math.abs(availableInterval.realLength - annotation.realLength) < Vector3.EPS) {
             availableInterval.annotations.push(annotation);
             this.yDistances.push(annotation.distanceY);
             availableInterval.realLength = annotation.realLength;
+            availableInterval.realStart = Math.min(availableInterval.realStart, annotation.realDistanceStartX);
+            availableInterval.realEnd = Math.max(availableInterval.realEnd, annotation.realDistanceEndX);
             return true;
         }
         return false;
@@ -243,7 +292,7 @@ class LineWithAnnotations {
     /**
      * Gets an existing interval that overlaps with the given start and end, or creates a new one if create is true and there is free space.
      */
-    getOrCreateInterval(start: number, end: number, realLength: number, create: boolean = true): undefined | { start: number, end: number, annotations: AnnotationTransformedToDirection[], realLength: number } {
+    getOrCreateInterval(start: number, end: number, realLength: number, realStart: number, realEnd: number, create: boolean = true): undefined | { start: number, end: number, annotations: AnnotationTransformedToDirection[], realLength: number, realStart: number, realEnd: number } {
         const startRound = Math.round(Math.min(start, end));
         const endRound = Math.round(Math.max(start, end));
         let interval = this.usedIntervals.find(i => i.start === startRound && i.end === endRound);
@@ -252,7 +301,7 @@ class LineWithAnnotations {
             if (!hasFreeSpace) {
                 return undefined;
             }
-            interval = { start: startRound, end: endRound, annotations: [], realLength: realLength };
+            interval = { start: startRound, end: endRound, annotations: [], realLength: realLength, realStart, realEnd };
             this.usedIntervals.push(interval);
             this.sortUsedIntervals();
         }
@@ -285,6 +334,8 @@ class LineWithAnnotations {
                 if (ownInterval) {
                     ownInterval.annotations.push(...otherInterval.annotations);
                     ownInterval.realLength = Math.max(ownInterval.realLength, otherInterval.realLength);
+                    ownInterval.realStart = Math.min(ownInterval.realStart, otherInterval.realStart);
+                    ownInterval.realEnd = Math.max(ownInterval.realEnd, otherInterval.realEnd);
                     return;
                 }
 
@@ -305,10 +356,12 @@ class LineWithAnnotations {
      * @returns a new LineWithAnnotations with summed intervals if the result is different, otherwise undefined
      */
     makeCopyWithSumedIntervals(minIntervalsCount: number): LineWithAnnotations | undefined {
-        const copy = new LineWithAnnotations();
+        const copy = new LineWithAnnotations(this.annotationLayerName);
         let previousStart: number = this.usedIntervals[0].start;
         let previousEnd: number = this.usedIntervals[0].end;
         let realLength = this.usedIntervals[0].realLength;
+        let realStart = this.usedIntervals[0].realStart;
+        let realEnd = this.usedIntervals[0].realEnd;
         let steps = 1;
         let annotations = [...this.usedIntervals[0].annotations];
         for (let i = 1; i < this.usedIntervals.length; i++) {
@@ -316,21 +369,23 @@ class LineWithAnnotations {
             const currentEnd = this.usedIntervals[i].end;
             if (currentStart !== previousEnd) {
                 if (steps >= minIntervalsCount) {
-                    const interval = copy.getOrCreateInterval(previousStart, previousEnd, realLength);
+                    const interval = copy.getOrCreateInterval(previousStart, previousEnd, realLength, realStart, realEnd);
                     interval?.annotations.push(...annotations);
                 }
                 annotations = [];
                 previousStart = currentStart;
                 realLength = 0;
+                realStart = this.usedIntervals[i].realStart;
                 steps = 0;
             }
             realLength += this.usedIntervals[i].realLength;
             steps++;
             previousEnd = currentEnd;
+            realEnd = this.usedIntervals[i].realEnd;
             annotations.push(...this.usedIntervals[i].annotations);
         }
         if (steps >= minIntervalsCount) {
-            const interval = copy.getOrCreateInterval(previousStart, previousEnd, realLength);
+            const interval = copy.getOrCreateInterval(previousStart, previousEnd, realLength, realStart, realEnd);
             interval?.annotations.push(...annotations);
         }
         copy.yDistances = [...this.yDistances];
@@ -340,18 +395,78 @@ class LineWithAnnotations {
         }
         return copy;
     }
-    toSvg(parent: SVGGElement, offsetPixels: Vector3, direction: Vector3, debugLabel: string | undefined = undefined): void {
+    toSvg({
+        parent,
+        offsetPixels,
+        direction,
+        debugLabel = undefined,
+        fillGapsOnAnnotationLine = false,
+        showDistanceToAnnotablePoints = false,
+        styles = {},
+    }: {
+        parent: SVGGElement,
+        offsetPixels: Vector3,
+        direction: Vector3,
+        debugLabel?: string,
+            fillGapsOnAnnotationLine?: boolean,
+            showDistanceToAnnotablePoints?: boolean,
+            styles?: {
+                baseLine?: SVGHelper.SVGPathProperties,
+                intervalLine?: SVGHelper.SVGLineProperties | SVGHelper.SVGPathProperties,
+                intervalText?: SVGHelper.SVGTextProperties,
+                intervalTextOffset?: { _x: number, _y: number },
+                leaderLine?: SVGHelper.SVGPathProperties,
+                gapLine?: SVGHelper.SVGLineProperties | SVGHelper.SVGPathProperties,
+                gapText?: SVGHelper.SVGTextProperties,
+                gapTextOffset?: { _x: number, _y: number },
+            },
+    }): void {
+        const {
+            baseLine: baseLineStyle = SVGHelper.thinLineStyle,
+            intervalLine: intervalLineStyle = {
+                ...SVGHelper.thickLineStyle,
+                ...SVGHelper.arrowLineStyle,
+                ticksAtEndsLength: 25,
+                ticksStyle: SVGHelper.thinLineStyle,
+            },
+            intervalText: intervalTextStyle = SVGHelper.textStyle,
+            intervalTextOffset = { _x: 0, _y: 16 },
+            leaderLine: leaderLineStyle = SVGHelper.thinDashedLineStyle,
+            gapLine: gapLineStyle = {
+                ...SVGHelper.thinLineStyle,
+                ...SVGHelper.arrowLineStyle,
+                stroke: 'gray',
+            },
+            gapText: gapTextStyle = { ...SVGHelper.textStyle, fill: 'gray' },
+            gapTextOffset = { _x: 0, _y: 16 },
+        } = styles;
+
+        if (showDistanceToAnnotablePoints) {
+            this.annotablePoints.forEach(point => {
+                if (this.isIntervalFree(point.pixelPosition, point.pixelPosition)) {
+                    this.usedIntervals.push({
+                        start: point.pixelPosition,
+                        end: point.pixelPosition,
+                        annotations: [],
+                        realLength: 0,
+                        realStart: point.realProjectedPosition,
+                        realEnd: point.realProjectedPosition,
+                    });
+                }
+            });
+            this.sortUsedIntervals();
+        }
+
         const { min, max } = this.getMinMax();
         const lineStart = offsetPixels.clone().add(direction.clone().multiply(min));
         const lineEnd = offsetPixels.clone().add(direction.clone().multiply(max));
-        // helper line
         SVGHelper.createSvgLineElement({
             parent,
             startX: lineStart._x,
             startY: lineStart._y,
             endX: lineEnd._x,
             endY: lineEnd._y,
-            properties: SVGHelper.thinLineStyle,
+            properties: baseLineStyle,
         });
         if (debugLabel) {
             const azimuth = Math.atan2(direction._y, direction._x) * 180 / Math.PI;
@@ -362,7 +477,6 @@ class LineWithAnnotations {
                 textContent: `${debugLabel}`,
                 properties: {
                     ...SVGHelper.textStyle,
-                    // align left
                     fill: 'green',
                     transform: `translate(${(lineStart._x + lineEnd._x) / 2}, ${(lineStart._y + lineEnd._y) / 2}) rotate(${-azimuth}) `,
                 },
@@ -386,24 +500,21 @@ class LineWithAnnotations {
 
             const intervalStart = offsetPixels.clone().add(direction.clone().multiply(interval.start));
             const intervalEnd = offsetPixels.clone().add(direction.clone().multiply(interval.end));
+
+            if (interval.realLength < 1) return;
+
             SVGHelper.createSvgLineElementWithText({
                 parent,
                 startX: intervalStart._x,
                 startY: intervalStart._y,
                 endX: intervalEnd._x,
                 endY: intervalEnd._y,
-                textOffset: { _x: 0, _y: 16 },
+                textOffset: intervalTextOffset,
                 textContent: interval.realLength.toFixed(0),
-                lineProperties: {
-                    ...SVGHelper.thickLineStyle,
-                    ...SVGHelper.arrowLineStyle,
-                    ticksAtEndsLength: 25,
-                    ticksStyle: SVGHelper.thinLineStyle,
-                },
-                textProperties: SVGHelper.textStyle,
+                lineProperties: intervalLineStyle,
+                textProperties: intervalTextStyle,
             });
 
-            // drag helper lines to the farthest annotation
             const farthestStartAnnotation = selectAnnotationForIntervalEdge(interval.start, "distanceStartX");
             const farthestEndAnnotation = selectAnnotationForIntervalEdge(interval.end, "distanceEndX");
             SVGHelper.createSvgLineElement({
@@ -412,7 +523,7 @@ class LineWithAnnotations {
                 startY: intervalStart._y,
                 endX: farthestStartAnnotation.startPoint.pixelCoordinate._x,
                 endY: farthestStartAnnotation.startPoint.pixelCoordinate._y,
-                properties: SVGHelper.thinDashedLineStyle,
+                properties: leaderLineStyle,
             });
             SVGHelper.createSvgLineElement({
                 parent,
@@ -420,9 +531,37 @@ class LineWithAnnotations {
                 startY: intervalEnd._y,
                 endX: farthestEndAnnotation.endPoint.pixelCoordinate._x,
                 endY: farthestEndAnnotation.endPoint.pixelCoordinate._y,
-                properties: SVGHelper.thinDashedLineStyle,
+                properties: leaderLineStyle,
             });
         });
+
+        // Draw gap annotations between non-continuous intervals
+        if (fillGapsOnAnnotationLine) {
+            for (let i = 0; i < this.usedIntervals.length - 1; i++) {
+                const current = this.usedIntervals[i];
+                const next = this.usedIntervals[i + 1];
+                const gapPixelStart = current.end;
+                const gapPixelEnd = next.start;
+                if (gapPixelEnd <= gapPixelStart) continue;
+
+                const gapRealLength = next.realStart - current.realEnd;
+                if (gapRealLength < 1) continue;
+
+                const gapStart = offsetPixels.clone().add(direction.clone().multiply(gapPixelStart));
+                const gapEnd = offsetPixels.clone().add(direction.clone().multiply(gapPixelEnd));
+                SVGHelper.createSvgLineElementWithText({
+                    parent,
+                    startX: gapStart._x,
+                    startY: gapStart._y,
+                    endX: gapEnd._x,
+                    endY: gapEnd._y,
+                    textOffset: gapTextOffset,
+                    textContent: gapRealLength.toFixed(0),
+                    lineProperties: gapLineStyle,
+                    textProperties: gapTextStyle,
+                });
+            }
+        }
 
     }
     static AddAnnotationToLines(annotation: AnnotationTransformedToDirection, lines: LineWithAnnotations[]): void {
@@ -433,9 +572,28 @@ class LineWithAnnotations {
             }
         }
         // if it does not fit in any existing line, create a new line
-        const newLine = new LineWithAnnotations();
+        const newLine = new LineWithAnnotations(annotation.annotation.layer);
         newLine.addAnnotation(annotation);
         lines.push(newLine);
+    }
+}
+
+function pixelDirectionToCameraSpaceDirection(direction: Vector3): Vector3 {
+    return new Vector3(direction._x, -direction._y, 0).normalize();
+}
+
+function disqualifyAnnotationLinesWithOneInterval(linesWithAnnotations: LineWithAnnotations[], annotationsAtPosition: AnnotationTransformedToDirection[]) {
+    const linesToDestroyIndices: number[] = [];
+    for (let i = 0; i < linesWithAnnotations.length; i++) {
+        const line = linesWithAnnotations[i];
+        if (line.usedIntervals.length === 1) {
+            annotationsAtPosition.push(...line.usedIntervals[0].annotations);
+            linesToDestroyIndices.push(i);
+        }
+    }
+    linesToDestroyIndices.sort((a, b) => b - a);
+    for (const index of linesToDestroyIndices) {
+        linesWithAnnotations.splice(index, 1);
     }
 }
 
