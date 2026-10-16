@@ -1,6 +1,6 @@
 import { IdsMap } from "./idsmap";
 import { type ISceneGeometryConversionSettings } from "./orderdrawingrenderer";
-import { Matrix4, Vector3 } from "../../lib/internal/base"
+import { Matrix4, Vector3 } from "../../lib/internal/base";
 
 
 /**

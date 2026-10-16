@@ -1,6 +1,6 @@
 import { DrawingDirection, type AnnotablePoint, type Annotation, type IPlanSvgDrawing, type SvgPathInjectionData } from "../interfaces/drawing";
 import type { IRenderOrthoCameraResult } from "../interfaces/orderdrawingrenderer";
-import { Matrix4, Vector3 } from "../../lib/internal/base"
+import { Matrix4, Vector3 } from "../../lib/internal/base";
 import * as SVGHelper from "../utils/svghelper";
 import { AnnotationLineDisqualifyType, drawAnnotationsWithAnnotationLines } from "./drawing.annotationlines";
 import { linesArrowMarkerStyle, overlayStyle, textStyle, thickLineStyle, thinLineStyle } from "../utils/svghelper";
@@ -111,6 +111,8 @@ export class Drawing implements IPlanSvgDrawing {
         };
         this._annotablePoints.push({ point: copy, transformedPoint });
     }
+
+
 
     /**
      * Compute the final SVG element by combining the rendered image from the order drawing renderer, the svg overlays and the annotations.
@@ -276,11 +278,12 @@ export class Drawing implements IPlanSvgDrawing {
                 return this.options.layerSettings.get(layerName)?.addWallCornersToAnnotationLines ?? false;
             };
             if (this.options.layerSettings.get(layer)?.addWallCornersToAnnotationLines) {
+                const wallCornerPoints = this._annotablePoints.filter(({ point }) => point.isWallVertex === true);
                 [
                     ...horizontalAnnotationsResult.annotationLines,
                     ...horizontalAnnotationsResult.secondaryAnnotationLines,
                 ].forEach(line => {
-                    this._annotablePoints.forEach(({ transformedPoint }) => {
+                    wallCornerPoints.forEach(({ transformedPoint }) => {
                         line.pushAnnotablePoint(transformedPoint, new Vector3(1, 0, 0));
                     });
                 });
@@ -288,7 +291,7 @@ export class Drawing implements IPlanSvgDrawing {
                     ...verticalAnnotationsResult.annotationLines,
                     ...verticalAnnotationsResult.secondaryAnnotationLines,
                 ].forEach(line => {
-                    this._annotablePoints.forEach(({ transformedPoint }) => {
+                    wallCornerPoints.forEach(({ transformedPoint }) => {
                         line.pushAnnotablePoint(transformedPoint, new Vector3(0, 1, 0));
                     });
                 });

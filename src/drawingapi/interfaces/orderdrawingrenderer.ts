@@ -1,5 +1,5 @@
 import type { IOrderSceneNode, IOrderSceneNodeFilter } from "./scene";
-import * as TC from "../../lib/internal/base"
+import * as TC from "../../lib/internal/base";
 
 /**
  * A renderer function that takes a scene root node, an optional filter function, render settings, and returns a promise that resolves to the rendered result.

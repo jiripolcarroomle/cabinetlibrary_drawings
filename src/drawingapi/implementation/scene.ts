@@ -1,5 +1,5 @@
 
-import { Matrix4, Vector3 } from "../../lib/internal/base"
+import { Matrix4, Vector3 } from "../../lib/internal/base";
 import { logWarning } from "../../lib/internal/logging";
 import { createWallsGroupFromOrderData, WallSegment } from "./scene-wall";
 import { type IWallSegment } from "../interfaces/scene";

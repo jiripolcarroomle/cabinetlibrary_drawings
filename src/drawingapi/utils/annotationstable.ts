@@ -1,3 +1,4 @@
+
 import { Vector3 } from "../../lib/internal/base";
 import { logWarning } from "../../lib/internal/logging";
 import { DrawingDirection, type AnnotablePoint, type Annotation, type IPlanSvgDrawing, type SvgPathInjectionData } from "../interfaces/drawing";
@@ -46,7 +47,7 @@ export const tab_AnnotationLayerSettings: I_tab_AnnotationLayerSettings[] = [
         in_Layer: `wallunit-dimension-horizontal`,
         out_AnnotationLineSort: 190,
         out_FillAnnotationGaps: true,
-        out_AnnotateDistanceFromWallCorners: false,
+        out_AnnotateDistanceFromWallCorners: true,
     },
     {
         in_Layer: 'carcase-dimension-horizontal',

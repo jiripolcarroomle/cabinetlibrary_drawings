@@ -3,8 +3,8 @@ import { OBJLoader, SVGLoader, type SVGResultPaths } from "three/examples/jsm/Ad
 import { type ISceneGeometryConversionSettings } from "../interfaces/orderdrawingrenderer";
 import { Object3DNodeKind } from "../interfaces/scene";
 import { type IOrderSceneNode } from "../interfaces/scene";
-import * as TC from "../../lib/internal/base"
-import { logError, logWarning, logInfo } from "../../lib/internal/logging";
+import * as TC from "../../lib/internal/base";
+import { logError, logInfo } from "../../lib/internal/logging";
 import { SVGRenderer } from "three/examples/jsm/Addons.js";
 
 export interface ISceneGeometryConversionToThreeJsSettings extends ISceneGeometryConversionSettings {

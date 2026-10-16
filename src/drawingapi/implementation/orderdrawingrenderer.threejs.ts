@@ -1,7 +1,7 @@
 // Both TC and THREE have a Matrix4 and Vector3 class, maybe also further overlapping types in the future.
 // Keep the *-as imports for legibility.
 import * as THREE from "three";
-import * as TC from "../../lib/internal/base"
+import * as TC from "../../lib/internal/base";
 import type { IRenderDrawing, IRenderOrthoCameraParams, IRenderOrthoCameraResult } from "../interfaces/orderdrawingrenderer";
 import type { IOrderSceneNode } from "../interfaces/scene";
 import { type ISceneGeometryConversionToThreeJsSettings, sceneToThreeJsScene, _resolveUpVector, _getBox3Corners, rasterRenderer, svgRenderer } from "../implementation/orderdrawingrenderer.theejs.helpers";
