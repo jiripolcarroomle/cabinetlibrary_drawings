@@ -202,6 +202,7 @@ export function mr_Toekick_afterDataCompletion(this: adc_mr_Toekick): void {
       mr_CornerunitStraight,
       mr_StorageunitSingle,
       mr_Upright, // do we have to solve the upright? it won't touch the upright contour anyway
+      getContourOwnerIds,
     } = GlobalFunc.process_MathLongparts();
     type LongPartSegmentTypeAlias = InstanceType<typeof LongPartSegment>;
     type LongPartSegmentEdgeTypeAlias = InstanceType<typeof LongPartSegmentEdge>;
@@ -410,6 +411,10 @@ export function mr_Toekick_afterDataCompletion(this: adc_mr_Toekick): void {
         for (let j = start; j < end; j++) {
           allSegmentsInThisSection[start].additionalData.addToekickWithLength += allSegmentsInThisSection[j].additionalData.segmentLength;
         }
+        // the owners of all segments covered by the toekick starting at this segment
+        if (start < end) {
+          allSegmentsInThisSection[start].additionalData.contourOwnerIds = getContourOwnerIds(allSegmentsInThisSection.slice(start, end));
+        }
       }
 
 
@@ -428,6 +433,7 @@ export function mr_Toekick_afterDataCompletion(this: adc_mr_Toekick): void {
           let directionEquation = new LineSegmentEquation(frontLeftCorner, frontRightCorner, true).extend(current.additionalData.displacementToekickX_Corner, 0);
 
           currentToekick = addToekick();
+          currentToekick.mod_ContourOwnerIds.push(...(current.additionalData.contourOwnerIds ?? getContourOwnerIds([current])));
           currentToekick.mod_ToekickHeight = firstSegment.generationContour.height - (this.mod_ToekickReductionTop ?? 0);
           currentToekick.mod_ToekickLength = current.additionalData.addToekickWithLength;
 
@@ -450,6 +456,7 @@ export function mr_Toekick_afterDataCompletion(this: adc_mr_Toekick): void {
       // check side toekicks
       if (addLeftSidePanel) {
         const leftToekick = addToekick();
+        leftToekick.mod_ContourOwnerIds.push(...getContourOwnerIds([firstSegment]));
         leftToekick.mod_ToekickHeight =
           firstSegment.generationContour.height
           + (this.mod_ToekickSidepanelOverdimensionBtm ?? 0)
@@ -482,6 +489,7 @@ export function mr_Toekick_afterDataCompletion(this: adc_mr_Toekick): void {
 
       if (addRightSidePanel) {
         const rightToekick = addToekick();
+        rightToekick.mod_ContourOwnerIds.push(...getContourOwnerIds([lastSegment]));
         rightToekick.mod_ToekickHeight =
           firstSegment.generationContour.height
           + (this.mod_ToekickSidepanelOverdimensionBtm ?? 0)

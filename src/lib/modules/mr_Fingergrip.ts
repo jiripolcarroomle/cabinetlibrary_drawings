@@ -175,6 +175,7 @@ export function mr_Fingergrip_afterDataCompletion(this: adc_mr_Fingergrip): void
     const {
       LongPartSegment,
       LineSegmentEquation,
+      getContourOwnerIds,
     } = GlobalFunc.process_MathLongparts();
     type LongPartSegmentTypeAlias = InstanceType<typeof LongPartSegment>;
 
@@ -221,13 +222,17 @@ export function mr_Fingergrip_afterDataCompletion(this: adc_mr_Fingergrip): void
       let length = 0;
       let current: LongPartSegmentTypeAlias | null = start;
       let lastSegment: any = start;
+      // the segments this piece is generated from - their owners are stored in mod_ContourOwnerIds
+      const segmentsInThisSection: LongPartSegmentTypeAlias[] = [];
       while (current) {
+        segmentsInThisSection.push(current);
         length += lastSegment.getLengthBetweenParallelSides(CKind.Left, CKind.Right);
         current = current.neighbours.get(CKind.Right)?.other ?? null;
         if (current) { lastSegment = current; }
       }
 
       fingergrip.mod_FingergripLength = length;
+      fingergrip.mod_ContourOwnerIds.push(...getContourOwnerIds(segmentsInThisSection));
       fingergrip.mod_FingergripPostype = start.additionalData.postype;
       fingergrip.mod_FingergripType = start.additionalData.type;
 

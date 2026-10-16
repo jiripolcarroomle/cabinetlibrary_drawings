@@ -138,7 +138,7 @@ import { IP_part_CeilingFillerPanel_PartVarsWritable, P_part_CeilingFillerPanel 
 import { IP_part_PaneltopGroup_PartVarsWritable, P_part_PaneltopGroup } from '../parts/part_PaneltopGroup'
 import { IP_part_Paneltop_PartVarsWritable, P_part_Paneltop } from '../parts/part_Paneltop'
 import { IModuleNonNull_mc_Paneltop01, IModParents_mc_Paneltop01, IModParents_mc_CeilingFiller01_mc_Paneltop01, IPartParentsNonNull_mc_Paneltop01, IPartParentsNonNull_mc_CeilingFiller01_mc_Paneltop01 } from '../mod-interfaces'
-import { IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_Depth, IModVarNonNull_mod_Depth, IModVar_mod_PaneltopColor, IModVarNonNull_mod_PaneltopColor, IModVar_mod_PaneltopConstruction, IModVarNonNull_mod_PaneltopConstruction, IModVar_mod_PaneltopProgram, IModVarNonNull_mod_PaneltopProgram, IModVar_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeBackColor, IModVar_mod_PaneltopEdgeFrontColor, IModVarNonNull_mod_PaneltopEdgeFrontColor, IModVar_mod_PaneltopEdgeRightColor, IModVarNonNull_mod_PaneltopEdgeRightColor, IModVar_mod_PaneltopEdgeLeftColor, IModVarNonNull_mod_PaneltopEdgeLeftColor, IModVar_mod_PaneltopEdgeVisFront, IModVarNonNull_mod_PaneltopEdgeVisFront, IModVar_mod_PaneltopEdgeVisBack, IModVarNonNull_mod_PaneltopEdgeVisBack, IModVar_mod_PaneltopOversizeBack, IModVarNonNull_mod_PaneltopOversizeBack, IModVar_mod_PaneltopEdgeVisLeft, IModVarNonNull_mod_PaneltopEdgeVisLeft, IModVar_mod_PaneltopEdgeVisRight, IModVarNonNull_mod_PaneltopEdgeVisRight, IModVar_mod_PaneltopThk, IModVarNonNull_mod_PaneltopThk, IModVar_mod_PaneltopOverhangFront, IModVarNonNull_mod_PaneltopOverhangFront, IModVar_mod_ParentName, IModVarNonNull_mod_ParentName, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_PaneltopId, IModVarNonNull_mod_PaneltopId, IModVar_mod_FrontGapHor, IModVarNonNull_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapCarcase } from '../var-interfaces'
+import { IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_Depth, IModVarNonNull_mod_Depth, IModVar_mod_PaneltopColor, IModVarNonNull_mod_PaneltopColor, IModVar_mod_PaneltopConstruction, IModVarNonNull_mod_PaneltopConstruction, IModVar_mod_PaneltopProgram, IModVarNonNull_mod_PaneltopProgram, IModVar_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeBackColor, IModVar_mod_PaneltopEdgeFrontColor, IModVarNonNull_mod_PaneltopEdgeFrontColor, IModVar_mod_PaneltopEdgeRightColor, IModVarNonNull_mod_PaneltopEdgeRightColor, IModVar_mod_PaneltopEdgeLeftColor, IModVarNonNull_mod_PaneltopEdgeLeftColor, IModVar_mod_PaneltopEdgeVisFront, IModVarNonNull_mod_PaneltopEdgeVisFront, IModVar_mod_PaneltopEdgeVisBack, IModVarNonNull_mod_PaneltopEdgeVisBack, IModVar_mod_PaneltopOversizeBack, IModVarNonNull_mod_PaneltopOversizeBack, IModVar_mod_PaneltopEdgeVisLeft, IModVarNonNull_mod_PaneltopEdgeVisLeft, IModVar_mod_PaneltopEdgeVisRight, IModVarNonNull_mod_PaneltopEdgeVisRight, IModVar_mod_PaneltopThk, IModVarNonNull_mod_PaneltopThk, IModVar_mod_PaneltopOverhangFront, IModVarNonNull_mod_PaneltopOverhangFront, IModVar_mod_ParentName, IModVarNonNull_mod_ParentName, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_PaneltopId, IModVarNonNull_mod_PaneltopId, IModVar_mod_FrontGapHor, IModVarNonNull_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapCarcase, IModVar_mod_ContourOwnerIds, IModVarNonNull_mod_ContourOwnerIds } from '../var-interfaces'
 import { VariantValidation, IMatrix_mod_Width, IMatrix_mod_Depth, IMatrix_mod_PaneltopColor, IMatrix_mod_PaneltopConstruction, IMatrix_mod_PaneltopProgram, IMatrix_mod_PaneltopEdgeBackColor, IMatrix_mod_PaneltopEdgeFrontColor, IMatrix_mod_PaneltopEdgeRightColor, IMatrix_mod_PaneltopEdgeLeftColor, IMatrix_mod_PaneltopEdgeVisFront, IMatrix_mod_PaneltopEdgeVisBack, IMatrix_mod_PaneltopOversizeBack, IMatrix_mod_PaneltopEdgeVisLeft, IMatrix_mod_PaneltopEdgeVisRight, IMatrix_mod_PaneltopThk, IMatrix_mod_PaneltopOverhangFront, IMatrix_mod_ParentName, IMatrix_mod_ModuleName, IMatrix_mod_PaneltopId, IMatrix_mod_FrontGapHor, IMatrix_mod_FrontGapCarcase } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
@@ -146,7 +146,7 @@ import { IPartAdd_part_CeilingFillerFittingPanel, IPartAdd_part_CeilingFillerPan
 import { mc_Paneltop01_createBuildPlan, mc_Paneltop01_afterDataCompletion, mc_Paneltop01_manufacturerDataCompletion, mc_Paneltop01_calculateContainerModules, mc_Paneltop01_prepareContext } from '../../modules/mc_Paneltop01';
 
 export interface cbp_mc_Paneltop01 extends IModBaseProp
-  , IPartAdd_part_CeilingFillerFittingPanel, IPartAdd_part_CeilingFillerPanel, IPartAdd_part_PaneltopGroup, IPartAdd_part_Paneltop, IModVarNonNull_mod_Width, IModVarNonNull_mod_Depth, IModVarNonNull_mod_PaneltopColor, IModVarNonNull_mod_PaneltopConstruction, IModVarNonNull_mod_PaneltopProgram, IModVarNonNull_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeFrontColor, IModVarNonNull_mod_PaneltopEdgeRightColor, IModVarNonNull_mod_PaneltopEdgeLeftColor, IModVarNonNull_mod_PaneltopEdgeVisFront, IModVarNonNull_mod_PaneltopEdgeVisBack, IModVarNonNull_mod_PaneltopOversizeBack, IModVarNonNull_mod_PaneltopEdgeVisLeft, IModVarNonNull_mod_PaneltopEdgeVisRight, IModVarNonNull_mod_PaneltopThk, IModVarNonNull_mod_PaneltopOverhangFront, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PaneltopId, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapCarcase {
+  , IPartAdd_part_CeilingFillerFittingPanel, IPartAdd_part_CeilingFillerPanel, IPartAdd_part_PaneltopGroup, IPartAdd_part_Paneltop, IModVarNonNull_mod_Width, IModVarNonNull_mod_Depth, IModVarNonNull_mod_PaneltopColor, IModVarNonNull_mod_PaneltopConstruction, IModVarNonNull_mod_PaneltopProgram, IModVarNonNull_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeFrontColor, IModVarNonNull_mod_PaneltopEdgeRightColor, IModVarNonNull_mod_PaneltopEdgeLeftColor, IModVarNonNull_mod_PaneltopEdgeVisFront, IModVarNonNull_mod_PaneltopEdgeVisBack, IModVarNonNull_mod_PaneltopOversizeBack, IModVarNonNull_mod_PaneltopEdgeVisLeft, IModVarNonNull_mod_PaneltopEdgeVisRight, IModVarNonNull_mod_PaneltopThk, IModVarNonNull_mod_PaneltopOverhangFront, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PaneltopId, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_ContourOwnerIds {
   parent: IModParents_mr_Paneltop;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
@@ -158,7 +158,7 @@ export interface cbp_mc_Paneltop01 extends IModBaseProp
 }
 
 export interface dc_mc_Paneltop01 extends IModBaseProp
-  , IModVar_mod_Width, IModVar_mod_Depth, IModVar_mod_PaneltopColor, IModVar_mod_PaneltopConstruction, IModVar_mod_PaneltopProgram, IModVar_mod_PaneltopEdgeBackColor, IModVar_mod_PaneltopEdgeFrontColor, IModVar_mod_PaneltopEdgeRightColor, IModVar_mod_PaneltopEdgeLeftColor, IModVar_mod_PaneltopEdgeVisFront, IModVar_mod_PaneltopEdgeVisBack, IModVar_mod_PaneltopOversizeBack, IModVar_mod_PaneltopEdgeVisLeft, IModVar_mod_PaneltopEdgeVisRight, IModVar_mod_PaneltopThk, IModVar_mod_PaneltopOverhangFront, IModVar_mod_ParentName, IModVar_mod_ModuleName, IModVar_mod_PaneltopId, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapCarcase {
+  , IModVar_mod_Width, IModVar_mod_Depth, IModVar_mod_PaneltopColor, IModVar_mod_PaneltopConstruction, IModVar_mod_PaneltopProgram, IModVar_mod_PaneltopEdgeBackColor, IModVar_mod_PaneltopEdgeFrontColor, IModVar_mod_PaneltopEdgeRightColor, IModVar_mod_PaneltopEdgeLeftColor, IModVar_mod_PaneltopEdgeVisFront, IModVar_mod_PaneltopEdgeVisBack, IModVar_mod_PaneltopOversizeBack, IModVar_mod_PaneltopEdgeVisLeft, IModVar_mod_PaneltopEdgeVisRight, IModVar_mod_PaneltopThk, IModVar_mod_PaneltopOverhangFront, IModVar_mod_ParentName, IModVar_mod_ModuleName, IModVar_mod_PaneltopId, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVar_mod_ContourOwnerIds {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_Paneltop01;
@@ -173,7 +173,7 @@ export interface pc_mc_Paneltop01 extends dc_mc_Paneltop01 {
 }
 
 export interface adc_base_mc_Paneltop01 extends IModBaseProp
-  , IModVarNonNull_mod_Width, IModVarNonNull_mod_Depth, IModVarNonNull_mod_PaneltopColor, IModVarNonNull_mod_PaneltopConstruction, IModVarNonNull_mod_PaneltopProgram, IModVarNonNull_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeFrontColor, IModVarNonNull_mod_PaneltopEdgeRightColor, IModVarNonNull_mod_PaneltopEdgeLeftColor, IModVarNonNull_mod_PaneltopEdgeVisFront, IModVarNonNull_mod_PaneltopEdgeVisBack, IModVarNonNull_mod_PaneltopOversizeBack, IModVarNonNull_mod_PaneltopEdgeVisLeft, IModVarNonNull_mod_PaneltopEdgeVisRight, IModVarNonNull_mod_PaneltopThk, IModVarNonNull_mod_PaneltopOverhangFront, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PaneltopId, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapCarcase {
+  , IModVarNonNull_mod_Width, IModVarNonNull_mod_Depth, IModVarNonNull_mod_PaneltopColor, IModVarNonNull_mod_PaneltopConstruction, IModVarNonNull_mod_PaneltopProgram, IModVarNonNull_mod_PaneltopEdgeBackColor, IModVarNonNull_mod_PaneltopEdgeFrontColor, IModVarNonNull_mod_PaneltopEdgeRightColor, IModVarNonNull_mod_PaneltopEdgeLeftColor, IModVarNonNull_mod_PaneltopEdgeVisFront, IModVarNonNull_mod_PaneltopEdgeVisBack, IModVarNonNull_mod_PaneltopOversizeBack, IModVarNonNull_mod_PaneltopEdgeVisLeft, IModVarNonNull_mod_PaneltopEdgeVisRight, IModVarNonNull_mod_PaneltopThk, IModVarNonNull_mod_PaneltopOverhangFront, IModVarNonNull_mod_ParentName, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_PaneltopId, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_ContourOwnerIds {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
 }
@@ -187,7 +187,7 @@ export interface ccm_mc_Paneltop01 extends adc_base_mc_Paneltop01 {
 
 export class OD_M_mc_Paneltop01 extends OD_Base implements pc_mc_Paneltop01, dc_mc_Paneltop01
   , IModParents_mc_Paneltop01, IModParents_mc_CeilingFiller01_mc_Paneltop01
-  , IModVar_mod_Width, IModVar_mod_Depth, IModVar_mod_PaneltopColor, IModVar_mod_PaneltopConstruction, IModVar_mod_PaneltopProgram, IModVar_mod_PaneltopEdgeBackColor, IModVar_mod_PaneltopEdgeFrontColor, IModVar_mod_PaneltopEdgeRightColor, IModVar_mod_PaneltopEdgeLeftColor, IModVar_mod_PaneltopEdgeVisFront, IModVar_mod_PaneltopEdgeVisBack, IModVar_mod_PaneltopOversizeBack, IModVar_mod_PaneltopEdgeVisLeft, IModVar_mod_PaneltopEdgeVisRight, IModVar_mod_PaneltopThk, IModVar_mod_PaneltopOverhangFront, IModVar_mod_ParentName, IModVar_mod_ModuleName, IModVar_mod_PaneltopId, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapCarcase {
+  , IModVar_mod_Width, IModVar_mod_Depth, IModVar_mod_PaneltopColor, IModVar_mod_PaneltopConstruction, IModVar_mod_PaneltopProgram, IModVar_mod_PaneltopEdgeBackColor, IModVar_mod_PaneltopEdgeFrontColor, IModVar_mod_PaneltopEdgeRightColor, IModVar_mod_PaneltopEdgeLeftColor, IModVar_mod_PaneltopEdgeVisFront, IModVar_mod_PaneltopEdgeVisBack, IModVar_mod_PaneltopOversizeBack, IModVar_mod_PaneltopEdgeVisLeft, IModVar_mod_PaneltopEdgeVisRight, IModVar_mod_PaneltopThk, IModVar_mod_PaneltopOverhangFront, IModVar_mod_ParentName, IModVar_mod_ModuleName, IModVar_mod_PaneltopId, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVar_mod_ContourOwnerIds {
   constructor(parent: IModParents_mr_Paneltop, manufacturerMode?: boolean) {
     super('mc_Paneltop01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
@@ -196,7 +196,7 @@ export class OD_M_mc_Paneltop01 extends OD_Base implements pc_mc_Paneltop01, dc_
   parent: IModParents_mr_Paneltop;
   _selfNonNull: OD_M_mc_Paneltop01_NonNull;
 
-  override variants: string[] = ['mod_Width', 'mod_Depth', 'mod_PaneltopColor', 'mod_PaneltopConstruction', 'mod_PaneltopProgram', 'mod_PaneltopEdgeBackColor', 'mod_PaneltopEdgeFrontColor', 'mod_PaneltopEdgeRightColor', 'mod_PaneltopEdgeLeftColor', 'mod_PaneltopEdgeVisFront', 'mod_PaneltopEdgeVisBack', 'mod_PaneltopOversizeBack', 'mod_PaneltopEdgeVisLeft', 'mod_PaneltopEdgeVisRight', 'mod_PaneltopThk', 'mod_PaneltopOverhangFront', 'mod_ParentName', 'mod_ModuleName', 'mod_PaneltopId', 'mod_FrontGapHor', 'mod_FrontGapCarcase',];
+  override variants: string[] = ['mod_Width', 'mod_Depth', 'mod_PaneltopColor', 'mod_PaneltopConstruction', 'mod_PaneltopProgram', 'mod_PaneltopEdgeBackColor', 'mod_PaneltopEdgeFrontColor', 'mod_PaneltopEdgeRightColor', 'mod_PaneltopEdgeLeftColor', 'mod_PaneltopEdgeVisFront', 'mod_PaneltopEdgeVisBack', 'mod_PaneltopOversizeBack', 'mod_PaneltopEdgeVisLeft', 'mod_PaneltopEdgeVisRight', 'mod_PaneltopThk', 'mod_PaneltopOverhangFront', 'mod_ParentName', 'mod_ModuleName', 'mod_PaneltopId', 'mod_FrontGapHor', 'mod_FrontGapCarcase', 'mod_ContourOwnerIds',];
   #mod_Width?: number;
   get mod_Width(): number | undefined { return this.#mod_Width }
   set mod_Width(value: number | undefined) {
@@ -449,6 +449,8 @@ export class OD_M_mc_Paneltop01 extends OD_Base implements pc_mc_Paneltop01, dc_
   }
 
   mod_FrontGapCarcase_matrix?: IMatrix_mod_FrontGapCarcase;
+  #mod_ContourOwnerIds: string[] = [];
+  get mod_ContourOwnerIds(): string[] { return this.#mod_ContourOwnerIds; }
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
     res.set('mod_Width', this.mod_Width);
@@ -472,6 +474,7 @@ export class OD_M_mc_Paneltop01 extends OD_Base implements pc_mc_Paneltop01, dc_
     res.set('mod_PaneltopId', this.mod_PaneltopId);
     res.set('mod_FrontGapHor', this.mod_FrontGapHor);
     res.set('mod_FrontGapCarcase', this.mod_FrontGapCarcase);
+    res.set('mod_ContourOwnerIds', JSON.stringify(this.mod_ContourOwnerIds));
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -1095,6 +1098,9 @@ class OD_M_mc_Paneltop01_NonNull implements cbp_mc_Paneltop01, adc_mc_Paneltop01
   }
   get mod_FrontGapCarcase(): number {
     return this.#internalParent.mod_FrontGapCarcase!;
+  }
+  get mod_ContourOwnerIds(): string[] {
+    return this.#internalParent.mod_ContourOwnerIds!;
   }
 }
 

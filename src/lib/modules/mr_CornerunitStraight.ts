@@ -363,6 +363,7 @@ export function mr_CornerunitStraight_createBuildPlan(this: cbp_mr_CornerunitStr
 							;
 
 						fingergripContour.attributes
+							.set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
 							.set('mod_FingergripPostype', 'Middle')
 							.set('mod_FingergripType', mc.mod_FingergripType ?? 'None')
 							;
@@ -424,11 +425,13 @@ export function mr_CornerunitStraight_createBuildPlan(this: cbp_mr_CornerunitStr
 					}
 
 					fingergripContourStraight.attributes
+						.set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
 						.set('mod_FingergripPostype', 'Top')
 						.set('mod_FingergripType', mc.mod_FingergripType ?? 'None')
 						;
 
 					fingergripContourPerpendicular.attributes
+						.set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
 						.set('mod_FingergripPostype', 'Top')
 						.set('mod_FingergripType', mc.mod_FingergripType ?? 'None')
 						;

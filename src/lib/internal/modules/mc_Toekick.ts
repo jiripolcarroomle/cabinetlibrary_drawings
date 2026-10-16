@@ -136,7 +136,7 @@ import { IModParents_mr_PlinthAreaBaseboard_mr_Toekick } from '../mod-interfaces
 import { IP_part_Toekick_PartVarsWritable, P_part_Toekick } from '../parts/part_Toekick'
 import { IP_part_ToekickGroup_PartVarsWritable, P_part_ToekickGroup } from '../parts/part_ToekickGroup'
 import { IModuleNonNull_mc_Toekick, IModParents_mc_Toekick, IPartParentsNonNull_mc_Toekick } from '../mod-interfaces'
-import { IModVar_mod_ToekickColor, IModVarNonNull_mod_ToekickColor, IModVar_mod_ToekickHeight, IModVarNonNull_mod_ToekickHeight, IModVar_mod_ToekickThk, IModVarNonNull_mod_ToekickThk, IModVar_mod_ToekickLength, IModVarNonNull_mod_ToekickLength, IModVar_mod_ToekickId, IModVarNonNull_mod_ToekickId, IModVar_mod_ToekickProgram, IModVarNonNull_mod_ToekickProgram } from '../var-interfaces'
+import { IModVar_mod_ToekickColor, IModVarNonNull_mod_ToekickColor, IModVar_mod_ToekickHeight, IModVarNonNull_mod_ToekickHeight, IModVar_mod_ToekickThk, IModVarNonNull_mod_ToekickThk, IModVar_mod_ToekickLength, IModVarNonNull_mod_ToekickLength, IModVar_mod_ToekickId, IModVarNonNull_mod_ToekickId, IModVar_mod_ToekickProgram, IModVarNonNull_mod_ToekickProgram, IModVar_mod_ContourOwnerIds, IModVarNonNull_mod_ContourOwnerIds } from '../var-interfaces'
 import { VariantValidation, IMatrix_mod_ToekickColor, IMatrix_mod_ToekickHeight, IMatrix_mod_ToekickThk, IMatrix_mod_ToekickLength, IMatrix_mod_ToekickId, IMatrix_mod_ToekickProgram } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
@@ -144,7 +144,7 @@ import { IPartAdd_part_Toekick, IPartAdd_part_ToekickGroup } from '../part-add-i
 import { mc_Toekick_createBuildPlan, mc_Toekick_afterDataCompletion, mc_Toekick_manufacturerDataCompletion, mc_Toekick_calculateContainerModules, mc_Toekick_prepareContext } from '../../modules/mc_Toekick';
 
 export interface cbp_mc_Toekick extends IModBaseProp
-  , IPartAdd_part_Toekick, IPartAdd_part_ToekickGroup, IModVarNonNull_mod_ToekickColor, IModVarNonNull_mod_ToekickHeight, IModVarNonNull_mod_ToekickThk, IModVarNonNull_mod_ToekickLength, IModVarNonNull_mod_ToekickId, IModVarNonNull_mod_ToekickProgram {
+  , IPartAdd_part_Toekick, IPartAdd_part_ToekickGroup, IModVarNonNull_mod_ToekickColor, IModVarNonNull_mod_ToekickHeight, IModVarNonNull_mod_ToekickThk, IModVarNonNull_mod_ToekickLength, IModVarNonNull_mod_ToekickId, IModVarNonNull_mod_ToekickProgram, IModVarNonNull_mod_ContourOwnerIds {
   parent: IModParents_mr_PlinthAreaBaseboard_mr_Toekick;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
@@ -156,7 +156,7 @@ export interface cbp_mc_Toekick extends IModBaseProp
 }
 
 export interface dc_mc_Toekick extends IModBaseProp
-  , IModVar_mod_ToekickColor, IModVar_mod_ToekickHeight, IModVar_mod_ToekickThk, IModVar_mod_ToekickLength, IModVar_mod_ToekickId, IModVar_mod_ToekickProgram {
+  , IModVar_mod_ToekickColor, IModVar_mod_ToekickHeight, IModVar_mod_ToekickThk, IModVar_mod_ToekickLength, IModVar_mod_ToekickId, IModVar_mod_ToekickProgram, IModVar_mod_ContourOwnerIds {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_Toekick;
@@ -171,7 +171,7 @@ export interface pc_mc_Toekick extends dc_mc_Toekick {
 }
 
 export interface adc_base_mc_Toekick extends IModBaseProp
-  , IModVarNonNull_mod_ToekickColor, IModVarNonNull_mod_ToekickHeight, IModVarNonNull_mod_ToekickThk, IModVarNonNull_mod_ToekickLength, IModVarNonNull_mod_ToekickId, IModVarNonNull_mod_ToekickProgram {
+  , IModVarNonNull_mod_ToekickColor, IModVarNonNull_mod_ToekickHeight, IModVarNonNull_mod_ToekickThk, IModVarNonNull_mod_ToekickLength, IModVarNonNull_mod_ToekickId, IModVarNonNull_mod_ToekickProgram, IModVarNonNull_mod_ContourOwnerIds {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
 }
@@ -185,7 +185,7 @@ export interface ccm_mc_Toekick extends adc_base_mc_Toekick {
 
 export class OD_M_mc_Toekick extends OD_Base implements pc_mc_Toekick, dc_mc_Toekick
   , IModParents_mc_Toekick
-  , IModVar_mod_ToekickColor, IModVar_mod_ToekickHeight, IModVar_mod_ToekickThk, IModVar_mod_ToekickLength, IModVar_mod_ToekickId, IModVar_mod_ToekickProgram {
+  , IModVar_mod_ToekickColor, IModVar_mod_ToekickHeight, IModVar_mod_ToekickThk, IModVar_mod_ToekickLength, IModVar_mod_ToekickId, IModVar_mod_ToekickProgram, IModVar_mod_ContourOwnerIds {
   constructor(parent: IModParents_mr_PlinthAreaBaseboard_mr_Toekick, manufacturerMode?: boolean) {
     super('mc_Toekick', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
@@ -194,7 +194,7 @@ export class OD_M_mc_Toekick extends OD_Base implements pc_mc_Toekick, dc_mc_Toe
   parent: IModParents_mr_PlinthAreaBaseboard_mr_Toekick;
   _selfNonNull: OD_M_mc_Toekick_NonNull;
 
-  override variants: string[] = ['mod_ToekickColor', 'mod_ToekickHeight', 'mod_ToekickThk', 'mod_ToekickLength', 'mod_ToekickId', 'mod_ToekickProgram',];
+  override variants: string[] = ['mod_ToekickColor', 'mod_ToekickHeight', 'mod_ToekickThk', 'mod_ToekickLength', 'mod_ToekickId', 'mod_ToekickProgram', 'mod_ContourOwnerIds',];
   #mod_ToekickColor?: string;
   get mod_ToekickColor(): string | undefined { return this.#mod_ToekickColor }
   set mod_ToekickColor(value: string | undefined) {
@@ -267,6 +267,8 @@ export class OD_M_mc_Toekick extends OD_Base implements pc_mc_Toekick, dc_mc_Toe
   }
 
   mod_ToekickProgram_matrix?: IMatrix_mod_ToekickProgram;
+  #mod_ContourOwnerIds: string[] = [];
+  get mod_ContourOwnerIds(): string[] { return this.#mod_ContourOwnerIds; }
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
     res.set('mod_ToekickColor', this.mod_ToekickColor);
@@ -275,6 +277,7 @@ export class OD_M_mc_Toekick extends OD_Base implements pc_mc_Toekick, dc_mc_Toe
     res.set('mod_ToekickLength', this.mod_ToekickLength);
     res.set('mod_ToekickId', this.mod_ToekickId);
     res.set('mod_ToekickProgram', this.mod_ToekickProgram);
+    res.set('mod_ContourOwnerIds', JSON.stringify(this.mod_ContourOwnerIds));
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -573,6 +576,9 @@ class OD_M_mc_Toekick_NonNull implements cbp_mc_Toekick, adc_mc_Toekick, ccm_mc_
   }
   get mod_ToekickProgram_matrix(): IMatrix_mod_ToekickProgram {
     return this.#internalParent.mod_ToekickProgram_matrix!;
+  }
+  get mod_ContourOwnerIds(): string[] {
+    return this.#internalParent.mod_ContourOwnerIds!;
   }
 }
 

@@ -252,6 +252,8 @@ export interface IModVar_mod_CoatBoardThickness { mod_CoatBoardThickness?: numbe
 export interface IModVarNonNull_mod_CoatBoardThickness { get mod_CoatBoardThickness(): number; }
 export interface IModVar_mod_Color { mod_Color?: string; }
 export interface IModVarNonNull_mod_Color { get mod_Color(): string; }
+export interface IModVar_mod_ContourOwnerIds { mod_ContourOwnerIds: string[]; }
+export interface IModVarNonNull_mod_ContourOwnerIds { get mod_ContourOwnerIds(): string[]; }
 export interface IModVar_mod_CornerunitDimensionLogic { mod_CornerunitDimensionLogic?: string; }
 export interface IModVarNonNull_mod_CornerunitDimensionLogic { get mod_CornerunitDimensionLogic(): string; }
 export interface IModVar_mod_CornerunitFrontWidth { mod_CornerunitFrontWidth?: number; }

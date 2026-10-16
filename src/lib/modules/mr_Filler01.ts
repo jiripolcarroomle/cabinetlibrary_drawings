@@ -178,6 +178,7 @@ export function mr_Filler01_createBuildPlan(this: cbp_mr_Filler01): void {
     const {
       CONTOUR_ATTRIBUTE_ADD_TOEKICK,
       CONTOUR_ATTRIBUTE_ADD_BASEBOARD,
+      CONTOUR_ATTRIBUTE_OWNER_ID,
       CONTOUR_ATTRIBUTE_OWNER_TYPE,
       mr_StorateunitSingle,
     } = GlobalFunc.process_MathLongparts();
@@ -211,6 +212,7 @@ export function mr_Filler01_createBuildPlan(this: cbp_mr_Filler01): void {
     // This actually decides if the countertop should really be added.
     contourCountertop.attributes
       .set(CONTOUR_ATTRIBUTE_OWNER_TYPE, mr_StorateunitSingle)
+      .set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
       .set('mod_CarcaseVisLeft', 0)
       .set('mod_CarcaseVisRight', 0)
       .set('CountertopInfo', strJson)
@@ -277,6 +279,7 @@ export function mr_Filler01_createBuildPlan(this: cbp_mr_Filler01): void {
 
       contourPaneltop.attributes
         .set(CONTOUR_ATTRIBUTE_OWNER_TYPE, this.modId)
+        .set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
         .set('mod_CeilingFillerConstruction', this.mod_CeilingFillerConstruction ?? this.g.basic_CeilingFillerConstruction)
         .set('mod_CeilingFillerHeight', this.mod_CeilingFillerHeight ?? this.g.basic_CeilingFillerHeight)
         ;
@@ -323,6 +326,7 @@ export function mr_Filler01_createBuildPlan(this: cbp_mr_Filler01): void {
             ;
 
           fingergripContour.attributes
+            .set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
             .set('mod_FingergripPostype', idx === fingergripTopIndex ? 'Top' : 'Middle')
             .set('mod_FingergripType', mc_Storageunit01.mod_FingergripType ?? 'None')
             ;
@@ -374,6 +378,7 @@ export function mr_Filler01_createBuildPlan(this: cbp_mr_Filler01): void {
 
       contourBaseboard.attributes
         .set(CONTOUR_ATTRIBUTE_OWNER_TYPE, this.modId)
+        .set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
         .set(CONTOUR_ATTRIBUTE_ADD_BASEBOARD, 0)
         .set(CONTOUR_ATTRIBUTE_ADD_TOEKICK, 1)
         .set('mod_Direction', this.mod_Direction)
@@ -435,6 +440,7 @@ export function mr_Filler01_createBuildPlan(this: cbp_mr_Filler01): void {
 
         contourToekick.attributes
           .set(CONTOUR_ATTRIBUTE_OWNER_TYPE, mr_StorateunitSingle)
+          .set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
           .set(CONTOUR_ATTRIBUTE_ADD_TOEKICK, createToekick ? 1 : 0)
           .set('mod_PlinthAreaVisLeft', mod_PlinthAreaVisLeft ? 1 : 0)
           .set('mod_PlinthAreaVisRight', mod_PlinthAreaVisRight ? 1 : 0)

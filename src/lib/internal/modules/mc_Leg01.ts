@@ -136,7 +136,7 @@ import { IModParents_mc_PlinthArea01_mr_PlinthAreaBaseboard } from '../mod-inter
 import { IP_part_Leg_PartVarsWritable, P_part_Leg } from '../parts/part_Leg'
 import { IP_part_LegDrill_PartVarsWritable, P_part_LegDrill } from '../parts/part_LegDrill'
 import { IModuleNonNull_mc_Leg01, IModParents_mc_Leg01, IPartParentsNonNull_mc_Leg01 } from '../mod-interfaces'
-import { IModVar_mod_CarcaseId, IModVarNonNull_mod_CarcaseId, IModVar_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaHeight, IModVar_mod_PlinthAreaDesign, IModVarNonNull_mod_PlinthAreaDesign, IModVar_mod_Rotation, IModVarNonNull_mod_Rotation, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_Model3DGroupName, IModVarNonNull_mod_Model3DGroupName, IModVar_mod_PlinthAreaElementColor, IModVarNonNull_mod_PlinthAreaElementColor, IModVar_mod_PlinthAreaExtraItem, IModVarNonNull_mod_PlinthAreaExtraItem, IModVar_mod_ShelfbtmThk, IModVarNonNull_mod_ShelfbtmThk, IModVar_mod_ProcessingId, IModVarNonNull_mod_ProcessingId, IModVar_mod_ProcessingLibrary, IModVarNonNull_mod_ProcessingLibrary, IModVar_mod_HardwareId, IModVarNonNull_mod_HardwareId, IModVar_mod_Height, IModVarNonNull_mod_Height } from '../var-interfaces'
+import { IModVar_mod_CarcaseId, IModVarNonNull_mod_CarcaseId, IModVar_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaHeight, IModVar_mod_PlinthAreaDesign, IModVarNonNull_mod_PlinthAreaDesign, IModVar_mod_Rotation, IModVarNonNull_mod_Rotation, IModVar_mod_ModuleName, IModVarNonNull_mod_ModuleName, IModVar_mod_Model3DGroupName, IModVarNonNull_mod_Model3DGroupName, IModVar_mod_PlinthAreaElementColor, IModVarNonNull_mod_PlinthAreaElementColor, IModVar_mod_PlinthAreaExtraItem, IModVarNonNull_mod_PlinthAreaExtraItem, IModVar_mod_ShelfbtmThk, IModVarNonNull_mod_ShelfbtmThk, IModVar_mod_ProcessingId, IModVarNonNull_mod_ProcessingId, IModVar_mod_ProcessingLibrary, IModVarNonNull_mod_ProcessingLibrary, IModVar_mod_HardwareId, IModVarNonNull_mod_HardwareId, IModVar_mod_Height, IModVarNonNull_mod_Height, IModVar_mod_ContourOwnerIds, IModVarNonNull_mod_ContourOwnerIds } from '../var-interfaces'
 import { VariantValidation, IMatrix_mod_CarcaseId, IMatrix_mod_PlinthAreaHeight, IMatrix_mod_PlinthAreaDesign, IMatrix_mod_Rotation, IMatrix_mod_ModuleName, IMatrix_mod_Model3DGroupName, IMatrix_mod_PlinthAreaElementColor, IMatrix_mod_PlinthAreaExtraItem, IMatrix_mod_ShelfbtmThk, IMatrix_mod_ProcessingId, IMatrix_mod_ProcessingLibrary, IMatrix_mod_HardwareId, IMatrix_mod_Height } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
@@ -144,7 +144,7 @@ import { IPartAdd_part_Leg, IPartAdd_part_LegDrill } from '../part-add-interface
 import { mc_Leg01_createBuildPlan, mc_Leg01_afterDataCompletion, mc_Leg01_manufacturerDataCompletion, mc_Leg01_calculateContainerModules, mc_Leg01_prepareContext } from '../../modules/mc_Leg01';
 
 export interface cbp_mc_Leg01 extends IModBaseProp
-  , IPartAdd_part_Leg, IPartAdd_part_LegDrill, IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaDesign, IModVarNonNull_mod_Rotation, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_Model3DGroupName, IModVarNonNull_mod_PlinthAreaElementColor, IModVarNonNull_mod_PlinthAreaExtraItem, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_ProcessingId, IModVarNonNull_mod_ProcessingLibrary, IModVarNonNull_mod_HardwareId, IModVarNonNull_mod_Height {
+  , IPartAdd_part_Leg, IPartAdd_part_LegDrill, IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaDesign, IModVarNonNull_mod_Rotation, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_Model3DGroupName, IModVarNonNull_mod_PlinthAreaElementColor, IModVarNonNull_mod_PlinthAreaExtraItem, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_ProcessingId, IModVarNonNull_mod_ProcessingLibrary, IModVarNonNull_mod_HardwareId, IModVarNonNull_mod_Height, IModVarNonNull_mod_ContourOwnerIds {
   parent: IModParents_mc_PlinthArea01_mr_PlinthAreaBaseboard;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
@@ -156,7 +156,7 @@ export interface cbp_mc_Leg01 extends IModBaseProp
 }
 
 export interface dc_mc_Leg01 extends IModBaseProp
-  , IModVar_mod_CarcaseId, IModVar_mod_PlinthAreaHeight, IModVar_mod_PlinthAreaDesign, IModVar_mod_Rotation, IModVar_mod_ModuleName, IModVar_mod_Model3DGroupName, IModVar_mod_PlinthAreaElementColor, IModVar_mod_PlinthAreaExtraItem, IModVar_mod_ShelfbtmThk, IModVar_mod_ProcessingId, IModVar_mod_ProcessingLibrary, IModVar_mod_HardwareId, IModVar_mod_Height {
+  , IModVar_mod_CarcaseId, IModVar_mod_PlinthAreaHeight, IModVar_mod_PlinthAreaDesign, IModVar_mod_Rotation, IModVar_mod_ModuleName, IModVar_mod_Model3DGroupName, IModVar_mod_PlinthAreaElementColor, IModVar_mod_PlinthAreaExtraItem, IModVar_mod_ShelfbtmThk, IModVar_mod_ProcessingId, IModVar_mod_ProcessingLibrary, IModVar_mod_HardwareId, IModVar_mod_Height, IModVar_mod_ContourOwnerIds {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_Leg01;
@@ -171,7 +171,7 @@ export interface pc_mc_Leg01 extends dc_mc_Leg01 {
 }
 
 export interface adc_base_mc_Leg01 extends IModBaseProp
-  , IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaDesign, IModVarNonNull_mod_Rotation, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_Model3DGroupName, IModVarNonNull_mod_PlinthAreaElementColor, IModVarNonNull_mod_PlinthAreaExtraItem, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_ProcessingId, IModVarNonNull_mod_ProcessingLibrary, IModVarNonNull_mod_HardwareId, IModVarNonNull_mod_Height {
+  , IModVarNonNull_mod_CarcaseId, IModVarNonNull_mod_PlinthAreaHeight, IModVarNonNull_mod_PlinthAreaDesign, IModVarNonNull_mod_Rotation, IModVarNonNull_mod_ModuleName, IModVarNonNull_mod_Model3DGroupName, IModVarNonNull_mod_PlinthAreaElementColor, IModVarNonNull_mod_PlinthAreaExtraItem, IModVarNonNull_mod_ShelfbtmThk, IModVarNonNull_mod_ProcessingId, IModVarNonNull_mod_ProcessingLibrary, IModVarNonNull_mod_HardwareId, IModVarNonNull_mod_Height, IModVarNonNull_mod_ContourOwnerIds {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
 }
@@ -185,7 +185,7 @@ export interface ccm_mc_Leg01 extends adc_base_mc_Leg01 {
 
 export class OD_M_mc_Leg01 extends OD_Base implements pc_mc_Leg01, dc_mc_Leg01
   , IModParents_mc_Leg01
-  , IModVar_mod_CarcaseId, IModVar_mod_PlinthAreaHeight, IModVar_mod_PlinthAreaDesign, IModVar_mod_Rotation, IModVar_mod_ModuleName, IModVar_mod_Model3DGroupName, IModVar_mod_PlinthAreaElementColor, IModVar_mod_PlinthAreaExtraItem, IModVar_mod_ShelfbtmThk, IModVar_mod_ProcessingId, IModVar_mod_ProcessingLibrary, IModVar_mod_HardwareId, IModVar_mod_Height {
+  , IModVar_mod_CarcaseId, IModVar_mod_PlinthAreaHeight, IModVar_mod_PlinthAreaDesign, IModVar_mod_Rotation, IModVar_mod_ModuleName, IModVar_mod_Model3DGroupName, IModVar_mod_PlinthAreaElementColor, IModVar_mod_PlinthAreaExtraItem, IModVar_mod_ShelfbtmThk, IModVar_mod_ProcessingId, IModVar_mod_ProcessingLibrary, IModVar_mod_HardwareId, IModVar_mod_Height, IModVar_mod_ContourOwnerIds {
   constructor(parent: IModParents_mc_PlinthArea01_mr_PlinthAreaBaseboard, manufacturerMode?: boolean) {
     super('mc_Leg01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
@@ -194,7 +194,7 @@ export class OD_M_mc_Leg01 extends OD_Base implements pc_mc_Leg01, dc_mc_Leg01
   parent: IModParents_mc_PlinthArea01_mr_PlinthAreaBaseboard;
   _selfNonNull: OD_M_mc_Leg01_NonNull;
 
-  override variants: string[] = ['mod_CarcaseId', 'mod_PlinthAreaHeight', 'mod_PlinthAreaDesign', 'mod_Rotation', 'mod_ModuleName', 'mod_Model3DGroupName', 'mod_PlinthAreaElementColor', 'mod_PlinthAreaExtraItem', 'mod_ShelfbtmThk', 'mod_ProcessingId', 'mod_ProcessingLibrary', 'mod_HardwareId', 'mod_Height',];
+  override variants: string[] = ['mod_CarcaseId', 'mod_PlinthAreaHeight', 'mod_PlinthAreaDesign', 'mod_Rotation', 'mod_ModuleName', 'mod_Model3DGroupName', 'mod_PlinthAreaElementColor', 'mod_PlinthAreaExtraItem', 'mod_ShelfbtmThk', 'mod_ProcessingId', 'mod_ProcessingLibrary', 'mod_HardwareId', 'mod_Height', 'mod_ContourOwnerIds',];
   #mod_CarcaseId?: string;
   get mod_CarcaseId(): string | undefined { return this.#mod_CarcaseId }
   set mod_CarcaseId(value: string | undefined) {
@@ -351,6 +351,8 @@ export class OD_M_mc_Leg01 extends OD_Base implements pc_mc_Leg01, dc_mc_Leg01
   }
 
   mod_Height_matrix?: IMatrix_mod_Height;
+  #mod_ContourOwnerIds: string[] = [];
+  get mod_ContourOwnerIds(): string[] { return this.#mod_ContourOwnerIds; }
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
     res.set('mod_CarcaseId', this.mod_CarcaseId);
@@ -366,6 +368,7 @@ export class OD_M_mc_Leg01 extends OD_Base implements pc_mc_Leg01, dc_mc_Leg01
     res.set('mod_ProcessingLibrary', this.mod_ProcessingLibrary);
     res.set('mod_HardwareId', this.mod_HardwareId);
     res.set('mod_Height', this.mod_Height);
+    res.set('mod_ContourOwnerIds', JSON.stringify(this.mod_ContourOwnerIds));
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -774,6 +777,9 @@ class OD_M_mc_Leg01_NonNull implements cbp_mc_Leg01, adc_mc_Leg01, ccm_mc_Leg01,
   }
   get mod_Height(): number {
     return this.#internalParent.mod_Height!;
+  }
+  get mod_ContourOwnerIds(): string[] {
+    return this.#internalParent.mod_ContourOwnerIds!;
   }
 }
 

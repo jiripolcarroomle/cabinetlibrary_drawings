@@ -135,7 +135,7 @@ import { GlobalFunc } from '../global-func'
 import { IModParents_mr_CeilingFiller } from '../mod-interfaces'
 import { IP_part_CeilingFillerPanel_PartVarsWritable, P_part_CeilingFillerPanel } from '../parts/part_CeilingFillerPanel'
 import { IModuleNonNull_mc_CeilingFiller01, IModParents_mc_CeilingFiller01_mc_Paneltop01, IPartParentsNonNull_mc_CeilingFiller01_mc_Paneltop01 } from '../mod-interfaces'
-import { IModVar_mod_CeilingFillerColor, IModVarNonNull_mod_CeilingFillerColor, IModVar_mod_CeilingFillerEdgeBackColor, IModVarNonNull_mod_CeilingFillerEdgeBackColor, IModVar_mod_CeilingFillerEdgeFrontColor, IModVarNonNull_mod_CeilingFillerEdgeFrontColor, IModVar_mod_CeilingFillerEdgeLeftColor, IModVarNonNull_mod_CeilingFillerEdgeLeftColor, IModVar_mod_CeilingFillerEdgeRightColor, IModVarNonNull_mod_CeilingFillerEdgeRightColor, IModVar_mod_CeilingFillerProgram, IModVarNonNull_mod_CeilingFillerProgram, IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_CeilingFillerHeight, IModVarNonNull_mod_CeilingFillerHeight, IModVar_mod_CeilingFillerThk, IModVarNonNull_mod_CeilingFillerThk, IModVar_mod_CeilingFillerFittingPanelDepth, IModVarNonNull_mod_CeilingFillerFittingPanelDepth, IModVar_mod_CeilingFillerFittingPanelThk, IModVarNonNull_mod_CeilingFillerFittingPanelThk, IModVar_mod_CeilingFillerConstruction, IModVarNonNull_mod_CeilingFillerConstruction, IModVar_mod_CeilingFillerRecess, IModVarNonNull_mod_CeilingFillerRecess, IModVar_mod_FrontGapHor, IModVarNonNull_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapCarcase, IModVar_mod_CeilingFillerId, IModVarNonNull_mod_CeilingFillerId } from '../var-interfaces'
+import { IModVar_mod_CeilingFillerColor, IModVarNonNull_mod_CeilingFillerColor, IModVar_mod_CeilingFillerEdgeBackColor, IModVarNonNull_mod_CeilingFillerEdgeBackColor, IModVar_mod_CeilingFillerEdgeFrontColor, IModVarNonNull_mod_CeilingFillerEdgeFrontColor, IModVar_mod_CeilingFillerEdgeLeftColor, IModVarNonNull_mod_CeilingFillerEdgeLeftColor, IModVar_mod_CeilingFillerEdgeRightColor, IModVarNonNull_mod_CeilingFillerEdgeRightColor, IModVar_mod_CeilingFillerProgram, IModVarNonNull_mod_CeilingFillerProgram, IModVar_mod_Width, IModVarNonNull_mod_Width, IModVar_mod_CeilingFillerHeight, IModVarNonNull_mod_CeilingFillerHeight, IModVar_mod_CeilingFillerThk, IModVarNonNull_mod_CeilingFillerThk, IModVar_mod_CeilingFillerFittingPanelDepth, IModVarNonNull_mod_CeilingFillerFittingPanelDepth, IModVar_mod_CeilingFillerFittingPanelThk, IModVarNonNull_mod_CeilingFillerFittingPanelThk, IModVar_mod_CeilingFillerConstruction, IModVarNonNull_mod_CeilingFillerConstruction, IModVar_mod_CeilingFillerRecess, IModVarNonNull_mod_CeilingFillerRecess, IModVar_mod_FrontGapHor, IModVarNonNull_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVarNonNull_mod_FrontGapCarcase, IModVar_mod_CeilingFillerId, IModVarNonNull_mod_CeilingFillerId, IModVar_mod_ContourOwnerIds, IModVarNonNull_mod_ContourOwnerIds } from '../var-interfaces'
 import { VariantValidation, IMatrix_mod_CeilingFillerColor, IMatrix_mod_CeilingFillerEdgeBackColor, IMatrix_mod_CeilingFillerEdgeFrontColor, IMatrix_mod_CeilingFillerEdgeLeftColor, IMatrix_mod_CeilingFillerEdgeRightColor, IMatrix_mod_CeilingFillerProgram, IMatrix_mod_Width, IMatrix_mod_CeilingFillerHeight, IMatrix_mod_CeilingFillerThk, IMatrix_mod_CeilingFillerFittingPanelDepth, IMatrix_mod_CeilingFillerFittingPanelThk, IMatrix_mod_CeilingFillerConstruction, IMatrix_mod_CeilingFillerRecess, IMatrix_mod_FrontGapHor, IMatrix_mod_FrontGapCarcase, IMatrix_mod_CeilingFillerId } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
@@ -143,7 +143,7 @@ import { IPartAdd_part_CeilingFillerPanel } from '../part-add-interfaces';
 import { mc_CeilingFiller01_createBuildPlan, mc_CeilingFiller01_afterDataCompletion, mc_CeilingFiller01_manufacturerDataCompletion, mc_CeilingFiller01_calculateContainerModules, mc_CeilingFiller01_prepareContext } from '../../modules/mc_CeilingFiller01';
 
 export interface cbp_mc_CeilingFiller01 extends IModBaseProp
-  , IPartAdd_part_CeilingFillerPanel, IModVarNonNull_mod_CeilingFillerColor, IModVarNonNull_mod_CeilingFillerEdgeBackColor, IModVarNonNull_mod_CeilingFillerEdgeFrontColor, IModVarNonNull_mod_CeilingFillerEdgeLeftColor, IModVarNonNull_mod_CeilingFillerEdgeRightColor, IModVarNonNull_mod_CeilingFillerProgram, IModVarNonNull_mod_Width, IModVarNonNull_mod_CeilingFillerHeight, IModVarNonNull_mod_CeilingFillerThk, IModVarNonNull_mod_CeilingFillerFittingPanelDepth, IModVarNonNull_mod_CeilingFillerFittingPanelThk, IModVarNonNull_mod_CeilingFillerConstruction, IModVarNonNull_mod_CeilingFillerRecess, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_CeilingFillerId {
+  , IPartAdd_part_CeilingFillerPanel, IModVarNonNull_mod_CeilingFillerColor, IModVarNonNull_mod_CeilingFillerEdgeBackColor, IModVarNonNull_mod_CeilingFillerEdgeFrontColor, IModVarNonNull_mod_CeilingFillerEdgeLeftColor, IModVarNonNull_mod_CeilingFillerEdgeRightColor, IModVarNonNull_mod_CeilingFillerProgram, IModVarNonNull_mod_Width, IModVarNonNull_mod_CeilingFillerHeight, IModVarNonNull_mod_CeilingFillerThk, IModVarNonNull_mod_CeilingFillerFittingPanelDepth, IModVarNonNull_mod_CeilingFillerFittingPanelThk, IModVarNonNull_mod_CeilingFillerConstruction, IModVarNonNull_mod_CeilingFillerRecess, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_CeilingFillerId, IModVarNonNull_mod_ContourOwnerIds {
   parent: IModParents_mr_CeilingFiller;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
@@ -155,7 +155,7 @@ export interface cbp_mc_CeilingFiller01 extends IModBaseProp
 }
 
 export interface dc_mc_CeilingFiller01 extends IModBaseProp
-  , IModVar_mod_CeilingFillerColor, IModVar_mod_CeilingFillerEdgeBackColor, IModVar_mod_CeilingFillerEdgeFrontColor, IModVar_mod_CeilingFillerEdgeLeftColor, IModVar_mod_CeilingFillerEdgeRightColor, IModVar_mod_CeilingFillerProgram, IModVar_mod_Width, IModVar_mod_CeilingFillerHeight, IModVar_mod_CeilingFillerThk, IModVar_mod_CeilingFillerFittingPanelDepth, IModVar_mod_CeilingFillerFittingPanelThk, IModVar_mod_CeilingFillerConstruction, IModVar_mod_CeilingFillerRecess, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVar_mod_CeilingFillerId {
+  , IModVar_mod_CeilingFillerColor, IModVar_mod_CeilingFillerEdgeBackColor, IModVar_mod_CeilingFillerEdgeFrontColor, IModVar_mod_CeilingFillerEdgeLeftColor, IModVar_mod_CeilingFillerEdgeRightColor, IModVar_mod_CeilingFillerProgram, IModVar_mod_Width, IModVar_mod_CeilingFillerHeight, IModVar_mod_CeilingFillerThk, IModVar_mod_CeilingFillerFittingPanelDepth, IModVar_mod_CeilingFillerFittingPanelThk, IModVar_mod_CeilingFillerConstruction, IModVar_mod_CeilingFillerRecess, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVar_mod_CeilingFillerId, IModVar_mod_ContourOwnerIds {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_CeilingFiller01;
@@ -170,7 +170,7 @@ export interface pc_mc_CeilingFiller01 extends dc_mc_CeilingFiller01 {
 }
 
 export interface adc_base_mc_CeilingFiller01 extends IModBaseProp
-  , IModVarNonNull_mod_CeilingFillerColor, IModVarNonNull_mod_CeilingFillerEdgeBackColor, IModVarNonNull_mod_CeilingFillerEdgeFrontColor, IModVarNonNull_mod_CeilingFillerEdgeLeftColor, IModVarNonNull_mod_CeilingFillerEdgeRightColor, IModVarNonNull_mod_CeilingFillerProgram, IModVarNonNull_mod_Width, IModVarNonNull_mod_CeilingFillerHeight, IModVarNonNull_mod_CeilingFillerThk, IModVarNonNull_mod_CeilingFillerFittingPanelDepth, IModVarNonNull_mod_CeilingFillerFittingPanelThk, IModVarNonNull_mod_CeilingFillerConstruction, IModVarNonNull_mod_CeilingFillerRecess, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_CeilingFillerId {
+  , IModVarNonNull_mod_CeilingFillerColor, IModVarNonNull_mod_CeilingFillerEdgeBackColor, IModVarNonNull_mod_CeilingFillerEdgeFrontColor, IModVarNonNull_mod_CeilingFillerEdgeLeftColor, IModVarNonNull_mod_CeilingFillerEdgeRightColor, IModVarNonNull_mod_CeilingFillerProgram, IModVarNonNull_mod_Width, IModVarNonNull_mod_CeilingFillerHeight, IModVarNonNull_mod_CeilingFillerThk, IModVarNonNull_mod_CeilingFillerFittingPanelDepth, IModVarNonNull_mod_CeilingFillerFittingPanelThk, IModVarNonNull_mod_CeilingFillerConstruction, IModVarNonNull_mod_CeilingFillerRecess, IModVarNonNull_mod_FrontGapHor, IModVarNonNull_mod_FrontGapCarcase, IModVarNonNull_mod_CeilingFillerId, IModVarNonNull_mod_ContourOwnerIds {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
 }
@@ -184,7 +184,7 @@ export interface ccm_mc_CeilingFiller01 extends adc_base_mc_CeilingFiller01 {
 
 export class OD_M_mc_CeilingFiller01 extends OD_Base implements pc_mc_CeilingFiller01, dc_mc_CeilingFiller01
   , IModParents_mc_CeilingFiller01_mc_Paneltop01
-  , IModVar_mod_CeilingFillerColor, IModVar_mod_CeilingFillerEdgeBackColor, IModVar_mod_CeilingFillerEdgeFrontColor, IModVar_mod_CeilingFillerEdgeLeftColor, IModVar_mod_CeilingFillerEdgeRightColor, IModVar_mod_CeilingFillerProgram, IModVar_mod_Width, IModVar_mod_CeilingFillerHeight, IModVar_mod_CeilingFillerThk, IModVar_mod_CeilingFillerFittingPanelDepth, IModVar_mod_CeilingFillerFittingPanelThk, IModVar_mod_CeilingFillerConstruction, IModVar_mod_CeilingFillerRecess, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVar_mod_CeilingFillerId {
+  , IModVar_mod_CeilingFillerColor, IModVar_mod_CeilingFillerEdgeBackColor, IModVar_mod_CeilingFillerEdgeFrontColor, IModVar_mod_CeilingFillerEdgeLeftColor, IModVar_mod_CeilingFillerEdgeRightColor, IModVar_mod_CeilingFillerProgram, IModVar_mod_Width, IModVar_mod_CeilingFillerHeight, IModVar_mod_CeilingFillerThk, IModVar_mod_CeilingFillerFittingPanelDepth, IModVar_mod_CeilingFillerFittingPanelThk, IModVar_mod_CeilingFillerConstruction, IModVar_mod_CeilingFillerRecess, IModVar_mod_FrontGapHor, IModVar_mod_FrontGapCarcase, IModVar_mod_CeilingFillerId, IModVar_mod_ContourOwnerIds {
   constructor(parent: IModParents_mr_CeilingFiller, manufacturerMode?: boolean) {
     super('mc_CeilingFiller01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
@@ -193,7 +193,7 @@ export class OD_M_mc_CeilingFiller01 extends OD_Base implements pc_mc_CeilingFil
   parent: IModParents_mr_CeilingFiller;
   _selfNonNull: OD_M_mc_CeilingFiller01_NonNull;
 
-  override variants: string[] = ['mod_CeilingFillerColor', 'mod_CeilingFillerEdgeBackColor', 'mod_CeilingFillerEdgeFrontColor', 'mod_CeilingFillerEdgeLeftColor', 'mod_CeilingFillerEdgeRightColor', 'mod_CeilingFillerProgram', 'mod_Width', 'mod_CeilingFillerHeight', 'mod_CeilingFillerThk', 'mod_CeilingFillerFittingPanelDepth', 'mod_CeilingFillerFittingPanelThk', 'mod_CeilingFillerConstruction', 'mod_CeilingFillerRecess', 'mod_FrontGapHor', 'mod_FrontGapCarcase', 'mod_CeilingFillerId',];
+  override variants: string[] = ['mod_CeilingFillerColor', 'mod_CeilingFillerEdgeBackColor', 'mod_CeilingFillerEdgeFrontColor', 'mod_CeilingFillerEdgeLeftColor', 'mod_CeilingFillerEdgeRightColor', 'mod_CeilingFillerProgram', 'mod_Width', 'mod_CeilingFillerHeight', 'mod_CeilingFillerThk', 'mod_CeilingFillerFittingPanelDepth', 'mod_CeilingFillerFittingPanelThk', 'mod_CeilingFillerConstruction', 'mod_CeilingFillerRecess', 'mod_FrontGapHor', 'mod_FrontGapCarcase', 'mod_CeilingFillerId', 'mod_ContourOwnerIds',];
   #mod_CeilingFillerColor?: string;
   get mod_CeilingFillerColor(): string | undefined { return this.#mod_CeilingFillerColor }
   set mod_CeilingFillerColor(value: string | undefined) {
@@ -386,6 +386,8 @@ export class OD_M_mc_CeilingFiller01 extends OD_Base implements pc_mc_CeilingFil
   }
 
   mod_CeilingFillerId_matrix?: IMatrix_mod_CeilingFillerId;
+  #mod_ContourOwnerIds: string[] = [];
+  get mod_ContourOwnerIds(): string[] { return this.#mod_ContourOwnerIds; }
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
     res.set('mod_CeilingFillerColor', this.mod_CeilingFillerColor);
@@ -404,6 +406,7 @@ export class OD_M_mc_CeilingFiller01 extends OD_Base implements pc_mc_CeilingFil
     res.set('mod_FrontGapHor', this.mod_FrontGapHor);
     res.set('mod_FrontGapCarcase', this.mod_FrontGapCarcase);
     res.set('mod_CeilingFillerId', this.mod_CeilingFillerId);
+    res.set('mod_ContourOwnerIds', JSON.stringify(this.mod_ContourOwnerIds));
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -909,6 +912,9 @@ class OD_M_mc_CeilingFiller01_NonNull implements cbp_mc_CeilingFiller01, adc_mc_
   }
   get mod_CeilingFillerId(): string {
     return this.#internalParent.mod_CeilingFillerId!;
+  }
+  get mod_ContourOwnerIds(): string[] {
+    return this.#internalParent.mod_ContourOwnerIds!;
   }
 }
 

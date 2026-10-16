@@ -136,7 +136,7 @@ import { IModParents_mr_Backsplash } from '../mod-interfaces'
 import { IP_part_Backsplash_PartVarsWritable, P_part_Backsplash } from '../parts/part_Backsplash'
 import { IP_part_BacksplashGroup_PartVarsWritable, P_part_BacksplashGroup } from '../parts/part_BacksplashGroup'
 import { IModuleNonNull_mc_Backsplash, IModParents_mc_Backsplash, IPartParentsNonNull_mc_Backsplash } from '../mod-interfaces'
-import { IModVar_mod_BacksplashColor, IModVarNonNull_mod_BacksplashColor, IModVar_mod_BacksplashHeight, IModVarNonNull_mod_BacksplashHeight, IModVar_mod_BacksplashThk, IModVarNonNull_mod_BacksplashThk, IModVar_mod_BacksplashWidth, IModVarNonNull_mod_BacksplashWidth, IModVar_mod_BacksplashId, IModVarNonNull_mod_BacksplashId } from '../var-interfaces'
+import { IModVar_mod_BacksplashColor, IModVarNonNull_mod_BacksplashColor, IModVar_mod_BacksplashHeight, IModVarNonNull_mod_BacksplashHeight, IModVar_mod_BacksplashThk, IModVarNonNull_mod_BacksplashThk, IModVar_mod_BacksplashWidth, IModVarNonNull_mod_BacksplashWidth, IModVar_mod_BacksplashId, IModVarNonNull_mod_BacksplashId, IModVar_mod_ContourOwnerIds, IModVarNonNull_mod_ContourOwnerIds } from '../var-interfaces'
 import { VariantValidation, IMatrix_mod_BacksplashColor, IMatrix_mod_BacksplashHeight, IMatrix_mod_BacksplashThk, IMatrix_mod_BacksplashWidth, IMatrix_mod_BacksplashId } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
@@ -144,7 +144,7 @@ import { IPartAdd_part_Backsplash, IPartAdd_part_BacksplashGroup } from '../part
 import { mc_Backsplash_createBuildPlan, mc_Backsplash_afterDataCompletion, mc_Backsplash_manufacturerDataCompletion, mc_Backsplash_calculateContainerModules, mc_Backsplash_prepareContext } from '../../modules/mc_Backsplash';
 
 export interface cbp_mc_Backsplash extends IModBaseProp
-  , IPartAdd_part_Backsplash, IPartAdd_part_BacksplashGroup, IModVarNonNull_mod_BacksplashColor, IModVarNonNull_mod_BacksplashHeight, IModVarNonNull_mod_BacksplashThk, IModVarNonNull_mod_BacksplashWidth, IModVarNonNull_mod_BacksplashId {
+  , IPartAdd_part_Backsplash, IPartAdd_part_BacksplashGroup, IModVarNonNull_mod_BacksplashColor, IModVarNonNull_mod_BacksplashHeight, IModVarNonNull_mod_BacksplashThk, IModVarNonNull_mod_BacksplashWidth, IModVarNonNull_mod_BacksplashId, IModVarNonNull_mod_ContourOwnerIds {
   parent: IModParents_mr_Backsplash;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
@@ -156,7 +156,7 @@ export interface cbp_mc_Backsplash extends IModBaseProp
 }
 
 export interface dc_mc_Backsplash extends IModBaseProp
-  , IModVar_mod_BacksplashColor, IModVar_mod_BacksplashHeight, IModVar_mod_BacksplashThk, IModVar_mod_BacksplashWidth, IModVar_mod_BacksplashId {
+  , IModVar_mod_BacksplashColor, IModVar_mod_BacksplashHeight, IModVar_mod_BacksplashThk, IModVar_mod_BacksplashWidth, IModVar_mod_BacksplashId, IModVar_mod_ContourOwnerIds {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_Backsplash;
@@ -171,7 +171,7 @@ export interface pc_mc_Backsplash extends dc_mc_Backsplash {
 }
 
 export interface adc_base_mc_Backsplash extends IModBaseProp
-  , IModVarNonNull_mod_BacksplashColor, IModVarNonNull_mod_BacksplashHeight, IModVarNonNull_mod_BacksplashThk, IModVarNonNull_mod_BacksplashWidth, IModVarNonNull_mod_BacksplashId {
+  , IModVarNonNull_mod_BacksplashColor, IModVarNonNull_mod_BacksplashHeight, IModVarNonNull_mod_BacksplashThk, IModVarNonNull_mod_BacksplashWidth, IModVarNonNull_mod_BacksplashId, IModVarNonNull_mod_ContourOwnerIds {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
 }
@@ -185,7 +185,7 @@ export interface ccm_mc_Backsplash extends adc_base_mc_Backsplash {
 
 export class OD_M_mc_Backsplash extends OD_Base implements pc_mc_Backsplash, dc_mc_Backsplash
   , IModParents_mc_Backsplash
-  , IModVar_mod_BacksplashColor, IModVar_mod_BacksplashHeight, IModVar_mod_BacksplashThk, IModVar_mod_BacksplashWidth, IModVar_mod_BacksplashId {
+  , IModVar_mod_BacksplashColor, IModVar_mod_BacksplashHeight, IModVar_mod_BacksplashThk, IModVar_mod_BacksplashWidth, IModVar_mod_BacksplashId, IModVar_mod_ContourOwnerIds {
   constructor(parent: IModParents_mr_Backsplash, manufacturerMode?: boolean) {
     super('mc_Backsplash', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
@@ -194,7 +194,7 @@ export class OD_M_mc_Backsplash extends OD_Base implements pc_mc_Backsplash, dc_
   parent: IModParents_mr_Backsplash;
   _selfNonNull: OD_M_mc_Backsplash_NonNull;
 
-  override variants: string[] = ['mod_BacksplashColor', 'mod_BacksplashHeight', 'mod_BacksplashThk', 'mod_BacksplashWidth', 'mod_BacksplashId',];
+  override variants: string[] = ['mod_BacksplashColor', 'mod_BacksplashHeight', 'mod_BacksplashThk', 'mod_BacksplashWidth', 'mod_BacksplashId', 'mod_ContourOwnerIds',];
   #mod_BacksplashColor?: string;
   get mod_BacksplashColor(): string | undefined { return this.#mod_BacksplashColor }
   set mod_BacksplashColor(value: string | undefined) {
@@ -255,6 +255,8 @@ export class OD_M_mc_Backsplash extends OD_Base implements pc_mc_Backsplash, dc_
   }
 
   mod_BacksplashId_matrix?: IMatrix_mod_BacksplashId;
+  #mod_ContourOwnerIds: string[] = [];
+  get mod_ContourOwnerIds(): string[] { return this.#mod_ContourOwnerIds; }
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
     res.set('mod_BacksplashColor', this.mod_BacksplashColor);
@@ -262,6 +264,7 @@ export class OD_M_mc_Backsplash extends OD_Base implements pc_mc_Backsplash, dc_
     res.set('mod_BacksplashThk', this.mod_BacksplashThk);
     res.set('mod_BacksplashWidth', this.mod_BacksplashWidth);
     res.set('mod_BacksplashId', this.mod_BacksplashId);
+    res.set('mod_ContourOwnerIds', JSON.stringify(this.mod_ContourOwnerIds));
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -538,6 +541,9 @@ class OD_M_mc_Backsplash_NonNull implements cbp_mc_Backsplash, adc_mc_Backsplash
   }
   get mod_BacksplashId(): string {
     return this.#internalParent.mod_BacksplashId!;
+  }
+  get mod_ContourOwnerIds(): string[] {
+    return this.#internalParent.mod_ContourOwnerIds!;
   }
 }
 

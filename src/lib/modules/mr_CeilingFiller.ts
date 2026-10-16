@@ -187,6 +187,7 @@ export function mr_CeilingFiller_afterDataCompletion(this: adc_mr_CeilingFiller)
       LineSegmentEquation,
       mr_Upright,
       CONTOUR_ATTRIBUTE_OWNER_TYPE,
+      getContourOwnerIds,
     } = GlobalFunc.process_MathLongparts();
     type LongPartSegmentTypeAlias = InstanceType<typeof LongPartSegment>;
 
@@ -253,7 +254,10 @@ export function mr_CeilingFiller_afterDataCompletion(this: adc_mr_CeilingFiller)
       let length = 0;
       let current: LongPartSegmentTypeAlias | null = start;
       let lastSegment: any = start;
+      // the segments this piece is generated from - their owners are stored in mod_ContourOwnerIds
+      const segmentsInThisSection: LongPartSegmentTypeAlias[] = [];
       while (current) {
+        segmentsInThisSection.push(current);
         length += lastSegment.getLengthBetweenParallelSides(CKind.Left, CKind.Right);
         current = current.neighbours.get(CKind.Right)?.other ?? null;
         if (current) { lastSegment = current; }
@@ -267,6 +271,7 @@ export function mr_CeilingFiller_afterDataCompletion(this: adc_mr_CeilingFiller)
         return;
       }
       const filler = addCeilingFiller(ceilingFillerConstruction, ceilingFillerHeight);
+      filler.mod_ContourOwnerIds.push(...getContourOwnerIds(segmentsInThisSection));
 
       const BL = start.getCornerPoint(CKind.Left, CKind.Back)!;
       const FR = start.getCornerPoint(CKind.Right, CKind.Front)!;
@@ -358,6 +363,7 @@ export function mr_CeilingFiller_afterDataCompletion(this: adc_mr_CeilingFiller)
 
       if (drawLeftFiller) {
         const leftFiller = addCeilingFiller(ceilingFillerConstruction, ceilingFillerHeight);
+        leftFiller.mod_ContourOwnerIds.push(...getContourOwnerIds([start]));
         start.getOrAddSide(CKind.Back, undefined);
         start.getOrAddSide(CKind.Front, undefined);
         const startSegmentDepth = start.getLengthBetweenParallelSides(CKind.Front, CKind.Back) ?? 1000;
@@ -371,6 +377,7 @@ export function mr_CeilingFiller_afterDataCompletion(this: adc_mr_CeilingFiller)
       }
       if (drawRightFiller) {
         const rightFiller = addCeilingFiller(ceilingFillerConstruction, ceilingFillerHeight);
+        rightFiller.mod_ContourOwnerIds.push(...getContourOwnerIds([lastSegment]));
         lastSegment.getOrAddSide(CKind.Back, undefined);
         lastSegment.getOrAddSide(CKind.Front, undefined);
         const lastSegmentDepth = lastSegment.getLengthBetweenParallelSides(CKind.Front, CKind.Back) ?? 1000;

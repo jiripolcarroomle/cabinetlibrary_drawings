@@ -131,6 +131,8 @@ export class OrderSceneNode implements IOrderSceneNode {
 
     wallData: IWallSegment | undefined;
 
+    generationModuleId?: string;
+
     _allBBoxCornersInWorldCache: Vector3[] | null = null;
     getAllBBoxCornersInWorld(): Vector3[] {
         if (this._allBBoxCornersInWorldCache) {
@@ -334,7 +336,7 @@ export class OrderSceneNode implements IOrderSceneNode {
         };
         serialized.orderLineEntry = {} as any;
         const orderLineEntryRelevantKeys = getSerializablePropertyKeysIncludingGetters(this.orderLineEntry).filter(k => {
-            if (['_dimx', '_dimy', '_dimz', '_isGenerated', '_xAbs', '_yAbs', '_zAbs', '_x', '_y', '_z', '_partId', '_articlePos'].indexOf(k) >= 0) { return true; }
+            if (['_id', '_dimx', '_dimy', '_dimz', '_isGenerated', '_xAbs', '_yAbs', '_zAbs', '_x', '_y', '_z', '_partId', '_articlePos'].indexOf(k) >= 0) { return true; }
             else if (k.startsWith('_')) { return false; }
             else if (['parentId', 'parent', 'm', 'p', 'parentBase', 'variants', 'roomContours', 'generationContours', 'groupPos', 'items'].indexOf(k) >= 0) { return false; }
             else { return true; }
@@ -528,9 +530,10 @@ function reparentPartsFromPosGroupsToModulesRecursive(posGroupNode: IOrderSceneN
 /**
  * Generation modules do not have their own transform. Their submodules are placed at the final coordinates, not the generation modules themselves.
  * For this reason, we have to reparent their children to the generation module's parent.
+ * The reparented children remember the generation module in `generationModuleId`.
  * @param currentNode Current generation module node whose children need to be reparented.
  * @param nodeToReparent Node to which the children should be reparented.
-    
+
  */
 function reparentGenerationModuleChildrenToGroupRoot(currentNode: IOrderSceneNode, nodeToReparent: IOrderSceneNode): void {
     if (currentNode.kind === Object3DNodeKind.Module && currentNode.orderLineEntry?.['_isGenerated']) {
@@ -538,6 +541,7 @@ function reparentGenerationModuleChildrenToGroupRoot(currentNode: IOrderSceneNod
         childrenToReparent.forEach(child => {
             currentNode.removeChild(child);
             nodeToReparent.addChild(child, true);
+            child.generationModuleId = currentNode.id;
         });
     }
 }

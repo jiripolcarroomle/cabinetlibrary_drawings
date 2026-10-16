@@ -203,6 +203,7 @@ export function mr_Backsplash_afterDataCompletion(this: adc_mr_Backsplash): void
       mr_StorageunitSingle,
       evaluateCornerUnitStraightSizeOfPerpendicularPart,
       mr_Upright,
+      getContourOwnerIds,
     } = GlobalFunc.process_MathLongparts();
     // If import was used, this wouldn't be necessary, extract types from the imported functions for later use
     type LongPartSegmentTypeAlias = InstanceType<typeof LongPartSegment>;
@@ -569,6 +570,7 @@ export function mr_Backsplash_afterDataCompletion(this: adc_mr_Backsplash): void
         }
 
         const backsplash = addBacksplash();
+        backsplash.mod_ContourOwnerIds.push(...getContourOwnerIds(allSegmentsInThisSection.slice(start, end)));
         backsplash.mod_BacksplashWidth = Math.round(totalLength * 10) / 10;;
         backsplash.mod_BacksplashThk = this.mod_BacksplashThk;
         backsplash.mod_BacksplashHeight = this.mod_BacksplashHeight;

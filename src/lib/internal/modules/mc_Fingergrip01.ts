@@ -136,7 +136,7 @@ import { IModParents_mr_Fingergrip } from '../mod-interfaces'
 import { IP_part_FingergripTop_PartVarsWritable, P_part_FingergripTop } from '../parts/part_FingergripTop'
 import { IP_part_FingergripMiddle_PartVarsWritable, P_part_FingergripMiddle } from '../parts/part_FingergripMiddle'
 import { IModuleNonNull_mc_Fingergrip01, IModParents_mc_Fingergrip01, IPartParentsNonNull_mc_Fingergrip01 } from '../mod-interfaces'
-import { IModVar_mod_FingergripColor, IModVarNonNull_mod_FingergripColor, IModVar_mod_FingergripType, IModVarNonNull_mod_FingergripType, IModVar_mod_FingergripLength, IModVarNonNull_mod_FingergripLength, IModVar_mod_FingergripPostype, IModVarNonNull_mod_FingergripPostype } from '../var-interfaces'
+import { IModVar_mod_FingergripColor, IModVarNonNull_mod_FingergripColor, IModVar_mod_FingergripType, IModVarNonNull_mod_FingergripType, IModVar_mod_FingergripLength, IModVarNonNull_mod_FingergripLength, IModVar_mod_FingergripPostype, IModVarNonNull_mod_FingergripPostype, IModVar_mod_ContourOwnerIds, IModVarNonNull_mod_ContourOwnerIds } from '../var-interfaces'
 import { VariantValidation, IMatrix_mod_FingergripColor, IMatrix_mod_FingergripType, IMatrix_mod_FingergripLength, IMatrix_mod_FingergripPostype } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
@@ -144,7 +144,7 @@ import { IPartAdd_part_FingergripTop, IPartAdd_part_FingergripMiddle } from '../
 import { mc_Fingergrip01_createBuildPlan, mc_Fingergrip01_afterDataCompletion, mc_Fingergrip01_manufacturerDataCompletion, mc_Fingergrip01_calculateContainerModules, mc_Fingergrip01_prepareContext } from '../../modules/mc_Fingergrip01';
 
 export interface cbp_mc_Fingergrip01 extends IModBaseProp
-  , IPartAdd_part_FingergripTop, IPartAdd_part_FingergripMiddle, IModVarNonNull_mod_FingergripColor, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_FingergripLength, IModVarNonNull_mod_FingergripPostype {
+  , IPartAdd_part_FingergripTop, IPartAdd_part_FingergripMiddle, IModVarNonNull_mod_FingergripColor, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_FingergripLength, IModVarNonNull_mod_FingergripPostype, IModVarNonNull_mod_ContourOwnerIds {
   parent: IModParents_mr_Fingergrip;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
@@ -156,7 +156,7 @@ export interface cbp_mc_Fingergrip01 extends IModBaseProp
 }
 
 export interface dc_mc_Fingergrip01 extends IModBaseProp
-  , IModVar_mod_FingergripColor, IModVar_mod_FingergripType, IModVar_mod_FingergripLength, IModVar_mod_FingergripPostype {
+  , IModVar_mod_FingergripColor, IModVar_mod_FingergripType, IModVar_mod_FingergripLength, IModVar_mod_FingergripPostype, IModVar_mod_ContourOwnerIds {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_Fingergrip01;
@@ -171,7 +171,7 @@ export interface pc_mc_Fingergrip01 extends dc_mc_Fingergrip01 {
 }
 
 export interface adc_base_mc_Fingergrip01 extends IModBaseProp
-  , IModVarNonNull_mod_FingergripColor, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_FingergripLength, IModVarNonNull_mod_FingergripPostype {
+  , IModVarNonNull_mod_FingergripColor, IModVarNonNull_mod_FingergripType, IModVarNonNull_mod_FingergripLength, IModVarNonNull_mod_FingergripPostype, IModVarNonNull_mod_ContourOwnerIds {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
 }
@@ -185,7 +185,7 @@ export interface ccm_mc_Fingergrip01 extends adc_base_mc_Fingergrip01 {
 
 export class OD_M_mc_Fingergrip01 extends OD_Base implements pc_mc_Fingergrip01, dc_mc_Fingergrip01
   , IModParents_mc_Fingergrip01
-  , IModVar_mod_FingergripColor, IModVar_mod_FingergripType, IModVar_mod_FingergripLength, IModVar_mod_FingergripPostype {
+  , IModVar_mod_FingergripColor, IModVar_mod_FingergripType, IModVar_mod_FingergripLength, IModVar_mod_FingergripPostype, IModVar_mod_ContourOwnerIds {
   constructor(parent: IModParents_mr_Fingergrip, manufacturerMode?: boolean) {
     super('mc_Fingergrip01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
@@ -194,7 +194,7 @@ export class OD_M_mc_Fingergrip01 extends OD_Base implements pc_mc_Fingergrip01,
   parent: IModParents_mr_Fingergrip;
   _selfNonNull: OD_M_mc_Fingergrip01_NonNull;
 
-  override variants: string[] = ['mod_FingergripColor', 'mod_FingergripType', 'mod_FingergripLength', 'mod_FingergripPostype',];
+  override variants: string[] = ['mod_FingergripColor', 'mod_FingergripType', 'mod_FingergripLength', 'mod_FingergripPostype', 'mod_ContourOwnerIds',];
   #mod_FingergripColor?: string;
   get mod_FingergripColor(): string | undefined { return this.#mod_FingergripColor }
   set mod_FingergripColor(value: string | undefined) {
@@ -243,12 +243,15 @@ export class OD_M_mc_Fingergrip01 extends OD_Base implements pc_mc_Fingergrip01,
   }
 
   mod_FingergripPostype_matrix?: IMatrix_mod_FingergripPostype;
+  #mod_ContourOwnerIds: string[] = [];
+  get mod_ContourOwnerIds(): string[] { return this.#mod_ContourOwnerIds; }
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
     res.set('mod_FingergripColor', this.mod_FingergripColor);
     res.set('mod_FingergripType', this.mod_FingergripType);
     res.set('mod_FingergripLength', this.mod_FingergripLength);
     res.set('mod_FingergripPostype', this.mod_FingergripPostype);
+    res.set('mod_ContourOwnerIds', JSON.stringify(this.mod_ContourOwnerIds));
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -490,6 +493,9 @@ class OD_M_mc_Fingergrip01_NonNull implements cbp_mc_Fingergrip01, adc_mc_Finger
   }
   get mod_FingergripPostype(): string {
     return this.#internalParent.mod_FingergripPostype!;
+  }
+  get mod_ContourOwnerIds(): string[] {
+    return this.#internalParent.mod_ContourOwnerIds!;
   }
 }
 

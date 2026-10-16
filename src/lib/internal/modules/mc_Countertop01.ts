@@ -136,7 +136,7 @@ import { IModParents_mr_Countertop } from '../mod-interfaces'
 import { IP_part_Countertop_PartVarsWritable, P_part_Countertop } from '../parts/part_Countertop'
 import { IP_part_CountertopGroup_PartVarsWritable, P_part_CountertopGroup } from '../parts/part_CountertopGroup'
 import { IModuleNonNull_mc_Countertop01, IModParents_mc_Countertop01, IPartParentsNonNull_mc_Countertop01 } from '../mod-interfaces'
-import { IModVar_mod_CountertopLeftEndType, IModVarNonNull_mod_CountertopLeftEndType, IModVar_mod_CountertopColor, IModVarNonNull_mod_CountertopColor, IModVar_mod_CountertopEdgeBackType, IModVarNonNull_mod_CountertopEdgeBackType, IModVar_mod_CountertopEdgeFrontType, IModVarNonNull_mod_CountertopEdgeFrontType, IModVar_mod_CountertopEdgeLeftType, IModVarNonNull_mod_CountertopEdgeLeftType, IModVar_mod_CountertopEdgeRightType, IModVarNonNull_mod_CountertopEdgeRightType, IModVar_mod_CountertopId, IModVarNonNull_mod_CountertopId, IModVar_mod_CountertopDepth, IModVarNonNull_mod_CountertopDepth, IModVar_mod_CountertopThk, IModVarNonNull_mod_CountertopThk, IModVar_mod_CountertopRightEndType, IModVarNonNull_mod_CountertopRightEndType, IModVar_mod_CountertopWidth, IModVarNonNull_mod_CountertopWidth, IModVar_mod_CountertopConnectionLengthLeft, IModVarNonNull_mod_CountertopConnectionLengthLeft, IModVar_mod_CountertopOverhangLeft, IModVarNonNull_mod_CountertopOverhangLeft, IModVar_mod_CountertopOverhangRight, IModVarNonNull_mod_CountertopOverhangRight, IModVar_mod_CountertopConnectionLengthRight, IModVarNonNull_mod_CountertopConnectionLengthRight, IModVar_mod_CountertopConnectionOversize, IModVarNonNull_mod_CountertopConnectionOversize, IModVar_mod_CountertopInfo, IModVarNonNull_mod_CountertopInfo, IModVar_mod_CountertopProgram, IModVarNonNull_mod_CountertopProgram } from '../var-interfaces'
+import { IModVar_mod_CountertopLeftEndType, IModVarNonNull_mod_CountertopLeftEndType, IModVar_mod_CountertopColor, IModVarNonNull_mod_CountertopColor, IModVar_mod_CountertopEdgeBackType, IModVarNonNull_mod_CountertopEdgeBackType, IModVar_mod_CountertopEdgeFrontType, IModVarNonNull_mod_CountertopEdgeFrontType, IModVar_mod_CountertopEdgeLeftType, IModVarNonNull_mod_CountertopEdgeLeftType, IModVar_mod_CountertopEdgeRightType, IModVarNonNull_mod_CountertopEdgeRightType, IModVar_mod_CountertopId, IModVarNonNull_mod_CountertopId, IModVar_mod_CountertopDepth, IModVarNonNull_mod_CountertopDepth, IModVar_mod_CountertopThk, IModVarNonNull_mod_CountertopThk, IModVar_mod_CountertopRightEndType, IModVarNonNull_mod_CountertopRightEndType, IModVar_mod_CountertopWidth, IModVarNonNull_mod_CountertopWidth, IModVar_mod_CountertopConnectionLengthLeft, IModVarNonNull_mod_CountertopConnectionLengthLeft, IModVar_mod_CountertopOverhangLeft, IModVarNonNull_mod_CountertopOverhangLeft, IModVar_mod_CountertopOverhangRight, IModVarNonNull_mod_CountertopOverhangRight, IModVar_mod_CountertopConnectionLengthRight, IModVarNonNull_mod_CountertopConnectionLengthRight, IModVar_mod_CountertopConnectionOversize, IModVarNonNull_mod_CountertopConnectionOversize, IModVar_mod_CountertopInfo, IModVarNonNull_mod_CountertopInfo, IModVar_mod_CountertopProgram, IModVarNonNull_mod_CountertopProgram, IModVar_mod_ContourOwnerIds, IModVarNonNull_mod_ContourOwnerIds } from '../var-interfaces'
 import { VariantValidation, IMatrix_mod_CountertopLeftEndType, IMatrix_mod_CountertopColor, IMatrix_mod_CountertopEdgeBackType, IMatrix_mod_CountertopEdgeFrontType, IMatrix_mod_CountertopEdgeLeftType, IMatrix_mod_CountertopEdgeRightType, IMatrix_mod_CountertopId, IMatrix_mod_CountertopDepth, IMatrix_mod_CountertopThk, IMatrix_mod_CountertopRightEndType, IMatrix_mod_CountertopWidth, IMatrix_mod_CountertopConnectionLengthLeft, IMatrix_mod_CountertopOverhangLeft, IMatrix_mod_CountertopOverhangRight, IMatrix_mod_CountertopConnectionLengthRight, IMatrix_mod_CountertopConnectionOversize, IMatrix_mod_CountertopProgram } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
@@ -144,7 +144,7 @@ import { IPartAdd_part_Countertop, IPartAdd_part_CountertopGroup } from '../part
 import { mc_Countertop01_createBuildPlan, mc_Countertop01_afterDataCompletion, mc_Countertop01_manufacturerDataCompletion, mc_Countertop01_calculateContainerModules, mc_Countertop01_prepareContext } from '../../modules/mc_Countertop01';
 
 export interface cbp_mc_Countertop01 extends IModBaseProp
-  , IPartAdd_part_Countertop, IPartAdd_part_CountertopGroup, IModVarNonNull_mod_CountertopLeftEndType, IModVarNonNull_mod_CountertopColor, IModVarNonNull_mod_CountertopEdgeBackType, IModVarNonNull_mod_CountertopEdgeFrontType, IModVarNonNull_mod_CountertopEdgeLeftType, IModVarNonNull_mod_CountertopEdgeRightType, IModVarNonNull_mod_CountertopId, IModVarNonNull_mod_CountertopDepth, IModVarNonNull_mod_CountertopThk, IModVarNonNull_mod_CountertopRightEndType, IModVarNonNull_mod_CountertopWidth, IModVarNonNull_mod_CountertopConnectionLengthLeft, IModVarNonNull_mod_CountertopOverhangLeft, IModVarNonNull_mod_CountertopOverhangRight, IModVarNonNull_mod_CountertopConnectionLengthRight, IModVarNonNull_mod_CountertopConnectionOversize, IModVarNonNull_mod_CountertopInfo, IModVarNonNull_mod_CountertopProgram {
+  , IPartAdd_part_Countertop, IPartAdd_part_CountertopGroup, IModVarNonNull_mod_CountertopLeftEndType, IModVarNonNull_mod_CountertopColor, IModVarNonNull_mod_CountertopEdgeBackType, IModVarNonNull_mod_CountertopEdgeFrontType, IModVarNonNull_mod_CountertopEdgeLeftType, IModVarNonNull_mod_CountertopEdgeRightType, IModVarNonNull_mod_CountertopId, IModVarNonNull_mod_CountertopDepth, IModVarNonNull_mod_CountertopThk, IModVarNonNull_mod_CountertopRightEndType, IModVarNonNull_mod_CountertopWidth, IModVarNonNull_mod_CountertopConnectionLengthLeft, IModVarNonNull_mod_CountertopOverhangLeft, IModVarNonNull_mod_CountertopOverhangRight, IModVarNonNull_mod_CountertopConnectionLengthRight, IModVarNonNull_mod_CountertopConnectionOversize, IModVarNonNull_mod_CountertopInfo, IModVarNonNull_mod_CountertopProgram, IModVarNonNull_mod_ContourOwnerIds {
   parent: IModParents_mr_Countertop;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
@@ -156,7 +156,7 @@ export interface cbp_mc_Countertop01 extends IModBaseProp
 }
 
 export interface dc_mc_Countertop01 extends IModBaseProp
-  , IModVar_mod_CountertopLeftEndType, IModVar_mod_CountertopColor, IModVar_mod_CountertopEdgeBackType, IModVar_mod_CountertopEdgeFrontType, IModVar_mod_CountertopEdgeLeftType, IModVar_mod_CountertopEdgeRightType, IModVar_mod_CountertopId, IModVar_mod_CountertopDepth, IModVar_mod_CountertopThk, IModVar_mod_CountertopRightEndType, IModVar_mod_CountertopWidth, IModVar_mod_CountertopConnectionLengthLeft, IModVar_mod_CountertopOverhangLeft, IModVar_mod_CountertopOverhangRight, IModVar_mod_CountertopConnectionLengthRight, IModVar_mod_CountertopConnectionOversize, IModVar_mod_CountertopInfo, IModVar_mod_CountertopProgram {
+  , IModVar_mod_CountertopLeftEndType, IModVar_mod_CountertopColor, IModVar_mod_CountertopEdgeBackType, IModVar_mod_CountertopEdgeFrontType, IModVar_mod_CountertopEdgeLeftType, IModVar_mod_CountertopEdgeRightType, IModVar_mod_CountertopId, IModVar_mod_CountertopDepth, IModVar_mod_CountertopThk, IModVar_mod_CountertopRightEndType, IModVar_mod_CountertopWidth, IModVar_mod_CountertopConnectionLengthLeft, IModVar_mod_CountertopOverhangLeft, IModVar_mod_CountertopOverhangRight, IModVar_mod_CountertopConnectionLengthRight, IModVar_mod_CountertopConnectionOversize, IModVar_mod_CountertopInfo, IModVar_mod_CountertopProgram, IModVar_mod_ContourOwnerIds {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_Countertop01;
@@ -171,7 +171,7 @@ export interface pc_mc_Countertop01 extends dc_mc_Countertop01 {
 }
 
 export interface adc_base_mc_Countertop01 extends IModBaseProp
-  , IModVarNonNull_mod_CountertopLeftEndType, IModVarNonNull_mod_CountertopColor, IModVarNonNull_mod_CountertopEdgeBackType, IModVarNonNull_mod_CountertopEdgeFrontType, IModVarNonNull_mod_CountertopEdgeLeftType, IModVarNonNull_mod_CountertopEdgeRightType, IModVarNonNull_mod_CountertopId, IModVarNonNull_mod_CountertopDepth, IModVarNonNull_mod_CountertopThk, IModVarNonNull_mod_CountertopRightEndType, IModVarNonNull_mod_CountertopWidth, IModVarNonNull_mod_CountertopConnectionLengthLeft, IModVarNonNull_mod_CountertopOverhangLeft, IModVarNonNull_mod_CountertopOverhangRight, IModVarNonNull_mod_CountertopConnectionLengthRight, IModVarNonNull_mod_CountertopConnectionOversize, IModVarNonNull_mod_CountertopInfo, IModVarNonNull_mod_CountertopProgram {
+  , IModVarNonNull_mod_CountertopLeftEndType, IModVarNonNull_mod_CountertopColor, IModVarNonNull_mod_CountertopEdgeBackType, IModVarNonNull_mod_CountertopEdgeFrontType, IModVarNonNull_mod_CountertopEdgeLeftType, IModVarNonNull_mod_CountertopEdgeRightType, IModVarNonNull_mod_CountertopId, IModVarNonNull_mod_CountertopDepth, IModVarNonNull_mod_CountertopThk, IModVarNonNull_mod_CountertopRightEndType, IModVarNonNull_mod_CountertopWidth, IModVarNonNull_mod_CountertopConnectionLengthLeft, IModVarNonNull_mod_CountertopOverhangLeft, IModVarNonNull_mod_CountertopOverhangRight, IModVarNonNull_mod_CountertopConnectionLengthRight, IModVarNonNull_mod_CountertopConnectionOversize, IModVarNonNull_mod_CountertopInfo, IModVarNonNull_mod_CountertopProgram, IModVarNonNull_mod_ContourOwnerIds {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
 }
@@ -185,7 +185,7 @@ export interface ccm_mc_Countertop01 extends adc_base_mc_Countertop01 {
 
 export class OD_M_mc_Countertop01 extends OD_Base implements pc_mc_Countertop01, dc_mc_Countertop01
   , IModParents_mc_Countertop01
-  , IModVar_mod_CountertopLeftEndType, IModVar_mod_CountertopColor, IModVar_mod_CountertopEdgeBackType, IModVar_mod_CountertopEdgeFrontType, IModVar_mod_CountertopEdgeLeftType, IModVar_mod_CountertopEdgeRightType, IModVar_mod_CountertopId, IModVar_mod_CountertopDepth, IModVar_mod_CountertopThk, IModVar_mod_CountertopRightEndType, IModVar_mod_CountertopWidth, IModVar_mod_CountertopConnectionLengthLeft, IModVar_mod_CountertopOverhangLeft, IModVar_mod_CountertopOverhangRight, IModVar_mod_CountertopConnectionLengthRight, IModVar_mod_CountertopConnectionOversize, IModVar_mod_CountertopInfo, IModVar_mod_CountertopProgram {
+  , IModVar_mod_CountertopLeftEndType, IModVar_mod_CountertopColor, IModVar_mod_CountertopEdgeBackType, IModVar_mod_CountertopEdgeFrontType, IModVar_mod_CountertopEdgeLeftType, IModVar_mod_CountertopEdgeRightType, IModVar_mod_CountertopId, IModVar_mod_CountertopDepth, IModVar_mod_CountertopThk, IModVar_mod_CountertopRightEndType, IModVar_mod_CountertopWidth, IModVar_mod_CountertopConnectionLengthLeft, IModVar_mod_CountertopOverhangLeft, IModVar_mod_CountertopOverhangRight, IModVar_mod_CountertopConnectionLengthRight, IModVar_mod_CountertopConnectionOversize, IModVar_mod_CountertopInfo, IModVar_mod_CountertopProgram, IModVar_mod_ContourOwnerIds {
   constructor(parent: IModParents_mr_Countertop, manufacturerMode?: boolean) {
     super('mc_Countertop01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
@@ -194,7 +194,7 @@ export class OD_M_mc_Countertop01 extends OD_Base implements pc_mc_Countertop01,
   parent: IModParents_mr_Countertop;
   _selfNonNull: OD_M_mc_Countertop01_NonNull;
 
-  override variants: string[] = ['mod_CountertopLeftEndType', 'mod_CountertopColor', 'mod_CountertopEdgeBackType', 'mod_CountertopEdgeFrontType', 'mod_CountertopEdgeLeftType', 'mod_CountertopEdgeRightType', 'mod_CountertopId', 'mod_CountertopDepth', 'mod_CountertopThk', 'mod_CountertopRightEndType', 'mod_CountertopWidth', 'mod_CountertopConnectionLengthLeft', 'mod_CountertopOverhangLeft', 'mod_CountertopOverhangRight', 'mod_CountertopConnectionLengthRight', 'mod_CountertopConnectionOversize', 'mod_CountertopInfo', 'mod_CountertopProgram',];
+  override variants: string[] = ['mod_CountertopLeftEndType', 'mod_CountertopColor', 'mod_CountertopEdgeBackType', 'mod_CountertopEdgeFrontType', 'mod_CountertopEdgeLeftType', 'mod_CountertopEdgeRightType', 'mod_CountertopId', 'mod_CountertopDepth', 'mod_CountertopThk', 'mod_CountertopRightEndType', 'mod_CountertopWidth', 'mod_CountertopConnectionLengthLeft', 'mod_CountertopOverhangLeft', 'mod_CountertopOverhangRight', 'mod_CountertopConnectionLengthRight', 'mod_CountertopConnectionOversize', 'mod_CountertopInfo', 'mod_CountertopProgram', 'mod_ContourOwnerIds',];
   #mod_CountertopLeftEndType?: string;
   get mod_CountertopLeftEndType(): string | undefined { return this.#mod_CountertopLeftEndType }
   set mod_CountertopLeftEndType(value: string | undefined) {
@@ -401,6 +401,8 @@ export class OD_M_mc_Countertop01 extends OD_Base implements pc_mc_Countertop01,
   }
 
   mod_CountertopProgram_matrix?: IMatrix_mod_CountertopProgram;
+  #mod_ContourOwnerIds: string[] = [];
+  get mod_ContourOwnerIds(): string[] { return this.#mod_ContourOwnerIds; }
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
     res.set('mod_CountertopLeftEndType', this.mod_CountertopLeftEndType);
@@ -421,6 +423,7 @@ export class OD_M_mc_Countertop01 extends OD_Base implements pc_mc_Countertop01,
     res.set('mod_CountertopConnectionOversize', this.mod_CountertopConnectionOversize);
     res.set('mod_CountertopInfo', JSON.stringify(this.mod_CountertopInfo));
     res.set('mod_CountertopProgram', this.mod_CountertopProgram);
+    res.set('mod_ContourOwnerIds', JSON.stringify(this.mod_ContourOwnerIds));
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -983,6 +986,9 @@ class OD_M_mc_Countertop01_NonNull implements cbp_mc_Countertop01, adc_mc_Counte
   }
   get mod_CountertopProgram_matrix(): IMatrix_mod_CountertopProgram {
     return this.#internalParent.mod_CountertopProgram_matrix!;
+  }
+  get mod_ContourOwnerIds(): string[] {
+    return this.#internalParent.mod_ContourOwnerIds!;
   }
 }
 

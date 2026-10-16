@@ -210,6 +210,7 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 			evaluateCornerUnitStraightSizeOfPerpendicularPart,
 			mr_CornerunitStraight,
 			mr_StorageunitSingle,
+			getContourOwnerIds,
 		} = GlobalFunc.process_MathLongparts();
 		type LongPartSegmentTypeAlias = InstanceType<typeof LongPartSegment>;
 		type LeftRightAny = { Left: any, Right: any }
@@ -679,6 +680,7 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 					const legPointEquationTransform = new LineSegmentEquation(legPoint, legPointDirection).getTransformationMatrixToStartPoint();
 
 					const mcLeg = this.addOD_M_mc_Leg01();
+					mcLeg.mod_ContourOwnerIds.push(...getContourOwnerIds([seg]));
 
 					mcLeg.setOrigin(legPointEquationTransform);
 					mcLeg.mod_Model3DGroupName = retGraphicMapping[0].Model3DGroupName!;
@@ -754,6 +756,15 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 				// 1. get legs data for all segments and instantiate the legs
 
 				const baseboard = addBaseboard();
+				// the owners of this baseboard piece are the segments it overlaps along the baseboard run
+				let segmentStartX = 0;
+				const baseboardPieceSegments = segments.filter(seg => {
+					const segmentEndX = segmentStartX + seg.additionalData.segmentLength;
+					const overlaps = segmentStartX < positionX + splitLength - 1 && segmentEndX > positionX + 1;
+					segmentStartX = segmentEndX;
+					return overlaps;
+				});
+				baseboard.mod_ContourOwnerIds.push(...getContourOwnerIds(baseboardPieceSegments.length ? baseboardPieceSegments : segments));
 				// 2. find out the envelope rectangle around the legs
 
 				const startPoint = getPointAtXY(firstSegment.additionalData.displaceOriginX + positionX, baseboardReferenceDepth - baseboardOffsetFrontY).add(new Vector3(0, plintAreaHeightSpace, 0));
@@ -862,6 +873,7 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 				const leftToekickStartPoint = getPointAtXY(leftToekickPosX, leftToekickLength + leftToekickPosY);
 				const leftToekickEndPoint = getPointAtXY(leftToekickPosX, leftToekickPosY);
 				const leftToekick = addToekick(leftToekickStartPoint, leftToekickEndPoint);
+				leftToekick.mod_ContourOwnerIds.push(...getContourOwnerIds([firstSegment]));
 				leftToekick.mod_ToekickThk = this.mod_ToekickThk;
 				leftToekick.mod_ToekickHeight = plintAreaHeightSpace;
 			}
@@ -880,6 +892,7 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 				const rightToekickStartPoint = getPointAtXY(rightToekickPosX, rightToekickPosY);
 				const rightToekickEndPoint = getPointAtXY(rightToekickPosX, rightToekickPosY + rightToekickLength);
 				const rightToekick = addToekick(rightToekickStartPoint, rightToekickEndPoint);
+				rightToekick.mod_ContourOwnerIds.push(...getContourOwnerIds([lastSegment]));
 				rightToekick.mod_ToekickThk = this.mod_ToekickThk;
 				rightToekick.mod_ToekickHeight = plintAreaHeightSpace;
 			}
@@ -901,6 +914,7 @@ export function mr_PlinthAreaBaseboard_afterDataCompletion(this: adc_mr_PlinthAr
 					const frontToekickStartPoint = getPointAtXY(toekickStartCoordinateX, frontToekickPosY);
 					const frontToekickEndPoint = getPointAtXY(toekickStartCoordinateX + toekickLength, frontToekickPosY);
 					const frontToekick = addToekick(frontToekickStartPoint, frontToekickEndPoint);
+					frontToekick.mod_ContourOwnerIds.push(...getContourOwnerIds(segments.slice(toekickSegmentStartIndex, toekickSegmentEndIndex)));
 					frontToekick.mod_ToekickThk = this.mod_ToekickThk;
 					frontToekick.mod_ToekickHeight = plintAreaHeightSpace;
 					runningPosX += toekickLength;

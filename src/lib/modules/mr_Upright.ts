@@ -146,6 +146,7 @@ export function mr_Upright_createBuildPlan(this: cbp_mr_Upright): void {
     // CUSTOMSCRIPT_mr_Upright_CREATEBUILDPLAN
 
     const {
+      CONTOUR_ATTRIBUTE_OWNER_ID,
       CONTOUR_ATTRIBUTE_OWNER_TYPE,
       mr_Upright,
     } = GlobalFunc.process_MathLongparts();
@@ -169,6 +170,7 @@ export function mr_Upright_createBuildPlan(this: cbp_mr_Upright): void {
     contourCountertop.attributes
       // owner type upright doesn't create its own countertop, but only extends a neighbouring one
       .set(CONTOUR_ATTRIBUTE_OWNER_TYPE, mr_Upright)
+      .set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
       .set('mod_UprightThk', this.mod_UprightThk)
       ;
 

@@ -221,6 +221,7 @@ export function mr_StorageunitSingle_createBuildPlan(this: cbp_mr_StorageunitSin
 		const {
 			CONTOUR_ATTRIBUTE_ADD_TOEKICK,
 			CONTOUR_ATTRIBUTE_ADD_BASEBOARD,
+			CONTOUR_ATTRIBUTE_OWNER_ID,
 			CONTOUR_ATTRIBUTE_OWNER_TYPE,
 			mr_StorageunitSingle,
 		} = GlobalFunc.process_MathLongparts();
@@ -253,6 +254,7 @@ export function mr_StorageunitSingle_createBuildPlan(this: cbp_mr_StorageunitSin
 		// This actually decides if the countertop should really be added.
 		contourCountertop.attributes
 			.set(CONTOUR_ATTRIBUTE_OWNER_TYPE, mr_StorageunitSingle)
+			.set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
 			.set('mod_CarcaseVisLeft', storageunitInfo.CarcaseVisLeft)
 			.set('mod_CarcaseVisRight', storageunitInfo.CarcaseVisRight)
 			.set('CountertopInfo', strJson)
@@ -314,6 +316,7 @@ export function mr_StorageunitSingle_createBuildPlan(this: cbp_mr_StorageunitSin
 
 			contourPaneltop.attributes
 				.set(CONTOUR_ATTRIBUTE_OWNER_TYPE, mr_StorageunitSingle)
+				.set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
 				.set('mod_CeilingAreaVisLeft', storageunitInfo.CeilingAreaVisLeft)
 				.set('mod_CeilingAreaVisRight', storageunitInfo.CeilingAreaVisRight)
 				.set('mod_TypeElement', this.mod_TypeElement ?? 'None')
@@ -378,6 +381,7 @@ export function mr_StorageunitSingle_createBuildPlan(this: cbp_mr_StorageunitSin
 						;
 
 					fingergripContour.attributes
+						.set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
 						.set('mod_FingergripPostype', idx === fingergripTopIndex ? 'Top' : 'Middle')
 						.set('mod_FingergripType', mc_Storageunit01.mod_FingergripType ?? 'None')
 						;
@@ -429,6 +433,7 @@ export function mr_StorageunitSingle_createBuildPlan(this: cbp_mr_StorageunitSin
 
 			contourBaseboard.attributes
 				.set(CONTOUR_ATTRIBUTE_OWNER_TYPE, mr_StorageunitSingle)
+				.set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
 				.set(CONTOUR_ATTRIBUTE_ADD_BASEBOARD, 1)
 				.set(CONTOUR_ATTRIBUTE_ADD_TOEKICK, 1)
 				.set('mod_PlinthAreaVisLeft', storageunitInfo.PlinthAreaVisLeft)
@@ -497,6 +502,7 @@ export function mr_StorageunitSingle_createBuildPlan(this: cbp_mr_StorageunitSin
 
 				contourToekick.attributes
 					.set(CONTOUR_ATTRIBUTE_OWNER_TYPE, mr_StorageunitSingle)
+					.set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
 					.set(CONTOUR_ATTRIBUTE_ADD_TOEKICK, createToekick ? 1 : 0)
 					.set('mod_PlinthAreaVisLeft', storageunitInfo.PlinthAreaVisLeft)
 					.set('mod_PlinthAreaVisRight', storageunitInfo.PlinthAreaVisRight)

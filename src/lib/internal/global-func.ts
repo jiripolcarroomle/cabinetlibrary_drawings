@@ -7616,6 +7616,24 @@ export class GlobalFunc {
 
 
 		/**
+		 * Collects the owner ids (`CONTOUR_ATTRIBUTE_OWNER_ID`) of the given segments; unique, in the order of the segments.
+		 * Generation modules store them in `mod_ContourOwnerIds` of the submodules they create from the segments,
+		 * so that the generated geometry can be related back to the modules that emitted its contours (e.g. in the drawings).
+		 * @param segments The segments the generated submodule was created from.
+		 * @returns Owner ids of the segments; segments without an owner id are skipped.
+		 */
+		const getContourOwnerIds = (segments: LongPartSegment[]): string[] => {
+			const ownerIds: string[] = [];
+			segments.forEach(segment => {
+				const ownerId = segment.getAttributeOrDefault(CONTOUR_ATTRIBUTE_OWNER_ID, '');
+				if (ownerId && !ownerIds.includes(ownerId)) {
+					ownerIds.push(ownerId);
+				}
+			});
+			return ownerIds;
+		};
+
+		/**
 		 * Evaluates the size of the perpendicular part of a corner unit straight segment.
 		 * 
 		 * Corner unit straight segments have defined size on the straight part of the corner (that is the part that is the cabinet).
@@ -7728,6 +7746,7 @@ export class GlobalFunc {
 			LongPartSegment,
 			LongPartSegmentEdge,
 			evaluateCornerUnitStraightSizeOfPerpendicularPart,
+			getContourOwnerIds,
 			/** @deprecated An attribute to mark, that this contour segment is not able to define countertop depth. Usage: corner perpendicular part. */
 			CONTOUR_ATTRIBUTE_OWNER_ID,
 			CONTOUR_ATTRIBUTE_ADD_BASEBOARD,

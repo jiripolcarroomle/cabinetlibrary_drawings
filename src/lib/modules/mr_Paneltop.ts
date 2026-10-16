@@ -180,6 +180,7 @@ export function mr_Paneltop_afterDataCompletion(this: adc_mr_Paneltop): void {
       LineSegmentEquation,
       mr_Upright,
       CONTOUR_ATTRIBUTE_OWNER_TYPE,
+      getContourOwnerIds,
     } = GlobalFunc.process_MathLongparts();
     type LongPartSegmentTypeAlias = InstanceType<typeof LongPartSegment>;
 
@@ -220,7 +221,10 @@ export function mr_Paneltop_afterDataCompletion(this: adc_mr_Paneltop): void {
       let length = 0;
       let current: LongPartSegmentTypeAlias | null = start;
       let lastSegment: any = start;
+      // the segments this piece is generated from - their owners are stored in mod_ContourOwnerIds
+      const segmentsInThisSection: LongPartSegmentTypeAlias[] = [];
       while (current) {
+        segmentsInThisSection.push(current);
         length += lastSegment.getLengthBetweenParallelSides(CKind.Left, CKind.Right);
         current = current.neighbours.get(CKind.Right)?.other ?? null;
         if (current) { lastSegment = current; }
@@ -234,6 +238,7 @@ export function mr_Paneltop_afterDataCompletion(this: adc_mr_Paneltop): void {
         return;
       }
       const paneltop = addPanelTop();
+      paneltop.mod_ContourOwnerIds.push(...getContourOwnerIds(segmentsInThisSection));
 
       const BL = start.getCornerPoint(CKind.Left, CKind.Back)!;
       const FR = start.getCornerPoint(CKind.Right, CKind.Front)!;

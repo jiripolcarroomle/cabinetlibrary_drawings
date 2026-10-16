@@ -135,7 +135,7 @@ import { GlobalFunc } from '../global-func'
 import { IModParents_mr_PlinthAreaBaseboard } from '../mod-interfaces'
 import { IP_part_Baseboard_PartVarsWritable, P_part_Baseboard } from '../parts/part_Baseboard'
 import { IModuleNonNull_mc_Baseboard01, IModParents_mc_Baseboard01, IPartParentsNonNull_mc_Baseboard01 } from '../mod-interfaces'
-import { IModVar_mod_BaseboardDepth, IModVarNonNull_mod_BaseboardDepth, IModVar_mod_BaseboardLength, IModVarNonNull_mod_BaseboardLength, IModVar_mod_BaseboardThk, IModVarNonNull_mod_BaseboardThk, IModVar_mod_BaseboardColor, IModVarNonNull_mod_BaseboardColor, IModVar_mod_BaseboardEdgeColor, IModVarNonNull_mod_BaseboardEdgeColor, IModVar_mod_BaseboardEdgeFrontColor, IModVarNonNull_mod_BaseboardEdgeFrontColor, IModVar_mod_BaseboardEdgeBackColor, IModVarNonNull_mod_BaseboardEdgeBackColor, IModVar_mod_BaseboardId, IModVarNonNull_mod_BaseboardId, IModVar_mod_BaseboardProgram, IModVarNonNull_mod_BaseboardProgram } from '../var-interfaces'
+import { IModVar_mod_BaseboardDepth, IModVarNonNull_mod_BaseboardDepth, IModVar_mod_BaseboardLength, IModVarNonNull_mod_BaseboardLength, IModVar_mod_BaseboardThk, IModVarNonNull_mod_BaseboardThk, IModVar_mod_BaseboardColor, IModVarNonNull_mod_BaseboardColor, IModVar_mod_BaseboardEdgeColor, IModVarNonNull_mod_BaseboardEdgeColor, IModVar_mod_BaseboardEdgeFrontColor, IModVarNonNull_mod_BaseboardEdgeFrontColor, IModVar_mod_BaseboardEdgeBackColor, IModVarNonNull_mod_BaseboardEdgeBackColor, IModVar_mod_BaseboardId, IModVarNonNull_mod_BaseboardId, IModVar_mod_BaseboardProgram, IModVarNonNull_mod_BaseboardProgram, IModVar_mod_ContourOwnerIds, IModVarNonNull_mod_ContourOwnerIds } from '../var-interfaces'
 import { VariantValidation, IMatrix_mod_BaseboardDepth, IMatrix_mod_BaseboardLength, IMatrix_mod_BaseboardThk, IMatrix_mod_BaseboardColor, IMatrix_mod_BaseboardEdgeColor, IMatrix_mod_BaseboardEdgeFrontColor, IMatrix_mod_BaseboardEdgeBackColor, IMatrix_mod_BaseboardId, IMatrix_mod_BaseboardProgram } from '../selections'
 import { IGlobalVars, GlobalVars } from '../global-vars'
 
@@ -143,7 +143,7 @@ import { IPartAdd_part_Baseboard } from '../part-add-interfaces';
 import { mc_Baseboard01_createBuildPlan, mc_Baseboard01_afterDataCompletion, mc_Baseboard01_manufacturerDataCompletion, mc_Baseboard01_calculateContainerModules, mc_Baseboard01_prepareContext } from '../../modules/mc_Baseboard01';
 
 export interface cbp_mc_Baseboard01 extends IModBaseProp
-  , IPartAdd_part_Baseboard, IModVarNonNull_mod_BaseboardDepth, IModVarNonNull_mod_BaseboardLength, IModVarNonNull_mod_BaseboardThk, IModVarNonNull_mod_BaseboardColor, IModVarNonNull_mod_BaseboardEdgeColor, IModVarNonNull_mod_BaseboardEdgeFrontColor, IModVarNonNull_mod_BaseboardEdgeBackColor, IModVarNonNull_mod_BaseboardId, IModVarNonNull_mod_BaseboardProgram {
+  , IPartAdd_part_Baseboard, IModVarNonNull_mod_BaseboardDepth, IModVarNonNull_mod_BaseboardLength, IModVarNonNull_mod_BaseboardThk, IModVarNonNull_mod_BaseboardColor, IModVarNonNull_mod_BaseboardEdgeColor, IModVarNonNull_mod_BaseboardEdgeFrontColor, IModVarNonNull_mod_BaseboardEdgeBackColor, IModVarNonNull_mod_BaseboardId, IModVarNonNull_mod_BaseboardProgram, IModVarNonNull_mod_ContourOwnerIds {
   parent: IModParents_mr_PlinthAreaBaseboard;
   createPartGroup(groupName: string, part: IPartBase): PartGroup;
   assignPartGroup(groupName: string, part: IPartBase): void;
@@ -155,7 +155,7 @@ export interface cbp_mc_Baseboard01 extends IModBaseProp
 }
 
 export interface dc_mc_Baseboard01 extends IModBaseProp
-  , IModVar_mod_BaseboardDepth, IModVar_mod_BaseboardLength, IModVar_mod_BaseboardThk, IModVar_mod_BaseboardColor, IModVar_mod_BaseboardEdgeColor, IModVar_mod_BaseboardEdgeFrontColor, IModVar_mod_BaseboardEdgeBackColor, IModVar_mod_BaseboardId, IModVar_mod_BaseboardProgram {
+  , IModVar_mod_BaseboardDepth, IModVar_mod_BaseboardLength, IModVar_mod_BaseboardThk, IModVar_mod_BaseboardColor, IModVar_mod_BaseboardEdgeColor, IModVar_mod_BaseboardEdgeFrontColor, IModVar_mod_BaseboardEdgeBackColor, IModVar_mod_BaseboardId, IModVar_mod_BaseboardProgram, IModVar_mod_ContourOwnerIds {
   m: OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
   seal(): IModuleNonNull_mc_Baseboard01;
@@ -170,7 +170,7 @@ export interface pc_mc_Baseboard01 extends dc_mc_Baseboard01 {
 }
 
 export interface adc_base_mc_Baseboard01 extends IModBaseProp
-  , IModVarNonNull_mod_BaseboardDepth, IModVarNonNull_mod_BaseboardLength, IModVarNonNull_mod_BaseboardThk, IModVarNonNull_mod_BaseboardColor, IModVarNonNull_mod_BaseboardEdgeColor, IModVarNonNull_mod_BaseboardEdgeFrontColor, IModVarNonNull_mod_BaseboardEdgeBackColor, IModVarNonNull_mod_BaseboardId, IModVarNonNull_mod_BaseboardProgram {
+  , IModVarNonNull_mod_BaseboardDepth, IModVarNonNull_mod_BaseboardLength, IModVarNonNull_mod_BaseboardThk, IModVarNonNull_mod_BaseboardColor, IModVarNonNull_mod_BaseboardEdgeColor, IModVarNonNull_mod_BaseboardEdgeFrontColor, IModVarNonNull_mod_BaseboardEdgeBackColor, IModVarNonNull_mod_BaseboardId, IModVarNonNull_mod_BaseboardProgram, IModVarNonNull_mod_ContourOwnerIds {
   get m(): OD_Base[];
   setOrigin(x: number | Matrix4, y?: number, z?: number): void;
 }
@@ -184,7 +184,7 @@ export interface ccm_mc_Baseboard01 extends adc_base_mc_Baseboard01 {
 
 export class OD_M_mc_Baseboard01 extends OD_Base implements pc_mc_Baseboard01, dc_mc_Baseboard01
   , IModParents_mc_Baseboard01
-  , IModVar_mod_BaseboardDepth, IModVar_mod_BaseboardLength, IModVar_mod_BaseboardThk, IModVar_mod_BaseboardColor, IModVar_mod_BaseboardEdgeColor, IModVar_mod_BaseboardEdgeFrontColor, IModVar_mod_BaseboardEdgeBackColor, IModVar_mod_BaseboardId, IModVar_mod_BaseboardProgram {
+  , IModVar_mod_BaseboardDepth, IModVar_mod_BaseboardLength, IModVar_mod_BaseboardThk, IModVar_mod_BaseboardColor, IModVar_mod_BaseboardEdgeColor, IModVar_mod_BaseboardEdgeFrontColor, IModVar_mod_BaseboardEdgeBackColor, IModVar_mod_BaseboardId, IModVar_mod_BaseboardProgram, IModVar_mod_ContourOwnerIds {
   constructor(parent: IModParents_mr_PlinthAreaBaseboard, manufacturerMode?: boolean) {
     super('mc_Baseboard01', parent, parent !== undefined ? parent._manufacturerMode : manufacturerMode!);
     this.parent = parent;
@@ -193,7 +193,7 @@ export class OD_M_mc_Baseboard01 extends OD_Base implements pc_mc_Baseboard01, d
   parent: IModParents_mr_PlinthAreaBaseboard;
   _selfNonNull: OD_M_mc_Baseboard01_NonNull;
 
-  override variants: string[] = ['mod_BaseboardDepth', 'mod_BaseboardLength', 'mod_BaseboardThk', 'mod_BaseboardColor', 'mod_BaseboardEdgeColor', 'mod_BaseboardEdgeFrontColor', 'mod_BaseboardEdgeBackColor', 'mod_BaseboardId', 'mod_BaseboardProgram',];
+  override variants: string[] = ['mod_BaseboardDepth', 'mod_BaseboardLength', 'mod_BaseboardThk', 'mod_BaseboardColor', 'mod_BaseboardEdgeColor', 'mod_BaseboardEdgeFrontColor', 'mod_BaseboardEdgeBackColor', 'mod_BaseboardId', 'mod_BaseboardProgram', 'mod_ContourOwnerIds',];
   #mod_BaseboardDepth?: number;
   get mod_BaseboardDepth(): number | undefined { return this.#mod_BaseboardDepth }
   set mod_BaseboardDepth(value: number | undefined) {
@@ -302,6 +302,8 @@ export class OD_M_mc_Baseboard01 extends OD_Base implements pc_mc_Baseboard01, d
   }
 
   mod_BaseboardProgram_matrix?: IMatrix_mod_BaseboardProgram;
+  #mod_ContourOwnerIds: string[] = [];
+  get mod_ContourOwnerIds(): string[] { return this.#mod_ContourOwnerIds; }
   override getAttributes(): Map<string, any> {
     let res = new Map<string, any>();
     res.set('mod_BaseboardDepth', this.mod_BaseboardDepth);
@@ -313,6 +315,7 @@ export class OD_M_mc_Baseboard01 extends OD_Base implements pc_mc_Baseboard01, d
     res.set('mod_BaseboardEdgeBackColor', this.mod_BaseboardEdgeBackColor);
     res.set('mod_BaseboardId', this.mod_BaseboardId);
     res.set('mod_BaseboardProgram', this.mod_BaseboardProgram);
+    res.set('mod_ContourOwnerIds', JSON.stringify(this.mod_ContourOwnerIds));
     return res;
   }
   override loadJson(json: any, withSubModules: boolean = true, manufacturerMode: boolean) {
@@ -661,6 +664,9 @@ class OD_M_mc_Baseboard01_NonNull implements cbp_mc_Baseboard01, adc_mc_Baseboar
   }
   get mod_BaseboardProgram_matrix(): IMatrix_mod_BaseboardProgram {
     return this.#internalParent.mod_BaseboardProgram_matrix!;
+  }
+  get mod_ContourOwnerIds(): string[] {
+    return this.#internalParent.mod_ContourOwnerIds!;
   }
 }
 

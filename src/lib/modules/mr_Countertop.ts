@@ -204,6 +204,7 @@ export function mr_Countertop_afterDataCompletion(this: adc_mr_Countertop): void
       mr_CornerunitStraight,
       mr_StorageunitSingle,
       mr_Upright,
+      getContourOwnerIds,
     } = GlobalFunc.process_MathLongparts();
     // If import was used, this wouldn't be necessary, extract types from the imported functions for later use
     type LongPartSegmentTypeAlias = InstanceType<typeof LongPartSegment>;
@@ -622,6 +623,7 @@ export function mr_Countertop_afterDataCompletion(this: adc_mr_Countertop): void
         const displacementCountertopX = countertopSegmentStart.additionalData.displaceOriginX;
 
         const countertop = addCountertop();
+        countertop.mod_ContourOwnerIds.push(...getContourOwnerIds(allSegmentsInThisSection.slice(start, end)));
         countertop.mod_CountertopWidth = Math.round(totalLength * 10) / 10;;
         countertop.mod_CountertopThk = this.mod_CountertopThk;
         countertop.mod_CountertopLeftEndType = countertopSegmentStart.additionalData.connectionType.Left;

@@ -192,6 +192,7 @@ export function mr_Appliance_createBuildPlan(this: cbp_mr_Appliance): void {
 
     const {
       CONTOUR_ATTRIBUTE_ADD_TOEKICK,
+      CONTOUR_ATTRIBUTE_OWNER_ID,
       CONTOUR_ATTRIBUTE_OWNER_TYPE,
       mr_StorageunitSingle,
     } = GlobalFunc.process_MathLongparts();
@@ -224,6 +225,7 @@ export function mr_Appliance_createBuildPlan(this: cbp_mr_Appliance): void {
     // This actually decides if the countertop should really be added.
     contourCountertop.attributes
       .set(CONTOUR_ATTRIBUTE_OWNER_TYPE, mr_StorageunitSingle)
+      .set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
       .set('mod_CarcaseVisLeft', 0)
       .set('mod_CarcaseVisRight', 0)
       .set('CountertopInfo', strJson)
@@ -290,6 +292,7 @@ export function mr_Appliance_createBuildPlan(this: cbp_mr_Appliance): void {
 
       contourPaneltop.attributes
         .set(CONTOUR_ATTRIBUTE_OWNER_TYPE, mr_StorageunitSingle)
+        .set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
         .set('mod_CeilingFillerConstruction', this.mod_CeilingFillerConstruction ?? this.g.basic_CeilingFillerConstruction)
         .set('mod_CeilingFillerHeight', this.mod_CeilingFillerHeight ?? this.g.basic_CeilingFillerHeight)
         ;
@@ -365,6 +368,7 @@ export function mr_Appliance_createBuildPlan(this: cbp_mr_Appliance): void {
 
         contourToekick.attributes
           .set(CONTOUR_ATTRIBUTE_OWNER_TYPE, mr_StorageunitSingle)
+          .set(CONTOUR_ATTRIBUTE_OWNER_ID, this._id)
           .set(CONTOUR_ATTRIBUTE_ADD_TOEKICK, createToekick ? 1 : 0)
           .set('mod_PlinthAreaVisLeft', mod_PlinthAreaVisLeft ? 1 : 0)
           .set('mod_PlinthAreaVisRight', mod_PlinthAreaVisRight ? 1 : 0)
