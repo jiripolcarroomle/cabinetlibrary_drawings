@@ -12,6 +12,7 @@
     "buffer": "^6.0.3",
     "jsoneditor": "^10.2.0",
     "jszip": "^3.10.1",
+    "room-drawings": "link:../tc-drawings-three/packages/room-drawings",
     "svgo": "4.0.0",
     "three": "^0.181.2",
     "uuid": "^11.1.0",

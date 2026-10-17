@@ -15,6 +15,7 @@ import { renderScene } from '../../drawingapi/implementation/orderdrawingrendere
 import { filterNodesCloseToWall } from '../../drawingapi/implementation/scene-wall';
 import { Drawing, ILayerSettings } from '../../drawingapi/implementation/drawing';
 import { filterAnnotationForModule, I_tab_Annotation, tab_AnnotationLayerSettings } from '../../drawingapi/utils/annotationstable';
+import * as RoomDrawings from 'room-drawings';
 
 
 export interface IOrderAdditionalData {
@@ -1335,6 +1336,122 @@ export class OrderOutputBaseoutput_DrawingsPlanDEV extends OrderOutputBase {
     return result;
   }
 }
+export class OrderOutputBaseoutput_RoomDrawings extends OrderOutputBase {
+  createFileEntry(result: Map<string, BomOutputFileEntry>, fileName: string, content: any, contentType: string = "text/plain;charset=utf-8") {
+    var bom = new BomOutputFileEntry(fileName, content, contentType);
+    if (result.has(fileName)) {
+      logError("File '" + fileName + "' is already placed in the output(duplicate)! Ignoring!");
+    }
+    result.set(fileName, bom);
+  }
+  createBomOutputCreate_Bom(bom: PartBase[]): Map<string, BomOutputFileEntry> {
+    return createBomOutputById(bom, 'Create_Bom');
+  }
+  createBomOutputCreate_Drawing(bom: PartBase[]): Map<string, BomOutputFileEntry> {
+    return createBomOutputById(bom, 'Create_Drawing');
+  }
+  createBomOutputCreate_Mpr(bom: PartBase[]): Map<string, BomOutputFileEntry> {
+    return createBomOutputById(bom, 'Create_Mpr');
+  }
+  createBomOutputcreate_DrawingOld(bom: PartBase[]): Map<string, BomOutputFileEntry> {
+    return createBomOutputById(bom, 'create_DrawingOld');
+  }
+  createBomOutputcreate_CamManagerProcessings(bom: PartBase[]): Map<string, BomOutputFileEntry> {
+    return createBomOutputById(bom, 'create_CamManagerProcessings');
+  }
+  async createFullOrderOutput(o: IOrderData, ol: IFullOrderLineGroupData[]): Promise<Map<string, BomOutputFileEntry>> {
+    internal_enterBomOrderOutput();
+    let result = new Map<string, BomOutputFileEntry>();
+    try {
+      // ###############################################################
+      // ####################### CUSTOM SCRIPTS ########################
+      // ###############################################################
+
+      // Room drawings (top view + elevations) made by the room-drawings package. This script is the content side:
+      // it decides WHAT is drawn and annotated; the package decides HOW (views, hidden lines, dimension layout, scale).
+      const partClass = (id: string): string => {
+        if (/Leg|Handle/i.test(id)) return 'hardware';
+        if (/Countertop|Backsplash|Paneltop/i.test(id)) return 'worktop';
+        if (/Toekick|Baseboard|Plinth/i.test(id)) return 'plinth';
+        if (/Door|Front|Drawer|Fliplift/i.test(id)) return 'front';
+        return 'carcass';
+      };
+
+      const drawings = RoomDrawings.createRoomDrawings({ order: o, groups: ol }, {
+        content: {
+          // the drawing content data, unchanged: annotations, overlays and annotable points per module, layer settings
+          annotationsOf: filterAnnotationForModule,
+          annotationLayerSettings: tab_AnnotationLayerSettings,
+          // tiny parts that are not important for the overview drawings
+          includeNode: ({ node }) => !(node.kind === 'part' && ['hinge', 'hanger', 'drill'].some(x => node.id.toLowerCase().includes(x))),
+          // style class of a part (keys of settings.styles)
+          classifyPart: ({ node }) => node.geometry?.type === 'mesh' ? 'hardware' : partClass(node.id),
+          // generated modules (countertops, toekicks, legs, ...) are drawn with the modules that own their contours
+          ownerIds: ({ data }) => {
+            const ids = (data as { mod_ContourOwnerIds?: unknown } | undefined)?.mod_ContourOwnerIds;
+            return Array.isArray(ids) ? ids.map(String) : undefined;
+          },
+        },
+        settings: {
+          paper: { width: 420, height: 297, margin: 10 }, // A3 landscape [mm]
+          scales: [10, 20, 25, 50, 100, 200],
+          styles: {
+            carcass: { lineWidth: 0.25, fill: '#ffffff', pattern: 'solid', hiddenLines: 'none' },
+            front: { lineWidth: 0.35, fill: '#f5f5f5', pattern: 'solid', hiddenLines: 'none' },
+            worktop: { lineWidth: 0.35, fill: '#ebebeb', pattern: 'solid', hiddenLines: 'none' },
+            plinth: { lineWidth: 0.25, fill: '#f0f0f0', pattern: 'solid', hiddenLines: 'none' },
+            hardware: { lineWidth: 0.18, fill: '#c8c8c8', pattern: 'solid', hiddenLines: 'none' },
+          },
+          annotations: { textHeight: 2.5, lineSpacing: 40, baseMargin: 20, finalMargin: 20, disqualify: 'withSingleInterval', excludeTags: ['inside'] },
+        },
+        logger: { error: logError, warning: logWarning },
+      });
+      drawings.files.forEach(file => this.createFileEntry(result, file.fileName, file.content, file.contentType));
+
+      // the scene as compact JSON: reproduces the drawings outside the product (room-drawings regression suite).
+      // The order entries keep the module variables (getters included) and the placement fields, not the structure.
+      const structureKeys = ['parentId', 'parent', 'm', 'p', 'parentBase', 'variants', 'roomContours', 'generationContours', 'groupPos', 'items', 'g'];
+      const placementKeys = ['_id', '_dimx', '_dimy', '_dimz', '_isGenerated', '_xAbs', '_yAbs', '_zAbs', '_x', '_y', '_z', '_partId', '_articlePos'];
+      const snapshotData = (node: RoomDrawings.SceneNode): unknown => {
+        const entry = node.data as Record<string, unknown> | undefined;
+        if (!entry || typeof entry !== 'object') return undefined;
+        const data: Record<string, unknown> = {};
+        const seen = new Set<string>(['constructor']);
+        for (let source: object | null = entry; source && source !== Object.prototype; source = Object.getPrototypeOf(source)) {
+          for (const key of Object.getOwnPropertyNames(source)) {
+            if (seen.has(key)) continue;
+            seen.add(key);
+            if (structureKeys.includes(key) || (key.startsWith('_') && !placementKeys.includes(key))) continue;
+            try {
+              const value = entry[key];
+              if (typeof value !== 'function') data[key] = value;
+            }
+            catch {
+              // a getter that cannot be evaluated outside its context
+            }
+          }
+        }
+        return data;
+      };
+      this.createFileEntry(result, "dev_room_drawings_scene.json", JSON.stringify(RoomDrawings.sceneToSnapshot(drawings.scene, { data: snapshotData })), "application/json");
+
+      // ###############################################################
+      // ################### END CUSTOM SCRIPTS ########################
+      // ###############################################################
+    }
+    catch (error) {
+      if (error instanceof Error) {
+        logError(error.message + "\n" + error.stack);
+      } else {
+        logError(JSON.stringify(error, null, 4));
+      }
+    }
+    finally {
+      internal_leaveBomOrderOutput();
+    }
+    return result;
+  }
+}
 export class OrderOutputBaseoutput_CamManager extends OrderOutputBase {
   createFileEntry(result: Map<string, BomOutputFileEntry>, fileName: string, content: any, contentType: string = "text/plain;charset=utf-8") {
     var bom = new BomOutputFileEntry(fileName, content, contentType);
@@ -2148,6 +2265,10 @@ export async function createFullOrderOutputById(o: IOrderData, ol: IFullOrderLin
     let inst = new OrderOutputBaseoutput_DrawingsPlanDEV();
     return await inst.createFullOrderOutput(o, ol);
   }
+  if (orderOutputId.toLowerCase() == 'output_roomdrawings') {
+    let inst = new OrderOutputBaseoutput_RoomDrawings();
+    return await inst.createFullOrderOutput(o, ol);
+  }
   throw new Error("Could not find given order output type (" + orderOutputId + ")");
 }
 
@@ -2160,4 +2281,5 @@ export var bomOrderOutputs: string[] = [
 
 export var fullOrderOutputs: string[] = [
   "output_DrawingsPlanDEV",
+  "output_RoomDrawings",
 ];
