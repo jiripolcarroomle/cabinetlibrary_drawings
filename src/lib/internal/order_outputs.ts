@@ -1391,6 +1391,14 @@ export class OrderOutputBaseoutput_RoomDrawings extends OrderOutputBase {
             const ids = (data as { mod_ContourOwnerIds?: unknown } | undefined)?.mod_ContourOwnerIds;
             return Array.isArray(ids) ? ids.map(String) : undefined;
           },
+          // title block of every sheet
+          titleBlock: [
+            { label: 'Order', value: String(o.orderNo ?? '') },
+            { label: 'Position', value: o.posOrderNo ?? '' },
+            { label: 'Description', value: [o.posOrderDesc1, o.posOrderDesc2].filter(Boolean).join(' – ') },
+            { label: 'Shop', value: o.shopDescription ?? '' },
+            { label: 'Date', value: new Date().toISOString().slice(0, 10) },
+          ].filter(field => field.value !== ''),
         },
         settings: {
           paper: { width: 420, height: 297, margin: 10 }, // A3 landscape [mm]
