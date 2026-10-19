@@ -1369,6 +1369,26 @@ export class OrderOutputBaseoutput_RoomDrawings extends OrderOutputBase {
 
       // Room drawings (top view + elevations) made by the room-drawings package. This script is the content side:
       // it decides WHAT is drawn and annotated; the package decides HOW (views, hidden lines, dimension layout, scale).
+      // colours of the materials (material id -> CSS colour); approximations of the decors until the real values
+      // come from the material catalog
+      const materialColors: Record<string, string> = {
+        'egger:u708_st9': '#c9cac6', // Light Grey
+        'egger:h3190_st19': '#4b4c4e', // Anthracite Fineline Metallic
+        'egger:f800_st9': '#e4e1db', // Crystal Marble
+        'egger:f186_st9': '#b9b6af', // Light Grey Chicago Concrete
+        'egger:f235_st76': '#4e4f4d', // Scivaro Slate
+        'egger:f765_st20': '#a9acad', // brushed silver grey
+        'egger:u999_st7': '#2b2b2b', // Black
+        'egger:w980_st7': '#efeeea', // Platinum White
+        'cabinetlibrary:stainless_steel': '#b5b8ba',
+      };
+      // a part is drawn in the material of its front face (else the default / first face material)
+      const partColor = (data: unknown): string | undefined => {
+        const faces = (data as { _faceMaterial?: { materialId: string; faceKey?: string }[] } | undefined)?._faceMaterial;
+        if (!Array.isArray(faces) || !faces.length) return undefined;
+        const face = faces.find(f => f.faceKey === 'front') ?? faces.find(f => !f.faceKey || f.faceKey === 'default') ?? faces[0];
+        return materialColors[face.materialId];
+      };
       const partClass = (id: string): string => {
         if (/Leg|Handle/i.test(id)) return 'hardware';
         if (/Countertop|Backsplash|Paneltop/i.test(id)) return 'worktop';
@@ -1386,6 +1406,8 @@ export class OrderOutputBaseoutput_RoomDrawings extends OrderOutputBase {
           includeNode: ({ node }) => !(node.kind === 'part' && ['hinge', 'hanger', 'drill'].some(x => node.id.toLowerCase().includes(x))),
           // style class of a part (keys of settings.styles)
           classifyPart: ({ node }) => node.geometry?.type === 'mesh' ? 'hardware' : partClass(node.id),
+          // fill colour of a part
+          colorOf: ({ data }) => partColor(data),
           // generated modules (countertops, toekicks, legs, ...) are drawn with the modules that own their contours
           ownerIds: ({ data }) => {
             const ids = (data as { mod_ContourOwnerIds?: unknown } | undefined)?.mod_ContourOwnerIds;
@@ -1419,7 +1441,7 @@ export class OrderOutputBaseoutput_RoomDrawings extends OrderOutputBase {
       // the scene as compact JSON: reproduces the drawings outside the product (room-drawings regression suite).
       // The order entries keep the module variables (getters included) and the placement fields, not the structure.
       const structureKeys = ['parentId', 'parent', 'm', 'p', 'parentBase', 'variants', 'roomContours', 'generationContours', 'groupPos', 'items', 'g'];
-      const placementKeys = ['_id', '_dimx', '_dimy', '_dimz', '_isGenerated', '_xAbs', '_yAbs', '_zAbs', '_x', '_y', '_z', '_partId', '_articlePos'];
+      const placementKeys = ['_id', '_dimx', '_dimy', '_dimz', '_isGenerated', '_xAbs', '_yAbs', '_zAbs', '_x', '_y', '_z', '_partId', '_articlePos', '_faceMaterial'];
       const snapshotData = (node: RoomDrawings.SceneNode): unknown => {
         const entry = node.data as Record<string, unknown> | undefined;
         if (!entry || typeof entry !== 'object') return undefined;
